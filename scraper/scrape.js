@@ -1,4 +1,16 @@
 import * as cheerio from 'cheerio'
+// .env laden
+import { readFileSync, existsSync } from 'fs'
+import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
+const __dirname2 = dirname(fileURLToPath(import.meta.url))
+const envPath = join(__dirname2, '.env')
+if (existsSync(envPath)) {
+  readFileSync(envPath, 'utf8').split('\n').forEach(line => {
+    const eq = line.indexOf('=')
+    if (eq > 0) process.env[line.slice(0,eq).trim()] = line.slice(eq+1).trim()
+  })
+}
 import ICAL from 'ical.js'
 import fs from 'fs'
 import path from 'path'
@@ -1010,13 +1022,10 @@ async function main() {
 
   // Sortieren
   allEvents.sort((a, b) => a.date.localeCompare(b.date) || a.time.localeCompare(b.time))
-
   // In Datei speichern
   const outPath = path.join(process.cwd(), 'public', 'events.json')
   fs.mkdirSync(path.dirname(outPath), { recursive: true })
   fs.writeFileSync(outPath, JSON.stringify(allEvents, null, 2), 'utf-8')
-
   console.log(`\n✅ Fertig! ${allEvents.length} Events gespeichert → public/events.json`)
 }
-
 main().catch(console.error)
