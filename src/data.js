@@ -1,4 +1,3 @@
-// Daten laden und speichern (im Browser-Speicher)
 export function loadData(key) {
   const raw = localStorage.getItem(key)
   return raw ? JSON.parse(raw) : null
@@ -8,7 +7,6 @@ export function saveData(key, value) {
   localStorage.setItem(key, JSON.stringify(value))
 }
 
-// Beispiel-Locations voreingestellt
 export function getLocations() {
   const saved = loadData('locations')
   if (saved) return saved
@@ -33,43 +31,26 @@ export function getLocations() {
     { id: 18, name: 'Moritzbastei', city: 'Leipzig', website: 'moritzbastei.de', capacity: 500 },
     { id: 19, name: 'Horns Erben', city: 'Leipzig', website: 'horns-erben.de', capacity: 150 },
     { id: 20, name: 'Ilses Erika', city: 'Leipzig', website: '', capacity: 200 },
+    { id: 21, name: 'Urban Spree', city: 'Berlin', website: 'urbanspree.com', capacity: 250 },
+    { id: 22, name: 'Gretchen', city: 'Berlin', website: 'gretchen-club.de', capacity: 500 },
+    { id: 23, name: 'Supamolly', city: 'Berlin', website: 'supamolly.de', capacity: 150 },
+    { id: 24, name: 'Kantine am Berghain', city: 'Berlin', website: 'berghain.berlin', capacity: 200 },
+    { id: 25, name: 'Tempodrom', city: 'Berlin', website: 'tempodrom.de', capacity: 4200 },
   ]
   saveData('locations', defaults)
   return defaults
 }
 
-export function getEvents() {
-  const saved = loadData('events')
-  if (saved) return saved
-  // Paar Beispiel-Events zum Starten
-  const defaults = [
-    {
-      id: 1,
-      title: 'Beispielband – Releaseshow',
-      type: 'konzert',
-      date: '2026-03-15',
-      time: '20:00',
-      locationId: 1,
-      description: 'Ein Beispiel-Konzert zum Testen.',
-      ticketUrl: '',
-      spotifyUrl: '',
-      isNew: true,
-      savedAt: new Date().toISOString()
-    },
-    {
-      id: 2,
-      title: 'Friday Night Party',
-      type: 'party',
-      date: '2026-03-22',
-      time: '23:00',
-      locationId: 3,
-      description: 'Eine Beispiel-Party zum Testen.',
-      ticketUrl: '',
-      spotifyUrl: '',
-      isNew: true,
-      savedAt: new Date().toISOString()
+export async function getEvents() {
+  try {
+    const res = await fetch('./events.json')
+    if (res.ok) {
+      const scraped = await res.json()
+      const manual = loadData('manual_events') || []
+      return [...scraped, ...manual]
     }
-  ]
-  saveData('events', defaults)
-  return defaults
+  } catch(e) {
+    console.log('events.json nicht gefunden')
+  }
+  return loadData('manual_events') || []
 }

@@ -1,17 +1,18 @@
 import { getLocations, getEvents, saveData, loadData } from './data.js'
 
 let locations = getLocations()
-let events = getEvents()
+let events = []
+let container = null
 let filters = { cities: ['Berlin', 'Leipzig'], type: 'alle', locationId: 'alle', dates: [] }
 let bookmarked = loadData('bookmarked') || []
 let going = loadData('going') || []
 let seenEvents = loadData('seenEvents') || []
 let currentView = 'liste'
 let calendarOffset = 0 // Monate vom aktuellen Monat
-let container = null
 
-export function renderApp(el) {
+export async function renderApp(el) {
   container = el
+  events = await getEvents()
   render()
 }
 
