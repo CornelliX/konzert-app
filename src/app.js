@@ -1,3 +1,4 @@
+import { saveManualEvent } from './supabase.js'
 import { getLocations, getEvents, saveData, loadData } from './data.js'
 
 let locations = getLocations()
@@ -599,7 +600,7 @@ function attachEvents() {
   })
 
   // Event speichern
-  document.querySelector('[data-save-event]')?.addEventListener('click', () => {
+  document.querySelector('[data-save-event]')?.addEventListener('click', async () => {
     const title = document.getElementById('new-title').value.trim()
     const date = document.getElementById('new-date').value
     const time = document.getElementById('new-time').value
@@ -624,9 +625,8 @@ function attachEvents() {
       spotifyUrl: document.getElementById('new-spotify').value.trim(),
       source: 'manual'
     }
-    const manual = loadData('manual_events') || []
-    manual.push(newEvent)
-    saveData('manual_events', manual)
+    const loc = locations.find(l => l.id === locationId)
+    await saveManualEvent(newEvent, loc?.name || '', loc?.city || '')
     events.push(newEvent)
     modal.classList.add('hidden')
     render()

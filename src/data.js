@@ -41,16 +41,16 @@ export function getLocations() {
   return defaults
 }
 
+import { loadManualEvents } from './supabase.js'
+
 export async function getEvents() {
   try {
     const res = await fetch('./events.json')
-    if (res.ok) {
-      const scraped = await res.json()
-      const manual = loadData('manual_events') || []
-      return [...scraped, ...manual]
-    }
+    const scraped = res.ok ? await res.json() : []
+    const manual = await loadManualEvents()
+    return [...scraped, ...manual]
   } catch(e) {
-    console.log('events.json nicht gefunden')
+    console.log('Fehler beim Laden:', e)
+    return []
   }
-  return loadData('manual_events') || []
 }
