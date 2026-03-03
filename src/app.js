@@ -29,13 +29,16 @@ function markAllSeen() {
 function render() {
   const newCount = events.filter(e => isNew(e)).length
   container.innerHTML = `
+  <div id="ptr-indicator" style="text-align:center; height:0; overflow:hidden; transition:height 0.2s; color:rgba(255,255,255,0.5); font-size:13px; display:flex; align-items:center; justify-content:center;">↻ Aktualisieren...</div>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
       * { box-sizing: border-box; }
       body { font-family: 'DM Sans', sans-serif; }
       .syne { font-family: 'Syne', sans-serif; }
+      input[type="date"], input[type="time"] { color-scheme: dark; color: rgba(255,255,255,0.4) !important; }
+      input[type="date"]:valid, input[type="time"]:valid { color: white !important; }
       .glass {
-        background: rgba(255,255,255,0.04);
+        background: rgba(8,8,42,0.97);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid rgba(255,255,255,0.08);
@@ -68,9 +71,9 @@ function render() {
       .loc-option:hover { background: rgba(255,255,255,0.06) !important; }
     </style>
 
-    <div class="noise min-h-screen" style="background: linear-gradient(145deg, #080b14 0%, #0c1120 40%, #0e0818 70%, #07100f 100%);">
-      <div style="position:fixed; top:-10%; left:-10%; width:50vw; height:50vw; background:radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
-      <div style="position:fixed; bottom:-10%; right:-10%; width:40vw; height:40vw; background:radial-gradient(circle, rgba(168,85,247,0.07) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
+    <div class="noise min-h-screen" style="background: linear-gradient(180deg, #05053a 0%, #120838 25%, #1e0848 45%, #3a0a52 60%, #52083a 78%, #620a1a 100%);">
+      <div style="position:fixed; top:-10%; left:-10%; width:50vw; height:50vw; background:radial-gradient(circle, rgba(60,40,180,0.12) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
+      <div style="position:fixed; bottom:-10%; right:-10%; width:40vw; height:40vw; background:radial-gradient(circle, rgba(140,20,60,0.10) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
 
       <div class="relative z-10 max-w-xl mx-auto px-4 pb-16">
         ${renderHeader(newCount)}
@@ -91,15 +94,17 @@ function render() {
 function renderHeader(newCount) {
   return `
     <div class="pt-10 pb-6">
-      <div class="flex items-start justify-between">
+      <div class="flex items-stretch justify-between">
         <div>
-          <p class="text-xs font-semibold tracking-[0.25em] uppercase mb-2" style="color: rgba(99,102,241,0.7);">Konzert & Club</p>
-          <h1 class="syne text-4xl leading-none" style="color: white; letter-spacing: -0.02em; font-weight: 800;">
-            Berlin<span style="color: rgba(255,255,255,0.2);">&thinsp;/&thinsp;</span>Leipzig
+          <h1 class="syne text-5xl leading-none" style="color: white; letter-spacing: -0.02em; font-weight: 800; line-height: 1;">
+            LE.BE<br>LIVE
           </h1>
         </div>
         <div class="flex items-center gap-3 mt-1">
           ${newCount > 0 ? `<span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(244,114,182,0.15); border: 1px solid rgba(244,114,182,0.25); color: #f472b6;">${newCount} neu</span>` : ''}
+          <div class="syne text-right" style="color:rgba(168,85,247,0.9); font-weight:700; font-size:0.92em; line-height:1.25; letter-spacing:0.04em; text-transform:uppercase; display:flex; flex-direction:column; justify-content:space-between;">
+            KONZERTE<br>UND PARTYS<br>IN LEIPZIG<br>UND BERLIN
+          </div>
         </div>
       </div>
     </div>
@@ -236,7 +241,7 @@ function renderEventCard(e) {
   const accentAlpha = isKonzert ? 'rgba(99,102,241,' : 'rgba(251,146,60,'
 
   return `
-    <div class="card-hover rounded-2xl overflow-hidden" style="background:rgba(255,255,255,0.03); border:1px solid ${isGoing ? 'rgba(52,211,153,0.3)' : accentAlpha + '0.12)'}; box-shadow:0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);">
+    <div class="card-hover rounded-2xl overflow-hidden" style="background:rgba(8,8,42,0.92); border:1px solid ${isGoing ? 'rgba(52,211,153,0.3)' : accentAlpha + '0.12)'}; box-shadow:0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);">
       <div style="height:2px; background:linear-gradient(90deg, ${accentSolid}, transparent);"></div>
       <div class="p-4">
         <div class="flex justify-between items-start gap-3">
@@ -344,7 +349,7 @@ function renderBookmarkedView() {
   `
 }
 
-const inputStyle = `width:100%; border-radius:12px; padding:10px 14px; font-size:14px; color:white; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); font-family:'DM Sans',sans-serif;`
+const inputStyle = `width:100%; border-radius:12px; padding:10px 14px; font-size:14px; color:white; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); font-family:'DM Sans',sans-serif; color-scheme:dark;`
 
 function renderModals() {
   const sortedLocs = locations.slice().sort((a,b) => a.name.localeCompare(b.name))
@@ -370,8 +375,8 @@ function renderModals() {
               </div>
               <input type="hidden" id="new-type" value="konzert" />
               <div class="flex gap-2">
-                <input id="new-date" type="date" style="${inputStyle} flex:1;" />
-                <input id="new-time" type="time" style="${inputStyle} flex:1;" />
+                <input id="new-date" type="date" style="${inputStyle} flex:1; opacity:0.5;" />
+                <input id="new-time" type="time" style="${inputStyle} flex:1; opacity:0.5;" />
               </div>
               <div style="position:relative;">
                 <div id="add-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
@@ -627,7 +632,7 @@ function attachEvents() {
     }
     const loc = locations.find(l => l.id === locationId)
     await saveManualEvent(newEvent, loc?.name || '', loc?.city || '')
-    events.push(newEvent)
+    events = await getEvents()
     modal.classList.add('hidden')
     render()
   })
@@ -648,4 +653,29 @@ function attachEvents() {
     filterLocDropdown?.classList.add('hidden')
     addLocDropdown?.classList.add('hidden')
   })
+
+  // Pull-to-Refresh
+  let ptStart = 0, ptPulling = false
+  document.addEventListener('touchstart', e => {
+    if (window.scrollY === 0) { ptStart = e.touches[0].clientY; ptPulling = true }
+  }, { passive: true })
+  document.addEventListener('touchmove', e => {
+    if (!ptPulling) return
+    const diff = e.touches[0].clientY - ptStart
+    const indicator = document.getElementById('ptr-indicator')
+    if (indicator && diff > 0) indicator.style.height = Math.min(diff / 2, 50) + 'px'
+  }, { passive: true })
+  document.addEventListener('touchend', async e => {
+    if (!ptPulling) return
+    ptPulling = false
+    const diff = e.changedTouches[0].clientY - ptStart
+    const indicator = document.getElementById('ptr-indicator')
+    if (diff > 80) {
+      if (indicator) indicator.innerHTML = '↻ Wird aktualisiert...'
+      events = await getEvents()
+      render()
+    } else {
+      if (indicator) indicator.style.height = '0'
+    }
+  }, { passive: true })
 }
