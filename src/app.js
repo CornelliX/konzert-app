@@ -100,11 +100,11 @@ function renderHeader(newCount) {
             LE.BE<br>LIVE
           </h1>
         </div>
-        <div class="flex items-stretch gap-4 mt-1">
-          ${newCount > 0 ? `<span class="text-xs font-semibold px-3 py-1.5 rounded-full self-center" style="background: rgba(244,114,182,0.15); border: 1px solid rgba(244,114,182,0.25); color: #f472b6;">${newCount} neu</span>` : ''}
-          <div class="syne text-right" style="color:rgba(168,85,247,0.9); font-weight:700; font-size:0.65em; line-height:1.25; letter-spacing:0.04em; text-transform:uppercase; display:flex; flex-direction:column; justify-content:space-between; white-space:nowrap;">
+        <div style="display:flex; flex-direction:column; align-items:flex-end; justify-content:space-between;">
+          <div class="syne text-right" style="color:rgba(168,85,247,0.9); font-weight:700; font-size:0.65em; line-height:1.25; letter-spacing:0.04em; text-transform:uppercase; white-space:nowrap;">
             KONZERTE<br>UND PARTYS<br>IN LEIPZIG<br>UND BERLIN
           </div>
+          ${newCount > 0 ? `<span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(244,114,182,0.15); border: 1px solid rgba(244,114,182,0.25); color: #f472b6;">${newCount} neu</span>` : ''}
         </div>
       </div>
     </div>
