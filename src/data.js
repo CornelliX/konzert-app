@@ -36,6 +36,9 @@ export function getLocations() {
     { id: 23, name: 'Supamolly', city: 'Berlin', website: 'supamolly.de', capacity: 150 },
     { id: 24, name: 'Kantine am Berghain', city: 'Berlin', website: 'berghain.berlin', capacity: 200 },
     { id: 25, name: 'Tempodrom', city: 'Berlin', website: 'tempodrom.de', capacity: 4200 },
+    { id: 26, name: 'Heimathafen Neukölln', city: 'Berlin', website: 'heimathafen-neukoelln.de', capacity: 450 },
+    { id: 27, name: 'Bi Nuu', city: 'Berlin', website: 'binuu.de', capacity: 400 },
+    { id: 28, name: 'Mikropol', city: 'Berlin', website: 'mikropol-berlin.de', capacity: 300 },
   ]
   saveData('locations', defaults)
   return defaults

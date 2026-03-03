@@ -977,6 +977,93 @@ async function scrapeTempodrom() {
   }
 }
 
+async function scrapeHeimathafen() {
+  console.log('📡 Heimathafen Neukölln (Puppeteer)...')
+  const events = []
+  let browser
+  try {
+    const puppeteer = await import('puppeteer')
+    browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
+    const page = await browser.newPage()
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+    for (const month of [3,4,5,6,9,10,11,12]) {
+      await page.goto(`https://heimathafen-neukoelln.de/?syear=2026&smonth=${month}&scat=6&sview=list`, { waitUntil: 'networkidle2', timeout: 30000 })
+      const html = await page.content()
+      const $ = cheerio.load(html)
+      $('.eventgrid__item').each((_, el) => {
+        const title = $(el).find('h4 a').first().text().trim()
+        const dateText = $(el).find('.eventgrid__item__start__date').text().trim()
+        const timeText = $(el).find('.eventgrid__item__start__time').text().trim()
+        if (!title || !dateText) return
+        const dateMatch = dateText.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/)
+        if (!dateMatch) return
+        const date = `${dateMatch[3]}-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
+        const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
+        const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+        events.push({ title, date, time, type: 'konzert', locationId: 26, source: 'heimathafen' })
+      })
+      await new Promise(r => setTimeout(r, 1000))
+    }
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) { console.log('  ✗ Heimathafen:', e.message) }
+  finally { if (browser) await browser.close() }
+  return events
+}
+
+async function scrapeBiNuu() {
+  console.log('📡 Bi Nuu Berlin...')
+  const events = []
+  try {
+    const res = await fetch('https://binuu.de/de/events', { headers: { 'User-Agent': 'Mozilla/5.0' } })
+    const html = await res.text()
+    const $ = cheerio.load(html)
+    $('article, .event, [class*="event"]').each((_, el) => {
+      const dateText = $(el).find('[class*="date"], time').first().text().trim()
+      const title = $(el).find('h2, h3, [class*="title"]').first().text().trim()
+      const timeText = $(el).find('[class*="time"]').first().text().trim()
+      if (!title || !dateText) return
+      const dateMatch = dateText.match(/(\d{1,2})\.(\d{2})\./)
+      if (!dateMatch) return
+      const date = `2026-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
+      const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
+      const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+      events.push({ title, date, time, type: 'konzert', locationId: 27, source: 'binuu' })
+    })
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) { console.log('  ✗ Bi Nuu:', e.message) }
+  return events
+}
+
+async function scrapeMikropol() {
+  console.log('📡 Mikropol Berlin (Puppeteer)...')
+  const events = []
+  let browser
+  try {
+    const puppeteer = await import('puppeteer')
+    browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
+    const page = await browser.newPage()
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+    await page.goto('https://mikropol-berlin.de/events/', { waitUntil: 'networkidle2', timeout: 30000 })
+    const html = await page.content()
+    const $ = cheerio.load(html)
+    $('.em-events-list a.event').each((_, el) => {
+      const title = $(el).find('.eventname').text().trim()
+      const dateText = $(el).find('.date').text().trim()
+      const timeText = $(el).find('.start span').text().trim()
+      if (!title || !dateText) return
+      const dateMatch = dateText.match(/(\d{1,2})\.(\d{2})\.(\d{4})/)
+      if (!dateMatch) return
+      const date = `${dateMatch[3]}-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
+      const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
+      const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+      events.push({ title, date, time, type: 'konzert', locationId: 28, source: 'mikropol' })
+    })
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) { console.log('  ✗ Mikropol:', e.message) }
+  finally { if (browser) await browser.close() }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -1001,6 +1088,9 @@ async function main() {
     scrapeSupamolly(),
     scrapeKantine(),
     scrapeTempodrom(),
+    scrapeHeimathafen(),
+    scrapeBiNuu(),
+    scrapeMikropol(),
   ])
 
   let allEvents = []
