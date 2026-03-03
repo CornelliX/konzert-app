@@ -1111,6 +1111,8 @@ async function main() {
   allEvents = allEvents.map((e, i) => ({ id: Date.now() + i, ...e }))
 
   // Sortieren
+  const today = new Date().toISOString().split('T')[0]
+  allEvents = allEvents.filter(e => e.date >= today)
   allEvents.sort((a, b) => a.date.localeCompare(b.date) || a.time.localeCompare(b.time))
   // In Datei speichern
   const outPath = path.join(process.cwd(), 'public', 'events.json')

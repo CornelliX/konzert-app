@@ -51,3 +51,14 @@ export async function saveManualEvent(event, locationName, locationCity) {
   })
   return res.ok
 }
+
+export async function deleteOldManualEvents() {
+  const today = new Date().toISOString().split('T')[0]
+  await fetch(`${SUPABASE_URL}/rest/v1/manual_events?date=lt.${today}`, {
+    method: 'DELETE',
+    headers: {
+      'apikey': SUPABASE_KEY,
+      'Authorization': 'Bearer ' + SUPABASE_KEY
+    }
+  })
+}
