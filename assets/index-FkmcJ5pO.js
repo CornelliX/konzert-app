@@ -56,17 +56,13 @@
     ${J()}
   `,Z(),e>0&&k==="liste"&&setTimeout(()=>K(),3e3)}function V(e){return`
     <div class="pt-10 pb-6">
-      <div class="flex items-stretch justify-between">
-        <div>
-          <h1 class="syne text-5xl leading-none" style="color: white; letter-spacing: -0.02em; font-weight: 800; line-height: 1;">
-            LE.BE<br>LIVE
-          </h1>
-        </div>
-        <div style="display:flex; flex-direction:column; align-items:flex-end; justify-content:space-between;">
-          <div class="syne text-right" style="color:rgba(168,85,247,0.9); font-weight:700; font-size:0.65em; line-height:1.25; letter-spacing:0.04em; text-transform:uppercase; white-space:nowrap;">
-            KONZERTE<br>UND PARTYS<br>IN LEIPZIG<br>UND BERLIN
-          </div>
-          ${e>0?`<span class="text-xs font-semibold px-3 py-1.5 rounded-full" style="background: rgba(244,114,182,0.15); border: 1px solid rgba(244,114,182,0.25); color: #f472b6;">${e} neu</span>`:""}
+      <div class="flex items-center justify-between gap-3">
+        <h1 class="syne text-5xl leading-none" style="color: white; letter-spacing: -0.02em; font-weight: 800; line-height: 1; flex-shrink:0;">
+          LE.BE<br>LIVE
+        </h1>
+        ${e>0?`<span class="text-xs font-semibold px-3 py-1.5 rounded-full flex-shrink-0" style="background: rgba(244,114,182,0.15); border: 1px solid rgba(244,114,182,0.25); color: #f472b6;">${e} neu</span>`:""}
+        <div class="syne text-right" style="color:rgba(168,85,247,0.9); font-weight:700; font-size:0.65em; line-height:1.25; letter-spacing:0.04em; text-transform:uppercase; white-space:nowrap;">
+          KONZERTE<br>UND PARTYS<br>IN LEIPZIG<br>UND BERLIN
         </div>
       </div>
     </div>
