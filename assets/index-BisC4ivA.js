@@ -109,7 +109,7 @@
         </div>
       </div>
     </div>
-  `}function O(){return f.filter(e=>{const t=b.find(n=>n.id===e.locationId);return!(!t||!r.cities.includes(t.city)||r.type!=="alle"&&e.type!==r.type||r.locationId!=="alle"&&e.locationId!=r.locationId)}).sort((e,t)=>new Date(e.date+"T"+e.time)-new Date(t.date+"T"+t.time))}function Y(){const e=O(),t=new Date;t.setHours(0,0,0,0);const n={};return e.forEach(l=>{const s=new Date(l.date+"T12:00:00"),d=Math.floor((s-t)/864e5);let c;d===0?c="Heute":d===1?c="Morgen":d<=7?c="Diese Woche":d<=14?c="Nächste Woche":c=s.toLocaleDateString("de-DE",{month:"long",year:"numeric"}),n[c]||(n[c]=[]),n[c].push(l)}),Object.keys(n).length===0?`${A()}<div class="text-center py-20 text-slate-600"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p></div>`:`
+  `}function O(){return f.filter(e=>{const t=b.find(l=>l.id===e.locationId),n=t?t.city:e.locationCity||"";return n?!(!r.cities.includes(n)||r.type!=="alle"&&e.type!==r.type||r.locationId!=="alle"&&e.locationId!=r.locationId):!0}).sort((e,t)=>new Date(e.date+"T"+e.time)-new Date(t.date+"T"+t.time))}function Y(){const e=O(),t=new Date;t.setHours(0,0,0,0);const n={};return e.forEach(l=>{const s=new Date(l.date+"T12:00:00"),d=Math.floor((s-t)/864e5);let c;d===0?c="Heute":d===1?c="Morgen":d<=7?c="Diese Woche":d<=14?c="Nächste Woche":c=s.toLocaleDateString("de-DE",{month:"long",year:"numeric"}),n[c]||(n[c]=[]),n[c].push(l)}),Object.keys(n).length===0?`${A()}<div class="text-center py-20 text-slate-600"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p></div>`:`
     ${A()}
     <div class="space-y-8">
       ${Object.entries(n).map(([l,s])=>`
