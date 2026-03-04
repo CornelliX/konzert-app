@@ -534,13 +534,6 @@ function attachEvents() {
   document.querySelector('[data-clear-dates]')?.addEventListener('click', () => { filters.dates = []; render() })
 
   document.querySelectorAll('[data-bookmark]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = parseInt(btn.dataset.bookmark)
-      bookmarked = bookmarked.includes(id) ? bookmarked.filter(b => b !== id) : [...bookmarked, id]
-      saveData('bookmarked', bookmarked); render()
-    })
-  })
-  document.querySelectorAll('[data-going]').forEach(btn => {
     btn.addEventListener('click', async () => {
       const id = btn.dataset.bookmark
       const isNow = await toggleBookmark(id, 'bookmarked')
