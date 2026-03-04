@@ -127,7 +127,7 @@ function renderNav() {
   const tabs = [
     { id: 'liste', label: 'Events' },
     { id: 'kalender', label: 'Kalender' },
-    { id: 'gemerkt', label: `Gemerkt${bookmarked.length > 0 ? ' · ' + bookmarked.length : ''}` },
+    { id: 'gemerkt', label: `Gemerkt${(bookmarked.length + going.length) > 0 ? ' · ' + (bookmarked.length + going.length) : ''}` },
   ]
   return `
     <div class="flex gap-1.5 mb-6 p-1 rounded-2xl glass">
@@ -348,22 +348,32 @@ function renderCalendarView() {
 }
 
 function renderBookmarkedView() {
-  const bookmarkedEvents = events.filter(e => bookmarked.includes(e.id))
+  const bookmarkedEvents = events.filter(e => bookmarked.includes(e.id) && !going.includes(e.id))
   const goingEvents = events.filter(e => going.includes(e.id))
-  const section = (title, evts, emptyText) => `
-    <div>
-      <div class="flex items-center gap-3 mb-4">
-        <div class="h-px flex-1" style="background:rgba(255,255,255,0.06);"></div>
-        <span class="syne text-xs tracking-widest uppercase" style="color:rgba(255,255,255,0.25); font-weight:700;">${title}</span>
-        <div class="h-px flex-1" style="background:rgba(255,255,255,0.06);"></div>
-      </div>
-      ${evts.length === 0 ? `<p class="text-slate-700 text-sm py-4 text-center">${emptyText}</p>` : `<div class="space-y-3">${evts.map(e => renderEventCard(e)).join('')}</div>`}
+  const allEvents = [
+    ...goingEvents.map(e => ({ ...e, _status: 'dabei' })),
+    ...bookmarkedEvents.map(e => ({ ...e, _status: 'gemerkt' }))
+  ].sort((a, b) => new Date(a.date + 'T' + a.time) - new Date(b.date + 'T' + b.time))
+
+  if (allEvents.length === 0) return `
+    <div class="text-center py-20 text-slate-600">
+      <p class="syne text-2xl mb-2">—</p>
+      <p class="text-sm">Noch keine Events gespeichert.</p>
     </div>
   `
+
   return `
-    <div class="space-y-8 pt-2">
-      ${section('Dabei · ' + goingEvents.length, goingEvents, 'Noch keine Events.')}
-      ${section('Vorgemerkt · ' + bookmarkedEvents.length, bookmarkedEvents, 'Noch keine Events.')}
+    <div class="space-y-3 pt-2">
+      ${allEvents.map(e => `
+        <div style="position:relative;">
+          ${renderEventCard(e)}
+          <div style="position:absolute; top:12px; right:44px;">
+            <span style="font-size:10px; font-weight:700; padding:3px 8px; border-radius:20px; ${e._status === 'dabei' ? 'background:rgba(52,211,153,0.15); color:#34d399; border:1px solid rgba(52,211,153,0.25);' : 'background:rgba(168,85,247,0.15); color:#c084fc; border:1px solid rgba(168,85,247,0.25);'}">
+              ${e._status === 'dabei' ? '✓ dabei' : '♥ gemerkt'}
+            </span>
+          </div>
+        </div>
+      `).join('')}
     </div>
   `
 }
