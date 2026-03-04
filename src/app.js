@@ -394,8 +394,14 @@ function renderModals() {
               </div>
               <input type="hidden" id="new-type" value="konzert" />
               <div class="flex gap-2">
-                <input id="new-date" type="date" placeholder="Datum" style="flex:1; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color-scheme:light; min-width:0;" />
-                <input id="new-time" type="time" placeholder="Uhrzeit" style="flex:1; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color-scheme:light; min-width:0;" />
+                <div style="flex:1; display:flex; flex-direction:column; gap:4px;">
+                  <label style="font-size:11px; color:rgba(255,255,255,0.4); font-family:'DM Sans',sans-serif; padding-left:4px;">Datum</label>
+                  <input id="new-date" type="date" style="width:100%; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color-scheme:light; min-width:0;" />
+                </div>
+                <div style="flex:1; display:flex; flex-direction:column; gap:4px;">
+                  <label style="font-size:11px; color:rgba(255,255,255,0.4); font-family:'DM Sans',sans-serif; padding-left:4px;">Uhrzeit</label>
+                  <input id="new-time" type="time" style="width:100%; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color-scheme:light; min-width:0;" />
+                </div>
               </div>
               <div style="position:relative;">
                 <div id="add-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
