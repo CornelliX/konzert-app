@@ -394,8 +394,8 @@ function renderModals() {
               </div>
               <input type="hidden" id="new-type" value="konzert" />
               <div class="flex gap-2">
-                <input id="new-date" type="date" style="${inputStyle} flex:1; color-scheme:light;" />
-                <input id="new-time" type="time" style="${inputStyle} flex:1; color-scheme:light;" />
+                <input id="new-date" type="date" placeholder="Datum" style="flex:1; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color-scheme:light; min-width:0;" />
+                <input id="new-time" type="time" placeholder="Uhrzeit" style="flex:1; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color-scheme:light; min-width:0;" />
               </div>
               <div style="position:relative;">
                 <div id="add-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
@@ -710,7 +710,12 @@ function attachEvents() {
     fpScript.onload = () => {
       const German = { firstDayOfWeek: 1, weekdays: { shorthand: ['So','Mo','Di','Mi','Do','Fr','Sa'], longhand: ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'] }, months: { shorthand: ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'], longhand: ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'] } }
       if (document.getElementById('new-date')) {
-        flatpickr('#new-date', { locale: German, dateFormat: 'd.m.Y', minDate: 'today' })
+        const dateEl = document.getElementById('new-date')
+        dateEl.type = 'text'
+        flatpickr(dateEl, { locale: German, dateFormat: 'd.m.Y', minDate: 'today', placeholder: 'Datum' })
+        const timeEl = document.getElementById('new-time')
+        timeEl.type = 'text'
+        flatpickr(timeEl, { enableTime: true, noCalendar: true, dateFormat: 'H:i', time_24hr: true, defaultHour: 20, static: true, placeholder: 'Uhrzeit' })
         flatpickr('#new-time', { enableTime: true, noCalendar: true, dateFormat: 'H:i', time_24hr: true, defaultHour: 20, static: true })
       }
     }
