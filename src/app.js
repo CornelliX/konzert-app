@@ -394,8 +394,8 @@ function renderModals() {
               </div>
               <input type="hidden" id="new-type" value="konzert" />
               <div class="flex gap-2">
-                <input id="new-date" type="text" placeholder="Datum" style="${inputStyle} flex:1;" readonly />
-                <input id="new-time" type="text" placeholder="Uhrzeit" style="${inputStyle} flex:1;" readonly />
+                <input id="new-date" type="date" style="${inputStyle} flex:1; color-scheme:light;" />
+                <input id="new-time" type="time" style="${inputStyle} flex:1; color-scheme:light;" />
               </div>
               <div style="position:relative;">
                 <div id="add-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
@@ -703,14 +703,17 @@ function attachEvents() {
     }
   }, { passive: true })
   // Flatpickr
-  const fpScript = document.createElement('script')
-  fpScript.src = 'https://cdn.jsdelivr.net/npm/flatpickr'
-  fpScript.onload = () => {
-    const German = { firstDayOfWeek: 1, weekdays: { shorthand: ['So','Mo','Di','Mi','Do','Fr','Sa'], longhand: ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'] }, months: { shorthand: ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'], longhand: ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'] } }
-    if (document.getElementById('new-date')) {
-      flatpickr('#new-date', { locale: German, dateFormat: 'd.m.Y', minDate: 'today' })
-      flatpickr('#new-time', { enableTime: true, noCalendar: true, dateFormat: 'H:i', time_24hr: true, defaultHour: 20, static: true })
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+  if (!isIOS) {
+    const fpScript = document.createElement('script')
+    fpScript.src = 'https://cdn.jsdelivr.net/npm/flatpickr'
+    fpScript.onload = () => {
+      const German = { firstDayOfWeek: 1, weekdays: { shorthand: ['So','Mo','Di','Mi','Do','Fr','Sa'], longhand: ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'] }, months: { shorthand: ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'], longhand: ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'] } }
+      if (document.getElementById('new-date')) {
+        flatpickr('#new-date', { locale: German, dateFormat: 'd.m.Y', minDate: 'today' })
+        flatpickr('#new-time', { enableTime: true, noCalendar: true, dateFormat: 'H:i', time_24hr: true, defaultHour: 20, static: true })
+      }
     }
+    if (!document.querySelector('script[src*="flatpickr"]')) document.head.appendChild(fpScript)
   }
-  if (!document.querySelector('script[src*="flatpickr"]')) document.head.appendChild(fpScript)
 }
