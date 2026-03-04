@@ -70,7 +70,15 @@ function render() {
       .scrollbar-hide::-webkit-scrollbar { display: none; }
       .loc-option:hover { background: rgba(255,255,255,0.06) !important; }
     </style>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+      .flatpickr-calendar { background:#1a1a3a; border:1px solid rgba(255,255,255,0.1); border-radius:16px; }
+      .flatpickr-day { color:white; } .flatpickr-day:hover { background:rgba(99,102,241,0.3); }
+      .flatpickr-day.selected { background:rgba(99,102,241,0.6); border-color:transparent; }
+      .flatpickr-months, .flatpickr-weekdays, span.flatpickr-weekday { background:transparent; color:rgba(255,255,255,0.5); }
+      .flatpickr-current-month, .numInputWrapper { color:white; }
+      .flatpickr-prev-month svg, .flatpickr-next-month svg { fill:white; }
+    </style>
     <div class="noise min-h-screen" style="background: linear-gradient(180deg, #05053a 0%, #120838 25%, #1e0848 45%, #3a0a52 60%, #52083a 78%, #620a1a 100%);">
       <div style="position:fixed; top:-10%; left:-10%; width:50vw; height:50vw; background:radial-gradient(circle, rgba(60,40,180,0.12) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
       <div style="position:fixed; bottom:-10%; right:-10%; width:40vw; height:40vw; background:radial-gradient(circle, rgba(140,20,60,0.10) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
@@ -375,8 +383,8 @@ function renderModals() {
               </div>
               <input type="hidden" id="new-type" value="konzert" />
               <div class="flex gap-2">
-                <input id="new-date" type="text" placeholder="TT.MM.JJJJ" style="${inputStyle} flex:1;" />
-                <input id="new-time" type="text" placeholder="HH:MM" style="${inputStyle} flex:1;" />
+                <input id="new-date" type="text" placeholder="Datum" style="${inputStyle} flex:1;" readonly />
+                <input id="new-time" type="text" placeholder="Uhrzeit" style="${inputStyle} flex:1;" readonly />
               </div>
               <div style="position:relative;">
                 <div id="add-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
@@ -683,4 +691,15 @@ function attachEvents() {
       if (indicator) indicator.style.height = '0'
     }
   }, { passive: true })
+  // Flatpickr
+  const fpScript = document.createElement('script')
+  fpScript.src = 'https://cdn.jsdelivr.net/npm/flatpickr'
+  fpScript.onload = () => {
+    const German = { firstDayOfWeek: 1, weekdays: { shorthand: ['So','Mo','Di','Mi','Do','Fr','Sa'], longhand: ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'] }, months: { shorthand: ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'], longhand: ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'] } }
+    if (document.getElementById('new-date')) {
+      flatpickr('#new-date', { locale: German, dateFormat: 'Y-m-d', altInput: true, altFormat: 'd. F Y', minDate: 'today' })
+      flatpickr('#new-time', { enableTime: true, noCalendar: true, dateFormat: 'H:i', time_24hr: true, defaultHour: 20 })
+    }
+  }
+  if (!document.querySelector('script[src*="flatpickr"]')) document.head.appendChild(fpScript)
 }
