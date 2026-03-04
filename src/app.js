@@ -78,6 +78,7 @@ function render() {
       .flatpickr-months, .flatpickr-weekdays, span.flatpickr-weekday { background:transparent; color:rgba(255,255,255,0.5); }
       .flatpickr-current-month, .numInputWrapper { color:white; }
       .flatpickr-prev-month svg, .flatpickr-next-month svg { fill:white; }
+      .flatpickr-input { width:100%; border-radius:12px; padding:10px 14px; font-size:14px; color:white; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); font-family:'DM Sans',sans-serif; }
     </style>
     <div class="noise min-h-screen" style="background: linear-gradient(180deg, #05053a 0%, #120838 25%, #1e0848 45%, #3a0a52 60%, #52083a 78%, #620a1a 100%);">
       <div style="position:fixed; top:-10%; left:-10%; width:50vw; height:50vw; background:radial-gradient(circle, rgba(60,40,180,0.12) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
@@ -209,10 +210,16 @@ function renderListView() {
     const d = new Date(e.date + 'T12:00:00')
     const diff = Math.floor((d - today) / 86400000)
     let label
+    // Montag der aktuellen Woche berechnen
+    const todayDay = today.getDay() === 0 ? 6 : today.getDay() - 1 // 0=Mo, 6=So
+    const thisMonday = new Date(today); thisMonday.setDate(today.getDate() - todayDay)
+    const nextMonday = new Date(thisMonday); nextMonday.setDate(thisMonday.getDate() + 7)
+    const weekAfter = new Date(nextMonday); weekAfter.setDate(nextMonday.getDate() + 7)
+    
     if (diff === 0) label = 'Heute'
     else if (diff === 1) label = 'Morgen'
-    else if (diff <= 7) label = 'Diese Woche'
-    else if (diff <= 14) label = 'Nächste Woche'
+    else if (d < nextMonday) label = 'Diese Woche'
+    else if (d < weekAfter) label = 'Nächste Woche'
     else label = d.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })
     if (!groups[label]) groups[label] = []
     groups[label].push(e)
