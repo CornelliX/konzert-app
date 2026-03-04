@@ -396,11 +396,11 @@ function renderModals() {
               <div class="flex gap-2">
                 <div style="flex:1; display:flex; flex-direction:column; gap:4px;">
                   <label style="font-size:11px; color:rgba(255,255,255,0.4); font-family:'DM Sans',sans-serif; padding-left:4px;">Datum</label>
-                  <input id="new-date" type="date" style="width:100%; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color-scheme:light; min-width:0;" />
+                  <input id="new-date" type="text" style="width:100%; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color-scheme:light; min-width:0;" />
                 </div>
                 <div style="flex:1; display:flex; flex-direction:column; gap:4px;">
                   <label style="font-size:11px; color:rgba(255,255,255,0.4); font-family:'DM Sans',sans-serif; padding-left:4px;">Uhrzeit</label>
-                  <input id="new-time" type="time" style="width:100%; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color-scheme:light; min-width:0;" />
+                  <input id="new-time" type="text" style="width:100%; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color-scheme:light; min-width:0;" />
                 </div>
               </div>
               <div style="position:relative;">
@@ -709,8 +709,7 @@ function attachEvents() {
     }
   }, { passive: true })
   // Flatpickr
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
-  if (!isIOS) {
+  if (true) {
     const fpScript = document.createElement('script')
     fpScript.src = 'https://cdn.jsdelivr.net/npm/flatpickr'
     fpScript.onload = () => {
@@ -718,11 +717,9 @@ function attachEvents() {
       if (document.getElementById('new-date')) {
         const dateEl = document.getElementById('new-date')
         dateEl.type = 'text'
-        flatpickr(dateEl, { locale: German, dateFormat: 'd.m.Y', minDate: 'today', placeholder: 'Datum' })
+        flatpickr(dateEl, { locale: German, dateFormat: 'd.m.Y', minDate: 'today' })
         const timeEl = document.getElementById('new-time')
-        timeEl.type = 'text'
-        flatpickr(timeEl, { enableTime: true, noCalendar: true, dateFormat: 'H:i', time_24hr: true, defaultHour: 20, static: true, placeholder: 'Uhrzeit' })
-        flatpickr('#new-time', { enableTime: true, noCalendar: true, dateFormat: 'H:i', time_24hr: true, defaultHour: 20, static: true })
+        flatpickr(timeEl, { enableTime: true, noCalendar: true, dateFormat: 'H:i', time_24hr: true, defaultHour: 20 })
       }
     }
     if (!document.querySelector('script[src*="flatpickr"]')) document.head.appendChild(fpScript)
