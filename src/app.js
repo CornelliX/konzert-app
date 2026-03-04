@@ -78,7 +78,11 @@ function render() {
       .flatpickr-months, .flatpickr-weekdays, span.flatpickr-weekday { background:transparent; color:rgba(255,255,255,0.5); }
       .flatpickr-current-month, .numInputWrapper { color:white; }
       .flatpickr-prev-month svg, .flatpickr-next-month svg { fill:white; }
-      .flatpickr-input { width:100%; border-radius:12px; padding:10px 14px; font-size:14px; color:white; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); font-family:'DM Sans',sans-serif; }
+      .flatpickr-time { background:#1a1a3a !important; border-radius:12px !important; }
+      .flatpickr-time input { color:white !important; background:transparent !important; }
+      .flatpickr-time .numInputWrapper span { border-color:rgba(255,255,255,0.2) !important; }
+      .flatpickr-time .numInputWrapper span svg { fill:white !important; }
+      .flatpickr-input { width:100% !important; border-radius:12px !important; padding:10px 14px !important; font-size:14px !important; color:white !important; outline:none !important; background:rgba(255,255,255,0.06) !important; border:1px solid rgba(255,255,255,0.1) !important; font-family:'DM Sans',sans-serif !important; box-sizing:border-box !important; }
     </style>
     <div class="noise min-h-screen" style="background: linear-gradient(180deg, #05053a 0%, #120838 25%, #1e0848 45%, #3a0a52 60%, #52083a 78%, #620a1a 100%);">
       <div style="position:fixed; top:-10%; left:-10%; width:50vw; height:50vw; background:radial-gradient(circle, rgba(60,40,180,0.12) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
@@ -704,8 +708,8 @@ function attachEvents() {
   fpScript.onload = () => {
     const German = { firstDayOfWeek: 1, weekdays: { shorthand: ['So','Mo','Di','Mi','Do','Fr','Sa'], longhand: ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'] }, months: { shorthand: ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'], longhand: ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'] } }
     if (document.getElementById('new-date')) {
-      flatpickr('#new-date', { locale: German, dateFormat: 'Y-m-d', altInput: true, altFormat: 'd. F Y', minDate: 'today' })
-      flatpickr('#new-time', { enableTime: true, noCalendar: true, dateFormat: 'H:i', time_24hr: true, defaultHour: 20 })
+      flatpickr('#new-date', { locale: German, dateFormat: 'd.m.Y', minDate: 'today' })
+      flatpickr('#new-time', { enableTime: true, noCalendar: true, dateFormat: 'H:i', time_24hr: true, defaultHour: 20, static: true })
     }
   }
   if (!document.querySelector('script[src*="flatpickr"]')) document.head.appendChild(fpScript)
