@@ -136,7 +136,7 @@
             </div>
             <h3 class="syne text-white leading-tight mb-1" style="font-size:1rem; font-weight:700; letter-spacing:-0.01em;">${e.title}</h3>
             <p class="text-xs mb-2" style="color:rgba(255,255,255,0.35);">
-              ${t?t.name+' <span style="color:rgba(255,255,255,0.15);">·</span> '+t.city:""}
+              ${t?t.name+' <span style="color:rgba(255,255,255,0.15);">·</span> '+t.city:e.locationName?e.locationName+' <span style="color:rgba(255,255,255,0.15);">·</span> '+(e.locationCity||""):""}
               <span style="margin-left:6px; color:${g?"rgba(99,102,241,0.7)":"rgba(251,146,60,0.7)"};">${g?"Konzert":"Party"}</span>
             </p>
             ${e.description?`<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.4);">${e.description}</p>`:""}
