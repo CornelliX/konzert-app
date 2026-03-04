@@ -62,3 +62,39 @@ export async function deleteOldManualEvents() {
     }
   })
 }
+
+export async function loadBookmarks() {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/bookmarks?select=*`, {
+    headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+  })
+  if (!res.ok) return { bookmarked: [], going: [] }
+  const rows = await res.json()
+  return {
+    bookmarked: rows.filter(r => r.status === 'bookmarked').map(r => r.event_id),
+    going: rows.filter(r => r.status === 'going').map(r => r.event_id)
+  }
+}
+
+export async function toggleBookmark(eventId, status) {
+  // Prüfen ob schon vorhanden
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/bookmarks?event_id=eq.${eventId}&status=eq.${status}`, {
+    headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+  })
+  const rows = await res.json()
+  if (rows.length > 0) {
+    // Löschen
+    await fetch(`${SUPABASE_URL}/rest/v1/bookmarks?event_id=eq.${eventId}&status=eq.${status}`, {
+      method: 'DELETE',
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+    })
+    return false
+  } else {
+    // Hinzufügen
+    await fetch(`${SUPABASE_URL}/rest/v1/bookmarks`, {
+      method: 'POST',
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+      body: JSON.stringify({ event_id: String(eventId), status })
+    })
+    return true
+  }
+}

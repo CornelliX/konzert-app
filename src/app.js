@@ -1,4 +1,4 @@
-import { saveManualEvent } from './supabase.js'
+import { saveManualEvent, loadBookmarks, toggleBookmark } from './supabase.js'
 import { getLocations, getEvents, saveData, loadData } from './data.js'
 
 let locations = getLocations()
@@ -14,6 +14,9 @@ let calendarOffset = 0
 export async function renderApp(el) {
   container = el
   events = await getEvents()
+  const bm = await loadBookmarks()
+  bookmarked = bm.bookmarked
+  going = bm.going
   render()
 }
 
@@ -538,22 +541,19 @@ function attachEvents() {
     })
   })
   document.querySelectorAll('[data-going]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = parseInt(btn.dataset.going)
-      going = going.includes(id) ? going.filter(g => g !== id) : [...going, id]
-      saveData('going', going); render()
+    btn.addEventListener('click', async () => {
+      const id = btn.dataset.bookmark
+      const isNow = await toggleBookmark(id, 'bookmarked')
+      bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
+      render()
     })
   })
-  document.querySelectorAll('[data-share]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const event = events.find(e => e.id === parseInt(btn.dataset.share))
-      if (event) shareViaWhatsApp(event)
-    })
-  })
-  document.querySelectorAll('[data-ics]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const event = events.find(e => e.id === parseInt(btn.dataset.ics))
-      if (event) generateICS(event)
+  document.querySelectorAll('[data-going]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const id = btn.dataset.going
+      const isNow = await toggleBookmark(id, 'going')
+      going = isNow ? [...going, id] : going.filter(g => g != id)
+      render()
     })
   })
 
