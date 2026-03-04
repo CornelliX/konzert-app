@@ -98,11 +98,11 @@ function renderHeader(newCount) {
         <h1 class="syne text-5xl leading-none" style="color: white; letter-spacing: -0.02em; font-weight: 800; line-height: 1; flex-shrink:0;">
           LE.BE<br>LIVE
         </h1>
-        ${newCount > 0 ? `<div style="flex-shrink:0; width:60px; height:60px; border-radius:50%; background:rgba(244,114,182,0.15); border:1px solid rgba(244,114,182,0.25); color:#f472b6; display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1.2;">
-          <span style="font-size:14px; font-weight:700;">${newCount}</span>
+        ${newCount > 0 ? `<div style="flex-shrink:0; width:44px; height:44px; border-radius:50%; background:rgba(244,114,182,0.15); border:1px solid rgba(244,114,182,0.25); color:#f472b6; display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1.2;">
+          <span style="font-size:10px; font-weight:700;">${newCount}</span>
           <span style="font-size:10px; font-weight:600;">neu</span>
         </div>` : ''}
-        <div class="syne text-right" style="color:rgba(168,85,247,0.9); font-weight:700; font-size:0.65em; line-height:1.25; letter-spacing:0.04em; text-transform:uppercase; white-space:nowrap; flex-shrink:0;">
+        <div class="syne text-right" style="color:rgba(168,85,247,0.9); font-weight:700; font-size:0.65em; line-height:1.25; letter-spacing:0.04em; text-transform:uppercase; white-space:nowrap;">
           KONZERTE<br>UND PARTYS<br>IN LEIPZIG<br>UND BERLIN
         </div>
       </div>
