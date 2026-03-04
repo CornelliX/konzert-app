@@ -253,8 +253,8 @@ function renderListView() {
 
 function renderEventCard(e) {
   const loc = locations.find(l => l.id === e.locationId)
-  const isBookmarked = bookmarked.includes(e.id)
-  const isGoing = going.includes(e.id)
+  const isBookmarked = bookmarked.some(b => b == e.id)
+  const isGoing = going.some(g => g == e.id)
   const eventIsNew = isNew(e)
   const dateObj = new Date(e.date + 'T12:00:00')
   const dateStr = dateObj.toLocaleDateString('de-DE', { weekday: 'short', day: 'numeric', month: 'short' })
