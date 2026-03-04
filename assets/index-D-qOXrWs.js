@@ -219,8 +219,8 @@
               </div>
               <input type="hidden" id="new-type" value="konzert" />
               <div class="flex gap-2">
-                <input id="new-date" type="date" style="${m} flex:1; opacity:0.6;" />
-                <input id="new-time" type="time" style="${m} flex:1; opacity:0.6;" />
+                <input id="new-date" type="date" style="${m} flex:1; color:rgba(255,255,255,0.8); -webkit-text-fill-color:rgba(255,255,255,0.8);" />
+                <input id="new-time" type="time" style="${m} flex:1; color:rgba(255,255,255,0.8); -webkit-text-fill-color:rgba(255,255,255,0.8);" />
               </div>
               <div style="position:relative;">
                 <div id="add-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
