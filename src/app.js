@@ -351,8 +351,8 @@ function renderCalendarView() {
 }
 
 function renderBookmarkedView() {
-  const bookmarkedEvents = events.filter(e => bookmarked.includes(e.id) && !going.includes(e.id))
-  const goingEvents = events.filter(e => going.includes(e.id))
+  const bookmarkedEvents = events.filter(e => bookmarked.some(b => b == e.id) && !going.some(g => g == e.id))
+  const goingEvents = events.filter(e => going.some(g => g == e.id))
   const allEvents = [
     ...goingEvents.map(e => ({ ...e, _status: 'dabei' })),
     ...bookmarkedEvents.map(e => ({ ...e, _status: 'gemerkt' }))
