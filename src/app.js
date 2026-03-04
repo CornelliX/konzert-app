@@ -375,8 +375,8 @@ function renderModals() {
               </div>
               <input type="hidden" id="new-type" value="konzert" />
               <div class="flex gap-2">
-                <input id="new-date" type="date" style="${inputStyle} flex:1; color:rgba(255,255,255,0.8); -webkit-text-fill-color:rgba(255,255,255,0.8);" />
-                <input id="new-time" type="time" style="${inputStyle} flex:1; color:rgba(255,255,255,0.8); -webkit-text-fill-color:rgba(255,255,255,0.8);" />
+                <input id="new-date" type="date" style="flex:1; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color:white; -webkit-text-fill-color:white; color-scheme:dark;" />
+                <input id="new-time" type="time" style="flex:1; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color:white; -webkit-text-fill-color:white; color-scheme:dark;" />
               </div>
               <div style="position:relative;">
                 <div id="add-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
