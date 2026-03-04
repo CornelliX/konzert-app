@@ -375,8 +375,8 @@ function renderModals() {
               </div>
               <input type="hidden" id="new-type" value="konzert" />
               <div class="flex gap-2">
-                <input id="new-date" type="date" style="flex:1; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color:white; -webkit-text-fill-color:white; color-scheme:dark;" />
-                <input id="new-time" type="time" style="flex:1; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color:white; -webkit-text-fill-color:white; color-scheme:dark;" />
+                <input id="new-date" type="text" placeholder="TT.MM.JJJJ" style="${inputStyle} flex:1;" />
+                <input id="new-time" type="text" placeholder="HH:MM" style="${inputStyle} flex:1;" />
               </div>
               <div style="position:relative;">
                 <div id="add-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
@@ -607,8 +607,13 @@ function attachEvents() {
   // Event speichern
   document.querySelector('[data-save-event]')?.addEventListener('click', async () => {
     const title = document.getElementById('new-title').value.trim()
-    const date = document.getElementById('new-date').value
-    const time = document.getElementById('new-time').value
+    let date = document.getElementById('new-date').value
+    let time = document.getElementById('new-time').value
+    // TT.MM.JJJJ → JJJJ-MM-TT
+    const dateParts = date.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/)
+    if (dateParts) date = `${dateParts[3]}-${dateParts[2].padStart(2,'0')}-${dateParts[1].padStart(2,'0')}`
+    // HH:MM validieren
+    if (!time.match(/^\d{1,2}:\d{2}$/)) time = '20:00'
     let locationId = document.getElementById('new-location').value
     if (!title || !date || !time) { alert('Bitte Titel, Datum und Uhrzeit angeben.'); return }
     if (!locationId) {
