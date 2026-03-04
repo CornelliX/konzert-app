@@ -370,11 +370,9 @@ function renderBookmarkedView() {
       ${allEvents.map(e => `
         <div style="position:relative;">
           ${renderEventCard(e)}
-          <div style="position:absolute; top:12px; right:44px;">
-            <span style="font-size:10px; font-weight:700; padding:3px 8px; border-radius:20px; ${e._status === 'dabei' ? 'background:rgba(52,211,153,0.15); color:#34d399; border:1px solid rgba(52,211,153,0.25);' : 'background:rgba(168,85,247,0.15); color:#c084fc; border:1px solid rgba(168,85,247,0.25);'}">
-              ${e._status === 'dabei' ? '✓ dabei' : '♥ gemerkt'}
-            </span>
-          </div>
+          ${e._status === 'gemerkt' ? `<div style="position:absolute; top:12px; right:44px;">
+            <span style="font-size:10px; font-weight:700; padding:3px 8px; border-radius:20px; background:rgba(168,85,247,0.15); color:#c084fc; border:1px solid rgba(168,85,247,0.25);">♥ gemerkt</span>
+          </div>` : ''}
         </div>
       `).join('')}
     </div>
