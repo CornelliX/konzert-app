@@ -183,8 +183,9 @@ function renderFilters() {
 function getFilteredEvents() {
   return events.filter(e => {
     const loc = locations.find(l => l.id === e.locationId)
-    if (!loc) return false
-    if (!filters.cities.includes(loc.city)) return false
+    const city = loc ? loc.city : (e.locationCity || '')
+    if (!city) return true
+    if (!filters.cities.includes(city)) return false
     if (filters.type !== 'alle' && e.type !== filters.type) return false
     if (filters.locationId !== 'alle' && e.locationId != filters.locationId) return false
     return true
