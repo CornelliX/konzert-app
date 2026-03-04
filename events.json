@@ -1,6 +1,6 @@
 [
   {
-    "id": 1772633518759,
+    "id": 1772653978838,
     "title": "Vernissage: 5ZEHN – Torsten Jungstand",
     "date": "2026-03-04",
     "time": "19:00",
@@ -12,7 +12,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633519083,
+    "id": 1772653979178,
     "title": "Amanda Bergman",
     "date": "2026-03-04",
     "time": "19:00",
@@ -24,7 +24,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518760,
+    "id": 1772653978839,
     "title": "Lesung mit Ronya Othmann",
     "date": "2026-03-04",
     "time": "20:00",
@@ -36,7 +36,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518761,
+    "id": 1772653978840,
     "title": "Sampagne",
     "date": "2026-03-04",
     "time": "20:00",
@@ -48,7 +48,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518892,
+    "id": 1772653978971,
     "title": "POETRY SLAM MEISTERSCHAFT BERLIN/BRANDENBURG",
     "date": "2026-03-04",
     "time": "20:00",
@@ -60,31 +60,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519002,
-    "title": "Smith / Kotzen",
-    "date": "2026-03-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260304-smith-kotzen/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519184,
-    "title": "Alex Stolze feat. Ben Osborn - modern classical / electronic",
-    "date": "2026-03-04",
-    "time": "20:00",
-    "locationId": 19,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://horns-erben.de/event/alex-stolze-feat-ben-osborn-modern-classical-electronic/",
-    "spotifyUrl": "",
-    "source": "horns-erben"
-  },
-  {
-    "id": 1772633519185,
+    "id": 1772653979279,
     "title": "Horns[dʒæz]Session - Eintritt frei",
     "date": "2026-03-05",
     "time": "19:30",
@@ -96,7 +72,7 @@
     "source": "horns-erben"
   },
   {
-    "id": 1772633518762,
+    "id": 1772653978841,
     "title": "ON! aka Tequila and the Sunrise Gang",
     "date": "2026-03-05",
     "time": "20:00",
@@ -108,7 +84,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518763,
+    "id": 1772653978842,
     "title": "HE/RO",
     "date": "2026-03-05",
     "time": "20:00",
@@ -120,7 +96,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518893,
+    "id": 1772653978972,
     "title": "CHICO & QATOSHI",
     "date": "2026-03-05",
     "time": "20:00",
@@ -132,7 +108,31 @@
     "source": "so36"
   },
   {
-    "id": 1772633519195,
+    "id": 1772653979083,
+    "title": "MICHAEL SCHENKER",
+    "date": "2026-03-05",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979151,
+    "title": "ROMANO",
+    "date": "2026-03-05",
+    "time": "20:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979290,
     "title": "Mrz 2026 Programm Supamolly",
     "date": "2026-03-05",
     "time": "23:59",
@@ -144,7 +144,7 @@
     "source": "supamolly"
   },
   {
-    "id": 1772633519084,
+    "id": 1772653979179,
     "title": "Songslam Kreuzberg",
     "date": "2026-03-06",
     "time": "19:00",
@@ -156,7 +156,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518764,
+    "id": 1772653978843,
     "title": "KAYEF Tour 2026",
     "date": "2026-03-06",
     "time": "20:00",
@@ -168,7 +168,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518795,
+    "id": 1772653978874,
     "title": "THE EARLY DAYS • THROWBACK INDIE PARTY",
     "date": "2026-03-06",
     "time": "20:00",
@@ -180,7 +180,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518894,
+    "id": 1772653978973,
     "title": "SCHMUTZKI",
     "date": "2026-03-06",
     "time": "20:00",
@@ -192,19 +192,31 @@
     "source": "so36"
   },
   {
-    "id": 1772633519003,
-    "title": "KMFDM",
+    "id": 1772653979084,
+    "title": "LINA",
     "date": "2026-03-06",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260306-kmfdm/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519127,
+    "id": 1772653979152,
+    "title": "RUE OBERKAMPF & special guest: RINA PAVAR",
+    "date": "2026-03-06",
+    "time": "20:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979222,
     "title": "LA DISPUTE",
     "date": "2026-03-06",
     "time": "20:00",
@@ -216,7 +228,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519186,
+    "id": 1772653979280,
     "title": "Malte Viefs Kammer - Jazz, Neoklassik",
     "date": "2026-03-06",
     "time": "20:00",
@@ -228,7 +240,7 @@
     "source": "horns-erben"
   },
   {
-    "id": 1772633519250,
+    "id": 1772653979345,
     "title": "GrooveJet Berlin",
     "date": "2026-03-06",
     "time": "20:00",
@@ -237,7 +249,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519286,
+    "id": 1772653979381,
     "title": "Space Fest",
     "date": "2026-03-06",
     "time": "20:00",
@@ -246,7 +258,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519196,
+    "id": 1772653979291,
     "title": "Circolo Vizioso (Geigerzaehler & Tony Scafidi)",
     "date": "2026-03-06",
     "time": "21:30",
@@ -258,7 +270,7 @@
     "source": "supamolly"
   },
   {
-    "id": 1772633519085,
+    "id": 1772653979180,
     "title": "Modern Love",
     "date": "2026-03-06",
     "time": "23:00",
@@ -270,7 +282,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518765,
+    "id": 1772653978844,
     "title": "Papiertiger – Familienwerkstatt",
     "date": "2026-03-07",
     "time": "10:00",
@@ -282,7 +294,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518895,
+    "id": 1772653978974,
     "title": "FEMINISM ON THE DANCEFLOOR",
     "date": "2026-03-07",
     "time": "19:00",
@@ -294,7 +306,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519086,
+    "id": 1772653979181,
     "title": "She Hates Emotions",
     "date": "2026-03-07",
     "time": "19:00",
@@ -306,7 +318,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518796,
+    "id": 1772653978875,
     "title": "ABSENT",
     "date": "2026-03-07",
     "time": "20:00",
@@ -318,7 +330,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518797,
+    "id": 1772653978876,
     "title": "TOXIC! POP HITS PARTY",
     "date": "2026-03-07",
     "time": "20:00",
@@ -330,19 +342,31 @@
     "source": "lido"
   },
   {
-    "id": 1772633519004,
-    "title": "Asha Banks",
+    "id": 1772653979085,
+    "title": "Ü40 PARTY",
     "date": "2026-03-07",
     "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
+    "locationId": 15,
+    "type": "party",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260307-asha-banks/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519128,
+    "id": 1772653979153,
+    "title": "KABEAUSHÈ & John, Paul, George, Ringo & Richard",
+    "date": "2026-03-07",
+    "time": "20:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/Event/70941",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979223,
     "title": "GLUECIFER",
     "date": "2026-03-07",
     "time": "20:00",
@@ -354,7 +378,19 @@
     "source": "astra"
   },
   {
-    "id": 1772633519213,
+    "id": 1772653979281,
+    "title": "RABEA - Cello & Alternative Pop",
+    "date": "2026-03-07",
+    "time": "20:00",
+    "locationId": 19,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://horns-erben.de/event/rabea-cello-alternative-pop/",
+    "spotifyUrl": "",
+    "source": "horns-erben"
+  },
+  {
+    "id": 1772653979308,
     "title": "DOTA MIT STREICHQUARTETT",
     "date": "2026-03-07",
     "time": "20:00",
@@ -363,7 +399,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519251,
+    "id": 1772653979346,
     "title": "AY YOLA",
     "date": "2026-03-07",
     "time": "20:00",
@@ -372,7 +408,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519252,
+    "id": 1772653979347,
     "title": "WE WON’T STOP",
     "date": "2026-03-07",
     "time": "20:00",
@@ -381,7 +417,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519287,
+    "id": 1772653979382,
     "title": "Asha Banks",
     "date": "2026-03-07",
     "time": "20:00",
@@ -390,7 +426,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519197,
+    "id": 1772653979292,
     "title": "Jungle Drum'N'Bass-Party: Live: Olivia FX + Djan_es: Monsters of Jungle + Neoniris & M.Jungle + elektrik earliner + & Ruby Riot",
     "date": "2026-03-07",
     "time": "21:30",
@@ -402,7 +438,7 @@
     "source": "supamolly"
   },
   {
-    "id": 1772633518766,
+    "id": 1772653978845,
     "title": "Gothic Pogo",
     "date": "2026-03-07",
     "time": "22:00",
@@ -414,7 +450,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633519087,
+    "id": 1772653979182,
     "title": "KREUZGUT.DISKO",
     "date": "2026-03-07",
     "time": "22:00",
@@ -426,7 +462,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518716,
+    "id": 1772653978795,
     "title": "ISLAND OF DREAMS by Italo Fundamentalo",
     "date": "2026-03-07",
     "time": "23:00",
@@ -438,7 +474,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519205,
+    "id": 1772653979300,
     "title": "Holiday on Ice",
     "date": "2026-03-08",
     "time": "00:00",
@@ -450,7 +486,19 @@
     "source": "tempodrom"
   },
   {
-    "id": 1772633518767,
+    "id": 1772653979154,
+    "title": "ENTE GUT! MÄDCHEN ALLEIN ZU HAUS",
+    "date": "2026-03-08",
+    "time": "14:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653978846,
     "title": "8. März Demo: Die Zeit zu kämpfen ist jetzt!",
     "date": "2026-03-08",
     "time": "14:30",
@@ -462,7 +510,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518768,
+    "id": 1772653978847,
     "title": "Feministische Abrissparty",
     "date": "2026-03-08",
     "time": "17:00",
@@ -474,7 +522,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633519088,
+    "id": 1772653979183,
     "title": "Loua",
     "date": "2026-03-08",
     "time": "19:00",
@@ -486,7 +534,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518798,
+    "id": 1772653978877,
     "title": "COURTNEY MARIE ANDREWS",
     "date": "2026-03-08",
     "time": "20:00",
@@ -498,7 +546,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519000,
+    "id": 1772653979086,
+    "title": "KMFDM",
+    "date": "2026-03-08",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979149,
     "title": "SONNTAGSBRUNCH",
     "date": "2026-03-08",
     "time": "20:00",
@@ -510,7 +570,19 @@
     "source": "felsenkeller"
   },
   {
-    "id": 1772633519198,
+    "id": 1772653979155,
+    "title": "DIE TIERE SIND LOS",
+    "date": "2026-03-08",
+    "time": "20:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/Event/71765",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979293,
     "title": "Brivele",
     "date": "2026-03-08",
     "time": "21:00",
@@ -522,7 +594,7 @@
     "source": "supamolly"
   },
   {
-    "id": 1772633519187,
+    "id": 1772653979282,
     "title": "KADEBOSTANY",
     "date": "2026-03-09",
     "time": "18:30",
@@ -534,7 +606,19 @@
     "source": "gretchen"
   },
   {
-    "id": 1772633519089,
+    "id": 1772653979156,
+    "title": "FANTASY",
+    "date": "2026-03-09",
+    "time": "19:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979184,
     "title": "Christian Kjellvander",
     "date": "2026-03-09",
     "time": "19:00",
@@ -546,7 +630,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518896,
+    "id": 1772653978975,
     "title": "LESEDÜNE",
     "date": "2026-03-09",
     "time": "19:30",
@@ -558,19 +642,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519005,
-    "title": "Thrice",
-    "date": "2026-03-09",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260309-thrice/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519129,
+    "id": 1772653979224,
     "title": "DER W",
     "date": "2026-03-09",
     "time": "20:00",
@@ -582,7 +654,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519214,
+    "id": 1772653979309,
     "title": "JULIAN LE PLAY",
     "date": "2026-03-09",
     "time": "20:00",
@@ -591,7 +663,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519288,
+    "id": 1772653979383,
     "title": "BLACK FOXXES",
     "date": "2026-03-09",
     "time": "20:00",
@@ -600,7 +672,31 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518799,
+    "id": 1772653979157,
+    "title": "IN HELL WITH IVO",
+    "date": "2026-03-09",
+    "time": "21:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979158,
+    "title": "I HAVE NEVER BEEN ON AN AIRPLANE",
+    "date": "2026-03-10",
+    "time": "19:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653978878,
     "title": "SORRY",
     "date": "2026-03-10",
     "time": "20:00",
@@ -612,7 +708,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518897,
+    "id": 1772653978976,
     "title": "KIEZBINGO",
     "date": "2026-03-10",
     "time": "20:00",
@@ -624,19 +720,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519006,
-    "title": "Good Neighbours",
-    "date": "2026-03-10",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260310-good-neighbours/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519215,
+    "id": 1772653979310,
     "title": "ZOLA JESUS",
     "date": "2026-03-10",
     "time": "20:00",
@@ -645,7 +729,31 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519090,
+    "id": 1772653979159,
+    "title": "FIUME O MORTE!",
+    "date": "2026-03-10",
+    "time": "21:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979160,
+    "title": "SHORTS. 4 KURZFILME AUS SÜDOSTEUROPA",
+    "date": "2026-03-11",
+    "time": "19:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979185,
     "title": "SAMM HENSHAW",
     "date": "2026-03-11",
     "time": "19:00",
@@ -657,7 +765,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518769,
+    "id": 1772653978848,
     "title": "Irish Spring",
     "date": "2026-03-11",
     "time": "20:00",
@@ -669,7 +777,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518770,
+    "id": 1772653978849,
     "title": "Das Vollplaybacktheater interpretiert »Die drei ??? und der Fluch des Rubins«",
     "date": "2026-03-11",
     "time": "20:00",
@@ -681,7 +789,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518898,
+    "id": 1772653978977,
     "title": "PSYCHEDELIC P*RN CRUMPETS",
     "date": "2026-03-11",
     "time": "20:00",
@@ -693,19 +801,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519007,
-    "title": "Kikuo",
-    "date": "2026-03-11",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260311-kikuo/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519216,
+    "id": 1772653979311,
     "title": "MILES KANE",
     "date": "2026-03-11",
     "time": "20:00",
@@ -714,7 +810,28 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519091,
+    "id": 1772653979384,
+    "title": "Fabian Haupt",
+    "date": "2026-03-11",
+    "time": "20:00",
+    "type": "konzert",
+    "locationId": 28,
+    "source": "mikropol"
+  },
+  {
+    "id": 1772653979161,
+    "title": "GRADUATION",
+    "date": "2026-03-11",
+    "time": "21:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979186,
     "title": "EMERGENZA BERLIN",
     "date": "2026-03-12",
     "time": "18:00",
@@ -726,7 +843,19 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518771,
+    "id": 1772653979162,
+    "title": "BLUM: MASTERS OF THEIR OWN DESTINY",
+    "date": "2026-03-12",
+    "time": "19:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653978850,
     "title": "Jan Philipp Zymny: Illegale Straßentherapie",
     "date": "2026-03-12",
     "time": "20:00",
@@ -738,7 +867,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518800,
+    "id": 1772653978879,
     "title": "COMMON SAINTS",
     "date": "2026-03-12",
     "time": "20:00",
@@ -750,7 +879,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518899,
+    "id": 1772653978978,
     "title": "DOCTOR KRAPULA",
     "date": "2026-03-12",
     "time": "20:00",
@@ -762,19 +891,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519008,
-    "title": "Robert Finley",
-    "date": "2026-03-12",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260312-robert-finley/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519130,
+    "id": 1772653979225,
     "title": "THE HELLP",
     "date": "2026-03-12",
     "time": "20:00",
@@ -786,7 +903,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519289,
+    "id": 1772653979385,
     "title": "ARKELLS",
     "date": "2026-03-12",
     "time": "20:00",
@@ -795,7 +912,19 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519092,
+    "id": 1772653979163,
+    "title": "EIGHTY PLUS",
+    "date": "2026-03-12",
+    "time": "21:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979187,
     "title": "Bad Suns",
     "date": "2026-03-13",
     "time": "19:00",
@@ -807,7 +936,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518772,
+    "id": 1772653978851,
     "title": "CHAVER - CRUZIFICTION RELEASESHOW",
     "date": "2026-03-13",
     "time": "20:00",
@@ -819,7 +948,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518801,
+    "id": 1772653978880,
     "title": "ANTONIO OROZCO",
     "date": "2026-03-13",
     "time": "20:00",
@@ -831,7 +960,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518846,
+    "id": 1772653978925,
     "title": "HAUS F",
     "date": "2026-03-13",
     "time": "20:00",
@@ -843,7 +972,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518900,
+    "id": 1772653978979,
     "title": "KURGAN & AGREGAT",
     "date": "2026-03-13",
     "time": "20:00",
@@ -855,19 +984,31 @@
     "source": "so36"
   },
   {
-    "id": 1772633519009,
-    "title": "Nitzer Ebb",
+    "id": 1772653979087,
+    "title": "STEREOACT & LENA MARIE ENGEL",
     "date": "2026-03-13",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260313-nitzer-ebb/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519131,
+    "id": 1772653979164,
+    "title": "DEADLETTER (uk) & FALSE LEFTY",
+    "date": "2026-03-13",
+    "time": "20:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/Event/64820",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979226,
     "title": "IÑIGO QUINTERO",
     "date": "2026-03-13",
     "time": "20:00",
@@ -879,7 +1020,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519253,
+    "id": 1772653979348,
     "title": "Real Ragers Aftershow",
     "date": "2026-03-13",
     "time": "20:00",
@@ -888,7 +1029,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519290,
+    "id": 1772653979386,
     "title": "PVA",
     "date": "2026-03-13",
     "time": "20:00",
@@ -897,7 +1038,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518717,
+    "id": 1772653978796,
     "title": "KFZ - Karaoke für Zecken",
     "date": "2026-03-13",
     "time": "21:00",
@@ -909,7 +1050,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519093,
+    "id": 1772653979188,
     "title": "Berlin Independent Night – These Charming Men",
     "date": "2026-03-13",
     "time": "23:00",
@@ -921,7 +1062,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518901,
+    "id": 1772653978980,
     "title": "LA CASA DEL PERREO",
     "date": "2026-03-13",
     "time": "23:59",
@@ -933,7 +1074,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518718,
+    "id": 1772653978797,
     "title": "KAPA TULT / immer alles gleichzeitig Tour",
     "date": "2026-03-14",
     "time": "19:00",
@@ -945,7 +1086,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519094,
+    "id": 1772653979189,
     "title": "Mathis Kloss",
     "date": "2026-03-14",
     "time": "19:00",
@@ -957,7 +1098,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518773,
+    "id": 1772653978852,
     "title": "FJØRT",
     "date": "2026-03-14",
     "time": "20:00",
@@ -969,7 +1110,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518802,
+    "id": 1772653978881,
     "title": "MARC BROUSSARD",
     "date": "2026-03-14",
     "time": "20:00",
@@ -981,7 +1122,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518803,
+    "id": 1772653978882,
     "title": "OK BOOMER – NÜ METAL",
     "date": "2026-03-14",
     "time": "20:00",
@@ -993,19 +1134,31 @@
     "source": "lido"
   },
   {
-    "id": 1772633519010,
-    "title": "Samantha Fish",
+    "id": 1772653979088,
+    "title": "THE BIG 80S & DEPECHE MODE PARTY",
     "date": "2026-03-14",
     "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
+    "locationId": 15,
+    "type": "party",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260314-samantha-fish/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519132,
+    "id": 1772653979165,
+    "title": "MEGALOH",
+    "date": "2026-03-14",
+    "time": "20:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979227,
     "title": "A NIGHT LIKE THIS",
     "date": "2026-03-14",
     "time": "20:00",
@@ -1017,7 +1170,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519208,
+    "id": 1772653979303,
     "title": "Sleaford Mods",
     "date": "2026-03-14",
     "time": "20:00",
@@ -1029,7 +1182,7 @@
     "source": "tempodrom"
   },
   {
-    "id": 1772633519254,
+    "id": 1772653979349,
     "title": "Mom's Got Talent",
     "date": "2026-03-14",
     "time": "20:00",
@@ -1038,7 +1191,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518902,
+    "id": 1772653978981,
     "title": "HOOCHIE KOO vs. THE SINNERS SALOON",
     "date": "2026-03-14",
     "time": "21:00",
@@ -1050,7 +1203,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519199,
+    "id": 1772653979294,
     "title": "Smilblick (Psychedelic Punk) + House of Terror (Psych Prog Heaviness) + Belt (BerliNoise Rock)",
     "date": "2026-03-14",
     "time": "21:30",
@@ -1062,7 +1215,7 @@
     "source": "supamolly"
   },
   {
-    "id": 1772633519095,
+    "id": 1772653979190,
     "title": "Soul Explosion",
     "date": "2026-03-14",
     "time": "23:00",
@@ -1074,7 +1227,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518903,
+    "id": 1772653978982,
     "title": "(TH)INK ABOUT THAT",
     "date": "2026-03-15",
     "time": "13:00",
@@ -1086,7 +1239,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518774,
+    "id": 1772653978853,
     "title": "Tag der Druckkunst",
     "date": "2026-03-15",
     "time": "14:00",
@@ -1098,7 +1251,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633519096,
+    "id": 1772653979191,
     "title": "EUROTHUG",
     "date": "2026-03-15",
     "time": "19:00",
@@ -1110,7 +1263,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633519200,
+    "id": 1772653979295,
     "title": "Theater: eSFToFiFL",
     "date": "2026-03-15",
     "time": "19:00",
@@ -1122,7 +1275,7 @@
     "source": "supamolly"
   },
   {
-    "id": 1772633518775,
+    "id": 1772653978854,
     "title": "Anna Grey",
     "date": "2026-03-15",
     "time": "19:30",
@@ -1134,7 +1287,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633519001,
+    "id": 1772653979150,
     "title": "FELSENKELLER FLOHMARKT",
     "date": "2026-03-15",
     "time": "20:00",
@@ -1146,7 +1299,7 @@
     "source": "felsenkeller"
   },
   {
-    "id": 1772633519133,
+    "id": 1772653979228,
     "title": "GEESE",
     "date": "2026-03-15",
     "time": "20:00",
@@ -1158,7 +1311,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519217,
+    "id": 1772653979312,
     "title": "CHRIS THILE",
     "date": "2026-03-15",
     "time": "20:00",
@@ -1167,7 +1320,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519255,
+    "id": 1772653979350,
     "title": "Joje",
     "date": "2026-03-15",
     "time": "20:00",
@@ -1176,7 +1329,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518904,
+    "id": 1772653978983,
     "title": "ROLLER KIDZ",
     "date": "2026-03-16",
     "time": "16:00",
@@ -1188,7 +1341,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518905,
+    "id": 1772653978984,
     "title": "ROLLER DISCO",
     "date": "2026-03-16",
     "time": "18:00",
@@ -1200,7 +1353,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518776,
+    "id": 1772653978855,
     "title": "Marc Broussard",
     "date": "2026-03-16",
     "time": "20:00",
@@ -1212,7 +1365,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518804,
+    "id": 1772653978883,
     "title": "JAMES BLAKE",
     "date": "2026-03-16",
     "time": "20:00",
@@ -1224,7 +1377,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519188,
+    "id": 1772653979283,
     "title": "JOSHUA IDEHEN",
     "date": "2026-03-17",
     "time": "19:30",
@@ -1236,7 +1389,7 @@
     "source": "gretchen"
   },
   {
-    "id": 1772633519218,
+    "id": 1772653979313,
     "title": "SING DELA SING",
     "date": "2026-03-17",
     "time": "19:30",
@@ -1245,7 +1398,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518777,
+    "id": 1772653978856,
     "title": "Buntspecht",
     "date": "2026-03-17",
     "time": "20:00",
@@ -1257,7 +1410,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518805,
+    "id": 1772653978884,
     "title": "ANGUS MCSIX",
     "date": "2026-03-17",
     "time": "20:00",
@@ -1269,7 +1422,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518906,
+    "id": 1772653978985,
     "title": "THE LOCOS",
     "date": "2026-03-17",
     "time": "20:00",
@@ -1281,7 +1434,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519134,
+    "id": 1772653979166,
+    "title": "BETWEEN THE BURIED & ME (us) + Monosphere (d)",
+    "date": "2026-03-17",
+    "time": "20:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979229,
     "title": "CARPENTER BRUT",
     "date": "2026-03-17",
     "time": "20:00",
@@ -1293,7 +1458,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518719,
+    "id": 1772653978798,
     "title": "PROGRAMM ZUR BUCHMESSE | QUEERE DDR-LITERATUR",
     "date": "2026-03-18",
     "time": "19:00",
@@ -1305,7 +1470,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519097,
+    "id": 1772653979192,
     "title": "HOTEL LUX",
     "date": "2026-03-18",
     "time": "19:00",
@@ -1317,7 +1482,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633519219,
+    "id": 1772653979314,
     "title": "SING DELA SING",
     "date": "2026-03-18",
     "time": "19:30",
@@ -1326,7 +1491,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518778,
+    "id": 1772653978857,
     "title": "Fortuna Ehrenfeld",
     "date": "2026-03-18",
     "time": "20:00",
@@ -1338,7 +1503,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518907,
+    "id": 1772653978986,
     "title": "NACHTFLOHMARKT",
     "date": "2026-03-18",
     "time": "20:00",
@@ -1350,19 +1515,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519011,
-    "title": "The Academic",
+    "id": 1772653979167,
+    "title": "LEFTOVERS & LEETA",
     "date": "2026-03-18",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 17,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260318-the-academic/",
+    "ticketUrl": "https://www.tixforgigs.com/Event/68912",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "ut-connewitz"
   },
   {
-    "id": 1772633519291,
+    "id": 1772653979387,
     "title": "Zoë Më",
     "date": "2026-03-18",
     "time": "20:00",
@@ -1371,7 +1536,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518720,
+    "id": 1772653978799,
     "title": "PROGRAMM ZUR BUCHMESSE | VOM NAHEN OSTEN ZUM GANZ NAHEN OSTEN: EINE DOPPELBUCHVORSTELLUNG MIT STEFFI HENTSCHKE UND NICHOLAS POTTER",
     "date": "2026-03-19",
     "time": "19:00",
@@ -1383,7 +1548,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519098,
+    "id": 1772653979193,
     "title": "SCHRAMM",
     "date": "2026-03-19",
     "time": "19:00",
@@ -1395,7 +1560,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518779,
+    "id": 1772653978858,
     "title": "Voland & Quist Verlagsabend",
     "date": "2026-03-19",
     "time": "19:30",
@@ -1407,7 +1572,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518780,
+    "id": 1772653978859,
     "title": "Semsrott & Semsrott: Prepping for Future #5",
     "date": "2026-03-19",
     "time": "20:00",
@@ -1419,7 +1584,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518908,
+    "id": 1772653978987,
     "title": "FOCUS.",
     "date": "2026-03-19",
     "time": "20:00",
@@ -1431,19 +1596,43 @@
     "source": "so36"
   },
   {
-    "id": 1772633519012,
-    "title": "Peter Hook",
+    "id": 1772653979089,
+    "title": "YU",
     "date": "2026-03-19",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260319-peter-hook/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633518781,
+    "id": 1772653978800,
+    "title": "IN SOLIDARITY PARTY  Nova Survival Network Tribe of Nova",
+    "date": "2026-03-20",
+    "time": "18:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[tanzbar]  \n\n20.03.2026, 18:00 Uhr:  \n\nIn Solidarity Party  Nova Survival Network Tribe of Nova  \n\nIn Solidrity for Tribe of Nova, , Party & Podiumsdiskussion, , 18:00 Einlass, 18:30 Podium, 22:00 Party, , Podium &quot;Unter Druck&quot; mit:, , Artists Against Antisemitism (Moderation), Conne Isl",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7381.html",
+    "spotifyUrl": "",
+    "source": "conne-island"
+  },
+  {
+    "id": 1772653979168,
+    "title": "KOHLEATLAS 2026: Jetzt für die Zukunft denken",
+    "date": "2026-03-20",
+    "time": "18:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653978860,
     "title": "Nordische Lesenacht",
     "date": "2026-03-20",
     "time": "18:30",
@@ -1455,7 +1644,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633519099,
+    "id": 1772653979194,
     "title": "Beyond Obsession",
     "date": "2026-03-20",
     "time": "19:00",
@@ -1467,7 +1656,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518782,
+    "id": 1772653978861,
     "title": "Lauter Hass. Antisemitismus als popkulturelles Ereignis",
     "date": "2026-03-20",
     "time": "20:00",
@@ -1479,7 +1668,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518806,
+    "id": 1772653978885,
     "title": "ROSALIE CUNNINGHAM",
     "date": "2026-03-20",
     "time": "20:00",
@@ -1491,7 +1680,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518807,
+    "id": 1772653978886,
     "title": "BAILA MORENA – LATINAJE RETRO EDITION!",
     "date": "2026-03-20",
     "time": "20:00",
@@ -1503,19 +1692,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519013,
-    "title": "Jon And Roy",
+    "id": 1772653979090,
+    "title": "TEUTEREKORDZ",
     "date": "2026-03-20",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260320-jon-and-roy/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519135,
+    "id": 1772653979230,
     "title": "MAISIE PETERS",
     "date": "2026-03-20",
     "time": "20:00",
@@ -1527,7 +1716,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519220,
+    "id": 1772653979315,
     "title": "ALENA OMARGALIEVA",
     "date": "2026-03-20",
     "time": "20:00",
@@ -1536,7 +1725,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519256,
+    "id": 1772653979351,
     "title": "FUEGO36",
     "date": "2026-03-20",
     "time": "20:00",
@@ -1545,19 +1734,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518721,
-    "title": "SOLIDARITY PARTY  Nova Survival Network Tribe of Nova",
-    "date": "2026-03-20",
-    "time": "21:00",
-    "locationId": 13,
-    "type": "konzert",
-    "description": "[tanzbar]  \n\n20.03.2026, 21:00 Uhr:  \n\nSolidarity Party  Nova Survival Network Tribe of Nova",
-    "ticketUrl": "http://www.conne-island.de/termin/nr7381.html",
-    "spotifyUrl": "",
-    "source": "conne-island"
-  },
-  {
-    "id": 1772633519201,
+    "id": 1772653979296,
     "title": "Drum'N'Bass-Party: Live: Roland KaiZen feat. ADHS-Beatz + Bassfieber Residents: Bain, Kite, Barry T, SoniQ & Domske",
     "date": "2026-03-20",
     "time": "21:30",
@@ -1569,7 +1746,7 @@
     "source": "supamolly"
   },
   {
-    "id": 1772633518909,
+    "id": 1772653978988,
     "title": "GIRLSTOWN",
     "date": "2026-03-20",
     "time": "22:00",
@@ -1581,7 +1758,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518999,
+    "id": 1772653979148,
     "title": "POP UP PARTY",
     "date": "2026-03-20",
     "time": "22:00",
@@ -1593,7 +1770,7 @@
     "source": "felsenkeller"
   },
   {
-    "id": 1772633519100,
+    "id": 1772653979195,
     "title": "Dance Dance Revolution",
     "date": "2026-03-20",
     "time": "23:00",
@@ -1605,7 +1782,19 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518723,
+    "id": 1772653979169,
+    "title": "LACOMA - der Kohle im Weg",
+    "date": "2026-03-20",
+    "time": "30:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653978802,
     "title": "PROGRAMM ZUR BUCHMESSE | VERONIKA KRACHER: BITCH HUNT",
     "date": "2026-03-21",
     "time": "19:00",
@@ -1617,7 +1806,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519101,
+    "id": 1772653979196,
     "title": "Levka",
     "date": "2026-03-21",
     "time": "19:00",
@@ -1629,7 +1818,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633519102,
+    "id": 1772653979197,
     "title": "DANJU",
     "date": "2026-03-21",
     "time": "19:00",
@@ -1641,7 +1830,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518783,
+    "id": 1772653978862,
     "title": "Julius Fischer",
     "date": "2026-03-21",
     "time": "20:00",
@@ -1653,7 +1842,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518808,
+    "id": 1772653978887,
     "title": "DYNAMIT",
     "date": "2026-03-21",
     "time": "20:00",
@@ -1665,7 +1854,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518809,
+    "id": 1772653978888,
     "title": "HEADLESS PARTY • The Home of Core & Alternative Rock",
     "date": "2026-03-21",
     "time": "20:00",
@@ -1677,19 +1866,31 @@
     "source": "lido"
   },
   {
-    "id": 1772633519014,
-    "title": "Remode",
+    "id": 1772653979091,
+    "title": "HUDCON",
     "date": "2026-03-21",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260321-remode/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519136,
+    "id": 1772653979170,
+    "title": "BALKANACHT mit Masayah",
+    "date": "2026-03-21",
+    "time": "20:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979231,
     "title": "WIZO",
     "date": "2026-03-21",
     "time": "20:00",
@@ -1701,7 +1902,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519221,
+    "id": 1772653979316,
     "title": "HÄLLAS",
     "date": "2026-03-21",
     "time": "20:00",
@@ -1710,7 +1911,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519257,
+    "id": 1772653979352,
     "title": "Levka",
     "date": "2026-03-21",
     "time": "20:00",
@@ -1719,7 +1920,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518910,
+    "id": 1772653978989,
     "title": "DANCING WITH TEARS IN YOUR EYES",
     "date": "2026-03-21",
     "time": "21:00",
@@ -1731,7 +1932,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519202,
+    "id": 1772653979297,
     "title": "Detlef + Kackbratze",
     "date": "2026-03-21",
     "time": "21:30",
@@ -1743,7 +1944,7 @@
     "source": "supamolly"
   },
   {
-    "id": 1772633518722,
+    "id": 1772653978801,
     "title": "BENEFIZDISKO",
     "date": "2026-03-21",
     "time": "22:00",
@@ -1755,7 +1956,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519103,
+    "id": 1772653979198,
     "title": "LCF COLLECTIVE : 2ND EDITION",
     "date": "2026-03-21",
     "time": "23:59",
@@ -1767,7 +1968,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518784,
+    "id": 1772653978863,
     "title": "Kinderlesung zur Buchmesse",
     "date": "2026-03-22",
     "time": "14:00",
@@ -1779,7 +1980,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633519189,
+    "id": 1772653979284,
     "title": "THE BUG presents: PRESSURE WEEKENDER Day2 - AMBIENT PRESSURE",
     "date": "2026-03-22",
     "time": "18:00",
@@ -1791,7 +1992,7 @@
     "source": "gretchen"
   },
   {
-    "id": 1772633519209,
+    "id": 1772653979304,
     "title": "Dr. Leon Windscheid",
     "date": "2026-03-22",
     "time": "18:00",
@@ -1803,7 +2004,7 @@
     "source": "tempodrom"
   },
   {
-    "id": 1772633519104,
+    "id": 1772653979199,
     "title": "Murovei",
     "date": "2026-03-22",
     "time": "19:00",
@@ -1815,7 +2016,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518810,
+    "id": 1772653978889,
     "title": "ANNA GREY",
     "date": "2026-03-22",
     "time": "20:00",
@@ -1827,7 +2028,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518911,
+    "id": 1772653978990,
     "title": "FRANCO126",
     "date": "2026-03-22",
     "time": "20:00",
@@ -1839,19 +2040,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519015,
-    "title": "Angelo Kelly",
-    "date": "2026-03-22",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260322-angelo-kelly/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519137,
+    "id": 1772653979232,
     "title": "WIZO",
     "date": "2026-03-22",
     "time": "20:00",
@@ -1863,7 +2052,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519292,
+    "id": 1772653979388,
     "title": "CRUZ BECKHAM",
     "date": "2026-03-22",
     "time": "20:00",
@@ -1872,7 +2061,19 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518912,
+    "id": 1772653979171,
+    "title": "LANGE NACHT DER LESEBÜHNEN",
+    "date": "2026-03-22",
+    "time": "30:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/Event/71062",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653978991,
     "title": "ROMANO",
     "date": "2026-03-23",
     "time": "20:00",
@@ -1884,31 +2085,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519016,
-    "title": "Tomris",
-    "date": "2026-03-23",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260323-tomris/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519017,
-    "title": "Cat Ballou",
-    "date": "2026-03-23",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260323-cat-ballou/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519204,
+    "id": 1772653979299,
     "title": "Marianne Rosenberg",
     "date": "2026-03-23",
     "time": "20:00",
@@ -1920,7 +2097,7 @@
     "source": "tempodrom"
   },
   {
-    "id": 1772633519293,
+    "id": 1772653979389,
     "title": "Corduroy County",
     "date": "2026-03-23",
     "time": "20:00",
@@ -1929,7 +2106,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518913,
+    "id": 1772653978992,
     "title": "D-DUR DYKES*",
     "date": "2026-03-24",
     "time": "19:00",
@@ -1941,7 +2118,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519105,
+    "id": 1772653979200,
     "title": "CHRIS BROKAW",
     "date": "2026-03-24",
     "time": "19:00",
@@ -1953,7 +2130,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518785,
+    "id": 1772653978864,
     "title": "Sing dela Sing",
     "date": "2026-03-24",
     "time": "20:00",
@@ -1965,7 +2142,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518786,
+    "id": 1772653978865,
     "title": "Dirty Sound Magnet",
     "date": "2026-03-24",
     "time": "20:00",
@@ -1977,7 +2154,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518811,
+    "id": 1772653978890,
     "title": "The Magic Mumble Jumble",
     "date": "2026-03-24",
     "time": "20:00",
@@ -1989,7 +2166,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519294,
+    "id": 1772653979172,
+    "title": "BLACK SEA DAHU (ch) - Everything Tour 2026",
+    "date": "2026-03-24",
+    "time": "20:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/Event/65764",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979390,
     "title": "PASSION MANGO",
     "date": "2026-03-24",
     "time": "20:00",
@@ -1998,7 +2187,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518724,
+    "id": 1772653978803,
     "title": "DOGSHOW + THE WORLD DOMINATION",
     "date": "2026-03-25",
     "time": "19:00",
@@ -2010,7 +2199,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518787,
+    "id": 1772653978866,
     "title": "All Good Undones: Enpal",
     "date": "2026-03-25",
     "time": "20:00",
@@ -2022,7 +2211,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518914,
+    "id": 1772653978993,
     "title": "LIN",
     "date": "2026-03-25",
     "time": "20:00",
@@ -2034,19 +2223,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519018,
-    "title": "82Major",
+    "id": 1772653979173,
+    "title": "BLACK SEA DAHU (ch) - Everything Tour 2026",
     "date": "2026-03-25",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 17,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260325-82major/",
+    "ticketUrl": "https://www.tixforgigs.com/Event/65770",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "ut-connewitz"
   },
   {
-    "id": 1772633519295,
+    "id": 1772653979391,
     "title": "Lord Apex",
     "date": "2026-03-25",
     "time": "20:00",
@@ -2055,7 +2244,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519106,
+    "id": 1772653979201,
     "title": "EMERGENZA BERLIN",
     "date": "2026-03-26",
     "time": "18:00",
@@ -2067,7 +2256,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518788,
+    "id": 1772653978867,
     "title": "Quintense: CHANGE",
     "date": "2026-03-26",
     "time": "20:00",
@@ -2079,7 +2268,31 @@
     "source": "werk2"
   },
   {
-    "id": 1772633519138,
+    "id": 1772653979092,
+    "title": "257ERS",
+    "date": "2026-03-26",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979174,
+    "title": "GARDEN OF SILENCES",
+    "date": "2026-03-26",
+    "time": "20:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/Event/71770",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653979233,
     "title": "CMAT",
     "date": "2026-03-26",
     "time": "20:00",
@@ -2091,7 +2304,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518915,
+    "id": 1772653978994,
     "title": "IT’S A BIJÎ NEWROZ",
     "date": "2026-03-26",
     "time": "22:00",
@@ -2103,7 +2316,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518725,
+    "id": 1772653978804,
     "title": "TRISTAN BRUSCH // Ausverkauft",
     "date": "2026-03-27",
     "time": "19:00",
@@ -2115,7 +2328,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518916,
+    "id": 1772653978995,
     "title": "TIEFENRAUSCH",
     "date": "2026-03-27",
     "time": "19:00",
@@ -2127,7 +2340,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519107,
+    "id": 1772653979202,
     "title": "Well Known pix",
     "date": "2026-03-27",
     "time": "19:00",
@@ -2139,7 +2352,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518789,
+    "id": 1772653978868,
     "title": "Karate Andi",
     "date": "2026-03-27",
     "time": "20:00",
@@ -2151,7 +2364,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518812,
+    "id": 1772653978891,
     "title": "DISCO ARABESQUO x UNCIVILIZED CIVILIZED CLUB",
     "date": "2026-03-27",
     "time": "20:00",
@@ -2163,19 +2376,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519019,
-    "title": "Stoned Jesus & Wheel",
-    "date": "2026-03-27",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260327-stoned-jesus-wheel/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519258,
+    "id": 1772653979353,
     "title": "Flugmodus",
     "date": "2026-03-27",
     "time": "20:00",
@@ -2184,7 +2385,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519296,
+    "id": 1772653979392,
     "title": "Tom Meighan",
     "date": "2026-03-27",
     "time": "20:00",
@@ -2193,7 +2394,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518790,
+    "id": 1772653978869,
     "title": "Papiertiger – Familienwerkstatt",
     "date": "2026-03-28",
     "time": "10:00",
@@ -2205,7 +2406,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518791,
+    "id": 1772653978870,
     "title": "Roller Disco",
     "date": "2026-03-28",
     "time": "14:00",
@@ -2217,7 +2418,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518727,
+    "id": 1772653978806,
     "title": "BRETTSPIELENACHMITTAG",
     "date": "2026-03-28",
     "time": "15:00",
@@ -2229,7 +2430,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518726,
+    "id": 1772653978805,
     "title": "MØRK ØY -  Beschwoerung, Na Zarot, No Sun Rises, Hyems und Ran&amp;#259;",
     "date": "2026-03-28",
     "time": "18:30",
@@ -2241,7 +2442,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519108,
+    "id": 1772653979203,
     "title": "Vinta",
     "date": "2026-03-28",
     "time": "19:00",
@@ -2253,7 +2454,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518792,
+    "id": 1772653978871,
     "title": "Drunken Masters",
     "date": "2026-03-28",
     "time": "19:30",
@@ -2265,7 +2466,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633518813,
+    "id": 1772653978892,
     "title": "FEWJAR",
     "date": "2026-03-28",
     "time": "20:00",
@@ -2277,7 +2478,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518814,
+    "id": 1772653978893,
     "title": "WILDE HERZEN",
     "date": "2026-03-28",
     "time": "20:00",
@@ -2289,19 +2490,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519020,
-    "title": "Kapelle Petra",
+    "id": 1772653979175,
+    "title": "MORITZ SIMON GEIST - Don`t look at me // SONIFIKATOR // KATHRIN PASSIG",
     "date": "2026-03-28",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 17,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260328-kapelle-petra-2/",
+    "ticketUrl": "https://www.tixforgigs.com/Event/69676",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "ut-connewitz"
   },
   {
-    "id": 1772633519139,
+    "id": 1772653979234,
     "title": "MEGALOH",
     "date": "2026-03-28",
     "time": "20:00",
@@ -2313,7 +2514,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519222,
+    "id": 1772653979317,
     "title": "BLUES PILLS & DEWOLFF",
     "date": "2026-03-28",
     "time": "20:00",
@@ -2322,7 +2523,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519259,
+    "id": 1772653979354,
     "title": "Haze",
     "date": "2026-03-28",
     "time": "20:00",
@@ -2331,7 +2532,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519203,
+    "id": 1772653979298,
     "title": "Ambassador21 (Industrial Hardcore, Belarus) + Logs + danach Dj Knüppel",
     "date": "2026-03-28",
     "time": "21:30",
@@ -2343,7 +2544,7 @@
     "source": "supamolly"
   },
   {
-    "id": 1772633518917,
+    "id": 1772653978996,
     "title": "GAYHANE",
     "date": "2026-03-28",
     "time": "22:00",
@@ -2355,7 +2556,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519109,
+    "id": 1772653979204,
     "title": "Hip City Soul Club",
     "date": "2026-03-28",
     "time": "23:00",
@@ -2367,7 +2568,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518793,
+    "id": 1772653978872,
     "title": "Führung über das WERK 2 - Gelände",
     "date": "2026-03-29",
     "time": "14:00",
@@ -2379,7 +2580,7 @@
     "source": "werk2"
   },
   {
-    "id": 1772633519223,
+    "id": 1772653979318,
     "title": "SPOT ON! THE SHOW",
     "date": "2026-03-29",
     "time": "18:00",
@@ -2388,7 +2589,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519110,
+    "id": 1772653979205,
     "title": "PREYRS",
     "date": "2026-03-29",
     "time": "19:00",
@@ -2400,7 +2601,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633519140,
+    "id": 1772653979235,
     "title": "DOMINGUINHO",
     "date": "2026-03-29",
     "time": "20:00",
@@ -2412,7 +2613,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519297,
+    "id": 1772653979393,
     "title": "GA-20",
     "date": "2026-03-29",
     "time": "20:00",
@@ -2421,7 +2622,19 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518918,
+    "id": 1772653979176,
+    "title": "Kinder - VariUTé: ZIRKUS IM KOFFER",
+    "date": "2026-03-29",
+    "time": "30:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "ut-connewitz"
+  },
+  {
+    "id": 1772653978997,
     "title": "ROLLER KIDZ",
     "date": "2026-03-30",
     "time": "16:00",
@@ -2433,7 +2646,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518919,
+    "id": 1772653978998,
     "title": "ROLLER DISCO",
     "date": "2026-03-30",
     "time": "18:00",
@@ -2445,7 +2658,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519111,
+    "id": 1772653979206,
     "title": "Lumï",
     "date": "2026-03-30",
     "time": "19:00",
@@ -2457,7 +2670,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518815,
+    "id": 1772653978894,
     "title": "DEL WATER GAP",
     "date": "2026-03-30",
     "time": "20:00",
@@ -2469,7 +2682,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519141,
+    "id": 1772653979236,
     "title": "11FREUNDE KNEIPENQUIZ",
     "date": "2026-03-30",
     "time": "20:00",
@@ -2481,7 +2694,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519260,
+    "id": 1772653979355,
     "title": "FritzSessions x splash!",
     "date": "2026-03-30",
     "time": "20:00",
@@ -2490,7 +2703,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519112,
+    "id": 1772653979207,
     "title": "Iskander Moon",
     "date": "2026-03-31",
     "time": "19:00",
@@ -2502,7 +2715,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633519190,
+    "id": 1772653979285,
     "title": "DOMENIQUE DUMONT",
     "date": "2026-03-31",
     "time": "19:30",
@@ -2514,7 +2727,7 @@
     "source": "gretchen"
   },
   {
-    "id": 1772633518794,
+    "id": 1772653978873,
     "title": "Jean-Philippe Kindler & Robinga Schnögelrögel: Schnögel & Kindler",
     "date": "2026-03-31",
     "time": "20:00",
@@ -2526,19 +2739,19 @@
     "source": "werk2"
   },
   {
-    "id": 1772633519021,
-    "title": "Nathan Evans & The Saint PHNX Band",
+    "id": 1772653979177,
+    "title": "IL CIVETTO",
     "date": "2026-03-31",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 17,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260331-nathan-evans-the-saint-phnx-band/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "ut-connewitz"
   },
   {
-    "id": 1772633519298,
+    "id": 1772653979394,
     "title": "Stella Donnelly",
     "date": "2026-03-31",
     "time": "20:00",
@@ -2547,7 +2760,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519113,
+    "id": 1772653979208,
     "title": "Latin Greek + Kenopsia + Astranauten",
     "date": "2026-04-01",
     "time": "19:00",
@@ -2559,7 +2772,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518816,
+    "id": 1772653978895,
     "title": "YEAR OF THE GOAT",
     "date": "2026-04-01",
     "time": "20:00",
@@ -2571,7 +2784,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518920,
+    "id": 1772653978999,
     "title": "KENNEN SIE KINO?",
     "date": "2026-04-01",
     "time": "20:00",
@@ -2583,7 +2796,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519210,
+    "id": 1772653979305,
     "title": "FRANZ FERDINAND",
     "date": "2026-04-01",
     "time": "20:00",
@@ -2595,7 +2808,7 @@
     "source": "tempodrom"
   },
   {
-    "id": 1772633519299,
+    "id": 1772653979395,
     "title": "Zeyne",
     "date": "2026-04-01",
     "time": "20:00",
@@ -2604,7 +2817,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518728,
+    "id": 1772653978807,
     "title": "DIE STERNE",
     "date": "2026-04-02",
     "time": "19:00",
@@ -2616,7 +2829,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519114,
+    "id": 1772653979209,
     "title": "DÉYYESS",
     "date": "2026-04-02",
     "time": "19:00",
@@ -2628,7 +2841,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518817,
+    "id": 1772653978896,
     "title": "IL CIVETTO",
     "date": "2026-04-02",
     "time": "20:00",
@@ -2640,7 +2853,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518921,
+    "id": 1772653979000,
     "title": "RETROGOTT & HULK HODN",
     "date": "2026-04-02",
     "time": "20:00",
@@ -2652,7 +2865,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519142,
+    "id": 1772653979093,
+    "title": "kasi & antonius",
+    "date": "2026-04-02",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979237,
     "title": "HYPOCRISY",
     "date": "2026-04-02",
     "time": "20:00",
@@ -2664,7 +2889,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519261,
+    "id": 1772653979356,
     "title": "REGARD",
     "date": "2026-04-02",
     "time": "20:00",
@@ -2673,7 +2898,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519115,
+    "id": 1772653979210,
     "title": "Songslam Kreuzberg",
     "date": "2026-04-03",
     "time": "19:00",
@@ -2685,7 +2910,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518818,
+    "id": 1772653978897,
     "title": "THE EARLY DAYS • THROWBACK INDIE PARTY",
     "date": "2026-04-03",
     "time": "20:00",
@@ -2697,7 +2922,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519143,
+    "id": 1772653979238,
     "title": "REGGAEVILLE EASTER SPECIAL 2026",
     "date": "2026-04-03",
     "time": "20:00",
@@ -2709,7 +2934,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518922,
+    "id": 1772653979001,
     "title": "EASTER BEARDANCE",
     "date": "2026-04-03",
     "time": "22:00",
@@ -2721,7 +2946,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519116,
+    "id": 1772653979211,
     "title": "It’s 2016 again!",
     "date": "2026-04-03",
     "time": "23:00",
@@ -2733,7 +2958,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633519117,
+    "id": 1772653979212,
     "title": "Jim E. Brown",
     "date": "2026-04-04",
     "time": "19:00",
@@ -2745,7 +2970,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518819,
+    "id": 1772653978898,
     "title": "NILS HOFFMANN",
     "date": "2026-04-04",
     "time": "20:00",
@@ -2757,7 +2982,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518820,
+    "id": 1772653978899,
     "title": "DANCING WITH MYSELF!",
     "date": "2026-04-04",
     "time": "20:00",
@@ -2769,19 +2994,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519022,
-    "title": "Yüzyüzeyken Konusuruz",
-    "date": "2026-04-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260404-yuezyuezeyken-konusuruz/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519144,
+    "id": 1772653979239,
     "title": "ZSÁ ZSÁ",
     "date": "2026-04-04",
     "time": "20:00",
@@ -2793,7 +3006,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518923,
+    "id": 1772653979002,
     "title": "HGICH.T LIVE + ACID AFTERSHOW",
     "date": "2026-04-04",
     "time": "21:00",
@@ -2805,7 +3018,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519118,
+    "id": 1772653979213,
     "title": "Vinyl Thursdays",
     "date": "2026-04-04",
     "time": "23:00",
@@ -2817,7 +3030,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518729,
+    "id": 1772653978808,
     "title": "ELEGGTRIC EASTER",
     "date": "2026-04-05",
     "time": "17:00",
@@ -2829,7 +3042,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519119,
+    "id": 1772653979214,
     "title": "Rapril April",
     "date": "2026-04-05",
     "time": "18:00",
@@ -2841,7 +3054,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633519145,
+    "id": 1772653979240,
     "title": "STAR FM BBQ 2026",
     "date": "2026-04-05",
     "time": "20:00",
@@ -2853,7 +3066,31 @@
     "source": "astra"
   },
   {
-    "id": 1772633519146,
+    "id": 1772653979003,
+    "title": "ROLLER KIDZ",
+    "date": "2026-04-06",
+    "time": "16:00",
+    "locationId": 2,
+    "type": "party",
+    "description": "Rollschuhdisko für Kinder",
+    "ticketUrl": "https://www.so36.com/produkte/93936-tickets-roller-kidz-so36-berlin-am-06-04-2026",
+    "spotifyUrl": "",
+    "source": "so36"
+  },
+  {
+    "id": 1772653979004,
+    "title": "ROLLER DISCO",
+    "date": "2026-04-06",
+    "time": "18:00",
+    "locationId": 2,
+    "type": "party",
+    "description": "Steppen kann der Bär überall - bei uns rollt er wieder!",
+    "ticketUrl": "https://www.so36.com/produkte/93938-tickets-roller-disco-so36-berlin-am-06-04-2026",
+    "spotifyUrl": "",
+    "source": "so36"
+  },
+  {
+    "id": 1772653979241,
     "title": "RICH THE KID",
     "date": "2026-04-06",
     "time": "20:00",
@@ -2865,7 +3102,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519120,
+    "id": 1772653979215,
     "title": "Laura Nahr",
     "date": "2026-04-07",
     "time": "19:00",
@@ -2877,7 +3114,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518924,
+    "id": 1772653979005,
     "title": "THY CATAFALQUE (HU)",
     "date": "2026-04-07",
     "time": "20:00",
@@ -2889,7 +3126,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519224,
+    "id": 1772653979094,
+    "title": "ALLI NEUMANN",
+    "date": "2026-04-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979319,
     "title": "PANOPTICON",
     "date": "2026-04-07",
     "time": "20:00",
@@ -2898,7 +3147,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519262,
+    "id": 1772653979357,
     "title": "Fine",
     "date": "2026-04-07",
     "time": "20:00",
@@ -2907,7 +3156,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519121,
+    "id": 1772653979216,
     "title": "Eihwar",
     "date": "2026-04-08",
     "time": "19:00",
@@ -2919,7 +3168,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518925,
+    "id": 1772653979006,
     "title": "MAMORÉ",
     "date": "2026-04-08",
     "time": "20:00",
@@ -2931,19 +3180,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519023,
-    "title": "Tortoise",
+    "id": 1772653979095,
+    "title": "AVAION",
     "date": "2026-04-08",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260408-tortoise/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519225,
+    "id": 1772653979320,
     "title": "FEMI KUTI & THE POSITIVE FORCE",
     "date": "2026-04-08",
     "time": "20:00",
@@ -2952,7 +3201,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519263,
+    "id": 1772653979358,
     "title": "EN6O presents:",
     "date": "2026-04-08",
     "time": "20:00",
@@ -2961,7 +3210,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519122,
+    "id": 1772653979217,
     "title": "Ex-Otago",
     "date": "2026-04-09",
     "time": "19:00",
@@ -2973,7 +3222,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518821,
+    "id": 1772653978900,
     "title": "AGATHA IS DEAD!",
     "date": "2026-04-09",
     "time": "20:00",
@@ -2985,7 +3234,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518926,
+    "id": 1772653979007,
     "title": "FROM ASHES TO NEW",
     "date": "2026-04-09",
     "time": "20:00",
@@ -2997,7 +3246,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519226,
+    "id": 1772653979321,
     "title": "ALEX SERRA & TOTIDUB WITH THE SPACE CREW",
     "date": "2026-04-09",
     "time": "20:00",
@@ -3006,7 +3255,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519123,
+    "id": 1772653979218,
     "title": "Cool Aid",
     "date": "2026-04-10",
     "time": "19:00",
@@ -3018,7 +3267,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518822,
+    "id": 1772653978901,
     "title": "HELLRIPPER + SCHIZOPHRENIA",
     "date": "2026-04-10",
     "time": "20:00",
@@ -3030,7 +3279,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518927,
+    "id": 1772653979008,
     "title": "CHILDREN OF THE REVOLUTION",
     "date": "2026-04-10",
     "time": "20:00",
@@ -3042,19 +3291,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519024,
-    "title": "Harakiri For The Sky",
+    "id": 1772653979096,
+    "title": "HAZE",
     "date": "2026-04-10",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260410-harakiri-for-the-sky/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519147,
+    "id": 1772653979242,
     "title": "SAMMY VIRJI",
     "date": "2026-04-10",
     "time": "20:00",
@@ -3066,7 +3315,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518928,
+    "id": 1772653979009,
     "title": "KREUZBERG CALLING",
     "date": "2026-04-10",
     "time": "23:00",
@@ -3078,7 +3327,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519124,
+    "id": 1772653979219,
     "title": "Psychedelic Cumbia Party",
     "date": "2026-04-10",
     "time": "23:00",
@@ -3090,7 +3339,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633519125,
+    "id": 1772653979220,
     "title": "Jeden Tag Silvester",
     "date": "2026-04-11",
     "time": "19:00",
@@ -3102,7 +3351,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518730,
+    "id": 1772653978809,
     "title": "MUSIC FOR HUMAN PEOPLE",
     "date": "2026-04-11",
     "time": "20:00",
@@ -3114,7 +3363,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518823,
+    "id": 1772653978902,
     "title": "GOLDLINK",
     "date": "2026-04-11",
     "time": "20:00",
@@ -3126,19 +3375,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519025,
-    "title": "The Aristocrats",
+    "id": 1772653979097,
+    "title": "WESTBAM",
     "date": "2026-04-11",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260411-the-aristocrats/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519264,
+    "id": 1772653979359,
     "title": "CHAMOS LIVE",
     "date": "2026-04-11",
     "time": "20:00",
@@ -3147,7 +3396,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519300,
+    "id": 1772653979396,
     "title": "Fayan",
     "date": "2026-04-11",
     "time": "20:00",
@@ -3156,7 +3405,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518929,
+    "id": 1772653979010,
     "title": "MADONNAMANIA",
     "date": "2026-04-11",
     "time": "23:00",
@@ -3168,7 +3417,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519126,
+    "id": 1772653979221,
     "title": "Soul Explosion",
     "date": "2026-04-11",
     "time": "23:00",
@@ -3180,7 +3429,7 @@
     "source": "privatclub"
   },
   {
-    "id": 1772633518824,
+    "id": 1772653978903,
     "title": "TURF & KANAKU Y EL TIGRE",
     "date": "2026-04-12",
     "time": "20:00",
@@ -3192,7 +3441,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518930,
+    "id": 1772653979011,
     "title": "MOBB DEEP HAVOC",
     "date": "2026-04-12",
     "time": "20:00",
@@ -3204,19 +3453,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519026,
-    "title": "Novelists",
-    "date": "2026-04-12",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260412-novelists/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519265,
+    "id": 1772653979360,
     "title": "CASEY",
     "date": "2026-04-12",
     "time": "20:00",
@@ -3225,7 +3462,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518931,
+    "id": 1772653979012,
     "title": "LESEDÜNE",
     "date": "2026-04-13",
     "time": "19:30",
@@ -3237,7 +3474,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518825,
+    "id": 1772653978904,
     "title": "TYLER BALLGAME",
     "date": "2026-04-13",
     "time": "20:00",
@@ -3249,7 +3486,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518834,
+    "id": 1772653978913,
     "title": "WE ARE SCIENTISTS",
     "date": "2026-04-13",
     "time": "20:00",
@@ -3261,7 +3498,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519148,
+    "id": 1772653979243,
     "title": "11FREUNDE KNEIPENQUIZ",
     "date": "2026-04-13",
     "time": "20:00",
@@ -3273,7 +3510,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519301,
+    "id": 1772653979397,
     "title": "By Storm",
     "date": "2026-04-13",
     "time": "20:00",
@@ -3282,7 +3519,19 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518826,
+    "id": 1772653979013,
+    "title": "KIEZBINGO",
+    "date": "2026-04-14",
+    "time": "19:00",
+    "locationId": 2,
+    "type": "party",
+    "description": "Präsentiert von Inge Borg & Gisela Sommer",
+    "ticketUrl": "https://www.so36.com/produkte/93821-tickets-kiezbingo-so36-berlin-am-14-04-2026",
+    "spotifyUrl": "",
+    "source": "so36"
+  },
+  {
+    "id": 1772653978905,
     "title": "MELODY'S ECHO CHAMBER",
     "date": "2026-04-14",
     "time": "20:00",
@@ -3294,19 +3543,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519027,
-    "title": "The Cribs",
+    "id": 1772653979098,
+    "title": "SKYND",
     "date": "2026-04-14",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260414-the-cribs/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519227,
+    "id": 1772653979322,
     "title": "SING DELA SING",
     "date": "2026-04-15",
     "time": "19:30",
@@ -3315,7 +3564,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518827,
+    "id": 1772653978906,
     "title": "SOLENCE",
     "date": "2026-04-15",
     "time": "20:00",
@@ -3327,7 +3576,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518932,
+    "id": 1772653979014,
     "title": "QUEER SLAM BERLIN",
     "date": "2026-04-15",
     "time": "20:00",
@@ -3339,19 +3588,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519028,
-    "title": "Leap",
-    "date": "2026-04-15",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260415-leap/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519149,
+    "id": 1772653979244,
     "title": "K-POP SHOWDOWN – THE ULTIMATE TRIBUTE SHOW",
     "date": "2026-04-15",
     "time": "20:00",
@@ -3363,7 +3600,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519266,
+    "id": 1772653979361,
     "title": "Marlon Magnée",
     "date": "2026-04-15",
     "time": "20:00",
@@ -3372,7 +3609,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519302,
+    "id": 1772653979398,
     "title": "Gabrielle Aplin",
     "date": "2026-04-15",
     "time": "20:00",
@@ -3381,7 +3618,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519228,
+    "id": 1772653979323,
     "title": "SING DELA SING",
     "date": "2026-04-16",
     "time": "19:30",
@@ -3390,7 +3627,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518828,
+    "id": 1772653978907,
     "title": "THE BROWNING",
     "date": "2026-04-16",
     "time": "20:00",
@@ -3402,7 +3639,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519150,
+    "id": 1772653979245,
     "title": "K-POP SHOWDOWN – THE ULTIMATE TRIBUTE SHOW",
     "date": "2026-04-16",
     "time": "20:00",
@@ -3414,7 +3651,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519267,
+    "id": 1772653979362,
     "title": "Baran Kok",
     "date": "2026-04-16",
     "time": "20:00",
@@ -3423,7 +3660,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519303,
+    "id": 1772653979399,
     "title": "Witch Fever",
     "date": "2026-04-16",
     "time": "20:00",
@@ -3432,7 +3669,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518731,
+    "id": 1772653978810,
     "title": "SOLI FÜR DIE REIL78",
     "date": "2026-04-17",
     "time": "19:00",
@@ -3444,7 +3681,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519229,
+    "id": 1772653979324,
     "title": "SING DELA SING",
     "date": "2026-04-17",
     "time": "19:30",
@@ -3453,7 +3690,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518829,
+    "id": 1772653978908,
     "title": "JAN PLEWKA",
     "date": "2026-04-17",
     "time": "20:00",
@@ -3465,19 +3702,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519029,
-    "title": "Roachford",
-    "date": "2026-04-17",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260417-roachford/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519151,
+    "id": 1772653979246,
     "title": "SOSA LA M",
     "date": "2026-04-17",
     "time": "20:00",
@@ -3489,7 +3714,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519268,
+    "id": 1772653979363,
     "title": "Baran Kok",
     "date": "2026-04-17",
     "time": "20:00",
@@ -3498,7 +3723,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518732,
+    "id": 1772653978811,
     "title": "BENEFIZDISKO",
     "date": "2026-04-17",
     "time": "23:00",
@@ -3510,7 +3735,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518933,
+    "id": 1772653979015,
     "title": "LA CASA DEL PERREO",
     "date": "2026-04-17",
     "time": "23:59",
@@ -3522,7 +3747,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518934,
+    "id": 1772653979016,
     "title": "KIEZSCHWOOF",
     "date": "2026-04-18",
     "time": "17:00",
@@ -3534,7 +3759,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518733,
+    "id": 1772653978812,
     "title": "GRIM104",
     "date": "2026-04-18",
     "time": "20:00",
@@ -3546,7 +3771,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518830,
+    "id": 1772653978909,
     "title": "CHALK",
     "date": "2026-04-18",
     "time": "20:00",
@@ -3558,7 +3783,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518831,
+    "id": 1772653978910,
     "title": "ATR PARTY",
     "date": "2026-04-18",
     "time": "20:00",
@@ -3570,19 +3795,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519030,
-    "title": "The Avener",
+    "id": 1772653979099,
+    "title": "OTAKU PARTY",
     "date": "2026-04-18",
     "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
+    "locationId": 15,
+    "type": "party",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260418-the-avener/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519152,
+    "id": 1772653979247,
     "title": "HANNAH BAHNG",
     "date": "2026-04-18",
     "time": "20:00",
@@ -3594,7 +3819,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518935,
+    "id": 1772653979017,
     "title": "DANCING WITH TEARS IN YOUR EYES",
     "date": "2026-04-18",
     "time": "21:00",
@@ -3606,7 +3831,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518832,
+    "id": 1772653978911,
     "title": "EIN KLUMPENHACK",
     "date": "2026-04-19",
     "time": "20:00",
@@ -3618,7 +3843,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518936,
+    "id": 1772653979018,
     "title": "MARINA SPANOU",
     "date": "2026-04-19",
     "time": "20:00",
@@ -3630,19 +3855,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519031,
-    "title": "Yves",
+    "id": 1772653979100,
+    "title": "GENETIKK",
     "date": "2026-04-19",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260419-yves/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519153,
+    "id": 1772653979248,
     "title": "SMASH INTO PIECES",
     "date": "2026-04-19",
     "time": "20:00",
@@ -3654,7 +3879,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519269,
+    "id": 1772653979364,
     "title": "Mark William Lewis",
     "date": "2026-04-19",
     "time": "20:00",
@@ -3663,7 +3888,31 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518833,
+    "id": 1772653979019,
+    "title": "ROLLER KIDZ",
+    "date": "2026-04-20",
+    "time": "16:00",
+    "locationId": 2,
+    "type": "party",
+    "description": "Rollschuhdisko für Kinder",
+    "ticketUrl": "https://www.so36.com/produkte/93937-tickets-roller-kidz-so36-berlin-am-20-04-2026",
+    "spotifyUrl": "",
+    "source": "so36"
+  },
+  {
+    "id": 1772653979020,
+    "title": "ROLLER DISCO",
+    "date": "2026-04-20",
+    "time": "18:00",
+    "locationId": 2,
+    "type": "party",
+    "description": "Steppen kann der Bär überall - bei uns rollt er wieder!",
+    "ticketUrl": "https://www.so36.com/produkte/93939-tickets-roller-disco-so36-berlin-am-20-04-2026",
+    "spotifyUrl": "",
+    "source": "so36"
+  },
+  {
+    "id": 1772653978912,
     "title": "TIDE LINES",
     "date": "2026-04-20",
     "time": "20:00",
@@ -3675,7 +3924,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519191,
+    "id": 1772653979286,
     "title": "FOX STEVENSON @ Metropol",
     "date": "2026-04-21",
     "time": "19:30",
@@ -3687,7 +3936,7 @@
     "source": "gretchen"
   },
   {
-    "id": 1772633518937,
+    "id": 1772653979021,
     "title": "ANDA MORTS",
     "date": "2026-04-21",
     "time": "20:00",
@@ -3699,19 +3948,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519032,
-    "title": "Natalie Jane",
-    "date": "2026-04-21",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260421-natalie-jane/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519192,
+    "id": 1772653979287,
     "title": "Lucia Cadotsch - LIUN",
     "date": "2026-04-22",
     "time": "19:30",
@@ -3723,7 +3960,7 @@
     "source": "gretchen"
   },
   {
-    "id": 1772633518938,
+    "id": 1772653979022,
     "title": "ANDA MORTS",
     "date": "2026-04-22",
     "time": "20:00",
@@ -3735,7 +3972,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519230,
+    "id": 1772653979325,
     "title": "RUNDFUNKCHORLOUNGE »Fake News«",
     "date": "2026-04-23",
     "time": "19:30",
@@ -3744,7 +3981,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518835,
+    "id": 1772653978914,
     "title": "MATTEO MANCUSO",
     "date": "2026-04-23",
     "time": "20:00",
@@ -3756,7 +3993,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518939,
+    "id": 1772653979023,
     "title": "VIKO & PENGLORD",
     "date": "2026-04-23",
     "time": "20:00",
@@ -3768,19 +4005,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519033,
-    "title": "Kiki Rockwell",
-    "date": "2026-04-23",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260423-kiki-rockwell/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519270,
+    "id": 1772653979365,
     "title": "Los Bitchos + Las Petunias",
     "date": "2026-04-23",
     "time": "20:00",
@@ -3789,7 +4014,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519304,
+    "id": 1772653979400,
     "title": "Wintersleep",
     "date": "2026-04-23",
     "time": "20:00",
@@ -3798,7 +4023,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518734,
+    "id": 1772653978813,
     "title": "EIN KLUMPENHACK LIVE 2026",
     "date": "2026-04-24",
     "time": "19:00",
@@ -3810,7 +4035,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518940,
+    "id": 1772653979024,
     "title": "FULL  OF HELL",
     "date": "2026-04-24",
     "time": "19:00",
@@ -3822,7 +4047,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518836,
+    "id": 1772653978915,
     "title": "KINKY INDIE PARTY",
     "date": "2026-04-24",
     "time": "20:00",
@@ -3834,7 +4059,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519305,
+    "id": 1772653979401,
     "title": "Izzy Escobar",
     "date": "2026-04-24",
     "time": "20:00",
@@ -3843,7 +4068,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518837,
+    "id": 1772653978916,
     "title": "DARK SPRING FESTIVAL 2026",
     "date": "2026-04-25",
     "time": "20:00",
@@ -3855,19 +4080,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519034,
-    "title": "Hundreds",
+    "id": 1772653979101,
+    "title": "SINGLE PARTY LEIPZIG",
     "date": "2026-04-25",
     "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
+    "locationId": 15,
+    "type": "party",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260425-hundreds/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519271,
+    "id": 1772653979366,
     "title": "The Roop",
     "date": "2026-04-25",
     "time": "20:00",
@@ -3876,7 +4101,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519272,
+    "id": 1772653979367,
     "title": "BRONKA HATES BERLIN VOL.2",
     "date": "2026-04-25",
     "time": "20:00",
@@ -3885,7 +4110,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518941,
+    "id": 1772653979025,
     "title": "GAYHANE",
     "date": "2026-04-25",
     "time": "22:00",
@@ -3897,7 +4122,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518942,
+    "id": 1772653979026,
     "title": "RANDALE IM MILCHSALON",
     "date": "2026-04-26",
     "time": "15:00",
@@ -3909,7 +4134,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518735,
+    "id": 1772653978814,
     "title": "BLEIB MODERN + KONSTANTIN UNWOHL",
     "date": "2026-04-26",
     "time": "19:00",
@@ -3921,7 +4146,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518943,
+    "id": 1772653979027,
     "title": "DREVO",
     "date": "2026-04-27",
     "time": "19:00",
@@ -3933,7 +4158,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519154,
+    "id": 1772653979102,
+    "title": "KASALLA",
+    "date": "2026-04-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979249,
     "title": "THE NOTWIST",
     "date": "2026-04-27",
     "time": "20:00",
@@ -3945,7 +4182,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519306,
+    "id": 1772653979402,
     "title": "TheDodo",
     "date": "2026-04-27",
     "time": "20:00",
@@ -3954,7 +4191,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519193,
+    "id": 1772653979288,
     "title": "MOCKY - LA meets BERLIN JAM",
     "date": "2026-04-28",
     "time": "19:30",
@@ -3966,7 +4203,7 @@
     "source": "gretchen"
   },
   {
-    "id": 1772633518838,
+    "id": 1772653978917,
     "title": "CARA ROSE",
     "date": "2026-04-28",
     "time": "20:00",
@@ -3978,7 +4215,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518944,
+    "id": 1772653979028,
     "title": "ELLI BERLIN & BRUNHILDE",
     "date": "2026-04-28",
     "time": "20:00",
@@ -3990,7 +4227,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519307,
+    "id": 1772653979403,
     "title": "Rebe",
     "date": "2026-04-28",
     "time": "20:00",
@@ -3999,7 +4236,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518736,
+    "id": 1772653978815,
     "title": "SALÒ - Hardcore ist tot Tour 2026",
     "date": "2026-04-29",
     "time": "19:00",
@@ -4011,7 +4248,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518945,
+    "id": 1772653979029,
     "title": "KULTUR SHOCK",
     "date": "2026-04-29",
     "time": "20:00",
@@ -4023,7 +4260,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519308,
+    "id": 1772653979404,
     "title": "Frenna",
     "date": "2026-04-29",
     "time": "20:00",
@@ -4032,7 +4269,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518839,
+    "id": 1772653978918,
     "title": "HAIYTI",
     "date": "2026-04-30",
     "time": "20:00",
@@ -4044,7 +4281,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518946,
+    "id": 1772653979030,
     "title": "SALÒ",
     "date": "2026-04-30",
     "time": "20:00",
@@ -4056,7 +4293,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519155,
+    "id": 1772653979103,
+    "title": "TANZ IN DEN MAI",
+    "date": "2026-04-30",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979250,
     "title": "HEAVY RAWTATION",
     "date": "2026-04-30",
     "time": "20:00",
@@ -4068,7 +4317,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518947,
+    "id": 1772653979031,
     "title": "ELECTRIC BALLROOM",
     "date": "2026-04-30",
     "time": "23:30",
@@ -4080,7 +4329,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518840,
+    "id": 1772653978919,
     "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
     "date": "2026-05-01",
     "time": "20:00",
@@ -4092,7 +4341,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518948,
+    "id": 1772653979032,
     "title": "COSMIC PSYCHOS",
     "date": "2026-05-01",
     "time": "20:00",
@@ -4104,7 +4353,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519273,
+    "id": 1772653979368,
     "title": "Miljö",
     "date": "2026-05-01",
     "time": "20:00",
@@ -4113,7 +4362,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518737,
+    "id": 1772653978816,
     "title": "LOVE HARDCORE, HATE ANTISEMITISM w/ Kaput Krauts, Amen81, DVMP",
     "date": "2026-05-02",
     "time": "17:00",
@@ -4125,7 +4374,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518949,
+    "id": 1772653979033,
     "title": "6EURONEUNZIG",
     "date": "2026-05-02",
     "time": "20:00",
@@ -4137,7 +4386,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519309,
+    "id": 1772653979104,
+    "title": "DICK BRAVE",
+    "date": "2026-05-02",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979405,
     "title": "JESSICA BAIO",
     "date": "2026-05-02",
     "time": "20:00",
@@ -4146,7 +4407,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518841,
+    "id": 1772653978920,
     "title": "ATMOSPHERE",
     "date": "2026-05-03",
     "time": "20:00",
@@ -4158,7 +4419,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518950,
+    "id": 1772653979034,
     "title": "6EURONEUNZIG - ZUSATZSHOW",
     "date": "2026-05-03",
     "time": "20:00",
@@ -4170,7 +4431,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519310,
+    "id": 1772653979406,
     "title": "FLORENCE ROAD",
     "date": "2026-05-03",
     "time": "20:00",
@@ -4179,7 +4440,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519156,
+    "id": 1772653979251,
     "title": "11FREUNDE KNEIPENQUIZ",
     "date": "2026-05-04",
     "time": "20:00",
@@ -4191,7 +4452,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519311,
+    "id": 1772653979407,
     "title": "Die alten Waisen – eine musikalische Lesung",
     "date": "2026-05-04",
     "time": "20:00",
@@ -4200,7 +4461,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518842,
+    "id": 1772653978921,
     "title": "PETER BJORN & JOHN",
     "date": "2026-05-05",
     "time": "20:00",
@@ -4212,7 +4473,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518951,
+    "id": 1772653979035,
     "title": "RYAN CASSATA EUROPE TOUR 2026",
     "date": "2026-05-05",
     "time": "20:00",
@@ -4224,19 +4485,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519035,
-    "title": "Robert Jon & The Wreck",
-    "date": "2026-05-05",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260505-robert-jon-the-wreck-2/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519157,
+    "id": 1772653979252,
     "title": "PEACHES",
     "date": "2026-05-05",
     "time": "20:00",
@@ -4248,7 +4497,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519231,
+    "id": 1772653979326,
     "title": "ISMAEL SERRANO",
     "date": "2026-05-05",
     "time": "20:00",
@@ -4257,7 +4506,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518738,
+    "id": 1772653978817,
     "title": "GANSER",
     "date": "2026-05-06",
     "time": "19:00",
@@ -4269,19 +4518,19 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519036,
-    "title": "Safri Duo",
+    "id": 1772653979105,
+    "title": "UNRELEASED",
     "date": "2026-05-06",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260506-safri-duo/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519158,
+    "id": 1772653979253,
     "title": "PEACHES",
     "date": "2026-05-06",
     "time": "20:00",
@@ -4293,7 +4542,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519312,
+    "id": 1772653979408,
     "title": "THE ACT",
     "date": "2026-05-06",
     "time": "20:00",
@@ -4302,7 +4551,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518739,
+    "id": 1772653978818,
     "title": "SHEER TERROR",
     "date": "2026-05-07",
     "time": "19:00",
@@ -4314,7 +4563,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518843,
+    "id": 1772653978922,
     "title": "CHRISTIN NICHOLS",
     "date": "2026-05-07",
     "time": "20:00",
@@ -4326,19 +4575,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519037,
-    "title": "Letz Zep",
-    "date": "2026-05-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260507-letz-zep/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519159,
+    "id": 1772653979254,
     "title": "OUT OF LINE WEEKENDER 2026",
     "date": "2026-05-07",
     "time": "20:00",
@@ -4350,7 +4587,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519313,
+    "id": 1772653979409,
     "title": "TAYLOR ACORN",
     "date": "2026-05-07",
     "time": "20:00",
@@ -4359,7 +4596,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518952,
+    "id": 1772653979036,
     "title": "GRIM104",
     "date": "2026-05-08",
     "time": "19:30",
@@ -4371,7 +4608,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518844,
+    "id": 1772653978923,
     "title": "NON EST DEUS",
     "date": "2026-05-08",
     "time": "20:00",
@@ -4383,19 +4620,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519038,
-    "title": "Plini",
+    "id": 1772653979106,
+    "title": "ABBA UNFORGETTABLE",
     "date": "2026-05-08",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260508-plini/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519160,
+    "id": 1772653979255,
     "title": "OUT OF LINE WEEKENDER 2026",
     "date": "2026-05-08",
     "time": "20:00",
@@ -4407,7 +4644,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518953,
+    "id": 1772653979037,
     "title": "GRIM104",
     "date": "2026-05-09",
     "time": "19:30",
@@ -4419,7 +4656,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518845,
+    "id": 1772653978924,
     "title": "XAVI",
     "date": "2026-05-09",
     "time": "20:00",
@@ -4431,19 +4668,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519039,
-    "title": "JBS",
+    "id": 1772653979107,
+    "title": "90ER & 2000ER PARTY",
     "date": "2026-05-09",
     "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
+    "locationId": 15,
+    "type": "party",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260509-jbs/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519161,
+    "id": 1772653979256,
     "title": "OUT OF LINE WEEKENDER 2026",
     "date": "2026-05-09",
     "time": "20:00",
@@ -4455,7 +4692,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519232,
+    "id": 1772653979327,
     "title": "NESS",
     "date": "2026-05-09",
     "time": "20:00",
@@ -4464,7 +4701,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519314,
+    "id": 1772653979410,
     "title": "Js. Scotty & Kii",
     "date": "2026-05-09",
     "time": "20:00",
@@ -4473,7 +4710,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518740,
+    "id": 1772653978819,
     "title": "VOODOO JÜRGENS",
     "date": "2026-05-10",
     "time": "19:00",
@@ -4485,7 +4722,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518954,
+    "id": 1772653979038,
     "title": "RECORD RELEASE PARTY",
     "date": "2026-05-10",
     "time": "20:00",
@@ -4497,7 +4734,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519233,
+    "id": 1772653979328,
     "title": "SILVANA ESTRADA",
     "date": "2026-05-10",
     "time": "20:00",
@@ -4506,7 +4743,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518955,
+    "id": 1772653979039,
     "title": "LESEDÜNE",
     "date": "2026-05-11",
     "time": "19:30",
@@ -4518,19 +4755,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519040,
-    "title": "Public Image Limited",
-    "date": "2026-05-11",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260511-public-image-limited/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519315,
+    "id": 1772653979411,
     "title": "After",
     "date": "2026-05-11",
     "time": "20:00",
@@ -4539,7 +4764,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519316,
+    "id": 1772653979412,
     "title": "JUTES",
     "date": "2026-05-12",
     "time": "20:00",
@@ -4548,7 +4773,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519317,
+    "id": 1772653979413,
     "title": "The Arch",
     "date": "2026-05-12",
     "time": "20:00",
@@ -4557,7 +4782,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518741,
+    "id": 1772653978820,
     "title": "EVERBLACK CARNAGE  Pre-Holiday Chaos!",
     "date": "2026-05-13",
     "time": "18:00",
@@ -4569,7 +4794,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519162,
+    "id": 1772653979257,
     "title": "VOODOO JÜRGENS",
     "date": "2026-05-13",
     "time": "20:00",
@@ -4581,7 +4806,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519274,
+    "id": 1772653979369,
     "title": "Golden Hours & Lone Assembly",
     "date": "2026-05-13",
     "time": "20:00",
@@ -4590,19 +4815,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519041,
-    "title": "Desertfest Berlin",
-    "date": "2026-05-14",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260514-desertfest-berlin/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519211,
+    "id": 1772653979306,
     "title": "Tori Amos",
     "date": "2026-05-14",
     "time": "20:00",
@@ -4614,7 +4827,7 @@
     "source": "tempodrom"
   },
   {
-    "id": 1772633519234,
+    "id": 1772653979329,
     "title": "XJAZZ! presents MARCOS VALLE",
     "date": "2026-05-14",
     "time": "20:00",
@@ -4623,7 +4836,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519318,
+    "id": 1772653979414,
     "title": "SARAH BLASKO",
     "date": "2026-05-14",
     "time": "20:00",
@@ -4632,19 +4845,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519042,
-    "title": "Desertfest Berlin",
-    "date": "2026-05-15",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260515-desertfest-berlin/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518847,
+    "id": 1772653978926,
     "title": "HEADLESS PARTY • The Home of Core & Alternative Rock",
     "date": "2026-05-16",
     "time": "20:00",
@@ -4656,19 +4857,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519043,
-    "title": "Desertfest Berlin",
+    "id": 1772653979108,
+    "title": "KAFVKA",
     "date": "2026-05-16",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260516-desertfest-berlin/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519163,
+    "id": 1772653979258,
     "title": "TAKT32",
     "date": "2026-05-16",
     "time": "20:00",
@@ -4680,7 +4881,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519319,
+    "id": 1772653979415,
     "title": "EIN ROSENKAVALIER",
     "date": "2026-05-16",
     "time": "20:00",
@@ -4689,7 +4890,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518956,
+    "id": 1772653979040,
     "title": "DANCING WITH TEARS IN YOUR EYES",
     "date": "2026-05-16",
     "time": "22:00",
@@ -4701,7 +4902,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519235,
+    "id": 1772653979330,
     "title": "SING DELA SING",
     "date": "2026-05-18",
     "time": "19:30",
@@ -4710,7 +4911,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518957,
+    "id": 1772653979041,
     "title": "DEERHOOF",
     "date": "2026-05-18",
     "time": "20:00",
@@ -4722,7 +4923,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519236,
+    "id": 1772653979331,
     "title": "SING DELA SING",
     "date": "2026-05-19",
     "time": "19:30",
@@ -4731,7 +4932,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518848,
+    "id": 1772653978927,
     "title": "LUIZA",
     "date": "2026-05-19",
     "time": "20:00",
@@ -4743,7 +4944,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519237,
+    "id": 1772653979332,
     "title": "SING DELA SING",
     "date": "2026-05-20",
     "time": "19:30",
@@ -4752,7 +4953,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518849,
+    "id": 1772653978928,
     "title": "RODRIGO GALLARDO + TREMOR",
     "date": "2026-05-20",
     "time": "20:00",
@@ -4764,7 +4965,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518958,
+    "id": 1772653979042,
     "title": "QUEER SLAM BERLIN",
     "date": "2026-05-20",
     "time": "20:00",
@@ -4776,7 +4977,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518850,
+    "id": 1772653978929,
     "title": "ISRAEL NASH",
     "date": "2026-05-21",
     "time": "20:00",
@@ -4788,7 +4989,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519238,
+    "id": 1772653979333,
     "title": "FLEA AND THE HONORA BAND",
     "date": "2026-05-21",
     "time": "20:00",
@@ -4797,7 +4998,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519275,
+    "id": 1772653979370,
     "title": "Man / Woman / Chainsaw",
     "date": "2026-05-21",
     "time": "20:00",
@@ -4806,7 +5007,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518959,
+    "id": 1772653979043,
     "title": "SHEER TERROR",
     "date": "2026-05-21",
     "time": "20:15",
@@ -4818,7 +5019,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518851,
+    "id": 1772653978930,
     "title": "PALEDUSK",
     "date": "2026-05-22",
     "time": "20:00",
@@ -4830,19 +5031,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519044,
-    "title": "SAFTBOYS",
+    "id": 1772653979109,
+    "title": "FROM SYNTHETIC 80S TO ALTERNATIVE 90S",
     "date": "2026-05-22",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260522-saftboys/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633518852,
+    "id": 1772653978931,
     "title": "WILDE HERZEN",
     "date": "2026-05-23",
     "time": "20:00",
@@ -4854,7 +5055,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519239,
+    "id": 1772653979110,
+    "title": "THE BIG DEPECHE MODE PARTY",
+    "date": "2026-05-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979334,
     "title": "CHOIR! CHOIR! CHOIR!",
     "date": "2026-05-24",
     "time": "19:00",
@@ -4863,7 +5076,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518853,
+    "id": 1772653978932,
     "title": "HELENA DELPHI",
     "date": "2026-05-24",
     "time": "20:00",
@@ -4875,19 +5088,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519045,
-    "title": "Arde Bogotá",
-    "date": "2026-05-25",
+    "id": 1772653979111,
+    "title": "FRONT 242 PARTY",
+    "date": "2026-05-24",
     "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
+    "locationId": 15,
+    "type": "party",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260525-arde-bogota/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519320,
+    "id": 1772653979416,
     "title": "Nectar Wood – Bloom in association with Notion Magazine",
     "date": "2026-05-25",
     "time": "20:00",
@@ -4896,7 +5109,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518854,
+    "id": 1772653978933,
     "title": "THE ABYSSINIANS & BIG YOUTH",
     "date": "2026-05-26",
     "time": "20:00",
@@ -4908,7 +5121,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519212,
+    "id": 1772653979112,
+    "title": "GREGOR HÄGELE",
+    "date": "2026-05-26",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979307,
     "title": "Tim Bendzko",
     "date": "2026-05-26",
     "time": "20:00",
@@ -4920,7 +5145,7 @@
     "source": "tempodrom"
   },
   {
-    "id": 1772633518855,
+    "id": 1772653978934,
     "title": "BEN KWELLER",
     "date": "2026-05-27",
     "time": "20:00",
@@ -4932,7 +5157,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518960,
+    "id": 1772653979044,
     "title": "CARLO KARACHO",
     "date": "2026-05-27",
     "time": "20:00",
@@ -4944,7 +5169,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519321,
+    "id": 1772653979113,
+    "title": "BLUE OCTOBER",
+    "date": "2026-05-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979417,
     "title": "Au/Ra",
     "date": "2026-05-27",
     "time": "20:00",
@@ -4953,7 +5190,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518961,
+    "id": 1772653979045,
     "title": "KAPUTT - EIN COMICROMAN",
     "date": "2026-05-28",
     "time": "19:30",
@@ -4965,7 +5202,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519164,
+    "id": 1772653979259,
     "title": "LULU SANTOS",
     "date": "2026-05-28",
     "time": "20:00",
@@ -4977,7 +5214,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519322,
+    "id": 1772653979418,
     "title": "Pacifica",
     "date": "2026-05-28",
     "time": "20:00",
@@ -4986,7 +5223,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518742,
+    "id": 1772653978821,
     "title": "HEXER - BRAND TOUR 2026",
     "date": "2026-05-29",
     "time": "19:00",
@@ -4998,7 +5235,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518856,
+    "id": 1772653978935,
     "title": "THOMAS SCHWEBEL spielt FEHLFARBEN",
     "date": "2026-05-29",
     "time": "20:00",
@@ -5010,7 +5247,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519165,
+    "id": 1772653979260,
     "title": "BLUE OCTOBER",
     "date": "2026-05-29",
     "time": "20:00",
@@ -5022,7 +5259,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518743,
+    "id": 1772653978822,
     "title": "20 JAHRE BLINDGÄNGER &amp; STÖRFALL",
     "date": "2026-05-30",
     "time": "18:00",
@@ -5034,7 +5271,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518962,
+    "id": 1772653979046,
     "title": "MAD CADDIES",
     "date": "2026-05-30",
     "time": "19:00",
@@ -5046,19 +5283,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519046,
-    "title": "Christoph Sakwerda",
-    "date": "2026-05-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260530-christoph-sakwerda/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519323,
+    "id": 1772653979419,
     "title": "John Kennedy",
     "date": "2026-05-30",
     "time": "20:00",
@@ -5067,7 +5292,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518963,
+    "id": 1772653979047,
     "title": "GAYHANE",
     "date": "2026-05-30",
     "time": "23:00",
@@ -5079,7 +5304,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518964,
+    "id": 1772653979048,
     "title": "GENERATION Y PUNK – UPDATE EINER SUBKULTUR",
     "date": "2026-05-31",
     "time": "19:00",
@@ -5091,7 +5316,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519240,
+    "id": 1772653979335,
     "title": "MAMMAL HANDS",
     "date": "2026-05-31",
     "time": "20:00",
@@ -5100,7 +5325,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518965,
+    "id": 1772653979049,
     "title": "LESEDÜNE",
     "date": "2026-06-01",
     "time": "19:30",
@@ -5112,7 +5337,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519324,
+    "id": 1772653979114,
+    "title": "LAIBACH",
+    "date": "2026-06-02",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979420,
     "title": "Alin Coen",
     "date": "2026-06-02",
     "time": "20:00",
@@ -5121,7 +5358,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518857,
+    "id": 1772653978936,
     "title": "HARD-ONS feat. JERRY A (Poison Idea) + GUITAR WOLF",
     "date": "2026-06-03",
     "time": "20:00",
@@ -5133,31 +5370,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519047,
-    "title": "Band-Maid",
-    "date": "2026-06-03",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260603-band-maid/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519048,
-    "title": "Räuber",
-    "date": "2026-06-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260604-raeuber/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518744,
+    "id": 1772653978823,
     "title": "DREAM NAILS",
     "date": "2026-06-05",
     "time": "19:00",
@@ -5169,7 +5382,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518858,
+    "id": 1772653978937,
     "title": "GET WELL SOON",
     "date": "2026-06-05",
     "time": "20:00",
@@ -5181,7 +5394,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518859,
+    "id": 1772653978938,
     "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
     "date": "2026-06-05",
     "time": "20:00",
@@ -5193,7 +5406,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518860,
+    "id": 1772653978939,
     "title": "DANCING WITH MYSELF!",
     "date": "2026-06-06",
     "time": "20:00",
@@ -5205,7 +5418,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519276,
+    "id": 1772653979115,
+    "title": "OLDSCHOOL BEATS OPEN AIR",
+    "date": "2026-06-06",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979371,
     "title": "Kitty Craft",
     "date": "2026-06-06",
     "time": "20:00",
@@ -5214,7 +5439,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518861,
+    "id": 1772653978940,
     "title": "SEAFRET",
     "date": "2026-06-07",
     "time": "20:00",
@@ -5226,19 +5451,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519049,
-    "title": "Static X",
-    "date": "2026-06-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260607-static-x/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518966,
+    "id": 1772653979050,
     "title": "TOM MORELLO",
     "date": "2026-06-08",
     "time": "20:00",
@@ -5250,7 +5463,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519166,
+    "id": 1772653979261,
     "title": "11FREUNDE KNEIPENQUIZ",
     "date": "2026-06-08",
     "time": "20:00",
@@ -5262,19 +5475,19 @@
     "source": "astra"
   },
   {
-    "id": 1772633519050,
-    "title": "Birds On A Wire",
+    "id": 1772653979116,
+    "title": "HOLLYWOOD UNDEAD",
     "date": "2026-06-09",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260609-birds-on-a-wire/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519241,
+    "id": 1772653979336,
     "title": "FLORIAN CHRISTL",
     "date": "2026-06-10",
     "time": "20:00",
@@ -5283,7 +5496,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519167,
+    "id": 1772653979262,
     "title": "THE ADICTS",
     "date": "2026-06-12",
     "time": "20:00",
@@ -5295,7 +5508,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519168,
+    "id": 1772653979263,
     "title": "BERLIN BREAKOUT! 2026",
     "date": "2026-06-13",
     "time": "20:00",
@@ -5307,19 +5520,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519051,
-    "title": "Dennis van Aarssen",
-    "date": "2026-06-14",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260614-dennis-van-aarssen/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518862,
+    "id": 1772653978941,
     "title": "SORRY",
     "date": "2026-06-15",
     "time": "20:00",
@@ -5331,7 +5532,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519325,
+    "id": 1772653979421,
     "title": "Zeke",
     "date": "2026-06-16",
     "time": "20:00",
@@ -5340,7 +5541,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518863,
+    "id": 1772653978942,
     "title": "WARGASM",
     "date": "2026-06-17",
     "time": "20:00",
@@ -5352,19 +5553,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519052,
-    "title": "Yonaka",
-    "date": "2026-06-17",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260617-yonaka/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519206,
+    "id": 1772653979301,
     "title": "Celeste",
     "date": "2026-06-17",
     "time": "20:00",
@@ -5376,7 +5565,7 @@
     "source": "tempodrom"
   },
   {
-    "id": 1772633519277,
+    "id": 1772653979372,
     "title": "Amanda Shires",
     "date": "2026-06-17",
     "time": "20:00",
@@ -5385,7 +5574,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518967,
+    "id": 1772653979051,
     "title": "AUSGESTORBEN",
     "date": "2026-06-19",
     "time": "20:00",
@@ -5397,7 +5586,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519169,
+    "id": 1772653979264,
     "title": "30 JAHRE KARRERA KLUB – Day 1",
     "date": "2026-06-19",
     "time": "20:00",
@@ -5409,7 +5598,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518864,
+    "id": 1772653978943,
     "title": "DYNAMIT",
     "date": "2026-06-20",
     "time": "20:00",
@@ -5421,7 +5610,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518968,
+    "id": 1772653979052,
     "title": "AUSGESTORBEN",
     "date": "2026-06-20",
     "time": "20:00",
@@ -5433,7 +5622,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519170,
+    "id": 1772653979265,
     "title": "30 JAHRE KARRERA KLUB – Day 2",
     "date": "2026-06-20",
     "time": "20:00",
@@ -5445,7 +5634,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518969,
+    "id": 1772653979053,
     "title": "DANCING WITH TEARS IN YOUR EYES",
     "date": "2026-06-20",
     "time": "22:00",
@@ -5457,7 +5646,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518970,
+    "id": 1772653979054,
     "title": "DIÄT",
     "date": "2026-06-26",
     "time": "20:00",
@@ -5469,19 +5658,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519053,
-    "title": "Bridge City Sinners",
-    "date": "2026-06-27",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260627-bridge-city-sinners/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518971,
+    "id": 1772653979055,
     "title": "GAYHANE",
     "date": "2026-06-27",
     "time": "22:00",
@@ -5493,7 +5670,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519278,
+    "id": 1772653979117,
+    "title": "AUDIO88 & YASSIN",
+    "date": "2026-06-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979373,
     "title": "EYEHATEGOD",
     "date": "2026-06-28",
     "time": "20:00",
@@ -5502,7 +5691,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518972,
+    "id": 1772653979056,
     "title": "CONVERGE",
     "date": "2026-06-30",
     "time": "19:00",
@@ -5514,7 +5703,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519242,
+    "id": 1772653979337,
     "title": "SINA BATHAIE",
     "date": "2026-06-30",
     "time": "20:30",
@@ -5523,7 +5712,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518865,
+    "id": 1772653978944,
     "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
     "date": "2026-07-03",
     "time": "20:00",
@@ -5535,7 +5724,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518973,
+    "id": 1772653979057,
     "title": "KOMA AMED",
     "date": "2026-07-04",
     "time": "20:00",
@@ -5547,7 +5736,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519326,
+    "id": 1772653979422,
     "title": "ERIC HUTCHINSON",
     "date": "2026-07-04",
     "time": "20:00",
@@ -5556,7 +5745,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519194,
+    "id": 1772653979289,
     "title": "DOMINIQUE FILS-AIMÉ",
     "date": "2026-07-08",
     "time": "19:30",
@@ -5568,7 +5757,7 @@
     "source": "gretchen"
   },
   {
-    "id": 1772633518745,
+    "id": 1772653978824,
     "title": "BUCHVORSTELLUNG - ANTISEMITISMUS DEFINIEREN",
     "date": "2026-07-10",
     "time": "19:00",
@@ -5580,7 +5769,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518866,
+    "id": 1772653978945,
     "title": "HEADLESS PARTY • The Home of Core & Alternative Rock",
     "date": "2026-07-18",
     "time": "20:00",
@@ -5592,7 +5781,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519279,
+    "id": 1772653979374,
     "title": "Arch Enemy",
     "date": "2026-07-19",
     "time": "20:00",
@@ -5601,7 +5790,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519171,
+    "id": 1772653979266,
     "title": "GRUPO REVELAÇÃO",
     "date": "2026-07-23",
     "time": "20:00",
@@ -5613,7 +5802,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518867,
+    "id": 1772653978946,
     "title": "WILDE HERZEN",
     "date": "2026-07-25",
     "time": "20:00",
@@ -5625,7 +5814,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519327,
+    "id": 1772653979423,
     "title": "Vowws",
     "date": "2026-07-25",
     "time": "20:00",
@@ -5634,19 +5823,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633519054,
-    "title": "Less Than Jake",
-    "date": "2026-07-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260730-less-than-jake/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518868,
+    "id": 1772653978947,
     "title": "DANCING WITH MYSELF!",
     "date": "2026-08-01",
     "time": "20:00",
@@ -5658,7 +5835,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518974,
+    "id": 1772653979058,
     "title": "GOOD RIDDANCE",
     "date": "2026-08-02",
     "time": "20:00",
@@ -5670,7 +5847,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518869,
+    "id": 1772653978948,
     "title": "H2O",
     "date": "2026-08-03",
     "time": "20:00",
@@ -5682,7 +5859,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518870,
+    "id": 1772653978949,
     "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
     "date": "2026-08-07",
     "time": "20:00",
@@ -5694,7 +5871,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519280,
+    "id": 1772653979375,
     "title": "THIS WILL DESTROY YOU",
     "date": "2026-08-07",
     "time": "20:00",
@@ -5703,7 +5880,19 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518975,
+    "id": 1772653979118,
+    "title": "KMFDM",
+    "date": "2026-08-08",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979059,
     "title": "LAGWAGON",
     "date": "2026-08-12",
     "time": "20:00",
@@ -5715,7 +5904,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519172,
+    "id": 1772653979267,
     "title": "ROSE TATTOO",
     "date": "2026-08-18",
     "time": "20:00",
@@ -5727,7 +5916,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518871,
+    "id": 1772653978950,
     "title": "KINKY INDIE PARTY",
     "date": "2026-08-22",
     "time": "20:00",
@@ -5739,7 +5928,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518976,
+    "id": 1772653979060,
     "title": "DIE LEGENDE VON NORD",
     "date": "2026-08-22",
     "time": "20:00",
@@ -5751,7 +5940,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518872,
+    "id": 1772653978951,
     "title": "SHAKEY GRAVES",
     "date": "2026-08-26",
     "time": "20:00",
@@ -5763,7 +5952,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519281,
+    "id": 1772653979376,
     "title": "OIDORNO",
     "date": "2026-08-28",
     "time": "20:00",
@@ -5772,7 +5961,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518873,
+    "id": 1772653978952,
     "title": "ACTORS",
     "date": "2026-09-04",
     "time": "20:00",
@@ -5784,7 +5973,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518977,
+    "id": 1772653979061,
     "title": "FALK",
     "date": "2026-09-04",
     "time": "20:00",
@@ -5796,19 +5985,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519055,
-    "title": "Anaïs",
-    "date": "2026-09-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260904-anais/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519282,
+    "id": 1772653979377,
     "title": "Haze",
     "date": "2026-09-04",
     "time": "20:00",
@@ -5817,7 +5994,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518874,
+    "id": 1772653978953,
     "title": "TRAUMATIN",
     "date": "2026-09-05",
     "time": "20:00",
@@ -5829,7 +6006,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519243,
+    "id": 1772653979119,
+    "title": "GROSSSTADT­GEFLÜSTER - OPEN AIR",
+    "date": "2026-09-05",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979338,
     "title": "DRANGSAL",
     "date": "2026-09-05",
     "time": "20:00",
@@ -5838,7 +6027,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519244,
+    "id": 1772653979339,
     "title": "FOY VANCE",
     "date": "2026-09-06",
     "time": "19:00",
@@ -5847,7 +6036,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518746,
+    "id": 1772653978825,
     "title": "MOTORPSYCHO",
     "date": "2026-09-10",
     "time": "19:00",
@@ -5859,7 +6048,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519173,
+    "id": 1772653979268,
     "title": "NIZI19",
     "date": "2026-09-11",
     "time": "20:00",
@@ -5871,7 +6060,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518978,
+    "id": 1772653979062,
     "title": "LA COKA NOSTRA",
     "date": "2026-09-12",
     "time": "20:00",
@@ -5883,19 +6072,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519056,
-    "title": "Luis",
-    "date": "2026-09-13",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260913-luis/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518979,
+    "id": 1772653979063,
     "title": "AZ LIVE IN BERLIN",
     "date": "2026-09-16",
     "time": "20:00",
@@ -5907,7 +6084,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518875,
+    "id": 1772653978954,
     "title": "ISABEL VAN GELDER",
     "date": "2026-09-19",
     "time": "20:00",
@@ -5919,7 +6096,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518876,
+    "id": 1772653978955,
     "title": "HEADLESS PARTY • The Home of Core & Alternative Rock",
     "date": "2026-09-19",
     "time": "20:00",
@@ -5931,31 +6108,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519057,
-    "title": "Anuv Jain",
-    "date": "2026-09-19",
+    "id": 1772653979120,
+    "title": "LOTTE",
+    "date": "2026-09-21",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260919-anuv-jain/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519058,
-    "title": "Vega",
-    "date": "2026-09-25",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260925-vega/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518747,
+    "id": 1772653978826,
     "title": "NEONSCHWARZ",
     "date": "2026-09-26",
     "time": "19:00",
@@ -5967,7 +6132,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518877,
+    "id": 1772653978956,
     "title": "WILDE HERZEN",
     "date": "2026-09-26",
     "time": "20:00",
@@ -5979,31 +6144,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519059,
-    "title": "Silke Bischoff",
-    "date": "2026-09-27",
+    "id": 1772653979121,
+    "title": "SILKE BISCHOFF",
+    "date": "2026-09-26",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260927-silke-bischoff/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519060,
-    "title": "Turbopaolo",
-    "date": "2026-09-28",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260928-turbopaolo/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518878,
+    "id": 1772653978957,
     "title": "EINAR SOLDBERG",
     "date": "2026-09-30",
     "time": "20:00",
@@ -6015,7 +6168,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519245,
+    "id": 1772653979122,
+    "title": "JUPITER JONES",
+    "date": "2026-09-30",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979340,
     "title": "JUPITER JONES",
     "date": "2026-10-01",
     "time": "20:00",
@@ -6024,19 +6189,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519061,
-    "title": "The O'Reillys and The Paddyhats",
-    "date": "2026-10-02",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261002-the-oreillys-and-the-paddyhats/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519174,
+    "id": 1772653979269,
     "title": "LOREEN",
     "date": "2026-10-02",
     "time": "20:00",
@@ -6048,19 +6201,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519062,
-    "title": "The Boyband",
-    "date": "2026-10-03",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261003-the-boyband/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518879,
+    "id": 1772653978958,
     "title": "WALLIS BIRD",
     "date": "2026-10-04",
     "time": "20:00",
@@ -6072,7 +6213,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518980,
+    "id": 1772653979064,
     "title": "BABA ZULA",
     "date": "2026-10-07",
     "time": "20:00",
@@ -6084,7 +6225,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518981,
+    "id": 1772653979065,
     "title": "CANARIAS CALLING FESTIVAL",
     "date": "2026-10-08",
     "time": "19:00",
@@ -6096,7 +6237,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518880,
+    "id": 1772653978959,
     "title": "SEAN KOCH",
     "date": "2026-10-09",
     "time": "20:00",
@@ -6108,7 +6249,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519175,
+    "id": 1772653979270,
     "title": "FABIAN RÖMER",
     "date": "2026-10-09",
     "time": "20:00",
@@ -6120,7 +6261,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519328,
+    "id": 1772653979424,
     "title": "Inspector Spacetime",
     "date": "2026-10-09",
     "time": "20:00",
@@ -6129,7 +6270,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518881,
+    "id": 1772653978960,
     "title": "BRUCKNER",
     "date": "2026-10-10",
     "time": "20:00",
@@ -6141,31 +6282,31 @@
     "source": "lido"
   },
   {
-    "id": 1772633519063,
-    "title": "Mar Malade",
-    "date": "2026-10-14",
+    "id": 1772653979123,
+    "title": "LOI",
+    "date": "2026-10-12",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261014-mar-malade/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519064,
-    "title": "The Beatles Tribute Show",
+    "id": 1772653979124,
+    "title": "SYBILLE BULLATSCHEK",
     "date": "2026-10-15",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261015-the-beatles-tribute-show/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633518982,
+    "id": 1772653979066,
     "title": "TITO & TARANTULA",
     "date": "2026-10-15",
     "time": "20:30",
@@ -6177,7 +6318,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518882,
+    "id": 1772653978961,
     "title": "ALEX MOFA GANG",
     "date": "2026-10-16",
     "time": "20:00",
@@ -6189,7 +6330,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518883,
+    "id": 1772653978962,
     "title": "MARKO HIETALA",
     "date": "2026-10-17",
     "time": "20:00",
@@ -6201,19 +6342,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519065,
-    "title": "Sixpence None The Richer",
+    "id": 1772653979125,
+    "title": "PRINZ PI",
     "date": "2026-10-17",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261017-sixpence-none-the-richer/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633518983,
+    "id": 1772653979067,
     "title": "NO TE VA GUSTAR",
     "date": "2026-10-18",
     "time": "20:00",
@@ -6225,7 +6366,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519176,
+    "id": 1772653979271,
     "title": "BAND OF HORSES",
     "date": "2026-10-18",
     "time": "20:00",
@@ -6237,19 +6378,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519066,
-    "title": "MATTERZ",
-    "date": "2026-10-19",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261019-matterz/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518748,
+    "id": 1772653978827,
     "title": "TIAVO / HOTEL TIAVO TOUR 2026",
     "date": "2026-10-22",
     "time": "18:00",
@@ -6261,7 +6390,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518984,
+    "id": 1772653979068,
     "title": "FEMALE-FRONTED IS NOT A GENRE 5",
     "date": "2026-10-22",
     "time": "19:30",
@@ -6273,7 +6402,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519329,
+    "id": 1772653979425,
     "title": "JAMIE GREY",
     "date": "2026-10-22",
     "time": "20:00",
@@ -6282,7 +6411,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518985,
+    "id": 1772653979069,
     "title": "FEMALE-FRONTED IS NOT A GENRE 5 ",
     "date": "2026-10-23",
     "time": "19:30",
@@ -6294,7 +6423,31 @@
     "source": "so36"
   },
   {
-    "id": 1772633518884,
+    "id": 1772653979126,
+    "title": "RATHMANN",
+    "date": "2026-10-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979127,
+    "title": "MC BOMBER",
+    "date": "2026-10-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653978963,
     "title": "EMO DIARIES",
     "date": "2026-10-24",
     "time": "20:00",
@@ -6306,19 +6459,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519067,
-    "title": "Gökhan Türkmen",
-    "date": "2026-10-24",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261024-goekhan-tuerkmen/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518986,
+    "id": 1772653979070,
     "title": "THE SLACKERS",
     "date": "2026-10-25",
     "time": "20:00",
@@ -6330,7 +6471,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633518749,
+    "id": 1772653979128,
+    "title": "MARC ATLAS",
+    "date": "2026-10-29",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653978828,
     "title": "BURNOUT OSTWEST",
     "date": "2026-10-30",
     "time": "19:00",
@@ -6342,7 +6495,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519246,
+    "id": 1772653979341,
     "title": "JULES AHOI",
     "date": "2026-10-30",
     "time": "20:00",
@@ -6351,7 +6504,19 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518987,
+    "id": 1772653979129,
+    "title": "ELECTRIC KINGDOM",
+    "date": "2026-10-31",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979071,
     "title": "SPORTS",
     "date": "2026-11-02",
     "time": "20:00",
@@ -6363,7 +6528,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518988,
+    "id": 1772653979072,
     "title": "GROSSSTADTWAHNSINN 2026 - FESTIVALTICKET",
     "date": "2026-11-06",
     "time": "16:30",
@@ -6375,19 +6540,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519068,
-    "title": "Coeur De Pirate",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261106-coeur-de-pirate-2/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519177,
+    "id": 1772653979272,
     "title": "DIE VERLIERER",
     "date": "2026-11-06",
     "time": "20:00",
@@ -6399,7 +6552,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518750,
+    "id": 1772653978829,
     "title": "SMILE AND BURN + PLAIINS + THE PILL / Happy Place Tour",
     "date": "2026-11-07",
     "time": "19:00",
@@ -6411,19 +6564,19 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519069,
-    "title": "Heaven 17",
+    "id": 1772653979130,
+    "title": "BONAPARTE",
     "date": "2026-11-07",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261107-heaven-17/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519247,
+    "id": 1772653979342,
     "title": "STEFANIE HEINZMANN",
     "date": "2026-11-07",
     "time": "20:00",
@@ -6432,7 +6585,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518751,
+    "id": 1772653978830,
     "title": "MUFF POTTER",
     "date": "2026-11-11",
     "time": "19:00",
@@ -6444,19 +6597,19 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519070,
-    "title": "Shinedown",
+    "id": 1772653979131,
+    "title": "KYTES",
     "date": "2026-11-11",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261111-shinedown/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519178,
+    "id": 1772653979273,
     "title": "EAGLES OF DEATH METAL",
     "date": "2026-11-11",
     "time": "20:00",
@@ -6468,7 +6621,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518885,
+    "id": 1772653978964,
     "title": "OUR PROMISE",
     "date": "2026-11-12",
     "time": "20:00",
@@ -6480,7 +6633,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633519179,
+    "id": 1772653979132,
+    "title": "NIKITA MILLER",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979274,
     "title": "ALCEU VALENÇA",
     "date": "2026-11-13",
     "time": "20:00",
@@ -6492,7 +6657,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518886,
+    "id": 1772653978965,
     "title": "ULTRA SUNN",
     "date": "2026-11-14",
     "time": "20:00",
@@ -6504,19 +6669,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519071,
-    "title": "Enkay",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261114-enkay/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519330,
+    "id": 1772653979426,
     "title": "TOMAS TULPE",
     "date": "2026-11-14",
     "time": "20:00",
@@ -6525,7 +6678,19 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518989,
+    "id": 1772653979133,
+    "title": "MINE",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979073,
     "title": "DAV JURA SLAM",
     "date": "2026-11-17",
     "time": "20:00",
@@ -6537,7 +6702,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518887,
+    "id": 1772653978966,
     "title": "ROWLI",
     "date": "2026-11-18",
     "time": "20:00",
@@ -6549,7 +6714,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633518752,
+    "id": 1772653979134,
+    "title": "NIE UND NIMMER",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653978831,
     "title": "JONNY MAHORO",
     "date": "2026-11-19",
     "time": "19:00",
@@ -6561,19 +6738,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519072,
-    "title": "Bulgarian Cartrader",
-    "date": "2026-11-19",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261119-bulgarian-cartrader/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518753,
+    "id": 1772653978832,
     "title": "ALLT / EUROPEAN TOUR 2026 / special guests:  Avralize and bite down",
     "date": "2026-11-20",
     "time": "19:00",
@@ -6585,19 +6750,19 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519073,
-    "title": "Nie und Nimmer",
+    "id": 1772653979135,
+    "title": "HAZE",
     "date": "2026-11-20",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261120-nie-und-nimmer-2/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633518888,
+    "id": 1772653978967,
     "title": "ALLT",
     "date": "2026-11-21",
     "time": "20:00",
@@ -6609,7 +6774,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518889,
+    "id": 1772653978968,
     "title": "HEADLESS PARTY • The Home of Core & Alternative Rock",
     "date": "2026-11-21",
     "time": "20:00",
@@ -6621,31 +6786,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633519074,
-    "title": "Frida Gold",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261121-frida-gold/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519075,
-    "title": "Skipinnish",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261123-skipinnish/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519331,
+    "id": 1772653979427,
     "title": "SHADY NASTY",
     "date": "2026-11-24",
     "time": "20:00",
@@ -6654,7 +6795,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518990,
+    "id": 1772653979074,
     "title": "UK SUBS",
     "date": "2026-11-26",
     "time": "20:00",
@@ -6666,19 +6807,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519076,
-    "title": "Baby Lasagna",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261126-baby-lasagna/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518754,
+    "id": 1772653978833,
     "title": "ANDA MORTS - Zweimal ist Einmal - Tour 2026",
     "date": "2026-11-27",
     "time": "19:00",
@@ -6690,7 +6819,31 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518755,
+    "id": 1772653979136,
+    "title": "KAPELLE PETRA",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979137,
+    "title": "RATHMANN @PRIVATCLUB BERLIN",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653978834,
     "title": "ANDA MORTS - Zweimal ist Einmal - Tour 2026",
     "date": "2026-11-28",
     "time": "19:00",
@@ -6702,7 +6855,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633518890,
+    "id": 1772653978969,
     "title": "WILDE HERZEN",
     "date": "2026-11-28",
     "time": "20:00",
@@ -6714,7 +6867,7 @@
     "source": "lido"
   },
   {
-    "id": 1772633518991,
+    "id": 1772653979075,
     "title": "SHANTEL & BUCOVINA CLUB SOUNDSYSTEM",
     "date": "2026-12-01",
     "time": "20:00",
@@ -6726,7 +6879,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519180,
+    "id": 1772653979275,
     "title": "SELIG",
     "date": "2026-12-02",
     "time": "20:00",
@@ -6738,7 +6891,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519181,
+    "id": 1772653979276,
     "title": "THE REVIVAL TOUR",
     "date": "2026-12-03",
     "time": "20:00",
@@ -6750,7 +6903,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633518756,
+    "id": 1772653978835,
     "title": "FRITTENBUDE",
     "date": "2026-12-05",
     "time": "19:00",
@@ -6762,19 +6915,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519077,
-    "title": "Zuna",
-    "date": "2026-12-05",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261205-zuna-2/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519248,
+    "id": 1772653979343,
     "title": "DUO STIEHLER/LUCACIU",
     "date": "2026-12-05",
     "time": "20:00",
@@ -6783,7 +6924,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633519283,
+    "id": 1772653979378,
     "title": "Smile and Burn + PLAIINS + THE PILL",
     "date": "2026-12-05",
     "time": "20:00",
@@ -6792,7 +6933,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633518891,
+    "id": 1772653978970,
     "title": "SENTA",
     "date": "2026-12-06",
     "time": "20:00",
@@ -6804,7 +6945,19 @@
     "source": "lido"
   },
   {
-    "id": 1772633518757,
+    "id": 1772653979138,
+    "title": "STEINER & MADLAINA",
+    "date": "2026-12-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653978836,
     "title": "CHAPO102",
     "date": "2026-12-08",
     "time": "18:30",
@@ -6816,7 +6969,19 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519182,
+    "id": 1772653979139,
+    "title": "MIGHTY OAKS",
+    "date": "2026-12-08",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979277,
     "title": "CHAPO102",
     "date": "2026-12-09",
     "time": "20:00",
@@ -6828,7 +6993,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519249,
+    "id": 1772653979344,
     "title": "SONGSLAM NEUKÖLLN JAHRESFINALE",
     "date": "2026-12-10",
     "time": "20:00",
@@ -6837,7 +7002,7 @@
     "source": "heimathafen"
   },
   {
-    "id": 1772633518992,
+    "id": 1772653979076,
     "title": "Kai & Funky von TON STEINE SCHERBEN",
     "date": "2026-12-11",
     "time": "19:00",
@@ -6849,7 +7014,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518993,
+    "id": 1772653979077,
     "title": "THE BUTLERS - 40 YEARS, SKA & SOULPOWER -",
     "date": "2026-12-12",
     "time": "20:00",
@@ -6861,7 +7026,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633518994,
+    "id": 1772653979140,
+    "title": "REMODE",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979078,
     "title": "DOMINIUM - NIGHT IS CALLING TOUR 2026",
     "date": "2026-12-15",
     "time": "19:00",
@@ -6873,7 +7050,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633518758,
+    "id": 1772653978837,
     "title": "DRANGSAL",
     "date": "2026-12-16",
     "time": "19:00",
@@ -6885,7 +7062,7 @@
     "source": "conne-island"
   },
   {
-    "id": 1772633519332,
+    "id": 1772653979428,
     "title": "Le Fly",
     "date": "2026-12-17",
     "time": "20:00",
@@ -6894,7 +7071,7 @@
     "source": "mikropol"
   },
   {
-    "id": 1772633518995,
+    "id": 1772653979079,
     "title": "ZOMBIEZ",
     "date": "2026-12-18",
     "time": "19:30",
@@ -6906,19 +7083,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519078,
-    "title": "Erdmöbel",
-    "date": "2026-12-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261218-erdmoebel/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633519183,
+    "id": 1772653979278,
     "title": "TOXPACK",
     "date": "2026-12-19",
     "time": "20:00",
@@ -6930,7 +7095,7 @@
     "source": "astra"
   },
   {
-    "id": 1772633519284,
+    "id": 1772653979379,
     "title": "Herzblut",
     "date": "2026-12-19",
     "time": "20:00",
@@ -6939,7 +7104,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519285,
+    "id": 1772653979380,
     "title": "Die Liga der Gewöhnlichen Gentlemen",
     "date": "2026-12-29",
     "time": "20:00",
@@ -6948,19 +7113,7 @@
     "source": "binuu"
   },
   {
-    "id": 1772633519079,
-    "title": "Alexa Feser",
-    "date": "2026-12-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261230-alexa-feser/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518996,
+    "id": 1772653979080,
     "title": "GÖTZ WIDMANN",
     "date": "2027-01-22",
     "time": "20:00",
@@ -6972,7 +7125,19 @@
     "source": "so36"
   },
   {
-    "id": 1772633519207,
+    "id": 1772653979141,
+    "title": "DR. POP",
+    "date": "2027-01-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979302,
     "title": "Lover - A Tribute to Taylor Swift",
     "date": "2027-02-09",
     "time": "20:00",
@@ -6984,7 +7149,7 @@
     "source": "tempodrom"
   },
   {
-    "id": 1772633518997,
+    "id": 1772653979081,
     "title": "AGATHA IS DEAD!",
     "date": "2027-02-25",
     "time": "20:00",
@@ -6996,19 +7161,7 @@
     "source": "so36"
   },
   {
-    "id": 1772633519080,
-    "title": "Schandmaul",
-    "date": "2027-02-27",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270227-schandmaul/",
-    "spotifyUrl": "",
-    "source": "columbia"
-  },
-  {
-    "id": 1772633518998,
+    "id": 1772653979082,
     "title": "HINTERLANDGANG",
     "date": "2027-03-06",
     "time": "20:00",
@@ -7020,27 +7173,75 @@
     "source": "so36"
   },
   {
-    "id": 1772633519081,
-    "title": "The Dead Daisies",
-    "date": "2027-03-20",
+    "id": 1772653979142,
+    "title": "PAULWETZ",
+    "date": "2027-03-09",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270320-the-dead-daisies/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
   },
   {
-    "id": 1772633519082,
-    "title": "Kati K",
-    "date": "2027-04-09",
+    "id": 1772653979143,
+    "title": "ROLF MILLER",
+    "date": "2027-03-11",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270409-kati-k/",
+    "ticketUrl": "",
     "spotifyUrl": "",
-    "source": "columbia"
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979144,
+    "title": "LEONY",
+    "date": "2027-04-03",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979145,
+    "title": "MONET192",
+    "date": "2027-04-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979146,
+    "title": "DIE LÄRMER",
+    "date": "2027-04-17",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
+  },
+  {
+    "id": 1772653979147,
+    "title": "DREIVIERTELBLUT",
+    "date": "2027-04-22",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "source": "taeubchenthal"
   }
 ]
