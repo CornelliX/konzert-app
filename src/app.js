@@ -772,4 +772,45 @@ function attachEvents() {
     going = []
     render()
   })
+
+  // Teilen
+  document.querySelectorAll('[data-share]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.share
+      const e = events.find(ev => ev.id == id)
+      if (!e) return
+      const loc = locations.find(l => l.id === e.locationId)
+      const locName = loc ? loc.name : (e.locationName || '')
+      const text = `${e.title} – ${locName}, ${e.date} ${e.time}`
+      if (navigator.share) {
+        navigator.share({ title: e.title, text })
+      } else {
+        navigator.clipboard.writeText(text)
+        alert('In Zwischenablage kopiert!')
+      }
+    })
+  })
+
+  // Kalender (.ics)
+  document.querySelectorAll('[data-ics]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.ics
+      const e = events.find(ev => ev.id == id)
+      if (!e) return
+      const loc = locations.find(l => l.id === e.locationId)
+      const locName = loc ? loc.name : (e.locationName || '')
+      const locCity = loc ? loc.city : (e.locationCity || '')
+      const dtStart = e.date.replace(/-/g,'') + 'T' + (e.time || '20:00').replace(':','') + '00'
+      const endHour = String(parseInt((e.time || '20:00').split(':')[0]) + 2).padStart(2,'0')
+      const dtEnd = e.date.replace(/-/g,'') + 'T' + endHour + (e.time || '20:00').split(':')[1] + '00'
+      const ics = ['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT',`DTSTART:${dtStart}`,`DTEND:${dtEnd}`,`SUMMARY:${e.title}`,`LOCATION:${locName}, ${locCity}`,`URL:${e.ticketUrl || ''}`, 'END:VEVENT','END:VCALENDAR'].join('\r\n')
+      const blob = new Blob([ics], { type: 'text/calendar' })
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `${e.title.replace(/\s+/g,'-')}.ics`
+      a.click()
+      URL.revokeObjectURL(url)
+    })
+  })
 }
