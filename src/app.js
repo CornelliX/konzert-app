@@ -1,7 +1,8 @@
-import { saveManualEvent, loadBookmarks, toggleBookmark } from './supabase.js'
+import { saveManualEvent, loadBookmarks, toggleBookmark, getUser, signInWithEmail, signOut } from './supabase.js'
 import { getLocations, getEvents, saveData, loadData } from './data.js'
 
 let locations = getLocations()
+let currentUser = null
 let events = []
 let container = null
 let filters = { cities: ['Berlin', 'Leipzig'], type: 'alle', locationId: 'alle', dates: [] }
@@ -13,10 +14,13 @@ let calendarOffset = 0
 
 export async function renderApp(el) {
   container = el
+  currentUser = await getUser()
   events = await getEvents()
-  const bm = await loadBookmarks()
-  bookmarked = bm.bookmarked
-  going = bm.going
+  if (currentUser) {
+    const bm = await loadBookmarks()
+    bookmarked = bm.bookmarked
+    going = bm.going
+  }
   render()
 }
 
@@ -93,6 +97,13 @@ function render() {
 
       <div class="relative z-10 max-w-xl mx-auto px-4 pb-16">
         ${renderHeader(newCount)}
+        ${currentUser ? '' : `
+          <div class="glass rounded-2xl p-4 mb-4 flex gap-3 items-center">
+            <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." style="${inputStyle} flex:1;" />
+            <button id="login-btn" class="syne text-sm font-semibold px-4 py-2 rounded-xl" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer;">Anmelden</button>
+          </div>
+        `}
+        ${currentUser ? `<div class="text-right mb-2" style="font-size:11px; color:rgba(255,255,255,0.3);">${currentUser.email} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
         ${renderNav()}
         ${currentView === 'liste' ? renderListView() : ''}
         ${currentView === 'kalender' ? renderCalendarView() : ''}
@@ -533,7 +544,12 @@ function attachEvents() {
 
   document.querySelectorAll('[data-bookmark]').forEach(btn => {
     btn.addEventListener('click', async () => {
+      if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
       const id = btn.dataset.bookmark
+      if (going.some(g => g == id)) {
+        await toggleBookmark(id, 'going')
+        going = going.filter(g => g != id)
+      }
       const isNow = await toggleBookmark(id, 'bookmarked')
       bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
       render()
@@ -541,7 +557,12 @@ function attachEvents() {
   })
   document.querySelectorAll('[data-going]').forEach(btn => {
     btn.addEventListener('click', async () => {
+      if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
       const id = btn.dataset.going
+      if (bookmarked.some(b => b == id)) {
+        await toggleBookmark(id, 'bookmarked')
+        bookmarked = bookmarked.filter(b => b != id)
+      }
       const isNow = await toggleBookmark(id, 'going')
       going = isNow ? [...going, id] : going.filter(g => g != id)
       render()
@@ -729,4 +750,23 @@ function attachEvents() {
       e.target.value = v
     })
   }
+  // Login
+  document.getElementById('login-btn')?.addEventListener('click', async () => {
+    const email = document.getElementById('login-email').value.trim()
+    if (!email) return
+    const ok = await signInWithEmail(email)
+    if (ok) {
+      document.getElementById('login-email').value = ''
+      alert('Magic Link wurde an ' + email + ' gesendet. Bitte E-Mail prüfen!')
+    } else {
+      alert('Fehler beim Senden. Bitte nochmal versuchen.')
+    }
+  })
+  document.getElementById('logout-btn')?.addEventListener('click', async () => {
+    await signOut()
+    currentUser = null
+    bookmarked = []
+    going = []
+    render()
+  })
 }
