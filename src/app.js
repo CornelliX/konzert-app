@@ -141,7 +141,7 @@ function renderNav() {
   const tabs = [
     { id: 'liste', label: 'Events' },
     { id: 'kalender', label: 'Kalender' },
-    { id: 'gemerkt', label: `Gemerkt${(bookmarked.length + going.length) > 0 ? ' · ' + (bookmarked.length + going.length) : ''}` },
+    { id: 'gemerkt', label: `Gemerkt${(bookmarked.filter(b => b).length + going.filter(g => g).length) > 0 ? ' · ' + (bookmarked.filter(b => b).length + going.filter(g => g).length) : ''}` },
   ]
   return `
     <div class="flex gap-1.5 mb-6 p-1 rounded-2xl glass">
