@@ -133,7 +133,7 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:i}){var n
     </div>
   `}function Gi(){return`
     <div class="flex gap-1.5 mb-6 p-1 rounded-2xl glass">
-      ${[{id:"liste",label:"Events"},{id:"kalender",label:"Kalender"},{id:"gemerkt",label:`Gemerkt${q.length+N.length>0?" · "+(q.length+N.length):""}`}].map(e=>`
+      ${[{id:"liste",label:"Events"},{id:"kalender",label:"Kalender"},{id:"gemerkt",label:`Gemerkt${q.filter(e=>e).length+N.filter(e=>e).length>0?" · "+(q.filter(e=>e).length+N.filter(e=>e).length):""}`}].map(e=>`
         <button data-nav="${e.id}" class="flex-1 py-2.5 rounded-xl text-sm font-semibold syne transition-all duration-200 ${ae===e.id?"text-white":"text-slate-500 hover:text-slate-300"}" ${ae===e.id?'style="background: linear-gradient(135deg, rgba(99,102,241,0.5), rgba(168,85,247,0.5)); border: 1px solid rgba(99,102,241,0.3);"':""}>
           ${e.label}
         </button>
