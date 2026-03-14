@@ -98,7 +98,7 @@ async function scrapeConne() {
       // Genre erkennen für Party vs Konzert
       const genreMatch = descRaw.match(/\[([^\]]+)\]/)
       const genre = genreMatch ? genreMatch[1].toLowerCase() : ''
-      const type = genre.includes('party') || genre.includes('club') || genre.includes('dj') ? 'party' : 'konzert'
+      const type = genre.includes('party') || genre.includes('club') || genre.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       // Ticket-URL
       const linkMatch = item.match(/<link>([^<]+)<\/link>/)
@@ -140,7 +140,7 @@ async function scrapeWerk2() {
 
       const ticketUrl = $(el).find('.btn_tickets a').first().attr('href') || ''
       const genre = $(el).find('.typen').first().text().trim()
-      const type = genre.toLowerCase().includes('party') || genre.toLowerCase().includes('dj') ? 'party' : 'konzert'
+      const type = genre.toLowerCase().includes('party') || genre.toLowerCase().includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       // Datum aus dem Link extrahieren z.B. /programm/2026-03-04_sampagne
       const link = $(el).find('h2 a').first().attr('href') || ''
@@ -206,7 +206,7 @@ async function scrapeLido() {
 
       const type = title.toLowerCase().includes('party') ||
                    title.toLowerCase().includes('nacht') ||
-                   title.toLowerCase().includes('pop hits') ? 'party' : 'konzert'
+                   title.toLowerCase().includes('pop hits') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       events.push({
         title, date, time,
@@ -278,14 +278,14 @@ async function scrapeTaeubchenthal() {
       const timeRaw = $(el).find('.time, .uhrzeit').first().text().trim()
       const date = parseGermanDate(dateRaw)
       if (!title || !date || date < today()) return
-      const type = title.toLowerCase().includes('party') ? 'party' : 'konzert'
+      const type = title.toLowerCase().includes('party') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({
         title, date,
         time: parseTime(timeRaw),
         locationId: 15,
         type,
         description: '',
-        ticketUrl: '',
+        ticketUrl: $(el).find('a[href*="ticket"], a[href*="eventim"], a[href*="tixforgigs"]').first().attr('href') || 'https://www.taeubchenthal.com/programm/',
         spotifyUrl: '',
         source: 'taeubchenthal'
       })
@@ -345,7 +345,7 @@ async function scrapeFelsenkeller() {
 
       // Party oder Konzert
       const lower = (title + ' ' + plainText).toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('disco') || lower.includes('tanzen') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') || lower.includes('disco') || lower.includes('tanzen') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       events.push({
         title, date, time,
@@ -384,7 +384,7 @@ async function scrapeSO36() {
       const supertitle = (p.supertitle || '').toLowerCase()
       const type = supertitle.includes('party') || supertitle.includes('event') ||
                    supertitle.includes('club') || supertitle.includes('dj')
-                   ? 'party' : 'konzert'
+                   ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       events.push({
         title: p.title,
@@ -449,7 +449,7 @@ async function scrapeUTConnewitz() {
       const ticketLink = $(el).find('a[href*="tixforgigs"], a[href*="ticket"]').first().attr('href') || ''
 
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       events.push({
         title, date, time,
@@ -498,7 +498,7 @@ async function scrapeColumbia() {
       const time = timeMatch2 ? `${timeMatch2[1].padStart(2,'0')}:${timeMatch2[2]}` : '20:00'
 
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('club night') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') || lower.includes('club night') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       events.push({
         title: title.charAt(0).toUpperCase() + title.slice(1),
@@ -553,7 +553,7 @@ async function scrapePrivatclub() {
 
       const ticketUrl = $(el).find('a.ticketlink').first().attr('href') || ''
       const genreText = $(el).find('.typ.typdesktop').first().text().trim().toLowerCase()
-      const type = genreText.includes('party') || genreText.includes('dj') || genreText.includes('club') ? 'party' : 'konzert'
+      const type = genreText.includes('party') || genreText.includes('dj') || genreText.includes('club') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       events.push({
         title, date, time,
@@ -608,7 +608,7 @@ async function scrapeAstra() {
       const time = timeMatch2 ? timeMatch2[0] : '20:00'
 
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('nacht') || lower.includes('club') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('nacht') || lower.includes('club') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       events.push({
         title: title.charAt(0).toUpperCase() + title.slice(1),
@@ -656,7 +656,7 @@ async function scrapeSchokoladen() {
 
       // Kategorie
       const category = container.find('.category').first().text().trim().toLowerCase()
-      const type = category.includes('party') || category.includes('dj') ? 'party' : 'konzert'
+      const type = category.includes('party') || category.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       // Ticket-URL
       const ticketLink = container.find('a[href*="ticket"], a[href*="shop"]').first().attr('href') || ''
@@ -708,7 +708,7 @@ async function scrapeHornsErben() {
       if (!title) return
 
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       events.push({
         title, date, time,
@@ -770,7 +770,7 @@ async function scrapeUrbanSpree() {
         events.push({
           title, date, time,
           locationId: 21,
-          type: isParty ? 'party' : 'konzert',
+          type: isParty ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert',
           description: '',
           ticketUrl,
           spotifyUrl: '',
@@ -816,7 +816,7 @@ async function scrapeGretchen() {
       const href = titleEl.find('a[href*="detail.php"]').first().attr('href') || titleEl.closest('a').attr('href') || ''
       const ticketUrl = href ? (href.startsWith('http') ? href : 'https://www.gretchen-club.de/' + href) : ''
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('club') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') || lower.includes('club') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       events.push({
         title, date, time,
@@ -911,7 +911,7 @@ async function scrapeKantine() {
 
       const href = $(el).attr('href')
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('club') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') || lower.includes('club') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
 
       events.push({
         title, date,
@@ -1027,7 +1027,7 @@ async function scrapeBiNuu() {
       const date = `2026-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
       const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
       const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      events.push({ title, date, time, type: 'konzert', locationId: 27, source: 'binuu' })
+      events.push({ title, date, time, type: 'konzert', locationId: 27, source: 'binuu', ticketUrl: 'https://binuu.de/de/events', spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log('  ✗ Bi Nuu:', e.message) }
@@ -1082,7 +1082,7 @@ async function scrapeFrannz() {
       const timeMatch = timeText.match(/(\d{1,2})[:.h](\d{2})/)
       const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('nacht') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') || lower.includes('nacht') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 6, source: 'frannz', ticketUrl: 'https://frannz.eu/programm/', spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1114,7 +1114,7 @@ async function scrapeMonarch() {
       seen.add(date + title)
       const ticketLink = $(allBold[i]).parent().find('a').first().attr('href') || ''
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('night') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') || lower.includes('night') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 7, source: 'monarch', ticketUrl: ticketLink, spotifyUrl: '' })
     }
     console.log(`  ✓ ${events.length} Events`)
@@ -1144,7 +1144,7 @@ async function scrapeMadameClaude() {
         if (!title) return
         const href = $(el).closest('a').attr('href') || $(el).find('a').attr('href') || $(el).parent('a').attr('href') || ''
         const lower = title.toLowerCase()
-        const type = lower.includes('party') || lower.includes('dj') || lower.includes('quiz') ? 'party' : 'konzert'
+        const type = lower.includes('party') || lower.includes('dj') || lower.includes('quiz') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
         events.push({ title, date, time: '19:00', type, locationId: 12, source: 'madame-claude', ticketUrl: href, spotifyUrl: '' })
       })
     }
@@ -1174,7 +1174,7 @@ async function scrapeIlsesErika() {
       if (!title || title.length < 3 || seen.has(date + title)) return
       seen.add(date + title)
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('nacht') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') || lower.includes('nacht') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 20, source: 'ilses-erika', ticketUrl: 'https://www.ilseserika.de', spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1214,7 +1214,7 @@ async function scrapeKesselhaus() {
       const href = $(el).attr('href') || ''
       const ticketUrl = href ? 'https://www.kesselhaus.net' + href : ''
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('90er') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') || lower.includes('90er') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 29, source: 'kesselhaus', ticketUrl, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1247,7 +1247,7 @@ async function scrapeMetropol() {
       seen.add(date + title)
       const href = $(el).find('a[href*="/event/"]').first().attr('href') || ''
       const cat = $(el).find('a[href*="/categories/"]').first().text().trim().toLowerCase()
-      const type = cat === 'party' ? 'party' : 'konzert'
+      const type = cat === 'party' ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 25, source: 'metropol', ticketUrl: href, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1286,7 +1286,7 @@ async function scrapeHuxleys() {
       seen.add(date + title)
       const href = link.attr('href') || ''
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 31, source: 'huxleys', ticketUrl: href, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1336,7 +1336,7 @@ async function scrapeColumbiahalle() {
         if (seen.has(date + title)) return
         seen.add(date + title)
         const lower = title.toLowerCase()
-        const type = lower.includes('party') || lower.includes('dj') ? 'party' : 'konzert'
+        const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
         events.push({ title, date, time, type, locationId: 32, source: 'columbiahalle', ticketUrl: ticketLink, spotifyUrl: '' })
       }
     })
@@ -1421,7 +1421,7 @@ async function scrapeTrinity() {
       const href = $(el).attr('href') || ''
       const ticketUrl = href.startsWith('http') ? href : 'https://trinitymusic.de' + href
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time: '20:00', type, locationId, source: 'trinity', ticketUrl, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1459,7 +1459,7 @@ async function scrapeHole44() {
       if (!title || seen.has(date + title)) return
       seen.add(date + title)
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 34, source: 'hole44', ticketUrl: link.attr('href') || '', spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1487,7 +1487,7 @@ async function scrapeBadehaus() {
       seen.add(date + title)
       const href = $(el).attr('href') || ''
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('nacht') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') || lower.includes('nacht') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 35, source: 'badehaus', ticketUrl: href, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1519,7 +1519,7 @@ async function scrapeCassiopeia() {
       if (!title || seen.has(date + title)) return
       seen.add(date + title)
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 36, source: 'cassiopeia', ticketUrl: $(el).attr('href') || '', spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1546,7 +1546,7 @@ async function scrapeQuasimodo() {
       if (!title || title.length < 2 || seen.has(date + title)) return
       seen.add(date + title)
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('disco') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') || lower.includes('disco') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 37, source: 'quasimodo', ticketUrl: $(el).attr('href') || '', spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1576,7 +1576,7 @@ async function scrapeLark() {
       if (!title) return
       const href = $(el).closest('a').attr('href') || $(el).find('a').attr('href') || ''
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time: '19:00', type, locationId: 39, source: 'lark', ticketUrl: href, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1611,7 +1611,7 @@ async function scrapeSlaughterhouse() {
       const ticketMatch = block.match(/https?:\/\/[^\s<]+tixforgigs[^\s<]+/)
       const ticketUrl = ticketMatch ? ticketMatch[0] : 'https://slaughterhouse-berlin.de/konzerte/'
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || block.toLowerCase().includes('party') ? 'party' : 'konzert'
+      const type = lower.includes('party') || block.toLowerCase().includes('party') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 40, source: 'slaughterhouse', ticketUrl, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1659,7 +1659,7 @@ async function scrapePeterEdel() {
         seen.add(date + title)
         const ticketLink = container.find('a').first().attr('href') || 'https://www.peteredel.de/events/'
         const lower = title.toLowerCase()
-        const type = lower.includes('party') || lower.includes('dj') ? 'party' : 'konzert'
+        const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
         events.push({ title, date, time, type, locationId: 41, source: 'peter-edel', ticketUrl: ticketLink, spotifyUrl: '' })
       }
     })
@@ -1708,7 +1708,7 @@ async function scrapeTheaterImDelphi() {
       seen.add(date + title)
       const ticketLink = $(el).find('a[href*="ticket"], a[href*="eventim"], a[href*="feverup"]').first().attr('href') || 'https://theater-im-delphi.de/tickets/'
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('comedy') || lower.includes('theater') || lower.includes('quiz') || lower.includes('kino') || lower.includes('vortrag') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 42, source: 'theater-im-delphi', ticketUrl: ticketLink, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
