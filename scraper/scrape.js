@@ -345,7 +345,7 @@ async function scrapeFelsenkeller() {
 
       // Party oder Konzert
       const lower = (title + ' ' + plainText).toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('disco') || lower.includes('tanzen') ? 'party' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') || lower.includes('disco') || lower.includes('tanzen') ? 'party' : lower.includes('flohmarkt') || lower.includes('brunch') || lower.includes('lesung') || lower.includes('quiz') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
 
       events.push({
         title, date, time,
@@ -449,7 +449,7 @@ async function scrapeUTConnewitz() {
       const ticketLink = $(el).find('a[href*="tixforgigs"], a[href*="ticket"]').first().attr('href') || ''
 
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanz') ? 'sonstige' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
 
       events.push({
         title, date, time,
@@ -708,7 +708,7 @@ async function scrapeHornsErben() {
       if (!title) return
 
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanz') ? 'sonstige' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
 
       events.push({
         title, date, time,
@@ -1286,7 +1286,7 @@ async function scrapeHuxleys() {
       seen.add(date + title)
       const href = link.attr('href') || ''
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanz') ? 'sonstige' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 31, source: 'huxleys', ticketUrl: href, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1336,7 +1336,7 @@ async function scrapeColumbiahalle() {
         if (seen.has(date + title)) return
         seen.add(date + title)
         const lower = title.toLowerCase()
-        const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanz') ? 'sonstige' : 'konzert'
+        const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
         events.push({ title, date, time, type, locationId: 32, source: 'columbiahalle', ticketUrl: ticketLink, spotifyUrl: '' })
       }
     })
@@ -1421,7 +1421,7 @@ async function scrapeTrinity() {
       const href = $(el).attr('href') || ''
       const ticketUrl = href.startsWith('http') ? href : 'https://trinitymusic.de' + href
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanz') ? 'sonstige' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
       events.push({ title, date, time: '20:00', type, locationId, source: 'trinity', ticketUrl, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1459,7 +1459,7 @@ async function scrapeHole44() {
       if (!title || seen.has(date + title)) return
       seen.add(date + title)
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanz') ? 'sonstige' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 34, source: 'hole44', ticketUrl: link.attr('href') || '', spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1519,7 +1519,7 @@ async function scrapeCassiopeia() {
       if (!title || seen.has(date + title)) return
       seen.add(date + title)
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanz') ? 'sonstige' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 36, source: 'cassiopeia', ticketUrl: $(el).attr('href') || '', spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1576,7 +1576,7 @@ async function scrapeLark() {
       if (!title) return
       const href = $(el).closest('a').attr('href') || $(el).find('a').attr('href') || ''
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanz') ? 'sonstige' : 'konzert'
+      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
       events.push({ title, date, time: '19:00', type, locationId: 39, source: 'lark', ticketUrl: href, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1659,7 +1659,7 @@ async function scrapePeterEdel() {
         seen.add(date + title)
         const ticketLink = container.find('a').first().attr('href') || 'https://www.peteredel.de/events/'
         const lower = title.toLowerCase()
-        const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanz') ? 'sonstige' : 'konzert'
+        const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
         events.push({ title, date, time, type, locationId: 41, source: 'peter-edel', ticketUrl: ticketLink, spotifyUrl: '' })
       }
     })
@@ -1711,7 +1711,7 @@ async function scrapeTheaterImDelphi() {
       const category = $(el).find('td').first().text().toLowerCase()
       const type = category.includes('party') || lower.includes('party') || lower.includes('dj') ? 'party' :
                    category.includes('tanz') || category.includes('lesung') || category.includes('theater') || category.includes('comedy') || category.includes('kinder') ? 'sonstige' :
-                   lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('ballett') || lower.includes('tanz') ? 'sonstige' : 'konzert'
+                   lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 42, source: 'theater-im-delphi', ticketUrl: ticketLink, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
