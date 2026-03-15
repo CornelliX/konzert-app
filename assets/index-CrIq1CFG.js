@@ -149,12 +149,12 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:i}){var n
   `}function pt(){const r=U.filter(e=>S.cities.includes(e.city)).sort((e,t)=>e.name.localeCompare(t.name));return`
     <div class="glass rounded-2xl p-4 mb-5 space-y-3" style="overflow:visible; position:relative; z-index:10;">
       <div class="flex gap-2">
-        ${["Berlin","Leipzig"].map(e=>`
-          <button data-city="${e}" class="flex-1 py-2 rounded-xl text-sm font-semibold syne transition-all duration-200 ${S.cities.includes(e)?"text-white":"text-slate-600 hover:text-slate-400"}" style="${S.cities.includes(e)?"background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.35);":"background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);"}">
-            ${e}
-          </button>
-        `).join("")}
-      </div>
+  ${["Berlin","Leipzig"].map(e=>`
+    <button data-city="${e}" class="syne text-sm font-semibold transition-all duration-200 ${S.cities.includes(e)?"text-white":"text-slate-600 hover:text-slate-400"}" style="flex:1; min-width:0; padding:8px; border-radius:12px; ${S.cities.includes(e)?"background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.35);":"background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);"}">
+      ${e}
+    </button>
+  `).join("")}
+  </div>
       <div class="flex gap-2">
   <div style="position:relative; flex:1; min-width:0;">
     <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
