@@ -169,38 +169,36 @@ function renderFilters() {
     .sort((a, b) => a.name.localeCompare(b.name))
 
   return `
-    <div class="glass rounded-2xl p-4 mb-5 space-y-3" style="overflow:visible; position:relative; z-index:10;">
-      <div class="flex gap-2">
-  ${['Berlin', 'Leipzig'].map(c => `
-    <button data-city="${c}" class="syne text-sm font-semibold transition-all duration-200 ${
-      filters.cities.includes(c) ? 'text-white' : 'text-slate-600 hover:text-slate-400'
-    }" style="flex:1; min-width:0; padding:8px; border-radius:12px; ${filters.cities.includes(c)
-      ? 'background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.35);'
-      : 'background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);'}">
-      ${c}
-    </button>
-  `).join('')}
-  </div>
-      <div class="flex gap-2">
-  <div style="position:relative; flex:1; min-width:0;">
-    <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
-      <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${
-        filters.locationId === 'alle' ? 'Alle Locations' :
-        (locations.find(l => l.id == filters.locationId)?.name || 'Alle Locations')
-      }</span>
-      <span style="color:rgba(255,255,255,0.3); font-size:12px; margin-left:6px;">▾</span>
-    </div>
-    <div id="filter-loc-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:1000; width:100%; max-height:200px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
-      <div data-filter-loc="alle" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px;">Alle Locations</div>
-      ${locationOptions.map(l => `
-        <div data-filter-loc="${l.id}" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px; border-top:1px solid rgba(255,255,255,0.04);">
-          ${l.name} <span style="color:rgba(255,255,255,0.3); font-size:12px;">${l.city}</span>
+    <div class="glass rounded-2xl p-4 mb-5" style="overflow:visible; position:relative; z-index:10;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        ${['Berlin', 'Leipzig'].map(c => `
+          <button data-city="${c}" class="syne text-sm font-semibold transition-all duration-200 ${
+            filters.cities.includes(c) ? 'text-white' : 'text-slate-600 hover:text-slate-400'
+          }" style="padding:8px; border-radius:12px; ${filters.cities.includes(c)
+            ? 'background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.35);'
+            : 'background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);'}">
+            ${c}
+          </button>
+        `).join('')}
+        <div style="position:relative;">
+          <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${
+              filters.locationId === 'alle' ? 'Alle Locations' :
+              (locations.find(l => l.id == filters.locationId)?.name || 'Alle Locations')
+            }</span>
+            <span style="color:rgba(255,255,255,0.3); font-size:12px; margin-left:6px;">▾</span>
+          </div>
+          <div id="filter-loc-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:1000; width:100%; max-height:200px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
+            <div data-filter-loc="alle" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px;">Alle Locations</div>
+            ${locationOptions.map(l => `
+              <div data-filter-loc="${l.id}" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px; border-top:1px solid rgba(255,255,255,0.04);">
+                ${l.name} <span style="color:rgba(255,255,255,0.3); font-size:12px;">${l.city}</span>
+              </div>
+            `).join('')}
+          </div>
         </div>
-      `).join('')}
-    </div>
-  </div>
-  <input id="search-input" type="text" placeholder="Suche..." value="${filters.search || ''}" style="flex:1; min-width:0; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
-</div>
+        <input id="search-input" type="text" placeholder="Suche..." value="${filters.search || ''}" style="padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
+      </div>
     </div>
   `
 }
