@@ -36,6 +36,10 @@ export async function signInWithEmail(email) {
   return !error
 }
 
+export async function signOut() {
+  await supabase.auth.signOut()
+}
+
 export async function loadManualEvents() {
   const { data, error } = await supabase.from('manual_events').select('*').order('date')
   if (error) return []
