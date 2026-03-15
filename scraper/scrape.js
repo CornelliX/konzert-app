@@ -14,8 +14,8 @@ if (existsSync(envPath)) {
 import ICAL from 'ical.js'
 import fs from 'fs'
 import path from 'path'
-function detectType(title) {
-  const t = title.toLowerCase()
+function detectType(title, description = '') {
+  const t = (title + ' ' + description).toLowerCase()
   const sonstigeKeywords = [
     'convention', 'workshop', 'ausstellung', 'exhibition', 'flohmarkt',
     'markt', 'lesung', 'vortrag', 'führung', 'theater', 'kino', 'film',
@@ -263,7 +263,7 @@ async function scrapeFestsaal() {
         title, date,
         time: parseTime(timeRaw),
         locationId: 3,
-        type: detectType(title),
+        type: detectType(title, description),
         description: '',
         ticketUrl: '',
         spotifyUrl: '',
@@ -885,7 +885,7 @@ async function scrapeSupamolly() {
       events.push({
         title, date, time,
         locationId: 23,
-        type: detectType(title),
+        type: detectType(title, description),
         description,
         ticketUrl,
         spotifyUrl: '',
@@ -977,7 +977,7 @@ async function scrapeTempodrom() {
       events.push({
         title, date, time,
         locationId: 25,
-        type: detectType(title),
+        type: detectType(title, description),
         description: '',
         ticketUrl: 'https://www.tempodrom.de' + href,
         spotifyUrl: '',
@@ -1016,7 +1016,7 @@ async function scrapeHeimathafen() {
         const date = `${dateMatch[3]}-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
         const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
         const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-        events.push({ title, date, time, type: detectType(title), locationId: 26, source: 'heimathafen' })
+        events.push({ title, date, time, type: detectType(title, description), locationId: 26, source: 'heimathafen' })
       })
       await new Promise(r => setTimeout(r, 1000))
     }
@@ -1043,7 +1043,7 @@ async function scrapeBiNuu() {
       const date = `2026-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
       const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
       const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      events.push({ title, date, time, type: detectType(title), locationId: 27, source: 'binuu', ticketUrl: 'https://binuu.de/de/events', spotifyUrl: '' })
+      events.push({ title, date, time, type: detectType(title, description), locationId: 27, source: 'binuu', ticketUrl: 'https://binuu.de/de/events', spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log('  ✗ Bi Nuu:', e.message) }
@@ -1072,7 +1072,7 @@ async function scrapeMikropol() {
       const date = `${dateMatch[3]}-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
       const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
       const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      events.push({ title, date, time, type: detectType(title), locationId: 28, source: 'mikropol' })
+      events.push({ title, date, time, type: detectType(title, description), locationId: 28, source: 'mikropol' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log('  ✗ Mikropol:', e.message) }
@@ -1389,7 +1389,7 @@ async function scrapeUberEatsMusicHall() {
       seen.add(date + title)
       const href = $(el).attr('href') || ''
       const ticketUrl = href.startsWith('http') ? href : 'https://www.uber-eats-music-hall.de' + href
-      events.push({ title, date, time, type: detectType(title), locationId: 33, source: 'uber-eats-music-hall', ticketUrl, spotifyUrl: '' })
+      events.push({ title, date, time, type: detectType(title, description), locationId: 33, source: 'uber-eats-music-hall', ticketUrl, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Uber Eats Music Hall: ${e.message}`) }
@@ -1762,7 +1762,7 @@ async function scrapeZigZag() {
       seen.add(date + title)
       const href = $(el).attr('href') || ''
       const ticketUrl = href.startsWith('http') ? href : 'https://www.zigzag-jazzclub.berlin' + href
-      events.push({ title, date, time: '20:00', type: detectType(title), locationId: 43, source: 'zigzag', ticketUrl, spotifyUrl: '' })
+      events.push({ title, date, time: '20:00', type: detectType(title, description), locationId: 43, source: 'zigzag', ticketUrl, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ ZigZag: ${e.message}`) }
