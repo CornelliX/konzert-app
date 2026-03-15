@@ -8,7 +8,12 @@ async function init() {
   // Magic Link Token aus URL lesen (PWA Fix)
   const hash = window.location.hash
   if (hash.includes('access_token')) {
-    await supabase.auth.exchangeCodeForSession(window.location.href)
+    const params = new URLSearchParams(hash.substring(1))
+    const access_token = params.get('access_token')
+    const refresh_token = params.get('refresh_token')
+    if (access_token && refresh_token) {
+      await supabase.auth.setSession({ access_token, refresh_token })
+    }
     window.history.replaceState(null, '', window.location.pathname)
   }
 
