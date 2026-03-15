@@ -54,6 +54,7 @@ export function getLocations() {
     { id: 42, name: 'Theater im Delphi', city: 'Berlin', website: 'theater-im-delphi.de', capacity: 700 },
     { id: 43, name: 'ZigZag Jazzclub', city: 'Berlin', website: 'zigzag-jazzclub.berlin', capacity: 120 },
     { id: 44, name: 'Neue Zukunft', city: 'Berlin', website: 'neue-zukunft.org', capacity: 150 },
+    { id: 45, name: 'Säälchen', city: 'Berlin', website: 'https://www.holzmarkt.com/kalender' },
   ]
   saveData('locations', defaults)
   return defaults

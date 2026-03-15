@@ -1768,6 +1768,38 @@ async function scrapeZigZag() {
   return events
 }
 
+async function scrapeHolzmarkt() {
+  console.log('📡 Säälchen / Holzmarkt Berlin...')
+  const events = []
+  try {
+    const res = await fetch('https://www.holzmarkt.com/kalender', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
+    })
+    const html = await res.text()
+    const $ = cheerio.load(html)
+    const monthMap = { 'Januar':1,'Februar':2,'März':3,'April':4,'Mai':5,'Juni':6,'Juli':7,'August':8,'September':9,'Oktober':10,'November':11,'Dezember':12 }
+    $('h2').each((_, el) => {
+      const title = $(el).text().trim()
+      if (!title) return
+      const ticketLink = $(el).closest('div, article').find('a[href*="ticket"], a[href*="Buy"]').first().attr('href') || 'https://www.holzmarkt.com/kalender'
+      // Datum aus dem nächsten Datumsblock suchen
+      const block = $(el).closest('[class*="views-row"], article, .event, div').parent()
+      const dateText = block.find('time, [class*="date"]').first().text().trim()
+      const monthMatch = Object.keys(monthMap).find(m => dateText.includes(m))
+      const dayMatch = dateText.match(/(\d{1,2})\./)
+      if (!monthMatch || !dayMatch) return
+      const date = `2026-${String(monthMap[monthMatch]).padStart(2,'0')}-${String(dayMatch[1]).padStart(2,'0')}`
+      if (date < today()) return
+      const timeMatch = dateText.match(/(\d{1,2}):(\d{2})\s*Uhr/) || $(el).parent().text().match(/(\d{1,2}):(\d{2})\s*Uhr/)
+      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+      const description = $(el).closest('div, article').find('p').first().text().trim()
+      events.push({ title, date, time, type: detectType(title, description), locationId: 45, source: 'holzmarkt', ticketUrl: ticketLink, spotifyUrl: '' })
+    })
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) { console.log(`  ✗ Holzmarkt: ${e.message}`) }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -1814,6 +1846,7 @@ async function main() {
     scrapePeterEdel(),
     scrapeTheaterImDelphi(),
     scrapeZigZag(),
+    scrapeHolzmarkt(),
 
   ])
 
