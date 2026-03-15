@@ -2414,7 +2414,7 @@ async function main() {
     scrapeTaeubchenthal(),
     scrapeFelsenkeller(),
     scrapeUTConnewitz(),   // NEU
-    scrapeColumbia(),   // NEU
+    scrapeColumbiahalle(),   // NEU
     scrapePrivatclub(),   // NEU
     scrapeAstra(),
     scrapeSchokoladen(),
