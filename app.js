@@ -172,23 +172,7 @@ function renderFilters() {
         `).join('')}
       </div>
 
-      <div class="flex gap-2">
-        ${[
-          { val: 'alle', label: 'Alle' },
-          { val: 'konzert', label: 'Konzerte' },
-          { val: 'party', label: 'Partys' }
-        ].map(t => `
-          <button data-type="${t.val}" class="flex-1 py-2 rounded-xl text-xs font-semibold transition-all duration-200 ${
-            filters.type === t.val ? 'text-white' : 'text-slate-600 hover:text-slate-400'
-          }" style="${filters.type === t.val
-            ? 'background: rgba(168,85,247,0.2); border: 1px solid rgba(168,85,247,0.3);'
-            : 'background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);'}">
-            ${t.label}
-          </button>
-        `).join('')}
-      </div>
-
-      <select data-location-filter class="w-full rounded-xl px-3 py-2.5 text-sm text-slate-400 appearance-none outline-none" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.6);">
+        <select data-location-filter class="w-full rounded-xl px-3 py-2.5 text-sm text-slate-400 appearance-none outline-none" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.6);">
         <option value="alle">Alle Locations</option>
         ${locationOptions.map(l => `<option value="${l.id}" ${filters.locationId == l.id ? 'selected' : ''}>${l.name} (${l.city})</option>`).join('')}
       </select>
@@ -201,7 +185,6 @@ function getFilteredEvents() {
     const loc = locations.find(l => l.id === e.locationId)
     if (!loc) return false
     if (!filters.cities.includes(loc.city)) return false
-    if (filters.type !== 'alle' && e.type !== filters.type) return false
     if (filters.locationId !== 'alle' && e.locationId != filters.locationId) return false
     return true
   }).sort((a, b) => new Date(a.date + 'T' + a.time) - new Date(b.date + 'T' + b.time))
@@ -262,10 +245,8 @@ function renderEventCard(e) {
   const eventIsNew = isNew(e)
   const dateObj = new Date(e.date + 'T12:00:00')
   const dateStr = dateObj.toLocaleDateString('de-DE', { weekday: 'short', day: 'numeric', month: 'short' })
-  const isKonzert = e.type === 'konzert'
-
-  const accentColor = isKonzert ? 'rgba(99,102,241,' : 'rgba(251,146,60,'
-  const accentSolid = isKonzert ? '#818cf8' : '#fb923c'
+  const accentColor = 'rgba(99,102,241,'
+  const accentSolid = '#818cf8'
 
   return `
     <div class="card-hover rounded-2xl overflow-hidden" style="
@@ -293,9 +274,6 @@ function renderEventCard(e) {
             <!-- Location -->
             <p class="text-xs mb-2" style="color: rgba(255,255,255,0.35);">
               ${loc ? loc.name + ' <span style="color:rgba(255,255,255,0.15);">·</span> ' + loc.city : ''}
-              ${e.type === 'konzert'
-                ? '<span style="margin-left:6px; color: rgba(99,102,241,0.7);">Konzert</span>'
-                : '<span style="margin-left:6px; color: rgba(251,146,60,0.7);">Party</span>'}
             </p>
 
             <!-- Artist bio -->
@@ -574,10 +552,6 @@ function attachEvents() {
       }
       render()
     })
-  })
-
-  document.querySelectorAll('[data-type]').forEach(btn => {
-    btn.addEventListener('click', () => { filters.type = btn.dataset.type; render() })
   })
 
   const locFilter = document.querySelector('[data-location-filter]')
