@@ -3,7 +3,24 @@ import { createClient } from '@supabase/supabase-js'
 const SUPABASE_URL = 'https://cqxpjesovcavarrlljpn.supabase.co'
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxeHBqZXNvdmNhdmFycmxsanBuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0NjI4MjYsImV4cCI6MjA4ODAzODgyNn0._paXbtV1uecR0AA08KUkKLfRkmkQw2k4W3hT5L2y2ho'
 
-export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
+export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
+  auth: {
+    persistSession: true,
+    storageKey: 'lebe-live-auth',
+    storage: window.localStorage,
+    autoRefreshToken: true,
+    detectSessionInUrl: true
+  }
+})
+
+// Session auch in Cookie sichern (iOS Safari Fix)
+supabase.auth.onAuthStateChange((event, session) => {
+  if (session) {
+    document.cookie = `sb-session=${session.access_token}; max-age=604800; path=/; SameSite=Lax`
+  } else {
+    document.cookie = `sb-session=; max-age=0; path=/`
+  }
+})
 
 export async function getUser() {
   const { data: { user } } = await supabase.auth.getUser()
