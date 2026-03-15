@@ -171,16 +171,16 @@ function renderFilters() {
   return `
     <div class="glass rounded-2xl p-4 mb-5 space-y-3" style="overflow:visible; position:relative; z-index:10;">
       <div class="flex gap-2">
-        ${['Berlin', 'Leipzig'].map(c => `
-          <button data-city="${c}" class="flex-1 py-2 rounded-xl text-sm font-semibold syne transition-all duration-200 ${
-            filters.cities.includes(c) ? 'text-white' : 'text-slate-600 hover:text-slate-400'
-          }" style="${filters.cities.includes(c)
-            ? 'background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.35);'
-            : 'background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);'}">
-            ${c}
-          </button>
-        `).join('')}
-      </div>
+  ${['Berlin', 'Leipzig'].map(c => `
+    <button data-city="${c}" class="syne text-sm font-semibold transition-all duration-200 ${
+      filters.cities.includes(c) ? 'text-white' : 'text-slate-600 hover:text-slate-400'
+    }" style="flex:1; min-width:0; padding:8px; border-radius:12px; ${filters.cities.includes(c)
+      ? 'background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.35);'
+      : 'background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);'}">
+      ${c}
+    </button>
+  `).join('')}
+  </div>
       <div class="flex gap-2">
   <div style="position:relative; flex:1; min-width:0;">
     <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
