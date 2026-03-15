@@ -3,7 +3,7 @@ import { getLocations, getEvents, saveData, loadData } from './data.js'
 let locations = getLocations()
 let events = []
 let container = null
-let filters = { cities: ['Berlin', 'Leipzig'], type: 'alle', locationId: 'alle', dates: [] }
+let filters = { cities: ['Berlin'], type: 'alle', locationId: 'alle', dates: [] }
 let bookmarked = loadData('bookmarked') || []
 let going = loadData('going') || []
 let seenEvents = loadData('seenEvents') || []
