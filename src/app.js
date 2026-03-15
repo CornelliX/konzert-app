@@ -1,5 +1,5 @@
-import { saveManualEvent, loadBookmarks, toggleBookmark, getUser, signInWithEmail, signOut } from './supabase.js'
 import { getLocations, getEvents, saveData, loadData } from './data.js'
+import { saveManualEvent, loadBookmarks, toggleBookmark, getUser, signInWithEmail, verifyOtp, signOut } from './supabase.js'
 
 let locations = getLocations()
 let currentUser = null
@@ -98,11 +98,17 @@ function render() {
       <div class="relative z-10 max-w-xl mx-auto px-4 pb-16">
         ${renderHeader(newCount)}
         ${currentUser ? '' : `
-          <div class="glass rounded-2xl p-4 mb-4 flex gap-3 items-center">
-            <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." value="${localStorage.getItem('lebe-live-email') || ''}" style="${inputStyle} flex:1;" />
-            <button id="login-btn" class="syne text-sm font-semibold px-4 py-2 rounded-xl" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer;">Anmelden</button>
-          </div>
-        `}
+  <div class="glass rounded-2xl p-4 mb-4">
+    <div id="login-step-1" class="flex gap-3 items-center">
+      <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." value="${localStorage.getItem('lebe-live-email') || ''}" style="${inputStyle} flex:1;" />
+      <button id="login-btn" class="syne text-sm font-semibold px-4 py-2 rounded-xl" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer;">Code senden</button>
+    </div>
+    <div id="login-step-2" style="display:none;" class="flex gap-3 items-center">
+      <input id="login-code" type="number" placeholder="6-stelliger Code..." style="${inputStyle} flex:1; letter-spacing:0.2em;" />
+      <button id="verify-btn" class="syne text-sm font-semibold px-4 py-2 rounded-xl" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer;">Bestätigen</button>
+    </div>
+  </div>
+`}
         ${currentUser ? `<div class="text-right mb-2" style="font-size:11px; color:rgba(255,255,255,0.3);">${currentUser.email} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
         ${renderNav()}
         ${currentView === 'liste' ? renderListView() : ''}
@@ -757,25 +763,33 @@ function attachEvents() {
     })
   }
   // Login
-  document.getElementById('login-btn')?.addEventListener('click', async () => {
-    const email = document.getElementById('login-email').value.trim()
-    if (!email) return
-    const ok = await signInWithEmail(email)
-    if (ok) {
-      // E-Mail für nächstes Mal merken
-      localStorage.setItem('lebe-live-email', email)
-      alert('Magic Link wurde an ' + email + ' gesendet. Bitte E-Mail prüfen!')
-    } else {
-      alert('Fehler beim Senden. Bitte nochmal versuchen.')
-    }
-  })
-  document.getElementById('logout-btn')?.addEventListener('click', async () => {
-    await signOut()
-    currentUser = null
-    bookmarked = []
-    going = []
+document.getElementById('login-btn')?.addEventListener('click', async () => {
+  const email = document.getElementById('login-email').value.trim()
+  if (!email) return
+  const ok = await signInWithEmail(email)
+  if (ok) {
+    document.getElementById('login-step-1').style.display = 'none'
+    document.getElementById('login-step-2').style.display = 'flex'
+  } else {
+    alert('Fehler beim Senden. Bitte nochmal versuchen.')
+  }
+})
+
+document.getElementById('verify-btn')?.addEventListener('click', async () => {
+  const email = localStorage.getItem('lebe-live-email') || document.getElementById('login-email')?.value.trim()
+  const code = document.getElementById('login-code').value.trim()
+  if (!code) return
+  const ok = await verifyOtp(email, code)
+  if (ok) {
+    currentUser = await getUser()
+    const { bookmarked: b, going: g } = await loadBookmarks()
+    bookmarked = b
+    going = g
     render()
-  })
+  } else {
+    alert('Falscher Code. Bitte nochmal versuchen.')
+  }
+})
 
   // Teilen
   document.querySelectorAll('[data-share]').forEach(btn => {

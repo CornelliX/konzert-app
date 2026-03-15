@@ -40,6 +40,15 @@ export async function signOut() {
   await supabase.auth.signOut()
 }
 
+export async function verifyOtp(email, token) {
+  const { error } = await supabase.auth.verifyOtp({
+    email,
+    token,
+    type: 'email'
+  })
+  return !error
+}
+
 export async function loadManualEvents() {
   const { data, error } = await supabase.from('manual_events').select('*').order('date')
   if (error) return []
