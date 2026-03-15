@@ -181,17 +181,6 @@ function renderFilters() {
           </button>
         `).join('')}
       </div>
-      <div class="flex gap-2">
-        ${[{val:'alle',label:'Alle'},{val:'konzert',label:'Konzerte'},{val:'party',label:'Partys'},{val:'sonstige',label:'Sonstige'}].map(t => `
-          <button data-type="${t.val}" class="flex-1 py-2 rounded-xl text-xs font-semibold transition-all duration-200 ${
-            filters.type === t.val ? 'text-white' : 'text-slate-600 hover:text-slate-400'
-          }" style="${filters.type === t.val
-            ? 'background: rgba(168,85,247,0.2); border: 1px solid rgba(168,85,247,0.3);'
-            : 'background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);'}">
-            ${t.label}
-          </button>
-        `).join('')}
-      </div>
       <div style="position:relative;">
         <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
           <span style="font-size:14px; color:rgba(255,255,255,0.5);">${
@@ -277,9 +266,8 @@ function renderEventCard(e) {
   const eventIsNew = isNew(e)
   const dateObj = new Date(e.date + 'T12:00:00')
   const dateStr = dateObj.toLocaleDateString('de-DE', { weekday: 'short', day: 'numeric', month: 'short' })
-  const isKonzert = e.type === 'konzert'
-  const accentSolid = isKonzert ? '#818cf8' : '#fb923c'
-  const accentAlpha = e.type === 'konzert' ? 'rgba(99,102,241,' : e.type === 'party' ? 'rgba(251,146,60,' : 'rgba(100,200,100,'
+  const accentSolid = '#818cf8'
+  const accentAlpha = 'rgba(99,102,241,'
 
   return `
     <div class="card-hover rounded-2xl overflow-hidden" style="background:rgba(8,8,42,0.92); border:1px solid ${isGoing ? 'rgba(52,211,153,0.3)' : accentAlpha + '0.12)'}; box-shadow:0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);">
@@ -295,7 +283,6 @@ function renderEventCard(e) {
             <h3 class="syne text-white leading-tight mb-1" style="font-size:1rem; font-weight:700; letter-spacing:-0.01em;">${e.title}</h3>
             <p class="text-xs mb-2" style="color:rgba(255,255,255,0.35);">
               ${loc ? loc.name + ' <span style="color:rgba(255,255,255,0.15);">·</span> ' + loc.city : (e.locationName ? e.locationName + ' <span style="color:rgba(255,255,255,0.15);">·</span> ' + (e.locationCity || '') : '')}
-              <span style="margin-left:6px; color:${e.type === 'konzert' ? 'rgba(99,102,241,0.7)' : e.type === 'party' ? 'rgba(251,146,60,0.7)' : 'rgba(100,200,100,0.7)'};">${e.type === 'konzert' ? 'Konzert' : e.type === 'party' ? 'Party' : 'Sonstige'}</span>
             </p>
             ${e.description ? `<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.4);">${e.description}</p>` : ''}
           </div>
