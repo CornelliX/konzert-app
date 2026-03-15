@@ -169,7 +169,7 @@ function renderFilters() {
     .sort((a, b) => a.name.localeCompare(b.name))
 
   return `
-    <div class="glass rounded-2xl p-4 mb-5 space-y-3">
+    <div class="glass rounded-2xl p-4 mb-5 space-y-3" style="overflow:visible; position:relative; z-index:10;">
       <div class="flex gap-2">
         ${['Berlin', 'Leipzig'].map(c => `
           <button data-city="${c}" class="flex-1 py-2 rounded-xl text-sm font-semibold syne transition-all duration-200 ${
@@ -182,7 +182,7 @@ function renderFilters() {
         `).join('')}
       </div>
       <div class="flex gap-2">
-        <div style="position:relative; flex:2;">
+       <div style="position:relative; flex:1;">
           <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
             <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${
               filters.locationId === 'alle' ? 'Alle Locations' :
