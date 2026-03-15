@@ -147,31 +147,29 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:i}){var n
       <button data-open-add style="width:38px; flex-shrink:0; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.4); font-size:20px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s;">+</button>
     </div>
   `}function pt(){const r=U.filter(e=>S.cities.includes(e.city)).sort((e,t)=>e.name.localeCompare(t.name));return`
-    <div class="glass rounded-2xl p-4 mb-5 space-y-3" style="overflow:visible; position:relative; z-index:10;">
-      <div class="flex gap-2">
-  ${["Berlin","Leipzig"].map(e=>`
-    <button data-city="${e}" class="syne text-sm font-semibold transition-all duration-200 ${S.cities.includes(e)?"text-white":"text-slate-600 hover:text-slate-400"}" style="flex:1; min-width:0; padding:8px; border-radius:12px; ${S.cities.includes(e)?"background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.35);":"background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);"}">
-      ${e}
-    </button>
-  `).join("")}
-  </div>
-      <div class="flex gap-2">
-  <div style="position:relative; flex:1; min-width:0;">
-    <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
-      <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${S.locationId==="alle"?"Alle Locations":U.find(e=>e.id==S.locationId)?.name||"Alle Locations"}</span>
-      <span style="color:rgba(255,255,255,0.3); font-size:12px; margin-left:6px;">▾</span>
-    </div>
-    <div id="filter-loc-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:1000; width:100%; max-height:200px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
-      <div data-filter-loc="alle" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px;">Alle Locations</div>
-      ${r.map(e=>`
-        <div data-filter-loc="${e.id}" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px; border-top:1px solid rgba(255,255,255,0.04);">
-          ${e.name} <span style="color:rgba(255,255,255,0.3); font-size:12px;">${e.city}</span>
+    <div class="glass rounded-2xl p-4 mb-5" style="overflow:visible; position:relative; z-index:10;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        ${["Berlin","Leipzig"].map(e=>`
+          <button data-city="${e}" class="syne text-sm font-semibold transition-all duration-200 ${S.cities.includes(e)?"text-white":"text-slate-600 hover:text-slate-400"}" style="padding:8px; border-radius:12px; ${S.cities.includes(e)?"background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.35);":"background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);"}">
+            ${e}
+          </button>
+        `).join("")}
+        <div style="position:relative;">
+          <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${S.locationId==="alle"?"Alle Locations":U.find(e=>e.id==S.locationId)?.name||"Alle Locations"}</span>
+            <span style="color:rgba(255,255,255,0.3); font-size:12px; margin-left:6px;">▾</span>
+          </div>
+          <div id="filter-loc-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:1000; width:100%; max-height:200px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
+            <div data-filter-loc="alle" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px;">Alle Locations</div>
+            ${r.map(e=>`
+              <div data-filter-loc="${e.id}" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px; border-top:1px solid rgba(255,255,255,0.04);">
+                ${e.name} <span style="color:rgba(255,255,255,0.3); font-size:12px;">${e.city}</span>
+              </div>
+            `).join("")}
+          </div>
         </div>
-      `).join("")}
-    </div>
-  </div>
-  <input id="search-input" type="text" placeholder="Suche..." value="${S.search||""}" style="flex:1; min-width:0; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
-</div>
+        <input id="search-input" type="text" placeholder="Suche..." value="${S.search||""}" style="padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
+      </div>
     </div>
   `}function or(){return F.filter(r=>{const e=U.find(s=>s.id===r.locationId),t=e?e.city:r.locationCity||"";if(!t)return!0;if(!S.cities.includes(t)||S.locationId!=="alle"&&r.locationId!=S.locationId)return!1;if(S.search){const s=S.search.toLowerCase();if(!r.title.toLowerCase().includes(s))return!1}return!0}).sort((r,e)=>new Date(r.date+"T"+r.time)-new Date(e.date+"T"+e.time))}function Yi(){const r=or(),e=new Date;e.setHours(0,0,0,0);const t={};return r.forEach(s=>{const i=new Date(s.date+"T12:00:00"),n=Math.floor((i-e)/864e5);let a;const o=e.getDay()===0?6:e.getDay()-1,l=new Date(e);l.setDate(e.getDate()-o);const c=new Date(l);c.setDate(l.getDate()+7);const f=new Date(c);f.setDate(c.getDate()+7),n===0?a="Heute":n===1?a="Morgen":i<c?a="Diese Woche":i<f?a="Nächste Woche":a=i.toLocaleDateString("de-DE",{month:"long",year:"numeric"}),t[a]||(t[a]=[]),t[a].push(s)}),Object.keys(t).length===0?`${pt()}<div class="text-center py-20 text-slate-600"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p></div>`:`
     ${pt()}
