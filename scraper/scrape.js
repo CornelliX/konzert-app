@@ -1406,16 +1406,15 @@ async function scrapeTrinity() {
     const html = await res.text()
     const $ = cheerio.load(html)
     const locationMap = {
-      'Lido': 1, 'SO36': 2, 'Festsaal Kreuzberg': 3, 'Privatclub': 4,
-      'Astra Kulturhaus': 5, 'Frannz': 6, 'Monarch': 7,
-      'Columbia Theater': 10, 'Schokoladen': 11, 'Madame Claude': 12,
-      'Urban Spree': 21, 'Gretchen': 22, 'Supamolly': 23,
-      'Kantine am Berghain': 24, 'Tempodrom': 25,
-      'Heimathafen': 26, 'Bi Nuu': 27, 'Mikropol': 28,
-      'Kesselhaus': 29, 'Metropol': 30, 'Huxleys Neue Welt': 31,
-      'Columbiahalle': 32, 'Uber Eats Music Hall': 33, 'Hole⁴⁴': 34, 'Hole44': 34, 'Badehaus': 35, 'Cassiopeia': 36,
-      'Quasimodo': 37, 'Prachtwerk': 38, 'LARK': 39,
-    }
+      'Privatclub': 4,
+  'Schokoladen': 11,
+  'Madame Claude': 12,
+  'Supamolly': 23,
+  'Kantine am Berghain': 24,
+  'Mikropol': 28,
+  'Prachtwerk': 38,
+  'LARK': 39,
+}
     const months = { Januar:1, Februar:2, März:3, April:4, Mai:5, Juni:6, Juli:7, August:8, September:9, Oktober:10, November:11, Dezember:12 }
     const seen = new Set()
     $('a[href*="/event/"]').each((_, el) => {
@@ -1721,7 +1720,8 @@ async function scrapeTheaterImDelphi() {
       const title = titleEl.find('a').first().text().trim() || titleEl.text().trim().split('\n')[0].trim()
       if (!title || seen.has(date + title)) return
       seen.add(date + title)
-      const ticketLink = $(el).find('a[href*="ticket"], a[href*="eventim"], a[href*="feverup"]').first().attr('href') || 'https://theater-im-delphi.de/tickets/'
+      const eventLink = titleEl.find('a[href*="theater-im-delphi"]').first().attr('href')
+      const ticketLink = eventLink || $(el).find('a[href*="ticket"], a[href*="eventim"], a[href*="feverup"]').first().attr('href') || 'https://theater-im-delphi.de/programm/'
       const lower = title.toLowerCase()
       const category = $(el).find('td').first().text().toLowerCase()
       const type = category.includes('party') || lower.includes('party') || lower.includes('dj') ? 'party' :
