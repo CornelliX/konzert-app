@@ -931,7 +931,6 @@ async function scrapeUrbanSpree() {
     Jan:'01',Feb:'02',Mar:'03',Apr:'04',May:'05',Jun:'06',
     Jul:'07',Aug:'08',Sep:'09',Oct:'10',Nov:'11',Dec:'12'
   }
-
   const baseUrl = 'https://www.urbanspree.com/program/concerts/'
 
   async function fetchPage(url) {
@@ -941,40 +940,54 @@ async function scrapeUrbanSpree() {
     return res.text()
   }
 
-  function parsePage(html) {
+  try {
+    // Seite 1 laden – enthält alle Zukunfts-Events
+    const html = await fetchPage(baseUrl)
     const $ = cheerio.load(html)
 
-    // Alle Links die auf /program/concerts/ zeigen und nicht die Kategorie-Seite selbst sind
+    // Letzte Seitenzahl ermitteln (nur für Logging)
+    let lastPage = 1
+    $('a[href*="?page="]').each((_, el) => {
+      const m = ($(el).attr('href') || '').match(/\?page=(\d+)/)
+      if (m) lastPage = Math.max(lastPage, parseInt(m[1]))
+    })
+    console.log(`  Urban Spree: ${lastPage} Seiten`)
+
+    // Alle Event-Links auf Seite 1 parsen
     $('a[href*="/program/concerts/"]').each((_, el) => {
       const href = $(el).attr('href') || ''
-      if (href === baseUrl || href === 'https://www.urbanspree.com/program/concerts') return
-      if (!href.includes('.html') && !href.match(/\/program\/concerts\/.+/)) return
+      if (href === baseUrl || href.endsWith('/program/concerts/')) return
 
-      const text = $(el).text().trim()
-      const lines = text.split('\n').map(l => l.trim()).filter(Boolean)
-      if (lines.length < 3) return
+      // Titel direkt aus h4 oder dem Link-Text nach "Concerts\n"
+      const h4 = $(el).find('h4').first().text().trim()
+      const fullText = $(el).text()
 
-      // Zeile 0: "Concerts" – überspringen
-      // Zeile 1: Titel
-      // Zeile 2+: Datum, Zeit, Preis
-      const title = lines.find(l =>
-        l !== 'Concerts' && l !== 'Events' &&
-        !/^[A-Z][a-z]{2}\s+\d/.test(l) &&   // kein Datum
-        !/^\d{2}:\d{2}$/.test(l) &&           // keine Zeit
-        !/^\d+[.,]\d+€$/.test(l) &&           // kein Preis
-        l.length > 2
-      )
-      if (!title) return
-
-      // Datum: "Nov 27, 2026" oder "Sep 08, 2026"
-      const dateMatch = text.match(/([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})/)
+      // Datum
+      const dateMatch = fullText.match(/([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})/)
       if (!dateMatch) return
       const month = months[dateMatch[1]]
       if (!month) return
       const date = `${dateMatch[3]}-${month}-${String(dateMatch[2]).padStart(2,'0')}`
       if (date < today()) return
 
-      const timeMatch = text.match(/(\d{2}):(\d{2})/)
+      // Titel: h4 bevorzugen, sonst erste nicht-leere Zeile die kein Label ist
+      let title = h4
+      if (!title) {
+        const lines = fullText.split('\n').map(l => l.trim()).filter(Boolean)
+        title = lines.find(l =>
+          l !== 'Concerts' && l !== 'Events' &&
+          !/^[A-Z][a-z]{2}\s+\d/.test(l) &&
+          !/^\d{2}:\d{2}$/.test(l) &&
+          !/^\d+[.,]\d+€/.test(l) &&
+          l.length > 2
+        ) || ''
+      }
+      if (!title || title.length < 2) return
+
+      // "- Urban Spree, Berlin" am Ende entfernen
+      title = title.replace(/\s*[-–]\s*Urban\s+Spree.*$/i, '').trim()
+
+      const timeMatch = fullText.match(/(\d{2}):(\d{2})/)
       const time = timeMatch ? `${timeMatch[1]}:${timeMatch[2]}` : '20:00'
 
       const key = date + title
@@ -991,28 +1004,6 @@ async function scrapeUrbanSpree() {
         source: 'urbanspree'
       })
     })
-  }
-
-  try {
-    // Seite 1 laden um letzte Seitenzahl zu ermitteln
-    const firstHtml = await fetchPage(baseUrl)
-    const $first = cheerio.load(firstHtml)
-    let lastPage = 1
-    $first('a[href*="?page="]').each((_, el) => {
-      const m = ($first(el).attr('href') || '').match(/\?page=(\d+)/)
-      if (m) lastPage = Math.max(lastPage, parseInt(m[1]))
-    })
-    console.log(`  Urban Spree: ${lastPage} Seiten`)
-
-    // Alle Seiten von hinten scrapen (nächste Events stehen am Ende)
-    const startPage = Math.max(1, lastPage - 9) // letzte 10 Seiten
-    for (let p = startPage; p <= lastPage; p++) {
-      const url = p === 1 ? baseUrl : `${baseUrl}?page=${p}`
-      try {
-        const html = await fetchPage(url)
-        parsePage(html)
-      } catch(e) {}
-    }
 
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) {
