@@ -1016,7 +1016,7 @@ async function scrapeHeimathafen() {
         const date = `${dateMatch[3]}-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
         const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
         const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-        events.push({ title, date, time, type: detectType(title, description), locationId: 26, source: 'heimathafen' })
+        events.push({ title, date, time, type: detectType(title), locationId: 26, source: 'heimathafen' })
       })
       await new Promise(r => setTimeout(r, 1000))
     }
@@ -1043,7 +1043,7 @@ async function scrapeBiNuu() {
       const date = `2026-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
       const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
       const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      events.push({ title, date, time, type: detectType(title, description), locationId: 27, source: 'binuu', ticketUrl: 'https://binuu.de/de/events', spotifyUrl: '' })
+      events.push({ title, date, time, type: detectType(title), locationId: 27, source: 'binuu', ticketUrl: 'https://binuu.de/de/events', spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log('  ✗ Bi Nuu:', e.message) }
@@ -1072,7 +1072,7 @@ async function scrapeMikropol() {
       const date = `${dateMatch[3]}-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
       const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
       const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      events.push({ title, date, time, type: detectType(title, description), locationId: 28, source: 'mikropol' })
+      events.push({ title, date, time, type: detectType(title), locationId: 28, source: 'mikropol' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log('  ✗ Mikropol:', e.message) }
