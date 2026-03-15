@@ -263,7 +263,7 @@ async function scrapeFestsaal() {
         title, date,
         time: parseTime(timeRaw),
         locationId: 3,
-        type: detectType(title, description),
+        type: detectType(title),
         description: '',
         ticketUrl: '',
         spotifyUrl: '',
@@ -885,7 +885,7 @@ async function scrapeSupamolly() {
       events.push({
         title, date, time,
         locationId: 23,
-        type: detectType(title, description),
+        type: detectType(title),
         description,
         ticketUrl,
         spotifyUrl: '',
@@ -977,7 +977,7 @@ async function scrapeTempodrom() {
       events.push({
         title, date, time,
         locationId: 25,
-        type: detectType(title, description),
+        type: detectType(title),
         description: '',
         ticketUrl: 'https://www.tempodrom.de' + href,
         spotifyUrl: '',
@@ -1389,7 +1389,7 @@ async function scrapeUberEatsMusicHall() {
       seen.add(date + title)
       const href = $(el).attr('href') || ''
       const ticketUrl = href.startsWith('http') ? href : 'https://www.uber-eats-music-hall.de' + href
-      events.push({ title, date, time, type: detectType(title, description), locationId: 33, source: 'uber-eats-music-hall', ticketUrl, spotifyUrl: '' })
+      events.push({ title, date, time, type: detectType(title), locationId: 33, source: 'uber-eats-music-hall', ticketUrl, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Uber Eats Music Hall: ${e.message}`) }
@@ -1626,8 +1626,7 @@ async function scrapeSlaughterhouse() {
       seen.add(date + title)
       const ticketMatch = block.match(/https?:\/\/[^\s<]+tixforgigs[^\s<]+/)
       const ticketUrl = ticketMatch ? ticketMatch[0] : 'https://slaughterhouse-berlin.de/konzerte/'
-      const lower = title.toLowerCase()
-      const type = lower.includes('party') || block.toLowerCase().includes('party') ? 'party' : 'konzert'
+      const type = detectType(title, block)
       events.push({ title, date, time, type, locationId: 40, source: 'slaughterhouse', ticketUrl, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
