@@ -182,7 +182,7 @@ function renderFilters() {
         `).join('')}
       </div>
       <div class="flex gap-2">
-        <div style="position:relative; flex:1;">
+        <div style="position:relative; flex:2;">
           <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
             <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${
               filters.locationId === 'alle' ? 'Alle Locations' :
@@ -199,7 +199,7 @@ function renderFilters() {
             `).join('')}
           </div>
         </div>
-        <input id="search-input" type="text" placeholder="Suche..." value="${filters.search || ''}" style="flex:1; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
+        <input id="search-input" type="text" placeholder="Suche..." value="${filters.search || ''}" style="flex:1; min-width:0; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
       </div>
     </div>
   `
@@ -323,7 +323,7 @@ function renderCalendarView() {
 
   return `
     ${renderFilters()}
-    <div class="glass rounded-2xl p-5 mb-5">
+    <div class="glass rounded-2xl p-5 mb-5" style="position:relative; z-index:1;">
       <div class="flex items-center justify-between mb-5">
         <button data-cal-prev class="btn-glass w-9 h-9 rounded-xl flex items-center justify-center text-slate-400 hover:text-white">‹</button>
         <h2 class="syne font-700 text-white tracking-wide capitalize">${monthName}</h2>
