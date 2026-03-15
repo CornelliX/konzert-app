@@ -1689,60 +1689,6 @@ async function scrapeHuxleys() {
   return events
 }
 
-async function scrapeColumbiahalle() {
-  console.log('📡 Columbiahalle Berlin...')
-  const events = []
-  try {
-    const res = await fetch('https://www.columbiahalle.berlin/veranstaltungen.html', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
-    })
-    const html = await res.text()
-    const $ = cheerio.load(html)
-    const months = { Januar:1, Februar:2, März:3, April:4, Mai:5, Juni:6, Juli:7, August:8, September:9, Oktober:10, November:11, Dezember:12 }
-    const seen = new Set()
-    let currentMonth = 0
-    let currentYear = new Date().getFullYear()
-
-    $('h1, h2').each((_, el) => {
-      const text = $(el).text().trim()
-      if ($(el).is('h1')) {
-        const monthMatch = text.match(/^(\w+)\s+(\d{4})$/)
-        if (monthMatch && months[monthMatch[1]]) {
-          currentMonth = months[monthMatch[1]]
-          currentYear = parseInt(monthMatch[2])
-        }
-        return
-      }
-      if (!currentMonth) return
-      const title = text
-      if (!title || title.length < 2) return
-
-      // Tag aus dem vorherigen Geschwister-Element
-      const parent = $(el).closest('div, section, article')
-      const parentText = parent.text()
-      const dayMatch = parentText.match(/^\s*\w+\s+(\d{1,2})\s/)
-      if (!dayMatch) return
-      const day = parseInt(dayMatch[1])
-      const date = `${currentYear}-${String(currentMonth).padStart(2,'0')}-${String(day).padStart(2,'0')}`
-      if (date < today()) return
-
-      const timeMatch = parentText.match(/Beginn:\s*(\d{1,2}):(\d{2})/)
-      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-
-      const ticketLink = parent.find('a[href*="ticket"], a[href*="eventim"], a[href*="loft"], a[href*="landstreicher"]').first().attr('href') ||
-                         parent.find('a[href*="Kalender-Eintrag"], a[href*="/veranstaltung/"]').first().attr('href') ||
-                         'https://www.columbiahalle.berlin/veranstaltungen.html'
-
-      if (seen.has(date + title)) return
-      seen.add(date + title)
-
-      events.push({ title, date, time, locationId: 32, type: detectType(title), description: '', ticketUrl: ticketLink, spotifyUrl: '', source: 'columbiahalle' })
-    })
-    console.log(`  ✓ ${events.length} Events`)
-  } catch(e) { console.log(`  ✗ Columbiahalle: ${e.message}`) }
-  return events
-}
-
 async function scrapeUberEatsMusicHall() {
   console.log('📡 Uber Eats Music Hall Berlin...')
   const events = []
