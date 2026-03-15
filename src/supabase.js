@@ -28,15 +28,12 @@ export async function getUser() {
 }
 
 export async function signInWithEmail(email) {
+  localStorage.setItem('lebe-live-email', email)
   const { error } = await supabase.auth.signInWithOtp({
     email,
     options: { emailRedirectTo: 'https://cornellix.github.io/konzert-app/' }
   })
   return !error
-}
-
-export async function signOut() {
-  await supabase.auth.signOut()
 }
 
 export async function loadManualEvents() {

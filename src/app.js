@@ -99,7 +99,7 @@ function render() {
         ${renderHeader(newCount)}
         ${currentUser ? '' : `
           <div class="glass rounded-2xl p-4 mb-4 flex gap-3 items-center">
-            <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." style="${inputStyle} flex:1;" />
+            <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." value="${localStorage.getItem('lebe-live-email') || ''}" style="${inputStyle} flex:1;" />
             <button id="login-btn" class="syne text-sm font-semibold px-4 py-2 rounded-xl" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer;">Anmelden</button>
           </div>
         `}
@@ -762,7 +762,8 @@ function attachEvents() {
     if (!email) return
     const ok = await signInWithEmail(email)
     if (ok) {
-      document.getElementById('login-email').value = ''
+      // E-Mail für nächstes Mal merken
+      localStorage.setItem('lebe-live-email', email)
       alert('Magic Link wurde an ' + email + ' gesendet. Bitte E-Mail prüfen!')
     } else {
       alert('Fehler beim Senden. Bitte nochmal versuchen.')
