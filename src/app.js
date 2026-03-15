@@ -5,7 +5,7 @@ let locations = getLocations()
 let currentUser = null
 let events = []
 let container = null
-let filters = { cities: ['Berlin'], type: 'alle', locationId: 'alle', dates: [] }
+let filters = { cities: ['Berlin'], type: 'alle', locationId: 'alle', dates: [], search: '' }
 let bookmarked = loadData('bookmarked') || []
 let going = loadData('going') || []
 let seenEvents = loadData('seenEvents') || []
@@ -181,22 +181,25 @@ function renderFilters() {
           </button>
         `).join('')}
       </div>
-      <div style="position:relative;">
-        <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
-          <span style="font-size:14px; color:rgba(255,255,255,0.5);">${
-            filters.locationId === 'alle' ? 'Alle Locations' :
-            (locations.find(l => l.id == filters.locationId)?.name || 'Alle Locations')
-          }</span>
-          <span style="color:rgba(255,255,255,0.3); font-size:12px;">▾</span>
+      <div class="flex gap-2">
+        <div style="position:relative; flex:1;">
+          <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${
+              filters.locationId === 'alle' ? 'Alle Locations' :
+              (locations.find(l => l.id == filters.locationId)?.name || 'Alle Locations')
+            }</span>
+            <span style="color:rgba(255,255,255,0.3); font-size:12px; margin-left:6px;">▾</span>
+          </div>
+          <div id="filter-loc-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:1000; width:100%; max-height:200px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
+            <div data-filter-loc="alle" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px;">Alle Locations</div>
+            ${locationOptions.map(l => `
+              <div data-filter-loc="${l.id}" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px; border-top:1px solid rgba(255,255,255,0.04);">
+                ${l.name} <span style="color:rgba(255,255,255,0.3); font-size:12px;">${l.city}</span>
+              </div>
+            `).join('')}
+          </div>
         </div>
-        <div id="filter-loc-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:100; width:100%; max-height:200px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
-          <div data-filter-loc="alle" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px;">Alle Locations</div>
-          ${locationOptions.map(l => `
-            <div data-filter-loc="${l.id}" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px; border-top:1px solid rgba(255,255,255,0.04);">
-              ${l.name} <span style="color:rgba(255,255,255,0.3); font-size:12px;">${l.city}</span>
-            </div>
-          `).join('')}
-        </div>
+        <input id="search-input" type="text" placeholder="Suche..." value="${filters.search || ''}" style="flex:1; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
       </div>
     </div>
   `
@@ -208,10 +211,11 @@ function getFilteredEvents() {
     const city = loc ? loc.city : (e.locationCity || '')
     if (!city) return true
     if (!filters.cities.includes(city)) return false
-    if (filters.type === 'sonstige') {
-    if (e.type === 'konzert' || e.type === 'party') return false
-    } else if (filters.type !== 'alle' && e.type !== filters.type) return false
     if (filters.locationId !== 'alle' && e.locationId != filters.locationId) return false
+    if (filters.search) {
+      const s = filters.search.toLowerCase()
+      if (!e.title.toLowerCase().includes(s)) return false
+    }
     return true
   }).sort((a, b) => new Date(a.date + 'T' + a.time) - new Date(b.date + 'T' + b.time))
 }
@@ -524,6 +528,12 @@ function attachEvents() {
       filterLocDropdown.classList.add('hidden')
       render()
     })
+  })
+
+  // Suche
+  document.getElementById('search-input')?.addEventListener('input', (e) => {
+    filters.search = e.target.value
+    render()
   })
 
   const calPrev = document.querySelector('[data-cal-prev]')

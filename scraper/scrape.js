@@ -747,60 +747,46 @@ async function scrapeHornsErben() {
 
 async function scrapeUrbanSpree() {
   console.log('📡 Urban Spree Berlin...')
+  const events = []
+  const seen = new Set()
   try {
     const urls = [
       'https://www.urbanspree.com/program/concerts/',
-      'https://www.urbanspree.com/program/parties/',
-      'https://www.urbanspree.com/program/arts/',
+      'https://www.urbanspree.com/program/events/',
     ]
-    const events = []
-    const seen = new Set()
+    const months = {Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12}
 
     for (const url of urls) {
-      const isParty = url.includes('parties')
       const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' } })
       const html = await res.text()
       const $ = cheerio.load(html)
 
-      $('a').each((_, el) => {
-        const text = $(el).text().trim()
-        const dateMatch = text.match(/(\w+)\s+(\d{1,2}),\s+(\d{4})/)
+      $('a[href*="/program/"]').each((_, el) => {
+        const href = $(el).attr('href') || ''
+        if (!href.includes('/program/concerts/') && !href.includes('/program/events/')) return
+        if (href === 'https://www.urbanspree.com/program/concerts/' || href === 'https://www.urbanspree.com/program/events/') return
+        const lines = $(el).text().trim().split('\n').map(l => l.trim()).filter(Boolean)
+        // Format: ["Concerts", "TITEL", "Monat Tag, Jahr", "HH:MM", "Preis"]
+        if (lines.length < 3) return
+        const title = lines[1]
+        if (!title || title === 'Concerts' || title === 'Events') return
+        const dateMatch = lines.join(' ').match(/(\w{3})\s+(\d{1,2}),\s+(\d{4})/)
         if (!dateMatch) return
-        const months = {Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12}
         const month = months[dateMatch[1]]
         if (!month) return
         const date = `${dateMatch[3]}-${String(month).padStart(2,'0')}-${String(dateMatch[2]).padStart(2,'0')}`
         if (date < today()) return
-        const timeMatch = text.match(/(\d{2}):(\d{2})/)
+        const timeMatch = lines.join(' ').match(/(\d{2}):(\d{2})/)
         const time = timeMatch ? `${timeMatch[1]}:${timeMatch[2]}` : '20:00'
-        const titleEl = $(el).find('h2, h3, h4, strong').first()
-        const title = titleEl.text().trim() || text.split('\n')[0].trim()
-        if (!title || title.length < 3) return
         const key = date + title
         if (seen.has(key)) return
         seen.add(key)
-
-        const href = $(el).attr('href') || ''
-        const ticketUrl = href ? 'https://www.urbanspree.com/' + href : ''
-
-        events.push({
-          title, date, time,
-          locationId: 21,
-          type: isParty ? 'party' : 'konzert',
-          description: '',
-          ticketUrl,
-          spotifyUrl: '',
-          source: 'urbanspree'
-        })
+        events.push({ title, date, time, locationId: 21, type: detectType(title), description: '', ticketUrl: href, spotifyUrl: '', source: 'urbanspree' })
       })
     }
-
     console.log(`  ✓ ${events.length} Events`)
-    return events
-  } catch(e) {
-    console.log(`  ✗ Fehler: ${e.message}`)
-    return []
-  }
+  } catch(e) { console.log(`  ✗ Urban Spree: ${e.message}`) }
+  return events
 }
 
 async function scrapeGretchen() {
@@ -960,26 +946,41 @@ async function scrapeTempodrom() {
     const events = []
     const seen = new Set()
 
-    $('a[href*="/event/"]').each((_, el) => {
-      const href = $(el).attr('href') || ''
-      const dateMatch = href.match(/(\d{4}-\d{2}-\d{2})_(\d{2})\/?$/) ||
-                        href.match(/(\d{4}-\d{2}-\d{2})_\d{4}-\d{2}-\d{2}_(\d{2})\/?$/)
+    $('h3').each((_, el) => {
+      const title = $(el).text().trim()
+      if (!title) return
+
+      // Datum aus dem umgebenden Block lesen
+      const block = $(el).closest('div, article, li, section')
+      const blockText = block.text()
+
+      // Datum suchen: "Mittwoch, 18. Mär. 2026" oder "Donnerstag, 25. Jun. 2026"
+      const months = { Jan:1, Feb:2, Mär:3, Apr:4, Mai:5, Jun:6, Jul:7, Aug:8, Sep:9, Okt:10, Nov:11, Dez:12 }
+      const dateMatch = blockText.match(/(\d{1,2})\.\s*(\w{3})\.?\s*(\d{4})/)
       if (!dateMatch) return
-      const date = dateMatch[1]
+      const day = dateMatch[1]
+      const month = months[dateMatch[2]]
+      if (!month) return
+      const year = dateMatch[3]
+      const date = `${year}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}`
       if (date < today()) return
 
-      const time = dateMatch[2] ? `${dateMatch[2]}:00` : '20:00'
-      const title = $(el).attr('title') || $(el).text().trim()
-      if (!title) return
+      const timeMatch = blockText.match(/Beginn:\s*(\d{1,2}):(\d{2})/)
+      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+
       if (seen.has(date + title)) return
       seen.add(date + title)
+
+      // Link suchen - Event-Link oder Ticket-Link
+      const eventLink = block.find('a[href*="/event/"]').first().attr('href') || ''
+      const ticketUrl = eventLink ? 'https://www.tempodrom.de' + eventLink : 'https://www.tempodrom.de/programm-und-tickets/'
 
       events.push({
         title, date, time,
         locationId: 25,
         type: detectType(title),
         description: '',
-        ticketUrl: 'https://www.tempodrom.de' + href,
+        ticketUrl,
         spotifyUrl: '',
         source: 'tempodrom'
       })
@@ -1297,7 +1298,8 @@ async function scrapeHuxleys() {
       if (date < today()) return
       const timeMatch = text.match(/Beginn:\s*(\d{1,2}):(\d{2})/)
       const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      const title = link.text().trim().split('\n')[0].trim()
+      const lines = link.text().trim().split('\n').map(l => l.trim()).filter(Boolean)
+      const title = lines[lines.length - 1].trim()
       if (!title || seen.has(date + title)) return
       seen.add(date + title)
       const href = link.attr('href') || ''
