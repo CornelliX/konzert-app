@@ -1762,7 +1762,7 @@ async function scrapeZigZag() {
       seen.add(date + title)
       const href = $(el).attr('href') || ''
       const ticketUrl = href.startsWith('http') ? href : 'https://www.zigzag-jazzclub.berlin' + href
-      events.push({ title, date, time: '20:00', type: detectType(title, description), locationId: 43, source: 'zigzag', ticketUrl, spotifyUrl: '' })
+      events.push({ title, date, time: '20:00', type: detectType(title), locationId: 43, source: 'zigzag', ticketUrl, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ ZigZag: ${e.message}`) }
