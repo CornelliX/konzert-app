@@ -156,7 +156,7 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:i}){var n
         `).join("")}
       </div>
       <div class="flex gap-2">
-        <div style="position:relative; flex:1;">
+        <div style="position:relative; flex:2;">
           <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
             <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${S.locationId==="alle"?"Alle Locations":U.find(e=>e.id==S.locationId)?.name||"Alle Locations"}</span>
             <span style="color:rgba(255,255,255,0.3); font-size:12px; margin-left:6px;">▾</span>
@@ -170,7 +170,7 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:i}){var n
             `).join("")}
           </div>
         </div>
-        <input id="search-input" type="text" placeholder="Suche..." value="${S.search||""}" style="flex:1; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
+        <input id="search-input" type="text" placeholder="Suche..." value="${S.search||""}" style="flex:1; min-width:0; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
       </div>
     </div>
   `}function or(){return F.filter(r=>{const e=U.find(s=>s.id===r.locationId),t=e?e.city:r.locationCity||"";if(!t)return!0;if(!S.cities.includes(t)||S.locationId!=="alle"&&r.locationId!=S.locationId)return!1;if(S.search){const s=S.search.toLowerCase();if(!r.title.toLowerCase().includes(s))return!1}return!0}).sort((r,e)=>new Date(r.date+"T"+r.time)-new Date(e.date+"T"+e.time))}function Yi(){const r=or(),e=new Date;e.setHours(0,0,0,0);const t={};return r.forEach(s=>{const i=new Date(s.date+"T12:00:00"),n=Math.floor((i-e)/864e5);let a;const o=e.getDay()===0?6:e.getDay()-1,l=new Date(e);l.setDate(e.getDate()-o);const c=new Date(l);c.setDate(l.getDate()+7);const f=new Date(c);f.setDate(c.getDate()+7),n===0?a="Heute":n===1?a="Morgen":i<c?a="Diese Woche":i<f?a="Nächste Woche":a=i.toLocaleDateString("de-DE",{month:"long",year:"numeric"}),t[a]||(t[a]=[]),t[a].push(s)}),Object.keys(t).length===0?`${pt()}<div class="text-center py-20 text-slate-600"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p></div>`:`
@@ -222,7 +222,7 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:i}){var n
     </div>
   `}function Qi(){const r=new Date,e=new Date(r.getFullYear(),r.getMonth()+ft,1),t=e.getFullYear(),s=e.getMonth(),i=new Date(t,s+1,0).getDate(),n=(new Date(t,s,1).getDay()+6)%7,a=e.toLocaleDateString("de-DE",{month:"long",year:"numeric"}),o=or(),l=o.map(f=>f.date),c=o.filter(f=>S.dates.length===0||S.dates.includes(f.date));return`
     ${pt()}
-    <div class="glass rounded-2xl p-5 mb-5">
+    <div class="glass rounded-2xl p-5 mb-5" style="position:relative; z-index:1;">
       <div class="flex items-center justify-between mb-5">
         <button data-cal-prev class="btn-glass w-9 h-9 rounded-xl flex items-center justify-center text-slate-400 hover:text-white">‹</button>
         <h2 class="syne font-700 text-white tracking-wide capitalize">${a}</h2>
