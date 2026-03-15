@@ -244,38 +244,39 @@ async function scrapeLido() {
 }
 
 async function scrapeFestsaal() {
-  console.log('📡 Festsaal Kreuzberg...')
+  console.log('📡 Festsaal Kreuzberg Berlin (Puppeteer)...')
+  const events = []
+  let browser
   try {
-    const res = await fetch('https://www.festsaal-kreuzberg.de/programm/', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
-    })
-    const html = await res.text()
+    const puppeteer = await import('puppeteer')
+    browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
+    const page = await browser.newPage()
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+    await page.goto('https://festsaal-kreuzberg.de/de', { waitUntil: 'networkidle2', timeout: 30000 })
+    const html = await page.content()
     const $ = cheerio.load(html)
-    const events = []
-    $('article, .event, .programm-item, .show').each((_, el) => {
-      const title = $(el).find('h2, h3, .title').first().text().trim()
-      const dateRaw = $(el).find('time, .date, .datum').first().attr('datetime') ||
-                      $(el).find('time, .date, .datum').first().text().trim()
-      const timeRaw = $(el).find('.time, .uhrzeit').first().text().trim()
-      const date = parseGermanDate(dateRaw)
-      if (!title || !date || date < today()) return
-      events.push({
-        title, date,
-        time: parseTime(timeRaw),
-        locationId: 3,
-        type: detectType(title),
-        description: '',
-        ticketUrl: '',
-        spotifyUrl: '',
-        source: 'festsaal'
-      })
+    const seen = new Set()
+
+    $('a[href*="/de/event/"], a[href*="/event/"]').each((_, el) => {
+      const href = $(el).attr('href') || ''
+      const text = $(el).text().trim()
+      const dateMatch = text.match(/(\d{1,2})\.\s*(\d{2})\.\s*(\d{4})/)
+      if (!dateMatch) return
+      const date = `${dateMatch[3]}-${dateMatch[2]}-${String(dateMatch[1]).padStart(2,'0')}`
+      if (date < today()) return
+      const timeMatch = text.match(/(\d{1,2}):(\d{2})\s*Uhr/)
+      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+      const title = $(el).find('h2, h3, h4, strong, [class*="title"]').first().text().trim() ||
+                    text.split('\n').map(l => l.trim()).filter(l => l.length > 2 && !/^\d/.test(l) && !l.includes('Uhr'))[0] || ''
+      if (!title || seen.has(date + title)) return
+      seen.add(date + title)
+      const ticketUrl = href.startsWith('http') ? href : 'https://festsaal-kreuzberg.de' + href
+      events.push({ title, date, time, locationId: 3, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'festsaal' })
     })
     console.log(`  ✓ ${events.length} Events`)
-    return events
-  } catch(e) {
-    console.log(`  ✗ Fehler: ${e.message}`)
-    return []
-  }
+  } catch(e) { console.log(`  ✗ Festsaal: ${e.message}`) }
+  finally { if (browser) await browser.close() }
+  return events
 }
 
 async function scrapeTaeubchenthal() {
@@ -648,52 +649,42 @@ async function scrapeAstra() {
 
 async function scrapeSchokoladen() {
   console.log('📡 Schokoladen Berlin...')
+  const events = []
+  const seen = new Set()
   try {
-    const res = await fetch('https://www.schokoladen-mitte.de', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
-    })
-    const html = await res.text()
-    const $ = cheerio.load(html)
-    const events = []
+    for (let page = 1; page <= 8; page++) {
+      const url = page === 1 ? 'https://www.schokoladen-mitte.de' : `https://www.schokoladen-mitte.de?page=${page}`
+      const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' } })
+      const html = await res.text()
+      const $ = cheerio.load(html)
 
-    $('[data-event-date]').each((_, el) => {
-      const date = $(el).attr('data-event-date')
-      if (!date || date < today()) return
+      $('a[id^="e2026"]').each((_, el) => {
+        const id = $(el).attr('id') || ''
+        const dateMatch = id.match(/e(\d{4})(\d{2})(\d{2})/)
+        if (!dateMatch) return
+        const date = `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}`
+        if (date < today()) return
 
-      // Titel aus dem zugehörigen Event-Container holen
-      const container = $(el).closest('.event, [class*="event"]')
-      const title = container.find('h2').first().text().trim()
-      if (!title) return
+        const h2 = $(el).find('h2').first().text().trim()
+        if (!h2) return
+        // Titel ist oft "Hauptband + Support" - nehme h2 direkt
+        const title = h2
 
-      // Uhrzeit
-      const timeText = container.find('.d-none, .event-date').text()
-      const timeMatch = timeText.match(/(\d{1,2}):(\d{2})\s*Uhr/)
-      const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+        const timeMatch = $(el).text().match(/(\d{1,2}):(\d{2})\s*Uhr/)
+        const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
 
-      // Kategorie
-      const category = container.find('.category').first().text().trim().toLowerCase()
-      const type = category.includes('party') || category.includes('dj') ? 'party' : 'konzert'
+        const ticketLink = $(el).find('a[href*="vvk"], a[href*="ticket"]').first().attr('href') ||
+                          $(el).next().find('a[href*="vvk"], a[href*="ticket"]').first().attr('href') || ''
 
-      // Ticket-URL
-      const ticketLink = container.find('a[href*="ticket"], a[href*="shop"]').first().attr('href') || ''
+        if (seen.has(date + title)) return
+        seen.add(date + title)
 
-      events.push({
-        title, date, time,
-        locationId: 11,
-        type,
-        description: '',
-        ticketUrl: ticketLink,
-        spotifyUrl: '',
-        source: 'schokoladen'
+        events.push({ title, date, time, locationId: 11, type: detectType(title), description: '', ticketUrl: ticketLink || 'https://schokoladen.tickettoaster.de/produkte', spotifyUrl: '', source: 'schokoladen' })
       })
-    })
-
+    }
     console.log(`  ✓ ${events.length} Events`)
-    return events
-  } catch(e) {
-    console.log(`  ✗ Fehler: ${e.message}`)
-    return []
-  }
+  } catch(e) { console.log(`  ✗ Schokoladen: ${e.message}`) }
+  return events
 }
 
 async function scrapeHornsErben() {
@@ -750,24 +741,23 @@ async function scrapeUrbanSpree() {
   const events = []
   const seen = new Set()
   try {
+    const months = {Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12}
     const urls = [
       'https://www.urbanspree.com/program/concerts/',
       'https://www.urbanspree.com/program/events/',
     ]
-    const months = {Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12}
-
     for (const url of urls) {
       const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' } })
       const html = await res.text()
       const $ = cheerio.load(html)
-
-      $('a[href*="/program/"]').each((_, el) => {
+      $('a[href$=".html"]').each((_, el) => {
         const href = $(el).attr('href') || ''
         if (!href.includes('/program/concerts/') && !href.includes('/program/events/')) return
-        if (href === 'https://www.urbanspree.com/program/concerts/' || href === 'https://www.urbanspree.com/program/events/') return
         const lines = $(el).text().trim().split('\n').map(l => l.trim()).filter(Boolean)
-        // Format: ["Concerts", "TITEL", "Monat Tag, Jahr", "HH:MM", "Preis"]
         if (lines.length < 3) return
+        // Zeile 0: "Concerts" oder "Events" – überspringen
+        // Zeile 1: Titel
+        // Zeile 2: Datum z.B. "Nov 27, 2026"
         const title = lines[1]
         if (!title || title === 'Concerts' || title === 'Events') return
         const dateMatch = lines.join(' ').match(/(\w{3})\s+(\d{1,2}),\s+(\d{4})/)
@@ -790,53 +780,52 @@ async function scrapeUrbanSpree() {
 }
 
 async function scrapeGretchen() {
-  console.log('📡 Gretchen Berlin...')
+  console.log('📡 Gretchen Berlin (Puppeteer)...')
+  const events = []
+  let browser
   try {
-    const res = await fetch('https://www.gretchen-club.de', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
-    })
-    const html = await res.text()
+    const puppeteer = await import('puppeteer')
+    browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
+    const page = await browser.newPage()
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+    await page.goto('https://www.gretchen-club.de', { waitUntil: 'networkidle2', timeout: 30000 })
+    const html = await page.content()
     const $ = cheerio.load(html)
-    const events = []
     const seen = new Set()
 
-    $('h2').each((_, el) => {
-      const titleEl = $(el)
-      const title = titleEl.text().trim()
-      if (!title) return
-      // Datum aus vorherigem Text-Knoten suchen
-      const section = titleEl.closest('div, section, article').parent()
-      const fullText = section.text()
-      const dateMatch = fullText.match(/(\d{2})\.(\d{2})\.(\d{4})/)
+    // Datum + Titel aus dem Text parsen
+    const bodyText = $('body').text()
+    const blocks = bodyText.split(/(?=(?:Mo|Di|Mi|Do|Fr|Sa|So)\.\s+\d{2}\.\d{2}\.\d{4})/)
+
+    blocks.forEach(block => {
+      const dateMatch = block.match(/(\d{2})\.(\d{2})\.(\d{4})/)
       if (!dateMatch) return
       const date = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`
       if (date < today()) return
-      const timeMatch = fullText.match(/Doors:\s*(\d{1,2})[\.:](\d{2})/)
-      const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      if (seen.has(date + title)) return
-      seen.add(date + title)
-      const href = titleEl.find('a[href*="detail.php"]').first().attr('href') || titleEl.closest('a').attr('href') || ''
-      const ticketUrl = href ? (href.startsWith('http') ? href : 'https://www.gretchen-club.de/' + href) : ''
-      const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('club') ? 'party' : 'konzert'
 
-      events.push({
-        title, date, time,
-        locationId: 22,
-        type,
-        description: '',
-        ticketUrl,
-        spotifyUrl: '',
-        source: 'gretchen'
-      })
+      const timeMatch = block.match(/(?:Doors|Show):\s*(\d{1,2})[\.:](\d{2})/)
+      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+
+      const lines = block.split('\n').map(l => l.trim()).filter(Boolean)
+      const ignorePrefixes = ['mo.', 'di.', 'mi.', 'do.', 'fr.', 'sa.', 'so.', 'doors', 'show', 'vorverkauf', 'abendkasse', '*', '€']
+      const titleLines = lines.filter(l =>
+        !ignorePrefixes.some(p => l.toLowerCase().startsWith(p)) &&
+        !/^\d/.test(l) &&
+        !l.includes('Uhr') &&
+        !l.includes('€') &&
+        l.length > 2
+      )
+      const title = titleLines[0]?.trim()
+      if (!title || seen.has(date + title)) return
+      seen.add(date + title)
+
+      events.push({ title, date, time, locationId: 22, type: detectType(title), description: '', ticketUrl: 'https://www.gretchen-club.de', spotifyUrl: '', source: 'gretchen' })
     })
 
     console.log(`  ✓ ${events.length} Events`)
-    return events
-  } catch(e) {
-    console.log(`  ✗ Fehler: ${e.message}`)
-    return []
-  }
+  } catch(e) { console.log(`  ✗ Gretchen: ${e.message}`) }
+  finally { if (browser) await browser.close() }
+  return events
 }
 
 async function scrapeSupamolly() {
@@ -1080,30 +1069,43 @@ async function scrapeMikropol() {
   finally { if (browser) await browser.close() }
   return events
 }
+
 async function scrapeFrannz() {
-  console.log('📡 Frannz Club Berlin...')
+  console.log('📡 Frannz Club Berlin (Puppeteer)...')
   const events = []
+  let browser
   try {
-    const res = await fetch('https://frannz.eu/programm/', { headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' } })
-    const html = await res.text()
+    const puppeteer = await import('puppeteer')
+    browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
+    const page = await browser.newPage()
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+    await page.goto('https://frannz.eu/programm/', { waitUntil: 'networkidle2', timeout: 30000 })
+    const html = await page.content()
     const $ = cheerio.load(html)
-    $('.event, article, [class*="event"], [class*="programm"]').each((_, el) => {
-      const title = $(el).find('h2, h3, h4, .title, [class*="title"]').first().text().trim()
-      const dateText = $(el).find('[class*="date"], time, .datum').first().text().trim()
-      const timeText = $(el).find('[class*="time"], [class*="uhrzeit"]').first().text().trim()
-      if (!title || !dateText) return
-      const dateMatch = dateText.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/) || dateText.match(/(\d{4})-(\d{2})-(\d{2})/)
+    const seen = new Set()
+
+    $('a[href*="/event"], a[href*="/events"], a[href*="/programm/"]').each((_, el) => {
+      const href = $(el).attr('href') || ''
+      if (href === 'https://frannz.eu/programm/' || href === '/programm/') return
+      const text = $(el).text().trim()
+      const dateMatch = text.match(/(\d{1,2})\.(\d{2})\.(\d{4})/)
       if (!dateMatch) return
-      const date = dateText.includes('-') ? dateText.substring(0,10) : `${dateMatch[3]}-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
+      const date = `${dateMatch[3]}-${dateMatch[2]}-${String(dateMatch[1]).padStart(2,'0')}`
       if (date < today()) return
-      const timeMatch = timeText.match(/(\d{1,2})[:.h](\d{2})/)
+      const timeMatch = text.match(/(\d{1,2})[:.h](\d{2})\s*Uhr/)
       const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('nacht') ? 'party' : 'konzert'
-      events.push({ title, date, time, type, locationId: 6, source: 'frannz', ticketUrl: 'https://frannz.eu/programm/', spotifyUrl: '' })
+      const lines = text.split('\n').map(l => l.trim()).filter(Boolean)
+      const ignorePrefixes = ['programm', 'tickets', 'info', 'mehr', 'einlass', 'beginn']
+      const titleLines = lines.filter(l => !ignorePrefixes.some(p => l.toLowerCase().startsWith(p)) && !/^\d/.test(l) && !l.includes('Uhr') && l.length > 2)
+      const title = titleLines[0]?.trim()
+      if (!title || seen.has(date + title)) return
+      seen.add(date + title)
+      const ticketUrl = href.startsWith('http') ? href : 'https://frannz.eu' + href
+      events.push({ title, date, time, locationId: 6, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'frannz' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Frannz: ${e.message}`) }
+  finally { if (browser) await browser.close() }
   return events
 }
 
@@ -1210,29 +1212,34 @@ async function scrapeKesselhaus() {
     const $ = cheerio.load(html)
     const months = { Januar:1, Februar:2, März:3, April:4, Mai:5, Juni:6, Juli:7, August:8, September:9, Oktober:10, November:11, Dezember:12 }
     const seen = new Set()
-    $('a[href*="/calendar/"]').each((_, el) => {
-      const text = $(el).text().trim()
-      const lines = text.split('\n').map(l => l.trim()).filter(Boolean)
+
+    $('a[href*="/de/calendar/"]').each((_, el) => {
+      const href = $(el).attr('href') || ''
+      if (href === '/de/calendar' || href === 'https://www.kesselhaus.net/de/calendar') return
+      const lines = $(el).text().trim().split('\n').map(l => l.trim()).filter(Boolean)
       if (lines.length < 4) return
+
+      // Format: ["Sa.", "03", "Januar", "21:00", "Titel...", "Location", "Typ"]
       const day = parseInt(lines[1])
       const monthName = lines[2]
       const month = months[monthName]
       if (!day || !month) return
-      const year = new Date().getFullYear()
+
+      const year = new Date().getFullYear() + (month < new Date().getMonth() + 1 ? 1 : 0)
       const date = `${year}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}`
       if (date < today()) return
+
       const timeMatch = lines[3].match(/(\d{1,2}):(\d{2})/)
       const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      // Titel: alles nach der Uhrzeit
-      const titleIdx = lines.findIndex(l => l.match(/^\d{1,2}:\d{2}$/))
-      const title = lines.slice(titleIdx + 1).filter(l => !['Kesselhaus','Maschinenhaus','Club23','Konzert','Party','Weitere','Theater','Kinder','Comedy','Tanz','Lesung'].includes(l)).join(' ').trim()
+
+      const skipWords = ['Kesselhaus', 'Maschinenhaus', 'Club23', 'Kulturbrauerei', 'Frannz Club', 'Konzert', 'Party', 'Theater', 'Kinder', 'Comedy', 'Tanz', 'Lesung', 'Weitere', 'Festival', 'Großveranstaltung', 'Ausverkauft', 'Abgesagt', 'Verlegt', 'Nachholtermin', 'Zusatzkonzert']
+      const titleLines = lines.slice(4).filter(l => !skipWords.includes(l) && l.length > 1)
+      const title = titleLines[0]?.trim()
       if (!title || seen.has(date + title)) return
       seen.add(date + title)
-      const href = $(el).attr('href') || ''
-      const ticketUrl = href ? 'https://www.kesselhaus.net' + href : ''
-      const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('90er') ? 'party' : 'konzert'
-      events.push({ title, date, time, type, locationId: 29, source: 'kesselhaus', ticketUrl, spotifyUrl: '' })
+
+      const ticketUrl = href.startsWith('http') ? href : 'https://www.kesselhaus.net' + href
+      events.push({ title, date, time, locationId: 29, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'kesselhaus' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Kesselhaus: ${e.message}`) }
@@ -1248,13 +1255,16 @@ async function scrapeMetropol() {
     })
     const html = await res.text()
     const $ = cheerio.load(html)
-    const months = { Januar:1, Februar:2, März:3, April:4, Apr:4, Mai:5, Juni:6, Juli:7, August:8, Sep:9, September:9, Oktober:10, Nov:11, November:11, Dez:12, Dezember:12 }
+    const months = { Januar:1, Februar:2, März:3, April:4, Apr:4, Mai:5, Juni:6, Juli:7, August:8, Sep:9, September:9, Oktober:10, Okt:10, Nov:11, November:11, Dez:12, Dezember:12 }
     const seen = new Set()
+
     $('li').each((_, el) => {
       const text = $(el).text().trim()
+      // Format: "18/ März 2026 20:00"
       const dateMatch = text.match(/(\d{1,2})\s*\/\s*(\w+\.?)\s+(\d{4})\s+(\d{1,2}):(\d{2})/)
       if (!dateMatch) return
-      const month = months[dateMatch[2].replace('.','')]
+      const monthKey = dateMatch[2].replace('.','')
+      const month = months[monthKey]
       if (!month) return
       const date = `${dateMatch[3]}-${String(month).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
       if (date < today()) return
@@ -1265,7 +1275,7 @@ async function scrapeMetropol() {
       const href = $(el).find('a[href*="/event/"]').first().attr('href') || ''
       const cat = $(el).find('a[href*="/categories/"]').first().text().trim().toLowerCase()
       const type = cat === 'party' ? 'party' : 'konzert'
-      events.push({ title, date, time, type, locationId: 25, source: 'metropol', ticketUrl: href, spotifyUrl: '' })
+      events.push({ title, date, time, type, locationId: 30, type: detectType(title), source: 'metropol', ticketUrl: href, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Metropol: ${e.message}`) }
@@ -1299,7 +1309,10 @@ async function scrapeHuxleys() {
       const timeMatch = text.match(/Beginn:\s*(\d{1,2}):(\d{2})/)
       const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
       const lines = link.text().trim().split('\n').map(l => l.trim()).filter(Boolean)
-      const title = lines[lines.length - 1].trim()
+      const ignorePrefixes = ['achtung', 'nachholtermin', 'ausverkauft', 'verschoben', 'hinweis', 'support', 'opener', 'special guest', 'beginn', 'einlass']
+      const titleLines = lines.filter(l => !ignorePrefixes.some(p => l.toLowerCase().startsWith(p)) && !/^\d/.test(l) && l.length > 2)
+      const title = titleLines[0]?.trim()
+      if (!title) return
       if (!title || seen.has(date + title)) return
       seen.add(date + title)
       const href = link.attr('href') || ''
@@ -1322,41 +1335,44 @@ async function scrapeColumbiahalle() {
     const html = await res.text()
     const $ = cheerio.load(html)
     const months = { Januar:1, Februar:2, März:3, April:4, Mai:5, Juni:6, Juli:7, August:8, September:9, Oktober:10, November:11, Dezember:12 }
+    const seen = new Set()
     let currentMonth = 0
     let currentYear = new Date().getFullYear()
-    const seen = new Set()
+
     $('h1, h2').each((_, el) => {
       const text = $(el).text().trim()
-      // Monatsüberschrift
-      const monthMatch = text.match(/^(\w+)\s+(\d{4})$/)
-      if (monthMatch) {
-        currentMonth = months[monthMatch[1]] || currentMonth
-        currentYear = parseInt(monthMatch[2])
+      if ($(el).is('h1')) {
+        const monthMatch = text.match(/^(\w+)\s+(\d{4})$/)
+        if (monthMatch && months[monthMatch[1]]) {
+          currentMonth = months[monthMatch[1]]
+          currentYear = parseInt(monthMatch[2])
+        }
         return
       }
-      // Event-Titel
-      if ($(el).is('h2') && currentMonth) {
-        const title = text
-        if (!title || title.length < 2) return
-        // Tag aus vorherigem Element
-        const dayEl = $(el).closest('div, section, article').prev()
-        const dayText = dayEl.text().trim()
-        const dayMatch = dayText.match(/(\d{1,2})$/) || $(el).parent().prev().text().trim().match(/(\d{1,2})/)
-        if (!dayMatch) return
-        const day = parseInt(dayMatch[1])
-        const date = `${currentYear}-${String(currentMonth).padStart(2,'0')}-${String(day).padStart(2,'0')}`
-        if (date < today()) return
-        // Uhrzeit
-        const container = $(el).closest('div, section, article, li')
-        const timeMatch = container.text().match(/Beginn:\s*(\d{1,2}):(\d{2})/)
-        const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-        const ticketLink = container.find('a[href*="ticket"], a[href*="eventim"], a[href*="loft"]').first().attr('href') || ''
-        if (seen.has(date + title)) return
-        seen.add(date + title)
-        const lower = title.toLowerCase()
-        const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
-        events.push({ title, date, time, type, locationId: 32, source: 'columbiahalle', ticketUrl: ticketLink, spotifyUrl: '' })
-      }
+      if (!currentMonth) return
+      const title = text
+      if (!title || title.length < 2) return
+
+      // Tag aus dem vorherigen Geschwister-Element
+      const parent = $(el).closest('div, section, article')
+      const parentText = parent.text()
+      const dayMatch = parentText.match(/^\s*\w+\s+(\d{1,2})\s/)
+      if (!dayMatch) return
+      const day = parseInt(dayMatch[1])
+      const date = `${currentYear}-${String(currentMonth).padStart(2,'0')}-${String(day).padStart(2,'0')}`
+      if (date < today()) return
+
+      const timeMatch = parentText.match(/Beginn:\s*(\d{1,2}):(\d{2})/)
+      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+
+      const ticketLink = parent.find('a[href*="ticket"], a[href*="eventim"], a[href*="loft"], a[href*="landstreicher"]').first().attr('href') ||
+                         parent.find('a[href*="Kalender-Eintrag"], a[href*="/veranstaltung/"]').first().attr('href') ||
+                         'https://www.columbiahalle.berlin/veranstaltungen.html'
+
+      if (seen.has(date + title)) return
+      seen.add(date + title)
+
+      events.push({ title, date, time, locationId: 32, type: detectType(title), description: '', ticketUrl: ticketLink, spotifyUrl: '', source: 'columbiahalle' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Columbiahalle: ${e.message}`) }
@@ -1374,24 +1390,23 @@ async function scrapeUberEatsMusicHall() {
     const $ = cheerio.load(html)
     const months = { Jan:1, Feb:2, Mär:3, Apr:4, Mai:5, Jun:6, Jul:7, Aug:8, Sep:9, Okt:10, Nov:11, Dez:12 }
     const seen = new Set()
+
     $('a[href*="/events/detail/"]').each((_, el) => {
-      const text = $(el).text().trim()
-      const title = $(el).find('h2').first().text().trim()
+      const title = $(el).find('h3').first().text().trim()
       if (!title) return
-      // Datum aus Text extrahieren z.B. "Donnerstag, 01. Okt. 2026, 20:00 Uhr"
-      const dateMatch = text.match(/(\d{1,2})\.\s*(\w+)\.?\s+(\d{4})/)
+      const text = $(el).closest('div, li, article').text()
+      const dateMatch = text.match(/(\d{1,2})\.\s*(\w+)\.?\s+(\d{4})[,\s]+(\d{1,2}):(\d{2})/)
       if (!dateMatch) return
       const month = months[dateMatch[2].substring(0,3)]
       if (!month) return
       const date = `${dateMatch[3]}-${String(month).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
       if (date < today()) return
-      const timeMatch = text.match(/(\d{1,2}):(\d{2})\s*Uhr/)
-      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+      const time = `${String(dateMatch[4]).padStart(2,'0')}:${dateMatch[5]}`
       if (seen.has(date + title)) return
       seen.add(date + title)
       const href = $(el).attr('href') || ''
       const ticketUrl = href.startsWith('http') ? href : 'https://www.uber-eats-music-hall.de' + href
-      events.push({ title, date, time, type: detectType(title), locationId: 33, source: 'uber-eats-music-hall', ticketUrl, spotifyUrl: '' })
+      events.push({ title, date, time, locationId: 33, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'uber-eats-music-hall' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Uber Eats Music Hall: ${e.message}`) }
@@ -1408,7 +1423,7 @@ async function scrapeTrinity() {
     const html = await res.text()
     const $ = cheerio.load(html)
     const locationMap = {
-      'Privatclub': 4,
+  'Privatclub': 4,
   'Schokoladen': 11,
   'Madame Claude': 12,
   'Supamolly': 23,
@@ -1416,6 +1431,7 @@ async function scrapeTrinity() {
   'Mikropol': 28,
   'Prachtwerk': 38,
   'LARK': 39,
+  'Wild at Heart': 9,
 }
     const months = { Januar:1, Februar:2, März:3, April:4, Mai:5, Juni:6, Juli:7, August:8, September:9, Oktober:10, November:11, Dezember:12 }
     const seen = new Set()
@@ -1488,25 +1504,29 @@ async function scrapeBadehaus() {
   console.log('📡 Badehaus Berlin...')
   const events = []
   try {
-    const res = await fetch('https://badehaus-berlin.com/concerts/', { headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' } })
-    const html = await res.text()
-    const $ = cheerio.load(html)
+    const urls = ['https://badehaus-berlin.com/concerts/', 'https://badehaus-berlin.com/events/', 'https://badehaus-berlin.com/']
     const seen = new Set()
-    $('a[href*="/events/"]').each((_, el) => {
-      const text = $(el).text().trim()
-      const dateMatch = text.match(/(\w+)\.\s+(\d{2})\.(\d{2})\.(\d{4})\s*\|\s*(\d{1,2}):(\d{2})/)
-      if (!dateMatch) return
-      const date = `${dateMatch[4]}-${dateMatch[3]}-${dateMatch[2]}`
-      if (date < today()) return
-      const time = `${String(dateMatch[5]).padStart(2,'0')}:${dateMatch[6]}`
-      const title = $(el).find('h2, h3, strong, .title').first().text().trim() || text.replace(/.*UHR\s*/,'').split('\n')[0].trim()
-      if (!title || title.length < 2 || seen.has(date + title)) return
-      seen.add(date + title)
-      const href = $(el).attr('href') || ''
-      const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('nacht') ? 'party' : 'konzert'
-      events.push({ title, date, time, type, locationId: 35, source: 'badehaus', ticketUrl: href, spotifyUrl: '' })
-    })
+    for (const url of urls) {
+      const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' } })
+      const html = await res.text()
+      const $ = cheerio.load(html)
+      $('a').each((_, el) => {
+        const text = $(el).text().trim()
+        const dateMatch = text.match(/(\d{2})\.(\d{2})\.(\d{4})\s*\|\s*(\d{1,2}):(\d{2})/)
+        if (!dateMatch) return
+        const date = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`
+        if (date < today()) return
+        const time = `${String(dateMatch[4]).padStart(2,'0')}:${dateMatch[5]}`
+        const lines = text.split('\n').map(l => l.trim()).filter(Boolean)
+        const ignorePrefixes = ['tickets', 'so.', 'mo.', 'di.', 'mi.', 'do.', 'fr.', 'sa.']
+        const titleLines = lines.filter(l => !ignorePrefixes.some(p => l.toLowerCase().startsWith(p)) && !/^\d/.test(l) && l.length > 2 && !l.includes('UHR'))
+        const title = titleLines[0]?.trim()
+        if (!title || seen.has(date + title)) return
+        seen.add(date + title)
+        const href = $(el).attr('href') || url
+        events.push({ title, date, time, locationId: 35, type: detectType(title), description: '', ticketUrl: href, spotifyUrl: '', source: 'badehaus' })
+      })
+    }
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Badehaus: ${e.message}`) }
   return events
@@ -1520,24 +1540,27 @@ async function scrapeCassiopeia() {
     const html = await res.text()
     const $ = cheerio.load(html)
     const seen = new Set()
-    $('a[href*="/event/"], a[href*="/club/"]').each((_, el) => {
+
+    $('a[href*="/event/"]').each((_, el) => {
+      const href = $(el).attr('href') || ''
       const text = $(el).text().trim()
-      const dateMatch = text.match(/(\w{2,3})\s*·?\s*(\d{1,2})\s*·?\s*(\d{2})\s*·?\s*\|/)
+
+      // Datum aus Text: "14 . 03 . März 2026"
+      const dateMatch = text.match(/(\d{1,2})\s*\.\s*(\d{2})\s*\.\s*\w+\s*(\d{4})/)
       if (!dateMatch) return
-      const months = { Jan:1, Feb:2, Mär:3, Mar:3, Apr:4, Mai:5, Jun:6, Jul:7, Aug:8, Sep:9, Okt:10, Oct:10, Nov:11, Dez:12, Dec:12 }
-      const month = months[dateMatch[3]]
-      if (!month) return
-      const year = new Date().getFullYear()
-      const date = `${year}-${String(month).padStart(2,'0')}-${String(dateMatch[2]).padStart(2,'0')}`
+      const date = `${dateMatch[3]}-${dateMatch[2]}-${String(dateMatch[1]).padStart(2,'0')}`
       if (date < today()) return
-      const timeMatch = text.match(/Beginn\s*·?\s*(\d{1,2}):(\d{2})/)
+
+      // Zeit aus "Beginn 20:00" oder "Beginn\n20:00"
+      const timeMatch = text.match(/Beginn\s*(\d{1,2}):(\d{2})/)
       const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      const title = $(el).find('h2, h3, strong').first().text().trim()
+
+      // Titel ist das h2 im Link
+      const title = $(el).find('h2').text().trim()
       if (!title || seen.has(date + title)) return
       seen.add(date + title)
-      const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
-      events.push({ title, date, time, type, locationId: 36, source: 'cassiopeia', ticketUrl: $(el).attr('href') || '', spotifyUrl: '' })
+
+      events.push({ title, date, time, locationId: 36, type: detectType(title), description: '', ticketUrl: href, spotifyUrl: '', source: 'cassiopeia' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Cassiopeia: ${e.message}`) }
@@ -1611,24 +1634,33 @@ async function scrapeSlaughterhouse() {
     const html = await res.text()
     const $ = cheerio.load(html)
     const seen = new Set()
-    const content = $('body').text()
-    const blocks = html.split(/(?=\d{2}\.\d{2}\.\d{4})/)
-    blocks.forEach(block => {
-      const dateMatch = block.match(/^(\d{2})\.(\d{2})\.(\d{4})/)
+
+    // Datum-Paragraphen finden: "14.03.2026"
+    $('p, div').each((_, el) => {
+      const text = $(el).text().trim()
+      const dateMatch = text.match(/^(\d{2})\.(\d{2})\.(\d{4})/)
       if (!dateMatch) return
       const date = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`
       if (date < today()) return
-      const timeMatch = block.match(/Doors?:\s*(\d{1,2}):(\d{2})/)
-      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      const titleMatch = block.match(/\*\*(.+?)\*\*/)
-      if (!titleMatch) return
-      const title = titleMatch[1].replace(/Konzert\s*[+&]?\s*Party:\s*/i, '').replace(/Konzert:\s*/i, '').trim()
+
+      // Titel aus strong/b Tag
+      const title = $(el).find('strong, b').first().text().trim()
+        .replace(/^Konzert\s*[\+&]?\s*Party:\s*/i, '')
+        .replace(/^Konzert:\s*/i, '')
+        .replace(/^Party:\s*/i, '')
+        .trim()
       if (!title || seen.has(date + title)) return
       seen.add(date + title)
-      const ticketMatch = block.match(/https?:\/\/[^\s<]+tixforgigs[^\s<]+/)
-      const ticketUrl = ticketMatch ? ticketMatch[0] : 'https://slaughterhouse-berlin.de/konzerte/'
-      const type = detectType(title, block)
-      events.push({ title, date, time, type, locationId: 40, source: 'slaughterhouse', ticketUrl, spotifyUrl: '' })
+
+      const blockText = $(el).text()
+      const timeMatch = blockText.match(/Doors?:?\s*(\d{1,2}):(\d{2})/)
+      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '21:00'
+
+      const ticketLink = $(el).find('a[href*="tixforgigs"], a[href*="ra.co"]').first().attr('href') ||
+                         $(el).next().find('a[href*="tixforgigs"], a[href*="ra.co"]').first().attr('href') ||
+                         'https://slaughterhouse-berlin.de/konzerte/'
+
+      events.push({ title, date, time, locationId: 40, type: detectType(title), description: '', ticketUrl: ticketLink, spotifyUrl: '', source: 'slaughterhouse' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Slaughterhouse: ${e.message}`) }
@@ -1645,38 +1677,44 @@ async function scrapePeterEdel() {
     const html = await res.text()
     const $ = cheerio.load(html)
     const months = { JANUAR:1, FEBRUAR:2, MÄRZ:3, APRIL:4, MAI:5, JUNI:6, JULI:7, AUGUST:8, SEPTEMBER:9, OKTOBER:10, NOVEMBER:11, DEZEMBER:12 }
-    let currentMonth = new Date().getMonth() + 1
+    let currentMonth = 0
     let currentYear = new Date().getFullYear()
     const seen = new Set()
+
     $('h1, h3').each((_, el) => {
       const text = $(el).text().trim()
+
       // Monatsüberschrift z.B. "MÄRZ 2026"
-      const monthMatch = text.match(/^(\w+)\s+(\d{4})$/)
-      if (monthMatch) {
-        currentMonth = months[monthMatch[1].toUpperCase()] || currentMonth
-        currentYear = parseInt(monthMatch[2])
+      if ($(el).is('h1')) {
+        const monthMatch = text.match(/^(\w+)\s+(\d{4})$/)
+        if (monthMatch) {
+          currentMonth = months[monthMatch[1].toUpperCase()] || currentMonth
+          currentYear = parseInt(monthMatch[2])
+        }
         return
       }
-      // Datum z.B. "SA | 14.03." oder Titel
+
+      // Datum z.B. "SA | 14.03."
       const dateMatch = text.match(/\|\s*(\d{1,2})\.(\d{2})\./)
-      if (dateMatch) return // Datum-Zeilen überspringen, Titel kommt separat
-      if ($(el).is('h3') && text.length > 3) {
-        // Datum aus vorherigem h3 suchen
-        const prevText = $(el).prev('h3').text().trim()
-        const dayMatch = prevText.match(/\|\s*(\d{1,2})\.(\d{2})\./)
-        if (!dayMatch) return
-        const date = `${currentYear}-${dayMatch[2]}-${String(dayMatch[1]).padStart(2,'0')}`
+      if (dateMatch) {
+        // Nächstes h3 ist der Titel
+        const titleEl = $(el).next('h3')
+        if (!titleEl.length) return
+        const title = titleEl.find('a').first().text().trim() || titleEl.text().trim()
+        if (!title || !currentMonth) return
+        const date = `${currentYear}-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
         if (date < today()) return
-        const container = $(el).closest('div, section, article')
-        const timeMatch = container.text().match(/Beginn:\s*(\d{1,2}):(\d{2})/)
+
+        const container = $(el).nextUntil('h3:has(a)', '*').addBack()
+        const fullText = container.text()
+        const timeMatch = fullText.match(/Beginn:\s*(\d{1,2}):(\d{2})/) || fullText.match(/Beginn:\s*(\d{1,2})\.(\d{2})/)
         const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-        const title = text.replace(/\*\*/g, '').trim()
-        if (!title || seen.has(date + title)) return
+
+        const ticketLink = titleEl.find('a').first().attr('href') || 'https://www.peteredel.de/events/'
+        if (seen.has(date + title)) return
         seen.add(date + title)
-        const ticketLink = container.find('a').first().attr('href') || 'https://www.peteredel.de/events/'
-        const lower = title.toLowerCase()
-        const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
-        events.push({ title, date, time, type, locationId: 41, source: 'peter-edel', ticketUrl: ticketLink, spotifyUrl: '' })
+
+        events.push({ title, date, time, locationId: 41, type: detectType(title), description: '', ticketUrl: ticketLink, spotifyUrl: '', source: 'peter-edel' })
       }
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1747,23 +1785,27 @@ async function scrapeZigZag() {
     const $ = cheerio.load(html)
     const months = { Jan:1, Feb:2, Mar:3, Apr:4, May:5, Jun:6, Jul:7, Aug:8, Sep:9, Oct:10, Nov:11, Dec:12 }
     const seen = new Set()
-    $('a[href*="/program"]').each((_, el) => {
-      const title = $(el).find('h3, h4, strong').first().text().trim() ||
-                    $(el).text().trim().split('\n').filter(l => l.trim().length > 5)[0]?.trim()
+
+    $('a[href*="/program-mai/"]').each((_, el) => {
+      const title = $(el).text().trim()
       if (!title || title.length < 3) return
-      // Datum aus dem Container holen
-      const container = $(el).closest('div, article, li')
-      const dateText = container.text().match(/([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})/)
-      if (!dateText) return
-      const month = months[dateText[1]]
+
+      // Datum direkt nach dem Link als Text
+      const dateText = $(el).closest('div, article, li').find('p, time, [class*="date"]').first().text().trim() ||
+                       $(el).parent().next().text().trim()
+
+      const dateMatch = dateText.match(/(\w{3})\s+(\d{1,2}),\s+(\d{4})/)
+      if (!dateMatch) return
+      const month = months[dateMatch[1]]
       if (!month) return
-      const date = `${dateText[3]}-${String(month).padStart(2,'0')}-${String(dateText[2]).padStart(2,'0')}`
+      const date = `${dateMatch[3]}-${String(month).padStart(2,'0')}-${String(dateMatch[2]).padStart(2,'0')}`
       if (date < today()) return
       if (seen.has(date + title)) return
       seen.add(date + title)
+
       const href = $(el).attr('href') || ''
       const ticketUrl = href.startsWith('http') ? href : 'https://www.zigzag-jazzclub.berlin' + href
-      events.push({ title, date, time: '20:00', type: detectType(title), locationId: 43, source: 'zigzag', ticketUrl, spotifyUrl: '' })
+      events.push({ title, date, time: '20:00', locationId: 43, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'zigzag' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ ZigZag: ${e.message}`) }
@@ -1799,6 +1841,43 @@ async function scrapeHolzmarkt() {
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Holzmarkt: ${e.message}`) }
+  return events
+}
+
+async function scrapeMoritzbastei() {
+  console.log('📡 Moritzbastei Leipzig...')
+  const events = []
+  try {
+    const res = await fetch('https://www.moritzbastei.de/programm-tickets-veranstaltungen', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
+    })
+    const html = await res.text()
+    const $ = cheerio.load(html)
+    const seen = new Set()
+
+    $('a[href*="/event/"]').each((_, el) => {
+      const href = $(el).attr('href') || ''
+      const dateMatch = href.match(/\/event\/\w+\/(\d{4}-\d{2}-\d{2})\//)
+      if (!dateMatch) return
+      const date = dateMatch[1]
+      if (date < today()) return
+
+      const title = $(el).find('h3').first().text().trim()
+      if (!title) return
+      if (seen.has(date + title)) return
+      seen.add(date + title)
+
+      const blockText = $(el).text()
+      const timeMatch = blockText.match(/(\d{1,2}):(\d{2})\s*Uhr/)
+      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+
+      const ticketEl = $(el).next('a[href*="tixforgigs"]')
+      const ticketUrl = ticketEl.attr('href') || 'https://www.moritzbastei.de/programm-tickets-veranstaltungen'
+
+      events.push({ title, date, time, locationId: 18, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'moritzbastei' })
+    })
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) { console.log(`  ✗ Moritzbastei: ${e.message}`) }
   return events
 }
 
@@ -1849,6 +1928,7 @@ async function main() {
     scrapeTheaterImDelphi(),
     scrapeZigZag(),
     scrapeHolzmarkt(),
+    scrapeMoritzbastei(),
 
   ])
 
