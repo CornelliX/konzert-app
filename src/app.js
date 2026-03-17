@@ -22,6 +22,7 @@ export async function renderApp(el) {
     going = bm.going
     console.log('bookmarked:', bookmarked)
     console.log('going:', going)
+    console.log('erste event id:', events[0]?.id, typeof events[0]?.id)
   }
   render()
 }
