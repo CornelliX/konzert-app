@@ -1336,29 +1336,27 @@ async function scrapeFrannz() {
     // Die Seite hat Wochentag/Tag/Monat als separate Text-Nodes + h2
     // Wir iterieren über alle h2 und schauen auf den vorherigen Text
     $('h2').each((_, el) => {
-      const title = $(el).text().trim()
+  const title = $(el).text().trim()
       if (!title || title.length < 2) return
+      if (/fällt aus|verlegt|verschoben/i.test(title)) return
 
       // Finde den nächsten Datumstext im umgebenden Container
-      const container = $(el).closest('section, article, div[class], li').first()
-      const containerText = container.text()
-
-      // Datum-Pattern: "So 15.03." oder "Mi 18.03."
-      const dateMatch = containerText.match(/\b(\d{1,2})\.(\d{2})\.\b/)
-      if (!dateMatch) return
-
-      const day = dateMatch[1].padStart(2, '0')
-      const month = dateMatch[2]
-      const year = '2026'
+      const rowWrap = $(el).closest('.row-wrap')
+      const day = rowWrap.find('.event-day').text().trim().padStart(2, '0')
+      const monthName = rowWrap.find('.event-month').text().trim()
+      const month = monthMap[monthName.substring(0, 3)] || monthMap[monthName]
+      if (!day || !month) return
+      const now = new Date()
+      let year = now.getFullYear()
+      const eventMonth = parseInt(month)
+      if (eventMonth < now.getMonth() + 1) year++
       const date = `${year}-${month}-${day}`
 
       if (date < today()) return
 
       // Zeit: "20:00" oder "19:00"
-      const timeMatch = containerText.match(/Beginn[:\s]*(\d{1,2}):(\d{2})/)
-      const time = timeMatch
-        ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}`
-        : '20:00'
+      const timeMatch = rowWrap.text().match(/(\d{1,2}):(\d{2})\s*Einlass|(\d{1,2}):(\d{2})\s*Beginn/)
+      const time = timeMatch ? `${(timeMatch[1]||timeMatch[3]).padStart(2,'0')}:${timeMatch[2]||timeMatch[4]}` : '20:00'
 
       // Ticket-URL aus nächstem Link
       const ticketUrl = $(el).closest('section, article, div[class]')
@@ -1381,7 +1379,6 @@ async function scrapeFrannz() {
         source: 'frannz'
       })
     })
-
     console.log(`  ✓ ${events.length} Events`)
   } catch (e) {
     console.log(`  ✗ Frannz: ${e.message}`)
