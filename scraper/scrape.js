@@ -2711,7 +2711,16 @@ async function main() {
   })
 
   // IDs vergeben
-  allEvents = allEvents.map((e, i) => ({ id: Date.now() + i, ...e }))
+  function stableId(str) {
+  let hash = 0
+  for (let i = 0; i < str.length; i++) {
+    hash = ((hash << 5) - hash) + str.charCodeAt(i)
+    hash |= 0
+  }
+  return Math.abs(hash)
+}
+
+allEvents = allEvents.map(e => ({ id: stableId(e.date + '|' + e.title + '|' + e.locationId), ...e }))
 
   // Sortieren
   allEvents = allEvents.filter(e => e.date >= today())
