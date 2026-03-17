@@ -1673,41 +1673,60 @@ async function scrapeHuxleys() {
   const events = []
   try {
     const res = await fetch('https://huxleysneuewelt.de/events', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
     })
     const html = await res.text()
     const $ = cheerio.load(html)
-    const months = { Januar:1, Februar:2, März:3, April:4, Apr:4, Mai:5, Juni:6, Juli:7, August:8, Sep:9, September:9, Oktober:10, Okt:10, Nov:11, November:11, Dez:12, Dezember:12 }
     const seen = new Set()
+
+    // Jedes Event: li mit a[href*="/event/YYYY-MM-DD-"]
     $('li').each((_, el) => {
       const link = $(el).find('a[href*="/event/"]').first()
       if (!link.length) return
-      const text = $(el).text().trim()
-      const dayMatch = text.match(/^(\d{1,2})(\w+)/)
-      if (!dayMatch) return
-      const day = parseInt(dayMatch[1])
-      const monthName = dayMatch[2]
-      const month = months[monthName]
-      if (!month) return
-      const year = new Date().getFullYear() + (month < new Date().getMonth() + 1 ? 1 : 0)
-      const date = `${year}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}`
-      if (date < today()) return
-      const timeMatch = text.match(/Beginn:\s*(\d{1,2}):(\d{2})/)
-      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      const lines = link.text().trim().split('\n').map(l => l.trim()).filter(Boolean)
-      const ignorePrefixes = ['achtung', 'nachholtermin', 'ausverkauft', 'verschoben', 'hinweis', 'support', 'opener', 'special guest', 'beginn', 'einlass']
-      const titleLines = lines.filter(l => !ignorePrefixes.some(p => l.toLowerCase().startsWith(p)) && !/^\d/.test(l) && l.length > 2)
-      const title = titleLines[0]?.trim()
-      if (!title) return
-      if (!title || seen.has(date + title)) return
-      seen.add(date + title)
+
       const href = link.attr('href') || ''
-      const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
-      events.push({ title, date, time, type, locationId: 31, source: 'huxleys', ticketUrl: href, spotifyUrl: '' })
+
+      // Datum direkt aus URL: /event/2026-08-02-thievery-corporation
+      const urlMatch = href.match(/\/event\/(\d{4})-(\d{2})-(\d{2})-/)
+      if (!urlMatch) return
+
+      const date = `${urlMatch[1]}-${urlMatch[2]}-${urlMatch[3]}`
+      if (date < today()) return
+
+      // Zeit aus "Beginn: 20:00"
+      const text = $(el).text()
+      const timeMatch = text.match(/Beginn:\s*(\d{2}):(\d{2})/)
+      const time = timeMatch ? `${timeMatch[1]}:${timeMatch[2]}` : '20:00'
+
+      // Titel: letzter Textblock im Link (nach Tag und Monat)
+      const lines = link.text().trim().split('\n').map(l => l.trim()).filter(Boolean)
+      // Format: ["17März", "Beginn: 20:00 | Einlass: 19:00", "257ers"]
+      // oder: ["17", "März", "Beginn...", "TITEL"]
+      // Titel = letzte Zeile die kein Datum/Zeit/Hinweis ist
+      const skipPatterns = [/^\d+\w*$/, /^Beginn/, /^Einlass/, /^Ausverkauft/, /^Nachholtermin/, /^Achtung/]
+      const titleLines = lines.filter(l => !skipPatterns.some(p => p.test(l)) && l.length > 1)
+      const title = titleLines[0]?.trim()
+      if (!title || title.length < 2) return
+
+      const key = date + title
+      if (seen.has(key)) return
+      seen.add(key)
+
+      events.push({
+        title, date, time,
+        locationId: 31,
+        type: detectType(title),
+        description: '',
+        ticketUrl: href.startsWith('http') ? href : 'https://huxleysneuewelt.de' + href,
+        spotifyUrl: '',
+        source: 'huxleys'
+      })
     })
+
     console.log(`  ✓ ${events.length} Events`)
-  } catch(e) { console.log(`  ✗ Huxleys: ${e.message}`) }
+  } catch(e) {
+    console.log(`  ✗ Huxleys: ${e.message}`)
+  }
   return events
 }
 

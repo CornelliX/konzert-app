@@ -20,6 +20,8 @@ export async function renderApp(el) {
     const bm = await loadBookmarks()
     bookmarked = bm.bookmarked
     going = bm.going
+    console.log('bookmarked:', bookmarked)
+    console.log('going:', going)
   }
   render()
 }
