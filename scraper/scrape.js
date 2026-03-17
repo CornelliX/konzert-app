@@ -1703,7 +1703,7 @@ async function scrapeHuxleys() {
       // Format: ["17März", "Beginn: 20:00 | Einlass: 19:00", "257ers"]
       // oder: ["17", "März", "Beginn...", "TITEL"]
       // Titel = letzte Zeile die kein Datum/Zeit/Hinweis ist
-      const skipPatterns = [/^\d+\w*$/, /^Beginn/, /^Einlass/, /^Ausverkauft/, /^Nachholtermin/, /^Achtung/]
+      const skipPatterns = [/^\d+/, /^Beginn/, /^Einlass/, /^Ausverkauft/, /^Nachholtermin/, /^Achtung/]
       const titleLines = lines.filter(l => !skipPatterns.some(p => p.test(l)) && l.length > 1)
       const title = titleLines[0]?.trim()
       if (!title || title.length < 2) return
