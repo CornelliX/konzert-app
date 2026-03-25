@@ -2664,6 +2664,80 @@ async function scrapePrachtwerk() {
   return events
 }
 
+async function scrapeTheaterDesWestens() {
+  console.log('📡 Theater des Westens Berlin (Puppeteer)...')
+  const events = []
+  let browser
+  try {
+    const puppeteer = await import('puppeteer')
+    browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
+    const page = await browser.newPage()
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+    await page.goto('https://www.regioactive.de/location/berlin/theater-des-westens-gw1FVb8tLf.html', {
+      waitUntil: 'networkidle2', timeout: 45000
+    })
+    await page.waitForFunction(
+      () => document.querySelectorAll('[class*="event"][class*="preview"]').length > 0,
+      { timeout: 20000 }
+    ).catch(() => {})
+
+    const rawEvents = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('[class*="event"][class*="preview"]')).map(div => {
+        // Nur Konzert-Cards aufnehmen (nicht Theater/Musical)
+        const cls = div.className || ''
+        if (!cls.includes('konzert')) return null
+
+        const h2 = div.querySelector('h2.article-title')
+        const rawTitle = h2?.innerText?.trim() || ''
+        const title = rawTitle.replace(/^Tickets!\s*/i, '').trim()
+
+        // Datum + Zeit aus Unix-Timestamp data-beginn
+        const beginn = parseInt(div.dataset.beginn)
+        if (!beginn) return null
+
+        const ticketLink = div.querySelector('a[href*="/tickets/"]')
+        const href = ticketLink?.getAttribute('href') || ''
+
+        return { title, beginn, href }
+      }).filter(Boolean)
+    })
+    await browser.close()
+    browser = null
+
+    const seen = new Set()
+    for (const { title, beginn, href } of rawEvents) {
+      if (!title || title.length < 2) continue
+
+      // Datum und Zeit aus Unix-Timestamp (Sekunden)
+      const dt = new Date(beginn * 1000)
+      const date = dt.toISOString().substring(0, 10)
+      const time = dt.toTimeString().substring(0, 5)
+      if (date < today()) continue
+
+      const key = date + title
+      if (seen.has(key)) continue
+      seen.add(key)
+
+      events.push({
+        title, date, time,
+        locationId: 46,
+        type: detectType(title),
+        description: '',
+        ticketUrl: href ? 'https://www.regioactive.de' + href : 'https://www.regioactive.de/location/berlin/theater-des-westens-gw1FVb8tLf.html',
+        spotifyUrl: '',
+        source: 'theaterdeswestens'
+      })
+    }
+
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ Theater des Westens: ${e.message}`)
+  } finally {
+    if (browser) await browser.close()
+  }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -2714,6 +2788,7 @@ async function main() {
     scrapeMoritzbastei(),
     scrapeWildAtHeart(),
     scrapePrachtwerk(),
+    scrapeTheaterDesWestens(),
 
   ])
 

@@ -603,19 +603,6 @@
     "addedAt": "2026-03-14"
   },
   {
-    "id": 2087987,
-    "title": "Singalong -Das große Mitsing-Event- ausverkauft",
-    "date": "2026-03-27",
-    "time": "19:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 1049920088,
     "title": "ALLESS",
     "date": "2026-03-27",
@@ -627,6 +614,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-03-17"
+  },
+  {
+    "id": 2087987,
+    "title": "Singalong -Das große Mitsing-Event- ausverkauft",
+    "date": "2026-03-27",
+    "time": "19:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-03-25"
   },
   {
     "id": 1811250199,
@@ -1789,6 +1789,19 @@
     "spotifyUrl": "",
     "source": "madameclaude",
     "addedAt": "2026-03-14"
+  },
+  {
+    "id": 1979529690,
+    "title": "Sébastien Tellier",
+    "date": "2026-03-30",
+    "time": "20:00",
+    "locationId": 46,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.regioactive.de/tickets/id/mPC9GhnH34",
+    "spotifyUrl": "",
+    "source": "theaterdeswestens",
+    "addedAt": "2026-03-25"
   },
   {
     "id": 1808194755,
@@ -5012,6 +5025,19 @@
     "addedAt": "2026-03-14"
   },
   {
+    "id": 186409106,
+    "title": "10 Jahre, 10 Städte: Deutschland-Tour 2026",
+    "date": "2026-04-11",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-ONZUBrnjUQfKC7hmzRI",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 1688716929,
     "title": "Guitarricadelafuente",
     "date": "2026-04-11",
@@ -5370,6 +5396,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-03-15"
+  },
+  {
+    "id": 1571143846,
+    "title": "Hommage an Yerevan – Eine Liebeserklärung",
+    "date": "2026-04-12",
+    "time": "19:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OlGcYNN9txa1ZJ6EWOh",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-03-25"
   },
   {
     "id": 736977283,
