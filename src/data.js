@@ -56,6 +56,7 @@ export function getLocations() {
     { id: 44, name: 'Neue Zukunft', city: 'Berlin', website: 'neue-zukunft.org', capacity: 150 },
     { id: 45, name: 'Säälchen', city: 'Berlin', website: 'https://www.holzmarkt.com/kalender' },
     { id: 46, name: 'Theater des Westens', city: 'Berlin', website: 'musicals.de', capacity: 1780 },
+    { id: 47, name: 'Zitadelle Spandau', city: 'Berlin', website: 'citadel-music-festival.de', capacity: 15000 },
   ]
   saveData('locations', defaults)
   return defaults

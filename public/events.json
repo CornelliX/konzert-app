@@ -168,16 +168,6 @@
     "addedAt": "2026-03-17"
   },
   {
-    "id": 1449788507,
-    "title": "Lord Apex",
-    "date": "2026-03-25",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 28,
-    "source": "mikropol",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 540138221,
     "title": "Music Quiz",
     "date": "2026-03-25",
@@ -202,18 +192,6 @@
     "spotifyUrl": "",
     "source": "kesselhaus",
     "addedAt": "2026-03-25"
-  },
-  {
-    "id": 1865472581,
-    "title": "Killowen + POZZY",
-    "date": "2026-03-25",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 24,
-    "source": "trinity",
-    "ticketUrl": "https://trinitymusic.de/event/2026-03-25-killowen",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-17"
   },
   {
     "id": 760677505,
@@ -437,19 +415,6 @@
     "addedAt": "2026-03-25"
   },
   {
-    "id": 843908427,
-    "title": "Lingua Erotica + Melanie Havens (support)",
-    "date": "2026-03-26",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/lingua-erotica-melanie-havens-support/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 1322686300,
     "title": "Dave Holland & Lionel Loueke - (2. Show ausverkauft!)",
     "date": "2026-03-26",
@@ -603,19 +568,6 @@
     "addedAt": "2026-03-14"
   },
   {
-    "id": 1049920088,
-    "title": "ALLESS",
-    "date": "2026-03-27",
-    "time": "19:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-03-17"
-  },
-  {
     "id": 2087987,
     "title": "Singalong -Das große Mitsing-Event- ausverkauft",
     "date": "2026-03-27",
@@ -627,6 +579,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-03-25"
+  },
+  {
+    "id": 1049920088,
+    "title": "ALLESS",
+    "date": "2026-03-27",
+    "time": "19:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-03-17"
   },
   {
     "id": 1811250199,
@@ -817,32 +782,6 @@
     "ticketUrl": "https://trinitymusic.de/event/2026-03-27-tom-meighan",
     "spotifyUrl": "",
     "addedAt": "2026-03-15"
-  },
-  {
-    "id": 1785499715,
-    "title": "FLIGHTMODE",
-    "date": "2026-03-27",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/flightmode/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
-    "id": 1941520615,
-    "title": "TANGA: Hyperaktivist, Khloe, Berenice, Mama Yha Yha, ALP",
-    "date": "2026-03-27",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/tanga-hyperaktivist-khloe-berenice-mama-yha-yha-alp/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
   },
   {
     "id": 1617242519,
@@ -1267,19 +1206,6 @@
     "addedAt": "2026-03-17"
   },
   {
-    "id": 485891483,
-    "title": "KOSTANTIS PISTIOLIS",
-    "date": "2026-03-28",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/kostantis-pistiolis/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 1792240140,
     "title": "Olivia Trummer - Songbook",
     "date": "2026-03-28",
@@ -1649,19 +1575,6 @@
     "addedAt": "2026-03-17"
   },
   {
-    "id": 583789642,
-    "title": "Dani Lia + Yola (support)",
-    "date": "2026-03-29",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/dani-lia/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 174227911,
     "title": "Céline Rudolph - Amaré",
     "date": "2026-03-29",
@@ -1954,19 +1867,6 @@
     "ticketUrl": "https://trinitymusic.de/event/2026-03-31-stella-donnelly",
     "spotifyUrl": "",
     "addedAt": "2026-03-15"
-  },
-  {
-    "id": 289057957,
-    "title": "havington TAKE OFF tour",
-    "date": "2026-03-31",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/havington-take-off-tour/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
   },
   {
     "id": 332383206,
@@ -2712,19 +2612,6 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-03-15"
-  },
-  {
-    "id": 1165910549,
-    "title": "INNOCENCE: EUROHEAD + THRILLIAM ANGELS + MORE",
-    "date": "2026-04-03",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/innocence-eurohead-thrilliam-angels-more/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
   },
   {
     "id": 1599413389,
@@ -3554,19 +3441,6 @@
     "spotifyUrl": "",
     "source": "madameclaude",
     "addedAt": "2026-03-14"
-  },
-  {
-    "id": 11922168,
-    "title": "PiNKII",
-    "date": "2026-04-06",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/pinkii/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
   },
   {
     "id": 428939724,
@@ -4602,32 +4476,6 @@
     "addedAt": "2026-03-15"
   },
   {
-    "id": 718703811,
-    "title": "OTIS x NØAH “sonne” Releaseparty",
-    "date": "2026-04-10",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/otis-x-noah-sonne-releaseparty/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
-    "id": 1498101142,
-    "title": "Baile TRAMA ᯓ⭑ 2 CLUBS",
-    "date": "2026-04-10",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/baile-trama-e1af93e2ad91-2-clubs/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 454199304,
     "title": "Peter Gall Quintet",
     "date": "2026-04-10",
@@ -5075,19 +4923,6 @@
     "addedAt": "2026-03-15"
   },
   {
-    "id": 1094267677,
-    "title": "VRAU – QUEER BAILE FUNK",
-    "date": "2026-04-11",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/vrau-queer-baile-funk-2/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 650973841,
     "title": "The Django Reinhardt Orchestra feat. Mozes & Stochelo Rosenberg",
     "date": "2026-04-11",
@@ -5500,19 +5335,6 @@
     "addedAt": "2026-03-15"
   },
   {
-    "id": 653763115,
-    "title": "Love Ghost – Anarchy and Ashes Tour",
-    "date": "2026-04-12",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/love-ghost-anarchy-and-ashes-tour/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 870302831,
     "title": "Anatomie des Gehorsams",
     "date": "2026-04-13",
@@ -5715,6 +5537,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-03-15"
+  },
+  {
+    "id": 862887751,
+    "title": "Alycia Marie • Berlin • Prachtwerk (SOLD OUT)WhenApr 14, 2026 @ 7:00 pmWhatAlycia MarieSAINTS & SINNERS TOUR 202614.04.2026, Berlin, PrachtwerkEinlass: 19:00Beginn: 20:00Nach zwei Releasekonzerten, die innerhalb weniger Minuten restlos ausverkauft waren, geht Alycia Marie im Frühjahr 2026 zum ersten Mal auf eigene Live-Tour.Alycia Marie ist Singer-Songwriterin mit einer tiefen Leidenschaft für ausdrucksstarkes Storytelling. Aufgewachsen in einem musikalischen Haushalt, schrieb die gebürtige Amerikanerin bereits in der Grundschule ihre ersten Songs. Bis heute ist Musik für sie mehr als nur Klang und Worte, sie ist ein Ventil, um Geschichten zu erzählen und Menschen emotional zu berühren.Seit ihren ersten musikalischen Veröffentlichungen hat sie sich als vielseitige Künstlerin etabliert, die mit authentischen Texten und eingängigen Melodien überzeugt. Ihre Songs vereinen persönliche Erlebnisse mit kreativen Erzählungen und modernen Sound-Elementen - stets mit dem Anspruch, etwas Einzigartiges zu schaffen und ihr Publikum zu bewegen. WherePrachtwerk Berlin View On Facebook",
+    "date": "2026-04-14",
+    "time": "07:00",
+    "locationId": 38,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://maps.google.com/maps?q=Prachtwerk Berlin, Ganghoferstr. 2, Berlin, Germany",
+    "spotifyUrl": "",
+    "source": "prachtwerk",
+    "addedAt": "2026-03-25"
   },
   {
     "id": 733052385,
@@ -8639,6 +8474,19 @@
     "addedAt": "2026-03-15"
   },
   {
+    "id": 692707470,
+    "title": "PHILIPPA KINSKY - The \"Somebody Who Loves\"-Tour - Berlin, PrachtwerkGet Tickets WhenApr 24, 2026 @ 7:30 pmWhat Vorverkaufsstart am 19.11., 11 Uhr┃ PHILIPPA KINSKY - The \"Somebody Who Loves\"-Tour┇ 24. April 2026┇ Prachtwerk┋ Einlass 18:30h┋ Beginn 19:30h loft.de/event/20260424-philippa-kinsky/ loft.de/x/kzkrd (Eventim) loft.de/x/ldtqr (LofTix)Mit einer markanten Stimme, tiefgehenden Lyrics und warmen Indie-Klängen zählt Philippa Kinsky als eine der spannendsten deutschen Newcomerinnen im englischen Indie-Pop. Die deutsch-österreichische Künstlerin verbindet ehrliche, introspektive Texte mit organischen Arrangements und erschafft so eine Musik, die nahbar, zeitlos und emotional berührend ist. 2022 veröffentlichte sie mit ihrer Debüt-EP „born in the teens“ erstmals eigene Songs. Ihr Sound bewegt sich zwischen DIY-Charme und modernen Indie-Produktionen, inspiriert von Sad-Indie-Pop-Künstlerinnen wie Clairo, Phoebe Bridgers und Lizzy McAlpine.2023 zeigte Philippa mit Singles wie dem Pop-Punk-Track „prove you wrong“ und dem Feature „self-esteem“ auch in ihrem eigenen Projekt zunehmend diverse Facetten ihres Songwriting-Talents. Sie ist nicht selten auch für andere Artists und Projekte im Einsatz – u. a. in Zusammenarbeit mit etablierten Writing-Namen wie Michael Patrick Kelly und Daniel Bryer (One Direction, Niall Horan, Rag‘n‘Bone Man).2024 zeigte sie mit der EP „smalltown stories“ eine neue musikalische Tiefe – melancholisch, verträumt und doch mit klarer Handschrift, während sie live immer mehr Bühnen für sich gewinnen konnte. Nachdem sie im letzten Jahr neben eigenen Shows auch zahlreiche Acts als Support begleitete, darunter LEA, Chris James und ihre internationalen Indie-Idole Tommy Lefroy, stand sie 2025 bereits als Support für Carter Vail auf der Bühne. Das nächste Kapitel schlägt sie 2025 nach den beiden Singles „Haven“ und „Neverland“ auf – endlich ein Debut Album das Anfang 2026 erscheinen wird. Den Auftakt macht “Somebody Who Loves” – ein Song, der in vieler Hinsicht ein Meilenstein ist.Musikalisch betritt er eine neue Soundwelt – mit 80s Synths, hymnischen Chören und Melodien, die einem im Gedächtnis bleiben. Es geht um Heilung, um das Überwinden von Schmerz und darum, wie wichtig es ist, seine Verletzungen nicht weiterzugeben, sondern zu vergeben. Der Sound, die Größe sowie auch das Thema geben einen Vorgeschmack auf Philippas Debut Album. Philippa Kinskys Musik erzählt von ehrlichen menschlichen Erfahrungen, der Suche nach Wahrheit und nach dem, was Menschsein wirklich ausmacht, egal wer man ist und woher man kommt – von der Tiefe zwischenmenschlicher Beziehungen und von der Hoffnung auf das Gute. WherePrachtwerk Berlin View On Facebook",
+    "date": "2026-04-24",
+    "time": "07:30",
+    "locationId": 38,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loft.de/x/ldtqr?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExck5WdjJZVHhjSm1qOVByN3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5fay7sK5ConqpQMOqNO-hVxSlsDLvEbiYY9mccZwa_UlY4SY9TIEbS7v1O6g_aem_M36ppu-JN-H4vRt7iVBf4g",
+    "spotifyUrl": "",
+    "source": "prachtwerk",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 2125969233,
     "title": "Queer Night Market",
     "date": "2026-04-24",
@@ -8879,19 +8727,6 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-03-15"
-  },
-  {
-    "id": 1257029890,
-    "title": "LONELY SPRING",
-    "date": "2026-04-24",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/lonely-spring/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
   },
   {
     "id": 479746074,
@@ -10119,19 +9954,6 @@
     "addedAt": "2026-03-15"
   },
   {
-    "id": 1635159143,
-    "title": "The Sophs + Pyncher (support)",
-    "date": "2026-04-29",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/the-sophs/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 709775409,
     "title": "Gilad Hekselman Trio",
     "date": "2026-04-29",
@@ -10372,32 +10194,6 @@
     "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/deborah-de-luca-2026/2026-04-30-2000",
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
-    "addedAt": "2026-03-25"
-  },
-  {
-    "id": 98832397,
-    "title": "ENDE",
-    "date": "2026-04-30",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/ende/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
-    "id": 448286305,
-    "title": "In Limbo – Motip White (live) & Muudu (live) Berlin",
-    "date": "2026-04-30",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/in-limbo-motip-white-live-muudu-live-berlin/",
-    "spotifyUrl": "",
-    "source": "lark",
     "addedAt": "2026-03-25"
   },
   {
@@ -11231,19 +11027,6 @@
     "ticketUrl": "https://hole-berlin.de/event/2026-05-05-hardline/",
     "spotifyUrl": "",
     "addedAt": "2026-03-15"
-  },
-  {
-    "id": 1576592483,
-    "title": "SELVE",
-    "date": "2026-05-05",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/selve/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
   },
   {
     "id": 955168215,
@@ -12219,19 +12002,6 @@
     "addedAt": "2026-03-15"
   },
   {
-    "id": 1285069328,
-    "title": "Katha Pauer",
-    "date": "2026-05-09",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/katha-pauer/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 962271737,
     "title": "Cyrille Aimée",
     "date": "2026-05-09",
@@ -12606,19 +12376,6 @@
     "addedAt": "2026-03-15"
   },
   {
-    "id": 395357666,
-    "title": "Tyler Shaw",
-    "date": "2026-05-11",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/tyler-shaw/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 1612620854,
     "title": "Philine Sonny",
     "date": "2026-05-12",
@@ -12738,19 +12495,6 @@
     "ticketUrl": "https://hole-berlin.de/event/2026-05-12-jutes/",
     "spotifyUrl": "",
     "addedAt": "2026-03-15"
-  },
-  {
-    "id": 202462645,
-    "title": "WesternAF",
-    "date": "2026-05-12",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/westernaf/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
   },
   {
     "id": 83140927,
@@ -13886,19 +13630,6 @@
     "addedAt": "2026-03-15"
   },
   {
-    "id": 1783923224,
-    "title": "Sosocamo The Big Country Tour",
-    "date": "2026-05-20",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/sosocamo-the-big-country-tour/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 215905793,
     "title": "Chris Potter Trio",
     "date": "2026-05-20",
@@ -14161,6 +13892,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-03-15"
+  },
+  {
+    "id": 959768509,
+    "title": "Colby! + Nothhingspecial | BerlinGet Tickets WhenMay 22, 2026 @ 7:30 pmWhatColby! + Nothhingspecial22.05.2026 | PrachtwerkEinlass: 19:00Beginn: 19:30Die deutschstämmige Pop-Newcomerin nothhingspecial und das US-amerikanische Nachwuchstalent colby! geben ihre erste gemeinsame Co-Headline-Tour durch Europa bekannt. Der Tourauftakt findet am 21. Mai im Backstage Club in München statt. Anschließend führt die Konzertreise durch weitere Städte in Deutschland und UK. „Unsere erste Tour im Ausland findet wirklich statt!!! Ich freue mich riesig, gemeinsam mit nothhingspecial nach Deutschland und UK zu kommen!“, so colby!. „Es ist ein absoluter Traum, live aufzutreten und meine Fans zu treffen. Ich kann es immer noch nicht glauben – also an alle meine European Babes: Kommt vorbei und lasst uns zusammen feiern!“ „Meine erste Headline-Tour gemeinsam mit colby! fühlt sich surreal an“, ergänzt nothhingspecial. „Ich bin unendlich dankbar, dass wir diesen Moment teilen dürfen, und zähle schon die Tage, bis es endlich losgeht.“ Tickets sind ab Mittwoch, 04.03.2026 um 10:00 Uhr an allen autorisierten Vorverkaufsstellen erhältlich. Kürzlich veröffentlichten die beiden Künstlerinnen zudem eine gemeinsame Duett-Version von colby!’s Single „Don’t Know What to Say“, inklusive einer brandneuen Strophe von nothhingspecial. Darüber hinaus begleitet colby! aktuell Natalie Jane auf deren „The World I Didn’t Want“-Nordamerika-Tour. Über colby!Für die 20-jährige colby! ist Songwriting zweite Natur – ein sicherer Weg, ihre grenzenlose Energie und Fantasie in Musik zu verwandeln. Die in Texas aufgewachsene Künstlerin widmet sich seit ihrem 14. Lebensjahr gemeinsam mit ihrem älteren Bruder und dem Berklee-Absolventen RJ Johnson intensiv dem Musikmachen. So entwickelte sie einen furchtlos-originellen Alt-Pop-Sound, der gleichermaßen befreiend wie mitreißend ist. Bevor sie eigene Musik veröffentlichte, lebte colby! ihre Kreativität unter anderem in abstrakter Malerei und im Möbelbau für ihre Puppen aus – auch als Ventil im Umgang mit ihrer ausgeprägten Dyslexie. Schon früh entdeckte sie ihr Talent für eingängige Melodien und erkannte, dass ihre besondere Wahrnehmung ihren unverwechselbaren Songwriting-Stil prägt. Zu ihren Einflüssen zählen unter anderem Amy Winehouse und Gwen Stefani. Medien wie Fault und Galore führen sie als „Artist to Watch“, weitere Features erschienen unter anderem bei Atwood, Clout, Ladygunn und Ones to Watch. Neben ihrer Zusammenarbeit mit nothhingspecial veröffentlichte colby! zuletzt auch Musik mit Eli Wilson und ist derzeit weiterhin auf Tour. Über nothhingspecial „I am just here to make you feel something“ – diesem Leitsatz folgt nothhingspecial in ihrer Musik. Die in Deutschland geborene Künstlerin (bürgerlich Chrissie) ist autodidaktische Singer-Songwriterin und Multiinstrumentalistin. Ihr Sound vereint verträumten Indie, melancholischen Pop und introspektives Songwriting. WherePrachtwerk Berlin View On Facebook",
+    "date": "2026-05-22",
+    "time": "07:30",
+    "locationId": 38,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/nothhingspecial-germany-uk-tour-prachtwerk-21388646/?affiliate=SZ3&%3Butm_campaign=SzeneTickets%20GmbH&%3Butm_source=SZ3&%3Butm_medium=dp&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExQlBRZElpaEk2MXJ4V2QzZnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6msKBWRxReGIDEP18R7Gf3HtWqwaedQzPG4Nk1B0xgFAVvGQvTj9dxkW132g_aem_Uott1T1wBV3zQd9XFZPrWg",
+    "spotifyUrl": "",
+    "source": "prachtwerk",
+    "addedAt": "2026-03-25"
   },
   {
     "id": 1242009502,
@@ -14876,19 +14620,6 @@
     "addedAt": "2026-03-15"
   },
   {
-    "id": 1615219627,
-    "title": "Savara to the World",
-    "date": "2026-05-26",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/savara-to-the-world/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 312923518,
     "title": "THE ZIG ZAG JAZZED UP JAM SESSION",
     "date": "2026-05-26",
@@ -15087,19 +14818,6 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-03-15"
-  },
-  {
-    "id": 147225031,
-    "title": "Office Dog",
-    "date": "2026-05-28",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/office-dog/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
   },
   {
     "id": 464229338,
@@ -15458,19 +15176,6 @@
     "addedAt": "2026-03-15"
   },
   {
-    "id": 1679765254,
-    "title": "Austin TV",
-    "date": "2026-05-30",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/austin-tv/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
-  },
-  {
     "id": 1975518077,
     "title": "Quichotte",
     "date": "2026-05-30",
@@ -15799,6 +15504,19 @@
     "addedAt": "2026-03-15"
   },
   {
+    "id": 1857114596,
+    "title": "Elio Mei - Berlin, PrachtwerkGet Tickets WhenJun 4, 2026 @ 8:00 pmWhat Exklusiver Vorverkauf via Artist Presale ab 10.02., 10 Uhr Vorverkauf bei Spotify ab 11.02., 10 Uhr Vorverkauf bei Eventim ab 12.02., 10 Uhr Allgemeiner Vorverkaufsstart am 13.02., 10 Uhr┃ ELIO MEI - Tomato! Tomato! Tomato! The Tour!┇ 4. Juni 2026┇ Prachtwerk┋ Einlass 19h┋ Beginn 20h loft.de/event/20260604-elio-mei/ short.fkp.de/eliomei loft.de/x/yg5qr (LofTix) loft.de/x/w1enm (Eventim)In den Liedern von Elio Mei scheint die Welt größer zu sein als das Zimmer, in dem sie entstehen. Fantasievolle Bilder, poetische Sprachspiele und eine Stimme von eigentümlicher Klarheit verbinden sich zu einem Sound, der Indie-Folk, Bedroom-Pop und leise Melancholie mühelos verschränkt. Was einst als TikTok-Phänomen begann, hat sich in erstaunlicher Geschwindigkeit zu einem eigenständigen künstlerischen Kosmos entwickelt: Debütalbum, mehrere EPs, zahllose Singles – alles in kaum mehr als zwei Jahren, geschrieben und aufgenommen im Schlafzimmer in Arizona. Mei baut kein Image, sondern eine Welt: verspielt, tröstlich, leicht entrückt, dabei so offen und nahbar, dass man sich in ihr sofort wiederfindet. Mit der ersten LP „A Thousand Song About It All: Act 1” kommt Elio Mei im Juni nach Berlin.Diese Offenheit zeigt sich nicht nur musikalisch, sondern auch biografisch. Mit der bevorstehenden Tourankündigung wird aus dem Artistnamen Madilyn Mei offiziell Elio Mei werden, ein Schritt, der weit mehr ist als ein Rebranding. Es ist ein Akt der Selbstbehauptung, der Identität und künstlerische Wahrheit miteinander verbindet. Eine neue Single, die am Freitag, den 13. Februar erscheint, wird diese Entscheidung musikalisch vertiefen.Der Sound dieses Projekts lebt von Kontrasten. Zarte Akustikgitarren treffen auf versponnene Bedroom-Pop-Produktionen, märchenhafte Motive auf intime Selbstbefragung. Die Songs erzählen von Selbstsuche, von queerer Identität, von Zugehörigkeit und Ausgrenzung, von Kindheit, Verlust und Hoffnung. Nie pathetisch, nie plakativ, sondern mit einer leisen, literarischen Präzision, die man im Pop selten findet.Spätestens auf der Bühne zeigt sich, dass dieses Projekt über das Studio hinauswächst. Elio Meis Konzerte sind keine konventionellen Indie-Abende, sondern sorgfältig komponierte Erzählräume. Kostümierte Figuren, kleine theatrale Gesten und bewusst reduzierte Arrangements schaffen eine Atmosphäre, die zwischen Märchen, Rollenspiel und Bekenntnis oszilliert. Tourneen heißen hier folgerichtig „Side Quests“, das Publikum wird Teil einer gemeinsamen Reise, die irgendwo zwischen Eskapismus und Selbstbefragung verläuft. Kritiker*innen rühmen die emotionale Präzision dieser Auftritte, die berührende Präsenz und eine Stimme, die selbst in der Distanz eines Saals eine eigentümliche Intimität bewahrt. Man spürt: Diese Musik ist weniger Produkt als Erfahrung, weniger Playlist als Begegnung. WherePrachtwerk Berlin View On Facebook",
+    "date": "2026-06-04",
+    "time": "08:00",
+    "locationId": 38,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loft.de/x/yg5qr?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExb0E3WEFGcUY4bUEzZkJ2eHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5zk4BRuf6x5Vq3tNapHEzQQnGu8DehmY1pUb9_C36PXmB1qsKRZEH7ennviA_aem_Jpgb8RKbIvqbv3p4k53OOQ",
+    "spotifyUrl": "",
+    "source": "prachtwerk",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 1554953502,
     "title": "Six Feet Under",
     "date": "2026-06-04",
@@ -15875,6 +15593,19 @@
     "spotifyUrl": "",
     "source": "conne-island",
     "addedAt": "2026-03-14"
+  },
+  {
+    "id": 864261703,
+    "title": "Fat Freddy’s Drop",
+    "date": "2026-06-05",
+    "time": "19:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-06-05-fat-freddys-drop",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
   },
   {
     "id": 1345319233,
@@ -16076,6 +15807,19 @@
     "addedAt": "2026-03-15"
   },
   {
+    "id": 1636894144,
+    "title": "Massive Attack",
+    "date": "2026-06-07",
+    "time": "19:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-06-07-massive-attack",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 183573942,
     "title": "SEAFRET",
     "date": "2026-06-07",
@@ -16177,6 +15921,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-03-15"
+  },
+  {
+    "id": 169859417,
+    "title": "SKULLCRUSHER - \"And your song is like a circle\"-Tour 2026 - Berlin, PrachtwerkGet Tickets WhenJun 9, 2026 @ 8:00 pmWhat Vorverkauf startet am 06.02., 10 Uhr┃ SKULLCRUSHER - \"And your song is like a circle\"-Tour 2026┇ 9. Juni 2026┇ Prachtwerk┋ Einlass 19h┋ Beginn 20h loft.de/event/20260609-skullcrusher/ loft.de/x/jqzv8 (LofTix) loft.de/x/3mxy2 (Eventim)And Your Song is Like a Circle, the second album from New York-based artist Skullcrusher, a.k.a. Helen Ballentine, winds its way into an everchanging, unstable core. Recorded piecemeal over a period of years following the release of her celebrated 2022 debut, Quiet the Room, And Your Song is Like a Circle does not capture experience – it gestures toward the imprint of an experience that is uncapturable. Swaying between vaporous folk and crystalline electronics, landing somewhere in the snowfields shared by Grouper and Julia Holter, Circle probes the ways that grief turns itself inside out. Loss itself becomes as real and substantial as what's been lost.Ballentine began writing Circle after leaving Los Angeles, a city she’d called home for nearly a decade. She ended up returning upstate to New York’s Hudson Valley, where she was born and raised. Several years of intense isolation followed, and Ballentine immersed herself in films, books, and art that reflected the rupture of relocating cross-country and its dissociative aftershocks.Throughout the record, the line between human and machine blurs. On \"Maelstrom,\" voices crash between echoing drumbeats like water through a cavern. The vocal filigrees on \"Exhale\" fan out into a haze of synthesizers and strings. \"Dragon\" lets piano echo over tight, gritted percussion.If Skullcrusher’s first album rendered the detailed intimacies of domestic space, Circle finds itself vaporized across the landscape: swirling, drifting, searching. It skirts an event horizon in long, slow strokes. These are songs that vibrate with the fervency of an attempt to capture a moment, to draw a circle around it. \"I like thinking about my work as a collection,\" Ballentine says. \"Eventually it might form a circle. Each time I make something, I’m putting another line around the body of work. It feels like I’ll be trying to trace it for my whole life.\" WherePrachtwerk Berlin View On Facebook",
+    "date": "2026-06-09",
+    "time": "08:00",
+    "locationId": 38,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://loft.de/x/jqzv8?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExb0E3WEFGcUY4bUEzZkJ2eHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6KNddr_OH_XxLcNFxZVrvI2CHXzzXOMPBD-jremIqDGVU52FRFTCGgGifIJg_aem_gVh196r0i20CwiDA3uBbhw",
+    "spotifyUrl": "",
+    "source": "prachtwerk",
+    "addedAt": "2026-03-25"
   },
   {
     "id": 660327174,
@@ -16504,6 +16261,19 @@
     "ticketUrl": "https://www.urbanspree.comprogram/concerts/berlin-breakout-2026.html",
     "spotifyUrl": "",
     "source": "urbanspree",
+    "addedAt": "2026-03-25"
+  },
+  {
+    "id": 249369473,
+    "title": "Deine Freunde",
+    "date": "2026-06-13",
+    "time": "17:30",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-06-13-deine-freunde",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
     "addedAt": "2026-03-25"
   },
   {
@@ -16863,6 +16633,19 @@
     "addedAt": "2026-03-25"
   },
   {
+    "id": 828609515,
+    "title": "Mac DeMarco",
+    "date": "2026-06-17",
+    "time": "19:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-06-17-mac-demarco",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 399554365,
     "title": "WARGASM",
     "date": "2026-06-17",
@@ -16924,6 +16707,19 @@
     "ticketUrl": "https://huxleysneuewelt.de/event/2026-06-17-alexisonfire",
     "spotifyUrl": "",
     "source": "huxleys",
+    "addedAt": "2026-03-25"
+  },
+  {
+    "id": 1778604959,
+    "title": "Kings of Leon",
+    "date": "2026-06-18",
+    "time": "19:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-06-18-kings-of-leon",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
     "addedAt": "2026-03-25"
   },
   {
@@ -17319,6 +17115,19 @@
     "addedAt": "2026-03-15"
   },
   {
+    "id": 895115134,
+    "title": "THE B-52’s",
+    "date": "2026-06-24",
+    "time": "19:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-06-24-the-b-52s",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 1662886908,
     "title": "UNCLE ACID & THE DEADBEATS & special guest: Dirty Sound Magnet",
     "date": "2026-06-24",
@@ -17458,6 +17267,19 @@
     "ticketUrl": "https://dice.fm/event/q2wnqp-bayymack-friends-tough-luvv-x-nova-riot-tour-berlin-27th-jun-badehaus-berlin-berlin-tickets",
     "spotifyUrl": "",
     "source": "badehaus",
+    "addedAt": "2026-03-25"
+  },
+  {
+    "id": 84697658,
+    "title": "Culcha Candela",
+    "date": "2026-06-27",
+    "time": "18:45",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-06-27-culcha-candela",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
     "addedAt": "2026-03-25"
   },
   {
@@ -17628,6 +17450,19 @@
     "addedAt": "2026-03-14"
   },
   {
+    "id": 1656238272,
+    "title": "Pixies",
+    "date": "2026-06-30",
+    "time": "19:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-06-30-pixies",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 2049406663,
     "title": "Cory Wong",
     "date": "2026-06-30",
@@ -17662,6 +17497,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-03-15"
+  },
+  {
+    "id": 839334441,
+    "title": "A PERFECT CIRCLE",
+    "date": "2026-07-01",
+    "time": "19:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-07-01-a-perfect-circle",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
   },
   {
     "id": 891152847,
@@ -17944,6 +17792,19 @@
     "addedAt": "2026-03-15"
   },
   {
+    "id": 259238978,
+    "title": "Old but Gold Festival",
+    "date": "2026-07-11",
+    "time": "12:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-07-11-old-but-gold-festival",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 1281656511,
     "title": "Beginn 14:00KonzertHardcore Punk13.06.Juli 2026Berlin Breakout 2026Sat13.06.|Einlass 13:00|Beginn14:00Konzert|Hardcore PunkCancelledSold-Out",
     "date": "2026-07-13",
@@ -18071,6 +17932,19 @@
     "addedAt": "2026-03-14"
   },
   {
+    "id": 265854781,
+    "title": "MARK FORSTER",
+    "date": "2026-07-18",
+    "time": "20:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-07-18-mark-forster",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 1857519398,
     "title": "Paulie Boys Blues Band",
     "date": "2026-07-18",
@@ -18134,6 +18008,19 @@
     "addedAt": "2026-03-15"
   },
   {
+    "id": 85886026,
+    "title": "Seal",
+    "date": "2026-07-23",
+    "time": "19:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-07-23-seal",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 853460508,
     "title": "GRUPO REVELAÇÃO",
     "date": "2026-07-23",
@@ -18171,6 +18058,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-03-17"
+  },
+  {
+    "id": 408692219,
+    "title": "WINCENT WEISS",
+    "date": "2026-07-24",
+    "time": "19:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-07-24-wincent-weiss",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
   },
   {
     "id": 1160763715,
@@ -18778,6 +18678,19 @@
     "addedAt": "2026-03-25"
   },
   {
+    "id": 391759228,
+    "title": "ANTILOPEN GANG",
+    "date": "2026-08-15",
+    "time": "17:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-08-15-antilopen-gang",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 826088296,
     "title": "Nathan Evans & The Saint PHNX Band",
     "date": "2026-08-16",
@@ -18817,6 +18730,19 @@
     "addedAt": "2026-03-17"
   },
   {
+    "id": 1357536328,
+    "title": "OMD",
+    "date": "2026-08-18",
+    "time": "19:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-08-18-omd",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 1759661704,
     "title": "ROSE TATTOO",
     "date": "2026-08-18",
@@ -18841,6 +18767,32 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-03-15"
+  },
+  {
+    "id": 83106473,
+    "title": "OFF DAYS",
+    "date": "2026-08-19",
+    "time": "18:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-08-19-off-days",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
+  },
+  {
+    "id": 660614323,
+    "title": "Zaz",
+    "date": "2026-08-21",
+    "time": "18:30",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-08-21-zaz",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
   },
   {
     "id": 14123607,
@@ -18920,6 +18872,19 @@
     "addedAt": "2026-03-14"
   },
   {
+    "id": 510795384,
+    "title": "BHZ",
+    "date": "2026-08-27",
+    "time": "18:30",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-08-27-bhz",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
+  },
+  {
     "id": 764895384,
     "title": "Berlin Salsacongress 2026",
     "date": "2026-08-27",
@@ -18931,6 +18896,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-03-15"
+  },
+  {
+    "id": 326193520,
+    "title": "Trailerpark",
+    "date": "2026-08-28",
+    "time": "19:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-08-28-trailerpark",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
+    "addedAt": "2026-03-25"
   },
   {
     "id": 2100168227,
@@ -18968,6 +18946,19 @@
     "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72016",
     "spotifyUrl": "",
     "source": "moritzbastei",
+    "addedAt": "2026-03-25"
+  },
+  {
+    "id": 831752145,
+    "title": "Trailerpark",
+    "date": "2026-08-29",
+    "time": "19:00",
+    "locationId": 47,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://citadel-music-festival.de/event/2026-08-29-trailerpark",
+    "spotifyUrl": "",
+    "source": "zitadellespandau",
     "addedAt": "2026-03-25"
   },
   {
@@ -21170,19 +21161,6 @@
     "ticketUrl": "https://metropol-berlin.de/event/2026-10-11-the-mountain-goats",
     "spotifyUrl": "",
     "addedAt": "2026-03-15"
-  },
-  {
-    "id": 2059057228,
-    "title": "Stu Larsen + Tim Hart (support)",
-    "date": "2026-10-11",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/stu-larsen/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
   },
   {
     "id": 102085464,
@@ -23423,19 +23401,6 @@
     "ticketUrl": "https://hole-berlin.de/event/2026-11-13-dari/",
     "spotifyUrl": "",
     "addedAt": "2026-03-15"
-  },
-  {
-    "id": 564206965,
-    "title": "Kids with Buns",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "locationId": 39,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://larkberlin.com/event/kids-with-buns/",
-    "spotifyUrl": "",
-    "source": "lark",
-    "addedAt": "2026-03-25"
   },
   {
     "id": 1016694223,

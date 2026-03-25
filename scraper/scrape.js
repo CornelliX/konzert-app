@@ -2757,6 +2757,54 @@ async function scrapeTheaterDesWestens() {
   return events
 }
 
+async function scrapeZitadelleSpandau() {
+  console.log('📡 Zitadelle Spandau Berlin...')
+  const events = []
+  const seen = new Set()
+  const monthMap = { Januar:'01',Februar:'02',März:'03',April:'04',Mai:'05',Juni:'06',Juli:'07',August:'08',September:'09',Oktober:'10',November:'11',Dezember:'12' }
+  try {
+    const res = await fetch('https://citadel-music-festival.de/events', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+    })
+    const html = await res.text()
+    const $ = cheerio.load(html)
+
+    $('article.cmf-card').each((_, el) => {
+      const title = $(el).find('h3.cmf-title').first().text().trim()
+      if (!title) return
+
+      // Datum aus aria-label: "Event: Fat Freddy's Drop, 05. Juni 2026, Beginn 19:00 – Ausverkauft"
+      const ariaLabel = $(el).find('a.cmf-link').attr('aria-label') || ''
+      const dateMatch = ariaLabel.match(/(\d{1,2})\.\s*(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4}),\s*Beginn\s+(\d{2}:\d{2})/)
+      if (!dateMatch) return
+      const date = `${dateMatch[3]}-${monthMap[dateMatch[2]]}-${String(dateMatch[1]).padStart(2,'0')}`
+      const time = dateMatch[4]
+      if (date < today()) return
+
+      const href = $(el).find('a.cmf-link').attr('href') || 'https://citadel-music-festival.de/events'
+
+      const key = date + title
+      if (seen.has(key)) return
+      seen.add(key)
+
+      events.push({
+        title, date, time,
+        locationId: 47,
+        type: detectType(title),
+        description: '',
+        ticketUrl: href,
+        spotifyUrl: '',
+        source: 'zitadellespandau'
+      })
+    })
+
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ Zitadelle Spandau: ${e.message}`)
+  }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -2808,6 +2856,7 @@ async function main() {
     scrapeWildAtHeart(),
     scrapePrachtwerk(),
     scrapeTheaterDesWestens(),
+    scrapeZitadelleSpandau(),
 
   ])
 
