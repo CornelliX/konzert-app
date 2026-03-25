@@ -905,38 +905,20 @@ async function scrapeUrbanSpree() {
     return res.text()
   }
 
-  try {
-    // Seite 1 laden – enthält alle Zukunfts-Events
-    const html = await fetchPage(baseUrl)
-    const $ = cheerio.load(html)
-
-    // Letzte Seitenzahl ermitteln (nur für Logging)
-    let lastPage = 1
-    $('a[href*="?page="]').each((_, el) => {
-      const m = ($(el).attr('href') || '').match(/\?page=(\d+)/)
-      if (m) lastPage = Math.max(lastPage, parseInt(m[1]))
-    })
-    console.log(`  Urban Spree: ${lastPage} Seiten`)
-
-    // Alle Event-Links auf Seite 1 parsen
-    // Hrefs sind relativ ohne führenden Slash: "program/concerts/[slug].html"
+  function parsePage($) {
+    const found = []
     $('a[href*="program/concerts/"]').each((_, el) => {
       const href = $(el).attr('href') || ''
-      if (!href.includes('.html')) return  // nur echte Event-Links
+      if (!href.includes('.html')) return
 
-      // Titel: kein h3/h4, daher aus Text-Zeilen extrahieren
-      const h4 = $(el).find('h3, h4').first().text().trim()
       const fullText = $(el).text()
-
-      // Datum
       const dateMatch = fullText.match(/([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})/)
       if (!dateMatch) return
       const month = months[dateMatch[1]]
       if (!month) return
       const date = `${dateMatch[3]}-${month}-${String(dateMatch[2]).padStart(2,'0')}`
-      if (date < today()) return
 
-      // Titel: h3 bevorzugen, sonst erste nicht-leere Zeile die kein Label ist
+      const h4 = $(el).find('h3, h4').first().text().trim()
       let title = h4
       if (!title) {
         const lines = fullText.split('\n').map(l => l.trim()).filter(Boolean)
@@ -949,27 +931,51 @@ async function scrapeUrbanSpree() {
         ) || ''
       }
       if (!title || title.length < 2) return
-
-      // "- Urban Spree, Berlin" am Ende entfernen
       title = title.replace(/\s*[-–]\s*Urban\s+Spree.*$/i, '').trim()
 
       const timeMatch = fullText.match(/(\d{2}):(\d{2})/)
       const time = timeMatch ? `${timeMatch[1]}:${timeMatch[2]}` : '20:00'
 
-      const key = date + title
-      if (seen.has(key)) return
-      seen.add(key)
-
-      events.push({
-        title, date, time,
-        locationId: 21,
-        type: detectType(title),
-        description: '',
-        ticketUrl: href.startsWith('http') ? href : 'https://www.urbanspree.com' + href,
-        spotifyUrl: '',
-        source: 'urbanspree'
-      })
+      found.push({ href, title, date, time })
     })
+    return found
+  }
+
+  try {
+    // Events sind absteigend sortiert – Seiten durchgehen bis alle Events in der Vergangenheit
+    let page = 1
+    let done = false
+    while (!done) {
+      const url = page === 1 ? baseUrl : `${baseUrl}?page=${page}`
+      const html = await fetchPage(url)
+      const $ = cheerio.load(html)
+      const items = parsePage($)
+
+      if (items.length === 0) break
+
+      let allPast = true
+      for (const { href, title, date, time } of items) {
+        if (date >= today()) {
+          allPast = false
+          const key = date + title
+          if (!seen.has(key)) {
+            seen.add(key)
+            events.push({
+              title, date, time,
+              locationId: 21,
+              type: detectType(title),
+              description: '',
+              ticketUrl: href.startsWith('http') ? href : 'https://www.urbanspree.com' + href,
+              spotifyUrl: '',
+              source: 'urbanspree'
+            })
+          }
+        }
+      }
+      // Sobald alle Events dieser Seite in der Vergangenheit sind, abbrechen
+      if (allPast) done = true
+      page++
+    }
 
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) {
