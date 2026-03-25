@@ -2667,66 +2667,85 @@ async function scrapePrachtwerk() {
 async function scrapeTheaterDesWestens() {
   console.log('📡 Theater des Westens Berlin (Puppeteer)...')
   const events = []
+  const seen = new Set()
   let browser
   try {
     const puppeteer = await import('puppeteer')
     browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
     const page = await browser.newPage()
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
-    await page.goto('https://www.regioactive.de/location/berlin/theater-des-westens-gw1FVb8tLf.html', {
+
+    // Übersichtsseite laden
+    await page.goto('https://www.berlin.de/tickets/suche/orte/theater-des-westens-e83a20b7-1417-4598-b3f6-d3563b308ea2/', {
       waitUntil: 'networkidle2', timeout: 45000
     })
     await page.waitForFunction(
-      () => document.querySelectorAll('[class*="event"][class*="preview"]').length > 0,
+      () => document.querySelectorAll('article.teaser--event').length > 0,
       { timeout: 20000 }
     ).catch(() => {})
 
-    const rawEvents = await page.evaluate(() => {
-      return Array.from(document.querySelectorAll('[class*="event"][class*="preview"]')).map(div => {
-        // Nur Konzert-Cards aufnehmen (nicht Theater/Musical)
-        const cls = div.className || ''
-        if (!cls.includes('konzert')) return null
-
-        const h2 = div.querySelector('h2.article-title')
-        const rawTitle = h2?.innerText?.trim() || ''
-        const title = rawTitle.replace(/^Tickets!\s*/i, '').trim()
-
-        // Datum + Zeit aus Unix-Timestamp data-beginn
-        const beginn = parseInt(div.dataset.beginn)
-        if (!beginn) return null
-
-        const ticketLink = div.querySelector('a[href*="/tickets/"]')
-        const href = ticketLink?.getAttribute('href') || ''
-
-        return { title, beginn, href }
-      }).filter(Boolean)
-    })
-    await browser.close()
-    browser = null
-
-    const seen = new Set()
-    for (const { title, beginn, href } of rawEvents) {
-      if (!title || title.length < 2) continue
-
-      // Datum und Zeit aus Unix-Timestamp (Sekunden)
-      const dt = new Date(beginn * 1000)
-      const date = dt.toISOString().substring(0, 10)
-      const time = dt.toTimeString().substring(0, 5)
-      if (date < today()) continue
-
-      const key = date + title
-      if (seen.has(key)) continue
-      seen.add(key)
-
-      events.push({
-        title, date, time,
-        locationId: 46,
-        type: detectType(title),
-        description: '',
-        ticketUrl: href ? 'https://www.regioactive.de' + href : 'https://www.regioactive.de/location/berlin/theater-des-westens-gw1FVb8tLf.html',
-        spotifyUrl: '',
-        source: 'theaterdeswestens'
+    // Alle Event-Karten auslesen
+    const cards = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('article.teaser--event')).map(art => {
+        const titleEl = art.querySelector('a.js-ems-event-teaser-heading')
+        const title = titleEl?.innerText?.trim() || ''
+        const href = titleEl?.href || ''
+        const lines = art.innerText.split('\n').map(l => l.trim()).filter(Boolean)
+        // Genre steht in der 3. nicht-leeren Zeile (nach Bildnachweis und Titel)
+        const genre = lines[2] || ''
+        const dateMatch = art.innerText.match(/(\d{1,2})\.\s*(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4}),\s*(\d{2}:\d{2})/)
+        const weitereMatch = art.innerText.match(/\((\d+) weitere[rn]? Termin/)
+        return {
+          title, href, genre,
+          firstDate: dateMatch ? dateMatch[0] : null,
+          weitereTermine: weitereMatch ? parseInt(weitereMatch[1]) : 0
+        }
       })
+    })
+
+    const monthMap = { Januar:'01',Februar:'02',März:'03',April:'04',Mai:'05',Juni:'06',Juli:'07',August:'08',September:'09',Oktober:'10',November:'11',Dezember:'12' }
+
+    function parseGermanDate(str) {
+      // "01. Juni 2026, 19:00" oder "09. November 2026, 19:30"
+      const m = str.match(/(\d{1,2})\.\s*(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4}),\s*(\d{2}:\d{2})/)
+      if (!m) return null
+      return { date: `${m[3]}-${monthMap[m[2]]}-${String(m[1]).padStart(2,'0')}`, time: m[4] }
+    }
+
+    for (const card of cards) {
+      // Musicals komplett überspringen
+      if (card.genre === 'Musical') continue
+      if (!card.title || !card.href) continue
+
+      if (card.weitereTermine === 0) {
+        // Nur ein Termin – direkt aus der Übersicht nehmen
+        if (!card.firstDate) continue
+        const parsed = parseGermanDate(card.firstDate)
+        if (!parsed || parsed.date < today()) continue
+        const key = parsed.date + card.title
+        if (!seen.has(key)) {
+          seen.add(key)
+          events.push({ title: card.title, date: parsed.date, time: parsed.time, locationId: 46, type: detectType(card.title), description: '', ticketUrl: card.href, spotifyUrl: '', source: 'theaterdeswestens' })
+        }
+      } else {
+        // Mehrere Termine → Detailseite laden
+        await page.goto(card.href, { waitUntil: 'networkidle2', timeout: 30000 })
+        await new Promise(r => setTimeout(r, 1000))
+        const bodyText = await page.evaluate(() => document.body.innerText)
+        // Alle DD.MM.YYYY + HH:MM Muster extrahieren
+        const datePattern = /(\d{2})\.(\d{2})\.(\d{4})\n(\d{2}:\d{2}) Uhr/g
+        let m
+        while ((m = datePattern.exec(bodyText)) !== null) {
+          const date = `${m[3]}-${m[2]}-${m[1]}`
+          const time = m[4]
+          if (date < today()) continue
+          const key = date + card.title
+          if (!seen.has(key)) {
+            seen.add(key)
+            events.push({ title: card.title, date, time, locationId: 46, type: detectType(card.title), description: '', ticketUrl: card.href, spotifyUrl: '', source: 'theaterdeswestens' })
+          }
+        }
+      }
     }
 
     console.log(`  ✓ ${events.length} Events`)
