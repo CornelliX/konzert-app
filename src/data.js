@@ -9,7 +9,6 @@ export function saveData(key, value) {
 
 export function getLocations() {
   const saved = loadData('locations')
-  if (saved) return saved
   const defaults = [
     { id: 1, name: 'Lido', city: 'Berlin', website: 'lido-berlin.de', capacity: 400 },
     { id: 2, name: 'SO36', city: 'Berlin', website: 'so36.com', capacity: 600 },
@@ -58,6 +57,13 @@ export function getLocations() {
     { id: 46, name: 'Theater des Westens', city: 'Berlin', website: 'musicals.de', capacity: 1780 },
     { id: 47, name: 'Zitadelle Spandau', city: 'Berlin', website: 'citadel-music-festival.de', capacity: 15000 },
   ]
+  // Gespeicherte Locations mit Defaults zusammenführen, damit neue Einträge immer erscheinen
+  if (saved) {
+    const savedIds = new Set(saved.map(l => l.id))
+    const merged = [...saved, ...defaults.filter(d => !savedIds.has(d.id))]
+    saveData('locations', merged)
+    return merged
+  }
   saveData('locations', defaults)
   return defaults
 }
