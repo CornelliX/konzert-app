@@ -17,14 +17,31 @@ export async function renderApp(el) {
   currentUser = await getUser()
   events = await getEvents()
   if (currentUser) {
-    const bm = await loadBookmarks()
-    bookmarked = bm.bookmarked
-    going = bm.going
-    console.log('bookmarked:', bookmarked)
-    console.log('going:', going)
-    console.log('erste event id:', events[0]?.id, typeof events[0]?.id)
+    const merged = await mergeAndSyncBookmarks()
+    bookmarked = merged.bookmarked
+    going = merged.going
   }
   render()
+}
+
+async function mergeAndSyncBookmarks() {
+  const bm = await loadBookmarks()
+  const validIds = events.map(e => e.id)
+
+  const localBm = loadData('bookmarked') || []
+  const localGo = loadData('going') || []
+
+  const toUploadBm = localBm.filter(id => validIds.some(v => v == id) && !bm.bookmarked.some(b => b == id))
+  const toUploadGo = localGo.filter(id => validIds.some(v => v == id) && !bm.going.some(g => g == id))
+
+  for (const id of toUploadBm) await toggleBookmark(id, 'bookmarked')
+  for (const id of toUploadGo) await toggleBookmark(id, 'going')
+
+  const synced = (toUploadBm.length || toUploadGo.length) ? await loadBookmarks() : bm
+  return {
+    bookmarked: synced.bookmarked.filter(id => validIds.some(v => v == id)),
+    going: synced.going.filter(id => validIds.some(v => v == id))
+  }
 }
 
 function isNew(event) {
@@ -785,9 +802,9 @@ document.getElementById('verify-btn')?.addEventListener('click', async () => {
   const ok = await verifyOtp(email, code)
   if (ok) {
     currentUser = await getUser()
-    const { bookmarked: b, going: g } = await loadBookmarks()
-    bookmarked = b
-    going = g
+    const merged = await mergeAndSyncBookmarks()
+    bookmarked = merged.bookmarked
+    going = merged.going
     render()
   } else {
     alert('Falscher Code. Bitte nochmal versuchen.')

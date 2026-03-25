@@ -2709,9 +2709,10 @@ async function main() {
 
   // IDs vergeben
   function stableId(str) {
+  const normalized = str.toLowerCase().replace(/[^a-z0-9]/g, '')
   let hash = 0
-  for (let i = 0; i < str.length; i++) {
-    hash = ((hash << 5) - hash) + str.charCodeAt(i)
+  for (let i = 0; i < normalized.length; i++) {
+    hash = ((hash << 5) - hash) + normalized.charCodeAt(i)
     hash |= 0
   }
   return Math.abs(hash)
