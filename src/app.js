@@ -14,6 +14,15 @@ let calendarOffset = 0
 
 export async function renderApp(el) {
   container = el
+  container.innerHTML = `
+    <div id="ptr-indicator" style="text-align:center; height:0; overflow:hidden; transition:height 0.2s; color:rgba(255,255,255,0.5); font-size:13px; display:flex; align-items:center; justify-content:center;">↻ Aktualisieren...</div>
+    <div class="noise min-h-screen" style="background: linear-gradient(180deg, #05053a 0%, #120838 25%, #1e0848 45%, #3a0a52 60%, #52083a 78%, #620a1a 100%);">
+      <div style="position:fixed; top:-10%; left:-10%; width:50vw; height:50vw; background:radial-gradient(circle, rgba(60,40,180,0.12) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
+      <div style="position:fixed; bottom:-10%; right:-10%; width:40vw; height:40vw; background:radial-gradient(circle, rgba(140,20,60,0.10) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
+      <div id="app-inner" class="relative z-10 max-w-xl mx-auto px-4 pb-16"></div>
+    </div>
+    <div id="app-modals"></div>
+  `
   currentUser = await getUser()
   events = await getEvents()
   if (currentUser) {
@@ -55,69 +64,9 @@ function markAllSeen() {
 
 function render() {
   const newCount = events.filter(e => isNew(e)).length
-  container.innerHTML = `
-  <div id="ptr-indicator" style="text-align:center; height:0; overflow:hidden; transition:height 0.2s; color:rgba(255,255,255,0.5); font-size:13px; display:flex; align-items:center; justify-content:center;">↻ Aktualisieren...</div>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
-      * { box-sizing: border-box; }
-      body { font-family: 'DM Sans', sans-serif; }
-      .syne { font-family: 'Syne', sans-serif; }
-      input[type="date"], input[type="time"] { color-scheme: dark; color: rgba(255,255,255,0.4) !important; }
-      input[type="date"]:valid, input[type="time"]:valid { color: white !important; }
-      .glass {
-        background: rgba(8,8,42,0.97);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255,255,255,0.08);
-      }
-      .btn-glass {
-        background: rgba(255,255,255,0.07);
-        border: 1px solid rgba(255,255,255,0.1);
-        transition: all 0.2s ease;
-        cursor: pointer;
-      }
-      .btn-glass:hover {
-        background: rgba(255,255,255,0.12);
-        border-color: rgba(255,255,255,0.2);
-      }
-      .card-hover { transition: transform 0.2s ease; }
-      .card-hover:hover { transform: translateY(-1px); }
-      input, textarea { color-scheme: dark; }
-      input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
-      .noise { position: relative; }
-      .noise::after {
-        content: '';
-        position: fixed;
-        inset: 0;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-        pointer-events: none;
-        z-index: 0;
-      }
-      .scrollbar-hide { scrollbar-width: none; }
-      .scrollbar-hide::-webkit-scrollbar { display: none; }
-      .loc-option:hover { background: rgba(255,255,255,0.06) !important; }
-    </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <style>
-      .flatpickr-calendar { background:#1a1a3a; border:1px solid rgba(255,255,255,0.1); border-radius:16px; }
-      .flatpickr-day { color:white; } .flatpickr-day:hover { background:rgba(99,102,241,0.3); }
-      .flatpickr-day.selected { background:rgba(99,102,241,0.6); border-color:transparent; }
-      .flatpickr-months, .flatpickr-weekdays, span.flatpickr-weekday { background:transparent; color:rgba(255,255,255,0.5); }
-      .flatpickr-current-month, .numInputWrapper { color:white; }
-      .flatpickr-prev-month svg, .flatpickr-next-month svg { fill:white; }
-      .flatpickr-time { background:#1a1a3a !important; border-radius:12px !important; }
-      .flatpickr-time input { color:white !important; background:transparent !important; }
-      .flatpickr-time .numInputWrapper span { border-color:rgba(255,255,255,0.2) !important; }
-      .flatpickr-time .numInputWrapper span svg { fill:white !important; }
-      .flatpickr-input { width:100% !important; border-radius:12px !important; padding:10px 14px !important; font-size:14px !important; color:white !important; outline:none !important; background:rgba(255,255,255,0.06) !important; border:1px solid rgba(255,255,255,0.1) !important; font-family:'DM Sans',sans-serif !important; box-sizing:border-box !important; }
-    </style>
-    <div class="noise min-h-screen" style="background: linear-gradient(180deg, #05053a 0%, #120838 25%, #1e0848 45%, #3a0a52 60%, #52083a 78%, #620a1a 100%);">
-      <div style="position:fixed; top:-10%; left:-10%; width:50vw; height:50vw; background:radial-gradient(circle, rgba(60,40,180,0.12) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
-      <div style="position:fixed; bottom:-10%; right:-10%; width:40vw; height:40vw; background:radial-gradient(circle, rgba(140,20,60,0.10) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
-
-      <div class="relative z-10 max-w-xl mx-auto px-4 pb-16">
-        ${renderHeader(newCount)}
-        ${currentUser ? '' : `
+  document.getElementById('app-inner').innerHTML = `
+    ${renderHeader(newCount)}
+    ${currentUser ? '' : `
   <div class="glass rounded-2xl p-4 mb-4">
     <div id="login-step-1" class="flex gap-3 items-center">
       <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." value="${localStorage.getItem('lebe-live-email') || ''}" style="${inputStyle} flex:1;" />
@@ -129,15 +78,13 @@ function render() {
     </div>
   </div>
 `}
-        ${currentUser ? `<div class="text-right mb-2" style="font-size:11px; color:rgba(255,255,255,0.3);">${currentUser.email} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
-        ${renderNav()}
-        ${currentView === 'liste' ? renderListView() : ''}
-        ${currentView === 'kalender' ? renderCalendarView() : ''}
-        ${currentView === 'gemerkt' ? renderBookmarkedView() : ''}
-      </div>
-    </div>
-    ${renderModals()}
+    ${currentUser ? `<div class="text-right mb-2" style="font-size:11px; color:rgba(255,255,255,0.3);">${currentUser.email} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
+    ${renderNav()}
+    ${currentView === 'liste' ? renderListView() : ''}
+    ${currentView === 'kalender' ? renderCalendarView() : ''}
+    ${currentView === 'gemerkt' ? renderBookmarkedView() : ''}
   `
+  document.getElementById('app-modals').innerHTML = renderModals()
   attachEvents()
   if (newCount > 0 && currentView === 'liste') {
     setTimeout(() => markAllSeen(), 3000)

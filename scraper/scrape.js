@@ -560,7 +560,7 @@ async function scrapeUTConnewitz() {
         events.push({
           title, date,
           time: `${hour}:00`,
-          locationId: 22,
+          locationId: 17,
           type: detectType(title),
           description: '',
           ticketUrl: 'https://utconnewitz.de/',
@@ -1545,8 +1545,19 @@ async function scrapeKesselhaus() {
     await page.goto('https://www.kesselhaus.net/de/calendar', { waitUntil: 'networkidle2', timeout: 30000 })
     await new Promise(r => setTimeout(r, 3000))
 
+    // Lazy-loaded events per Scroll nachladen
+    let prevCount = 0
+    for (let i = 0; i < 15; i++) {
+      const count = await page.evaluate(() => {
+        window.scrollTo(0, document.body.scrollHeight)
+        return document.querySelectorAll('a[href*="/de/calendar/-"]').length
+      })
+      await new Promise(r => setTimeout(r, 1500))
+      if (count === prevCount) break
+      prevCount = count
+    }
+
     // Angular-App: innerText preserviert CSS-basierte Zeilenumbrüche
-    // Links + innerText direkt aus dem DOM extrahieren
     const rawEvents = await page.evaluate(() => {
       const links = document.querySelectorAll('a[href*="/de/calendar/-"]')
       return Array.from(links).map(link => ({
@@ -1567,17 +1578,20 @@ async function scrapeKesselhaus() {
       'Weitere','Festival','Großveranstaltung','Ausverkauft','Abgesagt','Verlegt',
       'Nachholtermin','Zusatzkonzert']
 
+    // Tourenname/-untertitel vor dem eigentlichen Künstlernamen erkennen
+    const subtitlePattern = /^(Live (in|at|@)\b|Welttournee|Tournee|World Tour|\d{4} Tour|Tour \d{4}|Open Air Tour)/i
+
+    const now = new Date()
     for (const { href, text } of rawEvents) {
       const lines = text.trim().split('\n').map(l => l.trim()).filter(Boolean)
       if (lines.length < 4) continue
 
-      // Format: ["Sa.", "03", "Januar", "21:00", "Titel...", "Location", "Typ"]
       const day   = lines[1]
       const month = monthMap[lines[2]]
       if (!day || !month || isNaN(parseInt(day))) continue
 
-      const now = new Date()
-      const year = parseInt(month) < now.getMonth() + 1 - 1
+      const monthNum = parseInt(month)
+      const year = monthNum < now.getMonth() + 1
         ? now.getFullYear() + 1
         : now.getFullYear()
 
@@ -1589,7 +1603,7 @@ async function scrapeKesselhaus() {
       const time = `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}`
 
       const titleLines = lines.slice(4).filter(l => !skipWords.includes(l) && l.length > 1)
-      const title = titleLines[0]?.trim()
+      const title = (titleLines.find(l => !subtitlePattern.test(l)) || titleLines[0])?.trim()
       if (!title || title.length < 2) continue
 
       const key = date + title
@@ -2627,10 +2641,15 @@ async function scrapePrachtwerk() {
       }
       if (!date || date < today()) return
 
-      const title = $(el).find('h2, h3, h4, strong').first().text().trim()
-        || text.split('\n').map(l => l.trim()).filter(l =>
-            l.length > 3 && !/^\d/.test(l) && !/^[A-Z][a-z]{2}\.?$/.test(l)
-          )[0] || ''
+      // <strong> meiden: enthält in Facebook-Beschreibungen oft die komplette Biographie
+      let title = $(el).find('h2, h3, h4').first().text().trim()
+      if (!title) title = text.split('\n').map(l => l.trim()).filter(l =>
+          l.length > 3 && l.length < 100 && !/^\d/.test(l) && !/^[A-Z][a-z]{2}\.?$/.test(l)
+        )[0] || ''
+      if (title.length > 100) {
+        title = title.split(/[\n.!?]/)[0].trim()
+        if (title.length > 100) title = title.slice(0, 100).trim()
+      }
       if (!title || title.length < 3) return
 
       const timeMatch = text.match(/(\d{1,2}):(\d{2})/)
@@ -2805,6 +2824,72 @@ async function scrapeZitadelleSpandau() {
   return events
 }
 
+async function scrapeMVBLeipzig() {
+  console.log('📡 MVB Leipzig...')
+  const events = []
+  const seen = new Set()
+  try {
+    const headers = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+
+    // Aktuelle + nächste 3 Monate parallel abrufen (My-Calendar WordPress-Plugin)
+    const now = new Date()
+    const urls = ['https://mvb-leipzig.de/events/']
+    for (let i = 0; i < 3; i++) {
+      const m = new Date(now.getFullYear(), now.getMonth() + i + 1, 1)
+      urls.push(
+        `https://mvb-leipzig.de/events/?dy=1&month=${now.getMonth() + i + 1}&nmonth=${m.getMonth()+1}&nyr=${m.getFullYear()}`
+      )
+    }
+
+    const pages = await Promise.all(urls.map(url => fetch(url, { headers }).then(r => r.ok ? r.text() : null)))
+    for (const html of pages) {
+      if (!html) continue
+      const $ = cheerio.load(html)
+
+      $('script[type="application/ld+json"]').each((_, el) => {
+        let data
+        try { data = JSON.parse($(el).html()) } catch { return }
+        const items = Array.isArray(data) ? data : [data]
+        for (const item of items) {
+          if (item['@type'] !== 'Event') return
+          const startDate = item.startDate
+          if (!startDate) return
+
+          const date = startDate.substring(0, 10)
+          if (date < today()) return
+
+          const timeMatch = startDate.match(/T(\d{2}):(\d{2})/)
+          const time = timeMatch ? `${timeMatch[1]}:${timeMatch[2]}` : '20:00'
+
+          const title = (item.name || '').trim()
+          if (!title || title.length < 2) return
+
+          const ticketUrl = item.url || (item.offers && item.offers.url) || 'https://mvb-leipzig.de/events/'
+
+          const key = date + title
+          if (seen.has(key)) return
+          seen.add(key)
+
+          events.push({
+            title, date, time,
+            locationId: 48,
+            type: detectType(title),
+            description: '',
+            ticketUrl,
+            spotifyUrl: '',
+            source: 'mvbleipzig'
+          })
+        }
+      })
+    }
+
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ MVB Leipzig: ${e.message}`)
+  }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -2857,6 +2942,7 @@ async function main() {
     scrapePrachtwerk(),
     scrapeTheaterDesWestens(),
     scrapeZitadelleSpandau(),
+    scrapeMVBLeipzig(),
 
   ])
 
