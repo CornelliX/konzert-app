@@ -328,7 +328,7 @@ function renderEventCard(e) {
               <button data-ics="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg" style="color:rgba(255,255,255,0.5);">+ Apple</button>
               <button data-gcal="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg" style="color:rgba(255,255,255,0.5);">+ Google</button>
             ` : ''}
-            <span style="margin-left:auto; color:rgba(255,255,255,0.5); font-size:18px; font-weight:700; letter-spacing:-3px; pointer-events:none; user-select:none; padding-right:2px; line-height:1;">‹‹</span>
+            <span style="margin-left:auto; color:rgba(255,255,255,0.6); font-size:18px; font-weight:700; letter-spacing:-3px; pointer-events:none; user-select:none; padding-right:2px; line-height:1;">‹‹</span>
           </div>
         </div>
       </div>
@@ -767,7 +767,7 @@ function attachEvents() {
     if (ok) {
       document.getElementById('login-step-1').style.display = 'none'
       document.getElementById('login-step-2').style.display = 'block'
-      document.getElementById('login-code').focus()
+      requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById('login-code')?.focus()))
     } else {
       btn.textContent = 'Code senden'
       btn.disabled = false
