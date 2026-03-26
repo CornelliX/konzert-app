@@ -451,7 +451,7 @@ async function scrapeFelsenkeller() {
         title,
         date,
         time: `${hour}:${min}`,
-        locationId: 17,
+        locationId: 16,
         type: detectType(title),
         description: '',
         ticketUrl,
