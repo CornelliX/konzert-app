@@ -474,7 +474,7 @@ function shareViaWhatsApp(event) {
 
 function attachEvents() {
   document.querySelectorAll('[data-nav]').forEach(btn => {
-    btn.addEventListener('click', () => { currentView = btn.dataset.nav; render() })
+    btn.addEventListener('click', () => { currentView = btn.dataset.nav; render(); window.scrollTo(0, 0) })
   })
   document.querySelectorAll('[data-city]').forEach(btn => {
     btn.addEventListener('click', () => {

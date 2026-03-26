@@ -323,9 +323,8 @@ async function scrapeFestsaal() {
         const title = $('h2').first().text().trim()
         if (!title || title.length < 2) continue
 
-        // Ticket-URL: eventbrite, eventim etc.
-        const ticketUrl = $('a[href*="eventbrite"], a[href*="eventim"], a[href*="myticket"]')
-          .first().attr('href') || href
+        // Event-Seite bevorzugen; Eventim nur als Fallback
+        const ticketUrl = href || $('a[href*="eventbrite"], a[href*="eventim"], a[href*="myticket"]').first().attr('href') || ''
 
         const key = date + title
         if (seen.has(key)) continue
@@ -598,8 +597,8 @@ async function scrapeColumbiahalle() {
     $('h1, div.eventlist_event').each((_, el) => {
       const text = $(el).text().trim()
       // h1 = Monatsüberschrift
-      if ($(el).is('h1') && /^\w+\s+\d{4}$/.test(text)) {
-        const monthMatch = text.match(/^(\w+)\s+(\d{4})$/)
+      if ($(el).is('h1') && /^\S+\s+\d{4}$/.test(text)) {
+        const monthMatch = text.match(/^(\S+)\s+(\d{4})$/)
         if (monthMatch && months[monthMatch[1]]) {
           currentMonth = months[monthMatch[1]]
           currentYear = parseInt(monthMatch[2])
@@ -753,56 +752,64 @@ async function scrapeSchokoladen() {
   console.log('📡 Schokoladen Berlin...')
   const events = []
   try {
-    const res = await fetch('https://schokoladen.tickettoaster.de/produkte', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
-    })
-    const html = await res.text()
-    const $ = cheerio.load(html)
     const seen = new Set()
-
-    // Alle Event-Links in der Liste
-    $('ul li a[href*="/produkte/"]').each((_, el) => {
-      const text = $(el).text().trim()
-      const href = $(el).attr('href') || ''
-
-      // Datum aus "...in Berlin am 16.03.2026" oder "...am 16.03.2026"
-      const dateMatch = text.match(/am\s+(\d{2})\.(\d{2})\.(\d{4})/)
-      if (!dateMatch) return
-
-      const day = dateMatch[1]
-      const month = dateMatch[2]
-      const year = dateMatch[3]
-      const date = `${year}-${month}-${day}`
-      if (date < today()) return
-
-      // Titel: "Tickets KÜNSTLER (genre, ort) in Berlin am DD.MM.YYYY"
-      // → alles zwischen "Tickets " und " in Berlin am"
-      let title = text
-        .replace(/^Tickets\s+/i, '')
-        .replace(/\s+in\s+Berlin\s+am\s+\d{2}\.\d{2}\.\d{4}.*$/i, '')
-        // Genre/Ort in Klammern am Ende entfernen: "KÜNSTLER (psych-pop, us)" → "KÜNSTLER"
-        .replace(/\s*\([^)]*\)\s*$/, '')
-        .trim()
-
-      if (!title || title.length < 2) return
-
-      const key = date + title
-      if (seen.has(key)) return
-      seen.add(key)
-
-      events.push({
-        title,
-        date,
-        time: '20:00',
-        locationId: 11,
-        type: detectType(title),
-        description: '',
-        ticketUrl: href.startsWith('http') ? href : 'https://schokoladen.tickettoaster.de' + href,
-        spotifyUrl: '',
-        source: 'schokoladen'
+    for (let pg = 1; pg <= 6; pg++) {
+      const url = pg === 1
+        ? 'https://schokoladen.tickettoaster.de/produkte'
+        : `https://schokoladen.tickettoaster.de/produkte?page=${pg}`
+      const res = await fetch(url, {
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
       })
-    })
+      const html = await res.text()
+      const $ = cheerio.load(html)
+      let pageCount = 0
 
+      // Alle Event-Links in der Liste
+      $('ul li a[href*="/produkte/"]').each((_, el) => {
+        const text = $(el).text().trim()
+        const href = $(el).attr('href') || ''
+
+        // Datum aus "...in Berlin am 16.03.2026" oder "...am 16.03.2026"
+        const dateMatch = text.match(/am\s+(\d{2})\.(\d{2})\.(\d{4})/)
+        if (!dateMatch) return
+
+        const day = dateMatch[1]
+        const month = dateMatch[2]
+        const year = dateMatch[3]
+        const date = `${year}-${month}-${day}`
+        if (date < today()) return
+
+        // Titel: "Tickets KÜNSTLER (genre, ort) in Berlin am DD.MM.YYYY"
+        // → alles zwischen "Tickets " und " in Berlin am"
+        let title = text
+          .replace(/^Tickets\s+/i, '')
+          .replace(/\s+in\s+Berlin\s+am\s+\d{2}\.\d{2}\.\d{4}.*$/i, '')
+          // Genre/Ort in Klammern am Ende entfernen: "KÜNSTLER (psych-pop, us)" → "KÜNSTLER"
+          .replace(/\s*\([^)]*\)\s*$/, '')
+          .trim()
+
+        if (!title || title.length < 2) return
+
+        const key = date + title
+        if (seen.has(key)) return
+        seen.add(key)
+        pageCount++
+
+        events.push({
+          title,
+          date,
+          time: '20:00',
+          locationId: 11,
+          type: detectType(title),
+          description: '',
+          ticketUrl: href.startsWith('http') ? href : 'https://schokoladen.tickettoaster.de' + href,
+          spotifyUrl: '',
+          source: 'schokoladen'
+        })
+      })
+
+      if (pageCount === 0) break  // keine neuen Events auf dieser Seite
+    }
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) {
     console.log(`  ✗ Schokoladen: ${e.message}`)
@@ -1372,9 +1379,9 @@ async function scrapeMonarch() {
     const allBold = $('b, strong').toArray()
     for (let i = 0; i < allBold.length; i++) {
       const text = $(allBold[i]).text().trim()
-      const dateMatch = text.match(/(\w+)\s+(\d{2})\/(\d{2})\/(\d{4})-(\d{2}):(\d{2})/)
+      const dateMatch = text.match(/(\w+)\s+(\d{1,2})\/(\d{1,2})\/(\d{4})-(\d{2}):(\d{2})/)
       if (!dateMatch) continue
-      const date = `${dateMatch[4]}-${dateMatch[3]}-${dateMatch[2]}`
+      const date = `${dateMatch[4]}-${String(dateMatch[3]).padStart(2,'0')}-${String(dateMatch[2]).padStart(2,'0')}`
       const time = `${dateMatch[5]}:${dateMatch[6]}`
       if (date < today()) continue
       // Titel steht im nächsten b/strong Element
@@ -1548,12 +1555,10 @@ async function scrapeKesselhaus() {
 
     // Lazy-loaded events per Scroll nachladen
     let prevCount = 0
-    for (let i = 0; i < 15; i++) {
-      const count = await page.evaluate(() => {
-        window.scrollTo(0, document.body.scrollHeight)
-        return document.querySelectorAll('a[href*="/de/calendar/-"]').length
-      })
-      await new Promise(r => setTimeout(r, 1500))
+    for (let i = 0; i < 20; i++) {
+      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight))
+      await new Promise(r => setTimeout(r, 2000))
+      const count = await page.evaluate(() => document.querySelectorAll('a[href*="/de/calendar/-"]').length)
       if (count === prevCount) break
       prevCount = count
     }
@@ -1970,7 +1975,8 @@ async function scrapeCassiopeia() {
         if (title.length > 80) title = title.slice(0, title.lastIndexOf(' ', 80) || 80).trim() + '…'
         seen.add(date + title)
 
-        events.push({ title, date, time, locationId: 36, type: detectType(title), description: '', ticketUrl: href, spotifyUrl: '', source: 'cassiopeia' })
+        const ticketUrl = href.startsWith('http') ? href : 'https://cassiopeia-berlin.de' + href
+        events.push({ title, date, time, locationId: 36, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'cassiopeia' })
       })
     }
     console.log(`  ✓ ${events.length} Events`)
@@ -2131,7 +2137,6 @@ async function scrapePeterEdel() {
       JULI:7,AUGUST:8,SEPTEMBER:9,OKTOBER:10,NOVEMBER:11,DEZEMBER:12
     }
     let currentMonth = 0
-    let currentYear = new Date().getFullYear()
     const seen = new Set()
 
     // Unbrauchbare Titel-Muster
@@ -2148,10 +2153,9 @@ async function scrapePeterEdel() {
 
     // Monatsüberschriften aus h1 extrahieren
     $('h1').each((_, el) => {
-      const m = $(el).text().trim().match(/^(\w+)\s+(\d{4})$/)
+      const m = $(el).text().trim().match(/^(\S+)\s+(\d{4})$/)
       if (m) {
         currentMonth = months[m[1].toUpperCase()] || currentMonth
-        currentYear  = parseInt(m[2])
       }
     })
 
@@ -2163,11 +2167,11 @@ async function scrapePeterEdel() {
       // Datum-h3: "SA | 14.03." oder "DO | 02.04."
       const dateMatch = text.match(/\|\s*(\d{1,2})\.(\d{2})\./)
       if (!dateMatch) continue
-      if (!currentMonth) continue
 
       const day   = parseInt(dateMatch[1])
       const month = parseInt(dateMatch[2])
-      const year  = month < currentMonth - 1 ? currentYear + 1 : currentYear
+      const nowDate = new Date()
+      const year  = month < nowDate.getMonth() + 1 ? nowDate.getFullYear() + 1 : nowDate.getFullYear()
       const date  = `${year}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}`
       if (date < today()) continue
 
