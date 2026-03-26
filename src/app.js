@@ -11,6 +11,8 @@ let going = loadData('going') || []
 let seenEvents = loadData('seenEvents') || []
 let currentView = 'liste'
 let calendarOffset = 0
+let swipeActiveWrapper = null
+let swipeDocListenerAdded = false
 
 export async function renderApp(el) {
   container = el
@@ -64,6 +66,7 @@ function markAllSeen() {
 }
 
 function render() {
+  swipeActiveWrapper = null
   const newCount = events.filter(e => isNew(e)).length
   document.getElementById('app-inner').innerHTML = `
     ${renderHeader(newCount)}
@@ -245,35 +248,41 @@ function renderEventCard(e) {
   const accentAlpha = 'rgba(99,102,241,'
 
   return `
-    <div class="card-hover rounded-2xl overflow-hidden" style="background:rgba(8,8,42,0.92); border:1px solid ${isGoing ? 'rgba(52,211,153,0.3)' : accentAlpha + '0.12)'}; box-shadow:0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);">
-      <div style="height:2px; background:linear-gradient(90deg, ${accentSolid}, transparent);"></div>
-      <div class="p-4">
-        <div class="flex justify-between items-start gap-3">
-          <div class="flex-1 min-w-0">
-            <div class="flex items-center gap-2 mb-2 flex-wrap">
-              <span class="syne text-xs" style="color:${accentSolid}; font-weight:700;">${dateStr} · ${e.time}</span>
-              ${eventIsNew ? '<span class="text-xs font-bold" style="color:#f472b6; letter-spacing:0.05em;">NEW</span>' : ''}
-              ${isGoing ? '<span class="text-xs font-semibold" style="color:#34d399;">✓ dabei</span>' : ''}
+    <div class="event-swipe-wrapper" style="position:relative; overflow:hidden; border-radius:16px;">
+      <div class="event-swipe-actions" style="position:absolute; right:0; top:0; bottom:0; width:160px; display:flex; flex-direction:column; gap:6px; justify-content:center; padding:6px 8px 6px 4px; z-index:0;">
+        <button data-swipe-bookmark="${e.id}" style="flex:1; max-height:54px; border-radius:12px; border:1px solid ${isBookmarked ? 'rgba(244,114,182,0.5)' : 'rgba(244,114,182,0.3)'}; cursor:pointer; font-size:0.875rem; font-weight:600; background:${isBookmarked ? 'rgba(244,114,182,0.3)' : 'rgba(244,114,182,0.15)'}; color:#f472b6; font-family:'DM Sans',sans-serif;">♡ Vormerken</button>
+        <button data-swipe-going="${e.id}" style="flex:1; max-height:54px; border-radius:12px; border:1px solid ${isGoing ? 'rgba(52,211,153,0.5)' : 'rgba(52,211,153,0.3)'}; cursor:pointer; font-size:0.875rem; font-weight:600; background:${isGoing ? 'rgba(52,211,153,0.25)' : 'rgba(52,211,153,0.12)'}; color:#34d399; font-family:'DM Sans',sans-serif;">✓ Bin dabei!</button>
+      </div>
+      <div class="event-swipe-card card-hover rounded-2xl overflow-hidden" style="position:relative; z-index:1; will-change:transform; touch-action:pan-y; background:rgba(8,8,42,0.92); border:1px solid ${isGoing ? 'rgba(52,211,153,0.3)' : accentAlpha + '0.12)'}; box-shadow:0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);">
+        <div style="height:2px; background:linear-gradient(90deg, ${accentSolid}, transparent);"></div>
+        <div class="p-4">
+          <div class="flex justify-between items-start gap-3">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="syne text-xs" style="color:${accentSolid}; font-weight:700;">${dateStr} · ${e.time}</span>
+                ${eventIsNew ? '<span class="text-xs font-bold" style="color:#f472b6; letter-spacing:0.05em;">NEW</span>' : ''}
+                ${isGoing ? '<span class="text-xs font-semibold" style="color:#34d399;">✓ dabei</span>' : ''}
+              </div>
+              <h3 class="syne text-white leading-tight mb-1" style="font-size:1rem; font-weight:700; letter-spacing:-0.01em;">${e.title}</h3>
+              <p class="text-xs mb-2" style="color:rgba(255,255,255,0.35);">
+                ${loc ? loc.name + ' <span style="color:rgba(255,255,255,0.15);">·</span> ' + loc.city : (e.locationName ? e.locationName + ' <span style="color:rgba(255,255,255,0.15);">·</span> ' + (e.locationCity || '') : '')}
+              </p>
+              ${e.description ? `<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.4);">${e.description}</p>` : ''}
             </div>
-            <h3 class="syne text-white leading-tight mb-1" style="font-size:1rem; font-weight:700; letter-spacing:-0.01em;">${e.title}</h3>
-            <p class="text-xs mb-2" style="color:rgba(255,255,255,0.35);">
-              ${loc ? loc.name + ' <span style="color:rgba(255,255,255,0.15);">·</span> ' + loc.city : (e.locationName ? e.locationName + ' <span style="color:rgba(255,255,255,0.15);">·</span> ' + (e.locationCity || '') : '')}
-            </p>
-            ${e.description ? `<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.4);">${e.description}</p>` : ''}
+            <div class="flex flex-col gap-3 items-center pt-1">
+              <button data-bookmark="${e.id}" title="Vormerken" style="color:${isBookmarked ? '#f472b6' : 'rgba(255,255,255,0.2)'}; background:none; border:none; cursor:pointer; font-size:1.125rem; transition:all 0.2s;">♡</button>
+              <button data-going="${e.id}" title="Ich gehe hin" style="color:${isGoing ? '#34d399' : 'rgba(255,255,255,0.2)'}; background:none; border:none; cursor:pointer; font-size:1.125rem; transition:all 0.2s;">✓</button>
+            </div>
           </div>
-          <div class="flex flex-col gap-3 items-center pt-1">
-            <button data-bookmark="${e.id}" title="Vormerken" style="color:${isBookmarked ? '#f472b6' : 'rgba(255,255,255,0.2)'}; background:none; border:none; cursor:pointer; font-size:1.125rem; transition:all 0.2s;">♡</button>
-            <button data-going="${e.id}" title="Ich gehe hin" style="color:${isGoing ? '#34d399' : 'rgba(255,255,255,0.2)'}; background:none; border:none; cursor:pointer; font-size:1.125rem; transition:all 0.2s;">✓</button>
+          <div class="flex gap-2 flex-wrap mt-1">
+            ${e.ticketUrl ? `<a href="${e.ticketUrl}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg text-slate-400 hover:text-white inline-block">Infos →</a>` : (loc?.website ? `<a href="https://${loc.website}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg text-slate-400 hover:text-white inline-block">Infos →</a>` : '')}
+            ${e.spotifyUrl ? `<a href="${e.spotifyUrl}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg inline-flex items-center gap-1.5" style="color:#1db954; border-color:rgba(29,185,84,0.2);"><svg width="12" height="12" viewBox="0 0 24 24" fill="#1db954"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Spotify</a>` : ''}
+            <button data-share="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-300">Teilen</button>
+            ${(isBookmarked || isGoing) ? `
+              <button data-ics="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-300">+ Apple</button>
+              <button data-gcal="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-300">+ Google</button>
+            ` : ''}
           </div>
-        </div>
-        <div class="flex gap-2 flex-wrap mt-1">
-          ${e.ticketUrl ? `<a href="${e.ticketUrl}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg text-slate-400 hover:text-white inline-block">Infos →</a>` : (loc?.website ? `<a href="https://${loc.website}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg text-slate-400 hover:text-white inline-block">Infos →</a>` : '')}
-          ${e.spotifyUrl ? `<a href="${e.spotifyUrl}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg inline-flex items-center gap-1.5" style="color:#1db954; border-color:rgba(29,185,84,0.2);"><svg width="12" height="12" viewBox="0 0 24 24" fill="#1db954"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Spotify</a>` : ''}
-          <button data-share="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-300">Teilen</button>
-          ${(isBookmarked || isGoing) ? `
-            <button data-ics="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-300">+ Apple</button>
-            <button data-gcal="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-300">+ Google</button>
-          ` : ''}
         </div>
       </div>
     </div>
@@ -552,6 +561,35 @@ function attachEvents() {
     })
   })
 
+  document.querySelectorAll('[data-swipe-bookmark]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
+      const id = btn.dataset.swipeBookmark
+      if (going.some(g => g == id)) {
+        await toggleBookmark(id, 'going')
+        going = going.filter(g => g != id)
+      }
+      const isNow = await toggleBookmark(id, 'bookmarked')
+      bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
+      render()
+    })
+  })
+  document.querySelectorAll('[data-swipe-going]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
+      const id = btn.dataset.swipeGoing
+      if (bookmarked.some(b => b == id)) {
+        await toggleBookmark(id, 'bookmarked')
+        bookmarked = bookmarked.filter(b => b != id)
+      }
+      const isNow = await toggleBookmark(id, 'going')
+      going = isNow ? [...going, id] : going.filter(g => g != id)
+      render()
+    })
+  })
+
+  attachSwipeGestures()
+
   // Modal
   const modal = document.getElementById('modal-add')
   document.querySelector('[data-open-add]')?.addEventListener('click', () => modal.classList.remove('hidden'))
@@ -817,4 +855,86 @@ document.getElementById('verify-btn')?.addEventListener('click', async () => {
       window.open(url, '_blank')
     })
   })
+}
+
+function closeSwipeWrapper(wrapper) {
+  if (wrapper && wrapper._closeSwipe) wrapper._closeSwipe()
+}
+
+function attachSwipeGestures() {
+  const REVEAL_WIDTH = 160
+  const THRESHOLD = 60
+
+  document.querySelectorAll('.event-swipe-wrapper').forEach(wrapper => {
+    const card = wrapper.querySelector('.event-swipe-card')
+    if (!card) return
+
+    let startX = 0, startY = 0, currentDx = 0
+    let directionLocked = null
+    let isOpen = false
+
+    card.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX
+      startY = e.touches[0].clientY
+      currentDx = isOpen ? -REVEAL_WIDTH : 0
+      directionLocked = null
+      card.style.transition = 'none'
+    }, { passive: true })
+
+    card.addEventListener('touchmove', e => {
+      const dx = e.touches[0].clientX - startX
+      const dy = e.touches[0].clientY - startY
+      if (!directionLocked) {
+        if (Math.abs(dx) < 5 && Math.abs(dy) < 5) return
+        directionLocked = Math.abs(dx) > Math.abs(dy) ? 'h' : 'v'
+      }
+      if (directionLocked !== 'h') return
+      e.preventDefault()
+      const base = isOpen ? -REVEAL_WIDTH : 0
+      currentDx = Math.max(-REVEAL_WIDTH, Math.min(0, base + dx))
+      card.style.transform = `translateX(${currentDx}px)`
+    }, { passive: false })
+
+    card.addEventListener('touchend', () => {
+      card.style.transition = 'transform 0.25s ease'
+      if (directionLocked !== 'h') return
+      const base = isOpen ? -REVEAL_WIDTH : 0
+      const delta = currentDx - base
+      if (!isOpen && delta < -THRESHOLD) {
+        openCard()
+      } else if (isOpen && delta > THRESHOLD) {
+        closeCard()
+      } else {
+        card.style.transform = `translateX(${isOpen ? -REVEAL_WIDTH : 0}px)`
+      }
+    }, { passive: true })
+
+    function openCard() {
+      if (swipeActiveWrapper && swipeActiveWrapper !== wrapper) {
+        closeSwipeWrapper(swipeActiveWrapper)
+      }
+      card.style.transition = 'transform 0.25s ease'
+      card.style.transform = `translateX(${-REVEAL_WIDTH}px)`
+      isOpen = true
+      swipeActiveWrapper = wrapper
+    }
+
+    function closeCard() {
+      card.style.transition = 'transform 0.25s ease'
+      card.style.transform = 'translateX(0)'
+      isOpen = false
+      if (swipeActiveWrapper === wrapper) swipeActiveWrapper = null
+    }
+
+    wrapper._closeSwipe = closeCard
+  })
+
+  if (!swipeDocListenerAdded) {
+    swipeDocListenerAdded = true
+    document.addEventListener('touchstart', e => {
+      if (swipeActiveWrapper && !swipeActiveWrapper.contains(e.target)) {
+        closeSwipeWrapper(swipeActiveWrapper)
+      }
+    }, { passive: true })
+  }
 }
