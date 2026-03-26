@@ -535,56 +535,56 @@ function attachEvents() {
   document.querySelector('[data-clear-dates]')?.addEventListener('click', () => { filters.dates = []; render() })
 
   document.querySelectorAll('[data-bookmark]').forEach(btn => {
-    btn.addEventListener('click', async () => {
+    btn.addEventListener('click', () => {
       if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
       const id = btn.dataset.bookmark
-      if (going.some(g => g == id)) {
-        await toggleBookmark(id, 'going')
-        going = going.filter(g => g != id)
-      }
-      const isNow = await toggleBookmark(id, 'bookmarked')
+      const wasGoing = going.some(g => g == id)
+      const isNow = !bookmarked.some(b => b == id)
+      if (wasGoing) going = going.filter(g => g != id)
       bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
       render()
+      if (wasGoing) toggleBookmark(id, 'going')
+      toggleBookmark(id, 'bookmarked')
     })
   })
   document.querySelectorAll('[data-going]').forEach(btn => {
-    btn.addEventListener('click', async () => {
+    btn.addEventListener('click', () => {
       if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
       const id = btn.dataset.going
-      if (bookmarked.some(b => b == id)) {
-        await toggleBookmark(id, 'bookmarked')
-        bookmarked = bookmarked.filter(b => b != id)
-      }
-      const isNow = await toggleBookmark(id, 'going')
+      const wasBookmarked = bookmarked.some(b => b == id)
+      const isNow = !going.some(g => g == id)
+      if (wasBookmarked) bookmarked = bookmarked.filter(b => b != id)
       going = isNow ? [...going, id] : going.filter(g => g != id)
       render()
+      if (wasBookmarked) toggleBookmark(id, 'bookmarked')
+      toggleBookmark(id, 'going')
     })
   })
 
   document.querySelectorAll('[data-swipe-bookmark]').forEach(btn => {
-    btn.addEventListener('click', async () => {
+    btn.addEventListener('click', () => {
       if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
       const id = btn.dataset.swipeBookmark
-      if (going.some(g => g == id)) {
-        await toggleBookmark(id, 'going')
-        going = going.filter(g => g != id)
-      }
-      const isNow = await toggleBookmark(id, 'bookmarked')
+      const wasGoing = going.some(g => g == id)
+      const isNow = !bookmarked.some(b => b == id)
+      if (wasGoing) going = going.filter(g => g != id)
       bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
       render()
+      if (wasGoing) toggleBookmark(id, 'going')
+      toggleBookmark(id, 'bookmarked')
     })
   })
   document.querySelectorAll('[data-swipe-going]').forEach(btn => {
-    btn.addEventListener('click', async () => {
+    btn.addEventListener('click', () => {
       if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
       const id = btn.dataset.swipeGoing
-      if (bookmarked.some(b => b == id)) {
-        await toggleBookmark(id, 'bookmarked')
-        bookmarked = bookmarked.filter(b => b != id)
-      }
-      const isNow = await toggleBookmark(id, 'going')
+      const wasBookmarked = bookmarked.some(b => b == id)
+      const isNow = !going.some(g => g == id)
+      if (wasBookmarked) bookmarked = bookmarked.filter(b => b != id)
       going = isNow ? [...going, id] : going.filter(g => g != id)
       render()
+      if (wasBookmarked) toggleBookmark(id, 'bookmarked')
+      toggleBookmark(id, 'going')
     })
   })
 
