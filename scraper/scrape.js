@@ -99,14 +99,14 @@ async function scrapeConne() {
       // Uhrzeit aus der Beschreibung
       const descMatch = item.match(/<description>([\s\S]*?)<\/description>/)
       const descRaw = descMatch ? descMatch[1] : ''
-      const desc = descRaw
+      let desc = descRaw
         .replace(/&lt;br&gt;/gi, ' ')
         .replace(/&lt;[^&]+&gt;/g, '')
         .replace(/&amp;/g, '&')
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
         .trim()
-        .substring(0, 300)
+      if (desc.length > 120) desc = desc.slice(0, desc.lastIndexOf(' ', 120) || 120).trim() + '…'
 
       const timeMatch = descRaw.match(/(\d{2}:\d{2})\s*Uhr/)
       const time = timeMatch ? timeMatch[1] : '20:00'
