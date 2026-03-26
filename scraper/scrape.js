@@ -868,7 +868,7 @@ async function scrapeHornsErben() {
           title,
           date,
           time,
-          locationId: 26,
+          locationId: 19,
           type: detectType(title),
           description: '',
           ticketUrl: href,
@@ -965,7 +965,7 @@ async function scrapeUrbanSpree() {
               locationId: 21,
               type: detectType(title),
               description: '',
-              ticketUrl: href.startsWith('http') ? href : 'https://www.urbanspree.com' + href,
+              ticketUrl: href.startsWith('http') ? href : `https://www.urbanspree.com/${href}`,
               spotifyUrl: '',
               source: 'urbanspree'
             })
@@ -1964,8 +1964,10 @@ async function scrapeCassiopeia() {
           !/^\d{4}$/.test(l) &&
           l.length > 2
         )
-        const title = titleLines[0]?.trim()
+        let title = titleLines[0]?.trim()
         if (!title || seen.has(date + title)) return
+        // Lange Zeilen sind meistens Beschreibungstext, kein Eventname
+        if (title.length > 80) title = title.slice(0, title.lastIndexOf(' ', 80) || 80).trim() + '…'
         seen.add(date + title)
 
         events.push({ title, date, time, locationId: 36, type: detectType(title), description: '', ticketUrl: href, spotifyUrl: '', source: 'cassiopeia' })
