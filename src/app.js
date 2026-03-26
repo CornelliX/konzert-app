@@ -79,17 +79,17 @@ function render() {
     ${currentUser ? '' : `
   <div class="glass rounded-2xl p-4 mb-4">
     <div id="login-step-1">
-      <div class="flex gap-3 items-center">
-        <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." value="${localStorage.getItem('lebe-live-email') || ''}" style="${inputStyle} flex:1;" />
-        <button id="login-btn" class="syne text-sm font-semibold px-4 py-2 rounded-xl" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer; transition:opacity 0.2s;">Code senden</button>
+      <div style="display:flex; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.06);">
+        <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." value="${localStorage.getItem('lebe-live-email') || ''}" style="flex:1; min-width:0; padding:10px 14px; font-size:14px; color:white; outline:none; background:transparent; border:none; font-family:'DM Sans',sans-serif; color-scheme:dark;" />
+        <button id="login-btn" class="syne text-sm font-semibold px-4" style="background:rgba(99,102,241,0.4); border:none; border-left:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer; transition:opacity 0.2s; flex-shrink:0;">Code senden</button>
       </div>
       <p id="login-hint" style="margin-top:8px; font-size:12px; color:rgba(255,255,255,0.35); min-height:16px;"></p>
     </div>
     <div id="login-step-2" style="display:none;">
       <p style="font-size:12px; color:rgba(255,255,255,0.45); margin-bottom:10px;">Code per E-Mail gesendet — bitte Postfach prüfen.</p>
-      <div class="flex gap-3 items-center">
-        <input id="login-code" type="text" inputmode="numeric" autocomplete="one-time-code" placeholder="6-stelliger Code..." style="${inputStyle} flex:1; letter-spacing:0.2em;" />
-        <button id="verify-btn" class="syne text-sm font-semibold px-4 py-2 rounded-xl" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer; transition:opacity 0.2s;">Bestätigen</button>
+      <div style="display:flex; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.06);">
+        <input id="login-code" type="text" autocomplete="one-time-code" placeholder="6-stelliger Code..." style="flex:1; min-width:0; padding:10px 14px; font-size:14px; color:white; outline:none; background:transparent; border:none; font-family:'DM Sans',sans-serif; color-scheme:dark; letter-spacing:0.2em;" />
+        <button id="verify-btn" class="syne text-sm font-semibold px-4" style="background:rgba(99,102,241,0.4); border:none; border-left:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer; transition:opacity 0.2s; flex-shrink:0;">Bestätigen</button>
       </div>
       <p id="verify-hint" style="margin-top:8px; font-size:12px; color:rgba(255,100,100,0.8); min-height:16px;"></p>
     </div>
@@ -867,6 +867,12 @@ function attachSwipeToWrapper(wrapper) {
     if (swipeActiveWrapper === wrapper) swipeActiveWrapper = null
   }
   wrapper._closeSwipe = closeCard
+
+  // Desktop hover: reveal actions on mouse-driven devices
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    wrapper.addEventListener('mouseenter', openCard)
+    wrapper.addEventListener('mouseleave', closeCard)
+  }
 
   // Card-level event handlers
   const id = wrapper.dataset.eventId
