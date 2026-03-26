@@ -138,15 +138,14 @@ function renderFilters() {
   return `
     <div class="glass rounded-2xl p-4 mb-5" style="overflow:visible; position:relative; z-index:10;">
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
-        ${['Berlin', 'Leipzig'].map(c => `
-          <button data-city="${c}" class="syne text-sm font-semibold transition-all duration-200 ${
-            filters.cities.includes(c) ? 'text-white' : 'text-slate-600 hover:text-slate-400'
-          }" style="padding:8px; border-radius:12px; ${filters.cities.includes(c)
-            ? 'background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.35);'
-            : 'background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);'}">
-            ${c}
-          </button>
-        `).join('')}
+        <div style="display:flex; grid-column:1/-1; gap:0; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:3px;">
+          ${['Berlin', 'Leipzig'].map(c => {
+            const active = filters.cities[0] === c
+            return `<button data-city="${c}" class="syne text-sm font-semibold transition-all duration-200 flex-1" style="padding:7px; border-radius:9px; cursor:pointer; border:none; ${active
+              ? 'background:linear-gradient(135deg,rgba(99,102,241,0.55),rgba(168,85,247,0.45)); color:white; box-shadow:0 1px 8px rgba(99,102,241,0.3);'
+              : 'background:transparent; color:rgba(255,255,255,0.35);'}">${c}</button>`
+          }).join('')}
+        </div>
         <div style="position:relative;">
           <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
             <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${
@@ -472,10 +471,8 @@ function attachEvents() {
   })
   document.querySelectorAll('[data-city]').forEach(btn => {
     btn.addEventListener('click', () => {
-      const city = btn.dataset.city
-      if (filters.cities.includes(city)) {
-        if (filters.cities.length > 1) filters.cities = filters.cities.filter(c => c !== city)
-      } else { filters.cities.push(city) }
+      filters.cities = [btn.dataset.city]
+      filters.locationId = 'alle'
       render()
     })
   })
