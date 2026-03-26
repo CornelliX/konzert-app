@@ -19,9 +19,10 @@ export async function renderApp(el) {
     <div class="noise min-h-screen" style="background: linear-gradient(180deg, #05053a 0%, #120838 25%, #1e0848 45%, #3a0a52 60%, #52083a 78%, #620a1a 100%);">
       <div style="position:fixed; top:-10%; left:-10%; width:50vw; height:50vw; background:radial-gradient(circle, rgba(60,40,180,0.12) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
       <div style="position:fixed; bottom:-10%; right:-10%; width:40vw; height:40vw; background:radial-gradient(circle, rgba(140,20,60,0.10) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
-      <div id="app-inner" class="relative z-10 max-w-xl mx-auto px-4 pb-16"></div>
+      <div id="app-inner" class="relative z-10 max-w-xl mx-auto px-4 pb-28"></div>
     </div>
     <div id="app-modals"></div>
+    <div id="bottom-nav" style="position:fixed; bottom:0; left:0; right:0; z-index:40;"></div>
   `
   currentUser = await getUser()
   events = await getEvents()
@@ -79,12 +80,12 @@ function render() {
   </div>
 `}
     ${currentUser ? `<div class="text-right mb-2" style="font-size:11px; color:rgba(255,255,255,0.3);">${currentUser.email} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
-    ${renderNav()}
     ${currentView === 'liste' ? renderListView() : ''}
     ${currentView === 'kalender' ? renderCalendarView() : ''}
     ${currentView === 'gemerkt' ? renderBookmarkedView() : ''}
   `
   document.getElementById('app-modals').innerHTML = renderModals()
+  document.getElementById('bottom-nav').innerHTML = renderBottomNav()
   attachEvents()
   if (newCount > 0 && currentView === 'liste') {
     setTimeout(() => markAllSeen(), 3000)
@@ -110,22 +111,27 @@ function renderHeader(newCount) {
   `
 }
 
-function renderNav() {
+function renderBottomNav() {
+  const bmCount = bookmarked.filter(b => b).length + going.filter(g => g).length
   const tabs = [
-    { id: 'liste', label: 'Events' },
-    { id: 'kalender', label: 'Kalender' },
-    { id: 'gemerkt', label: `Gemerkt${(bookmarked.filter(b => b).length + going.filter(g => g).length) > 0 ? ' · ' + (bookmarked.filter(b => b).length + going.filter(g => g).length) : ''}` },
+    { id: 'liste', label: 'Events', icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="4" cy="6" r="1.5" fill="currentColor" stroke="none"/><circle cx="4" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="4" cy="18" r="1.5" fill="currentColor" stroke="none"/></svg>` },
+    { id: 'kalender', label: 'Kalender', icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>` },
+    { id: 'gemerkt', label: bmCount > 0 ? `Gemerkt ${bmCount}` : 'Gemerkt', icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="${bmCount > 0 ? 'rgba(244,114,182,0.7)' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>` },
   ]
   return `
-    <div class="flex gap-1.5 mb-6 p-1 rounded-2xl glass">
-      ${tabs.map(t => `
-        <button data-nav="${t.id}" class="flex-1 py-2.5 rounded-xl text-sm font-semibold syne transition-all duration-200 ${
-          currentView === t.id ? 'text-white' : 'text-slate-500 hover:text-slate-300'
-        }" ${currentView === t.id ? 'style="background: linear-gradient(135deg, rgba(99,102,241,0.5), rgba(168,85,247,0.5)); border: 1px solid rgba(99,102,241,0.3);"' : ''}>
-          ${t.label}
-        </button>
-      `).join('')}
-      <button data-open-add style="width:38px; flex-shrink:0; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.4); font-size:20px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s;">+</button>
+    <div style="max-width:576px; margin:0 auto; background:rgba(4,4,32,0.96); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-top:1px solid rgba(255,255,255,0.07); display:flex; padding-bottom:env(safe-area-inset-bottom,0px);">
+      ${tabs.map(t => {
+        const active = currentView === t.id
+        return `<button data-nav="${t.id}" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; padding:10px 4px 11px; background:none; border:none; cursor:pointer; color:${active ? 'white' : 'rgba(255,255,255,0.28)'}; position:relative; transition:color 0.2s;">
+          ${active ? `<span style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:28px; height:2px; background:linear-gradient(90deg,#6366f1,#a855f7); border-radius:0 0 3px 3px;"></span>` : ''}
+          ${t.icon}
+          <span class="syne" style="font-size:9px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">${t.label}</span>
+        </button>`
+      }).join('')}
+      <button data-open-add style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; padding:10px 4px 11px; background:none; border:none; cursor:pointer; color:rgba(99,102,241,0.6); transition:color 0.2s; position:relative;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        <span class="syne" style="font-size:9px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">Hinzufügen</span>
+      </button>
     </div>
   `
 }
@@ -135,35 +141,36 @@ function renderFilters() {
     .filter(l => filters.cities.includes(l.city))
     .sort((a, b) => a.name.localeCompare(b.name))
 
+  const locName = filters.locationId === 'alle'
+    ? 'Alle Locations'
+    : (locations.find(l => l.id == filters.locationId)?.name || 'Alle Locations')
+
   return `
-    <div class="glass rounded-2xl p-4 mb-5" style="overflow:visible; position:relative; z-index:10;">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
-        <div style="display:flex; grid-column:1/-1; gap:0; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:3px;">
-          ${['Berlin', 'Leipzig'].map(c => {
-            const active = filters.cities[0] === c
-            return `<button data-city="${c}" class="syne text-sm font-semibold transition-all duration-200 flex-1" style="padding:7px; border-radius:9px; cursor:pointer; border:none; ${active
-              ? 'background:linear-gradient(135deg,rgba(99,102,241,0.55),rgba(168,85,247,0.45)); color:white; box-shadow:0 1px 8px rgba(99,102,241,0.3);'
-              : 'background:transparent; color:rgba(255,255,255,0.35);'}">${c}</button>`
-          }).join('')}
-        </div>
-        <div style="position:relative;">
-          <div id="filter-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center;">
-            <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${
-              filters.locationId === 'alle' ? 'Alle Locations' :
-              (locations.find(l => l.id == filters.locationId)?.name || 'Alle Locations')
-            }</span>
-            <span style="color:rgba(255,255,255,0.3); font-size:12px; margin-left:6px;">▾</span>
+    <div class="glass rounded-2xl p-3 mb-5" style="overflow:visible; position:relative; z-index:10; display:flex; flex-direction:column; gap:8px;">
+      <div style="display:flex; gap:0; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:3px;">
+        ${['Berlin', 'Leipzig'].map(c => {
+          const active = filters.cities[0] === c
+          return `<button data-city="${c}" class="syne text-sm font-semibold transition-all duration-200" style="flex:1; padding:7px; border-radius:7px; cursor:pointer; border:none; ${active
+            ? 'background:linear-gradient(135deg,rgba(99,102,241,0.55),rgba(168,85,247,0.45)); color:white; box-shadow:0 1px 8px rgba(99,102,241,0.25);'
+            : 'background:transparent; color:rgba(255,255,255,0.32);'}">${c}</button>`
+        }).join('')}
+      </div>
+      <div style="display:flex; gap:8px;">
+        <div style="position:relative; flex:1;">
+          <div id="filter-loc-selected" style="cursor:pointer; padding:9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; gap:6px;">
+            <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${locName}</span>
+            <span style="color:rgba(255,255,255,0.25); font-size:11px; flex-shrink:0;">▾</span>
           </div>
-          <div id="filter-loc-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:1000; width:100%; max-height:200px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
-            <div data-filter-loc="alle" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px;">Alle Locations</div>
+          <div id="filter-loc-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:1000; width:100%; max-height:200px; overflow-y:auto; border-radius:10px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
+            <div data-filter-loc="alle" class="loc-option" style="padding:9px 12px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:13px;">Alle Locations</div>
             ${locationOptions.map(l => `
-              <div data-filter-loc="${l.id}" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:14px; border-top:1px solid rgba(255,255,255,0.04);">
-                ${l.name} <span style="color:rgba(255,255,255,0.3); font-size:12px;">${l.city}</span>
+              <div data-filter-loc="${l.id}" class="loc-option" style="padding:9px 12px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:13px; border-top:1px solid rgba(255,255,255,0.04);">
+                ${l.name}
               </div>
             `).join('')}
           </div>
         </div>
-        <input id="search-input" type="text" placeholder="Suche..." value="${filters.search || ''}" style="padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
+        <input id="search-input" type="text" placeholder="Suche…" value="${filters.search || ''}" style="flex:1; padding:9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
       </div>
     </div>
   `
