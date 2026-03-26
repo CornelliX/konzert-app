@@ -78,11 +78,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 670479953,
+    "id": 670479925,
     "title": "Hammond[dʒæz]Session #32 – Eintritt frei!",
     "date": "2026-03-26",
     "time": "19:30",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/hammondd%ca%92aezsession-32-eintritt-frei/",
@@ -517,11 +517,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1440510860,
+    "id": 1440510832,
     "title": "Matej Korbelic Quintett – Contemporary Jazz, Jazz Fusion with odd meters",
     "date": "2026-03-27",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/matej-korbelic-quintett-contemporary-jazz-jazz-fusion-with-odd-meters/",
@@ -537,7 +537,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/pure-obsessions-and-red-nights-mttm-urban-spree-berlin.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/pure-obsessions-and-red-nights-mttm-urban-spree-berlin.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -899,11 +899,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1619829869,
+    "id": 1619829841,
     "title": "KARLA – Akustik-Pop",
     "date": "2026-03-28",
     "time": "19:30",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/karla-akustik-pop/",
@@ -1010,7 +1010,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/aufnahme-wiedergabe-fünfzehn-jahre-erster-akt.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/aufnahme-wiedergabe-fünfzehn-jahre-erster-akt.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -1026,6 +1026,19 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3423",
     "spotifyUrl": "",
     "source": "gretchen",
+    "addedAt": "2026-03-26"
+  },
+  {
+    "id": 427028028,
+    "title": "Doggy Weekend Berlin: Club Animalz (Furries, Puppies Party)",
+    "date": "2026-03-28",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/80268/",
+    "spotifyUrl": "",
+    "source": "kantine",
     "addedAt": "2026-03-26"
   },
   {
@@ -1229,19 +1242,6 @@
     "source": "quasimodo",
     "ticketUrl": "https://quasimodo.club/events/old-school-house-party-9-7323",
     "spotifyUrl": "",
-    "addedAt": "2026-03-26"
-  },
-  {
-    "id": 1461191556,
-    "title": "When the Sun Hits",
-    "date": "2026-03-28",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-4/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-03-26"
   },
   {
@@ -1770,11 +1770,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1575881880,
+    "id": 1575881852,
     "title": "Holzmann/Schleiermacher 2 – Literatur/Musik",
     "date": "2026-03-31",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/holzmann-schleiermacher-2-literatur-musik/",
@@ -1974,8 +1974,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 2139323747,
-    "title": "Beginn 19:30SonstigesKneipenquiz 01.04.April 2026QuizcarraldoWed01.04.|Einlass 19:00|Beginn19:30Sonstiges|Kneipenquiz CancelledSold-Out",
+    "id": 1971649882,
+    "title": "Beginn 19:30SonstigesKneipenquiz 01.04.April 2026QuizcarraldoWed01.04.|Einlass…",
     "date": "2026-04-01",
     "time": "19:30",
     "locationId": 36,
@@ -2052,11 +2052,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1216226377,
+    "id": 1216226405,
     "title": "flo & jere present: musical chairs",
     "date": "2026-04-01",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/flo-jere-present-musical-chairs/",
@@ -2229,11 +2229,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1478007373,
+    "id": 1478007345,
     "title": "Horns[dʒæz]Session – Eintritt frei",
     "date": "2026-04-02",
     "time": "19:30",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/hornsd%ca%92aezsession-eintritt-frei-28/",
@@ -2383,8 +2383,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 77170571,
-    "title": "Beginn 20:00KonzertMetalcore02.04.April 2026Never Back DownThu02.04.|Einlass 19:00|Beginn20:00Konzert|MetalcoreCancelledSold-Out",
+    "id": 1650917480,
+    "title": "Beginn 20:00KonzertMetalcore02.04.April 2026Never Back DownThu02.04.|Einlass…",
     "date": "2026-04-02",
     "time": "20:00",
     "locationId": 36,
@@ -2485,8 +2485,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1149594411,
-    "title": "Beginn 23:00Party80s02.04.April 2026I'm Still Standing PartyThu02.04.|Einlass 23:00|Beginn23:00Party|80sCancelledSold-Out",
+    "id": 1351948720,
+    "title": "Beginn 23:00Party80s02.04.April 2026I'm Still Standing PartyThu02.04.|Einlass…",
     "date": "2026-04-02",
     "time": "23:00",
     "locationId": 36,
@@ -2589,8 +2589,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 230304418,
-    "title": "Beginn 20:00KonzertAlternative Rock03.04.April 2026OktobernattFri03.04.|Einlass 19:00|Beginn20:00Konzert|Alternative RockCancelledSold-Out",
+    "id": 1119276047,
+    "title": "Beginn 20:00KonzertAlternative Rock03.04.April 2026OktobernattFri03.04.|Einlass…",
     "date": "2026-04-03",
     "time": "20:00",
     "locationId": 36,
@@ -2757,8 +2757,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 178459263,
-    "title": "Beginn 23:00PartyPop & Queer Icons03.04.April 2026I Can't Stop DancingFri03.04.|Einlass 23:00|Beginn23:00Party|Pop & Queer IconsCancelledSold-Out",
+    "id": 1545458167,
+    "title": "Beginn 23:00PartyPop & Queer Icons03.04.April 2026I Can't Stop…",
     "date": "2026-04-03",
     "time": "23:00",
     "locationId": 36,
@@ -3042,8 +3042,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 912649061,
-    "title": "Beginn 22:00PartyRock, Pop & Core04.04.April 2026DTB Maximum Rock Night mit PigeonsSat04.04.|Einlass 22:00|Beginn22:00Party|Rock, Pop & CoreCancelledSold-Out",
+    "id": 1423131038,
+    "title": "Beginn 22:00PartyRock, Pop & Core04.04.April 2026DTB Maximum Rock Night mit…",
     "date": "2026-04-04",
     "time": "22:00",
     "locationId": 36,
@@ -3146,11 +3146,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1966020407,
+    "id": 1966020435,
     "title": "Die Horns-Vogelstimmenwanderung mit Tómas Brückmann",
     "date": "2026-04-05",
     "time": "18:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/die-horns-vogelstimmenwanderung-mit-tomas-brueckmann-6/",
@@ -3289,8 +3289,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 804224862,
-    "title": "Beginn 20:00KonzertThrash Metal05.04.April 2026CARNIVORE A.DSun05.04.|Einlass 19:00|Beginn20:00Konzert|Thrash MetalCancelledSold-Out",
+    "id": 1426724590,
+    "title": "Beginn 20:00KonzertThrash Metal05.04.April 2026CARNIVORE A.DSun05.04.|Einlass…",
     "date": "2026-04-05",
     "time": "20:00",
     "locationId": 36,
@@ -3340,8 +3340,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1784626216,
-    "title": "Beginn 23:00PartyPop Anthems05.04.April 2026Stay Wild PartySun05.04.|Einlass 23:00|Beginn23:00Party|Pop AnthemsCancelledSold-Out",
+    "id": 485188383,
+    "title": "Beginn 23:00PartyPop Anthems05.04.April 2026Stay Wild PartySun05.04.|Einlass…",
     "date": "2026-04-05",
     "time": "23:00",
     "locationId": 36,
@@ -3451,7 +3451,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/hexvessel-aluk-todolo-nihil-nihil-urban-spree-berlin.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/hexvessel-aluk-todolo-nihil-nihil-urban-spree-berlin.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -3516,7 +3516,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/lik-berlin-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/lik-berlin-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -3561,11 +3561,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 945851331,
+    "id": 945851303,
     "title": "ADOLF SÜDKNECHT – Die Seifenoper Improschau – … Hinterm Mond",
     "date": "2026-04-07",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/adolf-suedknecht-die-seifenoper-improschau-hinterm-mond-4/",
@@ -3696,8 +3696,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 997226097,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop07.04.April 2026Super TuesdayTue07.04.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1867182381,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop07.04.April 2026Super…",
     "date": "2026-04-07",
     "time": "23:00",
     "locationId": 36,
@@ -3878,11 +3878,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 2069107308,
+    "id": 2069107280,
     "title": "Songwerkstatt mit Daniel Seip und Holunder – Singer/Songwriter",
     "date": "2026-04-08",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/songwerkstatt-singer-songwriter/",
@@ -4119,11 +4119,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 2034751956,
+    "id": 2034751928,
     "title": "Horns[dʒæz]Session – Eintritt frei",
     "date": "2026-04-09",
     "time": "19:30",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/hornsd%ca%92aezsession-eintritt-frei-30/",
@@ -4387,8 +4387,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 483388251,
-    "title": "Beginn 19:30KonzertPunkrock10.04.April 2026Der Dicke Polizist - Freifahrt ohne Ziel Tour Fri10.04.|Einlass 19:00|Beginn19:30Konzert|PunkrockCancelledSold-Out",
+    "id": 1729805065,
+    "title": "Beginn 19:30KonzertPunkrock10.04.April 2026Der Dicke Polizist - Freifahrt ohne…",
     "date": "2026-04-10",
     "time": "19:30",
     "locationId": 36,
@@ -4478,11 +4478,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 135791775,
+    "id": 135791803,
     "title": "matrix of emotion [the trio] – Classic Swing & Gypsy Swing",
     "date": "2026-04-10",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/matrix-of-emotion-the-trio-classic-swing-gypsy-swing/",
@@ -4594,19 +4594,6 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 291090871,
-    "title": "Caosonora + Rain70",
-    "date": "2026-04-10",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/caosonora-rain70/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-26"
-  },
-  {
     "id": 1346323939,
     "title": "Deathwood",
     "date": "2026-04-10",
@@ -4665,7 +4652,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/rome-in-reverse-noklan-lemon-lights.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/rome-in-reverse-noklan-lemon-lights.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -4710,8 +4697,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1646870752,
-    "title": "Beginn 23:00PartyPop Punk, Indie, Karaoke10.04.April 2026What's My Age Again?Fri10.04.|Einlass 23:00|Beginn23:00Party|Pop Punk, Indie, KaraokeCancelledSold-Out",
+    "id": 420415947,
+    "title": "Beginn 23:00PartyPop Punk, Indie, Karaoke10.04.April 2026What's My Age…",
     "date": "2026-04-10",
     "time": "23:00",
     "locationId": 36,
@@ -4930,11 +4917,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1332476913,
+    "id": 1332476885,
     "title": "Steaming Animals – Alternative / Indie",
     "date": "2026-04-11",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/steaming-animals-alternative-indie/",
@@ -5093,19 +5080,6 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 2045823899,
-    "title": "PERCOSSA FOSSILE +TINNITUS ATTACK",
-    "date": "2026-04-11",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/percossa-fossile-tinnitus-attack/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-26"
-  },
-  {
     "id": 324447400,
     "title": "Angstpop",
     "date": "2026-04-11",
@@ -5158,8 +5132,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1753356751,
-    "title": "Beginn 22:00Party80s, 90s, Karaoke11.04.April 2026Dirty Dancing PartySat11.04.|Einlass 22:00|Beginn22:00Party|80s, 90s, KaraokeCancelledSold-Out",
+    "id": 1090484707,
+    "title": "Beginn 22:00Party80s, 90s, Karaoke11.04.April 2026Dirty Dancing…",
     "date": "2026-04-11",
     "time": "22:00",
     "locationId": 36,
@@ -5384,7 +5358,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/lili-refrain-berlin-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/lili-refrain-berlin-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -5722,8 +5696,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 993558964,
-    "title": "Beginn 20:00KonzertHip Hop, Rap 13.04.April 2026Apollo BrownMon13.04.|Einlass 19:00|Beginn20:00Konzert|Hip Hop, Rap CancelledSold-Out",
+    "id": 969571952,
+    "title": "Beginn 20:00KonzertHip Hop, Rap 13.04.April 2026Apollo BrownMon13.04.|Einlass…",
     "date": "2026-04-13",
     "time": "20:00",
     "locationId": 36,
@@ -5930,8 +5904,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1922858739,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop14.04.April 2026Super TuesdayTue14.04.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1551617453,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop14.04.April 2026Super…",
     "date": "2026-04-14",
     "time": "23:00",
     "locationId": 36,
@@ -5988,7 +5962,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/mandy,-indiana-berlin-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/mandy,-indiana-berlin-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -6069,8 +6043,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1875543084,
-    "title": "Beginn 19:30SonstigesKneipenquiz 15.04.April 2026QuizcarraldoWed15.04.|Einlass 19:00|Beginn19:30Sonstiges|Kneipenquiz CancelledSold-Out",
+    "id": 1008550481,
+    "title": "Beginn 19:30SonstigesKneipenquiz 15.04.April 2026QuizcarraldoWed15.04.|Einlass…",
     "date": "2026-04-15",
     "time": "19:30",
     "locationId": 36,
@@ -6160,11 +6134,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 746989671,
+    "id": 746989643,
     "title": "Sergio Diaz De Rojas – Neo-Classic",
     "date": "2026-04-15",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/sergio-diaz-de-rojas-neo-classic/",
@@ -6363,11 +6337,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1416946636,
+    "id": 1416946664,
     "title": "Hammond[dʒæz]Session #33 – Eintritt frei!",
     "date": "2026-04-16",
     "time": "19:30",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/hammondd%ca%92aezsession-33-eintritt-frei/",
@@ -6497,7 +6471,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/exhumed-gruesome-echoes-in-red-tour-2026-berlin.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/exhumed-gruesome-echoes-in-red-tour-2026-berlin.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -6829,11 +6803,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1307719829,
+    "id": 1307719857,
     "title": "MARIE ANTOINETTE  – Deutscher Soul Royal Pop",
     "date": "2026-04-17",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/marie-antoinette-deutscher-soul-royal-pop/",
@@ -6849,7 +6823,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/frank-the-baptist-whispers-in-the-shadow-telegram-frank-urban-spree,-berlin.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/frank-the-baptist-whispers-in-the-shadow-telegram-frank-urban-spree,-berlin.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -7018,8 +6992,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1379705635,
-    "title": "Beginn 22:00PartyGothic, EBM, Mittelalterrock17.04.April 2026Dark Masquerade - Runde IIIFri17.04.|Einlass 22:00|Beginn22:00Party|Gothic, EBM, MittelalterrockCancelledSold-Out",
+    "id": 788484106,
+    "title": "Beginn 22:00PartyGothic, EBM, Mittelalterrock17.04.April 2026Dark Masquerade -…",
     "date": "2026-04-17",
     "time": "22:00",
     "locationId": 36,
@@ -7147,11 +7121,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 643037608,
+    "id": 643037636,
     "title": "FREISITZERÖFFNUNG IM HORNS ERBEN mit Deen & Blumenstein",
     "date": "2026-04-18",
     "time": "18:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/deen-blumenstein-indie-folk-glam-folk/",
@@ -7193,7 +7167,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/xoxo,-backstabbed,finalizer,-stray-dogs-berlin.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/xoxo,-backstabbed,finalizer,-stray-dogs-berlin.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -7505,8 +7479,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1488862334,
-    "title": "Beginn 22:00PartyDisco, Pop, Karaoke18.04.April 2026Queer & Friends Party #3Sat18.04.|Einlass 22:00|Beginn22:00Party|Disco, Pop, KaraokeCancelledSold-Out",
+    "id": 1788433922,
+    "title": "Beginn 22:00PartyDisco, Pop, Karaoke18.04.April 2026Queer & Friends Party…",
     "date": "2026-04-18",
     "time": "22:00",
     "locationId": 36,
@@ -7643,19 +7617,6 @@
     "ticketUrl": "https://landstreicher-konzerte.de/konzerte/gbr-b-26",
     "spotifyUrl": "",
     "source": "badehaus",
-    "addedAt": "2026-03-26"
-  },
-  {
-    "id": 635304846,
-    "title": "Jamsession",
-    "date": "2026-04-19",
-    "time": "19:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/jamsession-7/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-03-26"
   },
   {
@@ -7950,7 +7911,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/prostitute-urban-spree,-berlin.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/prostitute-urban-spree,-berlin.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -8201,11 +8162,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 472428839,
+    "id": 472428811,
     "title": "Moritz Sembritzki Quartett – Jazz",
     "date": "2026-04-21",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/moritz-sembritzki-quartett-jazz/",
@@ -8221,7 +8182,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/boko-yout-berlin-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/boko-yout-berlin-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -8277,8 +8238,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 547976279,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop21.04.April 2026Super TuesdayTue21.04.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1236052525,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop21.04.April 2026Super…",
     "date": "2026-04-21",
     "time": "23:00",
     "locationId": 36,
@@ -8432,11 +8393,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1007690095,
+    "id": 1007690123,
     "title": "Duo Walburga Walde & Izabela Kałduńska – Jazz / Folk",
     "date": "2026-04-22",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/duo-walburga-walde-izabela-kaldunska-jazz-folk/",
@@ -8529,7 +8490,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/holosoil-ep-release-show-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/holosoil-ep-release-show-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -8574,11 +8535,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 2101225972,
+    "id": 2101226000,
     "title": "Horns[dʒæz]Session – Eintritt frei",
     "date": "2026-04-23",
     "time": "19:30",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/hornsd%ca%92aezsession-eintritt-frei-31/",
@@ -8826,19 +8787,6 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 419285906,
-    "title": "RIPSHIP + ROMA DESERTA",
-    "date": "2026-04-24",
-    "time": "00:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/ripship-roma-deserta/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-26"
-  },
-  {
     "id": 2125969233,
     "title": "Queer Night Market",
     "date": "2026-04-24",
@@ -9014,7 +8962,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/cruel-machine-x-effetto-notte-ramleh-brak-philipp-strobel.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/cruel-machine-x-effetto-notte-ramleh-brak-philipp-strobel.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -9081,8 +9029,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1781622367,
-    "title": "Beginn 20:00KonzertPost-Hardcore, Mathcore24.04.April 2026CoalesceFri24.04.|Einlass 19:00|Beginn20:00Konzert|Post-Hardcore, MathcoreCancelledSold-Out",
+    "id": 205222906,
+    "title": "Beginn 20:00KonzertPost-Hardcore, Mathcore24.04.April…",
     "date": "2026-04-24",
     "time": "20:00",
     "locationId": 36,
@@ -9223,8 +9171,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 348038396,
-    "title": "Beginn 23:00Party80s, Rock, New Wave24.04.April 2026Forever Young PartyFri24.04.|Einlass 23:00|Beginn23:00Party|80s, Rock, New WaveCancelledSold-Out",
+    "id": 1362076571,
+    "title": "Beginn 23:00Party80s, Rock, New Wave24.04.April 2026Forever Young…",
     "date": "2026-04-24",
     "time": "23:00",
     "locationId": 36,
@@ -9295,7 +9243,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/brakatus-berlin-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/brakatus-berlin-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -9314,8 +9262,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 363881615,
-    "title": "Beginn 19:00KonzertStoner, Doom25.04.April 2026Sonic Rites BerlinSat25.04.|Einlass |Beginn19:00Konzert|Stoner, DoomCancelledSold-Out",
+    "id": 1161910964,
+    "title": "Beginn 19:00KonzertStoner, Doom25.04.April 2026Sonic Rites…",
     "date": "2026-04-25",
     "time": "19:00",
     "locationId": 36,
@@ -9417,11 +9365,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1917745836,
+    "id": 1917745808,
     "title": "DRAGONflies – Balkanpop & Jazz",
     "date": "2026-04-25",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/dragonflies-balkanpop-jazz/",
@@ -9527,19 +9475,6 @@
     "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72066",
     "spotifyUrl": "",
     "source": "moritzbastei",
-    "addedAt": "2026-03-26"
-  },
-  {
-    "id": 833491108,
-    "title": "Reserviert Gregor",
-    "date": "2026-04-25",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/reserviert-gregor/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-03-26"
   },
   {
@@ -9724,19 +9659,6 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 403800413,
-    "title": "Pen &amp; Paper Veranstaltung",
-    "date": "2026-04-26",
-    "time": "15:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/pen-paper-veranstaltung/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-26"
-  },
-  {
     "id": 1016979709,
     "title": "VASTUM + UNDERGANG + CORPUS OFFAL + MORBIFIC…",
     "date": "2026-04-26",
@@ -9744,7 +9666,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/vastum-undergang-corpus-offal-morbific-teratoma-sunday-of-the-sick.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/vastum-undergang-corpus-offal-morbific-teratoma-sunday-of-the-sick.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -9877,8 +9799,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1043143866,
-    "title": "Beginn 20:00KonzertAkustik-Pop, Punk 26.04.April 2026LiedfettSun26.04.|Einlass 19:00|Beginn20:00Konzert|Akustik-Pop, Punk CancelledSold-Out",
+    "id": 1890801926,
+    "title": "Beginn 20:00KonzertAkustik-Pop, Punk 26.04.April 2026LiedfettSun26.04.|Einlass…",
     "date": "2026-04-26",
     "time": "20:00",
     "locationId": 36,
@@ -10232,8 +10154,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 204255664,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop28.04.April 2026Super TuesdayTue28.04.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 2064064179,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop28.04.April 2026Super…",
     "date": "2026-04-28",
     "time": "23:00",
     "locationId": 36,
@@ -10336,8 +10258,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1611762421,
-    "title": "Beginn 19:30SonstigesKneipenquiz 29.04.April 2026QuizcarraldoWed29.04.|Einlass 19:00|Beginn19:30Sonstiges|Kneipenquiz CancelledSold-Out",
+    "id": 45451080,
+    "title": "Beginn 19:30SonstigesKneipenquiz 29.04.April 2026QuizcarraldoWed29.04.|Einlass…",
     "date": "2026-04-29",
     "time": "19:30",
     "locationId": 36,
@@ -10375,11 +10297,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 943129446,
+    "id": 943129474,
     "title": "Johanna Lucia Trio – Modern Jazz",
     "date": "2026-04-29",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/johanna-lucia-trio-modern-jazz/",
@@ -10539,11 +10461,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 125752360,
+    "id": 125752332,
     "title": "Horns[dʒæz]Session – Eintritt frei",
     "date": "2026-04-30",
     "time": "19:30",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/hornsd%ca%92aezsession-eintritt-frei-32/",
@@ -10809,8 +10731,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 841855699,
-    "title": "Beginn 23:30Party3 Spots, 6 Parties, 1 Admission30.04.April 2026Heavy RAWtationThu30.04.|Einlass 23:30|Beginn23:30Party|3 Spots, 6 Parties, 1 AdmissionCancelledSold-Out",
+    "id": 1050237863,
+    "title": "Beginn 23:30Party3 Spots, 6 Parties, 1 Admission30.04.April 2026Heavy…",
     "date": "2026-04-30",
     "time": "23:30",
     "locationId": 36,
@@ -10887,11 +10809,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 966243596,
+    "id": 966243568,
     "title": "Elias Störr Trio – Jazz",
     "date": "2026-05-01",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/elias-stoerr-trio-jazz/",
@@ -11112,7 +11034,7 @@
     "locationId": 21,
     "type": "party",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/dancing-on-our-graves-at-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/dancing-on-our-graves-at-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -11666,8 +11588,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 614644129,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop05.05.Mai 2026Super TuesdayTue05.05.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1971103394,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop05.05.Mai 2026Super…",
     "date": "2026-05-05",
     "time": "23:00",
     "locationId": 36,
@@ -11770,11 +11692,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 572027584,
+    "id": 572027612,
     "title": "Manu Louis – diagonal electronic Jazz",
     "date": "2026-05-06",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/manu-louis-diagonal-electronic-jazz/",
@@ -11830,8 +11752,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1579500791,
-    "title": "Beginn 20:00KonzertShadow Rap06.05.Mai 2026 Warlord ColossusWed06.05.|Einlass 19:00|Beginn20:00Konzert|Shadow RapCancelledSold-Out",
+    "id": 1862948743,
+    "title": "Beginn 20:00KonzertShadow Rap06.05.Mai 2026 Warlord ColossusWed06.05.|Einlass…",
     "date": "2026-05-06",
     "time": "20:00",
     "locationId": 36,
@@ -11920,11 +11842,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 999348499,
+    "id": 999348471,
     "title": "Horns[dʒæz]Session – Eintritt frei",
     "date": "2026-05-07",
     "time": "19:30",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/hornsd%ca%92aezsession-eintritt-frei-34/",
@@ -12032,8 +11954,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 662090161,
-    "title": "Beginn 20:00KonzertIndie-Pop, NDW07.05.Mai 2026Pablu Thu07.05.|Einlass 19:00|Beginn20:00Konzert|Indie-Pop, NDWCancelledSold-Out",
+    "id": 2054041943,
+    "title": "Beginn 20:00KonzertIndie-Pop, NDW07.05.Mai 2026Pablu Thu07.05.|Einlass…",
     "date": "2026-05-07",
     "time": "20:00",
     "locationId": 36,
@@ -12279,11 +12201,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1024152554,
+    "id": 1024152582,
     "title": "Shuteen Erdenebaatar Quartet – Jazz",
     "date": "2026-05-08",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/shuteen-erdenebaatar-quartet-jazz/",
@@ -12474,7 +12396,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/gidiki-european-spring-tour-2026-urban-spree-berlin.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/gidiki-european-spring-tour-2026-urban-spree-berlin.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -12584,11 +12506,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1756697438,
+    "id": 1756697410,
     "title": "munterfel Duo – British Soul",
     "date": "2026-05-09",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/munterfel-duo-british-soul/",
@@ -12782,19 +12704,6 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1175265079,
-    "title": "When the Sun Hits",
-    "date": "2026-05-09",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-3/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-26"
-  },
-  {
     "id": 1771819986,
     "title": "OK BOOMER",
     "date": "2026-05-09",
@@ -12956,7 +12865,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/fotocrime-abrax-urban-spree,-berlin.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/fotocrime-abrax-urban-spree,-berlin.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -13195,11 +13104,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 59815857,
+    "id": 59815829,
     "title": "Suzie Ungerleider  – Folk/Americana/Singer-Songwriter",
     "date": "2026-05-12",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/suzie-ungerleider-folk-americana-singer-songwriter/",
@@ -13304,8 +13213,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1630870467,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop12.05.Mai 2026Super TuesdayTue12.05.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1354672674,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop12.05.Mai 2026Super…",
     "date": "2026-05-12",
     "time": "23:00",
     "locationId": 36,
@@ -13468,11 +13377,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1068640465,
+    "id": 1068640493,
     "title": "Horns[dʒæz]Session – Eintritt frei",
     "date": "2026-05-14",
     "time": "19:30",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/hornsd%ca%92aezsession-eintritt-frei-35/",
@@ -13563,19 +13472,6 @@
     "ticketUrl": "https://www.zigzag-jazzclub.berlin/program-mai/waan",
     "spotifyUrl": "",
     "source": "zigzag",
-    "addedAt": "2026-03-26"
-  },
-  {
-    "id": 509881805,
-    "title": "Magmasurfer + Banana Of Death + EDDIE",
-    "date": "2026-05-14",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/magmasurfer-banana-of-death-eddie/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-03-26"
   },
   {
@@ -13747,11 +13643,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 79708052,
+    "id": 79708080,
     "title": "Liv Solveig – Symphonic Pop",
     "date": "2026-05-15",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/liv-solveig-symphonic-pop/",
@@ -13760,8 +13656,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1625628552,
-    "title": "Beginn 20:00KonzertRap15.05.Mai 2026 Döll Fri15.05.|Einlass 19:00|Beginn20:00Konzert|RapCancelledSold-Out",
+    "id": 598791018,
+    "title": "Beginn 20:00KonzertRap15.05.Mai 2026 Döll Fri15.05.|Einlass…",
     "date": "2026-05-15",
     "time": "20:00",
     "locationId": 36,
@@ -13806,7 +13702,7 @@
     "locationId": 21,
     "type": "party",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/crave-tapes-pres.-the-violent-youth,-psyche.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/crave-tapes-pres.-the-violent-youth,-psyche.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -13964,8 +13860,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1083382277,
-    "title": "Beginn 20:00KonzertNoise16.05.Mai 2026Pharmakon Sat16.05.|Einlass 19:00|Beginn20:00Konzert|NoiseCancelledSold-Out",
+    "id": 319455844,
+    "title": "Beginn 20:00KonzertNoise16.05.Mai 2026Pharmakon Sat16.05.|Einlass…",
     "date": "2026-05-16",
     "time": "20:00",
     "locationId": 36,
@@ -14000,19 +13896,6 @@
     "ticketUrl": "https://www.moritzbastei.de/event/special/2026-05-16/ein-kessel-schwarzes-2",
     "spotifyUrl": "",
     "source": "moritzbastei",
-    "addedAt": "2026-03-26"
-  },
-  {
-    "id": 624291891,
-    "title": "RIVER LUCIFER + Freier Slot für Leipziger Band",
-    "date": "2026-05-16",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/river-lucifer-freier-slot-fuer-leipziger-band/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-03-26"
   },
   {
@@ -14080,19 +13963,6 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1459052977,
-    "title": "Jamsession",
-    "date": "2026-05-17",
-    "time": "19:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/jamsession-8/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-26"
-  },
-  {
     "id": 1903728875,
     "title": "Febre90s",
     "date": "2026-05-17",
@@ -14113,7 +13983,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/emmon-a-solemn-promise-urban-spree,-berlin.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/emmon-a-solemn-promise-urban-spree,-berlin.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -14393,8 +14263,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1118507292,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop19.05.Mai 2026Super TuesdayTue19.05.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 2020660478,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop19.05.Mai 2026Super…",
     "date": "2026-05-19",
     "time": "23:00",
     "locationId": 36,
@@ -14494,11 +14364,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1649598041,
+    "id": 1649598069,
     "title": "Andino Project – Sudmwriacana/ World Music",
     "date": "2026-05-20",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/andino-project-sudmwriacana-world-music/",
@@ -14670,11 +14540,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 2140562479,
+    "id": 2140562451,
     "title": "Hammond[dʒæz]Session – Eintritt frei!",
     "date": "2026-05-21",
     "time": "19:30",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/hammondd%ca%92aezsession-eintritt-frei-2/",
@@ -15035,8 +14905,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 412015416,
-    "title": "Beginn 20:00KonzertRap 22.05.Mai 2026HexerFri22.05.|Einlass 19:00|Beginn20:00Konzert|Rap CancelledSold-Out",
+    "id": 144382122,
+    "title": "Beginn 20:00KonzertRap 22.05.Mai 2026HexerFri22.05.|Einlass…",
     "date": "2026-05-22",
     "time": "20:00",
     "locationId": 36,
@@ -15217,19 +15087,6 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 2118241165,
-    "title": "Reserviert",
-    "date": "2026-05-23",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/reserviert-4/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-26"
-  },
-  {
     "id": 2125873622,
     "title": "SOUNDSYSTEM SESSION NO. 5",
     "date": "2026-05-23",
@@ -15308,8 +15165,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 657055230,
-    "title": "Beginn 14:00KonzertMetalcore / Rock24.05.Mai 2026Spring Bash 2026Sun24.05.|Einlass |Beginn14:00Konzert|Metalcore / RockCancelledSold-Out",
+    "id": 1544244815,
+    "title": "Beginn 14:00KonzertMetalcore / Rock24.05.Mai 2026Spring Bash…",
     "date": "2026-05-24",
     "time": "14:00",
     "locationId": 36,
@@ -15583,8 +15440,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 930945408,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop26.05.Mai 2026Super TuesdayTue26.05.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1657876098,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop26.05.Mai 2026Super…",
     "date": "2026-05-26",
     "time": "23:00",
     "locationId": 36,
@@ -15708,11 +15565,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1715082450,
+    "id": 1715082422,
     "title": "Horns[dʒæz]Session – Eintritt frei",
     "date": "2026-05-28",
     "time": "19:30",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/hornsd%ca%92aezsession-eintritt-frei-36/",
@@ -15796,8 +15653,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1569407054,
-    "title": "Beginn 20:00KonzertRap28.05.Mai 2026S.3000Thu28.05.|Einlass 19:00|Beginn20:00Konzert|RapCancelledSold-Out",
+    "id": 1685284244,
+    "title": "Beginn 20:00KonzertRap28.05.Mai 2026S.3000Thu28.05.|Einlass…",
     "date": "2026-05-28",
     "time": "20:00",
     "locationId": 36,
@@ -15855,7 +15712,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/la-sécurité-urban-spree,-berlin.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/la-sécurité-urban-spree,-berlin.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -15990,11 +15847,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1925608921,
+    "id": 1925608893,
     "title": "Henny Herz & Floatist – Indie/Folk/Soul",
     "date": "2026-05-29",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/henny-herz-floatist-indie-folk-soul/",
@@ -16150,7 +16007,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/snuggle-berlin-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/snuggle-berlin-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -16352,7 +16209,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/way-dynamic-berlin-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/way-dynamic-berlin-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -16482,8 +16339,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1658000704,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop02.06.Juni 2026Super TuesdayTue02.06.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1425826815,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop02.06.Juni 2026Super…",
     "date": "2026-06-02",
     "time": "23:00",
     "locationId": 36,
@@ -16951,8 +16808,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1284382298,
-    "title": "Beginn 20:00KonzertDeath Metal08.06.Juni 2026CryptaMon08.06.|Einlass 19:00|Beginn20:00Konzert|Death MetalCancelledSold-Out",
+    "id": 1724214872,
+    "title": "Beginn 20:00KonzertDeath Metal08.06.Juni 2026CryptaMon08.06.|Einlass…",
     "date": "2026-06-08",
     "time": "20:00",
     "locationId": 36,
@@ -17042,8 +16899,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1533446951,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop09.06.Juni 2026Super TuesdayTue09.06.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1313027873,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop09.06.Juni 2026Super…",
     "date": "2026-06-09",
     "time": "23:00",
     "locationId": 36,
@@ -17075,7 +16932,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/kumo-99-berlin-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/kumo-99-berlin-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -17286,7 +17143,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/berlin-breakout-2026.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/berlin-breakout-2026.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -17635,8 +17492,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1414335683,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop16.06.Juni 2026Super TuesdayTue16.06.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 616455263,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop16.06.Juni 2026Super…",
     "date": "2026-06-16",
     "time": "23:00",
     "locationId": 36,
@@ -18066,8 +17923,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1090074243,
-    "title": "Beginn 20:00KonzertAlternative22.06.Juni 2026Magnolia Park Mon22.06.|Einlass 19:00|Beginn20:00Konzert|AlternativeCancelledSold-Out",
+    "id": 304753369,
+    "title": "Beginn 20:00KonzertAlternative22.06.Juni 2026Magnolia Park Mon22.06.|Einlass…",
     "date": "2026-06-22",
     "time": "20:00",
     "locationId": 36,
@@ -18130,8 +17987,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1295224415,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop23.06.Juni 2026Super TuesdayTue23.06.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1749028897,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop23.06.Juni 2026Super…",
     "date": "2026-06-23",
     "time": "23:00",
     "locationId": 36,
@@ -18540,8 +18397,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1176113147,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop30.06.Juni 2026Super TuesdayTue30.06.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 180454239,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop30.06.Juni 2026Super…",
     "date": "2026-06-30",
     "time": "23:00",
     "locationId": 36,
@@ -18604,8 +18461,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 812067485,
-    "title": "Beginn 20:00KonzertSkate Punk03.07.Juli 2026Strung OutFri03.07.|Einlass 19:00|Beginn20:00Konzert|Skate PunkCancelledSold-Out",
+    "id": 2137684380,
+    "title": "Beginn 20:00KonzertSkate Punk03.07.Juli 2026Strung OutFri03.07.|Einlass…",
     "date": "2026-07-03",
     "time": "20:00",
     "locationId": 36,
@@ -18742,8 +18599,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 68968132,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop07.07.Juli 2026Super TuesdayTue07.07.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1906097981,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop07.07.Juli 2026Super…",
     "date": "2026-07-07",
     "time": "23:00",
     "locationId": 36,
@@ -18885,8 +18742,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1281656511,
-    "title": "Beginn 14:00KonzertHardcore Punk13.06.Juli 2026Berlin Breakout 2026Sat13.06.|Einlass 13:00|Beginn14:00Konzert|Hardcore PunkCancelledSold-Out",
+    "id": 729993302,
+    "title": "Beginn 14:00KonzertHardcore Punk13.06.Juli 2026Berlin Breakout…",
     "date": "2026-07-13",
     "time": "14:00",
     "locationId": 36,
@@ -18911,8 +18768,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 50143136,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop14.07.Juli 2026Super TuesdayTue14.07.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 459386179,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop14.07.Juli 2026Super…",
     "date": "2026-07-14",
     "time": "23:00",
     "locationId": 36,
@@ -19063,8 +18920,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 169254404,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop21.07.Juli 2026Super TuesdayTue21.07.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1470096957,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop21.07.Juli 2026Super…",
     "date": "2026-07-21",
     "time": "23:00",
     "locationId": 36,
@@ -19292,8 +19149,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1272774045,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop28.07.Juli 2026Super TuesdayTue28.07.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1268757731,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop28.07.Juli 2026Super…",
     "date": "2026-07-28",
     "time": "23:00",
     "locationId": 36,
@@ -19512,8 +19369,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 28704153,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop04.08.August 2026Super TuesdayTue04.08.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1312780446,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop04.08.August 2026Super…",
     "date": "2026-08-04",
     "time": "23:00",
     "locationId": 36,
@@ -19558,7 +19415,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/cripping-alcoholism-berlin-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/cripping-alcoholism-berlin-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -19654,8 +19511,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1151687937,
-    "title": "Beginn 20:00Konzert Deutschpunk09.08.August 2026EA80Sun09.08.|Einlass 19:00|Beginn20:00Konzert| DeutschpunkCancelledSold-Out",
+    "id": 1225350792,
+    "title": "Beginn 20:00Konzert Deutschpunk09.08.August 2026EA80Sun09.08.|Einlass…",
     "date": "2026-08-09",
     "time": "20:00",
     "locationId": 36,
@@ -19693,8 +19550,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 415343619,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop11.08.August 2026Super TuesdayTue11.08.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1789608674,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop11.08.August 2026Super…",
     "date": "2026-08-11",
     "time": "23:00",
     "locationId": 36,
@@ -19836,8 +19693,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1621128086,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop18.08.August 2026Super TuesdayTue18.08.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1729761342,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop18.08.August 2026Super…",
     "date": "2026-08-18",
     "time": "23:00",
     "locationId": 36,
@@ -20081,8 +19938,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1942177765,
-    "title": "Beginn 19:00Konzertdark metal 03.09.September 2026LACRIMAS PROFUNDEREThu03.09.|Einlass 18:30|Beginn19:00Konzert|dark metal CancelledSold-Out",
+    "id": 1061101137,
+    "title": "Beginn 19:00Konzertdark metal 03.09.September 2026LACRIMAS…",
     "date": "2026-09-03",
     "time": "19:00",
     "locationId": 36,
@@ -20276,7 +20133,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/weird-nightmare-berlin-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/weird-nightmare-berlin-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -20359,8 +20216,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 720026848,
-    "title": "Beginn 20:00KonzertDesert Rock11.09.September 2026 ANNIE TAYLORFri11.09.|Einlass 19:00|Beginn20:00Konzert|Desert RockCancelledSold-Out",
+    "id": 1160927989,
+    "title": "Beginn 20:00KonzertDesert Rock11.09.September 2026 ANNIE TAYLORFri11.09.|Einlass…",
     "date": "2026-09-11",
     "time": "20:00",
     "locationId": 36,
@@ -20565,8 +20422,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 670696280,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop15.09.September 2026Super TuesdayTue15.09.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 94844098,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop15.09.September 2026Super…",
     "date": "2026-09-15",
     "time": "23:00",
     "locationId": 36,
@@ -20616,8 +20473,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 424688647,
-    "title": "Beginn 20:00KonzertHyper Rock16.09.September 2026h3nceWed16.09.|Einlass 19:00|Beginn20:00Konzert|Hyper RockCancelledSold-Out",
+    "id": 2022808021,
+    "title": "Beginn 20:00KonzertHyper Rock16.09.September 2026h3nceWed16.09.|Einlass…",
     "date": "2026-09-16",
     "time": "20:00",
     "locationId": 36,
@@ -21022,8 +20879,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1251192049,
-    "title": "Beginn 20:00KonzertSka / Third Wave Ska / Reggae-influenced Punk24.09.September 2026THE TOASTERS – 45 Years in Ska Tour 2026Thu24.09.|Einlass 19:00|Beginn20:00Konzert|Ska / Third Wave Ska / Reggae-influenced PunkCancelledSold-Out",
+    "id": 1385037398,
+    "title": "Beginn 20:00KonzertSka / Third Wave Ska / Reggae-influenced Punk24.09.September…",
     "date": "2026-09-24",
     "time": "20:00",
     "locationId": 36,
@@ -21213,11 +21070,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 992313246,
+    "id": 992313218,
     "title": "Paula & Karol – Folk, Pop",
     "date": "2026-09-26",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/songwerkstatt-doppelkonzert-barbara-greulich-karla/",
@@ -21861,8 +21718,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 154760121,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop06.10.Oktober 2026Super TuesdayTue06.10.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 2107141861,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop06.10.Oktober 2026Super…",
     "date": "2026-10-06",
     "time": "23:00",
     "locationId": 36,
@@ -22411,8 +22268,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1807703637,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop13.10.Oktober 2026Super TuesdayTue13.10.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 422359653,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop13.10.Oktober 2026Super…",
     "date": "2026-10-13",
     "time": "23:00",
     "locationId": 36,
@@ -22857,8 +22714,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 834320143,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop20.10.Oktober 2026Super TuesdayTue20.10.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 1262422555,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop20.10.Oktober 2026Super…",
     "date": "2026-10-20",
     "time": "23:00",
     "locationId": 36,
@@ -23041,7 +22898,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/tribute-to-nothing-berlin-urban-spree.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/tribute-to-nothing-berlin-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -23279,11 +23136,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 379691704,
+    "id": 379691732,
     "title": "Ezé – Pop, Singersongwriter, Rap",
     "date": "2026-10-24",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/eze-pop-singersongwriter-rap/",
@@ -23466,8 +23323,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 652657560,
-    "title": "Beginn 23:00Party80s, Disco & Hip Hop27.10.Oktober 2026Super TuesdayTue27.10.|Einlass 23:00|Beginn23:00Party|80s, Disco & Hip HopCancelledSold-Out",
+    "id": 463865541,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop27.10.Oktober 2026Super…",
     "date": "2026-10-27",
     "time": "23:00",
     "locationId": 36,
@@ -24106,8 +23963,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 86473478,
-    "title": "Beginn 20:00KonzertMetal06.11.November 2026ELEINEFri06.11.|Einlass 19:00|Beginn20:00Konzert|MetalCancelledSold-Out",
+    "id": 184777418,
+    "title": "Beginn 20:00KonzertMetal06.11.November 2026ELEINEFri06.11.|Einlass…",
     "date": "2026-11-06",
     "time": "20:00",
     "locationId": 36,
@@ -25233,7 +25090,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/wisborg-phantomschmerz-tour-berlin-special-guest-the-fright.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/wisborg-phantomschmerz-tour-berlin-special-guest-the-fright.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -25550,7 +25407,7 @@
     "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.comprogram/concerts/fïx8sëd8-nerogris-schneider-urban-spree,-berlin.html",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/fïx8sëd8-nerogris-schneider-urban-spree,-berlin.html",
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-03-26"
@@ -25647,11 +25504,11 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 1977225214,
+    "id": 1977225242,
     "title": "PAULA PAULA  – Indiepop",
     "date": "2026-11-28",
     "time": "20:00",
-    "locationId": 26,
+    "locationId": 19,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://horns-erben.de/event/paula-paula-indiepop/",
@@ -26032,8 +25889,8 @@
     "addedAt": "2026-03-26"
   },
   {
-    "id": 64807411,
-    "title": "Beginn 20:00KonzertMetalcore04.12.Dezember 2026Empire Of Giants JahresabschlussFri04.12.|Einlass 19:00|Beginn20:00Konzert|MetalcoreCancelledSold-Out",
+    "id": 429076790,
+    "title": "Beginn 20:00KonzertMetalcore04.12.Dezember 2026Empire Of Giants…",
     "date": "2026-12-04",
     "time": "20:00",
     "locationId": 36,
