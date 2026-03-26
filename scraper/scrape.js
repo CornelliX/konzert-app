@@ -582,20 +582,33 @@ async function scrapeColumbiahalle() {
   console.log('📡 Columbiahalle Berlin...')
   const events = []
   try {
-    // SSL-Zertifikat der Site hat Sperrlisten-Probleme → https.get mit rejectUnauthorized:false
-    const https = await import('node:https')
-    const html = await new Promise((resolve, reject) => {
-      https.default.get({
-        hostname: 'www.columbiahalle.berlin',
-        path: '/veranstaltungen.html',
-        headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' },
-        rejectUnauthorized: false
-      }, res => {
-        let data = ''
-        res.on('data', chunk => data += chunk)
-        res.on('end', () => resolve(data))
-      }).on('error', reject)
-    })
+    // fetch() zuerst (funktioniert auf Linux/GitHub Actions ohne SSL-Probleme)
+    // Fallback: https.get mit rejectUnauthorized:false (Windows hat CRL-Problem bei diesem Zertifikat)
+    let html
+    try {
+      const res = await fetch('https://www.columbiahalle.berlin/veranstaltungen.html', {
+        headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
+      })
+      html = await res.text()
+      console.log(`  fetch OK, ${html.length} bytes`)
+    } catch (fetchErr) {
+      console.log(`  fetch fehlgeschlagen (${fetchErr.message}), Fallback auf https.get...`)
+      const https = await import('node:https')
+      html = await new Promise((resolve, reject) => {
+        const req = https.default.get({
+          hostname: 'www.columbiahalle.berlin',
+          path: '/veranstaltungen.html',
+          headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' },
+          rejectUnauthorized: false
+        }, res => {
+          let data = ''
+          res.on('data', chunk => data += chunk)
+          res.on('end', () => resolve(data))
+        }).on('error', reject)
+        req.setTimeout(15000, () => { req.destroy(); reject(new Error('timeout')) })
+      })
+      console.log(`  https.get OK, ${html.length} bytes`)
+    }
 
     const $ = cheerio.load(html)
     const months = { Januar:1, Februar:2, März:3, April:4, Mai:5, Juni:6, Juli:7, August:8, September:9, Oktober:10, November:11, Dezember:12 }
