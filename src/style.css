@@ -47,3 +47,6 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 .flatpickr-time .numInputWrapper span { border-color:rgba(255,255,255,0.2) !important; }
 .flatpickr-time .numInputWrapper span svg { fill:white !important; }
 .flatpickr-input { width:100% !important; border-radius:12px !important; padding:10px 14px !important; font-size:14px !important; color:white !important; outline:none !important; background:rgba(255,255,255,0.06) !important; border:1px solid rgba(255,255,255,0.1) !important; font-family:'DM Sans',sans-serif !important; box-sizing:border-box !important; }
+@keyframes skeleton-pulse { 0%,100%{opacity:0.25} 50%{opacity:0.5} }
+.skeleton-pulse { animation: skeleton-pulse 1.6s ease-in-out infinite; }
+#app-header { transition: opacity 0.3s ease; }
