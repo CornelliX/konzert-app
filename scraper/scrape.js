@@ -2964,6 +2964,27 @@ async function main() {
     if (r.status === 'fulfilled') allEvents = allEvents.concat(r.value)
   }
 
+  // Venues die 0 Events lieferten: aus letztem Snapshot nachladen (CI-IP-Blockierung)
+  const scrapedLocationIds = new Set(allEvents.map(e => e.locationId))
+  const fallbackLocationIds = [32] // Columbiahalle
+  const outPathForFallback = path.join(process.cwd(), 'public', 'events.json')
+  let snapshotEvents = []
+  try { snapshotEvents = JSON.parse(fs.readFileSync(outPathForFallback, 'utf-8')) } catch(e) {}
+  if (snapshotEvents.length === 0) {
+    // In CI: scraper läuft aus scraper/, also auch ../public/events.json prüfen
+    try { snapshotEvents = JSON.parse(fs.readFileSync(path.join(process.cwd(), '..', 'public', 'events.json'), 'utf-8')) } catch(e) {}
+  }
+  const todayStr2 = new Date().toISOString().split('T')[0]
+  for (const locId of fallbackLocationIds) {
+    if (!scrapedLocationIds.has(locId)) {
+      const cached = snapshotEvents.filter(e => e.locationId === locId && e.date >= todayStr2)
+      if (cached.length > 0) {
+        console.log(`  ⚠️  locationId ${locId}: 0 Events gescraped, nutze ${cached.length} gecachte Events aus letztem Snapshot`)
+        allEvents = allEvents.concat(cached)
+      }
+    }
+  }
+
   // Duplikate entfernen (gleicher Titel + Datum + Location)
   const seen = new Set()
   allEvents = allEvents.filter(e => {
