@@ -582,21 +582,30 @@ async function scrapeColumbiahalle() {
   console.log('📡 Columbiahalle Berlin...')
   const events = []
   try {
-    const res = await fetch('https://www.columbiahalle.berlin/veranstaltungen.html', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
+    // SSL-Zertifikat der Site hat Sperrlisten-Probleme → https.get mit rejectUnauthorized:false
+    const https = await import('node:https')
+    const html = await new Promise((resolve, reject) => {
+      https.default.get({
+        hostname: 'www.columbiahalle.berlin',
+        path: '/veranstaltungen.html',
+        headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' },
+        rejectUnauthorized: false
+      }, res => {
+        let data = ''
+        res.on('data', chunk => data += chunk)
+        res.on('end', () => resolve(data))
+      }).on('error', reject)
     })
-    const html = await res.text()
+
     const $ = cheerio.load(html)
     const months = { Januar:1, Februar:2, März:3, April:4, Mai:5, Juni:6, Juli:7, August:8, September:9, Oktober:10, November:11, Dezember:12 }
     const seen = new Set()
     let currentMonth = 0
     let currentYear = new Date().getFullYear()
 
-    // Struktur: div.mod_eventlist enthält h1 (Monate) + div.event.eventlist_event (Events)
-    // h1 können direkte Kinder ODER in Wrapper-Divs sein → nach Dokumentreihenfolge scannen
+    // Monat-h1 und eventlist_event in Dokumentreihenfolge scannen
     $('h1, div.eventlist_event').each((_, el) => {
       const text = $(el).text().trim()
-      // h1 = Monatsüberschrift
       if ($(el).is('h1') && /^\S+\s+\d{4}$/.test(text)) {
         const monthMatch = text.match(/^(\S+)\s+(\d{4})$/)
         if (monthMatch && months[monthMatch[1]]) {
@@ -608,12 +617,10 @@ async function scrapeColumbiahalle() {
       if (!$(el).hasClass('eventlist_event')) return
       if (!currentMonth) return
 
-      // Tag-Zahl
       const day = parseInt($(el).find('p.event_datum_tag').first().text().trim())
       if (!day || isNaN(day)) return
 
-      // Titel
-      const title = $(el).find('div.event_kopf h2, .event_kopf h2').first().text().trim()
+      const title = $(el).find('.event_kopf h2').first().text().trim()
       if (!title || title.length < 2) return
 
       const date = `${currentYear}-${String(currentMonth).padStart(2,'0')}-${String(day).padStart(2,'0')}`
@@ -621,17 +628,19 @@ async function scrapeColumbiahalle() {
       if (seen.has(date + title)) return
       seen.add(date + title)
 
-      // Zeit aus div.event_info
-      const infoText = $(el).find('div.event_info').first().text()
+      const infoText = $(el).find('div.event_info_spalte.zeit').first().text()
       const timeMatch = infoText.match(/Beginn:\s*(\d{1,2}):(\d{2})\s*Uhr/)
-      const time = timeMatch
-        ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}`
-        : '20:00'
+      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
 
-      const ticketLink = $(el).find('a[href*="ticket"], a[href*="eventim"], a[href*="loft"], a[href*="landstreicher"]').first().attr('href') ||
-        'https://www.columbiahalle.berlin/veranstaltungen.html'
+      // Venue-eigene Event-Seite bevorzugen
+      const calHref = $(el).find('div.event_info_spalte.calendar a').first().attr('href') || ''
+      const venueUrl = calHref
+        ? (calHref.startsWith('http') ? calHref : 'https://www.columbiahalle.berlin/' + calHref)
+        : ''
+      const extTicket = $(el).find('div.event_info_spalte.tickets a').first().attr('href') || ''
+      const ticketUrl = venueUrl || extTicket || 'https://www.columbiahalle.berlin/veranstaltungen.html'
 
-      events.push({ title, date, time, locationId: 32, type: detectType(title), description: '', ticketUrl: ticketLink, spotifyUrl: '', source: 'columbiahalle' })
+      events.push({ title, date, time, locationId: 32, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'columbiahalle' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Columbiahalle: ${e.message}`) }
@@ -2602,90 +2611,74 @@ async function scrapeColumbiaTheater() {
 }
 
 async function scrapePrachtwerk() {
-  console.log('📡 Prachtwerk Berlin (Puppeteer)...')
+  // SociableKit/AccentAPI liefert Facebook-Events als JSON – kein Puppeteer nötig
+  console.log('📡 Prachtwerk Berlin (AccentAPI)...')
   const events = []
-  let browser
   try {
-    const puppeteer = await import('puppeteer')
-    browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
-    const page = await browser.newPage()
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
-    await page.goto('https://www.prachtwerkberlin.com/live-music-events', {
-      waitUntil: 'networkidle2', timeout: 45000
+    const res = await fetch('https://data.accentapi.com/feed/35219.json', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
     })
-    // SociableKit-Widget lädt Facebook-Events asynchron – länger warten
-    await new Promise(r => setTimeout(r, 6000))
-
-    const html = await page.content()
-    const $ = cheerio.load(html)
+    const data = await res.json()
     const seen = new Set()
 
-    const monthMap = {
-      'Jan':'01','Feb':'02','Mar':'03','Apr':'04','May':'05','Jun':'06',
-      'Jul':'07','Aug':'08','Sep':'09','Oct':'10','Nov':'11','Dec':'12',
-      'Mär':'03','Mrz':'03','Okt':'10','Dez':'12',
-      // Deutsch
-      'Januar':'01','Februar':'02','März':'03','April':'04','Mai':'05','Juni':'06',
-      'Juli':'07','August':'08','September':'09','Oktober':'10','November':'11','Dezember':'12'
-    }
+    for (const e of (data.events || [])) {
+      const date = e.start_date_raw  // YYYY-MM-DD
+      if (!date || date < today()) continue
 
-    // SociableKit rendert Event-Karten mit Klassen wie .skit-post, .sc-event o.ä.
-    // Fallback: alle Links + Elemente mit Datum-Text durchsuchen
-    const candidates = $('a, article, div[class*="event"], div[class*="skit"], div[class*="post"]')
-    candidates.each((_, el) => {
-      const text = $(el).clone().children('script,style').remove().end().text().trim()
-      if (!text || text.length < 5) return
+      // Berliner Lokalzeit aus Unix-Timestamp
+      const dt = new Date(parseInt(e.start_timestamp) * 1000)
+      const time = dt.toLocaleTimeString('de-DE', {
+        hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Berlin'
+      })
 
-      // Datum suchen: "19. März 2026", "19 Mar 2026", "19.03.2026"
-      let date = null
-      const m1 = text.match(/(\d{1,2})[.\s]+([A-Za-zäöü]+)[.,\s]+(\d{4})/)
-      const m2 = text.match(/(\d{2})\.(\d{2})\.(\d{4})/)
-      if (m1) {
-        const mon = monthMap[m1[2].substring(0,3)] || monthMap[m1[2]]
-        if (mon) date = `${m1[3]}-${mon}-${String(m1[1]).padStart(2,'0')}`
-      } else if (m2) {
-        date = `${m2[3]}-${m2[2]}-${m2[1]}`
-      }
-      if (!date || date < today()) return
-
-      // <strong> meiden: enthält in Facebook-Beschreibungen oft die komplette Biographie
-      let title = $(el).find('h2, h3, h4').first().text().trim()
-      if (!title) title = text.split('\n').map(l => l.trim()).filter(l =>
-          l.length > 3 && l.length < 100 && !/^\d/.test(l) && !/^[A-Z][a-z]{2}\.?$/.test(l)
-        )[0] || ''
-      if (title.length > 100) {
-        title = title.split(/[\n.!?]/)[0].trim()
-        if (title.length > 100) title = title.slice(0, 100).trim()
-      }
-      if (!title || title.length < 3) return
-
-      const timeMatch = text.match(/(\d{1,2}):(\d{2})/)
-      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-
-      const href = $(el).is('a') ? ($(el).attr('href') || '') : ($(el).find('a').first().attr('href') || '')
+      // Venue-/Stadtangaben aus Titel entfernen: "ARTIST - Berlin, Prachtwerk"
+      let title = (e.name || '')
+        .replace(/\s*[-–|,]\s*Berlin[,\s][^|]*/i, '')
+        .replace(/\s*[-–|]\s*Prachtwerk[^|]*/i, '')
+        .replace(/,?\s*Berlin$/i, '')
+        .trim()
+      if (title.length > 80) title = title.slice(0, title.lastIndexOf(' ', 80) || 80).trim()
+      if (!title || title.length < 2) continue
 
       const key = date + title
-      if (seen.has(key)) return
+      if (seen.has(key)) continue
       seen.add(key)
+
+      // Ticket-URL: nicht-Eventim Ticket-Link, dann Facebook-Event, dann Eventim, dann Fallback
+      const ticketUri = e.ticket_uri || ''
+      const fbLink = e.html_link || ''
+      let ticketUrl
+      if (ticketUri && !ticketUri.includes('eventim.de')) {
+        ticketUrl = ticketUri
+      } else if (fbLink) {
+        ticketUrl = fbLink
+      } else if (ticketUri) {
+        ticketUrl = ticketUri
+      } else {
+        ticketUrl = 'https://www.prachtwerkberlin.com/live-music-events'
+      }
+
+      // Beschreibung auf 120 Zeichen kürzen
+      let desc = (e.description || '').replace(/<[^>]+>/g, '').trim()
+      if (desc.length > 120) {
+        const cut = desc.lastIndexOf(' ', 120)
+        desc = desc.slice(0, cut > 0 ? cut : 120).trim() + '…'
+      }
 
       events.push({
         title, date, time,
         locationId: 38,
         type: detectType(title),
-        description: '',
-        ticketUrl: href
-          ? (href.startsWith('http') ? href : 'https://www.prachtwerkberlin.com' + href)
-          : 'https://www.prachtwerkberlin.com/live-music-events',
+        description: desc,
+        ticketUrl,
         spotifyUrl: '',
         source: 'prachtwerk'
       })
-    })
+    }
 
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) {
     console.log(`  ✗ Prachtwerk: ${e.message}`)
-  } finally {
-    if (browser) await browser.close()
   }
   return events
 }
