@@ -995,39 +995,40 @@ async function scrapeGretchen() {
     const $ = cheerio.load(html)
     const seen = new Set()
 
-    // Jedes Event: h1-Link mit Titel + "detail.php?id=..."
-    // Datum steht als Text direkt VOR dem h1 im selben Container
-    $('a[href*="detail.php"]').each((_, el) => {
-      const href = $(el).attr('href') || ''
-      const title = $(el).find('h1, h2, h3').first().text()
-        .replace(/\[INFO\]/g, '').trim()
+    // Ein .gig-Container pro Event
+    $('.gig').each((_, el) => {
+      // Titel aus h2 > a im .title-Bereich
+      const titleEl = $(el).find('.title h2 a')
+      const title = titleEl.text().replace(/\[INFO\]/g, '').trim()
       if (!title || title.length < 2) return
 
-      // Datum aus dem Parent-Container
-      const container = $(el).parent()
-      const containerText = container.text()
-
-      // Format: "Di. 17.03.2026 19.30 h"
-      const dateMatch = containerText.match(/(\d{2})\.(\d{2})\.(\d{4})\s+(\d{2})\.(\d{2})\s*h/)
+      // Datum aus <strong> im .date-Span: "25.03.2026"
+      const dateText = $(el).find('.date strong').text().trim()
+      const dateMatch = dateText.match(/(\d{2})\.(\d{2})\.(\d{4})/)
       if (!dateMatch) return
 
       const date = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`
       if (date < today()) return
 
-      const time = `${dateMatch[4]}:${dateMatch[5]}`
+      // Uhrzeit aus "Doors: HH.MM" im .date-Text
+      const dateFullText = $(el).find('.date').text()
+      const timeMatch = dateFullText.match(/Doors:\s*(\d{1,2})\.(\d{2})/)
+        || dateFullText.match(/(\d{1,2})\.(\d{2})\s*h\b/)
+      const time = timeMatch
+        ? `${String(timeMatch[1]).padStart(2, '0')}:${timeMatch[2]}`
+        : '20:00'
 
+      const href = titleEl.attr('href') || ''
       const ticketUrl = href.startsWith('http')
         ? href
-        : 'https://www.gretchen-club.de' + href
+        : 'https://www.gretchen-club.de/' + href
 
       const key = date + title
       if (seen.has(key)) return
       seen.add(key)
 
       events.push({
-        title,
-        date,
-        time,
+        title, date, time,
         locationId: 22,
         type: detectType(title),
         description: '',
@@ -2851,23 +2852,23 @@ async function scrapeMVBLeipzig() {
         try { data = JSON.parse($(el).html()) } catch { return }
         const items = Array.isArray(data) ? data : [data]
         for (const item of items) {
-          if (item['@type'] !== 'Event') return
+          if (item['@type'] !== 'Event') continue
           const startDate = item.startDate
-          if (!startDate) return
+          if (!startDate) continue
 
           const date = startDate.substring(0, 10)
-          if (date < today()) return
+          if (date < today()) continue
 
           const timeMatch = startDate.match(/T(\d{2}):(\d{2})/)
           const time = timeMatch ? `${timeMatch[1]}:${timeMatch[2]}` : '20:00'
 
           const title = (item.name || '').trim()
-          if (!title || title.length < 2) return
+          if (!title || title.length < 2) continue
 
           const ticketUrl = item.url || (item.offers && item.offers.url) || 'https://mvb-leipzig.de/events/'
 
           const key = date + title
-          if (seen.has(key)) return
+          if (seen.has(key)) continue
           seen.add(key)
 
           events.push({
