@@ -88,7 +88,7 @@ function render() {
     <div id="login-step-2" style="display:none;">
       <p style="font-size:12px; color:rgba(255,255,255,0.45); margin-bottom:10px;">Code per E-Mail gesendet — bitte Postfach prüfen.</p>
       <div class="flex gap-3 items-center">
-        <input id="login-code" type="number" placeholder="6-stelliger Code..." style="${inputStyle} flex:1; letter-spacing:0.2em;" />
+        <input id="login-code" type="text" inputmode="numeric" autocomplete="one-time-code" placeholder="6-stelliger Code..." style="${inputStyle} flex:1; letter-spacing:0.2em;" />
         <button id="verify-btn" class="syne text-sm font-semibold px-4 py-2 rounded-xl" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer; transition:opacity 0.2s;">Bestätigen</button>
       </div>
       <p id="verify-hint" style="margin-top:8px; font-size:12px; color:rgba(255,100,100,0.8); min-height:16px;"></p>
@@ -96,9 +96,11 @@ function render() {
   </div>
 `}
     ${currentUser ? `<div class="text-right mb-2" style="font-size:11px; color:rgba(255,255,255,0.3);">${currentUser.email} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
-    ${currentView === 'liste' ? renderListView() : ''}
-    ${currentView === 'kalender' ? renderCalendarView() : ''}
-    ${currentView === 'gemerkt' ? renderBookmarkedView() : ''}
+    <div id="view-content">
+      ${currentView === 'liste' ? renderListView() : ''}
+      ${currentView === 'kalender' ? renderCalendarView() : ''}
+      ${currentView === 'gemerkt' ? renderBookmarkedView() : ''}
+    </div>
   `
   document.getElementById('app-modals').innerHTML = renderModals()
   document.getElementById('bottom-nav').innerHTML = renderBottomNav()
@@ -326,7 +328,7 @@ function renderEventCard(e) {
               <button data-ics="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg" style="color:rgba(255,255,255,0.5);">+ Apple</button>
               <button data-gcal="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg" style="color:rgba(255,255,255,0.5);">+ Google</button>
             ` : ''}
-            <span style="margin-left:auto; color:rgba(255,255,255,0.35); font-size:13px; letter-spacing:-2px; pointer-events:none; user-select:none; padding-right:2px;">‹‹</span>
+            <span style="margin-left:auto; color:rgba(255,255,255,0.5); font-size:18px; font-weight:700; letter-spacing:-3px; pointer-events:none; user-select:none; padding-right:2px; line-height:1;">‹‹</span>
           </div>
         </div>
       </div>
@@ -404,14 +406,7 @@ function renderBookmarkedView() {
 
   return `
     <div class="space-y-3 pt-2">
-      ${allEvents.map(e => `
-        <div style="position:relative;">
-          ${renderEventCard(e)}
-          ${e._status === 'gemerkt' ? `<div style="position:absolute; top:12px; right:44px;">
-            <span style="font-size:10px; font-weight:700; padding:3px 8px; border-radius:20px; background:rgba(168,85,247,0.15); color:#c084fc; border:1px solid rgba(168,85,247,0.25);">♥ gemerkt</span>
-          </div>` : ''}
-        </div>
-      `).join('')}
+      ${allEvents.map(e => renderEventCard(e)).join('')}
     </div>
   `
 }
@@ -504,16 +499,8 @@ function renderModals() {
 }
 
 
-function attachEvents() {
-  // Tab navigation
-  document.querySelectorAll('[data-nav]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (currentView === btn.dataset.nav) return
-      currentView = btn.dataset.nav
-      render()
-      window.scrollTo(0, 0)
-    })
-  })
+function attachViewEvents() {
+  // City filter
   document.querySelectorAll('[data-city]').forEach(btn => {
     btn.addEventListener('click', () => {
       filters.cities = [btn.dataset.city]
@@ -521,8 +508,7 @@ function attachEvents() {
       render()
     })
   })
-
-  // Filter Location Dropdown
+  // Location filter dropdown
   const filterLocSelected = document.getElementById('filter-loc-selected')
   const filterLocDropdown = document.getElementById('filter-loc-dropdown')
   filterLocSelected?.addEventListener('click', (e) => { e.stopPropagation(); filterLocDropdown.classList.toggle('hidden') })
@@ -533,7 +519,6 @@ function attachEvents() {
       render()
     })
   })
-
   // Suche — partial re-render only event list
   document.getElementById('search-input')?.addEventListener('input', (e) => {
     filters.search = e.target.value
@@ -541,16 +526,12 @@ function attachEvents() {
     if (listContent && currentView === 'liste') {
       listContent.innerHTML = renderGroupedEvents()
       document.querySelectorAll('.event-swipe-wrapper').forEach(w => attachSwipeToWrapper(w))
-    } else {
-      render()
-    }
+    } else { render() }
   })
-
-  const calPrev = document.querySelector('[data-cal-prev]')
-  const calNext = document.querySelector('[data-cal-next]')
-  if (calPrev) calPrev.addEventListener('click', () => { calendarOffset--; render() })
-  if (calNext) calNext.addEventListener('click', () => { calendarOffset++; render() })
-
+  // Calendar nav
+  document.querySelector('[data-cal-prev]')?.addEventListener('click', () => { calendarOffset--; render() })
+  document.querySelector('[data-cal-next]')?.addEventListener('click', () => { calendarOffset++; render() })
+  // Date filters
   document.querySelectorAll('[data-date]').forEach(btn => {
     btn.addEventListener('click', () => {
       const date = btn.dataset.date
@@ -559,6 +540,31 @@ function attachEvents() {
     })
   })
   document.querySelector('[data-clear-dates]')?.addEventListener('click', () => { filters.dates = []; render() })
+  // Swipe gestures
+  attachSwipeGestures()
+}
+
+function attachNavEvents() {
+  document.querySelectorAll('[data-nav]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (currentView === btn.dataset.nav) return
+      currentView = btn.dataset.nav
+      const vc = document.getElementById('view-content')
+      if (vc) {
+        vc.innerHTML = currentView === 'liste' ? renderListView()
+          : currentView === 'kalender' ? renderCalendarView()
+          : renderBookmarkedView()
+        document.getElementById('bottom-nav').innerHTML = renderBottomNav()
+        attachNavEvents()
+        attachViewEvents()
+      } else { render() }
+      window.scrollTo(0, 0)
+    })
+  })
+}
+
+function attachEvents() {
+  attachNavEvents()
 
   // Modal
   const modal = document.getElementById('modal-add')
@@ -801,7 +807,7 @@ function attachEvents() {
     render()
   })
 
-  attachSwipeGestures()
+  attachViewEvents()
 }
 
 function closeSwipeWrapper(wrapper) {
