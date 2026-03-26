@@ -870,8 +870,11 @@ function attachSwipeToWrapper(wrapper) {
 
   // Desktop hover: reveal actions on mouse-driven devices
   if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    wrapper.addEventListener('mouseenter', openCard)
-    wrapper.addEventListener('mouseleave', closeCard)
+    wrapper.addEventListener('mousemove', e => {
+      if (isOpen) return
+      if (wrapper.getBoundingClientRect().right - e.clientX < 60) openCard()
+    })
+    wrapper.addEventListener('mouseleave', () => { if (isOpen) closeCard() })
   }
 
   // Card-level event handlers
