@@ -72,13 +72,20 @@ function render() {
     ${renderHeader(newCount)}
     ${currentUser ? '' : `
   <div class="glass rounded-2xl p-4 mb-4">
-    <div id="login-step-1" class="flex gap-3 items-center">
-      <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." value="${localStorage.getItem('lebe-live-email') || ''}" style="${inputStyle} flex:1;" />
-      <button id="login-btn" class="syne text-sm font-semibold px-4 py-2 rounded-xl" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer;">Code senden</button>
+    <div id="login-step-1">
+      <div class="flex gap-3 items-center">
+        <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." value="${localStorage.getItem('lebe-live-email') || ''}" style="${inputStyle} flex:1;" />
+        <button id="login-btn" class="syne text-sm font-semibold px-4 py-2 rounded-xl" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer; transition:opacity 0.2s;">Code senden</button>
+      </div>
+      <p id="login-hint" style="margin-top:8px; font-size:12px; color:rgba(255,255,255,0.35); min-height:16px;"></p>
     </div>
-    <div id="login-step-2" style="display:none;" class="flex gap-3 items-center">
-      <input id="login-code" type="number" placeholder="6-stelliger Code..." style="${inputStyle} flex:1; letter-spacing:0.2em;" />
-      <button id="verify-btn" class="syne text-sm font-semibold px-4 py-2 rounded-xl" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer;">Bestätigen</button>
+    <div id="login-step-2" style="display:none;">
+      <p style="font-size:12px; color:rgba(255,255,255,0.45); margin-bottom:10px;">Code per E-Mail gesendet — bitte Postfach prüfen.</p>
+      <div class="flex gap-3 items-center">
+        <input id="login-code" type="number" placeholder="6-stelliger Code..." style="${inputStyle} flex:1; letter-spacing:0.2em;" />
+        <button id="verify-btn" class="syne text-sm font-semibold px-4 py-2 rounded-xl" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer; transition:opacity 0.2s;">Bestätigen</button>
+      </div>
+      <p id="verify-hint" style="margin-top:8px; font-size:12px; color:rgba(255,100,100,0.8); min-height:16px;"></p>
     </div>
   </div>
 `}
@@ -775,12 +782,22 @@ function attachEvents() {
 document.getElementById('login-btn')?.addEventListener('click', async () => {
   const email = document.getElementById('login-email').value.trim()
   if (!email) return
+  const btn = document.getElementById('login-btn')
+  const hint = document.getElementById('login-hint')
+  btn.textContent = 'Sende...'
+  btn.disabled = true
+  btn.style.opacity = '0.5'
+  hint.textContent = ''
   const ok = await signInWithEmail(email)
   if (ok) {
     document.getElementById('login-step-1').style.display = 'none'
-    document.getElementById('login-step-2').style.display = 'flex'
+    document.getElementById('login-step-2').style.display = 'block'
+    document.getElementById('login-code').focus()
   } else {
-    alert('Fehler beim Senden. Bitte nochmal versuchen.')
+    btn.textContent = 'Code senden'
+    btn.disabled = false
+    btn.style.opacity = '1'
+    hint.textContent = 'Fehler beim Senden — bitte nochmal versuchen.'
   }
 })
 
@@ -788,6 +805,12 @@ document.getElementById('verify-btn')?.addEventListener('click', async () => {
   const email = localStorage.getItem('lebe-live-email') || document.getElementById('login-email')?.value.trim()
   const code = document.getElementById('login-code').value.trim()
   if (!code) return
+  const btn = document.getElementById('verify-btn')
+  const hint = document.getElementById('verify-hint')
+  btn.textContent = 'Prüfe...'
+  btn.disabled = true
+  btn.style.opacity = '0.5'
+  hint.textContent = ''
   const ok = await verifyOtp(email, code)
   if (ok) {
     currentUser = await getUser()
@@ -796,7 +819,10 @@ document.getElementById('verify-btn')?.addEventListener('click', async () => {
     going = merged.going
     render()
   } else {
-    alert('Falscher Code. Bitte nochmal versuchen.')
+    btn.textContent = 'Bestätigen'
+    btn.disabled = false
+    btn.style.opacity = '1'
+    hint.textContent = 'Falscher oder abgelaufener Code — bitte nochmal versuchen.'
   }
 })
 
