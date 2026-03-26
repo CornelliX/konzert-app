@@ -14,6 +14,8 @@ let currentView = 'liste'
 let calendarOffset = 0
 let swipeActiveWrapper = null
 let swipeDocListenerAdded = false
+let ptrListenerAdded = false
+let dropdownListenerAdded = false
 
 export async function renderApp(el) {
   container = el
@@ -104,15 +106,6 @@ function render() {
   if (newCount > 0 && currentView === 'liste') {
     setTimeout(() => markAllSeen(), 3000)
   }
-  // Fade-in animation
-  const freshInner = document.getElementById('app-inner')
-  freshInner.style.opacity = '0'
-  freshInner.style.transform = 'translateY(6px)'
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    freshInner.style.transition = 'opacity 0.22s ease, transform 0.22s ease'
-    freshInner.style.opacity = '1'
-    freshInner.style.transform = 'translateY(0)'
-  }))
   // Header scroll-fade (attach once)
   if (!headerScrollListenerAdded) {
     headerScrollListenerAdded = true
@@ -127,15 +120,15 @@ function renderHeader(newCount) {
   return `
     <div id="app-header" class="pt-6 pb-3" style="transition:opacity 0.3s ease;">
       <div class="flex items-center justify-between gap-2">
-        <h1 class="syne leading-none" style="color:white; letter-spacing:-0.02em; font-weight:800; line-height:1; flex-shrink:0; font-size:2.5rem;">
+        <h1 class="syne leading-none" style="color:white; letter-spacing:-0.02em; font-weight:800; line-height:1; flex-shrink:0; font-size:2rem;">
           LE.BE LIVE
         </h1>
-        <div style="display:flex; align-items:center; gap:8px;">
-          ${newCount > 0 ? `<div style="flex-shrink:0; width:36px; height:36px; border-radius:50%; background:rgba(244,114,182,0.15); border:1px solid rgba(244,114,182,0.25); color:#f472b6; display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1.2;">
+        <div style="display:flex; align-items:center; gap:8px; min-width:0;">
+          ${newCount > 0 ? `<div style="flex-shrink:0; width:34px; height:34px; border-radius:50%; background:rgba(244,114,182,0.15); border:1px solid rgba(244,114,182,0.25); color:#f472b6; display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1.2;">
             <span style="font-size:9px; font-weight:700;">${newCount}</span>
             <span style="font-size:9px; font-weight:600;">neu</span>
           </div>` : ''}
-          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.6em; line-height:1.3; letter-spacing:0.04em; text-transform:uppercase; white-space:nowrap;">
+          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.6em; line-height:1.3; letter-spacing:0.03em; text-transform:uppercase; overflow:hidden;">
             KONZERTE &amp; PARTYS<br>BERLIN · LEIPZIG
           </div>
         </div>
@@ -333,7 +326,7 @@ function renderEventCard(e) {
               <button data-ics="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg" style="color:rgba(255,255,255,0.5);">+ Apple</button>
               <button data-gcal="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg" style="color:rgba(255,255,255,0.5);">+ Google</button>
             ` : ''}
-            <span style="margin-left:auto; color:rgba(255,255,255,0.18); font-size:10px; letter-spacing:-1px; pointer-events:none; user-select:none;">‹‹</span>
+            <span style="margin-left:auto; color:rgba(255,255,255,0.35); font-size:13px; letter-spacing:-2px; pointer-events:none; user-select:none; padding-right:2px;">‹‹</span>
           </div>
         </div>
       </div>
@@ -510,45 +503,15 @@ function renderModals() {
   `
 }
 
-function generateICS(event) {
-  const loc = locations.find(l => l.id === event.locationId)
-  const [h, m] = event.time.split(':').map(Number)
-  const start = event.date.replace(/-/g,'') + 'T' + String(h).padStart(2,'0') + String(m).padStart(2,'0') + '00'
-  const end = event.date.replace(/-/g,'') + 'T' + String(h+2).padStart(2,'0') + String(m).padStart(2,'0') + '00'
-  const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//KonzertApp//DE','BEGIN:VEVENT',
-    'UID:' + event.id + '@konzertapp','SUMMARY:' + event.title,'DTSTART:' + start,'DTEND:' + end,
-    'LOCATION:' + (loc ? loc.name : ''),'DESCRIPTION:' + (event.description || ''),
-    'END:VEVENT','END:VCALENDAR'].join('\r\n')
-  const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url; a.download = event.title.replace(/\s+/g,'-') + '.ics'; a.click()
-  setTimeout(() => URL.revokeObjectURL(url), 1000)
-}
-
-function shareViaWhatsApp(event) {
-  const loc = locations.find(l => l.id === event.locationId)
-  const dateStr = new Date(event.date + 'T12:00:00').toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
-  const text = `${event.type === 'konzert' ? '🎸' : '🎉'} *${event.title}*\n📍 ${loc ? loc.name + ', ' + loc.city : ''}\n📅 ${dateStr} · ${event.time} Uhr${event.description ? '\n\n' + event.description : ''}${event.ticketUrl ? '\n\nTickets: ' + event.ticketUrl : ''}`
-  window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank')
-}
 
 function attachEvents() {
-  // Tab navigation with transition
+  // Tab navigation
   document.querySelectorAll('[data-nav]').forEach(btn => {
     btn.addEventListener('click', () => {
       if (currentView === btn.dataset.nav) return
-      const inner = document.getElementById('app-inner')
-      if (inner) {
-        inner.style.transition = 'opacity 0.15s ease, transform 0.15s ease'
-        inner.style.opacity = '0'
-        inner.style.transform = 'translateY(5px)'
-      }
-      setTimeout(() => {
-        currentView = btn.dataset.nav
-        render()
-        window.scrollTo(0, 0)
-      }, 130)
+      currentView = btn.dataset.nav
+      render()
+      window.scrollTo(0, 0)
     })
   })
   document.querySelectorAll('[data-city]').forEach(btn => {
@@ -726,36 +689,42 @@ function attachEvents() {
     render()
   })
 
-  // Dropdowns schließen bei Klick außerhalb
-  document.addEventListener('click', () => {
-    filterLocDropdown?.classList.add('hidden')
-    addLocDropdown?.classList.add('hidden')
-  })
+  // Dropdowns schließen bei Klick außerhalb (nur einmal)
+  if (!dropdownListenerAdded) {
+    dropdownListenerAdded = true
+    document.addEventListener('click', () => {
+      document.getElementById('filter-loc-dropdown')?.classList.add('hidden')
+      document.getElementById('add-loc-dropdown')?.classList.add('hidden')
+    })
+  }
 
-  // Pull-to-Refresh
-  let ptStart = 0, ptPulling = false
-  document.addEventListener('touchstart', e => {
-    if (window.scrollY === 0) { ptStart = e.touches[0].clientY; ptPulling = true }
-  }, { passive: true })
-  document.addEventListener('touchmove', e => {
-    if (!ptPulling) return
-    const diff = e.touches[0].clientY - ptStart
-    const indicator = document.getElementById('ptr-indicator')
-    if (indicator && diff > 0) indicator.style.height = Math.min(diff / 2, 50) + 'px'
-  }, { passive: true })
-  document.addEventListener('touchend', async e => {
-    if (!ptPulling) return
-    ptPulling = false
-    const diff = e.changedTouches[0].clientY - ptStart
-    const indicator = document.getElementById('ptr-indicator')
-    if (diff > 80) {
-      if (indicator) indicator.innerHTML = '↻ Wird aktualisiert...'
-      events = await getEvents()
-      render()
-    } else {
-      if (indicator) indicator.style.height = '0'
-    }
-  }, { passive: true })
+  // Pull-to-Refresh (nur einmal)
+  if (!ptrListenerAdded) {
+    ptrListenerAdded = true
+    let ptStart = 0, ptPulling = false
+    document.addEventListener('touchstart', e => {
+      if (window.scrollY === 0) { ptStart = e.touches[0].clientY; ptPulling = true }
+    }, { passive: true })
+    document.addEventListener('touchmove', e => {
+      if (!ptPulling) return
+      const diff = e.touches[0].clientY - ptStart
+      const indicator = document.getElementById('ptr-indicator')
+      if (indicator && diff > 0) indicator.style.height = Math.min(diff / 2, 50) + 'px'
+    }, { passive: true })
+    document.addEventListener('touchend', async e => {
+      if (!ptPulling) return
+      ptPulling = false
+      const diff = e.changedTouches[0].clientY - ptStart
+      const indicator = document.getElementById('ptr-indicator')
+      if (diff > 80) {
+        if (indicator) indicator.innerHTML = '↻ Wird aktualisiert...'
+        events = await getEvents()
+        render()
+      } else {
+        if (indicator) indicator.style.height = '0'
+      }
+    }, { passive: true })
+  }
 
   // Datum/Uhrzeit
   const dateEl = document.getElementById('new-date')
