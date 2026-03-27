@@ -734,12 +734,8 @@ function attachEvents() {
       if (diff > 80) {
         if (indicator) indicator.textContent = '↻ Wird aktualisiert...'
         const seq = ++fetchSeq
-        const [fetched, bm] = await Promise.all([
-          getEvents().catch(() => null),
-          currentUser ? loadBookmarks().catch(() => null) : Promise.resolve(null)
-        ])
+        const bm = currentUser ? await loadBookmarks().catch(() => null) : null
         if (seq === fetchSeq) {
-          if (fetched) events = fetched
           if (bm) {
             const validIds = events.map(ev => ev.id)
             bookmarked = bm.bookmarked.filter(id => validIds.some(v => v == id))
