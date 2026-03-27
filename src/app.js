@@ -133,13 +133,13 @@ function renderHeader() {
   const firstRender = !titleAnimated
   titleAnimated = true
   return `
-    <div id="app-header" class="pt-6 pb-3" style="transition:opacity 0.3s ease;">
-      <div class="flex items-center justify-between gap-2">
+    <div id="app-header" class="pb-3" style="padding-top:max(1.5rem,env(safe-area-inset-top)); transition:opacity 0.3s ease;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
         <h1 class="syne leading-none ${firstRender ? 'title-glow' : 'title-glow-static'}" style="letter-spacing:-0.02em; font-weight:800; line-height:1; flex-shrink:0; font-size:1.75rem; white-space:nowrap;">
           LE.BE LIVE
         </h1>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.52em; line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${firstRender ? 'animation:tagline-appear 1.5s ease 0.8s both;' : ''}">
+          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.52em; line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${firstRender ? 'animation:tagline-appear 1.5s ease 0.4s both;' : ''}">
             KONZERTE UND PARTYS<br>IN COOLEN LOCATIONS
           </div>
         </div>
