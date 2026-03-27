@@ -220,18 +220,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1290598618,
-    "title": "Candlelight: Coldplay & Imagine Dragons | Hip-Hop on Strings",
-    "date": "2026-03-27",
-    "time": "20:45",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 215267441,
     "title": "The Blue Velvets",
     "date": "2026-03-27",
@@ -413,18 +401,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 808077242,
-    "title": "Frack & Spitzenhöschen #17",
-    "date": "2026-03-28",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1374243602,
     "title": "Drunken Masters",
     "date": "2026-03-28",
@@ -565,6 +541,19 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3423",
     "spotifyUrl": "",
     "source": "gretchen",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 1038508700,
+    "title": "Doggy Weekend Berlin: Club Animalz",
+    "date": "2026-03-28",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/80268/",
+    "spotifyUrl": "",
+    "source": "kantine",
     "addedAt": "2026-03-27"
   },
   {
@@ -3979,18 +3968,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1732151018,
-    "title": "Ballet of Lights: Cinderella",
-    "date": "2026-04-10",
-    "time": "18:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://feverup.com/m/389006",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 422701525,
     "title": "ANIMATION (5 Filme in 67 Minuten, alle in OmU)",
     "date": "2026-04-10",
@@ -4440,18 +4417,6 @@
     "ticketUrl": "https://www.moritzbastei.de/event/special/2026-04-11/historische-fuehrung-durch-die-moritzbastei-212",
     "spotifyUrl": "",
     "source": "moritzbastei",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 958397852,
-    "title": "Ballet of Lights: Dornröschen",
-    "date": "2026-04-11",
-    "time": "15:30",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://feverup.com/m/274764",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -5110,18 +5075,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1689514736,
-    "title": "SAVOY SATELLITES All Stars feat. Siri Svegler",
-    "date": "2026-04-12",
-    "time": "19:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 705469701,
     "title": "The Saxophones: \"No Time for Poetry\" Tour 2026",
     "date": "2026-04-12",
@@ -5711,18 +5664,6 @@
     "ticketUrl": "https://cassiopeia-berlin.de/event/super-tuesday-111639683",
     "spotifyUrl": "",
     "source": "cassiopeia",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 789956064,
-    "title": "Donna The Show",
-    "date": "2026-04-15",
-    "time": "18:30",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://tickets.donnatheshow.com/events/donnatheshow/2028594",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -6751,18 +6692,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1379890420,
-    "title": "PYTHO - BLACK SQUARE",
-    "date": "2026-04-17",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1206862497,
     "title": "Kelvin Sholar Quintet",
     "date": "2026-04-17",
@@ -7457,18 +7386,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 906876103,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-04-19",
-    "time": "15:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 813181813,
     "title": "SPH Music Masters",
     "date": "2026-04-19",
@@ -7908,18 +7825,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1456459343,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-04-20",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1050926589,
     "title": "George Colligan Trio",
     "date": "2026-04-20",
@@ -8167,18 +8072,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1600275636,
-    "title": "Corb Lund & Hayes Carll - Bible On The Dash",
-    "date": "2026-04-21",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.greyzone-tickets.de/produkte/1225",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 2028520572,
     "title": "THE ZIG ZAG JAZZED UP JAM SESSION",
     "date": "2026-04-21",
@@ -8204,6 +8097,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 1236052525,
+    "title": "Beginn 23:00Party80s, Disco & Hip Hop21.04.April 2026Super…",
+    "date": "2026-04-21",
+    "time": "23:00",
+    "locationId": 36,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://cassiopeia-berlin.de/event/super-tuesday-111639686",
+    "spotifyUrl": "",
+    "source": "cassiopeia",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 1315868571,
     "title": "Urban Catalyst",
     "date": "2026-04-22",
@@ -8214,18 +8120,6 @@
     "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/urban-catalyst/2026-04-22-1300",
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1528178372,
-    "title": "Donna The Show",
-    "date": "2026-04-22",
-    "time": "18:30",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://tickets.donnatheshow.com/events/donnatheshow/2028594",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -8896,18 +8790,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 2001937393,
-    "title": "Kurt Weill in Hollywood",
-    "date": "2026-04-24",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 460851737,
     "title": "HENGE",
     "date": "2026-04-24",
@@ -9331,18 +9213,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1048265422,
-    "title": "Kurt Weill in Hollywood",
-    "date": "2026-04-25",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1410471417,
     "title": "LYCHEE LASSI",
     "date": "2026-04-25",
@@ -9754,18 +9624,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1364267458,
-    "title": "Delphis Orakel - giuliana piel x romina geppert",
-    "date": "2026-04-26",
-    "time": "18:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 689107295,
     "title": "BLEIB MODERN + KONSTANTIN UNWOHL",
     "date": "2026-04-26",
@@ -10082,18 +9940,6 @@
     "ticketUrl": "https://rausgegangen.de/events/eala-manchmal-oft-immer-tour-2026-0/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExdGJxaFhES2Zjcmd3NlU4SXNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR4FctF5Rc1trRlGiNcdG5e1mmUmIw0O-4FXRYPpgfiDCRJNzaKhr1ChfKs2Yw_aem_zwaAvdTOkFhM0TUV671nfw",
     "spotifyUrl": "",
     "source": "prachtwerk",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1468887095,
-    "title": "Le Compte de Monte-Cristo",
-    "date": "2026-04-28",
-    "time": "11:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -11540,18 +11386,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 863838254,
-    "title": "ISAK DANIELSON",
-    "date": "2026-05-04",
-    "time": "19:30",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/noapp/event/isak-danielson-theater-im-delphi-21348969/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 767121611,
     "title": "ROMANO",
     "date": "2026-05-04",
@@ -11801,18 +11635,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 955168215,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-05-05",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 399992483,
     "title": "THE ZIG ZAG JAZZED UP JAM SESSION",
     "date": "2026-05-05",
@@ -12013,18 +11835,6 @@
     "ticketUrl": "https://cassiopeia-berlin.de/event/warlord-colossus-111585294",
     "spotifyUrl": "",
     "source": "cassiopeia",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1648269912,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-05-06",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -13068,18 +12878,6 @@
     "ticketUrl": "https://www.eventim.de/artist/24kgoldn/?affiliate=FKP&fbclid=IwY2xjawPfMPJleHRuA2FlbQIxMABicmlkETFnaXJNSDNHYUlMVzB6SklMc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhXloHjRpqgehY_RMdK26y04_Efn9xeYT9Thl8eeTG5Zn7dOQ5U3YNHeH-eW_aem_jvdVSfH0q9mUq29CBHWZbw",
     "spotifyUrl": "",
     "source": "badehaus",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1254191471,
-    "title": "DUCT TAPE – MOTHER’S DAY SHOW",
-    "date": "2026-05-10",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -15636,18 +15434,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1693381646,
-    "title": "“Der süße Duft kommt nicht von Rosen” genannt “Leichenoper”",
-    "date": "2026-05-24",
-    "time": "17:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1598562034,
     "title": "CHOIR! CHOIR! CHOIR!",
     "date": "2026-05-24",
@@ -16622,18 +16408,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1142026459,
-    "title": "Ballet of Lights: Dornröschen",
-    "date": "2026-05-31",
-    "time": "15:30",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://feverup.com/m/274764",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 278980813,
     "title": "GENERATION Y PUNK – UPDATE EINER SUBKULTUR",
     "date": "2026-05-31",
@@ -17080,18 +16854,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1999069849,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-06-06",
-    "time": "15:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 140086250,
     "title": "Oomph!",
     "date": "2026-06-06",
@@ -17199,18 +16961,6 @@
     "locationId": 37,
     "source": "quasimodo",
     "ticketUrl": "https://quasimodo.club/events/we-love-80s-35-7263",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1602795750,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-06-07",
-    "time": "15:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
     "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
@@ -18430,18 +18180,6 @@
     "ticketUrl": "https://www.so36.com/produkte/89377-tickets-dancing-with-tears-in-your-eyes-so36-berlin-am-20-06-2026",
     "spotifyUrl": "",
     "source": "so36",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2089864701,
-    "title": "Ballet of Lights: Dornröschen",
-    "date": "2026-06-21",
-    "time": "15:30",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://feverup.com/m/274764",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -21645,6 +21383,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 1385037398,
+    "title": "Beginn 20:00KonzertSka / Third Wave Ska / Reggae-influenced Punk24.09.September…",
+    "date": "2026-09-24",
+    "time": "20:00",
+    "locationId": 36,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://cassiopeia-berlin.de/event/the-toasters---45-years-in-ska-tour-2026",
+    "spotifyUrl": "",
+    "source": "cassiopeia",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 1431695217,
     "title": "SukOne",
     "date": "2026-09-24",
@@ -21887,18 +21638,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 527763685,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-09-27",
-    "time": "15:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 201442601,
     "title": "Klez.e",
     "date": "2026-09-27",
@@ -21986,18 +21725,6 @@
     "ticketUrl": "https://huxleysneuewelt.de/event/2026-09-28-the-amity-affliction",
     "spotifyUrl": "",
     "source": "huxleys",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 165338012,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-09-28",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -23851,18 +23578,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 122460845,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-10-23",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1855285168,
     "title": "Mr Irish Bastard",
     "date": "2026-10-24",
@@ -23899,18 +23614,6 @@
     "ticketUrl": "https://www.eventim.de/event/mythemia-wolkenjaeger-tour-2026-badehaus-raw-gelaende-eingang-simon-dach-str-20884700/",
     "spotifyUrl": "",
     "source": "badehaus",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 475513631,
-    "title": "Frack & Spitzenhöschen #18",
-    "date": "2026-10-24",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -24050,18 +23753,6 @@
     "ticketUrl": "https://www.wildatheartberlin.de/concerts.php",
     "spotifyUrl": "",
     "source": "wildatheart",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1508664239,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-10-25",
-    "time": "15:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -25315,18 +25006,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 231157042,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-11-12",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 22288135,
     "title": "Hämatom",
     "date": "2026-11-13",
@@ -25401,18 +25080,6 @@
     "ticketUrl": "https://tickets.loft.de/event/veljanov-xeg55p",
     "spotifyUrl": "",
     "source": "peter-edel",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 461944655,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
