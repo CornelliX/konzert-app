@@ -13,12 +13,12 @@ export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
   }
 })
 
-// Session auch in Cookie sichern (iOS Safari Fix)
+// Auth presence flag in cookie (iOS Safari Fix) — actual session lives in localStorage via Supabase
 supabase.auth.onAuthStateChange((event, session) => {
   if (session) {
-    document.cookie = `sb-session=${session.access_token}; max-age=604800; path=/; SameSite=Lax`
+    document.cookie = `sb-auth=1; max-age=604800; path=/; SameSite=Lax`
   } else {
-    document.cookie = `sb-session=; max-age=0; path=/`
+    document.cookie = `sb-auth=; max-age=0; path=/`
   }
 })
 
@@ -69,8 +69,10 @@ export async function saveManualEvent(event, locationName, locationCity) {
 }
 
 export async function deleteOldManualEvents() {
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) return
   const today = new Date().toISOString().split('T')[0]
-  await supabase.from('manual_events').delete().lt('date', today)
+  await supabase.from('manual_events').delete().lt('date', today).eq('user_id', user.id)
 }
 
 export async function loadBookmarks() {

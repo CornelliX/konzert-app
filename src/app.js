@@ -1,6 +1,10 @@
 import { getLocations, getEvents, saveData, loadData } from './data.js'
 import { saveManualEvent, loadBookmarks, toggleBookmark, getUser, signInWithEmail, verifyOtp, signOut } from './supabase.js'
 
+function esc(s) {
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
+}
+
 let locations = getLocations()
 let currentUser = null
 let events = []
@@ -314,11 +318,11 @@ function renderEventCard(e) {
               ${isGoing ? '<span class="text-xs font-semibold" style="color:#34d399;">✓ dabei</span>' : ''}
               ${isBookmarked && !isGoing ? '<span class="text-xs font-semibold" style="color:#f472b6;">♡ gemerkt</span>' : ''}
             </div>
-            <h3 class="syne text-white leading-tight mb-1" style="font-size:1rem; font-weight:700; letter-spacing:-0.01em;">${e.title}</h3>
+            <h3 class="syne text-white leading-tight mb-1" style="font-size:1rem; font-weight:700; letter-spacing:-0.01em;">${esc(e.title)}</h3>
             <p class="text-xs mb-2" style="color:rgba(255,255,255,0.5);">
-              ${loc ? loc.name + ' <span style="color:rgba(255,255,255,0.3);">·</span> ' + loc.city : (e.locationName ? e.locationName + ' <span style="color:rgba(255,255,255,0.3);">·</span> ' + (e.locationCity || '') : '')}
+              ${loc ? esc(loc.name) + ' <span style="color:rgba(255,255,255,0.3);">·</span> ' + esc(loc.city) : (e.locationName ? esc(e.locationName) + ' <span style="color:rgba(255,255,255,0.3);">·</span> ' + esc(e.locationCity || '') : '')}
             </p>
-            ${e.description ? `<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.5);">${e.description}</p>` : ''}
+            ${e.description ? `<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.5);">${esc(e.description)}</p>` : ''}
           </div>
           <div class="flex gap-2 flex-wrap mt-1" style="align-items:center;">
             ${e.ticketUrl ? `<a href="${e.ticketUrl}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg inline-block" style="color:rgba(255,255,255,0.6);">Infos →</a>` : (loc?.website ? `<a href="https://${loc.website}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg inline-block" style="color:rgba(255,255,255,0.6);">Infos →</a>` : '')}
@@ -557,6 +561,7 @@ function attachNavEvents() {
         document.getElementById('bottom-nav').innerHTML = renderBottomNav()
         attachNavEvents()
         attachViewEvents()
+        document.querySelector('[data-open-add]')?.addEventListener('click', () => document.getElementById('modal-add').classList.remove('hidden'))
       } else { render() }
       window.scrollTo(0, 0)
     })
@@ -810,6 +815,12 @@ function attachEvents() {
   attachViewEvents()
 }
 
+function eventDateUTC(dateStr, timeStr) {
+  const [y,m,d] = dateStr.split('-').map(Number)
+  const [h,min] = (timeStr || '20:00').split(':').map(Number)
+  return new Date(y, m-1, d, h, min, 0)
+}
+
 function closeSwipeWrapper(wrapper) {
   if (wrapper && wrapper._closeSwipe) wrapper._closeSwipe()
 }
@@ -914,10 +925,10 @@ function attachSwipeToWrapper(wrapper) {
     const loc = locations.find(l => l.id === e.locationId)
     const locName = loc ? loc.name : (e.locationName || '')
     const locCity = loc ? loc.city : (e.locationCity || '')
-    const dtStart = e.date.replace(/-/g,'') + 'T' + (e.time || '20:00').replace(':','') + '00'
-    const endHour = String(parseInt((e.time || '20:00').split(':')[0]) + 2).padStart(2,'0')
-    const dtEnd = e.date.replace(/-/g,'') + 'T' + endHour + (e.time || '20:00').split(':')[1] + '00'
-    const ics = ['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT',`DTSTART:${dtStart}`,`DTEND:${dtEnd}`,`SUMMARY:${e.title}`,`LOCATION:${locName}, ${locCity}`,`URL:${e.ticketUrl || ''}`, 'END:VEVENT','END:VCALENDAR'].join('\r\n')
+    const startDate = eventDateUTC(e.date, e.time)
+    const endDate = new Date(startDate); endDate.setHours(endDate.getHours() + 2)
+    const fmt = d => `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}T${String(d.getHours()).padStart(2,'0')}${String(d.getMinutes()).padStart(2,'0')}00`
+    const ics = ['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT',`DTSTART:${fmt(startDate)}`,`DTEND:${fmt(endDate)}`,`SUMMARY:${e.title}`,`LOCATION:${locName}, ${locCity}`,`URL:${e.ticketUrl || ''}`, 'END:VEVENT','END:VCALENDAR'].join('\r\n')
     const blob = new Blob([ics], { type: 'text/calendar' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
@@ -929,10 +940,10 @@ function attachSwipeToWrapper(wrapper) {
     if (!e) return
     const loc = locations.find(l => l.id === e.locationId)
     const locName = loc ? loc.name : (e.locationName || '')
-    const start = e.date.replace(/-/g,'') + 'T' + (e.time || '20:00').replace(':','') + '00'
-    const endHour = String(parseInt((e.time || '20:00').split(':')[0]) + 2).padStart(2,'0')
-    const end = e.date.replace(/-/g,'') + 'T' + endHour + (e.time || '20:00').split(':')[1] + '00'
-    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(e.title)}&dates=${start}/${end}&location=${encodeURIComponent(locName)}&details=${encodeURIComponent(e.ticketUrl || '')}`
+    const startDate = eventDateUTC(e.date, e.time)
+    const endDate = new Date(startDate); endDate.setHours(endDate.getHours() + 2)
+    const fmtUtc = d => d.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'')
+    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(e.title)}&dates=${fmtUtc(startDate)}/${fmtUtc(endDate)}&location=${encodeURIComponent(locName)}&details=${encodeURIComponent(e.ticketUrl || '')}`
     window.open(url, '_blank')
   })
 }

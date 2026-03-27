@@ -1,6 +1,7 @@
 export function loadData(key) {
   const raw = localStorage.getItem(key)
-  return raw ? JSON.parse(raw) : null
+  if (!raw) return null
+  try { return JSON.parse(raw) } catch { localStorage.removeItem(key); return null }
 }
 
 export function saveData(key, value) {
