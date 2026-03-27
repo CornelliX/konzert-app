@@ -161,7 +161,7 @@ function renderBottomNav() {
           ${active ? `<span style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:28px; height:2px; background:linear-gradient(90deg,#6366f1,#a855f7); border-radius:0 0 3px 3px;"></span>` : ''}
           <span style="position:relative; display:inline-block;">
             ${t.icon}
-            ${t.badge > 0 ? `<span style="position:absolute; top:-4px; right:-6px; min-width:16px; height:16px; border-radius:8px; background:#f472b6; color:white; font-size:9px; font-weight:700; display:flex; align-items:center; justify-content:center; padding:0 3px;">${t.badge}</span>` : ''}
+            ${t.badge > 0 ? `<span style="position:absolute; top:-4px; right:-6px; min-width:16px; height:16px; border-radius:8px; background:#f472b6; color:white; font-size:9px; font-weight:700; display:flex; align-items:center; justify-content:center; padding:0 3px;">${t.badge > 99 ? '99+' : t.badge}</span>` : ''}
           </span>
           <span class="syne" style="font-size:9px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">${t.label}</span>
         </button>`
