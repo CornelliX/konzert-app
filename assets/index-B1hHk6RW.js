@@ -149,8 +149,8 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:n}){var i
                 padding:max(24px,env(safe-area-inset-top)) 28px max(24px,env(safe-area-inset-bottom));">
       <div style="width:100%; height:100%; background:#2020AA; overflow:hidden;
                   font-family:'Press Start 2P',monospace; color:#9898FF;
-                  font-size:min(calc((min(100vw,576px) - 56px) / 38), 13.7px); line-height:2.3;
-                  padding:14px 0;">
+                  font-size:min(calc((min(100vw,576px) - 80px) / 38), 13.1px); line-height:2.3;
+                  padding:14px 12px;">
         <div>**** COMMODORE 64 BASIC V2 ****</div>
         <div>64K RAM SYSTEM&nbsp; 38911 BASIC BYTES FREE</div>
         <div>&nbsp;</div>
