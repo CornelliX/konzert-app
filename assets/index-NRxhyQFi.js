@@ -155,7 +155,7 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:n}){var i
   `;return`
     <div style="padding:0 0 8px;">
       <div style="height:48px; border-radius:10px; background:rgba(255,255,255,0.04); margin-bottom:20px;"></div>
-      ${r}${r}${r}${r}
+      ${r}${r}${r}${r}${r}
     </div>
   `}function Xe(r){const e=q.find(c=>c.id===r.locationId),t=N.some(c=>c==r.id),s=L.some(c=>c==r.id),n=wr(r),a=new Date(r.date+"T12:00:00").toLocaleDateString("de-DE",{weekday:"short",day:"numeric",month:"short"}),o="#818cf8";return`
     <div class="event-swipe-wrapper" data-event-id="${r.id}" style="position:relative; overflow:hidden; border-radius:16px;">
