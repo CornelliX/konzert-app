@@ -83,7 +83,7 @@ function render() {
   const newCount = events.filter(e => isNew(e)).length
   const inner = document.getElementById('app-inner')
   inner.innerHTML = `
-    ${renderHeader(newCount)}
+    ${renderHeader()}
     ${currentUser ? '' : `
   <div class="glass rounded-2xl p-4 mb-4">
     <div id="login-step-1">
@@ -127,7 +127,7 @@ function render() {
   }
 }
 
-function renderHeader(newCount) {
+function renderHeader() {
   return `
     <div id="app-header" class="pt-6 pb-3" style="transition:opacity 0.3s ease;">
       <div class="flex items-center justify-between gap-2">
@@ -135,10 +135,6 @@ function renderHeader(newCount) {
           LE.BE LIVE
         </h1>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-          ${newCount > 0 ? `<div style="flex-shrink:0; width:34px; height:34px; border-radius:50%; background:rgba(244,114,182,0.15); border:1px solid rgba(244,114,182,0.25); color:#f472b6; display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1.2;">
-            <span style="font-size:9px; font-weight:700;">${newCount}</span>
-            <span style="font-size:9px; font-weight:600;">neu</span>
-          </div>` : ''}
           <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.6em; line-height:1.3; letter-spacing:0.03em; text-transform:uppercase; overflow:hidden; white-space:nowrap;">
             KONZERTE &amp; PARTYS<br>BERLIN · LEIPZIG
           </div>
@@ -781,7 +777,6 @@ function attachEvents() {
       setTimeout(() => {
         document.getElementById('login-step-1').style.display = 'none'
         document.getElementById('login-step-2').style.display = 'block'
-        requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById('login-code')?.focus()))
       }, 500)
     } else {
       btn.textContent = 'Code senden'
