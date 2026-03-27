@@ -40,7 +40,6 @@ export async function renderApp(el) {
     <div id="bottom-nav" style="position:fixed; bottom:0; left:0; right:0; z-index:40;"></div>
   `
   document.getElementById('app-inner').innerHTML = renderSkeleton()
-  document.getElementById('bottom-nav').innerHTML = renderBottomNav()
   currentUser = await getUser()
   events = await getEvents()
   if (currentUser) {
@@ -279,25 +278,27 @@ function renderListView() {
 function renderSkeleton() {
   return `
     <div style="position:fixed; top:0; bottom:0; left:50%; transform:translateX(-50%);
-                width:min(100%,576px); z-index:9999; background:#0000AA;
-                font-family:'Press Start 2P',monospace; color:#0088FF;
-                font-size:clamp(6px,1.9vw,8px); line-height:2.2;
-                padding:max(20px,env(safe-area-inset-top)) 14px max(16px,env(safe-area-inset-bottom));
-                overflow:hidden;">
-      <div>**** COMMODORE 64 BASIC V2 ****</div>
-      <div>64K RAM SYSTEM&nbsp; 38911 BASIC BYTES FREE</div>
-      <div>&nbsp;</div>
-      <div>READY.</div>
-      <div>LOAD &quot;LE.BE_LIVE&quot;,8,1</div>
-      <div>&nbsp;</div>
-      <div>PRESS PLAY ON TAPE</div>
-      <div>OK</div>
-      <div>&nbsp;</div>
-      <div>MADE BY CRUX WITH CLAUDE</div>
-      <div>TESTED BY DR. JEEP</div>
-      <div>&nbsp;</div>
-      <div>READY.</div>
-      <div>RUN<span style="display:inline-block; width:0.6em; height:1em; background:#0088FF; vertical-align:text-bottom; margin-left:0.1em; animation:c64blink 0.7s step-end infinite;"></span></div>
+                width:min(100%,576px); z-index:9999; background:#6060EE;
+                padding:max(24px,env(safe-area-inset-top)) 28px max(24px,env(safe-area-inset-bottom));">
+      <div style="width:100%; height:100%; background:#3535CE; overflow:hidden;
+                  font-family:'Press Start 2P',monospace; color:#6060EE;
+                  font-size:clamp(6px,1.65vw,7px); line-height:2.3;
+                  padding:14px 12px;">
+        <div>**** COMMODORE 64 BASIC V2 ****</div>
+        <div>64K RAM SYSTEM&nbsp; 38911 BASIC BYTES FREE</div>
+        <div>&nbsp;</div>
+        <div>READY.</div>
+        <div>LOAD &quot;LE.BE_LIVE&quot;,8,1</div>
+        <div>&nbsp;</div>
+        <div>PRESS PLAY ON TAPE</div>
+        <div>OK</div>
+        <div>&nbsp;</div>
+        <div>MADE BY CRUX WITH CLAUDE</div>
+        <div>TESTED BY DR. JEEP</div>
+        <div>&nbsp;</div>
+        <div>READY.</div>
+        <div>RUN<span style="display:inline-block; width:0.6em; height:1em; background:#6060EE; vertical-align:text-bottom; margin-left:0.15em; animation:c64blink 0.7s step-end infinite;"></span></div>
+      </div>
     </div>
   `
 }
