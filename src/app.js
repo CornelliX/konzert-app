@@ -277,20 +277,21 @@ function renderListView() {
 }
 
 function renderSkeleton() {
-  const card = `
-    <div class="skeleton-pulse rounded-2xl overflow-hidden mb-3" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); height:110px;">
-      <div style="height:2px; background:rgba(255,255,255,0.08);"></div>
-      <div style="padding:16px;">
-        <div style="width:40%; height:10px; border-radius:6px; background:rgba(255,255,255,0.08); margin-bottom:10px;"></div>
-        <div style="width:70%; height:14px; border-radius:6px; background:rgba(255,255,255,0.1); margin-bottom:8px;"></div>
-        <div style="width:50%; height:10px; border-radius:6px; background:rgba(255,255,255,0.07);"></div>
-      </div>
-    </div>
-  `
+  const s = (delay, text) =>
+    `<div style="opacity:0; animation:c64in 0.05s ${delay}s both;">${text}</div>`
   return `
-    <div style="padding:0 0 8px;">
-      <div style="height:48px; border-radius:10px; background:rgba(255,255,255,0.04); margin-bottom:20px;"></div>
-      ${card}${card}${card}${card}${card}
+    <div style="background:#0000aa; border-radius:16px; padding:20px 14px; min-height:calc(100vh - 220px); font-family:'Press Start 2P',monospace; font-size:10px; line-height:2.2; color:#aaaaff; overflow:hidden;">
+      ${s(0.3,  'READY.')}
+      ${s(0.3,  'LOAD &quot;LE.BE_LIVE&quot;,8,1')}
+      <div style="line-height:1.1;">&nbsp;</div>
+      ${s(1.1,  'PRESS PLAY ON TAPE')}
+      ${s(1.1,  'OK')}
+      <div style="line-height:1.1;">&nbsp;</div>
+      ${s(1.9,  'SEARCHING FOR &quot;LE.BE_LIVE&quot;')}
+      ${s(1.9,  'FOUND &quot;LE.BE_LIVE&quot;')}
+      <div style="line-height:1.1;">&nbsp;</div>
+      ${s(2.7,  'READY.')}
+      <div style="opacity:0; animation:c64in 0.05s 2.7s both;">RUN<span style="opacity:0; animation:c64blink 0.7s 3.0s step-end infinite;">█</span></div>
     </div>
   `
 }
@@ -741,6 +742,7 @@ function attachEvents() {
             bookmarked = bm.bookmarked.filter(id => validIds.some(v => v == id))
             going = bm.going.filter(id => validIds.some(v => v == id))
           }
+          titleAnimated = false
           render()
         }
         const ind = document.getElementById('ptr-indicator')
