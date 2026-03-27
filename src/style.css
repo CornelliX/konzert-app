@@ -51,9 +51,9 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 .skeleton-pulse { animation: skeleton-pulse 1.6s ease-in-out infinite; }
 #app-header { transition: opacity 0.3s ease; }
 @keyframes title-sweep {
-  0%   { background-position: 0% center;   filter: drop-shadow(0 0 4px rgba(168,85,247,0.4)); }
-  45%  {                                    filter: drop-shadow(0 0 26px rgba(168,85,247,1)); }
-  100% { background-position: 100% center; filter: drop-shadow(0 0 10px rgba(168,85,247,0.55)); }
+  0%   { background-position: 0% center;   text-shadow: 0 0 8px rgba(168,85,247,0.5); }
+  45%  {                                    text-shadow: 0 0 22px rgba(168,85,247,1), 0 0 44px rgba(168,85,247,0.5); }
+  100% { background-position: 100% center; text-shadow: 0 0 12px rgba(168,85,247,0.55); }
 }
 .title-glow {
   background: linear-gradient(90deg,
@@ -76,5 +76,22 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  filter: drop-shadow(0 0 10px rgba(168,85,247,0.55));
+  text-shadow: 0 0 12px rgba(168,85,247,0.55);
+}
+@keyframes btn-sweep {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+#login-btn, #verify-btn, [data-swipe-bookmark], [data-swipe-going] {
+  position: relative;
+  overflow: hidden;
+}
+.btn-sweep::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.45) 50%, transparent 65%);
+  animation: btn-sweep 0.5s ease-out 1 both;
+  pointer-events: none;
+  z-index: 2;
 }

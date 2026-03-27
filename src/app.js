@@ -131,7 +131,7 @@ function renderHeader(newCount) {
   return `
     <div id="app-header" class="pt-6 pb-3" style="transition:opacity 0.3s ease;">
       <div class="flex items-center justify-between gap-2">
-        <h1 class="syne leading-none ${titleAnimated ? 'title-glow-static' : (titleAnimated = true, 'title-glow')}" style="letter-spacing:-0.02em; font-weight:800; line-height:1; flex-shrink:0; font-size:2rem;">
+        <h1 class="syne leading-none ${titleAnimated ? 'title-glow-static' : (titleAnimated = true, 'title-glow')}" style="letter-spacing:-0.02em; font-weight:800; line-height:1; flex-shrink:0; font-size:1.75rem; white-space:nowrap;">
           LE.BE LIVE
         </h1>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">
@@ -139,7 +139,7 @@ function renderHeader(newCount) {
             <span style="font-size:9px; font-weight:700;">${newCount}</span>
             <span style="font-size:9px; font-weight:600;">neu</span>
           </div>` : ''}
-          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.6em; line-height:1.3; letter-spacing:0.03em; text-transform:uppercase; overflow:hidden;">
+          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.6em; line-height:1.3; letter-spacing:0.03em; text-transform:uppercase; overflow:hidden; white-space:nowrap;">
             KONZERTE &amp; PARTYS<br>BERLIN · LEIPZIG
           </div>
         </div>
@@ -777,9 +777,12 @@ function attachEvents() {
     hint.textContent = ''
     const ok = await signInWithEmail(email)
     if (ok) {
-      document.getElementById('login-step-1').style.display = 'none'
-      document.getElementById('login-step-2').style.display = 'block'
-      requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById('login-code')?.focus()))
+      btn.classList.add('btn-sweep')
+      setTimeout(() => {
+        document.getElementById('login-step-1').style.display = 'none'
+        document.getElementById('login-step-2').style.display = 'block'
+        requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById('login-code')?.focus()))
+      }, 500)
     } else {
       btn.textContent = 'Code senden'
       btn.disabled = false
@@ -800,11 +803,14 @@ function attachEvents() {
     hint.textContent = ''
     const ok = await verifyOtp(email, code)
     if (ok) {
-      currentUser = await getUser()
-      const merged = await mergeAndSyncBookmarks()
-      bookmarked = merged.bookmarked
-      going = merged.going
-      render()
+      btn.classList.add('btn-sweep')
+      setTimeout(async () => {
+        currentUser = await getUser()
+        const merged = await mergeAndSyncBookmarks()
+        bookmarked = merged.bookmarked
+        going = merged.going
+        render()
+      }, 500)
     } else {
       btn.textContent = 'Bestätigen'
       btn.disabled = false
@@ -902,11 +908,12 @@ function attachSwipeToWrapper(wrapper) {
     bookmarkInFlight.add(id)
     setTimeout(() => bookmarkInFlight.delete(id), 400)
     if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
+    wrapper.querySelector('[data-swipe-bookmark]')?.classList.add('btn-sweep')
     const wasGoing = going.some(g => g == id)
     const isNow = !bookmarked.some(b => b == id)
     if (wasGoing) going = going.filter(g => g != id)
     bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
-    if (currentView === 'gemerkt') { render() } else { updateCard(id) }
+    setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 400)
     if (wasGoing) toggleBookmark(id, 'going')
     toggleBookmark(id, 'bookmarked')
   })
@@ -915,11 +922,12 @@ function attachSwipeToWrapper(wrapper) {
     bookmarkInFlight.add(id)
     setTimeout(() => bookmarkInFlight.delete(id), 400)
     if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
+    wrapper.querySelector('[data-swipe-going]')?.classList.add('btn-sweep')
     const wasBookmarked = bookmarked.some(b => b == id)
     const isNow = !going.some(g => g == id)
     if (wasBookmarked) bookmarked = bookmarked.filter(b => b != id)
     going = isNow ? [...going, id] : going.filter(g => g != id)
-    if (currentView === 'gemerkt') { render() } else { updateCard(id) }
+    setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 400)
     if (wasBookmarked) toggleBookmark(id, 'bookmarked')
     toggleBookmark(id, 'going')
   })
