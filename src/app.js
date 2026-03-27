@@ -39,7 +39,7 @@ export async function renderApp(el) {
     <div id="app-modals"></div>
     <div id="bottom-nav" style="position:fixed; bottom:0; left:0; right:0; z-index:40;"></div>
   `
-  const isReload = !!sessionStorage.getItem('lebe-loaded')
+  const isReload = sessionStorage.getItem('lebe-loaded')
   if (!isReload) {
     document.getElementById('app-inner').innerHTML = renderSkeleton()
   }
@@ -53,7 +53,6 @@ export async function renderApp(el) {
   sessionStorage.setItem('lebe-loaded', '1')
   const c64El = document.querySelector('.c64-border')
   if (c64El) container.appendChild(c64El)
-  window.scrollTo(0, 0)
   render()
   requestAnimationFrame(() => window.scrollTo(0, 0))
   if (c64El) {
@@ -61,7 +60,7 @@ export async function renderApp(el) {
     c64El.style.transition = 'opacity 0.6s ease'
     requestAnimationFrame(() => {
       c64El.style.opacity = '0'
-      setTimeout(() => c64El.remove(), 600)
+      c64El.addEventListener('transitionend', () => c64El.remove(), { once: true })
     })
   }
 }

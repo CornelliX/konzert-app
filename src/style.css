@@ -99,7 +99,6 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  will-change: background-position;
   animation: title-sweep 2.2s linear 1s 1 both;
 }
 .title-glow-static {
