@@ -20,6 +20,9 @@ let swipeActiveWrapper = null
 let swipeDocListenerAdded = false
 let ptrListenerAdded = false
 let dropdownListenerAdded = false
+const bookmarkInFlight = new Set()
+let fetchSeq = 0
+let markSeenTimer = null
 
 export async function renderApp(el) {
   container = el
@@ -110,7 +113,8 @@ function render() {
   document.getElementById('bottom-nav').innerHTML = renderBottomNav()
   attachEvents()
   if (newCount > 0 && currentView === 'liste') {
-    setTimeout(() => markAllSeen(), 3000)
+    clearTimeout(markSeenTimer)
+    markSeenTimer = setTimeout(() => markAllSeen(), 3000)
   }
   // Header scroll-fade (attach once)
   if (!headerScrollListenerAdded) {
@@ -371,7 +375,8 @@ function renderCalendarView() {
           const hasEvent = eventDates.includes(dateStr)
           const isSelected = filters.dates.includes(dateStr)
           const isToday = day === today.getDate() && month === today.getMonth() && year === today.getFullYear()
-          const isPast = new Date(dateStr) < today && !isToday
+          const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`
+          const isPast = dateStr < todayStr && !isToday
           return `
             <button data-date="${dateStr}" style="aspect-ratio:1; border-radius:12px; font-size:14px; font-weight:500; display:flex; align-items:center; justify-content:center; position:relative; transition:all 0.15s; ${isPast ? 'opacity:0.25;' : ''} color:${!hasEvent && !isSelected && !isToday ? 'rgba(255,255,255,0.2)' : 'white'}; background:${isSelected ? 'rgba(99,102,241,0.5)' : hasEvent ? 'rgba(99,102,241,0.12)' : 'transparent'}; border:${isSelected ? '1px solid rgba(99,102,241,0.6)' : hasEvent ? '1px solid rgba(99,102,241,0.25)' : isToday ? '1px solid rgba(255,255,255,0.2)' : '1px solid transparent'}; padding:4px; cursor:pointer;">
               ${day}
@@ -729,8 +734,9 @@ function attachEvents() {
       const indicator = document.getElementById('ptr-indicator')
       if (diff > 80) {
         if (indicator) indicator.innerHTML = '↻ Wird aktualisiert...'
-        events = await getEvents()
-        render()
+        const seq = ++fetchSeq
+        const fetched = await getEvents()
+        if (seq === fetchSeq) { events = fetched; render() }
       } else {
         if (indicator) indicator.style.height = '0'
       }
@@ -891,6 +897,9 @@ function attachSwipeToWrapper(wrapper) {
   // Card-level event handlers
   const id = wrapper.dataset.eventId
   wrapper.querySelector('[data-swipe-bookmark]')?.addEventListener('click', () => {
+    if (bookmarkInFlight.has(id)) return
+    bookmarkInFlight.add(id)
+    setTimeout(() => bookmarkInFlight.delete(id), 400)
     if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
     const wasGoing = going.some(g => g == id)
     const isNow = !bookmarked.some(b => b == id)
@@ -901,6 +910,9 @@ function attachSwipeToWrapper(wrapper) {
     toggleBookmark(id, 'bookmarked')
   })
   wrapper.querySelector('[data-swipe-going]')?.addEventListener('click', () => {
+    if (bookmarkInFlight.has(id)) return
+    bookmarkInFlight.add(id)
+    setTimeout(() => bookmarkInFlight.delete(id), 400)
     if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
     const wasBookmarked = bookmarked.some(b => b == id)
     const isNow = !going.some(g => g == id)

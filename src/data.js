@@ -63,7 +63,8 @@ export function getLocations() {
   if (saved) {
     const savedIds = new Set(saved.map(l => l.id))
     const merged = [...saved, ...defaults.filter(d => !savedIds.has(d.id))]
-    saveData('locations', merged)
+    const mergedStr = JSON.stringify(merged)
+    if (mergedStr !== JSON.stringify(saved)) saveData('locations', merged)
     return merged
   }
   saveData('locations', defaults)

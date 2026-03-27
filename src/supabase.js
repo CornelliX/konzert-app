@@ -94,7 +94,10 @@ export async function toggleBookmark(eventId, status) {
     await supabase.from('bookmarks').delete().eq('user_id', user.id).eq('event_id', String(eventId)).eq('status', status)
     return false
   } else {
-    await supabase.from('bookmarks').insert({ user_id: user.id, event_id: String(eventId), status })
+    await supabase.from('bookmarks').upsert(
+      { user_id: user.id, event_id: String(eventId), status },
+      { onConflict: 'user_id,event_id,status', ignoreDuplicates: true }
+    )
     return true
   }
 }
