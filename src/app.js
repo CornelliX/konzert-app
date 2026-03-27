@@ -278,8 +278,9 @@ function renderListView() {
 
 function renderSkeleton() {
   return `
-    <div style="position:fixed; inset:0; z-index:9999; background:#0000aa;
-                font-family:'Press Start 2P',monospace; color:#aaaaff;
+    <div style="position:fixed; top:0; bottom:0; left:50%; transform:translateX(-50%);
+                width:min(100%,576px); z-index:9999; background:#0000AA;
+                font-family:'Press Start 2P',monospace; color:#0088FF;
                 font-size:clamp(6px,1.9vw,8px); line-height:2.2;
                 padding:max(20px,env(safe-area-inset-top)) 14px max(16px,env(safe-area-inset-bottom));
                 overflow:hidden;">
@@ -292,11 +293,11 @@ function renderSkeleton() {
       <div>PRESS PLAY ON TAPE</div>
       <div>OK</div>
       <div>&nbsp;</div>
-      <div>SEARCHING FOR &quot;LE.BE_LIVE&quot;</div>
-      <div>FOUND &quot;LE.BE_LIVE&quot;</div>
+      <div>MADE BY CRUX WITH CLAUDE</div>
+      <div>TESTED BY DR. JEEP</div>
       <div>&nbsp;</div>
       <div>READY.</div>
-      <div>RUN<span style="animation:c64blink 0.7s step-end infinite;">█</span></div>
+      <div>RUN<span style="display:inline-block; width:0.6em; height:1em; background:#0088FF; vertical-align:text-bottom; margin-left:0.1em; animation:c64blink 0.7s step-end infinite;"></span></div>
     </div>
   `
 }
