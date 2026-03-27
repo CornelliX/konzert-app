@@ -144,8 +144,8 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:n}){var i
     ${_r()}
     <div id="event-list-content">${Er()}</div>
   `}function bi(){return`
-    <div style="position:fixed; top:0; bottom:0; left:50%; transform:translateX(-50%);
-                width:min(100%,576px); z-index:9999; background:#6060EE;
+    <div class="c64-border" style="position:fixed; top:0; bottom:0; left:50%; transform:translateX(-50%);
+                width:min(100%,576px); z-index:9999;
                 padding:max(24px,env(safe-area-inset-top)) 28px max(24px,env(safe-area-inset-bottom));">
       <div style="width:100%; height:100%; background:#2020AA; overflow:hidden;
                   font-family:'Press Start 2P',monospace; color:#9898FF;
@@ -161,7 +161,7 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:n}){var i
         <div>OK</div>
         <div>&nbsp;</div>
         <div>MADE BY CRUX WITH CLAUDE</div>
-        <div>TESTED BY DR. JEEP</div>
+        <div>CO-TESTED BY DR. JEEP</div>
         <div>&nbsp;</div>
         <div>READY.</div>
         <div>RUN<span style="display:inline-block; width:0.6em; height:1em; background:#9898FF; vertical-align:text-bottom; margin-left:0.15em; animation:c64blink 0.7s step-end infinite;"></span></div>
