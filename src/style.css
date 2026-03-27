@@ -88,12 +88,12 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 .title-glow {
   background: linear-gradient(90deg,
     #6366f1  0%,
-    #a855f7 30%,
-    #a855f7 46%,
-    #ffffff 50%,
-    #a855f7 54%,
-    #a855f7 70%,
-    #6366f1 100%);
+    #a855f7 32%,
+    #a855f7 34%,
+    #ffffff 35%,
+    #a855f7 36%,
+    #6366f1 67%,
+    #a855f7 100%);
   background-size: 300% auto;
   -webkit-background-clip: text;
   background-clip: text;
