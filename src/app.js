@@ -277,21 +277,26 @@ function renderListView() {
 }
 
 function renderSkeleton() {
-  const s = (delay, text) =>
-    `<div style="opacity:0; animation:c64in 0.05s ${delay}s both;">${text}</div>`
   return `
-    <div style="background:#0000aa; border-radius:16px; padding:20px 14px; min-height:calc(100vh - 220px); font-family:'Press Start 2P',monospace; font-size:10px; line-height:2.2; color:#aaaaff; overflow:hidden;">
-      ${s(0.3,  'READY.')}
-      ${s(0.3,  'LOAD &quot;LE.BE_LIVE&quot;,8,1')}
-      <div style="line-height:1.1;">&nbsp;</div>
-      ${s(1.1,  'PRESS PLAY ON TAPE')}
-      ${s(1.1,  'OK')}
-      <div style="line-height:1.1;">&nbsp;</div>
-      ${s(1.9,  'SEARCHING FOR &quot;LE.BE_LIVE&quot;')}
-      ${s(1.9,  'FOUND &quot;LE.BE_LIVE&quot;')}
-      <div style="line-height:1.1;">&nbsp;</div>
-      ${s(2.7,  'READY.')}
-      <div style="opacity:0; animation:c64in 0.05s 2.7s both;">RUN<span style="opacity:0; animation:c64blink 0.7s 3.0s step-end infinite;">█</span></div>
+    <div style="position:fixed; inset:0; z-index:9999; background:#0000aa;
+                font-family:'Press Start 2P',monospace; color:#aaaaff;
+                font-size:clamp(6px,1.9vw,8px); line-height:2.2;
+                padding:max(20px,env(safe-area-inset-top)) 14px max(16px,env(safe-area-inset-bottom));
+                overflow:hidden;">
+      <div>**** COMMODORE 64 BASIC V2 ****</div>
+      <div>64K RAM SYSTEM&nbsp; 38911 BASIC BYTES FREE</div>
+      <div>&nbsp;</div>
+      <div>READY.</div>
+      <div>LOAD &quot;LE.BE_LIVE&quot;,8,1</div>
+      <div>&nbsp;</div>
+      <div>PRESS PLAY ON TAPE</div>
+      <div>OK</div>
+      <div>&nbsp;</div>
+      <div>SEARCHING FOR &quot;LE.BE_LIVE&quot;</div>
+      <div>FOUND &quot;LE.BE_LIVE&quot;</div>
+      <div>&nbsp;</div>
+      <div>READY.</div>
+      <div>RUN<span style="animation:c64blink 0.7s step-end infinite;">█</span></div>
     </div>
   `
 }
