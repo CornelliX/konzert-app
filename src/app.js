@@ -23,6 +23,7 @@ let dropdownListenerAdded = false
 const bookmarkInFlight = new Set()
 let fetchSeq = 0
 let markSeenTimer = null
+let titleAnimated = false
 
 export async function renderApp(el) {
   container = el
@@ -130,7 +131,7 @@ function renderHeader(newCount) {
   return `
     <div id="app-header" class="pt-6 pb-3" style="transition:opacity 0.3s ease;">
       <div class="flex items-center justify-between gap-2">
-        <h1 class="syne leading-none" style="color:white; letter-spacing:-0.02em; font-weight:800; line-height:1; flex-shrink:0; font-size:2rem;">
+        <h1 class="syne leading-none ${titleAnimated ? 'title-glow-static' : (titleAnimated = true, 'title-glow')}" style="letter-spacing:-0.02em; font-weight:800; line-height:1; flex-shrink:0; font-size:2rem;">
           LE.BE LIVE
         </h1>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">

@@ -50,3 +50,31 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 @keyframes skeleton-pulse { 0%,100%{opacity:0.25} 50%{opacity:0.5} }
 .skeleton-pulse { animation: skeleton-pulse 1.6s ease-in-out infinite; }
 #app-header { transition: opacity 0.3s ease; }
+@keyframes title-sweep {
+  0%   { background-position: 0% center;   filter: drop-shadow(0 0 4px rgba(168,85,247,0.4)); }
+  45%  {                                    filter: drop-shadow(0 0 26px rgba(168,85,247,1)); }
+  100% { background-position: 100% center; filter: drop-shadow(0 0 10px rgba(168,85,247,0.55)); }
+}
+.title-glow {
+  background: linear-gradient(90deg,
+    #818cf8 0%, #a855f7 20%, #d946ef 38%, #f0abfc 46%,
+    #ffffff 50%, #f0abfc 54%, #d946ef 62%, #a855f7 80%, #818cf8 100%);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: title-sweep 2.2s cubic-bezier(0.4,0,0.2,1) 0.4s 1 both;
+}
+.title-glow-static {
+  background: linear-gradient(90deg,
+    #818cf8 0%, #a855f7 20%, #d946ef 38%, #f0abfc 46%,
+    #ffffff 50%, #f0abfc 54%, #d946ef 62%, #a855f7 80%, #818cf8 100%);
+  background-size: 300% auto;
+  background-position: 100% center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 0 10px rgba(168,85,247,0.55));
+}
