@@ -732,16 +732,23 @@ function attachEvents() {
       const diff = e.changedTouches[0].clientY - ptStart
       const indicator = document.getElementById('ptr-indicator')
       if (diff > 80) {
-        if (indicator) indicator.innerHTML = '↻ Wird aktualisiert...'
+        if (indicator) indicator.textContent = '↻ Wird aktualisiert...'
         const seq = ++fetchSeq
-        const fetched = await getEvents().catch(() => null)
+        const [fetched, bm] = await Promise.all([
+          getEvents().catch(() => null),
+          currentUser ? loadBookmarks().catch(() => null) : Promise.resolve(null)
+        ])
         if (seq === fetchSeq) {
           if (fetched) events = fetched
+          if (bm) {
+            const validIds = events.map(ev => ev.id)
+            bookmarked = bm.bookmarked.filter(id => validIds.some(v => v == id))
+            going = bm.going.filter(id => validIds.some(v => v == id))
+          }
           render()
-        } else {
-          const ind = document.getElementById('ptr-indicator')
-          if (ind) ind.style.height = '0'
         }
+        const ind = document.getElementById('ptr-indicator')
+        if (ind) ind.style.height = '0'
       } else {
         if (indicator) indicator.style.height = '0'
       }
