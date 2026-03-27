@@ -43,8 +43,7 @@ export async function renderApp(el) {
   if (!isReload) {
     document.getElementById('app-inner').innerHTML = renderSkeleton()
   }
-  currentUser = await getUser()
-  events = await getEvents()
+  ;[currentUser, events] = await Promise.all([getUser(), getEvents()])
   if (currentUser) {
     const merged = await mergeAndSyncBookmarks()
     bookmarked = merged.bookmarked
