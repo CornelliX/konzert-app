@@ -280,8 +280,8 @@ function renderSkeleton() {
     <div style="position:fixed; top:0; bottom:0; left:50%; transform:translateX(-50%);
                 width:min(100%,576px); z-index:9999; background:#6060EE;
                 padding:max(24px,env(safe-area-inset-top)) 28px max(24px,env(safe-area-inset-bottom));">
-      <div style="width:100%; height:100%; background:#3535CE; overflow:hidden;
-                  font-family:'Press Start 2P',monospace; color:#6060EE;
+      <div style="width:100%; height:100%; background:#2020AA; overflow:hidden;
+                  font-family:'Press Start 2P',monospace; color:#9898FF;
                   font-size:min(calc((min(100vw,576px) - 56px) / 38), 13.7px); line-height:2.3;
                   padding:14px 0;">
         <div>**** COMMODORE 64 BASIC V2 ****</div>
@@ -297,7 +297,7 @@ function renderSkeleton() {
         <div>TESTED BY DR. JEEP</div>
         <div>&nbsp;</div>
         <div>READY.</div>
-        <div>RUN<span style="display:inline-block; width:0.6em; height:1em; background:#6060EE; vertical-align:text-bottom; margin-left:0.15em; animation:c64blink 0.7s step-end infinite;"></span></div>
+        <div>RUN<span style="display:inline-block; width:0.6em; height:1em; background:#9898FF; vertical-align:text-bottom; margin-left:0.15em; animation:c64blink 0.7s step-end infinite;"></span></div>
       </div>
     </div>
   `
