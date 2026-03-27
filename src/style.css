@@ -49,7 +49,7 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 .flatpickr-input { width:100% !important; border-radius:12px !important; padding:10px 14px !important; font-size:14px !important; color:white !important; outline:none !important; background:rgba(255,255,255,0.06) !important; border:1px solid rgba(255,255,255,0.1) !important; font-family:'DM Sans',sans-serif !important; box-sizing:border-box !important; }
 @keyframes skeleton-pulse { 0%,100%{opacity:0.25} 50%{opacity:0.5} }
 .skeleton-pulse { animation: skeleton-pulse 1.6s ease-in-out infinite; }
-@keyframes header-shine-sweep { from { transform:translateX(-100%); } to { transform:translateX(300%); } }
+@keyframes tagline-appear { from { opacity:0.15; } to { opacity:1; } }
 @keyframes c64in { from { opacity:0; } to { opacity:1; } }
 @keyframes c64blink { 0%,49%{ opacity:1; } 50%,100%{ opacity:0; } }
 #app-header { transition: opacity 0.3s ease; }

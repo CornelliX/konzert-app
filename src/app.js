@@ -47,6 +47,7 @@ export async function renderApp(el) {
     bookmarked = merged.bookmarked
     going = merged.going
   }
+  window.scrollTo(0, 0)
   render()
 }
 
@@ -133,16 +134,15 @@ function renderHeader() {
   titleAnimated = true
   return `
     <div id="app-header" class="pt-6 pb-3" style="transition:opacity 0.3s ease;">
-      <div class="flex items-center justify-between gap-2" style="position:relative; overflow:hidden;">
-        <h1 class="syne leading-none title-glow-static" style="letter-spacing:-0.02em; font-weight:800; line-height:1; flex-shrink:0; font-size:1.75rem; white-space:nowrap;">
+      <div class="flex items-center justify-between gap-2">
+        <h1 class="syne leading-none ${firstRender ? 'title-glow' : 'title-glow-static'}" style="letter-spacing:-0.02em; font-weight:800; line-height:1; flex-shrink:0; font-size:1.75rem; white-space:nowrap;">
           LE.BE LIVE
         </h1>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.6em; line-height:1.3; letter-spacing:-0.02em; text-transform:uppercase; overflow:hidden; white-space:nowrap;">
+          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.52em; line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${firstRender ? 'animation:tagline-appear 1.5s ease 0.8s both;' : ''}">
             KONZERTE UND PARTYS<br>IN COOLEN LOCATIONS
           </div>
         </div>
-        ${firstRender ? `<div style="position:absolute;top:0;bottom:0;left:0;width:55%;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.92) 50%,transparent 100%);mix-blend-mode:screen;animation:header-shine-sweep 2.2s cubic-bezier(0.4,0,0.2,1) 0.3s 1 both;pointer-events:none;z-index:10;"></div>` : ''}
       </div>
     </div>
   `
