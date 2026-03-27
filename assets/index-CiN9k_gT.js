@@ -49,7 +49,7 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:n}){var i
     </div>
     <div id="app-modals"></div>
     <div id="bottom-nav" style="position:fixed; bottom:0; left:0; right:0; z-index:40;"></div>
-  `,document.getElementById("app-inner").innerHTML=bi(),V=await Ye(),M=await mr(),V){const e=await vr();N=e.bookmarked,L=e.going}j()}async function vr(){const r=await gt(),e=M.map(o=>o.id),t=_e("bookmarked")||[],s=_e("going")||[],n=t.filter(o=>e.some(l=>l==o)&&!r.bookmarked.some(l=>l==o)),i=s.filter(o=>e.some(l=>l==o)&&!r.going.some(l=>l==o));for(const o of n)await be(o,"bookmarked");for(const o of i)await be(o,"going");const a=n.length||i.length?await gt():r;return{bookmarked:a.bookmarked.filter(o=>e.some(l=>l==o)),going:a.going.filter(o=>e.some(l=>l==o))}}function br(r){return!yt.includes(r.id)}function mi(){yt=M.map(r=>r.id),Le("seenEvents",yt)}function j(){H=null;const r=M.filter(t=>br(t)).length,e=document.getElementById("app-inner");e.innerHTML=`
+  `,document.getElementById("app-inner").innerHTML=bi(),V=await Ye(),M=await mr(),V){const e=await vr();N=e.bookmarked,L=e.going}window.scrollTo(0,0),j()}async function vr(){const r=await gt(),e=M.map(o=>o.id),t=_e("bookmarked")||[],s=_e("going")||[],n=t.filter(o=>e.some(l=>l==o)&&!r.bookmarked.some(l=>l==o)),i=s.filter(o=>e.some(l=>l==o)&&!r.going.some(l=>l==o));for(const o of n)await be(o,"bookmarked");for(const o of i)await be(o,"going");const a=n.length||i.length?await gt():r;return{bookmarked:a.bookmarked.filter(o=>e.some(l=>l==o)),going:a.going.filter(o=>e.some(l=>l==o))}}function br(r){return!yt.includes(r.id)}function mi(){yt=M.map(r=>r.id),Le("seenEvents",yt)}function j(){H=null;const r=M.filter(t=>br(t)).length,e=document.getElementById("app-inner");e.innerHTML=`
     ${vi()}
     ${V?"":`
   <div class="glass rounded-2xl p-4 mb-4">
@@ -78,16 +78,15 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:n}){var i
     </div>
   `,document.getElementById("app-modals").innerHTML=wi(),document.getElementById("bottom-nav").innerHTML=wr(),_i(),r>0&&z==="liste"&&(clearTimeout(Qt),Qt=setTimeout(()=>mi(),3e3)),Vt||(Vt=!0,window.addEventListener("scroll",()=>{const t=document.getElementById("app-header");t&&(t.style.opacity=String(Math.max(0,1-window.scrollY/90)))},{passive:!0}))}function vi(){const r=!vt;return vt=!0,`
     <div id="app-header" class="pt-6 pb-3" style="transition:opacity 0.3s ease;">
-      <div class="flex items-center justify-between gap-2" style="position:relative; overflow:hidden;">
-        <h1 class="syne leading-none title-glow-static" style="letter-spacing:-0.02em; font-weight:800; line-height:1; flex-shrink:0; font-size:1.75rem; white-space:nowrap;">
+      <div class="flex items-center justify-between gap-2">
+        <h1 class="syne leading-none ${r?"title-glow":"title-glow-static"}" style="letter-spacing:-0.02em; font-weight:800; line-height:1; flex-shrink:0; font-size:1.75rem; white-space:nowrap;">
           LE.BE LIVE
         </h1>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.6em; line-height:1.3; letter-spacing:-0.02em; text-transform:uppercase; overflow:hidden; white-space:nowrap;">
+          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.52em; line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${r?"animation:tagline-appear 1.5s ease 0.8s both;":""}">
             KONZERTE UND PARTYS<br>IN COOLEN LOCATIONS
           </div>
         </div>
-        ${r?'<div style="position:absolute;top:0;bottom:0;left:0;width:55%;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.92) 50%,transparent 100%);mix-blend-mode:screen;animation:header-shine-sweep 2.2s cubic-bezier(0.4,0,0.2,1) 0.3s 1 both;pointer-events:none;z-index:10;"></div>':""}
       </div>
     </div>
   `}function wr(){const r=N.filter(t=>t).length+L.filter(t=>t).length;return`
