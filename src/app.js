@@ -39,7 +39,10 @@ export async function renderApp(el) {
     <div id="app-modals"></div>
     <div id="bottom-nav" style="position:fixed; bottom:0; left:0; right:0; z-index:40;"></div>
   `
-  document.getElementById('app-inner').innerHTML = renderSkeleton()
+  const isReload = !!sessionStorage.getItem('lebe-loaded')
+  if (!isReload) {
+    document.getElementById('app-inner').innerHTML = renderSkeleton()
+  }
   currentUser = await getUser()
   events = await getEvents()
   if (currentUser) {
@@ -47,8 +50,10 @@ export async function renderApp(el) {
     bookmarked = merged.bookmarked
     going = merged.going
   }
+  sessionStorage.setItem('lebe-loaded', '1')
   window.scrollTo(0, 0)
   render()
+  requestAnimationFrame(() => window.scrollTo(0, 0))
 }
 
 async function mergeAndSyncBookmarks() {
