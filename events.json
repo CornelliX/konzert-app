@@ -39,8 +39,8 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 2087987,
-    "title": "Singalong -Das große Mitsing-Event- ausverkauft",
+    "id": 1049920088,
+    "title": "ALLESS",
     "date": "2026-03-27",
     "time": "19:00",
     "locationId": 6,
@@ -52,8 +52,8 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1049920088,
-    "title": "ALLESS",
+    "id": 2087987,
+    "title": "Singalong -Das große Mitsing-Event- ausverkauft",
     "date": "2026-03-27",
     "time": "19:00",
     "locationId": 6,
@@ -153,6 +153,19 @@
     "ticketUrl": "https://columbia-theater.de/event/20260327-stoned-jesus-wheel/",
     "spotifyUrl": "",
     "source": "columbiatheater",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 1694467465,
+    "title": "Pure Obsessions & Red Nights + MTTM @Urban…",
+    "date": "2026-03-27",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/pure-obsessions-and-red-nights-mttm-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -581,16 +594,16 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 335232750,
-    "title": "CHÉRI CHÉRI & RBSN",
+    "id": 448147120,
+    "title": "aufnahme + wiedergabe: Fünfzehn Jahre - Erster…",
     "date": "2026-03-28",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/94273-tickets-cheri-cheri-rbsn-schokoladen-berlin-am-28-03-2026",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/aufnahme-wiedergabe-fünfzehn-jahre-erster-akt.html",
     "spotifyUrl": "",
-    "source": "schokoladen",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -833,19 +846,6 @@
     "source": "quasimodo",
     "ticketUrl": "https://quasimodo.club/events/old-school-house-party-9-7323",
     "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1461191556,
-    "title": "When the Sun Hits",
-    "date": "2026-03-28",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-4/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-03-27"
   },
   {
@@ -1219,19 +1219,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 2026455402,
-    "title": "FLORA",
-    "date": "2026-03-30",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/93364-tickets-flora-indie-pop-stuttgart-treipender-teppich-records-schokoladen-berlin-am-30-03-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 553718906,
     "title": "FritzSessions x splash!",
     "date": "2026-03-30",
@@ -1384,19 +1371,6 @@
     "ticketUrl": "https://utconnewitz.de/",
     "spotifyUrl": "",
     "source": "utconnewitz",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 814398417,
-    "title": "Augelectrik + Badecima",
-    "date": "2026-03-31",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/92332-tickets-augelectrik-badecima-schokoladen-berlin-am-31-03-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
     "addedAt": "2026-03-27"
   },
   {
@@ -1669,19 +1643,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 728134030,
-    "title": "The Green Apple Sea",
-    "date": "2026-04-01",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/93160-tickets-the-green-apple-sea-dark-kid-album-release-tour-schokoladen-berlin-am-01-04-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1216226405,
     "title": "flo & jere present: musical chairs",
     "date": "2026-04-01",
@@ -1911,19 +1872,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1356375271,
-    "title": "kasi & antonius",
-    "date": "2026-04-02",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1027082829,
     "title": "HYPOCRISY",
     "date": "2026-04-02",
@@ -1934,19 +1882,6 @@
     "ticketUrl": "https://www.astra-berlin.de/events/2026-04-02-hypocrisy",
     "spotifyUrl": "",
     "source": "astra",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 83697722,
-    "title": "SWORN LIARS",
-    "date": "2026-04-02",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/91241-tickets-sworn-liars-garage-punk-rock-bremen-schokoladen-berlin-am-02-04-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
     "addedAt": "2026-03-27"
   },
   {
@@ -2216,19 +2151,6 @@
     "ticketUrl": "https://www.astra-berlin.de/events/2026-04-03-reggaeville-easter-special-2026",
     "spotifyUrl": "",
     "source": "astra",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1103169046,
-    "title": "FRUIT TONES",
-    "date": "2026-04-03",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/92914-tickets-fruit-tones-garage-punk-uk-rec-release-schokoladen-berlin-am-03-04-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
     "addedAt": "2026-03-27"
   },
   {
@@ -2566,19 +2488,6 @@
     "ticketUrl": "https://www.astra-berlin.de/events/2026-04-04-zs--zs-",
     "spotifyUrl": "",
     "source": "astra",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 122670029,
-    "title": "ZHAAT & RED MESS",
-    "date": "2026-04-04",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/93530-tickets-zhaat-red-mess-schokoladen-berlin-am-04-04-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
     "addedAt": "2026-03-27"
   },
   {
@@ -3113,16 +3022,16 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1511205919,
-    "title": "DEATHCRASH",
+    "id": 860730146,
+    "title": "Hexvessel + Aluk Todolo + Nihil Nihil - Urban…",
     "date": "2026-04-06",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/89521-tickets-deathcrash-slowcore-uk-schokoladen-berlin-am-06-04-2026",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/hexvessel-aluk-todolo-nihil-nihil-urban-spree-berlin.html",
     "spotifyUrl": "",
-    "source": "schokoladen",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -3178,6 +3087,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 580269886,
+    "title": "LIK - Berlin",
+    "date": "2026-04-07",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/lik-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 1535827342,
     "title": "THY CATAFALQUE (HU)",
     "date": "2026-04-07",
@@ -3188,32 +3110,6 @@
     "ticketUrl": "https://www.so36.com/produkte/92218-tickets-thy-catafalque-hu-so36-berlin-am-07-04-2026",
     "spotifyUrl": "",
     "source": "so36",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 381561537,
-    "title": "ALLI NEUMANN",
-    "date": "2026-04-07",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1560716364,
-    "title": "LSD - Liebe Statt Drogen",
-    "date": "2026-04-07",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/90310-tickets-lsd-liebe-statt-drogen-schokoladen-berlin-am-07-04-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
     "addedAt": "2026-03-27"
   },
   {
@@ -3505,19 +3401,6 @@
     "ticketUrl": "https://www.so36.com/produkte/91752-tickets-mamore-so36-berlin-am-08-04-2026",
     "spotifyUrl": "",
     "source": "so36",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1425411602,
-    "title": "AVAION",
-    "date": "2026-04-08",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -3866,19 +3749,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1070071634,
-    "title": "SMALL PLEASURES",
-    "date": "2026-04-09",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/93644-tickets-small-pleasures-post-punk-duo-can-schokoladen-berlin-am-09-04-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1906542076,
     "title": "Matteo Lane",
     "date": "2026-04-09",
@@ -4133,19 +4003,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 785051245,
-    "title": "HAZE",
-    "date": "2026-04-10",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 496669846,
     "title": "Harakiri For The Sky",
     "date": "2026-04-10",
@@ -4301,19 +4158,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 291090871,
-    "title": "Caosonora + Rain70",
-    "date": "2026-04-10",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/caosonora-rain70/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1346323939,
     "title": "Deathwood",
     "date": "2026-04-10",
@@ -4362,6 +4206,19 @@
     "source": "quasimodo",
     "ticketUrl": "https://quasimodo.club/events/quasimodo-jazz-night-ft-yamirahs-solar-explorers-7210",
     "spotifyUrl": "",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 1674174429,
+    "title": "ROME IN REVERSE - NOKLAN - LEMON LIGHTS",
+    "date": "2026-04-10",
+    "time": "22:30",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/rome-in-reverse-noklan-lemon-lights.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -4569,19 +4426,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-04-11-goldlink",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1061008893,
-    "title": "WESTBAM",
-    "date": "2026-04-11",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -4800,19 +4644,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 2045823899,
-    "title": "PERCOSSA FOSSILE +TINNITUS ATTACK",
-    "date": "2026-04-11",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/percossa-fossile-tinnitus-attack/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 324447400,
     "title": "Angstpop",
     "date": "2026-04-11",
@@ -4955,6 +4786,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 1632041459,
+    "title": "homies v.a. 001 - release party",
+    "date": "2026-04-11",
+    "time": "23:45",
+    "locationId": 21,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/homies-v.a.-001-release-party.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 1769113868,
     "title": "Recycle: METALHEADZ Berlin ft. GOLDIE",
     "date": "2026-04-11",
@@ -5081,6 +4925,19 @@
     "ticketUrl": "https://www.koka36.de/event_site.php?event=179668",
     "spotifyUrl": "",
     "source": "privatclub",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 1420859513,
+    "title": "LILI REFRAIN - Berlin",
+    "date": "2026-04-12",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/lili-refrain-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -5597,19 +5454,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1593617486,
-    "title": "SKYND",
-    "date": "2026-04-14",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1743285666,
     "title": "Rikas",
     "date": "2026-04-14",
@@ -5736,6 +5580,19 @@
     "ticketUrl": "https://www.eventim.de/event/edb-eddies-tour-privatclub-20741552/",
     "spotifyUrl": "",
     "source": "privatclub",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 776514259,
+    "title": "Mandy, Indiana + Deliluh - Berlin - Urban…",
+    "date": "2026-04-15",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/mandy,-indiana-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -6248,6 +6105,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 1184846594,
+    "title": "Exhumed + Gruesome - Echoes in Red Tour 2026…",
+    "date": "2026-04-16",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/exhumed-gruesome-echoes-in-red-tour-2026-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 169228809,
     "title": "Baran Kok",
     "date": "2026-04-16",
@@ -6613,6 +6483,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 1267918974,
+    "title": "Frank The Baptist + Whispers In The Shadow…",
+    "date": "2026-04-17",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/frank-the-baptist-whispers-in-the-shadow-telegram-frank-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 1439396584,
     "title": "VERSENGOLD",
     "date": "2026-04-17",
@@ -6970,6 +6853,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 1506444808,
+    "title": "XOXO, BACKSTABBED, Finalizer, Stray Dogs…",
+    "date": "2026-04-18",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/xoxo,-backstabbed,finalizer,-stray-dogs-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 1079145126,
     "title": "skuth",
     "date": "2026-04-18",
@@ -7019,32 +6915,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-04-18-atr-party",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 127072672,
-    "title": "TIDE LINES",
-    "date": "2026-04-18",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 895100175,
-    "title": "OTAKU PARTY",
-    "date": "2026-04-18",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -7443,19 +7313,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 635304846,
-    "title": "Jamsession",
-    "date": "2026-04-19",
-    "time": "19:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/jamsession-7/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1983700192,
     "title": "CATS & BREAKKIES",
     "date": "2026-04-19",
@@ -7492,19 +7349,6 @@
     "ticketUrl": "https://www.so36.com/produkte/90972-tickets-marina-spanou-so36-berlin-am-19-04-2026",
     "spotifyUrl": "",
     "source": "so36",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 155982972,
-    "title": "GENETIKK",
-    "date": "2026-04-19",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -7763,6 +7607,19 @@
     "ticketUrl": "https://utconnewitz.de/",
     "spotifyUrl": "",
     "source": "utconnewitz",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 1524931536,
+    "title": "Prostitute",
+    "date": "2026-04-20",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/prostitute-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -8047,6 +7904,19 @@
     "ticketUrl": "https://horns-erben.de/event/moritz-sembritzki-quartett-jazz/",
     "spotifyUrl": "",
     "source": "hornserben",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 1361598772,
+    "title": "Boko Yout - Berlin",
+    "date": "2026-04-21",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/boko-yout-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -8384,6 +8254,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 1903396658,
+    "title": "HOLOSOIL EP Release Show + Minivan @Urban…",
+    "date": "2026-04-23",
+    "time": "07:30",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/holosoil-ep-release-show-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 887825751,
     "title": "Learn to Swing Dance mit Swing Patrol",
     "date": "2026-04-23",
@@ -8701,19 +8584,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 419285906,
-    "title": "RIPSHIP + ROMA DESERTA",
-    "date": "2026-04-24",
-    "time": "00:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/ripship-roma-deserta/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 2125969233,
     "title": "Queer Night Market",
     "date": "2026-04-24",
@@ -8892,6 +8762,19 @@
     "ticketUrl": "https://utconnewitz.de/",
     "spotifyUrl": "",
     "source": "utconnewitz",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 333362411,
+    "title": "Cruel Machine x Effetto Notte: Ramleh + Brak…",
+    "date": "2026-04-24",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/cruel-machine-x-effetto-notte-ramleh-brak-philipp-strobel.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -9176,6 +9059,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 233238837,
+    "title": "BRAKATUS - Berlin",
+    "date": "2026-04-25",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/brakatus-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 2052190967,
     "title": "LESBIAN VISIBILITY DAY – THE PARTY",
     "date": "2026-04-25",
@@ -9262,19 +9158,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-04-25-furiosa--la-diva-latina---queer-latin-party",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1194098233,
-    "title": "SINGLE PARTY LEIPZIG",
-    "date": "2026-04-25",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -9414,19 +9297,6 @@
     "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72066",
     "spotifyUrl": "",
     "source": "moritzbastei",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 833491108,
-    "title": "Reserviert Gregor",
-    "date": "2026-04-25",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/reserviert-gregor/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-03-27"
   },
   {
@@ -9611,16 +9481,16 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 403800413,
-    "title": "Pen &amp; Paper Veranstaltung",
+    "id": 1016979709,
+    "title": "VASTUM + UNDERGANG + CORPUS OFFAL + MORBIFIC…",
     "date": "2026-04-26",
-    "time": "15:00",
-    "locationId": 48,
+    "time": "17:00",
+    "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/pen-paper-veranstaltung/",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/vastum-undergang-corpus-offal-morbific-teratoma-sunday-of-the-sick.html",
     "spotifyUrl": "",
-    "source": "mvbleipzig",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -9865,19 +9735,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3270",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 616115658,
-    "title": "KASALLA",
-    "date": "2026-04-27",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -10517,19 +10374,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1628661325,
-    "title": "TANZ IN DEN MAI",
-    "date": "2026-04-30",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 2071854578,
     "title": "WYLHEM",
     "date": "2026-04-30",
@@ -11044,19 +10888,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1462300654,
-    "title": "DICK BRAVE",
-    "date": "2026-05-02",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 577318420,
     "title": "Georg Stengel",
     "date": "2026-05-02",
@@ -11080,6 +10911,19 @@
     "ticketUrl": "https://utconnewitz.de/",
     "spotifyUrl": "",
     "source": "utconnewitz",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 2033364631,
+    "title": "DANCING ON OUR GRAVES at URBAN SPREE",
+    "date": "2026-05-02",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/dancing-on-our-graves-at-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -11445,6 +11289,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 1027532021,
+    "title": "Soil Cell + Luke Seabright + Forrest Gimp (DJ-Set)",
+    "date": "2026-05-04",
+    "time": "20:00",
+    "locationId": 12,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://madameclaude.de/event/soil-cell-luke-seabright-forrest-gimp-dj-set/",
+    "spotifyUrl": "",
+    "source": "madameclaude",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 1608291712,
     "title": "Die alten Waisen",
     "date": "2026-05-04",
@@ -11732,19 +11589,6 @@
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
     "source": "frannz",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 387391801,
-    "title": "UNRELEASED",
-    "date": "2026-05-06",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -12205,19 +12049,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 516505245,
-    "title": "ABBA UNFORGETTABLE",
-    "date": "2026-05-08",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1065929087,
     "title": "Ennio",
     "date": "2026-05-08",
@@ -12484,6 +12315,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 739782310,
+    "title": "GIDIKI - European Spring Tour 2026 - Urban…",
+    "date": "2026-05-09",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/gidiki-european-spring-tour-2026-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 643995603,
     "title": "Singalong- Das große Mitsing-Konzert",
     "date": "2026-05-09",
@@ -12533,19 +12377,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-05-09-xavi",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 810334955,
-    "title": "90ER & 2000ER PARTY",
-    "date": "2026-05-09",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -12786,19 +12617,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1175265079,
-    "title": "When the Sun Hits",
-    "date": "2026-05-09",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-3/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1771819986,
     "title": "OK BOOMER",
     "date": "2026-05-09",
@@ -12950,6 +12768,19 @@
     "ticketUrl": "https://www.astra-berlin.de/events/2026-05-10-the-hanging-garden",
     "spotifyUrl": "",
     "source": "astra",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 516095727,
+    "title": "Fotocrime + Abraxas",
+    "date": "2026-05-10",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/fotocrime-abrax-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -13583,19 +13414,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 509881805,
-    "title": "Magmasurfer + Banana Of Death + EDDIE",
-    "date": "2026-05-14",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/magmasurfer-banana-of-death-eddie/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1288096095,
     "title": "THE RUTS DC / THE NOT AMUSED",
     "date": "2026-05-14",
@@ -13828,6 +13646,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 1747761689,
+    "title": "Crave Tapes pres. The Violent Youth, Psyche",
+    "date": "2026-05-15",
+    "time": "21:00",
+    "locationId": 21,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/crave-tapes-pres.-the-violent-youth,-psyche.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 1341117005,
     "title": "Argies",
     "date": "2026-05-15",
@@ -13903,19 +13734,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-05-16-headless-party---the-home-of-core---alternative-rock-",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 858421620,
-    "title": "KAFVKA",
-    "date": "2026-05-16",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -14019,19 +13837,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 624291891,
-    "title": "RIVER LUCIFER + Freier Slot für Leipziger Band",
-    "date": "2026-05-16",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/river-lucifer-freier-slot-fuer-leipziger-band/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 819627643,
     "title": "Jamie Clarke`s Perfect",
     "date": "2026-05-16",
@@ -14096,19 +13901,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1459052977,
-    "title": "Jamsession",
-    "date": "2026-05-17",
-    "time": "19:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/jamsession-8/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1903728875,
     "title": "Febre90s",
     "date": "2026-05-17",
@@ -14119,6 +13911,19 @@
     "ticketUrl": "https://badehaus-berlin.com/events/febre90s/",
     "spotifyUrl": "",
     "source": "badehaus",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 2039331270,
+    "title": "Emmon + A Solemn Promise",
+    "date": "2026-05-17",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/emmon-a-solemn-promise-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -14976,32 +14781,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 637680997,
-    "title": "WAVE-GOTIK-TREFFEN FRIDAY",
-    "date": "2026-05-22",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 957759147,
-    "title": "FROM SYNTHETIC 80S TO ALTERNATIVE 90S",
-    "date": "2026-05-22",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 903388657,
     "title": "DENGUE DENGUE DENGUE, BEAKS & DAS BEAT",
     "date": "2026-05-22",
@@ -15233,32 +15012,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1932455552,
-    "title": "WAVE-GOTIK-TREFFEN SATURDAY",
-    "date": "2026-05-23",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 516621268,
-    "title": "THE BIG DEPECHE MODE PARTY",
-    "date": "2026-05-23",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 2121247271,
     "title": "FREUDE",
     "date": "2026-05-23",
@@ -15282,19 +15035,6 @@
     "ticketUrl": "https://www.zigzag-jazzclub.berlin/program-mai/easterpsss",
     "spotifyUrl": "",
     "source": "zigzag",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2118241165,
-    "title": "Reserviert",
-    "date": "2026-05-23",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/reserviert-4/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-03-27"
   },
   {
@@ -15437,32 +15177,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 470616984,
-    "title": "WAVE-GOTIK-TREFFEN SUNDAY",
-    "date": "2026-05-24",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1604784154,
-    "title": "FRONT 242 PARTY",
-    "date": "2026-05-24",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 2136323486,
     "title": "Taj Farrant",
     "date": "2026-05-24",
@@ -15496,19 +15210,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 208607271,
-    "title": "WAVE-GOTIK-TREFFEN MONDAY",
-    "date": "2026-05-25",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -15558,19 +15259,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-05-26-the-abyssinians---big-youth",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1248966392,
-    "title": "GREGOR HÄGELE",
-    "date": "2026-05-26",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -15712,19 +15400,6 @@
     "ticketUrl": "https://www.so36.com/produkte/92328-tickets-carlo-karacho-so36-berlin-am-27-05-2026",
     "spotifyUrl": "",
     "source": "so36",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1736572322,
-    "title": "BLUE OCTOBER",
-    "date": "2026-05-27",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -15926,6 +15601,19 @@
     "ticketUrl": "https://www.wildatheartberlin.de/concerts.php",
     "spotifyUrl": "",
     "source": "wildatheart",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 329945370,
+    "title": "La Sécurité",
+    "date": "2026-05-29",
+    "time": "08:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/la-sécurité-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -16211,6 +15899,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 252292496,
+    "title": "Snuggle - Berlin",
+    "date": "2026-05-30",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/snuggle-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 1213296443,
     "title": "Osan Yaran",
     "date": "2026-05-30",
@@ -16413,6 +16114,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 2050147402,
+    "title": "Way Dynamic - Berlin",
+    "date": "2026-05-31",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/way-dynamic-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 2039325212,
     "title": "MAMMAL HANDS",
     "date": "2026-05-31",
@@ -16472,19 +16186,6 @@
     "ticketUrl": "https://www.columbiahalle.berlin/veranstaltung/berlin-fuer-rojava.html",
     "spotifyUrl": "",
     "source": "columbiahalle",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2144172370,
-    "title": "LAIBACH",
-    "date": "2026-06-02",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -16857,19 +16558,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 767481044,
-    "title": "OLDSCHOOL BEATS OPEN AIR",
-    "date": "2026-06-06",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1173832682,
     "title": "THEO KATZMAN",
     "date": "2026-06-06",
@@ -17058,19 +16746,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 591879633,
-    "title": "HOLLYWOOD UNDEAD",
-    "date": "2026-06-09",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 3857079,
     "title": "Breaking Benjamin",
     "date": "2026-06-09",
@@ -17159,6 +16834,19 @@
     "ticketUrl": "https://felsenkeller.ticket.io/",
     "spotifyUrl": "",
     "source": "felsenkeller",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 977597556,
+    "title": "Kumo 99 - Berlin",
+    "date": "2026-06-10",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/kumo-99-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -17398,6 +17086,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 17532732,
+    "title": "BERLIN BREAKOUT 2026",
+    "date": "2026-06-13",
+    "time": "14:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/berlin-breakout-2026.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 249369473,
     "title": "Deine Freunde",
     "date": "2026-06-13",
@@ -17421,19 +17122,6 @@
     "ticketUrl": "https://www.columbiahalle.berlin/veranstaltung/grey-scale-festival-berlin.html",
     "spotifyUrl": "",
     "source": "columbiahalle",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1965909703,
-    "title": "HUDCON",
-    "date": "2026-06-13",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -17678,19 +17366,6 @@
     "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72775",
     "spotifyUrl": "",
     "source": "moritzbastei",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1386565203,
-    "title": "VOILÀ",
-    "date": "2026-06-16",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -18571,19 +18246,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 532691001,
-    "title": "AUDIO88 & YASSIN",
-    "date": "2026-06-28",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 867094636,
     "title": "EYEHATEGOD",
     "date": "2026-06-28",
@@ -19388,19 +19050,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1633954237,
-    "title": "THE BIG 80S & DEPECHE MODE PARTY",
-    "date": "2026-07-25",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 527661044,
     "title": "Vowws",
     "date": "2026-07-25",
@@ -19760,6 +19409,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 279105366,
+    "title": "Crippling Alcoholism - Berlin",
+    "date": "2026-08-06",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/cripping-alcoholism-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 147763612,
     "title": "KMFDM",
     "date": "2026-08-06",
@@ -19834,19 +19496,6 @@
     "ticketUrl": "https://huxleysneuewelt.de/event/2026-08-07-electric-bassboy",
     "spotifyUrl": "",
     "source": "huxleys",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 661583009,
-    "title": "KMFDM",
-    "date": "2026-08-08",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -19936,32 +19585,6 @@
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72273",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 881901127,
-    "title": "SCHÖN WAR’S, ABER NICHT NOCHMAL | URLAUB MIT DEN ELTERN | VON ANDRÉ HERRMANN",
-    "date": "2026-08-13",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72274",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 982813094,
-    "title": "SCHÖN WAR’S, ABER NICHT NOCHMAL | URLAUB MIT DEN ELTERN | VON ANDRÉ HERRMANN",
-    "date": "2026-08-14",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72275",
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-03-27"
@@ -20081,19 +19704,6 @@
     "ticketUrl": "https://citadel-music-festival.de/event/2026-08-21-zaz",
     "spotifyUrl": "",
     "source": "zitadellespandau",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 14123607,
-    "title": "Jack Pop’s Circus of Science Vol. 30",
-    "date": "2026-08-21",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/show/2026-08-21/jack-pops-circus-of-science-vol-30",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
     "addedAt": "2026-03-27"
   },
   {
@@ -20235,19 +19845,6 @@
     "ticketUrl": "https://www.columbiahalle.berlin/veranstaltung/elle.html",
     "spotifyUrl": "",
     "source": "columbiahalle",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1402324910,
-    "title": "Searching For Home – 10th Birthday Festival",
-    "date": "2026-08-29",
-    "time": "18:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72016",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
     "addedAt": "2026-03-27"
   },
   {
@@ -20432,19 +20029,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1575995146,
-    "title": "GROSSSTADT­GEFLÜSTER - OPEN AIR",
-    "date": "2026-09-05",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 2127147674,
     "title": "DRANGSAL",
     "date": "2026-09-05",
@@ -20516,16 +20100,16 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 230504253,
-    "title": "Lena Kupke: Pause",
-    "date": "2026-09-09",
+    "id": 1286904922,
+    "title": "Weird Nightmare - Berlin",
+    "date": "2026-09-08",
     "time": "20:00",
-    "locationId": 18,
+    "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72919",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/weird-nightmare-berlin-urban-spree.html",
     "spotifyUrl": "",
-    "source": "moritzbastei",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -20606,19 +20190,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 902751985,
-    "title": "Seraina Telli",
-    "date": "2026-09-11",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/seraina-telli-moritzbastei-21128694/?affiliate=TUG",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 663525578,
     "title": "FINGERSKATEBOARDCONTEST by Sticky Fingaz",
     "date": "2026-09-12",
@@ -20642,19 +20213,6 @@
     "ticketUrl": "https://www.tempodrom.de/programm-und-tickets/",
     "spotifyUrl": "",
     "source": "tempodrom",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 619242141,
-    "title": "Sascha Lange – Die Depeche Mode Trilogie",
-    "date": "2026-09-12",
-    "time": "19:30",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72690",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
     "addedAt": "2026-03-27"
   },
   {
@@ -21154,19 +20712,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1465351644,
-    "title": "LOTTE",
-    "date": "2026-09-21",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 167727358,
     "title": "HAEVEN",
     "date": "2026-09-21",
@@ -21200,19 +20745,6 @@
     "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/sigur-ros/2026-09-21-2000",
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1206846285,
-    "title": "BABBUTZI ORKESTAR",
-    "date": "2026-09-21",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2026-09-21/babbutzi-orkestar",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
     "addedAt": "2026-03-27"
   },
   {
@@ -21252,19 +20784,6 @@
     "ticketUrl": "https://huxleysneuewelt.de/event/2026-09-22-cake",
     "spotifyUrl": "",
     "source": "huxleys",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2138400697,
-    "title": "Klez.e – live 2026",
-    "date": "2026-09-22",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/69808",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
     "addedAt": "2026-03-27"
   },
   {
@@ -21317,19 +20836,6 @@
     "ticketUrl": "https://cassiopeia-berlin.de/event/the-toasters---45-years-in-ska-tour-2026",
     "spotifyUrl": "",
     "source": "cassiopeia",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1431695217,
-    "title": "SukOne",
-    "date": "2026-09-24",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/sukone-moritzbastei-21358916/?affiliate=LAP&utm_campaign=lkupro&utm_source=LAP&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
     "addedAt": "2026-03-27"
   },
   {
@@ -21495,19 +21001,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-09-26-wilde-herzen",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1955773123,
-    "title": "SILKE BISCHOFF",
-    "date": "2026-09-26",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -21712,19 +21205,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-09-30-einar-soldberg",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 243318010,
-    "title": "JUPITER JONES",
-    "date": "2026-09-30",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -22657,19 +22137,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 102085464,
-    "title": "LOI",
-    "date": "2026-10-12",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 278876771,
     "title": "Inspector Spacetime",
     "date": "2026-10-12",
@@ -22822,19 +22289,6 @@
     "ticketUrl": "https://www.tempodrom.de/programm-und-tickets/",
     "spotifyUrl": "",
     "source": "tempodrom",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1293102455,
-    "title": "SYBILLE BULLATSCHEK",
-    "date": "2026-10-15",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -23036,19 +22490,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-10-17-marko-hietala",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 413098391,
-    "title": "PRINZ PI",
-    "date": "2026-10-17",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -23310,19 +22751,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1421517185,
-    "title": "LORI",
-    "date": "2026-10-22",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 2014913675,
     "title": "Nights on Broadway",
     "date": "2026-10-22",
@@ -23396,6 +22824,19 @@
     "addedAt": "2026-03-27"
   },
   {
+    "id": 207241050,
+    "title": "Tribute to Nothing - Berlin",
+    "date": "2026-10-23",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/tribute-to-nothing-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-03-27"
+  },
+  {
     "id": 2112847041,
     "title": "Moon Shot",
     "date": "2026-10-23",
@@ -23419,32 +22860,6 @@
     "ticketUrl": "https://www.so36.com/produkte/90007-tickets-female-fronted-is-not-a-genre-5-so36-berlin-am-23-10-2026",
     "spotifyUrl": "",
     "source": "so36",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 350101443,
-    "title": "RATHMANN",
-    "date": "2026-10-23",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1924927211,
-    "title": "MC BOMBER",
-    "date": "2026-10-23",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -23931,19 +23346,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 878573538,
-    "title": "MARC ATLAS",
-    "date": "2026-10-29",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 322714781,
     "title": "Apsilon",
     "date": "2026-10-29",
@@ -24117,19 +23519,6 @@
     "ticketUrl": "https://huxleysneuewelt.de/event/2026-10-31-dartagnan",
     "spotifyUrl": "",
     "source": "huxleys",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 940210771,
-    "title": "ELECTRIC KINGDOM",
-    "date": "2026-10-31",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -24559,19 +23948,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 123914771,
-    "title": "BONAPARTE",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 100970638,
     "title": "Fancy (ausverkauft)",
     "date": "2026-11-07",
@@ -24824,19 +24200,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1848650090,
-    "title": "KYTES",
-    "date": "2026-11-11",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 240023018,
     "title": "Shinedown",
     "date": "2026-11-11",
@@ -24936,19 +24299,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-11-12-our-promise",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1047046346,
-    "title": "NIKITA MILLER",
-    "date": "2026-11-12",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -25241,19 +24591,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 2008661373,
-    "title": "MINE",
-    "date": "2026-11-15",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1203941293,
     "title": "FRANKIE AND THE WITCH FINGERS",
     "date": "2026-11-16",
@@ -25313,19 +24650,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-11-18-rowli",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 369301718,
-    "title": "NIE UND NIMMER",
-    "date": "2026-11-18",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -25485,19 +24809,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 836223128,
-    "title": "HAZE",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 953375656,
     "title": "Wisborg",
     "date": "2026-11-20",
@@ -25634,6 +24945,19 @@
     "ticketUrl": "https://columbia-theater.de/event/20261121-frida-gold/",
     "spotifyUrl": "",
     "source": "columbiatheater",
+    "addedAt": "2026-03-27"
+  },
+  {
+    "id": 676037361,
+    "title": "WISBORG Phantomschmerz Tour - BERLIN | Special…",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/wisborg-phantomschmerz-tour-berlin-special-guest-the-fright.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -25951,29 +25275,16 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 34739167,
-    "title": "KAPELLE PETRA",
+    "id": 863594453,
+    "title": "FÏX8:SËD8 + NEROGRIS + SCHNEIDER -  Urban…",
     "date": "2026-11-27",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/fïx8sëd8-nerogris-schneider-urban-spree,-berlin.html",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1087743932,
-    "title": "RATHMANN @PRIVATCLUB BERLIN",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
+    "source": "urbanspree",
     "addedAt": "2026-03-27"
   },
   {
@@ -26655,19 +25966,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 2134813209,
-    "title": "STEINER & MADLAINA",
-    "date": "2026-12-07",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1357989573,
     "title": "CHAPO102",
     "date": "2026-12-08",
@@ -26704,19 +26002,6 @@
     "ticketUrl": "https://www.tempodrom.de/programm-und-tickets/",
     "spotifyUrl": "",
     "source": "tempodrom",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 696155915,
-    "title": "MIGHTY OAKS",
-    "date": "2026-12-08",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -26908,19 +26193,6 @@
     "ticketUrl": "https://www.so36.com/produkte/93678-tickets-the-butlers-40-years-ska-soulpower-so36-berlin-am-12-12-2026",
     "spotifyUrl": "",
     "source": "so36",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2064951038,
-    "title": "REMODE",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -27721,19 +26993,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 241694307,
-    "title": "DR. POP",
-    "date": "2027-01-28",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1411605510,
     "title": "A Life Divided",
     "date": "2027-01-31",
@@ -28032,45 +27291,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 13921615,
-    "title": "PAULWETZ",
-    "date": "2027-03-09",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1700992266,
-    "title": "ROLF MILLER",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1483314545,
-    "title": "ROCK TO MODE",
-    "date": "2027-03-13",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 558060186,
     "title": "PaulWetz",
     "date": "2027-03-17",
@@ -28081,19 +27301,6 @@
     "ticketUrl": "https://huxleysneuewelt.de/event/2027-03-17-paulwetz",
     "spotifyUrl": "",
     "source": "huxleys",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1356839098,
-    "title": "ANNA-MARIA ZIMMERMANN",
-    "date": "2027-03-20",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -28120,19 +27327,6 @@
     "ticketUrl": "https://www.tempodrom.de/programm-und-tickets/",
     "spotifyUrl": "",
     "source": "tempodrom",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 796528251,
-    "title": "LEONY",
-    "date": "2027-04-03",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
@@ -28214,19 +27408,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1728290364,
-    "title": "MONET192",
-    "date": "2027-04-13",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 736719442,
     "title": "LUNE",
     "date": "2027-04-15",
@@ -28237,32 +27418,6 @@
     "ticketUrl": "https://www.tempodrom.de/programm-und-tickets/",
     "spotifyUrl": "",
     "source": "tempodrom",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1975558565,
-    "title": "DIE LÄRMER",
-    "date": "2027-04-17",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1155419439,
-    "title": "DREIVIERTELBLUT",
-    "date": "2027-04-22",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-03-27"
   },
   {
