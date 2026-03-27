@@ -83,7 +83,7 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:n}){var i
           LE.BE LIVE
         </h1>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.52em; line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${r?"animation:tagline-appear 1.5s ease 0.4s both;":""}">
+          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.52em; line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${r?"animation:tagline-appear 1.5s ease 0.5s both;":""}">
             KONZERTE UND PARTYS<br>IN COOLEN LOCATIONS
           </div>
         </div>
