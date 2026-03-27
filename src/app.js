@@ -51,9 +51,19 @@ export async function renderApp(el) {
     going = merged.going
   }
   sessionStorage.setItem('lebe-loaded', '1')
+  const c64El = document.querySelector('.c64-border')
+  if (c64El) container.appendChild(c64El)
   window.scrollTo(0, 0)
   render()
   requestAnimationFrame(() => window.scrollTo(0, 0))
+  if (c64El) {
+    c64El.style.opacity = '1'
+    c64El.style.transition = 'opacity 0.6s ease'
+    requestAnimationFrame(() => {
+      c64El.style.opacity = '0'
+      setTimeout(() => c64El.remove(), 600)
+    })
+  }
 }
 
 async function mergeAndSyncBookmarks() {
