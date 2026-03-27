@@ -100,7 +100,7 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
   -webkit-text-fill-color: transparent;
   color: transparent;
   will-change: background-position;
-  animation: title-sweep 2.2s cubic-bezier(0.4,0,0.2,1) 0.4s 1 both;
+  animation: title-sweep 2.2s cubic-bezier(0.4,0,0.2,1) 0.5s 1 both;
 }
 .title-glow-static {
   background: linear-gradient(90deg, #6366f1 0%, #a855f7 55%, #c026d3 100%);
