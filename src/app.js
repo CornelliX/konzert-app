@@ -26,6 +26,8 @@ let markSeenTimer = null
 let titleAnimated = false
 
 export async function renderApp(el) {
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
+  window.scrollTo(0, 0)
   container = el
   container.innerHTML = `
     <div id="ptr-indicator" style="text-align:center; height:0; overflow:hidden; transition:height 0.2s; color:rgba(255,255,255,0.5); font-size:13px; display:flex; align-items:center; justify-content:center;">↻ Aktualisieren...</div>
@@ -732,8 +734,14 @@ function attachEvents() {
       if (diff > 80) {
         if (indicator) indicator.innerHTML = '↻ Wird aktualisiert...'
         const seq = ++fetchSeq
-        const fetched = await getEvents()
-        if (seq === fetchSeq) { events = fetched; render() }
+        const fetched = await getEvents().catch(() => null)
+        if (seq === fetchSeq) {
+          if (fetched) events = fetched
+          render()
+        } else {
+          const ind = document.getElementById('ptr-indicator')
+          if (ind) ind.style.height = '0'
+        }
       } else {
         if (indicator) indicator.style.height = '0'
       }

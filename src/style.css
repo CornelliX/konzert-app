@@ -51,9 +51,9 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 .skeleton-pulse { animation: skeleton-pulse 1.6s ease-in-out infinite; }
 #app-header { transition: opacity 0.3s ease; }
 @keyframes title-sweep {
-  0%   { background-position: 0% center;   text-shadow: 0 0 8px rgba(168,85,247,0.5); }
-  45%  {                                    text-shadow: 0 0 22px rgba(168,85,247,1), 0 0 44px rgba(168,85,247,0.5); }
-  100% { background-position: 100% center; text-shadow: 0 0 12px rgba(168,85,247,0.55); }
+  0%   { background-position: 100% center; text-shadow: 0 0 8px rgba(168,85,247,0.5); }
+  45%  {                                   text-shadow: 0 0 22px rgba(168,85,247,1), 0 0 44px rgba(168,85,247,0.5); }
+  100% { background-position: 0% center;  text-shadow: 0 0 12px rgba(168,85,247,0.55); }
 }
 .title-glow {
   background: linear-gradient(90deg,
@@ -71,7 +71,7 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
     #818cf8 0%, #a855f7 20%, #d946ef 38%, #f0abfc 46%,
     #ffffff 50%, #f0abfc 54%, #d946ef 62%, #a855f7 80%, #818cf8 100%);
   background-size: 300% auto;
-  background-position: 100% center;
+  background-position: 0% center;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
