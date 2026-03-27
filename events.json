@@ -1,17 +1,5 @@
 [
   {
-    "id": 1290598618,
-    "title": "Candlelight: Coldplay & Imagine Dragons | Hip-Hop on Strings",
-    "date": "2026-03-27",
-    "time": "18:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 921220151,
     "title": "TRISTAN BRUSCH // Ausverkauft",
     "date": "2026-03-27",
@@ -139,19 +127,6 @@
     "ticketUrl": "https://landstreicher-konzerte.de/konzerte/karate-andi-l-26",
     "spotifyUrl": "",
     "source": "werk2",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 725201083,
-    "title": "DISCO ARABESQUO x UNCIVILIZED CIVILIZED CLUB",
-    "date": "2026-03-27",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-03-27-disco-arabesquo-x-uncivilized-civilized-club",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -529,18 +504,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 808077242,
-    "title": "Frack & Spitzenhöschen #17",
-    "date": "2026-03-28",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1374243602,
     "title": "Drunken Masters",
     "date": "2026-03-28",
@@ -564,32 +527,6 @@
     "ticketUrl": "https://horns-erben.de/event/karla-akustik-pop/",
     "spotifyUrl": "",
     "source": "hornserben",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 645327651,
-    "title": "FEWJAR",
-    "date": "2026-03-28",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-03-28-fewjar",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2101066579,
-    "title": "WILDE HERZEN",
-    "date": "2026-03-28",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-03-28-wilde-herzen",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -681,19 +618,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3423",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1038508700,
-    "title": "Doggy Weekend Berlin: Club Animalz",
-    "date": "2026-03-28",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/80268/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-03-27"
   },
   {
@@ -1270,19 +1194,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 510599511,
-    "title": "DEL WATER GAP",
-    "date": "2026-03-30",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-03-30-del-water-cap",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1480471999,
     "title": "11FREUNDE KNEIPENQUIZ",
     "date": "2026-03-30",
@@ -1707,19 +1618,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1394610240,
-    "title": "YEAR OF THE GOAT",
-    "date": "2026-04-01",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-01-year-of-the-goat",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 302935154,
     "title": "KENNEN SIE KINO?",
     "date": "2026-04-01",
@@ -1959,19 +1857,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3248",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1173164642,
-    "title": "IL CIVETTO",
-    "date": "2026-04-02",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-02-il-civetto",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -2254,32 +2139,6 @@
     "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ol_vQU-KwkwmezKFv4K",
     "spotifyUrl": "",
     "source": "kesselhaus",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2026751336,
-    "title": "SIOVO",
-    "date": "2026-04-03",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-03-siovo",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 762810763,
-    "title": "THE EARLY DAYS • THROWBACK INDIE PARTY",
-    "date": "2026-04-03",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-03-the-early-days---let-s-dance-to-joy-division",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -2591,45 +2450,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3371",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1912248234,
-    "title": "NILS HOFFMANN",
-    "date": "2026-04-04",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-04-nils-hoffmann",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1743220122,
-    "title": "RADIOACTIVE",
-    "date": "2026-04-04",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-04-radioactive",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1710060429,
-    "title": "DANCING WITH MYSELF!",
-    "date": "2026-04-04",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-04-dancing-with-myself-",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -3585,19 +3405,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1961270869,
-    "title": "LAGUM",
-    "date": "2026-04-08",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-08-lagum",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1990073156,
     "title": "MAMORÉ",
     "date": "2026-04-08",
@@ -3917,19 +3724,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1137620194,
-    "title": "AGATHA IS DEAD!",
-    "date": "2026-04-09",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-09-agatha-is-dead",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 498494120,
     "title": "FROM ASHES TO NEW",
     "date": "2026-04-09",
@@ -4108,18 +3902,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1732151018,
-    "title": "Ballet of Lights: Cinderella",
-    "date": "2026-04-10",
-    "time": "18:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://feverup.com/m/389006",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 422701525,
     "title": "ANIMATION (5 Filme in 67 Minuten, alle in OmU)",
     "date": "2026-04-10",
@@ -4207,19 +3989,6 @@
     "ticketUrl": "https://www.tixforgigs.com/Event/70518",
     "spotifyUrl": "",
     "source": "werk2",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 599641378,
-    "title": "HELLRIPPER + SCHIZOPHRENIA",
-    "date": "2026-04-10",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-10-hellripper---schizophrenia",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -4572,18 +4341,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 958397852,
-    "title": "Ballet of Lights: Dornröschen",
-    "date": "2026-04-11",
-    "time": "15:30",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://feverup.com/m/274764",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 186409106,
     "title": "10 Jahre, 10 Städte: Deutschland-Tour 2026",
     "date": "2026-04-11",
@@ -4672,19 +4429,6 @@
     "ticketUrl": "https://www.tixforgigs.com/Event/67226?af=cwduw3m5zhp3&saf=mpjehri",
     "spotifyUrl": "",
     "source": "werk2",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2092562097,
-    "title": "GOLDLINK",
-    "date": "2026-04-11",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-11-goldlink",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -5239,18 +4983,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1689514736,
-    "title": "SAVOY SATELLITES All Stars feat. Siri Svegler",
-    "date": "2026-04-12",
-    "time": "19:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 705469701,
     "title": "The Saxophones: \"No Time for Poetry\" Tour 2026",
     "date": "2026-04-12",
@@ -5274,19 +5006,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3381",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 736977283,
-    "title": "TURF & KANAKU Y EL TIGRE",
-    "date": "2026-04-12",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-12-turf---kanaku-y-el-tigre-",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -5508,32 +5227,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1678883308,
-    "title": "TYLER BALLGAME",
-    "date": "2026-04-13",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-13-tyler-ballgame",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 948660264,
-    "title": "WE ARE SCIENTISTS",
-    "date": "2026-04-13",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-13-we-are-scientists",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1622659061,
     "title": "Fayan (ausverkauft)",
     "date": "2026-04-13",
@@ -5726,19 +5419,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1497911630,
-    "title": "MELODY'S ECHO CHAMBER",
-    "date": "2026-04-14",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-14-melody-s-echo-chamber",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1593617486,
     "title": "SKYND",
     "date": "2026-04-14",
@@ -5840,31 +5520,6 @@
     "ticketUrl": "https://cassiopeia-berlin.de/event/super-tuesday-111639683",
     "spotifyUrl": "",
     "source": "cassiopeia",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2048056213,
-    "title": "Die Improvisionäre",
-    "date": "2026-04-15",
-    "time": "18:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OfUn8G3ZmKtE0-QniDh",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 789956064,
-    "title": "Donna The Show",
-    "date": "2026-04-15",
-    "time": "18:30",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://tickets.donnatheshow.com/events/donnatheshow/2028594",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -6005,19 +5660,6 @@
     "ticketUrl": "https://www.tixforgigs.com/Event/72011?af=cwduw3m5zhp3&saf=herpync",
     "spotifyUrl": "",
     "source": "werk2",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 795084704,
-    "title": "SOLENCE",
-    "date": "2026-04-15",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-15-solence",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -6364,19 +6006,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1826676767,
-    "title": "THE BROWNING",
-    "date": "2026-04-16",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-16-the-browning",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1316542794,
     "title": "MARTIN DUPONT",
     "date": "2026-04-16",
@@ -6703,19 +6332,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1554501278,
-    "title": "JAN PLEWKA",
-    "date": "2026-04-17",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-17-jan-plewka",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 769949251,
     "title": "Mobb Deep’s Havoc",
     "date": "2026-04-17",
@@ -6890,18 +6506,6 @@
     "ticketUrl": "https://www.columbiahalle.berlin/veranstaltung/teuterekordz-2.html",
     "spotifyUrl": "",
     "source": "columbiahalle",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1379890420,
-    "title": "PYTHO - BLACK SQUARE",
-    "date": "2026-04-17",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -7200,32 +6804,6 @@
     "ticketUrl": "http://www.conne-island.de/termin/nr7327.html",
     "spotifyUrl": "",
     "source": "conne-island",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 842271261,
-    "title": "CHALK",
-    "date": "2026-04-18",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-18-chalk",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 164629725,
-    "title": "ATR PARTY",
-    "date": "2026-04-18",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-18-atr-party",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -7599,18 +7177,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 906876103,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-04-19",
-    "time": "15:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 813181813,
     "title": "SPH Music Masters",
     "date": "2026-04-19",
@@ -7673,19 +7239,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3403",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1517133108,
-    "title": "EIN KLUMPENHACK",
-    "date": "2026-04-19",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-19-ein-klumpenhack",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -7934,19 +7487,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1900985484,
-    "title": "TIDE LINES",
-    "date": "2026-04-20",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-20-tide-lines",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1679672972,
     "title": "Michel von Wussow",
     "date": "2026-04-20",
@@ -8034,18 +7574,6 @@
     "ticketUrl": "https://www.eventim-light.com/de/a/60d4251b9700c742d183bbe5/e/69970947b9209a715f050eae",
     "spotifyUrl": "",
     "source": "peter-edel",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1456459343,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-04-20",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -8296,18 +7824,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1600275636,
-    "title": "Corb Lund & Hayes Carll - Bible On The Dash",
-    "date": "2026-04-21",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.greyzone-tickets.de/produkte/1225",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 2028520572,
     "title": "THE ZIG ZAG JAZZED UP JAM SESSION",
     "date": "2026-04-21",
@@ -8356,18 +7872,6 @@
     "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/urban-catalyst/2026-04-22-1300",
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1528178372,
-    "title": "Donna The Show",
-    "date": "2026-04-22",
-    "time": "18:30",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://tickets.donnatheshow.com/events/donnatheshow/2028594",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -8705,19 +8209,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1497522610,
-    "title": "MATTEO MANCUSO",
-    "date": "2026-04-23",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-23-matteo-mancuso",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1426507212,
     "title": "VIKO63 & PENGLORD",
     "date": "2026-04-23",
@@ -9012,18 +8503,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 2001937393,
-    "title": "Kurt Weill in Hollywood",
-    "date": "2026-04-24",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 460851737,
     "title": "HENGE",
     "date": "2026-04-24",
@@ -9060,19 +8539,6 @@
     "ticketUrl": "https://www.tixforgigs.com/Event/68987",
     "spotifyUrl": "",
     "source": "werk2",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1025419440,
-    "title": "KINKY INDIE PARTY",
-    "date": "2026-04-24",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-24-kinky-indie-party",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -9447,18 +8913,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1048265422,
-    "title": "Kurt Weill in Hollywood",
-    "date": "2026-04-25",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1410471417,
     "title": "LYCHEE LASSI",
     "date": "2026-04-25",
@@ -9469,32 +8923,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3227",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 11290773,
-    "title": "DARK SPRING FESTIVAL 2026",
-    "date": "2026-04-25",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-25-dark-spring-festival-2026",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2018505039,
-    "title": "FURIOSA! La Diva Latina – Queer Latin Party",
-    "date": "2026-04-25",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-25-furiosa--la-diva-latina---queer-latin-party",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -9870,18 +9298,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1364267458,
-    "title": "Delphis Orakel - giuliana piel x romina geppert",
-    "date": "2026-04-26",
-    "time": "18:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 689107295,
     "title": "BLEIB MODERN + KONSTANTIN UNWOHL",
     "date": "2026-04-26",
@@ -10188,18 +9604,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1468887095,
-    "title": "Le Compte de Monte-Cristo",
-    "date": "2026-04-28",
-    "time": "11:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1542881738,
     "title": "Yuraa",
     "date": "2026-04-28",
@@ -10275,19 +9679,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3436",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 119749623,
-    "title": "CARA ROSE",
-    "date": "2026-04-28",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-28-cara-rose",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -10711,32 +10102,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 768194800,
-    "title": "HAIYTI",
-    "date": "2026-04-30",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-30-haiyti",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 554975509,
-    "title": "Rap Über Hass - Party",
-    "date": "2026-04-30",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-04-30-rap--ber-hass---party",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1628661325,
     "title": "TANZ IN DEN MAI",
     "date": "2026-04-30",
@@ -11020,19 +10385,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1503035181,
-    "title": "ROSALÍA PARTY",
-    "date": "2026-05-01",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-01-rosal-a-party",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 2141091675,
     "title": "COSMIC PSYCHOS",
     "date": "2026-05-01",
@@ -11222,19 +10574,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3358",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 369706226,
-    "title": "TOXIC! POP HITS PARTY",
-    "date": "2026-05-02",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-02-toxic--pop-hits-party",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -11479,19 +10818,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 163627589,
-    "title": "ATMOSPHERE",
-    "date": "2026-05-03",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-03-atmosphere",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 295686409,
     "title": "6EURONEUNZIG - ZUSATZSHOW",
     "date": "2026-05-03",
@@ -11604,18 +10930,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 863838254,
-    "title": "ISAK DANIELSON",
-    "date": "2026-05-04",
-    "time": "19:30",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/noapp/event/isak-danielson-theater-im-delphi-21348969/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 767121611,
     "title": "ROMANO",
     "date": "2026-05-04",
@@ -11712,19 +11026,6 @@
     "ticketUrl": "https://www.holzmarkt.com/veranstaltung/singfestival-im-saeaelchen-2-choere-70-menschen",
     "spotifyUrl": "",
     "source": "holzmarkt",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 941593475,
-    "title": "PETER BJORN & JOHN",
-    "date": "2026-05-05",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-05-peter-bjorn---john",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -11849,18 +11150,6 @@
     "ticketUrl": "https://larkberlin.com/event/selve/",
     "spotifyUrl": "",
     "source": "lark",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 955168215,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-05-05",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -12067,18 +11356,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1648269912,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-05-06",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1241099705,
     "title": "Einfach Elses Late Night Show",
     "date": "2026-05-06",
@@ -12167,19 +11444,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3356",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1065628555,
-    "title": "CHRISTIN NICHOLS",
-    "date": "2026-05-07",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-07-christin-nichols",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -12409,19 +11673,6 @@
     "ticketUrl": "http://www.conne-island.de/termin/nr7414.html",
     "spotifyUrl": "",
     "source": "conne-island",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2038785270,
-    "title": "NON EST DEUS",
-    "date": "2026-05-08",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-08-non-est-deus",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -12753,19 +12004,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3354",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1153065861,
-    "title": "XAVI",
-    "date": "2026-05-09",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-09-xavi",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -13119,18 +12357,6 @@
     "ticketUrl": "https://www.eventim.de/artist/24kgoldn/?affiliate=FKP&fbclid=IwY2xjawPfMPJleHRuA2FlbQIxMABicmlkETFnaXJNSDNHYUlMVzB6SklMc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhXloHjRpqgehY_RMdK26y04_Efn9xeYT9Thl8eeTG5Zn7dOQ5U3YNHeH-eW_aem_jvdVSfH0q9mUq29CBHWZbw",
     "spotifyUrl": "",
     "source": "badehaus",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1254191471,
-    "title": "DUCT TAPE – MOTHER’S DAY SHOW",
-    "date": "2026-05-10",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -14152,19 +13378,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1416100700,
-    "title": "HEADLESS PARTY • The Home of Core & Alternative Rock",
-    "date": "2026-05-16",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-16-headless-party---the-home-of-core---alternative-rock-",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 858421620,
     "title": "KAFVKA",
     "date": "2026-05-16",
@@ -14618,19 +13831,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1492302439,
-    "title": "LUIZA",
-    "date": "2026-05-19",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-19-luiza",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1510626290,
     "title": "Lany",
     "date": "2026-05-19",
@@ -14753,19 +13953,6 @@
     "type": "konzert",
     "locationId": 26,
     "source": "heimathafen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1371472367,
-    "title": "RODRIGO GALLARDO + TREMOR",
-    "date": "2026-05-20",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-20-rodrigo-gallardo---tremor",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -14981,19 +14168,6 @@
     "ticketUrl": "https://horns-erben.de/event/hammondd%ca%92aezsession-eintritt-frei-2/",
     "spotifyUrl": "",
     "source": "hornserben",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 701661213,
-    "title": "ISRAEL NASH",
-    "date": "2026-05-21",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-21-israel-nash",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -15232,19 +14406,6 @@
     "ticketUrl": "https://www.facebook.com/events/2104404386986590",
     "spotifyUrl": "",
     "source": "prachtwerk",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1761945961,
-    "title": "PALEDUSK",
-    "date": "2026-05-22",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-22-paledusk",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -15492,19 +14653,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 2006749360,
-    "title": "WILDE HERZEN",
-    "date": "2026-05-23",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-23-wilde-herzen",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1932455552,
     "title": "WAVE-GOTIK-TREFFEN SATURDAY",
     "date": "2026-05-23",
@@ -15661,18 +14809,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1693381646,
-    "title": "“Der süße Duft kommt nicht von Rosen” genannt “Leichenoper”",
-    "date": "2026-05-24",
-    "time": "17:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1598562034,
     "title": "CHOIR! CHOIR! CHOIR!",
     "date": "2026-05-24",
@@ -15693,19 +14829,6 @@
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
     "source": "frannz",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1428674425,
-    "title": "HELENA DELPHI",
-    "date": "2026-05-24",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-24-helena-delphi",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -15817,19 +14940,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3400",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1032943146,
-    "title": "THE ABYSSINIANS & BIG YOUTH",
-    "date": "2026-05-26",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-26-the-abyssinians---big-youth",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -15958,19 +15068,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3374",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 840246,
-    "title": "BEN KWELLER",
-    "date": "2026-05-27",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-27-ben-kweller",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -16317,19 +15414,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 774712388,
-    "title": "THOMAS SCHWEBEL spielt FEHLFARBEN",
-    "date": "2026-05-29",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-05-29-thomas-schwebel-spielt-fehlfarben",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 2028297795,
     "title": "BLUE OCTOBER",
     "date": "2026-05-29",
@@ -16647,18 +15731,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1142026459,
-    "title": "Ballet of Lights: Dornröschen",
-    "date": "2026-05-31",
-    "time": "15:30",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://feverup.com/m/274764",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 278980813,
     "title": "GENERATION Y PUNK – UPDATE EINER SUBKULTUR",
     "date": "2026-05-31",
@@ -16848,19 +15920,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1789812637,
-    "title": "HARD-ONS feat. JERRY A (Poison Idea) + GUITAR WOLF",
-    "date": "2026-06-03",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-06-03-hard-ons-feat--jerry-a--poison-idea-",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 158956366,
     "title": "Band-Maid",
     "date": "2026-06-03",
@@ -17041,32 +16100,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1345319233,
-    "title": "GET WELL SOON",
-    "date": "2026-06-05",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-06-05-get-well-soon",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 250505520,
-    "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
-    "date": "2026-06-05",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-06-05-the-early-days---let-s-dance-to-joy-division",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1357237279,
     "title": "KUBLAI KHAN TX + Support + BOUNDARIES",
     "date": "2026-06-05",
@@ -17105,18 +16138,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1999069849,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-06-06",
-    "time": "15:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 140086250,
     "title": "Oomph!",
     "date": "2026-06-06",
@@ -17152,19 +16173,6 @@
     "ticketUrl": "https://badehaus-berlin.com/events/schreng-schreng-la-la/",
     "spotifyUrl": "",
     "source": "badehaus",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 443818513,
-    "title": "DANCING WITH MYSELF!",
-    "date": "2026-06-06",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-06-06-dancing-with-myself-",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -17228,18 +16236,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1602795750,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-06-07",
-    "time": "15:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1636894144,
     "title": "Massive Attack",
     "date": "2026-06-07",
@@ -17250,19 +16246,6 @@
     "ticketUrl": "https://citadel-music-festival.de/event/2026-06-07-massive-attack",
     "spotifyUrl": "",
     "source": "zitadellespandau",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 183573942,
-    "title": "SEAFRET",
-    "date": "2026-06-07",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-06-07-seafret",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -17928,19 +16911,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1935287072,
-    "title": "SORRY",
-    "date": "2026-06-15",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-06-15-sorry",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 160227959,
     "title": "QUICKSAND (us)",
     "date": "2026-06-15",
@@ -18130,19 +17100,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 399554365,
-    "title": "WARGASM",
-    "date": "2026-06-17",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-06-17-wargasm",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1788530324,
     "title": "Yonaka",
     "date": "2026-06-17",
@@ -18214,19 +17171,6 @@
     "type": "konzert",
     "locationId": 26,
     "source": "heimathafen",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1734674310,
-    "title": "SAM PREKOP & JOHN McENTIRE",
-    "date": "2026-06-18",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-06-18-sam-prekop---john-mcentire",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -18380,19 +17324,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 123095719,
-    "title": "DYNAMIT",
-    "date": "2026-06-20",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-06-20-dynamit",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1784399399,
     "title": "Snail Mail",
     "date": "2026-06-20",
@@ -18455,18 +17386,6 @@
     "ticketUrl": "https://www.so36.com/produkte/89377-tickets-dancing-with-tears-in-your-eyes-so36-berlin-am-20-06-2026",
     "spotifyUrl": "",
     "source": "so36",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2089864701,
-    "title": "Ballet of Lights: Dornröschen",
-    "date": "2026-06-21",
-    "time": "15:30",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://feverup.com/m/274764",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -18895,19 +17814,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 372481891,
-    "title": "TOGETHER PANGEA",
-    "date": "2026-06-28",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-06-28-together-pangea",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 532691001,
     "title": "AUDIO88 & YASSIN",
     "date": "2026-06-28",
@@ -19044,19 +17950,6 @@
     "ticketUrl": "https://www.so36.com/produkte/94318-tickets-son-rompe-pera-so36-berlin-am-01-07-2026",
     "spotifyUrl": "",
     "source": "so36",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1776665265,
-    "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
-    "date": "2026-07-03",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-07-03-the-early-days---let-s-dance-to-joy-division",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -19431,19 +18324,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 230971055,
-    "title": "PANSY DIVISION",
-    "date": "2026-07-16",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-07-16-pansy-division",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 337963631,
     "title": "CULTURE WARS",
     "date": "2026-07-16",
@@ -19503,19 +18383,6 @@
     "ticketUrl": "https://landstreicher-konzerte.de/konzerte/starbenders-b-26",
     "spotifyUrl": "",
     "source": "badehaus",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1420007640,
-    "title": "HEADLESS PARTY • The Home of Core & Alternative Rock",
-    "date": "2026-07-18",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-07-18-headless-party---the-home-of-core---alternative-rock-",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -19712,19 +18579,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 421548244,
-    "title": "WILDE HERZEN",
-    "date": "2026-07-25",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-07-25-wilde-herzen",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1633954237,
     "title": "THE BIG 80S & DEPECHE MODE PARTY",
     "date": "2026-07-25",
@@ -19890,19 +18744,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1107692505,
-    "title": "SACRED REICH",
-    "date": "2026-07-31",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-07-31-sacred-reich",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 154532076,
     "title": "SCHÖN WAR’S, ABER NICHT NOCHMAL | URLAUB MIT DEN ELTERN | VON ANDRÉ HERRMANN",
     "date": "2026-07-31",
@@ -19926,19 +18767,6 @@
     "ticketUrl": "https://www.wildatheartberlin.de/concerts.php",
     "spotifyUrl": "",
     "source": "wildatheart",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 793912398,
-    "title": "DANCING WITH MYSELF!",
-    "date": "2026-08-01",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-08-01-dancing-with-myself-",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -19993,19 +18821,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 158789362,
-    "title": "MOTHERS FINEST",
-    "date": "2026-08-02",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-08-02-mothers-finest",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 956787587,
     "title": "GOOD RIDDANCE",
     "date": "2026-08-02",
@@ -20032,19 +18847,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 908587143,
-    "title": "H2O",
-    "date": "2026-08-03",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-08-03-h2o",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 2048597446,
     "title": "SCHÖN WAR’S, ABER NICHT NOCHMAL | URLAUB MIT DEN ELTERN | VON ANDRÉ HERRMANN",
     "date": "2026-08-03",
@@ -20068,19 +18870,6 @@
     "ticketUrl": "https://cassiopeia-berlin.de/event/super-tuesday-111639776",
     "spotifyUrl": "",
     "source": "cassiopeia",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 450387258,
-    "title": "JUNGLE ROT",
-    "date": "2026-08-05",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-08-05-jungle-rot",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -20133,19 +18922,6 @@
     "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72267",
     "spotifyUrl": "",
     "source": "moritzbastei",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1674231604,
-    "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
-    "date": "2026-08-07",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-08-07-the-early-days---let-s-dance-to-joy-division",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -20447,19 +19223,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1480008274,
-    "title": "KINKY INDIE PARTY",
-    "date": "2026-08-22",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-08-22-kinky-indie-party",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1018217364,
     "title": "DIE LEGENDE VON NORD",
     "date": "2026-08-22",
@@ -20508,19 +19271,6 @@
     "ticketUrl": "https://tickets.loft.de/event/polica-92q9t2",
     "spotifyUrl": "",
     "source": "peter-edel",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1557012030,
-    "title": "SHAKEY GRAVES",
-    "date": "2026-08-26",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-08-26-shakey-graves",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -20692,19 +19442,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 202466852,
-    "title": "ACTORS",
-    "date": "2026-09-04",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-09-04-actors",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 625406071,
     "title": "FALK",
     "date": "2026-09-04",
@@ -20766,19 +19503,6 @@
     "ticketUrl": "https://www.columbiahalle.berlin/veranstaltung/kein-bock-auf-nazis.html",
     "spotifyUrl": "",
     "source": "columbiahalle",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1096878542,
-    "title": "TRAUMATIN",
-    "date": "2026-09-05",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-09-05-traumatin",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -21313,32 +20037,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 472808400,
-    "title": "ISABEL VAN GELDER",
-    "date": "2026-09-19",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-09-19-isabel-van-gelder-",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 975217941,
-    "title": "HEADLESS PARTY • The Home of Core & Alternative Rock",
-    "date": "2026-09-19",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-09-19-headless-party---the-home-of-core---alternative-rock-",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1685143900,
     "title": "Moritz Neumeier (Ausverkauft)",
     "date": "2026-09-19",
@@ -21848,19 +20546,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1151718441,
-    "title": "WILDE HERZEN",
-    "date": "2026-09-26",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-09-26-wilde-herzen",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1955773123,
     "title": "SILKE BISCHOFF",
     "date": "2026-09-26",
@@ -21921,18 +20606,6 @@
     "locationId": 34,
     "source": "hole44",
     "ticketUrl": "https://hole-berlin.de/event/2026-09-26-heldmaschine/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 527763685,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-09-27",
-    "time": "15:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
     "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
@@ -22027,18 +20700,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 165338012,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-09-28",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 390665144,
     "title": "Landstreicher presents: CCOSMO",
     "date": "2026-09-29",
@@ -22062,19 +20723,6 @@
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
     "source": "frannz",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 178070094,
-    "title": "EINAR SOLDBERG",
-    "date": "2026-09-30",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-09-30-einar-soldberg",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -22368,19 +21016,6 @@
     "source": "quasimodo",
     "ticketUrl": "https://quasimodo.club/events/we-love-80s-39-7304",
     "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 736992993,
-    "title": "WALLIS BIRD",
-    "date": "2026-10-04",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-10-04-wallis-bird",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -22740,19 +21375,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 157750463,
-    "title": "SEAN KOCH",
-    "date": "2026-10-09",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-10-09-sean-koch",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1208856145,
     "title": "Agatha is Dead!",
     "date": "2026-10-09",
@@ -22877,19 +21499,6 @@
     "ticketUrl": "https://www.eventim.de/event/rubi-4-life-tour-26-badehaus-raw-gelaende-eingang-simon-dach-str-21342407/",
     "spotifyUrl": "",
     "source": "badehaus",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2066637757,
-    "title": "BRUCKNER",
-    "date": "2026-10-10",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-10-10-bruckner",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -23291,19 +21900,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 469152867,
-    "title": "ALEX MOFA GANG",
-    "date": "2026-10-16",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-10-16-alex-mofa-gang",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 201527454,
     "title": "JAMES BLAKE",
     "date": "2026-10-16",
@@ -23386,19 +21982,6 @@
     "source": "hole44",
     "ticketUrl": "https://hole-berlin.de/event/2026-10-17-fast-boy/",
     "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1091993882,
-    "title": "MARKO HIETALA",
-    "date": "2026-10-17",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-10-17-marko-hietala",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -23889,18 +22472,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 122460845,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-10-23",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1855285168,
     "title": "Mr Irish Bastard",
     "date": "2026-10-24",
@@ -23940,18 +22511,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 475513631,
-    "title": "Frack & Spitzenhöschen #18",
-    "date": "2026-10-24",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 325208185,
     "title": "Ivo Martin",
     "date": "2026-10-24",
@@ -23975,19 +22534,6 @@
     "ticketUrl": "https://loft.de/x/hq62l?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExbjV6bDZ0clJDazVkS1p4MXNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5kXlTmED7fyBmMKtaG6mvx2mNVAyFf_fhzttdORfuntrhovSDBira_8cj5rw_aem_pQGwvx6Fotk0OMqGB82Egw",
     "spotifyUrl": "",
     "source": "prachtwerk",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 207822324,
-    "title": "EMO DIARIES",
-    "date": "2026-10-24",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-10-24-emo-diaries",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -24088,18 +22634,6 @@
     "ticketUrl": "https://www.wildatheartberlin.de/concerts.php",
     "spotifyUrl": "",
     "source": "wildatheart",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1508664239,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-10-25",
-    "time": "15:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -24560,19 +23094,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 367443189,
-    "title": "HI! SPENCER",
-    "date": "2026-11-01",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-01-hi--spencer",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 608543315,
     "title": "Il Civetto",
     "date": "2026-11-01",
@@ -24674,19 +23195,6 @@
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
     "source": "frannz",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1007052519,
-    "title": "DEATH VALLEY GIRLS",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-04-death-valley-girls",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -25187,19 +23695,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 188716039,
-    "title": "WESTSIDE COWBOYS",
-    "date": "2026-11-11",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-11-westside-cowboys",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1848650090,
     "title": "KYTES",
     "date": "2026-11-11",
@@ -25302,19 +23797,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 223990369,
-    "title": "OUR PROMISE",
-    "date": "2026-11-12",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-12-our-promise",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 1047046346,
     "title": "NIKITA MILLER",
     "date": "2026-11-12",
@@ -25350,18 +23832,6 @@
     "ticketUrl": "https://www.columbiahalle.berlin/veranstaltung/bonaparte-2.html",
     "spotifyUrl": "",
     "source": "columbiahalle",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 231157042,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-11-12",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
     "addedAt": "2026-03-27"
   },
   {
@@ -25442,18 +23912,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 461944655,
-    "title": "Schwanensee – Jenseits der Bühne",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "type": "sonstige",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://www.eventim.de/search/?affiliate=TUG&searchterm=grand+classic+ballet+delphi",
-    "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 443688797,
     "title": "DOMINIK HARTZ",
     "date": "2026-11-14",
@@ -25503,19 +23961,6 @@
     "ticketUrl": "https://badehaus.tickettoaster.de/produkte/525-tickets-tex-brasket-badehaus-berlin-am-14-11-2026?fbclid=IwY2xjawP2oRJleHRuA2FlbQIxMABicmlkETFQMDRKTWw3NjBGM1lQY3Jjc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHk0XIYkk_nDHMp7iLekSN1uNCoD0MhqPDUE71VBm06M2ObRjU3BqEsge4Bw3_aem_qHYjMFWMlRwKjP6vDLaX7Q",
     "spotifyUrl": "",
     "source": "badehaus",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1607855448,
-    "title": "ULTRA SUNN",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-14-ultra-sunn",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -25630,19 +24075,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1203941293,
-    "title": "FRANKIE AND THE WITCH FINGERS",
-    "date": "2026-11-16",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-16-frankie-and-the-witch-fingers",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 773817570,
     "title": "DAV JURA SLAM",
     "date": "2026-11-17",
@@ -25676,19 +24108,6 @@
     "ticketUrl": "https://vvk.link/vfqff",
     "spotifyUrl": "",
     "source": "badehaus",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 525168579,
-    "title": "ROWLI",
-    "date": "2026-11-18",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-18-rowli",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -25848,19 +24267,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 301656645,
-    "title": "CASSIA",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-20-cassia",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 836223128,
     "title": "HAZE",
     "date": "2026-11-20",
@@ -25971,32 +24377,6 @@
     "source": "hole44",
     "ticketUrl": "https://hole-berlin.de/event/2026-11-20-luke-combs-uk-tribute/",
     "spotifyUrl": "",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1805611043,
-    "title": "ALLT",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-21-allt",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1127335897,
-    "title": "HEADLESS PARTY • The Home of Core & Alternative Rock",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-21-headless-party---the-home-of-core---alternative-rock-",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -26125,19 +24505,6 @@
     "ticketUrl": "https://www.tempodrom.de/programm-und-tickets/",
     "spotifyUrl": "",
     "source": "tempodrom",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1315658895,
-    "title": "CHICO CHICO",
-    "date": "2026-11-22",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-22-chico-chico",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -26428,19 +24795,6 @@
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
     "source": "frannz",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 1424571216,
-    "title": "WILDE HERZEN",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-28-wilde-herzen",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -26894,19 +25248,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 1811680590,
-    "title": "GUANA BATZ",
-    "date": "2026-12-05",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-05-guana-batz",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 438136227,
     "title": "Zebrahead",
     "date": "2026-12-05",
@@ -27018,19 +25359,6 @@
     "addedAt": "2026-03-27"
   },
   {
-    "id": 486003023,
-    "title": "SENTA",
-    "date": "2026-12-06",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-06-senta",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-03-27"
-  },
-  {
     "id": 545594869,
     "title": "SIDOs Weihnachtsshow 2026",
     "date": "2026-12-06",
@@ -27041,19 +25369,6 @@
     "ticketUrl": "https://www.columbiahalle.berlin/veranstaltung/sido-gaeste-32.html",
     "spotifyUrl": "",
     "source": "columbiahalle",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 445232031,
-    "title": "MAUSTETYTÖT",
-    "date": "2026-12-07",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-07-maustetyt-t",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
@@ -28263,19 +26578,6 @@
     "ticketUrl": "https://www.tempodrom.de/programm-und-tickets/",
     "spotifyUrl": "",
     "source": "tempodrom",
-    "addedAt": "2026-03-27"
-  },
-  {
-    "id": 2017476375,
-    "title": "DRACONIAN",
-    "date": "2027-02-19",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-19-draconian",
-    "spotifyUrl": "",
-    "source": "lido",
     "addedAt": "2026-03-27"
   },
   {
