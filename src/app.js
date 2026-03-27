@@ -290,7 +290,7 @@ function renderSkeleton() {
   return `
     <div style="padding:0 0 8px;">
       <div style="height:48px; border-radius:10px; background:rgba(255,255,255,0.04); margin-bottom:20px;"></div>
-      ${card}${card}${card}${card}
+      ${card}${card}${card}${card}${card}
     </div>
   `
 }
