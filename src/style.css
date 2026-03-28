@@ -82,11 +82,11 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 }
 #app-header { transition: opacity 0.3s ease; }
 @keyframes title-sweep {
-  0%   { background-position: 100% center; filter: drop-shadow(0 0 2px rgba(168,85,247,0)); }
-  37%  {                                   filter: drop-shadow(0 0 8px rgba(192,132,252,0.55)); }
-  62%  {                                   filter: drop-shadow(0 0 18px rgba(240,171,252,1)) drop-shadow(0 0 36px rgba(168,85,247,0.5)); }
-  87%  {                                   filter: drop-shadow(0 0 4px rgba(192,132,252,0.2)); }
-  100% { background-position: 0% center;  filter: drop-shadow(0 0 2px rgba(168,85,247,0)); }
+  0%   { background-position: 100% center; text-shadow: 0 0 2px rgba(168,85,247,0),     0 0 4px rgba(168,85,247,0); }
+  37%  {                                   text-shadow: 0 0 8px rgba(192,132,252,0.55),  0 0 16px rgba(168,85,247,0.25); }
+  62%  {                                   text-shadow: 0 0 18px rgba(240,171,252,1),    0 0 36px rgba(168,85,247,0.5); }
+  87%  {                                   text-shadow: 0 0 4px rgba(192,132,252,0.2),   0 0 8px rgba(168,85,247,0.1); }
+  100% { background-position: 0% center;  text-shadow: 0 0 2px rgba(168,85,247,0),     0 0 4px rgba(168,85,247,0); }
 }
 .title-glow {
   background: linear-gradient(90deg,
