@@ -82,23 +82,28 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 }
 #app-header { transition: opacity 0.3s ease; }
 @keyframes title-sweep {
-  from { background-position: 100% center; }
-  to   { background-position: 0% center; }
+  0%   { background-position: 100% center; filter: drop-shadow(0 0 2px rgba(168,85,247,0)); }
+  37%  {                                   filter: drop-shadow(0 0 8px rgba(192,132,252,0.55)); }
+  62%  {                                   filter: drop-shadow(0 0 18px rgba(240,171,252,1)) drop-shadow(0 0 36px rgba(168,85,247,0.5)); }
+  87%  {                                   filter: drop-shadow(0 0 4px rgba(192,132,252,0.2)); }
+  100% { background-position: 0% center;  filter: drop-shadow(0 0 2px rgba(168,85,247,0)); }
 }
-.title-sweep-overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+.title-glow {
   background: linear-gradient(90deg,
-    transparent   0%,
-    transparent  34%,
-    rgba(192,132,252,0.45) 39%,
-    rgba(240,171,252,0.75) 42%,
-    rgba(192,132,252,0.45) 45%,
-    transparent  52%,
-    transparent 100%);
-  background-size: 300%;
-  mix-blend-mode: screen;
+    #6366f1  0%,
+    #a855f7 26%,
+    #a855f7 33%,
+    #c084fc 37%,
+    #f0abfc 42%,
+    #c084fc 47%,
+    #a855f7 55%,
+    #6366f1 68%,
+    #a855f7 100%);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
   animation: title-sweep 2.5s linear 1s 1 both;
 }
 .title-glow-static {
