@@ -85,22 +85,20 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
   from { background-position: 100% center; }
   to   { background-position: 0% center; }
 }
-.title-glow {
+.title-sweep-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
   background: linear-gradient(90deg,
-    #6366f1  0%,
-    #a855f7 26%,
-    #a855f7 33%,
-    #c084fc 37%,
-    #f0abfc 42%,
-    #c084fc 47%,
-    #a855f7 55%,
-    #6366f1 68%,
-    #a855f7 100%);
-  background-size: 300% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+    transparent   0%,
+    transparent  34%,
+    rgba(192,132,252,0.45) 39%,
+    rgba(240,171,252,0.75) 42%,
+    rgba(192,132,252,0.45) 45%,
+    transparent  52%,
+    transparent 100%);
+  background-size: 300%;
+  mix-blend-mode: screen;
   animation: title-sweep 2.5s linear 1s 1 both;
 }
 .title-glow-static {
