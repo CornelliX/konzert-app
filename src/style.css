@@ -82,20 +82,19 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 }
 #app-header { transition: opacity 0.3s ease; }
 @keyframes title-sweep {
-  0%   { background-position: 100% center; text-shadow: none; }
-  35%  {                                   text-shadow: 0 0 12px rgba(240,171,252,0.5); }
-  65%  { background-position: 35% center;  text-shadow: 0 0 20px rgba(240,171,252,0.9), 0 0 40px rgba(168,85,247,0.45); }
-  100% { background-position: 0% center;   text-shadow: none; }
+  from { background-position: 100% center; }
+  to   { background-position: 0% center; }
 }
 .title-glow {
   background: linear-gradient(90deg,
     #6366f1  0%,
-    #a855f7 27%,
-    #c084fc 33%,
-    #f0abfc 39%,
-    #c084fc 45%,
-    #a855f7 54%,
-    #6366f1 67%,
+    #a855f7 26%,
+    #a855f7 33%,
+    #c084fc 37%,
+    #f0abfc 42%,
+    #c084fc 47%,
+    #a855f7 55%,
+    #6366f1 68%,
     #a855f7 100%);
   background-size: 300% auto;
   -webkit-background-clip: text;
