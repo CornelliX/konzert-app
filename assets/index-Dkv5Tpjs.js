@@ -79,12 +79,9 @@ ${v}`}class R extends Error{constructor({message:e,code:t,cause:s,name:n}){var i
   `,document.getElementById("app-modals").innerHTML=wi(),document.getElementById("bottom-nav").innerHTML=wr(),_i(),r>0&&z==="liste"&&(clearTimeout(Qt),Qt=setTimeout(()=>mi(),3e3)),Vt||(Vt=!0,window.addEventListener("scroll",()=>{const t=document.getElementById("app-header");t&&(t.style.opacity=String(Math.max(0,1-window.scrollY/90)))},{passive:!0}))}function vi(){const r=!bt;return bt=!0,`
     <div id="app-header" class="pb-3" style="padding-top:max(1.5rem,env(safe-area-inset-top)); transition:opacity 0.3s ease;">
       <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-        <div style="position:relative; flex-shrink:0;">
-          <h1 class="syne leading-none title-glow-static" style="letter-spacing:-0.02em; font-weight:800; line-height:1; font-size:1.75rem; white-space:nowrap;">
-            LE.BE LIVE
-          </h1>
-          ${r?'<div class="title-sweep-overlay" aria-hidden="true"></div>':""}
-        </div>
+        <h1 class="syne leading-none ${r?"title-glow":"title-glow-static"}" style="letter-spacing:-0.02em; font-weight:800; line-height:1; flex-shrink:0; font-size:1.75rem; white-space:nowrap;">
+          LE.BE LIVE
+        </h1>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">
           <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.52em; line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${r?"animation:tagline-appear 1.5s ease 1s both;":""}">
             KONZERTE UND PARTYS<br>IN COOLEN LOCATIONS
