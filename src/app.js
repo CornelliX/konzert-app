@@ -254,6 +254,7 @@ function renderGroupedEvents() {
   filtered.forEach(e => {
     const d = new Date(e.date + 'T12:00:00')
     const diff = Math.floor((d - today) / 86400000)
+    if (diff < 0) return
     let label
     const todayDay = today.getDay() === 0 ? 6 : today.getDay() - 1
     const thisMonday = new Date(today); thisMonday.setDate(today.getDate() - todayDay)
