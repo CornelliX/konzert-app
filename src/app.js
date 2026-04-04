@@ -970,7 +970,8 @@ function attachSwipeToWrapper(wrapper) {
     if (!e) return
     const loc = locations.find(l => l.id === e.locationId)
     const locName = loc ? loc.name : (e.locationName || '')
-    const text = `${e.title} – ${locName}, ${e.date} ${e.time}`
+    const infoUrl = e.ticketUrl && e.ticketUrl !== '' ? `\n${e.ticketUrl}` : ''
+    const text = `${e.title} – ${locName}, ${e.date} ${e.time}${infoUrl}`
     if (navigator.share) navigator.share({ title: e.title, text })
     else { navigator.clipboard.writeText(text); alert('In Zwischenablage kopiert!') }
   })

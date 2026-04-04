@@ -58,6 +58,9 @@ export function getLocations() {
     { id: 46, name: 'Theater des Westens', city: 'Berlin', website: 'musicals.de', capacity: 1780 },
     { id: 47, name: 'Zitadelle Spandau', city: 'Berlin', website: 'citadel-music-festival.de', capacity: 15000 },
     { id: 48, name: 'MVB Leipzig', city: 'Leipzig', website: 'mvb-leipzig.de', capacity: 300 },
+    { id: 49, name: 'naTo', city: 'Leipzig', website: 'nato-leipzig.de', capacity: 200 },
+    { id: 50, name: 'Noch Besser Leben', city: 'Leipzig', website: 'nochbesserleben.com', capacity: 150 },
+    { id: 51, name: 'Neues Schauspiel', city: 'Leipzig', website: 'neuesschauspielleipzig.de', capacity: 300 },
   ]
   // Gespeicherte Locations mit Defaults zusammenführen, damit neue Einträge immer erscheinen
   if (saved) {

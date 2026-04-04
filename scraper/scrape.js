@@ -2903,6 +2903,131 @@ async function scrapeMVBLeipzig() {
   return events
 }
 
+async function scrapeNaTo() {
+  console.log('📡 naTo Leipzig...')
+  const events = []
+  try {
+    const res = await fetch('https://nato-leipzig.de/programm/', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const $ = cheerio.load(await res.text())
+    $('div.event').each((_, el) => {
+      const link = $(el).find('a.link')
+      const href = link.attr('href') || ''
+      // Datum steckt am Ende der URL: /programm/event-name-2026-04-05/
+      const dateMatch = href.match(/(\d{4}-\d{2}-\d{2})\/?$/)
+      if (!dateMatch) return
+      const date = dateMatch[1]
+      if (date < today()) return
+      const time = parseTime($(el).find('span.time').text().trim())
+      const title = $(el).find('span.name').text().trim()
+      if (!title) return
+      const ticketEl = $(el).find('a.ticket')
+      const ticketHref = ticketEl.attr('href') || ''
+      const ticketUrl = ticketHref && ticketHref !== 'n.a.' ? ticketHref : `https://nato-leipzig.de${href}`
+      const typ = $(el).attr('data-typ') || ''
+      const type = typ.toLowerCase() === 'konzert' ? 'konzert' : detectType(title)
+      events.push({ title, date, time, locationId: 49, type, description: '', ticketUrl, spotifyUrl: '', source: 'nato' })
+    })
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ naTo: ${e.message}`)
+  }
+  return events
+}
+
+async function scrapeNochBesserLeben() {
+  console.log('📡 Noch Besser Leben...')
+  const events = []
+  try {
+    const res = await fetch('https://www.nochbesserleben.com/veranstaltungen/', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const $ = cheerio.load(await res.text())
+    // Monat/Jahr aus h3.monthSeperator merken, Events aus li
+    let currentYear = new Date().getFullYear()
+    let currentMonth = new Date().getMonth() + 1
+    const monthMap = { januar:1,february:1,februar:2,märz:3,april:4,mai:5,juni:6,juli:7,august:8,september:9,oktober:10,november:11,dezember:12 }
+    $('.events ul').children().each((_, el) => {
+      if (el.name === 'h3' && $(el).hasClass('monthSeperator')) {
+        const text = $(el).text().toLowerCase().trim() // "april 2026"
+        const yMatch = text.match(/(\d{4})/)
+        if (yMatch) currentYear = parseInt(yMatch[1])
+        for (const [name, num] of Object.entries(monthMap)) {
+          if (text.includes(name)) { currentMonth = num; break }
+        }
+        return
+      }
+      if (el.name !== 'li') return
+      const title = $(el).find('.artist').first().text().trim()
+      if (!title) return
+      // Datum aus <b>-Tag: "Samstag 4.04.2026 – 20:00:00"
+      const bText = $(el).find('b').text()
+      const parsed = parseGermanDate(bText)
+      const date = parsed || (() => {
+        const dayEl = $(el).find('.eventDateIcon span').eq(1).text().trim()
+        const day = parseInt(dayEl)
+        if (!day) return null
+        return `${currentYear}-${String(currentMonth).padStart(2,'0')}-${String(day).padStart(2,'0')}`
+      })()
+      if (!date || date < today()) return
+      const timeMatch = bText.match(/(\d{1,2}):(\d{2}):\d{2}/)
+      const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+      events.push({
+        title, date, time, locationId: 50,
+        type: detectType(title),
+        description: '', ticketUrl: 'https://www.nochbesserleben.com/veranstaltungen/',
+        spotifyUrl: '', source: 'nbl'
+      })
+    })
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ Noch Besser Leben: ${e.message}`)
+  }
+  return events
+}
+
+async function scrapeNeuesSchauspiel() {
+  console.log('📡 Neues Schauspiel Leipzig...')
+  const events = []
+  try {
+    const res = await fetch('https://neuesschauspielleipzig.de/spielplan', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const $ = cheerio.load(await res.text())
+    $('article.single-event').each((_, el) => {
+      // Abgesagte Events überspringen
+      if ($(el).attr('data-category') === 'entfallt-leider') return
+      // Unix-Timestamp im date-Attribut nutzen
+      const ts = parseInt($(el).attr('date'))
+      if (!ts) return
+      const d = new Date(ts * 1000)
+      const date = d.toISOString().split('T')[0]
+      if (date < today()) return
+      const timeEl = $(el).find('.time').text().trim()
+      const time = parseTime(timeEl)
+      // Titel: h4.title enthält eine innere div.category, die wir rauswerfen
+      const titleEl = $(el).find('h4.title').clone()
+      titleEl.find('div').remove()
+      const title = titleEl.text().trim()
+      if (!title) return
+      const eventLink = $(el).find('a.title-link').attr('href') || ''
+      const ticketLink = $(el).find('.tickets a').attr('href') || ''
+      const ticketUrl = ticketLink || eventLink || 'https://neuesschauspielleipzig.de/spielplan'
+      const cat = $(el).attr('data-category') || ''
+      const type = cat === 'konzert' ? 'konzert' : detectType(title)
+      events.push({ title, date, time, locationId: 51, type, description: '', ticketUrl, spotifyUrl: '', source: 'nsl' })
+    })
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ Neues Schauspiel: ${e.message}`)
+  }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -2956,7 +3081,9 @@ async function main() {
     scrapeTheaterDesWestens(),
     scrapeZitadelleSpandau(),
     scrapeMVBLeipzig(),
-
+    scrapeNaTo(),
+    scrapeNochBesserLeben(),
+    scrapeNeuesSchauspiel(),
   ])
 
   let allEvents = []
