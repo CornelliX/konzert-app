@@ -119,10 +119,19 @@ function render() {
   </div>
 `}
     ${currentUser ? `<div class="text-right mb-2" style="font-size:11px; color:rgba(255,255,255,0.3);">${currentUser.email} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
+    <div id="filter-bar-wrap" style="${currentView === 'gemerkt' ? 'display:none' : ''}">
+      ${renderFilters()}
+    </div>
     <div id="view-content">
-      ${currentView === 'liste' ? renderListView() : ''}
-      ${currentView === 'kalender' ? renderCalendarView() : ''}
-      ${currentView === 'gemerkt' ? renderBookmarkedView() : ''}
+      <div id="pane-liste" style="${currentView !== 'liste' ? 'display:none' : ''}">
+        <div id="event-list-content">${renderGroupedEvents()}</div>
+      </div>
+      <div id="pane-kalender" style="${currentView !== 'kalender' ? 'display:none' : ''}">
+        ${renderCalendarContent()}
+      </div>
+      <div id="pane-gemerkt" style="${currentView !== 'gemerkt' ? 'display:none' : ''}">
+        ${currentView === 'gemerkt' ? renderBookmarkedView() : ''}
+      </div>
     </div>
   `
   document.getElementById('app-modals').innerHTML = renderModals()
@@ -287,13 +296,6 @@ function renderGroupedEvents() {
   `
 }
 
-function renderListView() {
-  return `
-    ${renderFilters()}
-    <div id="event-list-content">${renderGroupedEvents()}</div>
-  `
-}
-
 function renderSkeleton() {
   return `
     <div class="c64-border" style="position:fixed; top:0; bottom:0; left:50%; transform:translateX(-50%);
@@ -370,7 +372,7 @@ function renderEventCard(e) {
   `
 }
 
-function renderCalendarView() {
+function renderCalendarContent() {
   const today = new Date()
   const viewDate = new Date(today.getFullYear(), today.getMonth() + calendarOffset, 1)
   const year = viewDate.getFullYear()
@@ -380,10 +382,9 @@ function renderCalendarView() {
   const monthName = viewDate.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })
   const filteredAll = getFilteredEvents()
   const eventDates = filteredAll.map(e => e.date)
-  const filtered = filteredAll.filter(e => filters.dates.length === 0 || filters.dates.includes(e.date))
+  const filtered = filters.dates.length > 0 ? filteredAll.filter(e => filters.dates.includes(e.date)) : []
 
   return `
-    ${renderFilters()}
     <div class="glass rounded-2xl p-5 mb-5" style="position:relative; z-index:1;">
       <div class="flex items-center justify-between mb-5">
         <button data-cal-prev class="btn-glass w-9 h-9 rounded-xl flex items-center justify-center text-slate-400 hover:text-white">‹</button>
@@ -417,9 +418,11 @@ function renderCalendarView() {
       ` : `<p class="text-center text-xs mt-4" style="color:rgba(255,255,255,0.15);">Tage antippen zum Filtern · Mehrfachauswahl möglich</p>`}
     </div>
     <div class="space-y-3">
-      ${filters.dates.length > 0 && filtered.length === 0
-        ? '<p class="text-center text-slate-600 py-6 text-sm">Keine Events an den gewählten Tagen.</p>'
-        : filtered.map(e => renderEventCard(e)).join('')}
+      ${filters.dates.length === 0
+        ? ''
+        : filtered.length === 0
+          ? '<p class="text-center text-slate-600 py-6 text-sm">Keine Events an den gewählten Tagen.</p>'
+          : filtered.map(e => renderEventCard(e)).join('')}
     </div>
   `
 }
@@ -534,16 +537,14 @@ function renderModals() {
 }
 
 
-function attachViewEvents() {
-  // City filter
+function attachFilterBarEvents() {
   document.querySelectorAll('[data-city]').forEach(btn => {
     btn.addEventListener('click', () => {
       filters.cities = [btn.dataset.city]
       filters.locationId = 'alle'
-      render()
+      updateView(true)
     })
   })
-  // Location filter dropdown
   const filterLocSelected = document.getElementById('filter-loc-selected')
   const filterLocDropdown = document.getElementById('filter-loc-dropdown')
   filterLocSelected?.addEventListener('click', (e) => { e.stopPropagation(); filterLocDropdown.classList.toggle('hidden') })
@@ -551,49 +552,81 @@ function attachViewEvents() {
     opt.addEventListener('click', () => {
       filters.locationId = opt.dataset.filterLoc
       filterLocDropdown.classList.add('hidden')
-      render()
+      updateView(true)
     })
   })
-  // Suche — partial re-render only event list
   document.getElementById('search-input')?.addEventListener('input', (e) => {
     filters.search = e.target.value
-    const listContent = document.getElementById('event-list-content')
-    if (listContent && currentView === 'liste') {
-      listContent.innerHTML = renderGroupedEvents()
-      document.querySelectorAll('.event-swipe-wrapper').forEach(w => attachSwipeToWrapper(w))
-    } else { render() }
+    updateView(false)
   })
-  // Calendar nav
-  document.querySelector('[data-cal-prev]')?.addEventListener('click', () => { calendarOffset--; render() })
-  document.querySelector('[data-cal-next]')?.addEventListener('click', () => { calendarOffset++; render() })
-  // Date filters
+}
+
+function attachCalendarEvents() {
+  document.querySelector('[data-cal-prev]')?.addEventListener('click', () => { calendarOffset--; refreshCalendarPane() })
+  document.querySelector('[data-cal-next]')?.addEventListener('click', () => { calendarOffset++; refreshCalendarPane() })
   document.querySelectorAll('[data-date]').forEach(btn => {
     btn.addEventListener('click', () => {
       const date = btn.dataset.date
       filters.dates = filters.dates.includes(date) ? filters.dates.filter(d => d !== date) : [...filters.dates, date]
-      render()
+      refreshCalendarPane()
     })
   })
-  document.querySelector('[data-clear-dates]')?.addEventListener('click', () => { filters.dates = []; render() })
-  // Swipe gestures
+  document.querySelector('[data-clear-dates]')?.addEventListener('click', () => { filters.dates = []; refreshCalendarPane() })
+}
+
+function refreshCalendarPane() {
+  const pane = document.getElementById('pane-kalender')
+  if (!pane) return
+  pane.innerHTML = renderCalendarContent()
+  attachCalendarEvents()
   attachSwipeGestures()
+}
+
+function updateView(reRenderFilters = false) {
+  if (reRenderFilters) {
+    const fbw = document.getElementById('filter-bar-wrap')
+    if (fbw) { fbw.innerHTML = renderFilters(); attachFilterBarEvents() }
+  }
+  if (currentView === 'liste') {
+    const listContent = document.getElementById('event-list-content')
+    if (listContent) { listContent.innerHTML = renderGroupedEvents(); attachSwipeGestures() }
+    const kalPane = document.getElementById('pane-kalender')
+    if (kalPane) kalPane.dataset.stale = '1'
+  } else if (currentView === 'kalender') {
+    refreshCalendarPane()
+    const listePane = document.getElementById('pane-liste')
+    if (listePane) listePane.dataset.stale = '1'
+  }
 }
 
 function attachNavEvents() {
   document.querySelectorAll('[data-nav]').forEach(btn => {
     btn.addEventListener('click', () => {
       if (currentView === btn.dataset.nav) return
+      const prevView = currentView
       currentView = btn.dataset.nav
-      const vc = document.getElementById('view-content')
-      if (vc) {
-        vc.innerHTML = currentView === 'liste' ? renderListView()
-          : currentView === 'kalender' ? renderCalendarView()
-          : renderBookmarkedView()
-        document.getElementById('bottom-nav').innerHTML = renderBottomNav()
-        attachNavEvents()
-        attachViewEvents()
-        document.querySelector('[data-open-add]')?.addEventListener('click', () => document.getElementById('modal-add').classList.remove('hidden'))
-      } else { render() }
+      document.getElementById('pane-' + prevView).style.display = 'none'
+      const newPane = document.getElementById('pane-' + currentView)
+      newPane.style.display = ''
+      const filterBar = document.getElementById('filter-bar-wrap')
+      if (filterBar) filterBar.style.display = currentView === 'gemerkt' ? 'none' : ''
+      if (currentView === 'gemerkt') {
+        newPane.innerHTML = renderBookmarkedView()
+        attachSwipeGestures()
+      } else if (newPane.dataset.stale) {
+        delete newPane.dataset.stale
+        if (currentView === 'liste') {
+          document.getElementById('event-list-content').innerHTML = renderGroupedEvents()
+          attachSwipeGestures()
+        } else if (currentView === 'kalender') {
+          refreshCalendarPane()
+        }
+      } else if (currentView === 'kalender') {
+        attachCalendarEvents()
+      }
+      document.getElementById('bottom-nav').innerHTML = renderBottomNav()
+      attachNavEvents()
+      document.querySelector('[data-open-add]')?.addEventListener('click', () => document.getElementById('modal-add').classList.remove('hidden'))
       window.scrollTo(0, 0)
     })
   })
@@ -859,7 +892,9 @@ function attachEvents() {
     render()
   })
 
-  attachViewEvents()
+  attachFilterBarEvents()
+  if (currentView === 'kalender') attachCalendarEvents()
+  attachSwipeGestures()
 }
 
 function eventDateUTC(dateStr, timeStr) {
