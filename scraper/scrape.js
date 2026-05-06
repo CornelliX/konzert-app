@@ -1322,54 +1322,53 @@ async function scrapeMikropol() {
 async function scrapeFrannz() {
   console.log('📡 Frannz Club Berlin...')
   const events = []
+  let browser
   try {
-    const res = await fetch('https://frannz.eu/', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
-    })
-    const html = await res.text()
-    const $ = cheerio.load(html)
+    const puppeteer = await import('puppeteer')
+    browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
+    const page = await browser.newPage()
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36')
+    await page.goto('https://frannz.eu/', { waitUntil: 'networkidle2', timeout: 30000 })
+    await new Promise(r => setTimeout(r, 1500))
 
     const monthMap = {
-      'Jan': '01', 'Feb': '02', 'Mär': '03', 'Mar': '03', 'Apr': '04',
-      'Mai': '05', 'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08',
-      'Sep': '09', 'Okt': '10', 'Oct': '10', 'Nov': '11', 'Dez': '12', 'Dec': '12'
+      'Januar': '01', 'Februar': '02', 'März': '03', 'April': '04', 'Mai': '05', 'Juni': '06',
+      'Juli': '07', 'August': '08', 'September': '09', 'Oktober': '10', 'November': '11', 'Dezember': '12'
     }
 
+    const extracted = await page.evaluate(() =>
+      [...document.querySelectorAll('h2.event-title')].map(el => {
+        const rowWrap = el.closest('.row-wrap')
+        if (!rowWrap) return null
+        const day = rowWrap.querySelector('.event-day')?.textContent?.trim() || ''
+        const monthName = rowWrap.querySelector('.event-month')?.textContent?.trim() || ''
+        const time = rowWrap.querySelector('.event-start strong')?.textContent?.trim() || ''
+        const article = el.closest('article')
+        const ticketUrl = article?.querySelector(
+          'a[href*="eventim"], a[href*="ticketmaster"], a[href*="copilot"]'
+        )?.href || 'https://frannz.eu/'
+        return { title: el.textContent.trim(), day, monthName, time, ticketUrl }
+      }).filter(Boolean)
+    )
+
     const seen = new Set()
+    const now = new Date()
 
-    $('h2.event-title').each((_, el) => {
-      const title = $(el).text().trim()
-      if (!title || title.length < 2) return
-      if (/fällt aus|verlegt|verschoben/i.test(title)) return
-
-      const rowWrap = $(el).closest('.row-wrap')
-      const day = rowWrap.find('.event-day').text().trim().padStart(2, '0')
-      const monthName = rowWrap.find('.event-month').text().trim()
-      const month = monthMap[monthName.substring(0, 3)] || monthMap[monthName]
-      if (!day || !month) return
-      const now = new Date()
+    for (const { title, day, monthName, time, ticketUrl } of extracted) {
+      if (!title || !day || !monthName) continue
+      if (/fällt aus|verlegt|verschoben/i.test(title)) continue
+      const month = monthMap[monthName]
+      if (!month) continue
       let year = now.getFullYear()
-      const eventMonth = parseInt(month)
-      if (eventMonth < now.getMonth() + 1) year++
-      const date = `${year}-${month}-${day}`
-
-      if (date < today()) return
-
-      const timeMatch = rowWrap.text().match(/(\d{1,2}):(\d{2})\s*Beginn/)
-      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-
-      const ticketUrl = $(el).closest('article')
-        .find('a[href*="eventim"], a[href*="ticketmaster"], a[href*="copilot"]')
-        .first().attr('href') || 'https://frannz.eu/'
-
+      if (parseInt(month) < now.getMonth() + 1) year++
+      const date = `${year}-${month}-${day.padStart(2, '0')}`
+      if (date < today()) continue
       const key = date + title
-      if (seen.has(key)) return
+      if (seen.has(key)) continue
       seen.add(key)
-
       events.push({
-        title,
-        date,
-        time,
+        title, date,
+        time: time || '20:00',
         locationId: 6,
         type: detectType(title),
         description: '',
@@ -1377,10 +1376,12 @@ async function scrapeFrannz() {
         spotifyUrl: '',
         source: 'frannz'
       })
-    })
+    }
     console.log(`  ✓ ${events.length} Events`)
   } catch (e) {
     console.log(`  ✗ Frannz: ${e.message}`)
+  } finally {
+    if (browser) await browser.close()
   }
   return events
 }
