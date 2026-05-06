@@ -1099,6 +1099,7 @@ async function scrapeSupamolly() {
       })
       const title = titles.join(' + ')
       if (!title) return
+      if (/^Programm\s+\w+\s+\d{4}$/i.test(title)) return
 
       const description = $(el).find('.beschr').first().text().trim()
       const ticketUrl = 'https://www.supamolly.de/index.php?programm=' + id
@@ -1336,15 +1337,11 @@ async function scrapeFrannz() {
 
     const seen = new Set()
 
-    // Jeder Event-Block: Datum als Text "So 15.03." dann h2 als Titel
-    // Die Seite hat Wochentag/Tag/Monat als separate Text-Nodes + h2
-    // Wir iterieren über alle h2 und schauen auf den vorherigen Text
-    $('h2').each((_, el) => {
-  const title = $(el).text().trim()
+    $('h2.event-title').each((_, el) => {
+      const title = $(el).text().trim()
       if (!title || title.length < 2) return
       if (/fällt aus|verlegt|verschoben/i.test(title)) return
 
-      // Finde den nächsten Datumstext im umgebenden Container
       const rowWrap = $(el).closest('.row-wrap')
       const day = rowWrap.find('.event-day').text().trim().padStart(2, '0')
       const monthName = rowWrap.find('.event-month').text().trim()
@@ -1358,12 +1355,10 @@ async function scrapeFrannz() {
 
       if (date < today()) return
 
-      // Zeit: "20:00" oder "19:00"
-      const timeMatch = rowWrap.text().match(/(\d{1,2}):(\d{2})\s*Einlass|(\d{1,2}):(\d{2})\s*Beginn/)
-      const time = timeMatch ? `${(timeMatch[1]||timeMatch[3]).padStart(2,'0')}:${timeMatch[2]||timeMatch[4]}` : '20:00'
+      const timeMatch = rowWrap.text().match(/(\d{1,2}):(\d{2})\s*Beginn/)
+      const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
 
-      // Ticket-URL aus nächstem Link
-      const ticketUrl = $(el).closest('section, article, div[class]')
+      const ticketUrl = $(el).closest('article')
         .find('a[href*="eventim"], a[href*="ticketmaster"], a[href*="copilot"]')
         .first().attr('href') || 'https://frannz.eu/'
 
@@ -1979,22 +1974,11 @@ async function scrapeCassiopeia() {
         const timeMatch = text.match(/Beginn\s*(\d{1,2}):(\d{2})/)
         const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
 
-        // Titel: erste Zeile die kein Datum/Zeit/Kategorie ist
-        const lines = text.split('\n').map(l => l.trim()).filter(Boolean)
-        const skipWords = ['Beginn', 'Einlass', 'Konzert', 'Party', 'Sonstiges', 'Cancelled', 'Sold-Out', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', '.', '|']
-        const months_list = Object.keys(months)
-        const titleLines = lines.filter(l =>
-          !skipWords.includes(l) &&
-          !months_list.includes(l) &&
-          !/^\d{1,2}$/.test(l) &&
-          !/^\d{1,2}:\d{2}$/.test(l) &&
-          !/^\d{4}$/.test(l) &&
-          l.length > 2
-        )
-        let title = titleLines[0]?.trim()
+        // Titel steht im Text direkt nach "Monat YYYY" und vor "Weekday + Datum"
+        // Wochentag-Kürzel gefolgt von Tageszahl (DD.MM.) verhindert false-matches in Titeln
+        const titleMatch = text.match(/(?:Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+\d{4}\s*([\s\S]+?)\s*(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\d{1,2}\./)
+        let title = titleMatch ? titleMatch[1].trim() : null
         if (!title || seen.has(date + title)) return
-        // Lange Zeilen sind meistens Beschreibungstext, kein Eventname
-        if (title.length > 80) title = title.slice(0, title.lastIndexOf(' ', 80) || 80).trim() + '…'
         seen.add(date + title)
 
         const ticketUrl = href.startsWith('http') ? href : 'https://cassiopeia-berlin.de' + href
