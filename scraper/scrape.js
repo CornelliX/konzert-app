@@ -1531,7 +1531,7 @@ async function scrapeIlsesErika() {
         const ticketUrl = href.startsWith('http')
           ? href
           : href
-            ? 'https://www.ilseserika.de' + href
+            ? 'https://www.ilseserika.de/' + href.replace(/^\//, '')
             : 'https://www.ilseserika.de/termine-63.html'
 
         const key = date + title
