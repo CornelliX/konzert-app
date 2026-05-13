@@ -1476,6 +1476,55 @@ async function scrapeMadameClaude() {
   return events
 }
 
+async function scrapeInselBerlin() {
+  console.log('📡 Kulturhaus Insel Berlin...')
+  const events = []
+  try {
+    const res = await fetch('https://www.inselberlin.de/page-data/sq/d/3497155224.json', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+    })
+    const data = await res.json()
+    const seen = new Set()
+
+    for (const { node } of data.data.allDatoCmsEvent.edges) {
+      const { name, time, wholeDay, description = '' } = node
+      if (!name || !time) continue
+
+      const date = time.slice(0, 10)
+      if (date < today()) continue
+
+      const timeStr = wholeDay ? '20:00' : time.slice(11, 16)
+
+      // Extract first non-social ticket URL from description HTML
+      const links = [...description.matchAll(/href="(https?:\/\/[^"]+)"/g)].map(m =>
+        m[1].replace(/&amp;/g, '&').split('?fbclid')[0]
+      )
+      const skipDomains = ['youtube', 'youtu.be', 'facebook', 'instagram', 'fb.me']
+      const ticketUrl = links.find(u => !skipDomains.some(s => u.includes(s))) || 'https://www.inselberlin.de/'
+
+      const key = date + '|' + name
+      if (seen.has(key)) continue
+      seen.add(key)
+
+      events.push({
+        title: name,
+        date,
+        time: timeStr,
+        locationId: 52,
+        type: detectType(name),
+        description: '',
+        ticketUrl,
+        spotifyUrl: '',
+        source: 'inselberlin'
+      })
+    }
+    console.log(`  ✓ ${events.length} Events`)
+  } catch (e) {
+    console.log(`  ✗ Insel Berlin: ${e.message}`)
+  }
+  return events
+}
+
 async function scrapeIlsesErika() {
   console.log('📡 Ilses Erika Leipzig...')
   const events = []
@@ -3043,6 +3092,7 @@ async function main() {
     scrapeFrannz(),
     scrapeMonarch(),
     scrapeMadameClaude(),
+    scrapeInselBerlin(),
     scrapeIlsesErika(),
     scrapeKesselhaus(),
     scrapeMetropol(),
