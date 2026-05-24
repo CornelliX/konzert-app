@@ -1320,8 +1320,8 @@ async function scrapeFrannz() {
     browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
     const page = await browser.newPage()
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36')
-    await page.goto('https://frannz.eu/', { waitUntil: 'networkidle2', timeout: 30000 })
-    await new Promise(r => setTimeout(r, 1500))
+    await page.goto('https://frannz.eu/', { waitUntil: 'load', timeout: 60000 })
+    await new Promise(r => setTimeout(r, 2000))
 
     const monthMap = {
       'Januar': '01', 'Februar': '02', 'März': '03', 'April': '04', 'Mai': '05', 'Juni': '06',
@@ -3115,7 +3115,7 @@ async function main() {
 
   // Venues die 0 Events lieferten: aus letztem Snapshot nachladen (CI-IP-Blockierung)
   const scrapedLocationIds = new Set(allEvents.map(e => e.locationId))
-  const fallbackLocationIds = [32] // Columbiahalle
+  const fallbackLocationIds = [6, 32] // Frannz, Columbiahalle
   const outPathForFallback = path.join(process.cwd(), 'public', 'events.json')
   let snapshotEvents = []
   try { snapshotEvents = JSON.parse(fs.readFileSync(outPathForFallback, 'utf-8')) } catch(e) {}
