@@ -253,7 +253,7 @@ async function scrapeFestsaal() {
     const page = await browser.newPage()
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
     await page.goto('https://festsaal-kreuzberg.de/de/', {
-      waitUntil: 'networkidle2', timeout: 30000
+      waitUntil: 'load', timeout: 60000
     })
 
     const seen = new Set()
@@ -297,7 +297,7 @@ async function scrapeFestsaal() {
 
     for (const href of allLinks) {
       try {
-        await page.goto(href, { waitUntil: 'networkidle2', timeout: 15000 })
+        await page.goto(href, { waitUntil: 'load', timeout: 30000 })
         const html = await page.content()
         const $ = cheerio.load(html)
 
@@ -528,7 +528,7 @@ async function scrapeUTConnewitz() {
       const url = `https://utconnewitz.de/index.php?article_id=1&clang=0&month=${month}`
       const page = await browser.newPage()
       await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
-      await page.goto(url, { waitUntil: 'networkidle2', timeout: 30000 })
+      await page.goto(url, { waitUntil: 'load', timeout: 60000 })
       await new Promise(r => setTimeout(r, 2000))
 
       // Seitentext auslesen und Events per Regex extrahieren
@@ -1234,7 +1234,7 @@ async function scrapeHeimathafen() {
     const page = await browser.newPage()
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
     for (const month of [3,4,5,6,9,10,11,12]) {
-      await page.goto(`https://heimathafen-neukoelln.de/?syear=2026&smonth=${month}&scat=6&sview=list`, { waitUntil: 'networkidle2', timeout: 30000 })
+      await page.goto(`https://heimathafen-neukoelln.de/?syear=2026&smonth=${month}&scat=6&sview=list`, { waitUntil: 'load', timeout: 60000 })
       const html = await page.content()
       const $ = cheerio.load(html)
       $('.eventgrid__item').each((_, el) => {
@@ -1290,7 +1290,7 @@ async function scrapeMikropol() {
     browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
     const page = await browser.newPage()
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
-    await page.goto('https://mikropol-berlin.de/events/', { waitUntil: 'networkidle2', timeout: 30000 })
+    await page.goto('https://mikropol-berlin.de/events/', { waitUntil: 'load', timeout: 60000 })
     const html = await page.content()
     const $ = cheerio.load(html)
     $('.em-events-list a.event').each((_, el) => {
@@ -1604,7 +1604,7 @@ async function scrapeKesselhaus() {
     browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
     const page = await browser.newPage()
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
-    await page.goto('https://www.kesselhaus.net/de/calendar', { waitUntil: 'networkidle2', timeout: 30000 })
+    await page.goto('https://www.kesselhaus.net/de/calendar', { waitUntil: 'load', timeout: 60000 })
     await new Promise(r => setTimeout(r, 3000))
 
     // Lazy-loaded events per Scroll nachladen
@@ -1799,7 +1799,7 @@ async function scrapeUberEatsMusicHall() {
     const page = await browser.newPage()
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
     await page.goto('https://www.uber-eats-music-hall.de/events-tickets/', {
-      waitUntil: 'networkidle2', timeout: 45000
+      waitUntil: 'load', timeout: 60000
     })
     // Warten bis div.entry Elemente geladen sind
     await page.waitForFunction(
@@ -2440,7 +2440,7 @@ async function scrapeMoritzbastei() {
     const page = await browser.newPage()
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
     await page.goto('https://www.moritzbastei.de/programm-tickets-veranstaltungen', {
-      waitUntil: 'networkidle2', timeout: 30000
+      waitUntil: 'load', timeout: 60000
     })
 
     // "Mehr laden" so oft klicken bis der Button weg ist
@@ -2730,7 +2730,7 @@ async function scrapeTheaterDesWestens() {
 
     // Übersichtsseite laden
     await page.goto('https://www.berlin.de/tickets/suche/orte/theater-des-westens-e83a20b7-1417-4598-b3f6-d3563b308ea2/', {
-      waitUntil: 'networkidle2', timeout: 45000
+      waitUntil: 'load', timeout: 60000
     })
     await page.waitForFunction(
       () => document.querySelectorAll('article.teaser--event').length > 0,
@@ -2782,7 +2782,7 @@ async function scrapeTheaterDesWestens() {
         }
       } else {
         // Mehrere Termine → Detailseite laden
-        await page.goto(card.href, { waitUntil: 'networkidle2', timeout: 30000 })
+        await page.goto(card.href, { waitUntil: 'load', timeout: 60000 })
         await new Promise(r => setTimeout(r, 1000))
         const bodyText = await page.evaluate(() => document.body.innerText)
         // Alle DD.MM.YYYY + HH:MM Muster extrahieren
@@ -3115,7 +3115,7 @@ async function main() {
 
   // Venues die 0 Events lieferten: aus letztem Snapshot nachladen (CI-IP-Blockierung)
   const scrapedLocationIds = new Set(allEvents.map(e => e.locationId))
-  const fallbackLocationIds = [6, 32] // Frannz, Columbiahalle
+  const fallbackLocationIds = [3, 6, 17, 18, 26, 28, 29, 32, 33, 46] // Festsaal, Frannz, UT Connewitz, Moritzbastei, Heimathafen, Mikropol, Kesselhaus, Columbiahalle, Uber Eats MH, Theater des Westens
   const outPathForFallback = path.join(process.cwd(), 'public', 'events.json')
   let snapshotEvents = []
   try { snapshotEvents = JSON.parse(fs.readFileSync(outPathForFallback, 'utf-8')) } catch(e) {}
