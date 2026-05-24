@@ -725,8 +725,9 @@ async function scrapeAstra() {
     const events = []
     const seen = new Set()
 
-    $('a[href*="/events/20"]').each((_, el) => {
-      const href = $(el).attr('href') || ''
+    $('[class*="event--preview"], [class*="event--teaser"]').each((_, container) => {
+      const link = $(container).find('a.event__title-link').first()
+      const href = link.attr('href') || ''
       const dateMatch = href.match(/\/events\/(\d{4}-\d{2}-\d{2})-/)
       if (!dateMatch) return
       const date = dateMatch[1]
@@ -734,27 +735,18 @@ async function scrapeAstra() {
       if (seen.has(href)) return
       seen.add(href)
 
-      const lines = []
-      $(el).find('[class*="board-line"], [class*="boad-line"]').each((_, line) => {
-        const text = $(line).text().trim()
-        if (text) lines.push(text)
-      })
-      const title = lines.join(' · ').trim() || $(el).text().replace(/\s+/g, ' ').trim()
+      const title = link.text().trim()
       if (!title) return
 
-      const container = $(el).closest('[class*="event"]')
-      const timeText = container.find('[class*="time"]').first().text().trim()
-      const timeMatch2 = timeText.match(/\d{2}:\d{2}/)
+      const timeValue = $(container).find('.event__time--start .event__time-value').first().text().trim()
+      const timeMatch2 = timeValue.match(/\d{2}:\d{2}/)
       const time = timeMatch2 ? timeMatch2[0] : '20:00'
-
-      const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('nacht') || lower.includes('club') ? 'party' : 'konzert'
 
       events.push({
         title: title.charAt(0).toUpperCase() + title.slice(1),
         date, time,
         locationId: 5,
-        type,
+        type: detectType(title),
         description: '',
         ticketUrl: 'https://www.astra-berlin.de' + href,
         spotifyUrl: '',
@@ -1495,12 +1487,7 @@ async function scrapeInselBerlin() {
 
       const timeStr = wholeDay ? '20:00' : time.slice(11, 16)
 
-      // Extract first non-social ticket URL from description HTML
-      const links = [...description.matchAll(/href="(https?:\/\/[^"]+)"/g)].map(m =>
-        m[1].replace(/&amp;/g, '&').split('?fbclid')[0]
-      )
-      const skipDomains = ['youtube', 'youtu.be', 'facebook', 'instagram', 'fb.me']
-      const ticketUrl = links.find(u => !skipDomains.some(s => u.includes(s))) || 'https://www.inselberlin.de/'
+      const ticketUrl = 'https://www.inselberlin.de/'
 
       const key = date + '|' + name
       if (seen.has(key)) continue
