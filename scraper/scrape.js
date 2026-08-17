@@ -1268,7 +1268,10 @@ async function scrapeFrannz() {
     const page = await browser.newPage()
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36')
     await page.goto('https://frannz.eu/', { waitUntil: 'load', timeout: 60000 })
-    await new Promise(r => setTimeout(r, 2000))
+    // Fester 2s-Wait reicht lokal, ist aber unter GitHub Actions (mehrere Puppeteer-Instanzen
+    // laufen dort gleichzeitig, CPU/Netz langsamer) zu knapp und liefert dann 0 Events -
+    // stattdessen auf das tatsächliche Erscheinen der Event-Liste warten
+    await page.waitForSelector('h2.event-title', { timeout: 15000 }).catch(() => {})
 
     const monthMap = {
       'Januar': '01', 'Februar': '02', 'März': '03', 'April': '04', 'Mai': '05', 'Juni': '06',
