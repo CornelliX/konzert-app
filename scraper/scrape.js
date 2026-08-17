@@ -244,109 +244,43 @@ async function scrapeLido() {
 }
 
 async function scrapeFestsaal() {
-  console.log('📡 Festsaal Kreuzberg Berlin (Puppeteer)...')
+  console.log('📡 Festsaal Kreuzberg Berlin (Wagtail-API)...')
   const events = []
-  let browser
   try {
-    const puppeteer = await import('puppeteer')
-    browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
-    const page = await browser.newPage()
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
-    await page.goto('https://festsaal-kreuzberg.de/de/', {
-      waitUntil: 'load', timeout: 60000
+    // Website nutzt ein Wagtail-CMS mit öffentlich erreichbarer JSON-API (kein Puppeteer nötig)
+    const res = await fetch('https://admin.festsaal-kreuzberg.de/api/v2/pages/?type=home.EventPage&fields=status,date,start,changed_date,changed_start,changed_text,new_location,ticket&limit=999&locale=de', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)', 'Accept': 'application/json' }
     })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const data = await res.json()
 
-    const seen = new Set()
-    const allLinks = new Set()
+    for (const it of data.items || []) {
+      // Auf eine andere Location verlegte Events überspringen (finden nicht mehr im Festsaal statt)
+      const changedText = it.changed_text || ''
+      if (it.new_location || /findet.*\bstatt\b/i.test(changedText)) continue
 
-    // Alle Monats-Buttons klicken und Event-Links einsammeln
-    const monthNames = ['März', 'April', 'Mai', 'Juni', 'Juli', 'August',
-                        'September', 'Oktober', 'November', 'Dezember', 'Januar']
+      // Bei Terminverschiebung zählt das neue Datum
+      const date = it.changed_date || it.date
+      if (!date || date < today()) continue
+      const title = (it.title || '').trim()
+      if (!title) continue
+      const time = (it.changed_start || it.start || '').slice(0, 5) || '20:00'
+      const ticketUrl = it.ticket || (it.url ? 'https://festsaal-kreuzberg.de' + it.url : 'https://festsaal-kreuzberg.de/de/')
 
-    // Erst aktuelle Seite einlesen
-    async function collectLinks() {
-      await new Promise(r => setTimeout(r, 1500))
-      const hrefs = await page.evaluate(() =>
-        [...document.querySelectorAll('a[href*="/de/programm/"]')]
-          .map(a => a.href)
-          .filter(h => !h.endsWith('/de/programm/') && !h.includes('#'))
-      )
-      hrefs.forEach(h => allLinks.add(h))
-    }
-
-    await collectLinks()
-
-    // Jeden Monat anklicken
-    for (const month of monthNames) {
-      try {
-        const clicked = await page.evaluate((m) => {
-          const els = [...document.querySelectorAll('button, a, li, span')]
-          const el = els.find(e => e.textContent?.trim() === m)
-          if (el) { el.click(); return true }
-          return false
-        }, month)
-        if (clicked) await collectLinks()
-      } catch(e) {}
-    }
-
-    // Jetzt alle Event-Links einzeln abrufen
-    const monthMap = {
-      'Januar':'01','Februar':'02','März':'03','April':'04','Mai':'05','Juni':'06',
-      'Juli':'07','August':'08','September':'09','Oktober':'10','November':'11','Dezember':'12'
-    }
-
-    for (const href of allLinks) {
-      try {
-        await page.goto(href, { waitUntil: 'load', timeout: 30000 })
-        const html = await page.content()
-        const $ = cheerio.load(html)
-
-        // Datum: "So, 7 Juni 2026" oder "Sa, 14 März 2026"
-        const pageText = $('body').text()
-        const dateMatch = pageText.match(/\w+,\s*(\d{1,2})\s+(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4})/)
-        if (!dateMatch) continue
-
-        const day   = String(dateMatch[1]).padStart(2, '0')
-        const month = monthMap[dateMatch[2]]
-        const year  = dateMatch[3]
-        const date  = `${year}-${month}-${day}`
-        if (date < today()) continue
-
-        // Zeit: "18:00 Beginn" bevorzugen, sonst "Einlass"
-        const beginMatch = pageText.match(/(\d{2}):(\d{2})\s*Beginn/)
-        const einlassMatch = pageText.match(/(\d{2}):(\d{2})\s*Einlass/)
-        const time = beginMatch
-          ? `${beginMatch[1]}:${beginMatch[2]}`
-          : einlassMatch ? `${einlassMatch[1]}:${einlassMatch[2]}` : '20:00'
-
-        // Titel: h2 auf der Einzelseite
-        const title = $('h2').first().text().trim()
-        if (!title || title.length < 2) continue
-
-        // Event-Seite bevorzugen; Eventim nur als Fallback
-        const ticketUrl = href || $('a[href*="eventbrite"], a[href*="eventim"], a[href*="myticket"]').first().attr('href') || ''
-
-        const key = date + title
-        if (seen.has(key)) continue
-        seen.add(key)
-
-        events.push({
-          title, date, time,
-          locationId: 3,
-          type: detectType(title),
-          description: '',
-          ticketUrl,
-          spotifyUrl: '',
-          source: 'festsaal'
-        })
-      } catch(e) {}
+      events.push({
+        title, date, time,
+        locationId: 3,
+        type: detectType(title),
+        description: '',
+        ticketUrl,
+        spotifyUrl: '',
+        source: 'festsaal'
+      })
     }
 
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) {
     console.log(`  ✗ Festsaal: ${e.message}`)
-  } finally {
-    if (browser) await browser.close()
   }
   return events
 }
@@ -1118,7 +1052,9 @@ async function scrapeSupamolly() {
 async function scrapeKantine() {
   console.log('📡 Kantine am Berghain...')
   try {
-    const res = await fetch('https://www.berghain.berlin/de/program/', {
+    // Die gemischte /de/program/-Übersicht zeigt den Sub-Venue-Namen nicht mehr im Kartentext;
+    // die dedizierte Unterseite listet ausschließlich Kantine-Termine
+    const res = await fetch('https://www.berghain.berlin/de/program/kantine-am-berghain/', {
       headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
     })
     const html = await res.text()
@@ -1233,21 +1169,32 @@ async function scrapeHeimathafen() {
     browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
     const page = await browser.newPage()
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
-    for (const month of [3,4,5,6,9,10,11,12]) {
-      await page.goto(`https://heimathafen-neukoelln.de/?syear=2026&smonth=${month}&scat=6&sview=list`, { waitUntil: 'load', timeout: 60000 })
+    const seen = new Set()
+    const now = new Date()
+    for (let i = 0; i <= 6; i++) {
+      const m = new Date(now.getFullYear(), now.getMonth() + i, 1)
+      await page.goto(`https://heimathafen-neukoelln.de/?syear=${m.getFullYear()}&smonth=${m.getMonth() + 1}&scat=6&sview=list`, { waitUntil: 'load', timeout: 60000 })
+      // Eventgrid wird per AJAX nachgeladen; auf das Grid warten statt sofort das DOM zu lesen
+      await page.waitForSelector('.eventgrid__item', { timeout: 8000 }).catch(() => {})
       const html = await page.content()
       const $ = cheerio.load(html)
       $('.eventgrid__item').each((_, el) => {
-        const title = $(el).find('h4 a').first().text().trim()
+        const link = $(el).find('h4 a').first()
+        const title = link.text().trim()
         const dateText = $(el).find('.eventgrid__item__start__date').text().trim()
         const timeText = $(el).find('.eventgrid__item__start__time').text().trim()
         if (!title || !dateText) return
         const dateMatch = dateText.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/)
         if (!dateMatch) return
         const date = `${dateMatch[3]}-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
+        if (date < today()) return
+        if (seen.has(date + title)) return
+        seen.add(date + title)
         const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
         const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-        events.push({ title, date, time, type: detectType(title), locationId: 26, source: 'heimathafen' })
+        const href = link.attr('href') || ''
+        const ticketUrl = href.startsWith('http') ? href : (href ? 'https://heimathafen-neukoelln.de' + href : 'https://heimathafen-neukoelln.de/')
+        events.push({ title, date, time, type: detectType(title), locationId: 26, description: '', ticketUrl, spotifyUrl: '', source: 'heimathafen' })
       })
       await new Promise(r => setTimeout(r, 1000))
     }
@@ -2030,25 +1977,50 @@ async function scrapeCassiopeia() {
 async function scrapeQuasimodo() {
   console.log('📡 Quasimodo Berlin...')
   const events = []
+  const seen = new Set()
   try {
     const res = await fetch('https://quasimodo.club/events', { headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' } })
-    const html = await res.text()
-    const $ = cheerio.load(html)
-    const seen = new Set()
-    $('a[href*="/event"]').each((_, el) => {
-      const text = $(el).text().trim()
-      const dateMatch = text.match(/(\d{2})\.(\d{2})\.(\d{4})\s*-\s*(\d{1,2}):(\d{2})/)
-      if (!dateMatch) return
-      const date = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`
-      if (date < today()) return
-      const time = `${String(dateMatch[4]).padStart(2,'0')}:${dateMatch[5]}`
-      const title = $(el).find('h2, h3, strong, .title').first().text().trim() || text.split('\n').pop().trim()
-      if (!title || title.length < 2 || seen.has(date + title)) return
-      seen.add(date + title)
-      const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('disco') ? 'party' : 'konzert'
-      events.push({ title, date, time, type, locationId: 37, source: 'quasimodo', ticketUrl: $(el).attr('href') || '', spotifyUrl: '' })
-    })
+    if (res.ok) {
+      const html = await res.text()
+      const $ = cheerio.load(html)
+      $('a[href*="/event"]').each((_, el) => {
+        const text = $(el).text().trim()
+        const dateMatch = text.match(/(\d{2})\.(\d{2})\.(\d{4})\s*-\s*(\d{1,2}):(\d{2})/)
+        if (!dateMatch) return
+        const date = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`
+        if (date < today()) return
+        const time = `${String(dateMatch[4]).padStart(2,'0')}:${dateMatch[5]}`
+        const title = $(el).find('h2, h3, strong, .title').first().text().trim() || text.split('\n').pop().trim()
+        if (!title || title.length < 2 || seen.has(date + title)) return
+        seen.add(date + title)
+        const lower = title.toLowerCase()
+        const type = lower.includes('party') || lower.includes('dj') || lower.includes('disco') ? 'party' : 'konzert'
+        events.push({ title, date, time, type, locationId: 37, source: 'quasimodo', ticketUrl: $(el).attr('href') || '', spotifyUrl: '' })
+      })
+    }
+
+    // Die /events-Übersicht der Seite wirft aktuell serverseitig einen 500er (Events-Manager-Plugin
+    // kaputt). Als Ersatz die kleine "Neu im Programm"-Tabelle auf der Startseite nutzen.
+    if (events.length === 0) {
+      const homeRes = await fetch('https://quasimodo.club/', { headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' } })
+      if (homeRes.ok) {
+        const $ = cheerio.load(await homeRes.text())
+        $('tr').each((_, el) => {
+          const day = $(el).find('.date .day').first().text().replace('.', '').trim()
+          const month = $(el).find('.date .month').first().text().replace('.', '').trim()
+          const year2 = $(el).find('.date .year').first().text().replace('.', '').trim()
+          if (!day || !month || !year2) return
+          const date = `20${year2.padStart(2,'0')}-${month.padStart(2,'0')}-${day.padStart(2,'0')}`
+          if (date < today()) return
+          const a = $(el).find('a').first()
+          const title = a.text().trim()
+          if (!title || seen.has(date + title)) return
+          seen.add(date + title)
+          events.push({ title, date, time: '20:00', type: detectType(title), locationId: 37, source: 'quasimodo', ticketUrl: a.attr('href') || 'https://quasimodo.club/events', spotifyUrl: '', description: '' })
+        })
+      }
+    }
+
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Quasimodo: ${e.message}`) }
   return events
@@ -2325,16 +2297,21 @@ async function scrapeZigZag() {
     const seen = new Set()
 
     $('a[href*="/program-mai/"]').each((_, el) => {
-      const title = $(el).text().trim()
+      const title = $(el).text().trim().replace(/\s+/g, ' ')
       if (!title || title.length < 3) return
+      // Neben dem Titel-Link gibt es fürs selbe Event noch einen Datums-Badge-Link ("Aug 18")
+      // und einen "Read more"-Link mit demselben href — beide sind kein echter Titel
+      if (/^read more/i.test(title)) return
+      if (/^\w{3}\s*\d{1,2}$/.test(title)) return
 
       // Datum direkt nach dem Link als Text
       const dateText = $(el).closest('div, article, li').find('p, time, [class*="date"]').first().text().trim() ||
                        $(el).parent().next().text().trim()
 
-      const dateMatch = dateText.match(/(\w{3})\s+(\d{1,2}),\s+(\d{4})/)
+      // Website zeigt volle englische Monatsnamen ("August 18, 2026")
+      const dateMatch = dateText.match(/(\w+)\s+(\d{1,2}),\s+(\d{4})/)
       if (!dateMatch) return
-      const month = months[dateMatch[1]]
+      const month = months[dateMatch[1].slice(0, 3)]
       if (!month) return
       const date = `${dateMatch[3]}-${String(month).padStart(2,'0')}-${String(dateMatch[2]).padStart(2,'0')}`
       if (date < today()) return
@@ -2859,62 +2836,71 @@ async function scrapeZitadelleSpandau() {
 }
 
 async function scrapeMVBLeipzig() {
-  console.log('📡 MVB Leipzig...')
+  console.log('📡 MVB Leipzig (ICS)...')
   const events = []
   const seen = new Set()
   try {
     const headers = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
 
-    // Aktuelle + nächste 3 Monate parallel abrufen (My-Calendar WordPress-Plugin)
+    // My-Calendar-WordPress-Plugin: HTML-Seite liefert per Query-Param nur einzelne Monate
+    // und deren "nächster Monat"-Link führt inzwischen ins Leere (404). Der ICS-Export
+    // desselben Plugins liefert dieselben Monatsausschnitte zuverlässig als iCal.
     const now = new Date()
-    const urls = ['https://mvb-leipzig.de/events/']
-    for (let i = 0; i < 3; i++) {
-      const m = new Date(now.getFullYear(), now.getMonth() + i + 1, 1)
-      urls.push(
-        `https://mvb-leipzig.de/events/?dy=1&month=${now.getMonth() + i + 1}&nmonth=${m.getMonth()+1}&nyr=${m.getFullYear()}`
-      )
+    const urls = []
+    for (let i = 0; i <= 4; i++) {
+      const cur = new Date(now.getFullYear(), now.getMonth() + i, 1)
+      const nxt = new Date(now.getFullYear(), now.getMonth() + i + 1, 1)
+      urls.push(`https://mvb-leipzig.de/feed/my-calendar-ics/?dy=1&month=${cur.getMonth() + 1}&nmonth=${nxt.getMonth() + 1}&nyr=${nxt.getFullYear()}&time=month&yr=${cur.getFullYear()}`)
     }
 
-    const pages = await Promise.all(urls.map(url => fetch(url, { headers }).then(r => r.ok ? r.text() : null)))
-    for (const html of pages) {
-      if (!html) continue
-      const $ = cheerio.load(html)
+    const feeds = await Promise.all(urls.map(url => fetch(url, { headers }).then(r => r.ok ? r.text() : null)))
+    for (const text of feeds) {
+      if (!text) continue
+      let vevents
+      try {
+        const comp = new ICAL.Component(ICAL.parse(text))
+        vevents = comp.getAllSubcomponents('vevent')
+      } catch { continue }
 
-      $('script[type="application/ld+json"]').each((_, el) => {
-        let data
-        try { data = JSON.parse($(el).html()) } catch { return }
-        const items = Array.isArray(data) ? data : [data]
-        for (const item of items) {
-          if (item['@type'] !== 'Event') continue
-          const startDate = item.startDate
-          if (!startDate) continue
+      for (const ve of vevents) {
+        let ev
+        try { ev = new ICAL.Event(ve) } catch { continue }
+        const title = (ev.summary || '').trim()
+        if (!title || !ev.startDate) continue
 
-          const date = startDate.substring(0, 10)
-          if (date < today()) continue
-
-          const timeMatch = startDate.match(/T(\d{2}):(\d{2})/)
-          const time = timeMatch ? `${timeMatch[1]}:${timeMatch[2]}` : '20:00'
-
-          const title = (item.name || '').trim()
-          if (!title || title.length < 2) continue
-
-          const ticketUrl = item.url || (item.offers && item.offers.url) || 'https://mvb-leipzig.de/events/'
-
-          const key = date + title
-          if (seen.has(key)) continue
-          seen.add(key)
-
-          events.push({
-            title, date, time,
-            locationId: 48,
-            type: detectType(title),
-            description: '',
-            ticketUrl,
-            spotifyUrl: '',
-            source: 'mvbleipzig'
-          })
+        // Ganztägige Termine (VALUE=DATE) sind "floating" - über toJSDate() liefe die
+        // lokale Zeitzone des Runners mit rein und würde das Datum verschieben.
+        // Direkt die iCal-Datumsfelder nehmen statt über ein JS-Date zu gehen.
+        let date, time
+        if (ev.startDate.isDate) {
+          const d = ev.startDate
+          date = `${d.year}-${String(d.month).padStart(2, '0')}-${String(d.day).padStart(2, '0')}`
+          time = '20:00'
+        } else {
+          const jsDate = ev.startDate.toJSDate()
+          date = jsDate.toISOString().split('T')[0]
+          time = jsDate.toISOString().substring(11, 16)
         }
-      })
+        if (date < today()) continue
+
+        const key = date + title
+        if (seen.has(key)) continue
+        seen.add(key)
+
+        const ticketUrl = ve.getFirstPropertyValue('url') || 'https://mvb-leipzig.de/events/'
+
+        events.push({
+          title, date, time,
+          locationId: 48,
+          // "categories" ist bei diesem Feed nur ein fixes Serien-Label ("Dark-Party") für
+          // alle Events, keine echte Pro-Event-Kategorie - daher nicht für die Typ-Erkennung nutzen
+          type: detectType(title),
+          description: '',
+          ticketUrl,
+          spotifyUrl: '',
+          source: 'mvbleipzig'
+        })
+      }
     }
 
     console.log(`  ✓ ${events.length} Events`)
@@ -3049,6 +3035,63 @@ async function scrapeNeuesSchauspiel() {
   return events
 }
 
+async function scrapeNeueZukunft() {
+  console.log('📡 Neue Zukunft Berlin (Elfsight)...')
+  const events = []
+  try {
+    const widgetId = 'e767cbbe-0026-4173-a511-5aaa105ed563'
+    const page = encodeURIComponent('https://neue-zukunft.org/konzerte.html')
+    const res = await fetch(`https://core.service.elfsight.com/p/boot/?page=${page}&w=${widgetId}`, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)', 'Accept': 'application/json' }
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const data = await res.json()
+    const rawEvents = data?.data?.widgets?.[widgetId]?.data?.settings?.events || []
+    const seen = new Set()
+
+    for (const ev of rawEvents) {
+      const date = ev.start?.date
+      if (!date || date < today()) continue
+      const title = (ev.name || '').trim()
+      if (!title) continue
+      if (seen.has(date + title)) continue
+      seen.add(date + title)
+      const time = parseTime(ev.start?.time)
+
+      let description = ''
+      if (ev.description) {
+        // Blockelemente durch Leerzeichen ersetzen, damit Wörter beim Text-Extrahieren nicht zusammenkleben
+        const spaced = ev.description.replace(/<\/(div|p)>|<br\s*\/?>/gi, ' ')
+        description = cheerio.load(spaced).text().replace(/\s+/g, ' ').trim()
+        if (description.length > 200) {
+          const cut = description.lastIndexOf(' ', 200)
+          description = description.slice(0, cut > 0 ? cut : 200).trim() + '…'
+        }
+      }
+
+      const ticketAction = (ev.actions || []).find(a => a.link?.value)
+      const ticketUrl = ticketAction?.link?.value || 'https://neue-zukunft.org/konzerte.html'
+
+      events.push({
+        title,
+        date,
+        time,
+        locationId: 44,
+        type: detectType(title, description),
+        description,
+        ticketUrl,
+        spotifyUrl: '',
+        source: 'neue-zukunft'
+      })
+    }
+
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ Neue Zukunft: ${e.message}`)
+  }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -3106,6 +3149,7 @@ async function main() {
     scrapeNaTo(),
     scrapeNochBesserLeben(),
     scrapeNeuesSchauspiel(),
+    scrapeNeueZukunft(),
   ])
 
   let allEvents = []
@@ -3115,7 +3159,7 @@ async function main() {
 
   // Venues die 0 Events lieferten: aus letztem Snapshot nachladen (CI-IP-Blockierung)
   const scrapedLocationIds = new Set(allEvents.map(e => e.locationId))
-  const fallbackLocationIds = [3, 6, 17, 18, 26, 28, 29, 32, 33, 46] // Festsaal, Frannz, UT Connewitz, Moritzbastei, Heimathafen, Mikropol, Kesselhaus, Columbiahalle, Uber Eats MH, Theater des Westens
+  const fallbackLocationIds = [6, 17, 18, 26, 28, 29, 32, 33, 37, 44, 46] // Frannz, UT Connewitz, Moritzbastei, Heimathafen, Mikropol, Kesselhaus, Columbiahalle, Uber Eats MH, Quasimodo, Neue Zukunft, Theater des Westens
   const outPathForFallback = path.join(process.cwd(), 'public', 'events.json')
   let snapshotEvents = []
   try { snapshotEvents = JSON.parse(fs.readFileSync(outPathForFallback, 'utf-8')) } catch(e) {}
