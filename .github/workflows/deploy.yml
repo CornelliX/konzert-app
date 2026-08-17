@@ -10,6 +10,8 @@ on:
 jobs:
   scrape-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -25,6 +27,15 @@ jobs:
 
       - name: Copy events.json to public
         run: cp scraper/public/events.json public/events.json
+
+      # Frischen Scrape-Stand zurück nach main committen, damit der 0-Events-Fallback in
+      # scrape.js (main(), fallbackLocationIds) bei künftigen einzelnen Scraper-Ausfällen
+      # auf einen aktuellen statt monatealten Snapshot zurückgreifen kann.
+      - name: Commit refreshed events.json
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: Scraper-Snapshot aktualisieren [skip ci]"
+          file_pattern: 'scraper/public/events.json public/events.json'
 
       - name: Install app dependencies
         run: npm install
