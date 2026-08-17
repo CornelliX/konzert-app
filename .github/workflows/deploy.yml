@@ -32,7 +32,7 @@ jobs:
       # scrape.js (main(), fallbackLocationIds) bei künftigen einzelnen Scraper-Ausfällen
       # auf einen aktuellen statt monatealten Snapshot zurückgreifen kann.
       - name: Commit refreshed events.json
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0
         with:
           commit_message: "chore: Scraper-Snapshot aktualisieren [skip ci]"
           file_pattern: 'scraper/public/events.json public/events.json'
@@ -44,7 +44,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
