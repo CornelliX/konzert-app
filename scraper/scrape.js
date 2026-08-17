@@ -3261,6 +3261,31 @@ async function main() {
     return true
   })
 
+  // Fuzzy-Duplikate entfernen: gleiches Datum + gleiche Location + Titel beginnt gleich
+  // (z.B. "Enter Shikari" vs. "Enter Shikari +HOLDING ABSENCE +THE CALLOUS DAOBOYS") - passiert,
+  // wenn dasselbe Konzert sowohl vom Venue selbst als auch von einem Promoter (z.B. Trinity, der
+  // Shows an mehreren fremden Venues mitmeldet) gescraped wird, oft mit leicht abweichender Uhrzeit
+  // (Einlass vs. Beginn) und unterschiedlich ausführlichem Titel (mit/ohne Support-Acts).
+  function coreTitle(title) {
+    return title
+      .split(/\s*[+/]\s*|\s+feat\.?\s+|\s+ft\.?\s+|\s+w\/\s+|\s+support:?\s+|\s+special\s+guests?:?\s+|\s+mit\s+/i)[0]
+      .toLowerCase()
+      .replace(/[^a-z0-9äöüß]/g, '')
+      .trim()
+  }
+  const dedupGroups = new Map()
+  allEvents.forEach((e, i) => {
+    const core = coreTitle(e.title)
+    // Zu kurze/leere Kerne (z.B. reine Symbol-Titel) nicht gruppieren, sonst würden
+    // unverwandte Events fälschlich zusammengeworfen
+    const key = core.length >= 3 ? `${e.locationId}-${e.date}-${core}` : `unique-${i}`
+    const existing = dedupGroups.get(key)
+    if (!existing || e.title.length > existing.title.length) {
+      dedupGroups.set(key, e)
+    }
+  })
+  allEvents = [...dedupGroups.values()]
+
   // IDs vergeben
   function stableId(str) {
   const normalized = str.toLowerCase().replace(/[^a-z0-9]/g, '')
