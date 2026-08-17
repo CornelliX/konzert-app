@@ -62,6 +62,7 @@ export function getLocations() {
     { id: 50, name: 'Noch Besser Leben', city: 'Leipzig', website: 'nochbesserleben.com', capacity: 150 },
     { id: 51, name: 'Neues Schauspiel', city: 'Leipzig', website: 'neuesschauspielleipzig.de', capacity: 300 },
     { id: 52, name: 'Insel Berlin', city: 'Berlin', website: 'inselberlin.de', capacity: 800 },
+    { id: 53, name: 'Ritter Butzke', city: 'Berlin', website: 'club.ritterbutzke.com', capacity: 800 },
   ]
   // Gespeicherte Locations mit Defaults zusammenführen, damit neue Einträge immer erscheinen
   if (saved) {

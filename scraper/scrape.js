@@ -3095,6 +3095,76 @@ async function scrapeNeueZukunft() {
   return events
 }
 
+async function scrapeRitterButzke() {
+  console.log('📡 Ritter Butzke Berlin...')
+  const events = []
+  try {
+    const res = await fetch('https://club.ritterbutzke.com/events', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const $ = cheerio.load(await res.text())
+    const seen = new Set()
+    const cards = []
+
+    $('a.event-link').each((_, el) => {
+      const card = $(el).closest('[class*="col-"]')
+      const title = card.find('h2.text-center').first().text().trim()
+      const dateText = card.find('.pt-1').first().text().trim()
+      const calHref = card.find('a[href*="/calendarfile/"]').first().attr('href') || ''
+      const eventHref = $(el).attr('href') || ''
+
+      if (!title || !dateText) return
+      // Datum: "21.08.26"
+      const dateMatch = dateText.match(/(\d{2})\.(\d{2})\.(\d{2})/)
+      if (!dateMatch) return
+      const date = `20${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`
+      if (date < today()) return
+      const key = date + title
+      if (seen.has(key)) return
+      seen.add(key)
+      cards.push({ title, date, calHref, eventHref })
+    })
+
+    // Uhrzeit steht nur in der ICS-Kalenderdatei jedes Events, nicht in der Übersicht
+    await Promise.all(cards.map(async c => {
+      c.time = '22:00'
+      if (!c.calHref) return
+      try {
+        const icsUrl = c.calHref.startsWith('http') ? c.calHref : 'https://club.ritterbutzke.com' + c.calHref
+        const r = await fetch(icsUrl, { headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' } })
+        if (!r.ok) return
+        const timeMatch = (await r.text()).match(/DTSTART:\d{8}T(\d{2})(\d{2})/)
+        if (timeMatch) c.time = `${timeMatch[1]}:${timeMatch[2]}`
+      } catch {}
+    }))
+
+    for (const c of cards) {
+      const ticketUrl = c.eventHref
+        ? (c.eventHref.startsWith('http') ? c.eventHref : 'https://club.ritterbutzke.com' + c.eventHref)
+        : 'https://club.ritterbutzke.com/events'
+      events.push({
+        title: c.title,
+        date: c.date,
+        time: c.time,
+        locationId: 53,
+        // Reiner House/Techno-Club - alle Termine sind Partys, unabhängig vom (meist nur
+        // aus DJ-Namen bestehenden) Titel, daher hier fest statt über detectType()
+        type: 'party',
+        description: '',
+        ticketUrl,
+        spotifyUrl: '',
+        source: 'ritterbutzke'
+      })
+    }
+
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ Ritter Butzke: ${e.message}`)
+  }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -3153,6 +3223,7 @@ async function main() {
     scrapeNochBesserLeben(),
     scrapeNeuesSchauspiel(),
     scrapeNeueZukunft(),
+    scrapeRitterButzke(),
   ])
 
   let allEvents = []
