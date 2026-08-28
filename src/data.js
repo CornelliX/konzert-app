@@ -63,6 +63,10 @@ export function getLocations() {
     { id: 51, name: 'Neues Schauspiel', city: 'Leipzig', website: 'neuesschauspielleipzig.de', capacity: 300 },
     { id: 52, name: 'Insel Berlin', city: 'Berlin', website: 'inselberlin.de', capacity: 800 },
     { id: 53, name: 'Ritter Butzke', city: 'Berlin', website: 'club.ritterbutzke.com', capacity: 800 },
+    { id: 54, name: 'Max-Schmeling-Halle', city: 'Berlin', website: 'max-schmeling-halle.de', capacity: 8600 },
+    { id: 55, name: 'Velodrom', city: 'Berlin', website: 'velodrom.de', capacity: 12000 },
+    { id: 56, name: 'UFO im Velodrom', city: 'Berlin', website: 'ufo-velodrom.de', capacity: 1500 },
+    { id: 57, name: 'Uber Arena', city: 'Berlin', website: 'uber-arena.de', capacity: 17000 },
   ]
   // Gespeicherte Locations mit Defaults zusammenführen, damit neue Einträge immer erscheinen
   if (saved) {

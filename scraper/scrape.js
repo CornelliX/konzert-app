@@ -3165,6 +3165,112 @@ async function scrapeRitterButzke() {
   return events
 }
 
+// Max-Schmeling-Halle, Velodrom und UFO laufen über dasselbe TYPO3-t3events-System auf
+// max-schmeling-halle.de, per eventLocations-Query-Param nach Venue filterbar
+async function scrapeT3Events(url, locationId, source, venueLabel) {
+  console.log(`📡 ${venueLabel}...`)
+  const events = []
+  try {
+    const res = await fetch(url, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const $ = cheerio.load(await res.text())
+    const seen = new Set()
+
+    $('a.ticketWrap').each((_, el) => {
+      const title = ($(el).attr('data-headline') || '').trim()
+      if (!title) return
+      // Titel-Attribut endet auf ein ISO-Datum, z.B. "Nena Max-Schmeling-Halle 2026-10-02"
+      const dateMatch = ($(el).attr('title') || '').match(/(\d{4}-\d{2}-\d{2})$/)
+      if (!dateMatch) return
+      const date = dateMatch[1]
+      if (date < today()) return
+
+      const timeMatch = $(el).find('.begin').first().text().match(/(\d{1,2}):(\d{2})/)
+      const time = timeMatch ? `${timeMatch[1].padStart(2, '0')}:${timeMatch[2]}` : '20:00'
+
+      const key = date + title
+      if (seen.has(key)) return
+      seen.add(key)
+
+      const href = $(el).attr('href') || ''
+      const ticketUrl = href.startsWith('http') ? href : 'https://www.max-schmeling-halle.de' + href
+
+      events.push({ title, date, time, locationId, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source })
+    })
+
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ ${venueLabel}: ${e.message}`)
+  }
+  return events
+}
+
+async function scrapeMaxSchmelingHalle() {
+  return scrapeT3Events(
+    'https://www.max-schmeling-halle.de/events/?tx_t3events_eventlist%5BoverwriteDemand%5D%5BsearchWord%5D=&tx_t3events_eventlist%5BoverwriteDemand%5D%5BeventTypes%5D%5B%5D=concert',
+    54, 'max-schmeling-halle', 'Max-Schmeling-Halle Berlin'
+  )
+}
+
+async function scrapeVelodrom() {
+  return scrapeT3Events(
+    'https://www.max-schmeling-halle.de/events/?tx_t3events_eventlist%5BoverwriteDemand%5D%5BsearchWord%5D=&tx_t3events_eventlist%5BoverwriteDemand%5D%5BeventLocations%5D%5B%5D=5752&tx_t3events_eventlist%5BoverwriteDemand%5D%5BeventTypes%5D%5B%5D=concert',
+    55, 'velodrom', 'Velodrom Berlin'
+  )
+}
+
+async function scrapeUFO() {
+  return scrapeT3Events(
+    'https://www.max-schmeling-halle.de/events/?tx_t3events_eventlist%5BoverwriteDemand%5D%5BsearchWord%5D=&tx_t3events_eventlist%5BoverwriteDemand%5D%5BeventLocations%5D%5B%5D=6946&tx_t3events_eventlist%5BoverwriteDemand%5D%5BeventTypes%5D%5B%5D=concert',
+    56, 'ufo', 'UFO Berlin'
+  )
+}
+
+async function scrapeUberArena() {
+  console.log('📡 Uber Arena Berlin...')
+  const events = []
+  try {
+    const res = await fetch('https://www.uber-arena.de/en/events-tickets', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const $ = cheerio.load(await res.text())
+    const seen = new Set()
+
+    // Alle Kategorien (Concert, Basketball, Ice Hockey, ...) stehen schon im initial gelieferten
+    // HTML, per data-categoryname clientseitig gefiltert - wir picken uns "concert" direkt raus
+    $('div[data-categoryname="concert"]').each((_, el) => {
+      const titleEl = $(el).find('h3.event-title a').first()
+      const title = titleEl.text().trim()
+      if (!title) return
+
+      const day = $(el).find('.m-date__day').first().text().replace(/\D/g, '')
+      const month = $(el).find('.m-date__month').first().text().replace(/\D/g, '')
+      const year = $(el).find('.m-date__year').first().text().replace(/\D/g, '').slice(0, 4)
+      if (!day || !month || !year) return
+      const date = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
+      if (date < today()) return
+
+      const timeMatch = $(el).find('.m-date__hour').first().text().match(/(\d{1,2}):(\d{2})/)
+      const time = timeMatch ? `${timeMatch[1].padStart(2, '0')}:${timeMatch[2]}` : '20:00'
+
+      const key = date + title
+      if (seen.has(key)) return
+      seen.add(key)
+
+      const ticketUrl = titleEl.attr('href') || 'https://www.uber-arena.de/en/events-tickets'
+      events.push({ title, date, time, locationId: 57, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'uberarena' })
+    })
+
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ Uber Arena: ${e.message}`)
+  }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -3224,6 +3330,10 @@ async function main() {
     scrapeNeuesSchauspiel(),
     scrapeNeueZukunft(),
     scrapeRitterButzke(),
+    scrapeMaxSchmelingHalle(),
+    scrapeVelodrom(),
+    scrapeUFO(),
+    scrapeUberArena(),
   ])
 
   let allEvents = []
