@@ -3343,7 +3343,7 @@ async function main() {
 
   // Venues die 0 Events lieferten: aus letztem Snapshot nachladen (CI-IP-Blockierung)
   const scrapedLocationIds = new Set(allEvents.map(e => e.locationId))
-  const fallbackLocationIds = [6, 17, 18, 26, 28, 29, 32, 33, 37, 44, 46] // Frannz, UT Connewitz, Moritzbastei, Heimathafen, Mikropol, Kesselhaus, Columbiahalle, Uber Eats MH, Quasimodo, Neue Zukunft, Theater des Westens
+  const fallbackLocationIds = [6, 11, 17, 18, 26, 28, 29, 32, 33, 37, 44, 46] // Frannz, Schokoladen, UT Connewitz, Moritzbastei, Heimathafen, Mikropol, Kesselhaus, Columbiahalle, Uber Eats MH, Quasimodo, Neue Zukunft, Theater des Westens
   const outPathForFallback = path.join(process.cwd(), 'public', 'events.json')
   let snapshotEvents = []
   try { snapshotEvents = JSON.parse(fs.readFileSync(outPathForFallback, 'utf-8')) } catch(e) {}

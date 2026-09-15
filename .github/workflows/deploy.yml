@@ -15,6 +15,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Der wöchentliche Cron hier ist die einzige garantierte regelmäßige Aktivität für das
+      # Supabase-Projekt (der Scraper selbst spricht nie mit Supabase). Free-Tier-Projekte
+      # pausieren nach 7 Tagen Inaktivität automatisch - eine simple authentifizierte Anfrage
+      # zählt als Aktivität und verhindert das.
+      - name: Supabase wach halten
+        run: |
+          curl -sf "https://cqxpjesovcavarrlljpn.supabase.co/rest/v1/manual_events?select=id&limit=1" \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxeHBqZXNvdmNhdmFycmxsanBuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0NjI4MjYsImV4cCI6MjA4ODAzODgyNn0._paXbtV1uecR0AA08KUkKLfRkmkQw2k4W3hT5L2y2ho" \
+            -o /dev/null
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
