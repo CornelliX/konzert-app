@@ -383,13 +383,15 @@ function renderEventCard(e) {
             </p>
             ${e.description ? `<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.5);">${esc(e.description)}</p>` : ''}
           </div>
-          <div class="flex gap-2 flex-wrap mt-1" style="align-items:center;">
-            ${e.ticketUrl ? `<a href="${e.ticketUrl}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg inline-block" style="color:rgba(255,255,255,0.6);">Infos →</a>` : (loc?.website ? `<a href="https://${loc.website}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg inline-block" style="color:rgba(255,255,255,0.6);">Infos →</a>` : '')}
-            ${e.type !== 'sonstige' ? `<a href="${e.spotifyUrl || spotifySearchUrl(e.title)}" target="_blank" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg inline-flex items-center gap-1" style="color:rgba(255,255,255,0.6);"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>→</a>` : ''}
-            <button data-share="${e.id}" title="Teilen" aria-label="Teilen" class="btn-glass px-2.5 py-1.5 rounded-lg inline-flex items-center justify-center" style="color:rgba(255,255,255,0.5);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg></button>
-            <button data-ics="${e.id}" title="Zu Apple Kalender hinzufügen" aria-label="Zu Apple Kalender hinzufügen" class="btn-glass px-2.5 py-1.5 rounded-lg inline-flex items-center justify-center" style="color:rgba(255,255,255,0.5);"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></button>
-            <button data-gcal="${e.id}" title="Zu Google Kalender hinzufügen" aria-label="Zu Google Kalender hinzufügen" class="btn-glass px-2.5 py-1.5 rounded-lg inline-flex items-center justify-center" style="color:rgba(255,255,255,0.5);"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.316 5.684H24v12.632h-5.684V5.684zM5.684 24h12.632v-5.684H5.684V24zM18.316 5.684V0H1.895A1.894 1.894 0 0 0 0 1.895v16.421h5.684V5.684h12.632zm-7.207 6.25v-.065c.272-.144.5-.349.687-.617s.279-.595.279-.982c0-.379-.099-.72-.3-1.025a2.05 2.05 0 0 0-.832-.714 2.703 2.703 0 0 0-1.197-.257c-.6 0-1.094.156-1.481.467-.386.311-.65.671-.793 1.078l1.085.452c.086-.249.224-.461.413-.633.189-.172.445-.257.767-.257.33 0 .602.088.816.264a.86.86 0 0 1 .322.703c0 .33-.12.589-.36.778-.24.19-.535.284-.886.284h-.567v1.085h.633c.407 0 .748.109 1.02.327.272.218.407.499.407.843 0 .336-.129.614-.387.832s-.565.327-.924.327c-.351 0-.651-.103-.897-.311-.248-.208-.422-.502-.521-.881l-1.096.452c.178.616.505 1.082.977 1.401.472.319.984.478 1.538.477a2.84 2.84 0 0 0 1.293-.291c.382-.193.684-.458.902-.794.218-.336.327-.72.327-1.149 0-.429-.115-.797-.344-1.105a2.067 2.067 0 0 0-.881-.689zm2.093-1.931l.602.913L15 10.045v5.744h1.187V8.446h-.827l-2.158 1.557zM22.105 0h-3.289v5.184H24V1.895A1.894 1.894 0 0 0 22.105 0zm-3.289 23.5l4.684-4.684h-4.684V23.5zM0 22.105C0 23.152.848 24 1.895 24h3.289v-5.184H0v3.289z"/></svg></button>
-            <span style="margin-left:auto; color:rgba(255,255,255,0.6); font-size:18px; font-weight:400; letter-spacing:-3px; pointer-events:none; user-select:none; padding-right:2px; line-height:1;">‹‹</span>
+          <div class="flex gap-2 mt-1" style="align-items:center;">
+            <div style="display:flex; gap:6px; flex:1; min-width:0;">
+              ${(e.ticketUrl || loc?.website) ? `<a href="${e.ticketUrl || 'https://' + loc.website}" target="_blank" title="Infos" aria-label="Infos" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></a>` : ''}
+              ${e.type !== 'sonstige' ? `<a href="${e.spotifyUrl || spotifySearchUrl(e.title)}" target="_blank" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a>` : ''}
+              <button data-share="${e.id}" title="Teilen" aria-label="Teilen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.5);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg></button>
+              <button data-ics="${e.id}" title="Zu Apple Kalender hinzufügen" aria-label="Zu Apple Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.5);"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></button>
+              <button data-gcal="${e.id}" title="Zu Google Kalender hinzufügen" aria-label="Zu Google Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.5);"><svg width="14" height="14" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg></button>
+            </div>
+            <span style="flex-shrink:0; color:rgba(255,255,255,0.6); font-size:18px; font-weight:400; letter-spacing:-3px; pointer-events:none; user-select:none; padding-right:2px; line-height:1;">‹‹</span>
           </div>
         </div>
       </div>
@@ -945,8 +947,21 @@ function attachSwipeToWrapper(wrapper) {
   const card = wrapper.querySelector('.event-swipe-card')
   if (!card) return
   const REVEAL_WIDTH = 160, THRESHOLD = 60
+  const SETTLE_TRANSITION = 'transform 0.3s cubic-bezier(0.22, 1, 0.36, 1)'
   let startX = 0, startY = 0, currentDx = 0
   let directionLocked = null, isOpen = false
+  let rafId = null
+
+  // Während des Ziehens den Transform-Write auf einen rAF pro Frame begrenzen, statt bei
+  // jedem touchmove-Event (die deutlich häufiger als die Bildwiederholrate feuern können)
+  // sofort das DOM zu schreiben - das war die Ursache des hakeligen Wischens
+  function scheduleTransform() {
+    if (rafId !== null) return
+    rafId = requestAnimationFrame(() => {
+      card.style.transform = `translateX(${currentDx}px)`
+      rafId = null
+    })
+  }
 
   card.addEventListener('touchstart', e => {
     startX = e.touches[0].clientX
@@ -954,6 +969,7 @@ function attachSwipeToWrapper(wrapper) {
     currentDx = isOpen ? -REVEAL_WIDTH : 0
     directionLocked = null
     card.style.transition = 'none'
+    if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null }
   }, { passive: true })
 
   card.addEventListener('touchmove', e => {
@@ -967,11 +983,12 @@ function attachSwipeToWrapper(wrapper) {
     e.preventDefault()
     const base = isOpen ? -REVEAL_WIDTH : 0
     currentDx = Math.max(-REVEAL_WIDTH, Math.min(0, base + dx))
-    card.style.transform = `translateX(${currentDx}px)`
+    scheduleTransform()
   }, { passive: false })
 
   card.addEventListener('touchend', () => {
-    card.style.transition = 'transform 0.25s ease'
+    if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null }
+    card.style.transition = SETTLE_TRANSITION
     if (directionLocked !== 'h') return
     const base = isOpen ? -REVEAL_WIDTH : 0
     const delta = currentDx - base
@@ -982,13 +999,13 @@ function attachSwipeToWrapper(wrapper) {
 
   function openCard() {
     if (swipeActiveWrapper && swipeActiveWrapper !== wrapper) closeSwipeWrapper(swipeActiveWrapper)
-    card.style.transition = 'transform 0.25s ease'
+    card.style.transition = SETTLE_TRANSITION
     card.style.transform = `translateX(${-REVEAL_WIDTH}px)`
     isOpen = true
     swipeActiveWrapper = wrapper
   }
   function closeCard() {
-    card.style.transition = 'transform 0.25s ease'
+    card.style.transition = SETTLE_TRANSITION
     card.style.transform = 'translateX(0)'
     isOpen = false
     if (swipeActiveWrapper === wrapper) swipeActiveWrapper = null
