@@ -76,7 +76,14 @@ export async function renderApp(el) {
     c64El.style.transition = 'opacity 0.6s ease'
     requestAnimationFrame(() => {
       c64El.style.opacity = '0'
-      c64El.addEventListener('transitionend', () => c64El.remove(), { once: true })
+      // Sofort klick-durchlässig machen, sobald das Ausblenden beginnt - so kann das
+      // fixed/z-index:9999-Element nie Klicks blockieren, selbst falls transitionend
+      // ausbleibt (reduced-motion, Hintergrund-Tab, o.ä.)
+      c64El.style.pointerEvents = 'none'
+      const removeC64 = () => c64El.remove()
+      c64El.addEventListener('transitionend', removeC64, { once: true })
+      // Fallback: Element in jedem Fall entfernen, auch wenn transitionend nie feuert
+      setTimeout(removeC64, 800)
     })
   }
 }
