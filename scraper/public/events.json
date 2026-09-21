@@ -532,19 +532,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2139842463,
-    "title": "Faster Pussycat",
-    "date": "2026-09-23",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/faster-pussycat-celebrating-40-years-frannz-club-21581258",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 463311887,
     "title": "Music Quiz",
     "date": "2026-09-23",
@@ -662,17 +649,17 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1516266941,
-    "title": "VENUE CHANGE: Jazeek",
+    "id": 2139842463,
+    "title": "Faster Pussycat",
     "date": "2026-09-23",
     "time": "20:00",
-    "locationId": 57,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jazeek-26/2026-09-23-2000",
+    "ticketUrl": "https://www.eventim.de/noapp/event/faster-pussycat-celebrating-40-years-frannz-club-21581258",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 199239503,
@@ -857,19 +844,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1580698165,
-    "title": "Daniel Sosa",
-    "date": "2026-09-24",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260924-daniel-sosa/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 400992696,
     "title": "Grito Exclamac!ón",
     "date": "2026-09-24",
@@ -907,19 +881,6 @@
     "spotifyUrl": "",
     "source": "binuu",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 278294985,
-    "title": "JJ",
-    "date": "2026-09-24",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/jj-act-ii-into-the-unknown-tour-frannz-club-21696680",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 928717730,
@@ -1050,17 +1011,17 @@
     "addedAt": "2026-08-28"
   },
   {
-    "id": 8955955,
-    "title": "Red RHYTHM – Swing Dance Night",
+    "id": 278294985,
+    "title": "JJ",
     "date": "2026-09-24",
-    "time": "20:30",
+    "time": "20:00",
     "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://frannz.eu/",
+    "ticketUrl": "https://www.eventim.de/noapp/event/jj-act-ii-into-the-unknown-tour-frannz-club-21696680",
     "spotifyUrl": "",
     "source": "frannz",
-    "addedAt": "2026-09-02"
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1110935891,
@@ -1074,6 +1035,19 @@
     "spotifyUrl": "",
     "source": "ilseserika",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 8955955,
+    "title": "Red RHYTHM – Swing Dance Night",
+    "date": "2026-09-24",
+    "time": "20:30",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-02"
   },
   {
     "id": 2134609026,
@@ -1294,19 +1268,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1667960010,
-    "title": "Vega",
-    "date": "2026-09-25",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260925-vega/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 739697948,
     "title": "THE GROOVY CELLAR",
     "date": "2026-09-25",
@@ -1369,19 +1330,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-09-25-girl-group/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 260962260,
-    "title": "SingAlong – Das große Mitsing-Event",
-    "date": "2026-09-25",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -1488,19 +1436,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 4423756,
-    "title": "10 Jahre \"The Big Brassers\" – Jubiläumskonzert & Party",
-    "date": "2026-09-25",
-    "time": "20:00",
-    "locationId": 45,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/10-jahre-big-brassers-jubilaeumskonzert-party",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1818285992,
     "title": "AUGER | Support: IAMIMPERFECT",
     "date": "2026-09-25",
@@ -1525,6 +1460,19 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-08-26"
+  },
+  {
+    "id": 260962260,
+    "title": "SingAlong – Das große Mitsing-Event",
+    "date": "2026-09-25",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 2094045433,
@@ -1579,19 +1527,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2071267970,
-    "title": "Rock@Frannz",
-    "date": "2026-09-25",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/a11bb670-3d97-4002-a7c9-341f3b822ab9",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 721625062,
     "title": "3 Satt",
     "date": "2026-09-25",
@@ -1616,6 +1551,19 @@
     "spotifyUrl": "",
     "source": "nato",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 2071267970,
+    "title": "Rock@Frannz",
+    "date": "2026-09-25",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/a11bb670-3d97-4002-a7c9-341f3b822ab9",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1158246973,
@@ -1721,19 +1669,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 186037967,
-    "title": "Nudelretten Weltrekord",
-    "date": "2026-09-26",
-    "time": "11:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/nudelretten-weltrekord",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 629635670,
     "title": "In The Mountains",
     "date": "2026-09-26",
@@ -1797,19 +1732,6 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1949416342,
-    "title": "SommerSafari",
-    "date": "2026-09-26",
-    "time": "18:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/260926-SommerSafari",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 2139836696,
@@ -1965,19 +1887,6 @@
     "ticketUrl": "https://www.tixforgigs.com/Event/68422",
     "spotifyUrl": "",
     "source": "utconnewitz",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 932401726,
-    "title": "John Robb & Mark Reeder",
-    "date": "2026-09-26",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260926-john-robb-mark-reeder/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -2226,19 +2135,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 885775288,
-    "title": "„Flashbacks mit Liebe“",
-    "date": "2026-09-26",
-    "time": "22:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-26"
-  },
-  {
     "id": 839599166,
     "title": "BAMBULE PARTY",
     "date": "2026-09-26",
@@ -2275,6 +2171,32 @@
     "spotifyUrl": "",
     "source": "slaughterhouse",
     "addedAt": "2026-09-02"
+  },
+  {
+    "id": 1949416342,
+    "title": "SommerSafari",
+    "date": "2026-09-26",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/260926-SommerSafari",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-21"
+  },
+  {
+    "id": 885775288,
+    "title": "„Flashbacks mit Liebe“",
+    "date": "2026-09-26",
+    "time": "22:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-26"
   },
   {
     "id": 1653195563,
@@ -2509,19 +2431,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1445238941,
-    "title": "Silke Bischoff",
-    "date": "2026-09-27",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20260927-silke-bischoff/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 760085498,
     "title": "Caramelo",
     "date": "2026-09-27",
@@ -2533,19 +2442,6 @@
     "spotifyUrl": "",
     "source": "kantine",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 201442601,
-    "title": "Klez.e",
-    "date": "2026-09-27",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 717163005,
@@ -2611,6 +2507,19 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-08-26"
+  },
+  {
+    "id": 201442601,
+    "title": "Klez.e",
+    "date": "2026-09-27",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1316461765,
@@ -2832,19 +2741,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1447508679,
-    "title": "María José Llergo",
-    "date": "2026-09-28",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 15285960,
     "title": "The Mongolian death worm + Sünde + Terminal Object + SurfSolaire (DJ-Set)",
     "date": "2026-09-28",
@@ -2947,17 +2843,17 @@
     "addedAt": "2026-08-26"
   },
   {
-    "id": 1871407657,
-    "title": "A$AP Rocky",
+    "id": 1447508679,
+    "title": "María José Llergo",
     "date": "2026-09-28",
     "time": "20:00",
-    "locationId": 57,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/asap-rocky/2026-09-28-2000",
+    "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 295607889,
@@ -3063,19 +2959,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 390890584,
-    "title": "The Dear Hunter -Nachholtermin vom 30.09.2025.",
-    "date": "2026-09-29",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 896391127,
     "title": "THE ZIG ZAG JAZZED UP JAM SESSION",
     "date": "2026-09-29",
@@ -3113,6 +2996,19 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-08-26"
+  },
+  {
+    "id": 390890584,
+    "title": "The Dear Hunter -Nachholtermin vom 30.09.2025.",
+    "date": "2026-09-29",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 640298874,
@@ -3413,19 +3309,6 @@
     "addedAt": "2026-08-26"
   },
   {
-    "id": 707847761,
-    "title": "VUNDABAR & YOT CLUB",
-    "date": "2026-09-30",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/vundabar-yot-club-frannz-club-21609405",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 217339277,
     "title": "Music Quiz",
     "date": "2026-09-30",
@@ -3487,6 +3370,19 @@
     "ticketUrl": "https://www.tixforgigs.com/de-de/Event/75695",
     "spotifyUrl": "",
     "source": "moritzbastei",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 707847761,
+    "title": "VUNDABAR & YOT CLUB",
+    "date": "2026-09-30",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/vundabar-yot-club-frannz-club-21609405",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -3710,19 +3606,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2041509124,
-    "title": "Strawberry Guy",
-    "date": "2026-10-01",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/strawberry-guy-live-2026-frannz-club-21717100",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1047532452,
     "title": "Gerardo Moncada (DJ-Set)",
     "date": "2026-10-01",
@@ -3850,6 +3733,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 2041509124,
+    "title": "Strawberry Guy",
+    "date": "2026-10-01",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/strawberry-guy-live-2026-frannz-club-21717100",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1509057947,
@@ -4072,19 +3968,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1514512067,
-    "title": "Two Lanes",
-    "date": "2026-10-02",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261002-two-lanes/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1797485517,
     "title": "LOREEN",
     "date": "2026-10-02",
@@ -4186,19 +4069,6 @@
     "ticketUrl": "https://trinitymusic.de/event/2026-10-02-forager",
     "spotifyUrl": "",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 162708767,
-    "title": "Schimmerling",
-    "date": "2026-10-02",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/schimmerling-stadiontour-2026-frannz-club-20991469/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 583940573,
@@ -4303,19 +4173,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1461647089,
-    "title": "Old Thieves  + Ladehemmung",
-    "date": "2026-10-02",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/old-thieves-ladehemmung/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-09-16"
-  },
-  {
     "id": 1611059001,
     "title": "Diego Alejandro Ensemble + DJ Aftershow (Gabo-Bday)",
     "date": "2026-10-02",
@@ -4368,17 +4225,17 @@
     "addedAt": "2026-08-28"
   },
   {
-    "id": 1841798003,
-    "title": "Bryan Adams",
+    "id": 162708767,
+    "title": "Schimmerling",
     "date": "2026-10-02",
     "time": "20:00",
-    "locationId": 57,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bryan-adams-berlin/2026-10-02-2000",
+    "ticketUrl": "https://www.eventim.de/noapp/event/schimmerling-stadiontour-2026-frannz-club-20991469/",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 166416936,
@@ -4407,19 +4264,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 532796627,
-    "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
-    "date": "2026-10-02",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/47ac6e67-4636-472f-900c-074d24ae68fa",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1540714716,
     "title": "The Hawaiians",
     "date": "2026-10-02",
@@ -4430,6 +4274,19 @@
     "ticketUrl": "https://www.wildatheartberlin.de/concerts.php",
     "spotifyUrl": "",
     "source": "wildatheart",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 532796627,
+    "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
+    "date": "2026-10-02",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/47ac6e67-4636-472f-900c-074d24ae68fa",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -4507,19 +4364,6 @@
     "ticketUrl": "https://www.gretchen-club.de/detail.php?id=3595",
     "spotifyUrl": "",
     "source": "gretchen",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1278732471,
-    "title": "📍UNSER ALLER LETZTES OPEN AIR📍",
-    "date": "2026-10-03",
-    "time": "14:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/unser-aller-letztes-open-air-1",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
     "addedAt": "2026-09-21"
   },
   {
@@ -4688,19 +4532,6 @@
     "ticketUrl": "https://utconnewitz.de/",
     "spotifyUrl": "",
     "source": "utconnewitz",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 294771469,
-    "title": "The Boyband",
-    "date": "2026-10-03",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261003-the-boyband/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -4873,19 +4704,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 685203331,
-    "title": "Die Schöne Party",
-    "date": "2026-10-03",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-09"
-  },
-  {
     "id": 7981060,
     "title": "Ceca",
     "date": "2026-10-03",
@@ -4910,6 +4728,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 685203331,
+    "title": "Die Schöne Party",
+    "date": "2026-10-03",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-09"
   },
   {
     "id": 688605080,
@@ -5026,19 +4857,6 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 740044942,
-    "title": "🪩 THE FUNKY BREAKFAST MARKT 🥐",
-    "date": "2026-10-04",
-    "time": "10:00",
-    "locationId": 45,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/funky-breakfast-markt-9",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 2062955670,
@@ -5287,19 +5105,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2065935397,
-    "title": "King Woman",
-    "date": "2026-10-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261004-king-woman/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1499826533,
     "title": "Parlour Magic, Fee Aviv und Ghosts & Errors",
     "date": "2026-10-04",
@@ -5348,19 +5153,6 @@
     "source": "trinity",
     "ticketUrl": "https://trinitymusic.de/event/2026-10-04-wuestenberg",
     "spotifyUrl": "",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1555656036,
-    "title": "Lera Lynn",
-    "date": "2026-10-04",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -5489,6 +5281,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 1555656036,
+    "title": "Lera Lynn",
+    "date": "2026-10-04",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 413661848,
@@ -5686,19 +5491,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1277748183,
-    "title": "Jimmy Sax",
-    "date": "2026-10-05",
-    "time": "20:30",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/jimmy-sax",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 598138877,
     "title": "WEM GEHÖRT CONNEWITZ?",
     "date": "2026-10-06",
@@ -5841,19 +5633,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1484779518,
-    "title": "Haken",
-    "date": "2026-10-06",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/haken-live-2026-frannz-club-21749830",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1913394268,
     "title": "Das Lumpenpack",
     "date": "2026-10-06",
@@ -5903,6 +5682,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-02"
+  },
+  {
+    "id": 1484779518,
+    "title": "Haken",
+    "date": "2026-10-06",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/haken-live-2026-frannz-club-21749830",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 219093993,
@@ -6190,19 +5982,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 769706013,
-    "title": "Raised Fist",
-    "date": "2026-10-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261007-raised-fist/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 991170711,
     "title": "Flo & Jere present: Teresa Luna & Käthe Johanning – Pop/Jazz and Latin American Influences",
     "date": "2026-10-07",
@@ -6239,19 +6018,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-10-07-oliver-malcolm/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1652480956,
-    "title": "The Bones Of J.R. Jones",
-    "date": "2026-10-07",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -6305,19 +6071,6 @@
     "addedAt": "2026-09-02"
   },
   {
-    "id": 1987483866,
-    "title": "GIRLI",
-    "date": "2026-10-07",
-    "time": "20:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/girli-saeaelchen-21624719/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1596028321,
     "title": "Oliver Polak",
     "date": "2026-10-07",
@@ -6331,17 +6084,17 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 500477897,
-    "title": "J. Cole",
+    "id": 1652480956,
+    "title": "The Bones Of J.R. Jones",
     "date": "2026-10-07",
     "time": "20:00",
-    "locationId": 57,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/j-cole/2026-10-07-2000",
+    "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 231035552,
@@ -6602,32 +6355,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2065245211,
-    "title": "The Narrator",
-    "date": "2026-10-08",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1702794741,
-    "title": "D/TROIT",
-    "date": "2026-10-08",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/dtroit-frannz-club-22026353/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-26"
-  },
-  {
     "id": 1037832562,
     "title": "Open Mic L. J. Fox + Mr. Silver (DJ-Set)",
     "date": "2026-10-08",
@@ -6717,17 +6444,30 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1399455869,
-    "title": "Niall Horan",
+    "id": 2065245211,
+    "title": "The Narrator",
     "date": "2026-10-08",
     "time": "20:00",
-    "locationId": 57,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/niall-horan-26/2026-10-08-2000",
+    "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1702794741,
+    "title": "D/TROIT",
+    "date": "2026-10-08",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/dtroit-frannz-club-22026353/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-26"
   },
   {
     "id": 1951132946,
@@ -6830,19 +6570,6 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 914318124,
-    "title": "Nicotine Dolls",
-    "date": "2026-10-09",
-    "time": "19:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/nicotine-dolls",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 717970555,
@@ -6962,19 +6689,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1002467534,
-    "title": "Käärija",
-    "date": "2026-10-09",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261009-kaeaerija/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1714677204,
     "title": "FABIAN RÖMER",
     "date": "2026-10-09",
@@ -7076,19 +6790,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-10-09-inspector-spacetime/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 2105058128,
-    "title": "SingAlong – Das große Mitsing-Event",
-    "date": "2026-10-09",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -7206,17 +6907,17 @@
     "addedAt": "2026-08-26"
   },
   {
-    "id": 2040514336,
-    "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s",
+    "id": 2105058128,
+    "title": "SingAlong – Das große Mitsing-Event",
     "date": "2026-10-09",
-    "time": "21:00",
+    "time": "20:00",
     "locationId": 6,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
     "source": "frannz",
-    "addedAt": "2026-08-19"
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1592570774,
@@ -7230,6 +6931,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2040514336,
+    "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s",
+    "date": "2026-10-09",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-19"
   },
   {
     "id": 1927219911,
@@ -7373,19 +7087,6 @@
     "spotifyUrl": "",
     "source": "ilseserika",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 737891403,
-    "title": "FUNGI FEVER FEST – A Festival of Art, Science & Mycelial Thinking",
-    "date": "2026-10-10",
-    "time": "12:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/fungi-fever-fest-festival-art-science-mycelial-thinking",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 776203267,
@@ -7775,19 +7476,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1568315278,
-    "title": "mrs mellow",
-    "date": "2026-10-10",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/mrs-mellow/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-09-16"
-  },
-  {
     "id": 166195636,
     "title": "Ebi",
     "date": "2026-10-10",
@@ -7853,19 +7541,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1722407271,
-    "title": "Millenial Mixtape",
-    "date": "2026-10-10",
-    "time": "22:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/ee378526-e9ff-4289-a0f3-e2c891b74c61",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 421442862,
     "title": "Old but Gold Ü30 Hip Hop Party",
     "date": "2026-10-10",
@@ -7900,6 +7575,19 @@
     "ticketUrl": "https://club.ritterbutzke.com/event/101026-RitterButzkeJubilaumw-NTO",
     "spotifyUrl": "",
     "source": "ritterbutzke",
+    "addedAt": "2026-09-21"
+  },
+  {
+    "id": 1722407271,
+    "title": "Millenial Mixtape",
+    "date": "2026-10-10",
+    "time": "22:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/ee378526-e9ff-4289-a0f3-e2c891b74c61",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-09-21"
   },
   {
@@ -7981,19 +7669,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 299881900,
-    "title": "🍄 FUNGI FEVER FEST – A Festival of Art, Science & Mycelial Thinking",
-    "date": "2026-10-11",
-    "time": "12:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/fungi-fever-fest-festival-art-science-mycelial-thinking-0",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 224944758,
     "title": "WICKIE UND DIE STARKEN MÄNNER",
     "date": "2026-10-11",
@@ -8072,19 +7747,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1743019999,
-    "title": "SYNTHONY",
-    "date": "2026-10-11",
-    "time": "19:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/synthony/2026-10-11-1900",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 978417657,
     "title": "SLOPE, special guest DON`T TRY + support DEFIANCE",
     "date": "2026-10-11",
@@ -8134,19 +7796,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1174954287,
-    "title": "My Ugly Clementine",
-    "date": "2026-10-11",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261011-my-ugly-clementine/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -8396,19 +8045,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1631943344,
-    "title": "Dizzee Rascal",
-    "date": "2026-10-12",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261012-dizzee-rascal/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 93240752,
     "title": "CAMILLE JANSEN",
     "date": "2026-10-12",
@@ -8420,19 +8056,6 @@
     "spotifyUrl": "",
     "source": "kantine",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1370705268,
-    "title": "Paris Jackson",
-    "date": "2026-10-12",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/paris-jackson-frannz-club-22020454/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-26"
   },
   {
     "id": 1021946619,
@@ -8535,6 +8158,19 @@
     "spotifyUrl": "",
     "source": "nato",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 1370705268,
+    "title": "Paris Jackson",
+    "date": "2026-10-12",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/paris-jackson-frannz-club-22020454/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-26"
   },
   {
     "id": 771845260,
@@ -9053,19 +8689,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 535681091,
-    "title": "Mar Malade",
-    "date": "2026-10-14",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261014-mar-malade/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 176962662,
     "title": "Mark Bérubé – Singer-Songwriter",
     "date": "2026-10-14",
@@ -9103,19 +8726,6 @@
     "spotifyUrl": "",
     "source": "mikropol",
     "addedAt": "2026-08-26"
-  },
-  {
-    "id": 2049255099,
-    "title": "THE DELINES",
-    "date": "2026-10-14",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1646557545,
@@ -9195,6 +8805,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 2049255099,
+    "title": "THE DELINES",
+    "date": "2026-10-14",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1184803110,
     "title": "Stail",
     "date": "2026-10-14",
@@ -9272,19 +8895,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 562863305,
-    "title": "54Ultra",
-    "date": "2026-10-15",
-    "time": "19:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/54-ultra-saeaelchen-21583235/?affiliate=SZ3&utm_campaign=SzeneTickets%20GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1770864739,
     "title": "Urisk + Tyrannus + Norkh",
     "date": "2026-10-15",
@@ -9309,19 +8919,6 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 833595601,
-    "title": "The Strokes",
-    "date": "2026-10-15",
-    "time": "19:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/the-strokes/2026-10-15-1900",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 317873490,
@@ -9480,19 +9077,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 892707819,
-    "title": "Marlene Kuntz",
-    "date": "2026-10-15",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 886598417,
     "title": "SHORTIES FILMS SCREENING #29",
     "date": "2026-10-15",
@@ -9577,6 +9161,19 @@
     "source": "hole44",
     "ticketUrl": "https://hole-berlin.de/event/2026-10-15-bangerfabrique/",
     "spotifyUrl": "",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 892707819,
+    "title": "Marlene Kuntz",
+    "date": "2026-10-15",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -9787,19 +9384,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1025945379,
-    "title": "Vineeth Sreenivasan Live",
-    "date": "2026-10-16",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261016-vineeth-sreenivasan-live/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 201527454,
     "title": "JAMES BLAKE",
     "date": "2026-10-16",
@@ -9980,19 +9564,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1275500744,
-    "title": "EST Gee",
-    "date": "2026-10-16",
-    "time": "20:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/est-gee-bigger-than-the-devil-tour-saeaelchen-21952843/?affiliate=SZ3&utm_campaign=SzeneTickets%20GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1255588934,
     "title": "Sotiria",
     "date": "2026-10-16",
@@ -10136,19 +9707,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 865086955,
-    "title": "Wellness Club mit  Reggae Special",
-    "date": "2026-10-16",
-    "time": "22:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 693886899,
     "title": "Indie.FM Party",
     "date": "2026-10-16",
@@ -10172,6 +9730,19 @@
     "ticketUrl": "https://club.ritterbutzke.com/event/161026-CommunityRave",
     "spotifyUrl": "",
     "source": "ritterbutzke",
+    "addedAt": "2026-09-21"
+  },
+  {
+    "id": 865086955,
+    "title": "Wellness Club mit  Reggae Special",
+    "date": "2026-10-16",
+    "time": "22:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-09-21"
   },
   {
@@ -10330,19 +9901,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 992094691,
-    "title": "Giolì & Assia (live)",
-    "date": "2026-10-17",
-    "time": "19:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/171026-Gioli-Assia-live",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 2132240052,
     "title": "FINOJET",
     "date": "2026-10-17",
@@ -10354,19 +9912,6 @@
     "spotifyUrl": "",
     "source": "mikropol",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 828478533,
-    "title": "Chris Norman",
-    "date": "2026-10-17",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/chris-norman/2026-10-17-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1353270698,
@@ -10652,19 +10197,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1909909094,
-    "title": "Die Schöne Party",
-    "date": "2026-10-17",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-09"
-  },
-  {
     "id": 231328863,
     "title": "Blutgott – Blutfest 2026",
     "date": "2026-10-17",
@@ -10691,6 +10223,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1909909094,
+    "title": "Die Schöne Party",
+    "date": "2026-10-17",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-09"
+  },
+  {
     "id": 164132583,
     "title": "Flowers of Romance + Live: MNGLXMPLR",
     "date": "2026-10-17",
@@ -10714,6 +10259,19 @@
     "ticketUrl": "https://quasimodo.club/events/soultrain-party-8-7433",
     "spotifyUrl": "",
     "addedAt": "2026-08-26"
+  },
+  {
+    "id": 992094691,
+    "title": "Giolì & Assia (live)",
+    "date": "2026-10-17",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/171026-Gioli-Assia-live",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-21"
   },
   {
     "id": 882048620,
@@ -10897,19 +10455,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1159625861,
-    "title": "K-POP FOREVER!",
-    "date": "2026-10-18",
-    "time": "19:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/k-pop-forever/2026-10-18-1900",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1396989869,
     "title": "NO TE VA GUSTAR",
     "date": "2026-10-18",
@@ -10947,19 +10492,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 445909405,
-    "title": "Pub Choir",
-    "date": "2026-10-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261018-pub-choir/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-28"
   },
   {
     "id": 1810163435,
@@ -11024,19 +10556,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-10-18-jared-benjamin/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1039792424,
-    "title": "SOME SPROUTS",
-    "date": "2026-10-18",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -11114,6 +10633,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 1039792424,
+    "title": "SOME SPROUTS",
+    "date": "2026-10-18",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1835312461,
@@ -11256,19 +10788,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 2083328847,
-    "title": "MATTERZ",
-    "date": "2026-10-19",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261019-matterz/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -11529,19 +11048,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1067501913,
-    "title": "Darren Kiely",
-    "date": "2026-10-20",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 478065558,
     "title": "THE ZIG ZAG JAZZED UP JAM SESSION",
     "date": "2026-10-20",
@@ -11566,6 +11072,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 1067501913,
+    "title": "Darren Kiely",
+    "date": "2026-10-20",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1734836556,
@@ -11788,19 +11307,6 @@
     "addedAt": "2026-08-26"
   },
   {
-    "id": 934910248,
-    "title": "Reinhardt Buhr",
-    "date": "2026-10-21",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/reinhardt-buhr-frannz-club-21637515",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1967758587,
     "title": "Music Quiz",
     "date": "2026-10-21",
@@ -11913,6 +11419,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 934910248,
+    "title": "Reinhardt Buhr",
+    "date": "2026-10-21",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/reinhardt-buhr-frannz-club-21637515",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1521779834,
@@ -12148,19 +11667,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1219264259,
-    "title": "Trendz",
-    "date": "2026-10-22",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261022-trendz/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-28"
-  },
-  {
     "id": 378318262,
     "title": "WARHAMMER (+ CORRODE)",
     "date": "2026-10-22",
@@ -12226,19 +11732,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2052792034,
-    "title": "Henrik Freischlader",
-    "date": "2026-10-22",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim-light.com/de/a/5787968de4b092caf3920892/e/66b0a2ab5f95d22f84dbf936",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1130741759,
     "title": "Open Mic L. J. Fox + TBA (DJ-Set)",
     "date": "2026-10-22",
@@ -12300,6 +11793,19 @@
     "ticketUrl": "https://www.tixforgigs.com/Event/73618?af=u8jrnd2ip56e&saf=vdoaxks",
     "spotifyUrl": "",
     "source": "nbl",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2052792034,
+    "title": "Henrik Freischlader",
+    "date": "2026-10-22",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim-light.com/de/a/5787968de4b092caf3920892/e/66b0a2ab5f95d22f84dbf936",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -12574,19 +12080,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2037599662,
-    "title": "Wavvyboi",
-    "date": "2026-10-23",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261023-wavvyboi/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 46705792,
     "title": "Masters of Denglish – Contemporary Jazz",
     "date": "2026-10-23",
@@ -12649,19 +12142,6 @@
     "ticketUrl": "https://heimathafen-neukoelln.de/events/phil-siemers/",
     "spotifyUrl": "",
     "source": "heimathafen",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1845794391,
-    "title": "Triggerfinger",
-    "date": "2026-10-23",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -12754,6 +12234,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 1845794391,
+    "title": "Triggerfinger",
+    "date": "2026-10-23",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 256235737,
     "title": "Peppi P.",
     "date": "2026-10-23",
@@ -12767,19 +12260,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 566821270,
-    "title": "Rock@Frannz",
-    "date": "2026-10-23",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1574737143,
     "title": "Bonecrusher",
     "date": "2026-10-23",
@@ -12791,6 +12271,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 566821270,
+    "title": "Rock@Frannz",
+    "date": "2026-10-23",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-21"
   },
   {
     "id": 1451417641,
@@ -12987,19 +12480,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1855285168,
-    "title": "Mr Irish Bastard",
-    "date": "2026-10-24",
-    "time": "19:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/mr-irish-bastard-bloodshot-undefeated-tour-frannz-club-21058302",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1090818316,
     "title": "Jive Mother Mary",
     "date": "2026-10-24",
@@ -13051,17 +12531,17 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1717671373,
-    "title": "Beatrice Egli",
+    "id": 1855285168,
+    "title": "Mr Irish Bastard",
     "date": "2026-10-24",
     "time": "19:00",
-    "locationId": 57,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/beatrice-egli/2026-10-24-1900",
+    "ticketUrl": "https://www.eventim.de/noapp/event/mr-irish-bastard-bloodshot-undefeated-tour-frannz-club-21058302",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1730389463,
@@ -13178,19 +12658,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 42305706,
-    "title": "Gökhan Türkmen",
-    "date": "2026-10-24",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261024-goekhan-tuerkmen/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -13684,19 +13151,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 391660005,
-    "title": "Ballet Of Lights",
-    "date": "2026-10-25",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261025-ballet-of-lights/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-28"
-  },
-  {
     "id": 1745721832,
     "title": "Massimo Silverio",
     "date": "2026-10-25",
@@ -13749,19 +13203,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 779844553,
-    "title": "SARRAM Reserviert",
-    "date": "2026-10-25",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/sarram-reserviert/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-09-16"
-  },
-  {
     "id": 703346927,
     "title": "GUILT TRIP",
     "date": "2026-10-26",
@@ -13812,19 +13253,6 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 863973654,
-    "title": "LE SSERAFIM",
-    "date": "2026-10-26",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/le-sserafim/2026-10-26-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 506984485,
@@ -14406,19 +13834,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1662388313,
-    "title": "The Bausa",
-    "date": "2026-10-28",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261028-the-bausa/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 710990673,
     "title": "Afropitucos Rundfunk  – Jazz Fusion, Afroperuvian Music",
     "date": "2026-10-28",
@@ -14482,19 +13897,6 @@
     "spotifyUrl": "",
     "source": "mikropol",
     "addedAt": "2026-09-02"
-  },
-  {
-    "id": 95826325,
-    "title": "Teenage Fanclub",
-    "date": "2026-10-28",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/teenage-fanclub-frannz-club-21478178/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1423629676,
@@ -14585,6 +13987,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 95826325,
+    "title": "Teenage Fanclub",
+    "date": "2026-10-28",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/teenage-fanclub-frannz-club-21478178/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1317913567,
@@ -14691,19 +14106,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1677457948,
-    "title": "The World of Hans Zimmer",
-    "date": "2026-10-29",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/hanszimmer-26/2026-10-29-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1859764920,
     "title": "Deloraine",
     "date": "2026-10-29",
@@ -14769,19 +14171,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1169367741,
-    "title": "Temples",
-    "date": "2026-10-29",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261029-temples/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 229119611,
     "title": "DENDEMANN",
     "date": "2026-10-29",
@@ -14844,19 +14233,6 @@
     "ticketUrl": "https://binuu.de/de/events/hui7hpdsedqjxyr",
     "spotifyUrl": "",
     "source": "binuu",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 574643300,
-    "title": "Dagobert",
-    "date": "2026-10-29",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -14998,6 +14374,19 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 574643300,
+    "title": "Dagobert",
+    "date": "2026-10-29",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1455219098,
@@ -15169,19 +14558,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1304687475,
-    "title": "CONNY & LISER",
-    "date": "2026-10-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261030-conny-liser/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1038141393,
     "title": "Anchors & Hearts +HAFEN040",
     "date": "2026-10-30",
@@ -15283,19 +14659,6 @@
     "spotifyUrl": "",
     "source": "binuu",
     "addedAt": "2026-08-28"
-  },
-  {
-    "id": 431899765,
-    "title": "NEUNUNDNEUNZIG",
-    "date": "2026-10-30",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/neunundneunzig-nichts-fuer-immer-tour-frannz-club-21526636",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 518409195,
@@ -15400,17 +14763,17 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 196914931,
-    "title": "Joe Bonamassa",
+    "id": 431899765,
+    "title": "NEUNUNDNEUNZIG",
     "date": "2026-10-30",
     "time": "20:00",
-    "locationId": 57,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/joe-bonamassa-3/2026-10-30-2000",
+    "ticketUrl": "https://www.eventim.de/noapp/event/neunundneunzig-nichts-fuer-immer-tour-frannz-club-21526636",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1704647603,
@@ -15426,32 +14789,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 108605232,
-    "title": "Black Celebration & Standing on the Beach",
-    "date": "2026-10-30",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/3f777b85-c115-4771-aa4b-034d42b0aa7d",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-09"
-  },
-  {
-    "id": 1486956047,
-    "title": "CUMBIA FEST BERLIN - DÍA DE LOS MUERTOS",
-    "date": "2026-10-30",
-    "time": "21:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/cumbia-fest-berlin-dia-de-los-muertos-1",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 297961631,
     "title": "Zombina & The Skeletones",
     "date": "2026-10-30",
@@ -15463,6 +14800,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 108605232,
+    "title": "Black Celebration & Standing on the Beach",
+    "date": "2026-10-30",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/3f777b85-c115-4771-aa4b-034d42b0aa7d",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-09"
   },
   {
     "id": 789744916,
@@ -15725,19 +15075,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 491435600,
-    "title": "The Temperance Movement",
-    "date": "2026-10-31",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261031-the-temperance-movement/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1658149195,
     "title": "Woman in Boogie & Blues – Boogie, Blues, Rhythm’n’Blues, R’n’R",
     "date": "2026-10-31",
@@ -15906,19 +15243,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 433464478,
-    "title": "Die Schöne Party",
-    "date": "2026-10-31",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1930354471,
     "title": "Factory",
     "date": "2026-10-31",
@@ -15955,6 +15279,19 @@
     "ticketUrl": "https://www.nochbesserleben.com/veranstaltungen/#tba",
     "spotifyUrl": "",
     "source": "nbl",
+    "addedAt": "2026-09-21"
+  },
+  {
+    "id": 433464478,
+    "title": "Die Schöne Party",
+    "date": "2026-10-31",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-09-21"
   },
   {
@@ -16192,19 +15529,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 967347315,
-    "title": "A.Chal",
-    "date": "2026-11-01",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261101-a-chal/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-26"
-  },
-  {
     "id": 1926264802,
     "title": "Beyond Border +Million Miles to success +Modular",
     "date": "2026-11-01",
@@ -16254,19 +15578,6 @@
     "spotifyUrl": "",
     "source": "mikropol",
     "addedAt": "2026-08-26"
-  },
-  {
-    "id": 1208741398,
-    "title": "Mina Richman",
-    "date": "2026-11-01",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 608543315,
@@ -16332,6 +15643,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 1208741398,
+    "title": "Mina Richman",
+    "date": "2026-11-01",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1130114719,
@@ -16425,19 +15749,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1548646429,
-    "title": "Citizen",
-    "date": "2026-11-02",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261102-citizen/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1698630571,
     "title": "40 YEARS OF FUCKIN’ UP - Movie Screening",
     "date": "2026-11-02",
@@ -16474,19 +15785,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-11-02-tokyo-tea-room/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1275259505,
-    "title": "Call Me Karizma",
-    "date": "2026-11-02",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -16541,17 +15839,17 @@
     "addedAt": "2026-08-28"
   },
   {
-    "id": 1370936206,
-    "title": "Don Toliver",
+    "id": 1275259505,
+    "title": "Call Me Karizma",
     "date": "2026-11-02",
     "time": "20:00",
-    "locationId": 57,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/don-toliver/2026-11-02-2000",
+    "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1854801471,
@@ -16578,19 +15876,6 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1789834218,
-    "title": "Disney in Concert",
-    "date": "2026-11-03",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/disney-in-concert-2026/2026-11-03-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1554292998,
@@ -16671,19 +15956,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 619181624,
-    "title": "Alela Diane",
-    "date": "2026-11-03",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261103-alela-diane/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1599870897,
     "title": "Doppelkonzert Songwerkstatt „Artemisia Wirth“ und „Frühling mit O.“",
     "date": "2026-11-03",
@@ -16746,19 +16018,6 @@
     "ticketUrl": "https://binuu.de/de/events/vk03jkb01izt8eb",
     "spotifyUrl": "",
     "source": "binuu",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 797533400,
-    "title": "Cardinals",
-    "date": "2026-11-03",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "http://www.eventim.de/event/cardinals-frannz-club-21473623/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -16877,6 +16136,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 797533400,
+    "title": "Cardinals",
+    "date": "2026-11-03",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "http://www.eventim.de/event/cardinals-frannz-club-21473623/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1486490583,
     "title": "BIG SLEEP",
     "date": "2026-11-04",
@@ -16926,19 +16198,6 @@
     "ticketUrl": "https://hole-berlin.de/event/2026-11-04-sharaktah/",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 919961744,
-    "title": "Deep Purple",
-    "date": "2026-11-04",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/deep-purple-26/2026-11-04-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 391447983,
@@ -17004,19 +16263,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-09-15"
-  },
-  {
-    "id": 915842897,
-    "title": "Dirty Three",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261104-dirty-three/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1176195526,
@@ -17094,19 +16340,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-11-04-kyle-alessandro/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1141246891,
-    "title": "AESTHETIC PERFECTION",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -17209,6 +16442,19 @@
     "ticketUrl": "https://www.facebook.com/events/998714799816386",
     "spotifyUrl": "",
     "source": "prachtwerk",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1141246891,
+    "title": "AESTHETIC PERFECTION",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -17355,19 +16601,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1282444254,
-    "title": "Monolord",
-    "date": "2026-11-05",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261105-monolord/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 705611223,
     "title": "Jethro Tull",
     "date": "2026-11-05",
@@ -17404,19 +16637,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-11-05-avalanche-effect/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1079450370,
-    "title": "Leuchtstoff",
-    "date": "2026-11-05",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -17534,6 +16754,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1079450370,
+    "title": "Leuchtstoff",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1914597246,
     "title": "SHELTER BOY (GER) live @ Ilses Erika - ??tour 2026",
     "date": "2026-11-05",
@@ -17558,19 +16791,6 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 340823827,
-    "title": "🔥 HEISSA 🔥 HOLZMARKT WINTER FESTIVAL",
-    "date": "2026-11-06",
-    "time": "16:00",
-    "locationId": 45,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/heissa-holzmarkt-winter-festival-4",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1568474546,
@@ -17716,19 +16936,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 778259175,
-    "title": "Coeur De Pirate",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261106-coeur-de-pirate-2/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1035266590,
     "title": "DIE VERLIERER + SCHIMMEL ÜBER BERLIN",
     "date": "2026-11-06",
@@ -17792,19 +16999,6 @@
     "spotifyUrl": "",
     "source": "mikropol",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 401795125,
-    "title": "Radio Free Alice",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-28"
   },
   {
     "id": 1552765710,
@@ -17923,17 +17117,17 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 247680552,
-    "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
+    "id": 401795125,
+    "title": "Radio Free Alice",
     "date": "2026-11-06",
-    "time": "21:00",
+    "time": "20:00",
     "locationId": 6,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
     "source": "frannz",
-    "addedAt": "2026-08-17"
+    "addedAt": "2026-08-28"
   },
   {
     "id": 1940364598,
@@ -17946,6 +17140,19 @@
     "ticketUrl": "https://www.wildatheartberlin.de/concerts.php",
     "spotifyUrl": "",
     "source": "wildatheart",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 247680552,
+    "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
+    "date": "2026-11-06",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -18182,19 +17389,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 98337865,
-    "title": "Heaven 17",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261107-heaven-17/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1761397473,
     "title": "ALFRED HEINRICHS",
     "date": "2026-11-07",
@@ -18360,32 +17554,6 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-09-15"
-  },
-  {
-    "id": 468426139,
-    "title": "fragFrank!",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/fragfrank/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-09-16"
-  },
-  {
-    "id": 1880822473,
-    "title": "Tokio Hotel",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1090252422,
@@ -18582,19 +17750,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 869822316,
-    "title": "Johana Velandia",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261108-johana-velandia/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-28"
-  },
-  {
     "id": 1522502321,
     "title": "MAYFLOWER MADAME + BLKE - Berlin Show @Urban…",
     "date": "2026-11-08",
@@ -18631,19 +17786,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-11-08-ikan-hyu/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1791717909,
-    "title": "So Soon",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -18724,17 +17866,17 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 2082679369,
-    "title": "Jungle",
+    "id": 1791717909,
+    "title": "So Soon",
     "date": "2026-11-08",
     "time": "20:00",
-    "locationId": 57,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
+    "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 2138868850,
@@ -19006,19 +18148,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 771073006,
-    "title": "Sons Of Legion",
-    "date": "2026-11-10",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261110-sons-of-legion/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 558797315,
     "title": "Koza Mostra",
     "date": "2026-11-10",
@@ -19122,19 +18251,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1315955321,
-    "title": "Pohlmann -Nachholtermin vom 10.01.-",
-    "date": "2026-11-11",
-    "time": "19:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/pohlmann-beweggruende-tour-202526-frannz-club-20527262/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 145380653,
     "title": "Daily Thompson",
     "date": "2026-11-11",
@@ -19148,17 +18264,17 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1379348775,
-    "title": "Bloc Party & Interpol",
+    "id": 1315955321,
+    "title": "Pohlmann -Nachholtermin vom 10.01.-",
     "date": "2026-11-11",
-    "time": "19:15",
-    "locationId": 57,
-    "type": "party",
+    "time": "19:00",
+    "locationId": 6,
+    "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bloc-party-interpol/2026-11-11-1915",
+    "ticketUrl": "https://www.eventim.de/noapp/event/pohlmann-beweggruende-tour-202526-frannz-club-20527262/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 775969004,
@@ -19249,19 +18365,6 @@
     "ticketUrl": "https://www.landstreicher-konzerte.de/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 268465051,
-    "title": "Ghostly Kisses",
-    "date": "2026-11-11",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261111-ghostly-kisses/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -19573,19 +18676,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1301444211,
-    "title": "Messa -ausverkauft-",
-    "date": "2026-11-12",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-02"
-  },
-  {
     "id": 1741683397,
     "title": "MammothSupport: Florence Black",
     "date": "2026-11-12",
@@ -19699,6 +18789,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 1301444211,
+    "title": "Messa -ausverkauft-",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-02"
+  },
+  {
     "id": 1137751084,
     "title": "TIGERBEAT (GER) & PAYOLA (GER) live @ Ilses Erika",
     "date": "2026-11-12",
@@ -19777,19 +18880,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 594688398,
-    "title": "LYAPIS TRUBETSKOY - the best & new songs",
-    "date": "2026-11-13",
-    "time": "19:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/lyapis-trubetskoy-best-new-songs",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 54540701,
     "title": "JAKUZI",
     "date": "2026-11-13",
@@ -19839,19 +18929,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/JMf7PZTS/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1079272292,
-    "title": "ARCHSPIRE",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261113-archspire/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -19957,19 +19034,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 658889402,
-    "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s",
-    "date": "2026-11-13",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-19"
-  },
-  {
     "id": 1471606229,
     "title": "Matt Charette & The Truer Sound",
     "date": "2026-11-13",
@@ -19981,6 +19045,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 658889402,
+    "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s",
+    "date": "2026-11-13",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-19"
   },
   {
     "id": 113803725,
@@ -20124,19 +19201,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1069568455,
-    "title": "koRn",
-    "date": "2026-11-14",
-    "time": "19:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/korn-berlin/2026-11-14-1900",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 2065269712,
     "title": "Genevieve Stokes",
     "date": "2026-11-14",
@@ -20188,19 +19252,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2026380372,
-    "title": "Enkay",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261114-enkay/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 482122641,
     "title": "RAZORLIGHT",
     "date": "2026-11-14",
@@ -20237,19 +19288,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-11-14-tomas-tulpe/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 590027034,
-    "title": "ANDREAS KÜMMERT & THE ELECTRIC CIRCUS",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/andreas-kuemmert-the-electric-circus-frannz-club-20383467/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -20341,19 +19379,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1753152492,
-    "title": "Voodoo Jürgens und die \"Ansa Panier\" LIVE",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/voodoo-juergens-und-die-ansa-panier-live",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1609555795,
     "title": "VELJANOV",
     "date": "2026-11-14",
@@ -20365,6 +19390,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 590027034,
+    "title": "ANDREAS KÜMMERT & THE ELECTRIC CIRCUS",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/andreas-kuemmert-the-electric-circus-frannz-club-20383467/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 540120933,
@@ -20403,19 +19441,6 @@
     "ticketUrl": "https://quasimodo.club/events/disco-inferno-66-7292",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1674855362,
-    "title": "When the Sun Hits",
-    "date": "2026-11-14",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-7/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-09-16"
   },
   {
     "id": 1044365510,
@@ -20613,19 +19638,6 @@
     "addedAt": "2026-08-26"
   },
   {
-    "id": 544260487,
-    "title": "Ballet Of Lights",
-    "date": "2026-11-15",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261115-ballet-of-lights/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-28"
-  },
-  {
     "id": 1687017098,
     "title": "Spike Fuck",
     "date": "2026-11-15",
@@ -20662,19 +19674,6 @@
     "ticketUrl": "https://binuu.de/de/events/nlahevqk44ms4wa",
     "spotifyUrl": "",
     "source": "binuu",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1362622082,
-    "title": "Nachtmahr",
-    "date": "2026-11-15",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -20729,6 +19728,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 1362622082,
+    "title": "Nachtmahr",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 849671965,
     "title": "Post Clients",
     "date": "2026-11-16",
@@ -20752,19 +19764,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-11-16-frankie-and-the-witch-fingers",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1692353151,
-    "title": "Caro",
-    "date": "2026-11-16",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261116-caro/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -20843,19 +19842,6 @@
     "ticketUrl": "https://www.zigzag-jazzclub.berlin/program-mai/johendsqu",
     "spotifyUrl": "",
     "source": "zigzag",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 799250225,
-    "title": "Placebo",
-    "date": "2026-11-16",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/placebo-26/2026-11-16-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
     "addedAt": "2026-09-21"
   },
   {
@@ -20949,19 +19935,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1446138541,
-    "title": "Evgeny Khavtan in Berlin",
-    "date": "2026-11-17",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261117-evgeny-khavtan-in-berlin/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-09-09"
-  },
-  {
     "id": 784975701,
     "title": "JUD | Urban Spree Berlin",
     "date": "2026-11-17",
@@ -21012,19 +19985,6 @@
     "spotifyUrl": "",
     "source": "heimathafen",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 2062280573,
-    "title": "Berlin Breakout! presents Home Front",
-    "date": "2026-11-17",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-09"
   },
   {
     "id": 714460103,
@@ -21115,6 +20075,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 2062280573,
+    "title": "Berlin Breakout! presents Home Front",
+    "date": "2026-11-17",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-09"
   },
   {
     "id": 27453938,
@@ -21220,19 +20193,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 387436453,
-    "title": "Muse",
-    "date": "2026-11-18",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1675873466,
     "title": "QUEER SLAM BERLIN",
     "date": "2026-11-18",
@@ -21257,19 +20217,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 298358869,
-    "title": "Despised Icon / Carnifex / Suffocation",
-    "date": "2026-11-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261118-despised-icon-carnifex-suffocation/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1761923239,
@@ -21321,19 +20268,6 @@
     "ticketUrl": "https://www.tempodrom.de/event/mirella_precek_2026-11-18_20/",
     "spotifyUrl": "",
     "source": "tempodrom",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 729857533,
-    "title": "DESIRE",
-    "date": "2026-11-18",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/artist/desire/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -21425,6 +20359,19 @@
     "ticketUrl": "https://loft.de/x/ji3sv?fbclid=IwcGRvZgVleHRuA2FlbQIxMABicmlkETFtTmU3VzRtbDJNeHBSR2tkc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhxnjj0DeQq9pWNy7KX-ghIzs8MGkOLJS5SRrb9utfAJOHKid4sTcsuMpWWM_aem_bQ0AFH14bs2RY_gOFLWAmg",
     "spotifyUrl": "",
     "source": "prachtwerk",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 729857533,
+    "title": "DESIRE",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/artist/desire/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -21545,19 +20492,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1430401204,
-    "title": "Bulgarian Cartrader",
-    "date": "2026-11-19",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261119-bulgarian-cartrader/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1333356498,
     "title": "ANNA VON HAUSSWOLFF",
     "date": "2026-11-19",
@@ -21620,19 +20554,6 @@
     "ticketUrl": "https://heimathafen-neukoelln.de/events/elder-island/",
     "spotifyUrl": "",
     "source": "heimathafen",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1707224571,
-    "title": "Chinchilla",
-    "date": "2026-11-19",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/chinchilla-the-bigger-rooms-eu-tour-2026-frannz-club-21429378",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -21726,6 +20647,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 1707224571,
+    "title": "Chinchilla",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/chinchilla-the-bigger-rooms-eu-tour-2026-frannz-club-21429378",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 945594622,
     "title": "WYATT E.  (BE) - Antiquity Doom soundtrack of 587 BC - live @ Ilses Erika",
     "date": "2026-11-19",
@@ -21790,19 +20724,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1401915550,
-    "title": "Soffie",
-    "date": "2026-11-20",
-    "time": "19:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1139121933,
     "title": "Marlin Beach",
     "date": "2026-11-20",
@@ -21826,6 +20747,19 @@
     "ticketUrl": "https://badehaus-berlin.com/events/gauchito-club/",
     "spotifyUrl": "",
     "source": "badehaus",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1401915550,
+    "title": "Soffie",
+    "date": "2026-11-20",
+    "time": "19:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -21917,19 +20851,6 @@
     "ticketUrl": "https://utconnewitz.de/",
     "spotifyUrl": "",
     "source": "utconnewitz",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 683254952,
-    "title": "Nie und Nimmer",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261120-nie-und-nimmer-2/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -22100,19 +21021,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 2022768922,
-    "title": "twiceasmad",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/twiceasmad/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-09-16"
-  },
-  {
     "id": 936328045,
     "title": "SHOW DOWN – Wettstreit der Magier",
     "date": "2026-11-20",
@@ -22226,19 +21134,6 @@
     "ticketUrl": "https://www.eventim-light.com/de/a/67d4164cffed4a6d80881cb1/e/6a344d7dc56e7adfb0d8477c",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 348015507,
-    "title": "Die Schlagernacht des Jahres",
-    "date": "2026-11-21",
-    "time": "18:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1901322089,
@@ -22393,19 +21288,6 @@
     "ticketUrl": "https://www.tixforgigs.com/Event/72235",
     "spotifyUrl": "",
     "source": "utconnewitz",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 449284696,
-    "title": "Frida Gold",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261121-frida-gold/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -22573,19 +21455,6 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-09-15"
-  },
-  {
-    "id": 400571336,
-    "title": "geburtstag 40 er",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/geburtstag-40-er/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-09-16"
   },
   {
     "id": 947644172,
@@ -22805,19 +21674,6 @@
     "ticketUrl": "https://www.festsaal.shop/produkte/524-tickets-fatoumata-diawara-festsaal-kreuzberg-berlin-am-22-11-2026",
     "spotifyUrl": "",
     "source": "festsaal",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1950506864,
-    "title": "Long Distance Calling",
-    "date": "2026-11-22",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261122-long-distance-calling/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -23052,19 +21908,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 262605622,
-    "title": "Skipinnish",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261123-skipinnish/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 116395464,
     "title": "@ (US, 4AD)",
     "date": "2026-11-23",
@@ -23101,19 +21944,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-11-23-black-oak-county/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 870020969,
-    "title": "Tinie Tempah",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/tinie-tempah-the-nights-not-dead-tour-frannz-club-21933824",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -23165,6 +21995,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 870020969,
+    "title": "Tinie Tempah",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/tinie-tempah-the-nights-not-dead-tour-frannz-club-21933824",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 371387461,
@@ -23310,19 +22153,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1724485791,
-    "title": "Catt",
-    "date": "2026-11-24",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261124-catt/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1823682009,
     "title": "LÉZARD",
     "date": "2026-11-24",
@@ -23333,19 +22163,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-11-24-lezard/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1974643545,
-    "title": "Gurriers",
-    "date": "2026-11-24",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.ticketmaster.de/event/gurriers-nobodys-coming-to-save-you-tour-2026-tickets/2079703805?",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -23411,6 +22228,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 1974643545,
+    "title": "Gurriers",
+    "date": "2026-11-24",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.ticketmaster.de/event/gurriers-nobodys-coming-to-save-you-tour-2026-tickets/2079703805?",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1024263660,
@@ -23595,19 +22425,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 337740392,
-    "title": "The Scratch",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/the-scratch-world-tour-2026-frannz-club-21536798",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 614931655,
     "title": "HORSEGIIRL",
     "date": "2026-11-25",
@@ -23671,19 +22488,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1120078072,
-    "title": "Ciao Lucifer | Kissing in the Rain Tour 2026",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2026-11-25/ciao-lucifer-kissing-in-the-rain-tour-2026",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1388964272,
     "title": "Bryson Tiller",
     "date": "2026-11-25",
@@ -23697,17 +22501,17 @@
     "addedAt": "2026-08-28"
   },
   {
-    "id": 369576453,
-    "title": "Konstantinos Argiros",
+    "id": 337740392,
+    "title": "The Scratch",
     "date": "2026-11-25",
     "time": "20:00",
-    "locationId": 57,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
+    "ticketUrl": "https://www.eventim.de/noapp/event/the-scratch-world-tour-2026-frannz-club-21536798",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 2118918431,
@@ -23827,19 +22631,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1544857754,
-    "title": "Baby Lasagna",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261126-baby-lasagna/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 2011466232,
     "title": "COOGANS BLUFF 10 Years Of Flying To The Stars",
     "date": "2026-11-26",
@@ -23863,19 +22654,6 @@
     "ticketUrl": "https://www.tempodrom.de/event/torsten_straeter_2026-11-26_20/",
     "spotifyUrl": "",
     "source": "tempodrom",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1034729473,
-    "title": "Kinderzimmer Productions",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -23942,17 +22720,17 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 740143770,
-    "title": "Ivo der Bandit | Verbrecherfunk Tour 2026",
+    "id": 1034729473,
+    "title": "Kinderzimmer Productions",
     "date": "2026-11-26",
     "time": "20:00",
-    "locationId": 18,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/ivo-der-bandit-verbrecherfunk-tour-2026-moritzbastei-21756230/?affiliate=LAP&utm_campaign=lkupro&utm_source=LAP&utm_medium=dp",
+    "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 262057056,
@@ -24069,19 +22847,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 926659588,
-    "title": "Tonic Walter",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261127-tonic-walter/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -24238,32 +23003,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 685701319,
-    "title": "frytz -  TOUR 2026",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/frytz-tour-2026",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 158263205,
-    "title": "Tino Bomelino: ALLES WIRD SUPER GUT*",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/68703",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1747477911,
     "title": "Tiffany Aris • Berlin • Prachtwerk",
     "date": "2026-11-27",
@@ -24275,19 +23014,6 @@
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1251246961,
-    "title": "Everything Dies + X",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/everything-dies-x/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-09-16"
   },
   {
     "id": 933234445,
@@ -24444,19 +23170,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 209253489,
-    "title": "Cosmic Gate",
-    "date": "2026-11-28",
-    "time": "19:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/281126-CosmicGate",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1424571216,
     "title": "WILDE HERZEN",
     "date": "2026-11-28",
@@ -24519,19 +23232,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/s4XLxZqJ/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 771490188,
-    "title": "Nieve Ella",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261128-nieve-ella/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -24600,19 +23300,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1911223541,
-    "title": "Fancy",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1377599688,
     "title": "Fatoni",
     "date": "2026-11-28",
@@ -24677,32 +23364,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1614732087,
-    "title": "Oskar Haag | Lost Cause Tour 2026",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72442",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 994313134,
-    "title": "Ella Stern | „das schlimmste und das beste“ Tour 2026",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2026-11-28/ella-stern-das-schlimmste-und-das-beste-tour-2026",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1800531529,
     "title": "berq",
     "date": "2026-11-28",
@@ -24714,6 +23375,19 @@
     "spotifyUrl": "",
     "source": "max-schmeling-halle",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 1911223541,
+    "title": "Fancy",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1471889184,
@@ -24765,6 +23439,19 @@
     "ticketUrl": "https://quasimodo.club/events/90s-reloaded-party-4-7355",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 209253489,
+    "title": "Cosmic Gate",
+    "date": "2026-11-28",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-CosmicGate",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-21"
   },
   {
     "id": 59886565,
@@ -24919,19 +23606,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 747946139,
-    "title": "Strongboi",
-    "date": "2026-11-29",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261129-strongboi/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -25155,19 +23829,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1571628941,
-    "title": "Platina",
-    "date": "2026-11-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261130-platina/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-09-09"
-  },
-  {
     "id": 1682806312,
     "title": "Yaeger",
     "date": "2026-11-30",
@@ -25346,19 +24007,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1646325254,
-    "title": "WIDOWSPEAK",
-    "date": "2026-12-01",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 578004787,
     "title": "Nia Archives",
     "date": "2026-12-01",
@@ -25407,6 +24055,19 @@
     "ticketUrl": "https://www.peteredel.de/tanztee",
     "spotifyUrl": "",
     "source": "peter-edel",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1646325254,
+    "title": "WIDOWSPEAK",
+    "date": "2026-12-01",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -25488,19 +24149,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 701272904,
-    "title": "Nervy",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261202-nervy/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 258879586,
     "title": "SELIG",
     "date": "2026-12-02",
@@ -25553,19 +24201,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 871076128,
-    "title": "Crashdiet",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 669674097,
     "title": "SIDOS WEIHNACHTSSHOW 2026",
     "date": "2026-12-02",
@@ -25604,30 +24239,17 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 400845886,
-    "title": "zeck | „LIFE IS WEIRD SOMETIMES TOUR“",
+    "id": 871076128,
+    "title": "Crashdiet",
     "date": "2026-12-02",
     "time": "20:00",
-    "locationId": 18,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/zeck-life-is-weird-sometimes-tour-moritzbastei-21598276/?affiliate=LAP&utm_campaign=lkupro&utm_source=LAP&utm_medium=dp",
+    "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1795054166,
-    "title": "PUR",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/pur-26/2026-12-02-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1614205893,
@@ -25708,19 +24330,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 991317016,
-    "title": "Enno Bunger",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261203-enno-bunger/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1356028211,
     "title": "THE REVIVAL TOUR",
     "date": "2026-12-03",
@@ -25744,19 +24353,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-12-03-alex-henry-foster/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1128358634,
-    "title": "Dreiviertelblut",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/dreiviertelblut-frannz-club-20882294/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -25808,6 +24404,19 @@
     "ticketUrl": "https://cassiopeia-berlin.de/event/rising-insane-111560244",
     "spotifyUrl": "",
     "source": "cassiopeia",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1128358634,
+    "title": "Dreiviertelblut",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/dreiviertelblut-frannz-club-20882294/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -25876,19 +24485,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 255613365,
-    "title": "SDP & The Capital Dance Orchestra",
-    "date": "2026-12-04",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1064770762,
     "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
     "date": "2026-12-04",
@@ -25899,19 +24495,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-12-04-the-early-days---let-s-dance-to-joy-division",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1710615529,
-    "title": "Steve 'n' Seagulls",
-    "date": "2026-12-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261204-steve-n-seagulls/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -26005,19 +24588,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1162009943,
-    "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
-    "date": "2026-12-04",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1813824562,
     "title": "The Spitfires",
     "date": "2026-12-04",
@@ -26028,6 +24598,19 @@
     "ticketUrl": "https://www.wildatheartberlin.de/concerts.php",
     "spotifyUrl": "",
     "source": "wildatheart",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1162009943,
+    "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
+    "date": "2026-12-04",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -26132,19 +24715,6 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 244297238,
-    "title": "SDP & The Capital Dance Orchestra",
-    "date": "2026-12-05",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-05-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1811680590,
@@ -26326,19 +24896,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 168945183,
-    "title": "When the Sun Hits",
-    "date": "2026-12-05",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-8/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-09-16"
-  },
-  {
     "id": 954988825,
     "title": "MICHAEL CANITROT",
     "date": "2026-12-05",
@@ -26443,19 +25000,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1689427563,
-    "title": "Julia Meladin",
-    "date": "2026-12-06",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261206-julia-meladin/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1839634458,
     "title": "Seb Lowe",
     "date": "2026-12-06",
@@ -26479,19 +25023,6 @@
     "ticketUrl": "https://www.tempodrom.de/event/beabadoobee_2026-12-06_20/",
     "spotifyUrl": "",
     "source": "tempodrom",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 700058452,
-    "title": "Kuult",
-    "date": "2026-12-06",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/kuult-polaroid-tour-2026-frannz-club-21325313/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -26543,6 +25074,19 @@
     "ticketUrl": "https://cassiopeia-berlin.de/event/senser-111674401",
     "spotifyUrl": "",
     "source": "cassiopeia",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 700058452,
+    "title": "Kuult",
+    "date": "2026-12-06",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/kuult-polaroid-tour-2026-frannz-club-21325313/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -26675,19 +25219,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1636806296,
-    "title": "BAP",
-    "date": "2026-12-08",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 621241441,
     "title": "KIEZBINGO",
     "date": "2026-12-08",
@@ -26712,19 +25243,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 942504102,
-    "title": "Verivery",
-    "date": "2026-12-08",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261208-verivery/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-26"
   },
   {
     "id": 1369033965,
@@ -26996,19 +25514,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 235712358,
-    "title": "SOEN",
-    "date": "2026-12-10",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261210-soen/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 978143673,
     "title": "SONGSLAM NEUKÖLLN JAHRESFINALE",
     "date": "2026-12-10",
@@ -27019,19 +25524,6 @@
     "ticketUrl": "https://heimathafen-neukoelln.de/events/songslam-neukoelln-jahresfinale/",
     "spotifyUrl": "",
     "source": "heimathafen",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 422393984,
-    "title": "Ina Forsman",
-    "date": "2026-12-10",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -27083,6 +25575,19 @@
     "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/markus-krebs-26/2026-12-10-2000",
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 422393984,
+    "title": "Ina Forsman",
+    "date": "2026-12-10",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -27202,19 +25707,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 171881350,
-    "title": "Dillon",
-    "date": "2026-12-11",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261211-dillon/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 728558217,
     "title": "Hänsel",
     "date": "2026-12-11",
@@ -27305,19 +25797,6 @@
     "addedAt": "2026-08-28"
   },
   {
-    "id": 1836022519,
-    "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s + Nick Cave",
-    "date": "2026-12-11",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-19"
-  },
-  {
     "id": 1316023698,
     "title": "Commando",
     "date": "2026-12-11",
@@ -27329,6 +25808,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1836022519,
+    "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s + Nick Cave",
+    "date": "2026-12-11",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-19"
   },
   {
     "id": 2135306602,
@@ -27396,19 +25888,6 @@
     "addedAt": "2026-09-02"
   },
   {
-    "id": 1194723011,
-    "title": "A night with GULVØSS II",
-    "date": "2026-12-12",
-    "time": "19:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 111851289,
     "title": "LAING",
     "date": "2026-12-12",
@@ -27432,6 +25911,19 @@
     "ticketUrl": "https://badehaus-berlin.com/events/paulk/",
     "spotifyUrl": "",
     "source": "badehaus",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1194723011,
+    "title": "A night with GULVØSS II",
+    "date": "2026-12-12",
+    "time": "19:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -27485,19 +25977,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 455515506,
-    "title": "Goldroger",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261212-goldroger/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1678114495,
@@ -27562,19 +26041,6 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 261913641,
-    "title": "Samsta + ?",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/samsta/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-09-16"
   },
   {
     "id": 1862272257,
@@ -27743,32 +26209,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1288136518,
-    "title": "Ballet Of Lights",
-    "date": "2026-12-13",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261213-ballet-of-lights/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-28"
-  },
-  {
-    "id": 129361179,
-    "title": "Sebastian Hämer",
-    "date": "2026-12-13",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim-light.com/de/a/60895dd7a2027845db426ef9/e/69dcbb81033faf7a4fb2ba75",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 448256838,
     "title": "Dayseeker",
     "date": "2026-12-13",
@@ -27805,6 +26245,19 @@
     "ticketUrl": "https://www.eventim-light.com/de/a/60d4251b9700c742d183bbe5/e/698c7865b9209a715ffefc83",
     "spotifyUrl": "",
     "source": "peter-edel",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 129361179,
+    "title": "Sebastian Hämer",
+    "date": "2026-12-13",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim-light.com/de/a/60895dd7a2027845db426ef9/e/69dcbb81033faf7a4fb2ba75",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -28065,19 +26518,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 59852794,
-    "title": "101 Voices - Depeche Mode Special Tribute",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 810780519,
     "title": "Muff Case",
     "date": "2026-12-16",
@@ -28130,19 +26570,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1669986674,
-    "title": "Ibeyi",
-    "date": "2026-12-17",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261217-ibeyi/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 122110975,
     "title": "Gotobeat & 7alent Scout present: SILOÉ",
     "date": "2026-12-17",
@@ -28181,19 +26608,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 450462665,
-    "title": "David J  (Bauhaus / Love & Rockets)",
-    "date": "2026-12-17",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1950590111,
     "title": "Glenn Leonard’s Temptations Revue",
     "date": "2026-12-17",
@@ -28206,17 +26620,17 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1699198044,
-    "title": "Die Fantastischen Vier",
+    "id": 450462665,
+    "title": "David J  (Bauhaus / Love & Rockets)",
     "date": "2026-12-17",
     "time": "20:00",
-    "locationId": 57,
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/die-fantastischen-vier-2/2026-12-17-2000",
+    "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 2112631106,
@@ -28307,19 +26721,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 2137953432,
-    "title": "Erdmöbel",
-    "date": "2026-12-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261218-erdmoebel/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -28504,19 +26905,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 136737319,
-    "title": "Bonez MC & RAF Camora",
-    "date": "2026-12-19",
-    "time": "19:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bonezmc-rafcamora-26/2026-12-19-1900",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 361588120,
     "title": "DIE TOTEN ÄRZTE & BERNWARD BÜKER BANDE",
     "date": "2026-12-19",
@@ -28554,19 +26942,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 586999446,
-    "title": "Ultra Night",
-    "date": "2026-12-19",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261219-ultra-night/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-09-09"
   },
   {
     "id": 632515842,
@@ -28723,19 +27098,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 416702090,
-    "title": "Christian Schottstädt",
-    "date": "2026-12-20",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/7fe1bfc0-1cfc-4be3-aee0-e79098294e84",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1191514323,
     "title": "Sidos Weihnachtsshow 2026",
     "date": "2026-12-20",
@@ -28759,6 +27121,19 @@
     "ticketUrl": "https://tickets.rudelsingen.de/event/das-advents-rudelsingen-2026-in-weiensee-h5vubs?useEmbed=true",
     "spotifyUrl": "",
     "source": "peter-edel",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 416702090,
+    "title": "Christian Schottstädt",
+    "date": "2026-12-20",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/7fe1bfc0-1cfc-4be3-aee0-e79098294e84",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -29074,19 +27449,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 2099333188,
-    "title": "B-Tight",
-    "date": "2026-12-28",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261228-b-tight/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 453330736,
     "title": "Crucchi Gang",
     "date": "2026-12-28",
@@ -29098,19 +27460,6 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 820862807,
-    "title": "Matthias Reim",
-    "date": "2026-12-28",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/matthias-reim-26/2026-12-28-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 576137108,
@@ -29174,19 +27523,6 @@
     "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/lafee/2026-12-30-1930",
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1714144765,
-    "title": "Alexa Feser",
-    "date": "2026-12-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261230-alexa-feser/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -29358,19 +27694,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1991012932,
-    "title": "Unheilig",
-    "date": "2027-01-07",
-    "time": "19:15",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/unheilig-27/2027-01-07-1915",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 693683279,
     "title": "Stahlzeit",
     "date": "2027-01-08",
@@ -29421,19 +27744,6 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1307145564,
-    "title": "Ballet Of Lights",
-    "date": "2027-01-10",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270110-ballet-of-lights/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-28"
   },
   {
     "id": 1410383953,
@@ -29539,19 +27849,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1017470945,
-    "title": "Heavytones",
-    "date": "2027-01-15",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270115-heavytones/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1856394915,
     "title": "Dieter Nuhr",
     "date": "2027-01-15",
@@ -29602,19 +27899,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 173443716,
-    "title": "Dice Actors Live on Stage",
-    "date": "2027-01-16",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270116-dice-actors-live-on-stage/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-26"
   },
   {
     "id": 2145169374,
@@ -29773,32 +28057,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 136339945,
-    "title": "Kauta",
-    "date": "2027-01-20",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270120-kauta/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1822265556,
-    "title": "Slow Pulp",
-    "date": "2027-01-21",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270121-slow-pulp/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1924076760,
     "title": "Das Phantom der Oper",
     "date": "2027-01-21",
@@ -29890,19 +28148,6 @@
     "addedAt": "2026-09-16"
   },
   {
-    "id": 858093951,
-    "title": "Dave Hause & The Mermaid",
-    "date": "2027-01-23",
-    "time": "19:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/dave-hause-the-mermaid-cellmates-european-tour-2027-frannz-club-21573231/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 960438625,
     "title": "Transsylvanians",
     "date": "2027-01-23",
@@ -29914,6 +28159,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 858093951,
+    "title": "Dave Hause & The Mermaid",
+    "date": "2027-01-23",
+    "time": "19:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/dave-hause-the-mermaid-cellmates-european-tour-2027-frannz-club-21573231/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 68923606,
@@ -29939,19 +28197,6 @@
     "ticketUrl": "https://www.festsaal.shop/catalog/articles/544-tickets-buster-shuffle-festsaal-kreuzberg-berlin-am-23-01-2027",
     "spotifyUrl": "",
     "source": "festsaal",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 11484920,
-    "title": "Catch Your Breath",
-    "date": "2027-01-23",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270123-catch-your-breath/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -29991,19 +28236,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/HZoFa2H9/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 924224132,
-    "title": "Anaïs",
-    "date": "2027-01-24",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270124-anais-2/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -30084,19 +28316,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1830715674,
-    "title": "aespa",
-    "date": "2027-01-26",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/aespa/2027-01-26-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 78190957,
     "title": "IMMER WIEDER WIRSING",
     "date": "2027-01-27",
@@ -30107,19 +28326,6 @@
     "ticketUrl": "https://www.eventim.de/event/immer-wieder-wirsing-neue-dekadenz-tour-2027-monarch-22108320/",
     "spotifyUrl": "",
     "addedAt": "2026-09-16"
-  },
-  {
-    "id": 1884360819,
-    "title": "André Rieu",
-    "date": "2027-01-27",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/andrerieu/2027-01-27-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 701471870,
@@ -30135,19 +28341,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1031222029,
-    "title": "Friendly Fires",
-    "date": "2027-01-27",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-16"
-  },
-  {
     "id": 755541472,
     "title": "Levin Liam",
     "date": "2027-01-27",
@@ -30159,6 +28352,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1031222029,
+    "title": "Friendly Fires",
+    "date": "2027-01-27",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-16"
   },
   {
     "id": 95881728,
@@ -30368,19 +28574,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 214325342,
-    "title": "Wage War",
-    "date": "2027-01-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270130-wage-war/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 178704617,
     "title": "ZATE",
     "date": "2027-01-30",
@@ -30420,19 +28613,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1411605510,
-    "title": "A Life Divided",
-    "date": "2027-01-31",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 755330715,
     "title": "Get Well Soon",
     "date": "2027-01-31",
@@ -30443,6 +28623,19 @@
     "ticketUrl": "https://huxleysneuewelt.de/event/2027-01-31-get-well-soon",
     "spotifyUrl": "",
     "source": "huxleys",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1411605510,
+    "title": "A Life Divided",
+    "date": "2027-01-31",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -30560,19 +28753,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/UTkBWsfX/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 446871869,
-    "title": "Delain",
-    "date": "2027-02-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270204-delain/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -30704,19 +28884,6 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 800406012,
-    "title": "Unheilig",
-    "date": "2027-02-06",
-    "time": "19:15",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/unheilig-27/2027-02-06-1915",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1584931477,
@@ -30923,19 +29090,6 @@
     "ticketUrl": "https://trinitymusic.de/event/2027-02-08-two-door-cinema-club",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 318773111,
-    "title": "One Vision of Queen - feat. Marc Martel",
-    "date": "2027-02-09",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/one-vision-27/2027-02-09-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1324372325,
@@ -31237,19 +29391,6 @@
     "addedAt": "2026-09-16"
   },
   {
-    "id": 647341721,
-    "title": "Die Bolschewistische Kurkapelle Schwarz-Rot",
-    "date": "2027-02-13",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/43f45a29-2351-47ef-bb47-05710af707df",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1895391464,
     "title": "EZRA COLLECTIVE",
     "date": "2027-02-13",
@@ -31260,6 +29401,19 @@
     "ticketUrl": "https://www.columbiahalle.berlin/veranstaltung/ezra-collective.html",
     "spotifyUrl": "",
     "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 647341721,
+    "title": "Die Bolschewistische Kurkapelle Schwarz-Rot",
+    "date": "2027-02-13",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/43f45a29-2351-47ef-bb47-05710af707df",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -31353,32 +29507,6 @@
     "addedAt": "2026-09-02"
   },
   {
-    "id": 59245461,
-    "title": "Dagny",
-    "date": "2027-02-15",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270215-dagny/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1726080801,
-    "title": "Five Finger Death Punch",
-    "date": "2027-02-16",
-    "time": "19:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/five-finger-death-punch-1/2027-02-16-1900",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1929860282,
     "title": "Editors (hochverlegt)",
     "date": "2027-02-16",
@@ -31427,19 +29555,6 @@
     "ticketUrl": "https://www.tixforgigs.com/de-de/Event/74092",
     "spotifyUrl": "",
     "source": "werk2",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1737941917,
-    "title": "Michael Schulte",
-    "date": "2027-02-17",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270217-michael-schulte/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -31505,19 +29620,6 @@
     "ticketUrl": "https://www.reservix.de/tickets-michael-schulte-beautiful-reasons-tour-2027-in-leipzig-werk-2-halle-a-am-18-2-2027/e2567001",
     "spotifyUrl": "",
     "source": "werk2",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1210687447,
-    "title": "Knox",
-    "date": "2027-02-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270218-knox/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -31651,19 +29753,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1341634246,
-    "title": "BRUNKE",
-    "date": "2027-02-19",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/brunke-tour-2027-frannz-club-21626756",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1667774151,
     "title": "MALCOLM TODD + Support: Natanya",
     "date": "2027-02-19",
@@ -31676,17 +29765,17 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 961379871,
-    "title": "90s Super Show",
-    "date": "2027-02-20",
-    "time": "17:00",
-    "locationId": 57,
+    "id": 1341634246,
+    "title": "BRUNKE",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "locationId": 6,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/90s-super-show-2027/2027-02-20-1700",
+    "ticketUrl": "https://www.eventim.de/noapp/event/brunke-tour-2027-frannz-club-21626756",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 393984589,
@@ -31713,19 +29802,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1458902859,
-    "title": "Frozen Soul",
-    "date": "2027-02-20",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270220-frozen-soul/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-09-16"
   },
   {
     "id": 1474819702,
@@ -31845,19 +29921,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1795380091,
-    "title": "Ballet Of Lights",
-    "date": "2027-02-21",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270221-ballet-of-lights/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-28"
-  },
-  {
     "id": 433089045,
     "title": "Moyka",
     "date": "2027-02-21",
@@ -31868,19 +29931,6 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82432/",
     "spotifyUrl": "",
     "source": "kantine",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1242911934,
-    "title": "RUSH",
-    "date": "2027-02-21",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/rush-berlin/2027-02-21-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
     "addedAt": "2026-09-21"
   },
   {
@@ -31908,19 +29958,6 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-09-15"
-  },
-  {
-    "id": 1544092043,
-    "title": "Melrose Avenue",
-    "date": "2027-02-22",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270222-melrose-avenue/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1637725360,
@@ -31959,19 +29996,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/Rfp1S5sy/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1961004824,
-    "title": "Bernth",
-    "date": "2027-02-23",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270223-bernth/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -32037,19 +30061,6 @@
     "ticketUrl": "https://www.landstreicher-konzerte.de/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1717286794,
-    "title": "Jaill",
-    "date": "2027-02-24",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270224-jaill/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -32131,19 +30142,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1066619210,
-    "title": "Levka",
-    "date": "2027-02-25",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270225-levka/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1184307160,
     "title": "THE HEADLINES",
     "date": "2027-02-25",
@@ -32170,19 +30168,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 55746832,
-    "title": "Luca Vasta",
-    "date": "2027-02-25",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/luca-vasta-disco-mare-tour-2027-frannz-club-21590949/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 823395615,
     "title": "Matze Rossi & Band",
     "date": "2027-02-25",
@@ -32193,6 +30178,19 @@
     "ticketUrl": "https://cassiopeia-berlin.de/event/matze-rossi-band-111664365",
     "spotifyUrl": "",
     "source": "cassiopeia",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 55746832,
+    "title": "Luca Vasta",
+    "date": "2027-02-25",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/luca-vasta-disco-mare-tour-2027-frannz-club-21590949/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -32326,19 +30324,6 @@
     "addedAt": "2026-08-28"
   },
   {
-    "id": 997718611,
-    "title": "Schandmaul",
-    "date": "2027-02-27",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270227-schandmaul/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1096223388,
     "title": "Jenke von Wilmsdorff",
     "date": "2027-02-27",
@@ -32387,19 +30372,6 @@
     "ticketUrl": "https://trinitymusic.de/event/2027-02-27-leila",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1075191465,
-    "title": "REPEAT +",
-    "date": "2027-02-27",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/repeat/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-09-16"
   },
   {
     "id": 764513275,
@@ -32571,19 +30543,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1395687382,
-    "title": "ENHYPEN",
-    "date": "2027-03-05",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/enhypen-berlin/2027-03-05-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1387961599,
     "title": "SOUTH ARCADE",
     "date": "2027-03-05",
@@ -32608,19 +30567,6 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 77136657,
-    "title": "South Arcade",
-    "date": "2027-03-05",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270305-south-arcade/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-09-02"
   },
   {
     "id": 1265457828,
@@ -32674,19 +30620,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1199173877,
-    "title": "ENHYPEN",
-    "date": "2027-03-06",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/enhypen-berlin/2027-03-06-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1467635764,
     "title": "HINTERLANDGANG",
     "date": "2027-03-06",
@@ -32710,19 +30643,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 643489088,
-    "title": "Mamas Gun",
-    "date": "2027-03-06",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270306-mamas-gun/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -32791,19 +30711,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1871023339,
-    "title": "The Haunted Youth",
-    "date": "2027-03-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270307-the-haunted-youth/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 828387869,
     "title": "ERIKA VIKMAN",
     "date": "2027-03-08",
@@ -32869,19 +30776,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1283451091,
-    "title": "Tiny Habits",
-    "date": "2027-03-09",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270309-tiny-habits/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 943562162,
     "title": "DELTA GOODREM",
     "date": "2027-03-09",
@@ -32931,19 +30825,6 @@
     "ticketUrl": "https://www.taeubchenthal.com/programm/tr%C3%A4nrn-leipzig-2027",
     "spotifyUrl": "",
     "source": "taeubchenthal",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1155734545,
-    "title": "Haiden Henderson",
-    "date": "2027-03-10",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270310-haiden-henderson/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-09-21"
   },
   {
@@ -33038,19 +30919,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1123994478,
-    "title": "Tränen",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270311-traenen/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1129907631,
     "title": "CULT OF LUNA",
     "date": "2027-03-11",
@@ -33075,19 +30943,6 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 617736245,
-    "title": "Teddy Swims",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/teddy-swims/2027-03-11-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 813171913,
@@ -33126,19 +30981,6 @@
     "ticketUrl": "https://felsenkeller.ticket.io/",
     "spotifyUrl": "",
     "source": "felsenkeller",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 207477860,
-    "title": "Zeromancer",
-    "date": "2027-03-12",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270312-zeromancer/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -33389,19 +31231,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 93631957,
-    "title": "Edelle",
-    "date": "2027-03-17",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/edelle-a-night-about-adele-frannz-club-22006706/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-02"
-  },
-  {
     "id": 558060186,
     "title": "PaulWetz",
     "date": "2027-03-17",
@@ -33413,6 +31242,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 93631957,
+    "title": "Edelle",
+    "date": "2027-03-17",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/edelle-a-night-about-adele-frannz-club-22006706/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-02"
   },
   {
     "id": 987709711,
@@ -33493,19 +31335,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 38507416,
-    "title": "Maite Kelly",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 665231066,
     "title": "Tash Sultana",
     "date": "2027-03-19",
@@ -33558,19 +31387,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1421837442,
-    "title": "The Dead Daisies",
-    "date": "2027-03-20",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270320-the-dead-daisies/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1835208510,
     "title": "Eivør",
     "date": "2027-03-20",
@@ -33595,19 +31411,6 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1412581907,
-    "title": "James Blunt",
-    "date": "2027-03-20",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/james-blunt-berlin/2027-03-20-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1874452784,
@@ -33686,19 +31489,6 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-28"
-  },
-  {
-    "id": 196661891,
-    "title": "KMFDM",
-    "date": "2027-03-25",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270325-kmfdm/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 888684244,
@@ -33922,32 +31712,6 @@
     "addedAt": "2026-08-28"
   },
   {
-    "id": 1273221715,
-    "title": "CLAIR OBSCUR: EXPEDITION 33 - A PAINTED SYMPHONY",
-    "date": "2027-04-01",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/clair-obscur/2027-04-01-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 321870144,
-    "title": "Lance Butters",
-    "date": "2027-04-02",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270402-lance-butters/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1066336964,
     "title": "Leoniden",
     "date": "2027-04-02",
@@ -34090,19 +31854,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1773424735,
-    "title": "Mael & Jonas",
-    "date": "2027-04-04",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/mael-jonas-halsschmerzen-tour-2027-frannz-club-22010783",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-26"
-  },
-  {
     "id": 559990897,
     "title": "The Pineapple Thief",
     "date": "2027-04-04",
@@ -34126,6 +31877,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 1773424735,
+    "title": "Mael & Jonas",
+    "date": "2027-04-04",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/mael-jonas-halsschmerzen-tour-2027-frannz-club-22010783",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-26"
   },
   {
     "id": 1937512523,
@@ -34164,19 +31928,6 @@
     "ticketUrl": "https://www.tixforgigs.com/de-de/Event/71735/",
     "spotifyUrl": "",
     "source": "werk2",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 822692330,
-    "title": "Sarah Engels",
-    "date": "2027-04-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270407-sarah-engels/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-08-17"
   },
   {
@@ -34232,19 +31983,6 @@
     "addedAt": "2026-08-28"
   },
   {
-    "id": 1665890575,
-    "title": "Kati K",
-    "date": "2027-04-09",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270409-kati-k/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1006438046,
     "title": "WILLIAM THE CONQUEROR",
     "date": "2027-04-09",
@@ -34255,19 +31993,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2027-04-09-william-the-conqueror/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 36717021,
-    "title": "Die Art",
-    "date": "2027-04-09",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/508c4a76-ee73-40f7-bedd-c7299e93cddb",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -34294,6 +32019,19 @@
     "spotifyUrl": "",
     "source": "max-schmeling-halle",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 36717021,
+    "title": "Die Art",
+    "date": "2027-04-09",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/508c4a76-ee73-40f7-bedd-c7299e93cddb",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 168759859,
@@ -34347,19 +32085,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 941918177,
-    "title": "Josh.",
-    "date": "2027-04-10",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270410-josh-2/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1809848074,
     "title": "DUBIOZA KOLEKTIV",
     "date": "2027-04-10",
@@ -34399,19 +32124,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1461702926,
-    "title": "Jack Pott",
-    "date": "2027-04-10",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/jack-pott-in-bewegung-tour-2027-frannz-club-22054789/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-15"
-  },
-  {
     "id": 1944389863,
     "title": "LEONY",
     "date": "2027-04-10",
@@ -34436,6 +32148,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 1461702926,
+    "title": "Jack Pott",
+    "date": "2027-04-10",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/jack-pott-in-bewegung-tour-2027-frannz-club-22054789/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-15"
   },
   {
     "id": 1475194788,
@@ -34555,19 +32280,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 29062532,
-    "title": "Kellermensch",
-    "date": "2027-04-13",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/kellermensch-frannz-club-22087538",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-09"
-  },
-  {
     "id": 433430576,
     "title": "Snarky Puppy",
     "date": "2027-04-13",
@@ -34591,6 +32303,19 @@
     "ticketUrl": "https://hole-berlin.de/event/2027-04-13-ghostkid/",
     "spotifyUrl": "",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 29062532,
+    "title": "Kellermensch",
+    "date": "2027-04-13",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/kellermensch-frannz-club-22087538",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-09"
   },
   {
     "id": 1906722231,
@@ -34656,19 +32381,6 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 85087255,
-    "title": "Chris Norman",
-    "date": "2027-04-15",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/chris-norman/2027-04-15-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 910292479,
@@ -34865,32 +32577,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1420841181,
-    "title": "Maffay + Oerding",
-    "date": "2027-04-17",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maffay-oerding/2027-04-17-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 518388325,
-    "title": "Rodrigo y Gabriela",
-    "date": "2027-04-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270418-rodrigo-y-gabriela/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1457546963,
     "title": "Lone Assembly",
     "date": "2027-04-18",
@@ -34943,19 +32629,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 42230374,
-    "title": "Thomas Bergersen",
-    "date": "2027-04-19",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/thomas-bergersen/2027-04-19-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 577238035,
     "title": "Michel von Wussow",
     "date": "2027-04-20",
@@ -34967,19 +32640,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 1593906635,
-    "title": "Simple Minds",
-    "date": "2027-04-21",
-    "time": "19:45",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/simple-minds-berlin/2027-04-21-1945",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 774546464,
@@ -35073,19 +32733,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1724245845,
-    "title": "AND ONE",
-    "date": "2027-04-22",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270422-and-one/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1420217046,
     "title": "1986zig",
     "date": "2027-04-22",
@@ -35177,19 +32824,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 952358976,
-    "title": "Der Herr der Ringe: Die zwei Türme – in Concert Live to Film",
-    "date": "2027-04-24",
-    "time": "18:30",
-    "locationId": 57,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/herr-der-ringe-27/2027-04-24-1830",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 155135084,
     "title": "Landstreicher presents: XAVI - Sorgenfrei Tour 2027",
     "date": "2027-04-24",
@@ -35214,19 +32848,6 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 1250358662,
-    "title": "MOONKID",
-    "date": "2027-04-24",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/artist/moonkid/moonkid-der-letzte-deutsche-rockstar-4187189/?srsltid=AfmBOopE8Q-lNqO2F1p5nL-Ai-Z1LDaKWFXeWNAlwZdAokoBCR8ughRT",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1365306909,
@@ -35266,6 +32887,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 1250358662,
+    "title": "MOONKID",
+    "date": "2027-04-24",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/artist/moonkid/moonkid-der-letzte-deutsche-rockstar-4187189/?srsltid=AfmBOopE8Q-lNqO2F1p5nL-Ai-Z1LDaKWFXeWNAlwZdAokoBCR8ughRT",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1786113435,
     "title": "AUDIO88",
     "date": "2027-04-25",
@@ -35277,19 +32911,6 @@
     "spotifyUrl": "",
     "source": "lido",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 378081528,
-    "title": "Krissy Matthews",
-    "date": "2027-04-25",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/krissy-matthews-guitarmania-2027-frannz-club-22121922",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-16"
   },
   {
     "id": 1019620350,
@@ -35305,6 +32926,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 378081528,
+    "title": "Krissy Matthews",
+    "date": "2027-04-25",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/krissy-matthews-guitarmania-2027-frannz-club-22121922",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-16"
+  },
+  {
     "id": 550540122,
     "title": "Textbomben",
     "date": "2027-04-26",
@@ -35316,19 +32950,6 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-28"
-  },
-  {
-    "id": 845144065,
-    "title": "The World of Hans Zimmer",
-    "date": "2027-04-26",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/hanszimmer-27/2027-04-26-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 438720695,
@@ -35485,19 +33106,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1534053773,
-    "title": "Mo-Torres",
-    "date": "2027-05-01",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270501-mo-torres/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-26"
-  },
-  {
     "id": 1285005808,
     "title": "HGICH.T LIVE + ACID AFTERSHOW",
     "date": "2027-05-01",
@@ -35509,19 +33117,6 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 745163424,
-    "title": "LEA",
-    "date": "2027-05-02",
-    "time": "19:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/lea/2027-05-02-1900",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1444752622,
@@ -35601,19 +33196,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1716714363,
-    "title": "Roland Kaiser",
-    "date": "2027-05-06",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/roland-kaiser-2027/2027-05-06-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 563695384,
     "title": "OUT OF LINE WEEKENDER 2027",
     "date": "2027-05-07",
@@ -35625,19 +33207,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 209162554,
-    "title": "Roland Kaiser",
-    "date": "2027-05-07",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/roland-kaiser-2027/2027-05-07-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1060729028,
@@ -35744,19 +33313,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1356716035,
-    "title": "Leslie Mandoki",
-    "date": "2027-05-09",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270509-leslie-mandoki/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-09-02"
-  },
-  {
     "id": 1259987782,
     "title": "TOM HENGST",
     "date": "2027-05-10",
@@ -35796,19 +33352,6 @@
     "addedAt": "2026-08-26"
   },
   {
-    "id": 55262890,
-    "title": "Gracie Abrams",
-    "date": "2027-05-12",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/gracie-abrams/2027-05-12-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 541388459,
     "title": "DIE HAPPY",
     "date": "2027-05-13",
@@ -35819,32 +33362,6 @@
     "ticketUrl": "https://hole-berlin.de/event/2027-05-13-die-happy/",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1562814699,
-    "title": "Gracie Abrams",
-    "date": "2027-05-13",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/gracie-abrams/2027-05-13-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1349788329,
-    "title": "ABBAMANIA",
-    "date": "2027-05-14",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/abbamania-2027/2027-05-14-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1625170203,
@@ -35884,19 +33401,6 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1118316212,
-    "title": "sombr",
-    "date": "2027-05-18",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sombr/2027-05-18-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1365829284,
@@ -36249,19 +33753,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1890634501,
-    "title": "Don Omar",
-    "date": "2027-06-28",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/don-omar/2027-06-28-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1223145120,
     "title": "BERLIN BREAKOUT 2027",
     "date": "2027-07-03",
@@ -36286,19 +33777,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1217855446,
-    "title": "The Hooters",
-    "date": "2027-07-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270704-the-hooters/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-09-15"
   },
   {
     "id": 1600592703,
@@ -36417,32 +33895,6 @@
     "addedAt": "2026-09-16"
   },
   {
-    "id": 819080078,
-    "title": "Montez",
-    "date": "2027-09-25",
-    "time": "19:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/montez-berlin/2027-09-25-1900",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 790697447,
-    "title": "Christin Stark",
-    "date": "2027-09-25",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270925-christin-stark/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1363003797,
     "title": "Johann König",
     "date": "2027-09-29",
@@ -36544,19 +33996,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 925095485,
-    "title": "The Mission",
-    "date": "2027-10-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20271007-the-mission/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-09-02"
   },
   {
     "id": 682641543,
@@ -36675,19 +34114,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2011898799,
-    "title": "Nena",
-    "date": "2027-10-23",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/nena-2027/2027-10-23-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 1215428163,
     "title": "KAYEF",
     "date": "2027-10-24",
@@ -36701,19 +34127,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 536774170,
-    "title": "die PRINZEN",
-    "date": "2027-10-28",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/die-prinzen/2027-10-28-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 860265936,
     "title": "Nico Stank",
     "date": "2027-10-29",
@@ -36725,19 +34138,6 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-28"
-  },
-  {
-    "id": 1345036848,
-    "title": "Andrea Berg",
-    "date": "2027-10-30",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/andrea-berg-27/2027-10-30-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1317894991,
@@ -36831,19 +34231,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 652973096,
-    "title": "Gregor Hägele",
-    "date": "2027-11-14",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20271114-gregor-haegele/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 448157047,
     "title": "KIM WILDE",
     "date": "2027-11-16",
@@ -36907,19 +34294,6 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1552471871,
-    "title": "Wincent Weiss",
-    "date": "2027-11-27",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/wincent-weiss-2027/2027-11-27-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1111360809,
@@ -37010,19 +34384,6 @@
     "ticketUrl": "https://www.taeubchenthal.com/programm/die-pubert%C3%A4ts-docs-leipzig-2028",
     "spotifyUrl": "",
     "source": "taeubchenthal",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 875374159,
-    "title": "Kool Savas",
-    "date": "2028-01-29",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/kool-savas/2028-01-29-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
     "addedAt": "2026-09-21"
   },
   {
