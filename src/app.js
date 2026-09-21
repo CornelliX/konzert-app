@@ -5,6 +5,23 @@ function esc(s) {
   return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
 }
 
+// Spotify-Suchlink ohne API/Credentials: öffnet die Spotify-Suchergebnisse für den
+// (von Support-Acts/Zusätzen bereinigten) Künstlernamen. Kein direkter Artist-Link,
+// aber robust und wartungsfrei - siehe spotifyUrl für den Fallback auf einen echten Link.
+function spotifySearchUrl(title) {
+  let core = String(title || '')
+  // Promoter-Präfix wie "Landstreicher präsentiert: X" oder "Faible Booking lädt ein: X" -
+  // danach steht erst der eigentliche Künstlername
+  const prefixMatch = core.match(/^.+?\s+(?:presents?|präsentiert|lädt\s+ein)\s*:\s*(.+)$/i)
+  if (prefixMatch) core = prefixMatch[1]
+  // Support-Acts/Zusätze nach dem Namen abschneiden
+  core = core
+    .split(/\s*[+/]\s*|\s+feat\.?\s+|\s+ft\.?\s+|\s+w\/\s+|\s+support:?\s+|\s+special\s+guests?:?\s+|\s+mit\s+/i)[0]
+    .replace(/\([^)]*\)/g, '')
+    .trim()
+  return `https://open.spotify.com/search/${encodeURIComponent(core || title)}`
+}
+
 let locations = getLocations()
 let currentUser = null
 let events = []
@@ -234,7 +251,10 @@ function renderFilters() {
             `).join('')}
           </div>
         </div>
-        <input id="search-input" type="text" placeholder="Suche…" value="${filters.search || ''}" style="flex:1; padding:9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
+        <div style="position:relative; flex:1;">
+          <input id="search-input" type="text" placeholder="Suche…" value="${filters.search || ''}" style="width:100%; box-sizing:border-box; padding:9px 30px 9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
+          <button id="search-clear" type="button" aria-label="Suche löschen" style="position:absolute; right:4px; top:50%; transform:translateY(-50%); width:24px; height:24px; border:none; background:transparent; color:rgba(255,255,255,0.4); font-size:18px; line-height:1; cursor:pointer; display:${filters.search ? 'flex' : 'none'}; align-items:center; justify-content:center; border-radius:50%;">×</button>
+        </div>
       </div>
     </div>
   `
@@ -358,7 +378,7 @@ function renderEventCard(e) {
           </div>
           <div class="flex gap-2 flex-wrap mt-1" style="align-items:center;">
             ${e.ticketUrl ? `<a href="${e.ticketUrl}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg inline-block" style="color:rgba(255,255,255,0.6);">Infos →</a>` : (loc?.website ? `<a href="https://${loc.website}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg inline-block" style="color:rgba(255,255,255,0.6);">Infos →</a>` : '')}
-            ${e.spotifyUrl ? `<a href="${e.spotifyUrl}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg inline-flex items-center gap-1.5" style="color:#1db954; border-color:rgba(29,185,84,0.2);"><svg width="12" height="12" viewBox="0 0 24 24" fill="#1db954"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Spotify</a>` : ''}
+            ${e.type !== 'sonstige' ? `<a href="${e.spotifyUrl || spotifySearchUrl(e.title)}" target="_blank" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg inline-flex items-center gap-1.5" style="color:#1db954; border-color:rgba(29,185,84,0.2);"><svg width="12" height="12" viewBox="0 0 24 24" fill="#1db954"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Spotify</a>` : ''}
             <button data-share="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg" style="color:rgba(255,255,255,0.5);">Teilen</button>
             ${(isBookmarked || isGoing) ? `
               <button data-ics="${e.id}" class="btn-glass text-xs font-medium px-3 py-1.5 rounded-lg" style="color:rgba(255,255,255,0.5);">+ Apple</button>
@@ -555,8 +575,17 @@ function attachFilterBarEvents() {
       updateView(true)
     })
   })
-  document.getElementById('search-input')?.addEventListener('input', (e) => {
+  const searchInput = document.getElementById('search-input')
+  const searchClear = document.getElementById('search-clear')
+  searchInput?.addEventListener('input', (e) => {
     filters.search = e.target.value
+    if (searchClear) searchClear.style.display = filters.search ? 'flex' : 'none'
+    updateView(false)
+  })
+  searchClear?.addEventListener('click', () => {
+    filters.search = ''
+    if (searchInput) { searchInput.value = ''; searchInput.focus() }
+    searchClear.style.display = 'none'
     updateView(false)
   })
 }
