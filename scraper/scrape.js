@@ -154,7 +154,6 @@ async function scrapeWerk2() {
       const timeMatch = kurzinfo.match(/(\d{1,2}:\d{2})\s*Uhr/)
       const time = timeMatch ? timeMatch[1].padStart(5, '0') : '20:00'
 
-      const ticketUrl = $(el).find('.btn_tickets a').first().attr('href') || ''
       const genre = $(el).find('.typen').first().text().trim()
       const type = genre.toLowerCase().includes('party') || genre.toLowerCase().includes('dj') ? 'party' : 'konzert'
 
@@ -165,6 +164,10 @@ async function scrapeWerk2() {
 
       if (!date) return
       if (date < today()) return
+
+      // Manche Events haben (noch) keinen Ticket-Button - dann auf die Event-Detailseite verlinken
+      const rawTicketUrl = $(el).find('.btn_tickets a').first().attr('href') || link
+      const ticketUrl = rawTicketUrl.startsWith('http') ? rawTicketUrl : (rawTicketUrl ? 'https://www.werk-2.de' + rawTicketUrl : 'https://www.werk-2.de/')
 
       events.push({
         title, date, time,
@@ -302,13 +305,20 @@ async function scrapeTaeubchenthal() {
       const date = parseGermanDate(dateRaw)
       if (!title || !date || date < today()) return
       const type = title.toLowerCase().includes('party') ? 'party' : 'konzert'
+      // Externer Ticketlink bevorzugt, sonst die Event-Detailseite (h2-Titel ist verlinkt)
+      const rawTicketUrl = $(el).find('a[href*="ticket"], a[href*="eventim"], a[href*="tixforgigs"]').first().attr('href')
+        || $(el).find('h2 a, h3 a, .title a').first().attr('href')
+        || ''
+      const ticketUrl = rawTicketUrl.startsWith('http')
+        ? rawTicketUrl
+        : (rawTicketUrl ? 'https://www.taeubchenthal.com/' + rawTicketUrl.replace(/^\/+/, '') : 'https://www.taeubchenthal.com/programm')
       events.push({
         title, date,
         time: parseTime(timeRaw),
         locationId: 15,
         type,
         description: '',
-        ticketUrl: $(el).find('a[href*="ticket"], a[href*="eventim"], a[href*="tixforgigs"]').first().attr('href') || 'https://www.taeubchenthal.com/programm/',
+        ticketUrl,
         spotifyUrl: '',
         source: 'taeubchenthal'
       })
@@ -465,23 +475,37 @@ async function scrapeUTConnewitz() {
       await page.goto(url, { waitUntil: 'load', timeout: 60000 })
       await new Promise(r => setTimeout(r, 2000))
 
-      // Seitentext auslesen und Events per Regex extrahieren
-      // Format: "01\n// Mi // 20 Uhr //\nTITEL"
-      let bodyText = await page.evaluate(() => document.body.innerText)
+      // Jedes Event steckt in div.event mit .day, .title-time (Wochentag/Uhrzeit) und
+      // .title-title (Titel); der echte Ticketlink (meist tixforgigs.com) steckt im
+      // versteckten Detail-Panel darunter statt über Text-Zeilenposition zu raten
+      const rawEvents = await page.evaluate(() => {
+        const items = document.querySelectorAll('.event')
+        return Array.from(items).map(el => ({
+          day: el.querySelector('.day')?.textContent?.trim() || '',
+          timeText: el.querySelector('.title-time')?.textContent?.trim() || '',
+          title: el.querySelector('.title-title')?.textContent?.trim() || '',
+          // getAttribute statt .href: manche Ticketlinks auf der Seite haben kein "https://"
+          // Präfix im HTML, wodurch das aufgelöste .href fälschlich als relativer Pfad
+          // gegen utconnewitz.de aufgelöst würde
+          ticketUrl: el.querySelector('a[href*="tixforgigs.com"], a[href*="eventim"], a[href*="ticket"]')?.getAttribute('href') || ''
+        }))
+      })
       await page.close()
-      // CRLF normalisieren
-      bodyText = bodyText.replace(/\r\n/g, '\n').replace(/\r/g, '\n')
 
-      // Regex: Zahl 1-31 am Zeilenanfang, dann Zeitzeile "// ... // HH Uhr //", dann Titel
-      const pattern = /^(\d{1,2})\n\/\/ \w+ \/\/ (\d{1,2}) Uhr \/\/[^\n]*\n([^\n]{3,})/gm
-      let m
-      while ((m = pattern.exec(bodyText)) !== null) {
-        const day   = String(m[1]).padStart(2, '0')
-        const hour  = String(m[2]).padStart(2, '0')
-        const title = m[3].trim()
-
+      for (const { day: dayRaw, timeText, title, ticketUrl: rawTicketUrl } of rawEvents) {
+        if (!title) continue
         // Kinderprogramm / Kino überspringen
         if (/kinderkino|kinderfilm|kinder/i.test(title)) continue
+
+        const dayMatch = dayRaw.match(/(\d{1,2})/)
+        // Uhrzeit als "20 Uhr", "18:30 Uhr" oder "18.30 Uhr" - Minuten optional und mit
+        // Punkt oder Doppelpunkt, sonst matcht die Regex bei z.B. "19.30 Uhr" faelschlich
+        // "30" statt "19" als Stunde
+        const timeMatch = timeText.match(/(\d{1,2})(?:[.:](\d{2}))?\s*Uhr/)
+        if (!dayMatch || !timeMatch) continue
+        const day = dayMatch[1].padStart(2, '0')
+        const hour = timeMatch[1].padStart(2, '0')
+        const minute = timeMatch[2] || '00'
 
         const date = `${year}-${String(month).padStart(2,'0')}-${day}`
         if (date < today()) continue
@@ -490,13 +514,18 @@ async function scrapeUTConnewitz() {
         if (seen.has(key)) continue
         seen.add(key)
 
+        // Manche Ticketlinks im HTML der Seite haben kein Schema (z.B. "www.tixforgigs.com/...")
+        const ticketUrl = !rawTicketUrl ? 'https://utconnewitz.de/'
+          : /^https?:\/\//i.test(rawTicketUrl) ? rawTicketUrl
+          : 'https://' + rawTicketUrl.replace(/^\/+/, '')
+
         events.push({
           title, date,
-          time: `${hour}:00`,
+          time: `${hour}:${minute}`,
           locationId: 17,
           type: detectType(title),
           description: '',
-          ticketUrl: 'https://utconnewitz.de/',
+          ticketUrl,
           spotifyUrl: '',
           source: 'utconnewitz'
         })
@@ -625,7 +654,10 @@ async function scrapePrivatclub() {
       const timeMatch = einlass.match(/(\d{1,2}):(\d{2})/)
       const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
 
-      const ticketUrl = $(el).find('a.ticketlink').first().attr('href') || ''
+      // Manche Events haben (noch) keinen Ticket-Link - dann auf die Event-Detailseite verlinken
+      const ticketUrl = $(el).find('a.ticketlink').first().attr('href')
+        || $(el).find('a.event_header').first().attr('href')
+        || 'https://www.privatclub-berlin.de'
       const genreText = $(el).find('.typ.typdesktop').first().text().trim().toLowerCase()
       const type = genreText.includes('party') || genreText.includes('dj') || genreText.includes('club') ? 'party' : 'konzert'
 
@@ -1137,8 +1169,9 @@ async function scrapeTempodrom() {
       if (seen.has(date + title)) return
       seen.add(date + title)
 
-      // Link suchen - Event-Link oder Ticket-Link
-      const eventLink = block.find('a[href*="/event/"]').first().attr('href') || ''
+      // Der Event-Link (a.stretched-link) liegt außerhalb von block (nur .event-desc,
+      // stoppt bei closest() zu früh) als Sibling im umgebenden .event-item-Container
+      const eventLink = $(el).closest('.event-item').find('a.stretched-link, a[href*="/event/"]').first().attr('href') || ''
       const ticketUrl = eventLink ? 'https://www.tempodrom.de' + eventLink : 'https://www.tempodrom.de/programm-und-tickets/'
 
       events.push({
@@ -1211,17 +1244,30 @@ async function scrapeBiNuu() {
     const res = await fetch('https://binuu.de/de/events', { headers: { 'User-Agent': 'Mozilla/5.0' } })
     const html = await res.text()
     const $ = cheerio.load(html)
-    $('article, .event, [class*="event"]').each((_, el) => {
-      const dateText = $(el).find('[class*="date"], time').first().text().trim()
-      const title = $(el).find('h2, h3, [class*="title"]').first().text().trim()
-      const timeText = $(el).find('[class*="time"]').first().text().trim()
+    const seen = new Set()
+    const now = new Date()
+
+    // a.event-item ist die eigentliche Event-Karte; Datum zeigt kein Jahr ("Di 22.09."),
+    // daher wie bei anderen Venues über den aktuellen Monat herleiten statt hartcodieren
+    $('a.event-item').each((_, el) => {
+      const title = $(el).find('.event-title').first().text().trim()
+      const dateText = $(el).find('.event-date-time').first().text().trim()
       if (!title || !dateText) return
       const dateMatch = dateText.match(/(\d{1,2})\.(\d{2})\./)
       if (!dateMatch) return
-      const date = `2026-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
-      const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
-      const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      events.push({ title, date, time, type: detectType(title), locationId: 27, source: 'binuu', ticketUrl: 'https://binuu.de/de/events', spotifyUrl: '' })
+      const day = dateMatch[1].padStart(2, '0')
+      const month = parseInt(dateMatch[2])
+      const year = month < now.getMonth() + 1 ? now.getFullYear() + 1 : now.getFullYear()
+      const date = `${year}-${String(month).padStart(2, '0')}-${day}`
+      if (date < today()) return
+
+      const key = date + title
+      if (seen.has(key)) return
+      seen.add(key)
+
+      const href = $(el).attr('href') || ''
+      const ticketUrl = href ? new URL(href, 'https://binuu.de/de/events').href : 'https://binuu.de/de/events'
+      events.push({ title, date, time: '20:00', type: detectType(title), locationId: 27, description: '', ticketUrl, spotifyUrl: '', source: 'binuu' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log('  ✗ Bi Nuu:', e.message) }
@@ -1250,7 +1296,9 @@ async function scrapeMikropol() {
       const date = `${dateMatch[3]}-${String(dateMatch[2]).padStart(2,'0')}-${String(dateMatch[1]).padStart(2,'0')}`
       const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
       const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
-      events.push({ title, date, time, type: detectType(title), locationId: 28, source: 'mikropol' })
+      const href = $(el).attr('href') || ''
+      const ticketUrl = href.startsWith('http') ? href : (href ? 'https://mikropol-berlin.de' + href : 'https://mikropol-berlin.de/events/')
+      events.push({ title, date, time, type: detectType(title), locationId: 28, description: '', ticketUrl, spotifyUrl: '', source: 'mikropol' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log('  ✗ Mikropol:', e.message) }
@@ -1567,13 +1615,23 @@ async function scrapeKesselhaus() {
       prevCount = count
     }
 
-    // Angular-App: innerText preserviert CSS-basierte Zeilenumbrüche
+    // Angular-App liefert feste CSS-Klassen pro Feld (.title, .pretitle für Tour-Namen wie
+    // "Elsewhere, Always Album Tour Europe", .label für Status wie "Abgesagt") - direkt darüber
+    // statt über die Reihenfolge der Text-Zeilen zu raten, was sich nicht zuverlässig von
+    // echten Künstlernamen unterscheiden ließ (zu viele Tour-Titel-Formulierungen)
     const rawEvents = await page.evaluate(() => {
       const links = document.querySelectorAll('a[href*="/de/calendar/-"]')
-      return Array.from(links).map(link => ({
-        href: link.getAttribute('href') || '',
-        text: link.innerText || ''
-      }))
+      return Array.from(links).map(link => {
+        const q = (sel) => link.querySelector(sel)?.textContent?.trim() || ''
+        return {
+          href: link.getAttribute('href') || '',
+          day: q('.day-number'),
+          month: q('.day-month'),
+          time: q('.day-time'),
+          title: q('.title'),
+          label: q('.label')
+        }
+      })
     })
     await browser.close()
     browser = null
@@ -1583,21 +1641,15 @@ async function scrapeKesselhaus() {
       'Januar':'01','Februar':'02','März':'03','April':'04','Mai':'05','Juni':'06',
       'Juli':'07','August':'08','September':'09','Oktober':'10','November':'11','Dezember':'12'
     }
-    const skipWords = ['Kesselhaus','Maschinenhaus','Club23','Kulturbrauerei',
-      'Frannz Club','Konzert','Party','Theater','Kinder','Comedy','Tanz','Lesung',
-      'Weitere','Festival','Großveranstaltung','Ausverkauft','Abgesagt','Verlegt',
-      'Nachholtermin','Zusatzkonzert']
-
-    // Tourenname/-untertitel vor dem eigentlichen Künstlernamen erkennen
-    const subtitlePattern = /^(Live (in|at|@)\b|Welttournee|Tournee|World Tour|\d{4} Tour|Tour \d{4}|Open Air Tour)/i
 
     const now = new Date()
-    for (const { href, text } of rawEvents) {
-      const lines = text.trim().split('\n').map(l => l.trim()).filter(Boolean)
-      if (lines.length < 4) continue
+    for (const { href, day, month: monthName, time: timeText, title: rawTitle, label } of rawEvents) {
+      const title = rawTitle.replace(/\s+/g, ' ').trim()
+      if (!title) continue
+      // Abgesagte Events nicht anzeigen
+      if (/abgesagt/i.test(label)) continue
 
-      const day   = lines[1]
-      const month = monthMap[lines[2]]
+      const month = monthMap[monthName]
       if (!day || !month || isNaN(parseInt(day))) continue
 
       const monthNum = parseInt(month)
@@ -1608,13 +1660,8 @@ async function scrapeKesselhaus() {
       const date = `${year}-${month}-${String(parseInt(day)).padStart(2,'0')}`
       if (date < today()) continue
 
-      const timeMatch = lines[3].match(/(\d{1,2}):(\d{2})/)
-      if (!timeMatch) continue
-      const time = `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}`
-
-      const titleLines = lines.slice(4).filter(l => !skipWords.includes(l) && l.length > 1)
-      const title = (titleLines.find(l => !subtitlePattern.test(l)) || titleLines[0])?.trim()
-      if (!title || title.length < 2) continue
+      const timeMatch = timeText.match(/(\d{1,2}):(\d{2})/)
+      const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
 
       const key = date + title
       if (seen.has(key)) continue
@@ -2985,10 +3032,14 @@ async function scrapeNochBesserLeben() {
       if (!date || date < today()) return
       const timeMatch = bText.match(/(\d{1,2}):(\d{2}):\d{2}/)
       const time = timeMatch ? `${timeMatch[1].padStart(2,'0')}:${timeMatch[2]}` : '20:00'
+      // Nicht jedes Event hat einen Ticketshop (viele sind Tür-/freier Eintritt) - dann auf
+      // den Anker des Events auf der Seite verlinken statt nur auf die generische Übersicht
+      const realTicketUrl = $(el).find('a[href*="tixforgigs"], a[href*="eventim"], a[href*="ticket"], a[href*="ra.co"], a[href*="dice.fm"], a[href*="residentadvisor"]').first().attr('href')
+      const ticketUrl = realTicketUrl || (el.attribs.id ? `https://www.nochbesserleben.com/veranstaltungen/#${el.attribs.id}` : 'https://www.nochbesserleben.com/veranstaltungen/')
       events.push({
         title, date, time, locationId: 50,
         type: detectType(title),
-        description: '', ticketUrl: 'https://www.nochbesserleben.com/veranstaltungen/',
+        description: '', ticketUrl,
         spotifyUrl: '', source: 'nbl'
       })
     })
