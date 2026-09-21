@@ -3413,6 +3413,16 @@ async function main() {
     }
   }
 
+  // Global abgesagte Events rausfiltern (Sicherheitsnetz für Scraper ohne eigene Prüfung).
+  // Manche Venues markieren das im Titel stilisiert mit Leerzeichen zwischen jedem
+  // Buchstaben ("+++ A B G E S A G T +++"), daher zusätzlich mit entfernten Leerzeichen
+  // prüfen. Bewusst nur "abgesagt"/"cancelled", NICHT "verschoben"/"verlegt" - die
+  // gehören oft zu weiterhin gültigen (nur umdatierten/umverlegten) Terminen.
+  allEvents = allEvents.filter(e => {
+    const compact = e.title.toLowerCase().replace(/\s+/g, '')
+    return !(compact.includes('abgesagt') || compact.includes('cancelled') || compact.includes('canceled'))
+  })
+
   // Duplikate entfernen (gleicher Titel + Datum + Location)
   const seen = new Set()
   allEvents = allEvents.filter(e => {
