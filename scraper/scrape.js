@@ -1629,7 +1629,8 @@ async function scrapeKesselhaus() {
           month: q('.day-month'),
           time: q('.day-time'),
           title: q('.title'),
-          label: q('.label')
+          label: q('.label'),
+          category: q('.category')
         }
       })
     })
@@ -1643,7 +1644,7 @@ async function scrapeKesselhaus() {
     }
 
     const now = new Date()
-    for (const { href, day, month: monthName, time: timeText, title: rawTitle, label } of rawEvents) {
+    for (const { href, day, month: monthName, time: timeText, title: rawTitle, label, category } of rawEvents) {
       const title = rawTitle.replace(/\s+/g, ' ').trim()
       if (!title) continue
       // Abgesagte Events nicht anzeigen
@@ -1668,10 +1669,13 @@ async function scrapeKesselhaus() {
       seen.add(key)
 
       const ticketUrl = href.startsWith('http') ? href : 'https://www.kesselhaus.net' + href
+      // Kategorie von der Seite hat Vorrang vor Titel-Raten (detectType), z.B. "GrooveJet 003 –
+      // Next Flight" steht dort unter "Party", ohne dass "Party" im Titel selbst vorkommt
+      const type = category.toLowerCase() === 'party' ? 'party' : detectType(title)
       events.push({
         title, date, time,
         locationId: 29,
-        type: detectType(title),
+        type,
         description: '',
         ticketUrl,
         spotifyUrl: '',
@@ -1715,9 +1719,11 @@ async function scrapeMetropol() {
       if (!title || seen.has(date + title)) return
       seen.add(date + title)
       const href = $(el).find('a[href*="/event/"]').first().attr('href') || ''
+      // Kategorie von der Seite hat Vorrang vor Titel-Raten (detectType) - vorher hier ein
+      // doppelter "type"-Objektschlüssel, wodurch die Kategorie-Auswertung nie ankam
       const cat = $(el).find('a[href*="/categories/"]').first().text().trim().toLowerCase()
-      const type = cat === 'party' ? 'party' : 'konzert'
-      events.push({ title, date, time, type, locationId: 30, type: detectType(title), source: 'metropol', ticketUrl: href, spotifyUrl: '' })
+      const type = cat === 'party' ? 'party' : cat === 'ceremony' ? 'sonstige' : detectType(title)
+      events.push({ title, date, time, type, locationId: 30, source: 'metropol', ticketUrl: href, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Metropol: ${e.message}`) }
