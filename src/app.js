@@ -1094,28 +1094,28 @@ function attachSwipeToWrapper(wrapper) {
   wrapper.querySelector('[data-swipe-bookmark]')?.addEventListener('click', () => {
     if (bookmarkInFlight.has(id)) return
     bookmarkInFlight.add(id)
-    setTimeout(() => bookmarkInFlight.delete(id), 200)
+    setTimeout(() => bookmarkInFlight.delete(id), 400)
     if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
     wrapper.querySelector('[data-swipe-bookmark]')?.classList.add('btn-sweep')
     const wasGoing = going.some(g => g == id)
     const isNow = !bookmarked.some(b => b == id)
     if (wasGoing) going = going.filter(g => g != id)
     bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
-    setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 200)
+    setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 400)
     if (wasGoing) toggleBookmark(id, 'going')
     toggleBookmark(id, 'bookmarked')
   })
   wrapper.querySelector('[data-swipe-going]')?.addEventListener('click', () => {
     if (bookmarkInFlight.has(id)) return
     bookmarkInFlight.add(id)
-    setTimeout(() => bookmarkInFlight.delete(id), 200)
+    setTimeout(() => bookmarkInFlight.delete(id), 400)
     if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
     wrapper.querySelector('[data-swipe-going]')?.classList.add('btn-sweep')
     const wasBookmarked = bookmarked.some(b => b == id)
     const isNow = !going.some(g => g == id)
     if (wasBookmarked) bookmarked = bookmarked.filter(b => b != id)
     going = isNow ? [...going, id] : going.filter(g => g != id)
-    setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 200)
+    setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 400)
     if (wasBookmarked) toggleBookmark(id, 'bookmarked')
     toggleBookmark(id, 'going')
   })
