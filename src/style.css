@@ -131,7 +131,7 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
   position: absolute;
   inset: 0;
   background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.45) 50%, transparent 65%);
-  animation: btn-sweep 0.5s ease-out 1 both;
+  animation: btn-sweep 0.25s ease-out 1 both;
   pointer-events: none;
   z-index: 2;
 }

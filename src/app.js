@@ -32,6 +32,10 @@ function looksLikeNonMusicEvent(title) {
 }
 
 let locations = getLocations()
+// O(1)-Lookup statt locations.find() in Render-Hotpaths (getFilteredEvents/renderEventCard
+// laufen pro Event bei jedem Tastendruck/Filterwechsel - bei mehreren tausend Events macht
+// der lineare .find()-Scan dort spürbar den Unterschied)
+const locationsById = new Map(locations.map(l => [l.id, l]))
 let currentUser = null
 let events = []
 let container = null
@@ -49,6 +53,7 @@ let dropdownListenerAdded = false
 const bookmarkInFlight = new Set()
 let fetchSeq = 0
 let markSeenTimer = null
+let searchDebounceTimer = null
 let titleAnimated = false
 
 export async function renderApp(el) {
@@ -278,7 +283,7 @@ function renderFilters() {
 
 function getFilteredEvents() {
   return events.filter(e => {
-    const loc = locations.find(l => l.id === e.locationId)
+    const loc = locationsById.get(e.locationId)
     const city = loc ? loc.city : (e.locationCity || '')
     if (!city) return true
     if (!filters.cities.includes(city)) return false
@@ -361,7 +366,7 @@ function renderSkeleton() {
 }
 
 function renderEventCard(e) {
-  const loc = locations.find(l => l.id === e.locationId)
+  const loc = locationsById.get(e.locationId)
   const isBookmarked = bookmarked.some(b => b == e.id)
   const isGoing = going.some(g => g == e.id)
   const eventIsNew = isNew(e)
@@ -596,9 +601,15 @@ function attachFilterBarEvents() {
   searchInput?.addEventListener('input', (e) => {
     filters.search = e.target.value
     if (searchClear) searchClear.style.display = filters.search ? 'flex' : 'none'
-    updateView(false)
+    // Der Re-Render der Liste ist bei vielen Events teuer (volle Neuerstellung + alle
+    // Swipe-/Button-Listener neu anhängen) - bei jedem einzelnen Tastendruck sofort
+    // ausgeführt ruckelte es beim Tippen und ließ Taps auf den Clear-Button manchmal
+    // ins Leere laufen, weil noch ein Render vom vorherigen Zeichen lief. Jetzt gebündelt.
+    clearTimeout(searchDebounceTimer)
+    searchDebounceTimer = setTimeout(() => updateView(false), 150)
   })
   searchClear?.addEventListener('click', () => {
+    clearTimeout(searchDebounceTimer)
     filters.search = ''
     if (searchInput) { searchInput.value = ''; searchInput.focus() }
     searchClear.style.display = 'none'
@@ -1035,28 +1046,28 @@ function attachSwipeToWrapper(wrapper) {
   wrapper.querySelector('[data-swipe-bookmark]')?.addEventListener('click', () => {
     if (bookmarkInFlight.has(id)) return
     bookmarkInFlight.add(id)
-    setTimeout(() => bookmarkInFlight.delete(id), 400)
+    setTimeout(() => bookmarkInFlight.delete(id), 200)
     if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
     wrapper.querySelector('[data-swipe-bookmark]')?.classList.add('btn-sweep')
     const wasGoing = going.some(g => g == id)
     const isNow = !bookmarked.some(b => b == id)
     if (wasGoing) going = going.filter(g => g != id)
     bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
-    setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 400)
+    setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 200)
     if (wasGoing) toggleBookmark(id, 'going')
     toggleBookmark(id, 'bookmarked')
   })
   wrapper.querySelector('[data-swipe-going]')?.addEventListener('click', () => {
     if (bookmarkInFlight.has(id)) return
     bookmarkInFlight.add(id)
-    setTimeout(() => bookmarkInFlight.delete(id), 400)
+    setTimeout(() => bookmarkInFlight.delete(id), 200)
     if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
     wrapper.querySelector('[data-swipe-going]')?.classList.add('btn-sweep')
     const wasBookmarked = bookmarked.some(b => b == id)
     const isNow = !going.some(g => g == id)
     if (wasBookmarked) bookmarked = bookmarked.filter(b => b != id)
     going = isNow ? [...going, id] : going.filter(g => g != id)
-    setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 400)
+    setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 200)
     if (wasBookmarked) toggleBookmark(id, 'bookmarked')
     toggleBookmark(id, 'going')
   })
