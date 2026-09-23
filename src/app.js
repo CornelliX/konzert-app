@@ -132,7 +132,10 @@ export async function renderApp(el) {
   requestAnimationFrame(() => window.scrollTo(0, 0))
   if (c64El) {
     c64El.style.opacity = '1'
-    c64El.style.transition = 'opacity 0.6s ease'
+    // Die App selbst lädt inzwischen (Netzwerk + Render) in ca. 1s - das C64-Intro sollte
+    // diese Zeit überbrücken, nicht selbst noch draufsatteln. Früher 0.6s Fade + 800ms
+    // Fallback, das hängte nach fertigem Laden nochmal spürbar Zeit an. Jetzt kürzer.
+    c64El.style.transition = 'opacity 0.25s ease'
     requestAnimationFrame(() => {
       c64El.style.opacity = '0'
       // Sofort klick-durchlässig machen, sobald das Ausblenden beginnt - so kann das
@@ -142,7 +145,7 @@ export async function renderApp(el) {
       const removeC64 = () => c64El.remove()
       c64El.addEventListener('transitionend', removeC64, { once: true })
       // Fallback: Element in jedem Fall entfernen, auch wenn transitionend nie feuert
-      setTimeout(removeC64, 800)
+      setTimeout(removeC64, 400)
     })
   }
 }
