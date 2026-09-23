@@ -220,6 +220,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1866496865,
+    "title": "Dogpark",
+    "date": "2026-09-23",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OtYRbHI4-nRVNkDz7_U",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-09-21"
+  },
+  {
     "id": 261675713,
     "title": "Pisse",
     "date": "2026-09-23",
@@ -322,19 +335,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-09-23"
-  },
-  {
-    "id": 1866496865,
-    "title": "Dogpark",
-    "date": "2026-09-23",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OtYRbHI4-nRVNkDz7_U",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 199239503,
@@ -904,6 +904,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 1656586491,
+    "title": "THE BIG 80S & DEPECHE MODE PARTY",
+    "date": "2026-09-25",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/the-big-80s-and-depeche-mode-party-09-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1132981406,
     "title": "KONTROLLVERLUST",
     "date": "2026-09-25",
@@ -1047,6 +1060,32 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1833228088,
+    "title": "Thorbjørn Risager & The Black Tornado",
+    "date": "2026-09-25",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OgbgKMezC31Qg3MZ0qJ",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-09-21"
+  },
+  {
+    "id": 1001579985,
+    "title": "Rocky Votolato",
+    "date": "2026-09-25",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OuDID9EJgue9yFOE4zy",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-09-21"
+  },
+  {
     "id": 666481862,
     "title": "KITSCHKRIEG Support: 255 & Blumengarten",
     "date": "2026-09-25",
@@ -1135,32 +1174,6 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-08-26"
-  },
-  {
-    "id": 1833228088,
-    "title": "Thorbjørn Risager & The Black Tornado",
-    "date": "2026-09-25",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OgbgKMezC31Qg3MZ0qJ",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1001579985,
-    "title": "Rocky Votolato",
-    "date": "2026-09-25",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OuDID9EJgue9yFOE4zy",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 2094045433,
@@ -1264,6 +1277,19 @@
     "ticketUrl": "https://quasimodo.club/events/blues-caravan-3-7229",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1931585567,
+    "title": "INTERNA",
+    "date": "2026-09-25",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/250926-INTERNA",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1294667497,
@@ -1422,6 +1448,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1949416342,
+    "title": "SommerSafari",
+    "date": "2026-09-26",
+    "time": "18:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/260926-SommerSafari",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 2139836696,
     "title": "Jeff Rey",
     "date": "2026-09-26",
@@ -1511,6 +1550,19 @@
     "spotifyUrl": "",
     "source": "lido",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1955773123,
+    "title": "SILKE BISCHOFF",
+    "date": "2026-09-26",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/silke-bischoff-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 20322729,
@@ -1655,6 +1707,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 1667858692,
+    "title": "50 Jahre Monokel",
+    "date": "2026-09-26",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OnqwF2-4kflzuFZPe4G",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-09-21"
+  },
+  {
     "id": 1202780333,
     "title": "ASP",
     "date": "2026-09-26",
@@ -1732,14 +1797,14 @@
     "addedAt": "2026-08-26"
   },
   {
-    "id": 1667858692,
-    "title": "50 Jahre Monokel",
+    "id": 124343507,
+    "title": "GrooveJet 003 – Next Flight",
     "date": "2026-09-26",
-    "time": "20:00",
+    "time": "21:00",
     "locationId": 29,
-    "type": "konzert",
+    "type": "party",
     "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OnqwF2-4kflzuFZPe4G",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P-OB5z8nJCQaNQJgx3l",
     "spotifyUrl": "",
     "source": "kesselhaus",
     "addedAt": "2026-09-21"
@@ -1782,19 +1847,6 @@
     "spotifyUrl": "",
     "source": "nbl",
     "addedAt": "2026-08-28"
-  },
-  {
-    "id": 124343507,
-    "title": "GrooveJet 003 – Next Flight",
-    "date": "2026-09-26",
-    "time": "21:00",
-    "locationId": 29,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P-OB5z8nJCQaNQJgx3l",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1798339246,
@@ -2145,6 +2197,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 717163005,
+    "title": "Panzerballett feat. Virgil Donati",
+    "date": "2026-09-27",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ouag6Wfw5Hs9YggI6_V",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-09-21"
+  },
+  {
     "id": 1777236370,
     "title": "Hum w/ Kyle Hall b2b K15, Mamalia’The first lady of modern funk’ft.Mauricio Fleury, Bulma Brief",
     "date": "2026-09-27",
@@ -2195,19 +2260,6 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-08-26"
-  },
-  {
-    "id": 717163005,
-    "title": "Panzerballett feat. Virgil Donati",
-    "date": "2026-09-27",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ouag6Wfw5Hs9YggI6_V",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1316461765,
@@ -2362,6 +2414,19 @@
     "spotifyUrl": "",
     "source": "lido",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1087894409,
+    "title": "MORGENSHTERN",
+    "date": "2026-09-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/morgenshtern-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1566746263,
@@ -2725,19 +2790,6 @@
     "addedAt": "2026-08-26"
   },
   {
-    "id": 1697443911,
-    "title": "Tenside / Aurorawave",
-    "date": "2026-09-30",
-    "time": "18:00",
-    "locationId": 35,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.myticket.de/de/tenside-tickets",
-    "spotifyUrl": "",
-    "source": "badehaus",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 2126327790,
     "title": "Sandhy Sandoro",
     "date": "2026-09-30",
@@ -2749,6 +2801,19 @@
     "spotifyUrl": "",
     "source": "kesselhaus",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 1697443911,
+    "title": "Tenside / Aurorawave",
+    "date": "2026-09-30",
+    "time": "18:00",
+    "locationId": 35,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.myticket.de/de/tenside-tickets",
+    "spotifyUrl": "",
+    "source": "badehaus",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1239436223,
@@ -2879,6 +2944,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 243318010,
+    "title": "JUPITER JONES",
+    "date": "2026-09-30",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/jupiter-jones-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 822800228,
@@ -3294,6 +3372,19 @@
     "addedAt": "2026-08-26"
   },
   {
+    "id": 1841889217,
+    "title": "Fanfare Ciocarlia",
+    "date": "2026-10-01",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OltxQ6SyQe0b45Y3TGn",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-09-21"
+  },
+  {
     "id": 1646429454,
     "title": "Sampagne",
     "date": "2026-10-01",
@@ -3395,19 +3486,6 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-09-15"
-  },
-  {
-    "id": 1841889217,
-    "title": "Fanfare Ciocarlia",
-    "date": "2026-10-01",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OltxQ6SyQe0b45Y3TGn",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-09-21"
   },
   {
     "id": 1509057947,
@@ -3797,6 +3875,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 989931226,
+    "title": "LÜCY",
+    "date": "2026-10-02",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OzQS-LmcMdyGqvcx0CC",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-09-21"
+  },
+  {
     "id": 1249702986,
     "title": "Kolja Goldstein",
     "date": "2026-10-02",
@@ -3952,19 +4043,6 @@
     "addedAt": "2026-09-23"
   },
   {
-    "id": 989931226,
-    "title": "LÜCY",
-    "date": "2026-10-02",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OzQS-LmcMdyGqvcx0CC",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 166416936,
     "title": "15 YEARS OF ¡MASH-UP!",
     "date": "2026-10-02",
@@ -4027,6 +4105,19 @@
     "ticketUrl": "https://quasimodo.club/events/disco-inferno-65-7289",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 500100101,
+    "title": "Keep My Letters w/ Guy J",
+    "date": "2026-10-02",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/021026-KeepMyLettersw-GuyJ",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1687726311,
@@ -4221,6 +4312,19 @@
     "spotifyUrl": "",
     "source": "lido",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1424785834,
+    "title": "Ü40 PARTY",
+    "date": "2026-10-03",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/%C3%BC-40-party-herbstedition-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1674917021,
@@ -4483,6 +4587,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 45867319,
+    "title": "Move iT! - die 90er Party",
+    "date": "2026-10-03",
+    "time": "22:00",
+    "locationId": 29,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ot93Id4rOED-5FiQXW1",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-09-22"
+  },
+  {
     "id": 173953230,
     "title": "DTB Maximum Rock Night mit Hazy",
     "date": "2026-10-03",
@@ -4508,17 +4625,30 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 45867319,
-    "title": "Move iT! - die 90er Party",
+    "id": 6590392,
+    "title": "Conrad Taylor",
     "date": "2026-10-03",
     "time": "22:00",
-    "locationId": 29,
+    "locationId": 53,
     "type": "party",
     "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ot93Id4rOED-5FiQXW1",
+    "ticketUrl": "https://club.ritterbutzke.com/event/031026-ConradTaylor",
     "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-09-22"
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
+    "id": 1839933109,
+    "title": "Rauschhaus",
+    "date": "2026-10-03",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/031026-Yubik",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 659671247,
@@ -4623,6 +4753,19 @@
     "spotifyUrl": "",
     "source": "supamolly",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 1182259609,
+    "title": "Mesh",
+    "date": "2026-10-04",
+    "time": "15:30",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OyJ4ZR7ha3z15YIV2IV",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 575883343,
@@ -4791,6 +4934,19 @@
     "spotifyUrl": "",
     "source": "lido",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1973393483,
+    "title": "PRINZ PI",
+    "date": "2026-10-04",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/prinz-pi-leipzig-2026-zusatzshow",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 421766197,
@@ -6829,6 +6985,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 1795689514,
+    "title": "Electric Animals x Loop",
+    "date": "2026-10-09",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/091026-ElectricAnimals",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1271390977,
     "title": "KREUZBERG CALLING",
     "date": "2026-10-09",
@@ -7140,6 +7309,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 553926321,
+    "title": "ERSTI PARTY",
+    "date": "2026-10-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/ersti-party-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 282927123,
     "title": "Sean Koch",
     "date": "2026-10-10",
@@ -7420,6 +7602,19 @@
     "ticketUrl": "https://quasimodo.club/events/lowdown-brass-band-7390",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1018296085,
+    "title": "Ritter Butzke Jubiläum w/ NTO",
+    "date": "2026-10-10",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/101026-RitterButzkeJubilaumw-NTO",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1494362510,
@@ -7902,6 +8097,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 102085464,
+    "title": "LOI",
+    "date": "2026-10-12",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/loi-leipzig",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1631943344,
     "title": "Dizzee Rascal",
     "date": "2026-10-12",
@@ -8195,6 +8403,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 132143857,
+    "title": "BANGERFABRIQUE",
+    "date": "2026-10-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/bangerfabrique-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 664713077,
@@ -8893,6 +9114,19 @@
     "spotifyUrl": "",
     "source": "lido",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1293102455,
+    "title": "SYBILLE BULLATSCHEK",
+    "date": "2026-10-15",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/sybille-bullatschek-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1399663202,
@@ -9642,6 +9876,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 2039341087,
+    "title": "Community Rave",
+    "date": "2026-10-16",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/161026-CommunityRave",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 2097909403,
     "title": "Dance Dance Revolution",
     "date": "2026-10-16",
@@ -9797,6 +10044,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 992094691,
+    "title": "Giolì & Assia (live)",
+    "date": "2026-10-17",
+    "time": "19:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/171026-Gioli-Assia-live",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 2132240052,
     "title": "FINOJET",
     "date": "2026-10-17",
@@ -9872,6 +10132,32 @@
     "spotifyUrl": "",
     "source": "lido",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 413098391,
+    "title": "PRINZ PI",
+    "date": "2026-10-17",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/prinz-pi-leipzig-2025",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
+    "id": 1463051568,
+    "title": "OLDSCHOOL BEATS ft. KEITH MURRAY 🇺🇸",
+    "date": "2026-10-17",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/oldschool-beats-leipzig-Oktober-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1383106484,
@@ -10142,6 +10428,19 @@
     "ticketUrl": "https://quasimodo.club/events/soultrain-party-8-7433",
     "spotifyUrl": "",
     "addedAt": "2026-08-26"
+  },
+  {
+    "id": 882048620,
+    "title": "Amber Broos, DJ Sexstasy, Sektor69",
+    "date": "2026-10-17",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/171026-AmberBroos-DJSexstasy-Sektor69",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 729686052,
@@ -11537,6 +11836,19 @@
     "addedAt": "2026-09-23"
   },
   {
+    "id": 1421517185,
+    "title": "LORI",
+    "date": "2026-10-22",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/Lori-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 308134884,
     "title": "Philipp Lumpp",
     "date": "2026-10-22",
@@ -11937,6 +12249,32 @@
     "addedAt": "2026-09-16"
   },
   {
+    "id": 676951528,
+    "title": "RATHMANN @Naumanns Tanzlokal",
+    "date": "2026-10-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/rathmann-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
+    "id": 1924927211,
+    "title": "MC BOMBER",
+    "date": "2026-10-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/mc-bomber-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 350101442,
     "title": "RATHMANN",
     "date": "2026-10-23",
@@ -12205,6 +12543,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 1512371381,
+    "title": "Deeportament Community",
+    "date": "2026-10-23",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/231026-DeeportamentCommunity",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 164473824,
@@ -12505,6 +12856,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 970255041,
+    "title": "OHRWÜRMER PARTY",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/ohrw%C3%BCmer-party-oktober-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 852049376,
     "title": "Acres",
     "date": "2026-10-24",
@@ -12801,6 +13165,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 588107005,
+    "title": "Kollektiv Turmstrasse",
+    "date": "2026-10-24",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/241026-KollektivTurmstrasse",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 680060389,
@@ -13756,6 +14133,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 587083717,
+    "title": "GUILT TRIP",
+    "date": "2026-10-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/guilt-trip-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1924245714,
     "title": "Naked Cameo",
     "date": "2026-10-28",
@@ -14544,6 +14934,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 198151091,
+    "title": "HALLOWEEN",
+    "date": "2026-10-30",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/halloween-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1304687475,
     "title": "CONNY & LISER",
     "date": "2026-10-30",
@@ -14905,6 +15308,19 @@
     "addedAt": "2026-09-23"
   },
   {
+    "id": 1601833081,
+    "title": "The Dark Disko",
+    "date": "2026-10-30",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/301026-TheDarkDisko",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 313978506,
     "title": "Jazzfest Berlin – Wendy Eisenberg",
     "date": "2026-10-30",
@@ -15109,6 +15525,19 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-10-31-twilight---party",
     "spotifyUrl": "",
     "source": "lido",
+    "addedAt": "2026-09-23"
+  },
+  {
+    "id": 940210771,
+    "title": "ELECTRIC KINGDOM",
+    "date": "2026-10-31",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/electric-kingdom-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-09-23"
   },
   {
@@ -16095,6 +16524,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 108429740,
+    "title": "JULIA MELADIN",
+    "date": "2026-11-03",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/julia-meladin-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1976326721,
     "title": "Triggerfinger",
     "date": "2026-11-03",
@@ -16134,19 +16576,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1386884843,
-    "title": "Zoh Amba - Verlegt ins Bi Nuu",
-    "date": "2026-11-03",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82049/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 421843192,
     "title": "The Paris Match",
     "date": "2026-11-03",
@@ -16155,6 +16584,19 @@
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://www.berghain.berlin/de/event/82639/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-09-21"
+  },
+  {
+    "id": 1386884843,
+    "title": "Zoh Amba - Verlegt ins Bi Nuu",
+    "date": "2026-11-03",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82049/",
     "spotifyUrl": "",
     "source": "kantine",
     "addedAt": "2026-09-21"
@@ -17424,6 +17866,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1404761420,
+    "title": "TRAGEDIE x INDISKRET",
+    "date": "2026-11-06",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/061126-TRAGEDIExINDISKRET",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 924469597,
     "title": "Eisbär",
     "date": "2026-11-06",
@@ -17604,6 +18059,32 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 123914771,
+    "title": "BONAPARTE",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/bonaparte-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
+    "id": 21180928,
+    "title": "THE BIG 80S & DEPECHE MODE PARTY",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/the-big-80s-and-depeche-mode-party-11-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 100970638,
@@ -17874,6 +18355,19 @@
     "ticketUrl": "https://quasimodo.club/events/we-love-80s-40-7306",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 93526037,
+    "title": "Stil vor Talent w/ Oliver Koletzki",
+    "date": "2026-11-07",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/071126-StilvorTalentw-OliverKoletzki",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 728255439,
@@ -18417,6 +18911,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1509838254,
+    "title": "ANY GIVEN DAY",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/any-given-day-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 394546102,
     "title": "Literatursalon: Emmanuel Carrère",
     "date": "2026-11-10",
@@ -18661,6 +19168,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-09-02"
+  },
+  {
+    "id": 1848650090,
+    "title": "KYTES",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/kytes-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1571619884,
@@ -19266,6 +19786,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 989126287,
+    "title": "CARPENTER BRUT X HEALTH",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/carpenter-brut-x-health-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 2461484,
     "title": "Four Imaginary Boys – The Cure Tribute",
     "date": "2026-11-13",
@@ -19430,6 +19963,19 @@
     "ticketUrl": "https://quasimodo.club/events/mic-donet-2-7378",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 844284041,
+    "title": "Bunte Träumerei w/ Marten Lou",
+    "date": "2026-11-13",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/131126-BunteTraumerei",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1427452913,
@@ -19855,6 +20401,19 @@
     "addedAt": "2026-09-23"
   },
   {
+    "id": 1044365510,
+    "title": "Monkey Safari - YDKWTD - (All Night Long) Album Release Party",
+    "date": "2026-11-14",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/141126-MonkeySafari",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1594187127,
     "title": "Soul Explosion",
     "date": "2026-11-14",
@@ -20009,6 +20568,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2008661373,
+    "title": "MINE",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/mine-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 2035960772,
@@ -20683,6 +21255,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 369301718,
+    "title": "NIE UND NIMMER",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/nie-und-nimmer-leipzig-2025",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 298358869,
     "title": "Despised Icon / Carnifex / Suffocation",
     "date": "2026-11-18",
@@ -21318,6 +21903,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 836223128,
+    "title": "HAZE",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/haze-jubil%C3%A4umstour-2026-leipzig_",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 2019819950,
     "title": "Anna von Hausswolff",
     "date": "2026-11-20",
@@ -21601,6 +22199,32 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1900309065,
+    "title": "Worakls",
+    "date": "2026-11-20",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/201126-Worakls",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
+    "id": 1450507115,
+    "title": "Mollono.Bass",
+    "date": "2026-11-20",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/201126-Mollono-Bass",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1576715829,
     "title": "Dance Dance Revolution",
     "date": "2026-11-20",
@@ -21805,6 +22429,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1597020272,
+    "title": "FUTURE PALACE",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/future-palace-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1121901013,
@@ -22100,6 +22737,32 @@
     "ticketUrl": "https://quasimodo.club/events/barney-millahs-legendary-escobar-7443",
     "spotifyUrl": "",
     "addedAt": "2026-09-02"
+  },
+  {
+    "id": 1153111556,
+    "title": "Klangkarussell pres. Bias Beach",
+    "date": "2026-11-21",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/211126-Klangkarussellpres-BiasBeach",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
+    "id": 1529910494,
+    "title": "Alan Fitzpatrick",
+    "date": "2026-11-21",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/211126-AlanFitzpatrick",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1628668063,
@@ -22476,6 +23139,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1943764399,
+    "title": "LEAP",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/leap-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 262605622,
     "title": "Skipinnish",
     "date": "2026-11-23",
@@ -22706,6 +23382,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 361371043,
+    "title": "NIKITA MILLER VERLEGT AUF 2027",
+    "date": "2026-11-24",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/nikita-miller-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 423648597,
@@ -23212,6 +23901,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 529389105,
+    "title": "AMISTAT",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/amistat-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1544857754,
     "title": "Baby Lasagna",
     "date": "2026-11-26",
@@ -23428,6 +24130,32 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 34739167,
+    "title": "KAPELLE PETRA",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/kapelle-petra-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
+    "id": 1087743932,
+    "title": "RATHMANN @PRIVATCLUB BERLIN",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/rathmann-privatclub-berlin",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1432963423,
@@ -23827,6 +24555,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 209253489,
+    "title": "Cosmic Gate",
+    "date": "2026-11-28",
+    "time": "19:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-CosmicGate",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1424571216,
     "title": "WILDE HERZEN",
     "date": "2026-11-28",
@@ -23851,6 +24592,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 747506592,
+    "title": "TERROR",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/terror-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 127983021,
@@ -24034,6 +24788,32 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 1614732087,
+    "title": "Oskar Haag | Lost Cause Tour 2026",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72442",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-09-23"
+  },
+  {
+    "id": 994313134,
+    "title": "Ella Stern | „das schlimmste und das beste“ Tour 2026",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2026-11-28/ella-stern-das-schlimmste-und-das-beste-tour-2026",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1800531529,
     "title": "berq",
     "date": "2026-11-28",
@@ -24096,6 +24876,32 @@
     "ticketUrl": "https://quasimodo.club/events/90s-reloaded-party-4-7355",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1741914523,
+    "title": "Lexy & K-Paul (live)",
+    "date": "2026-11-28",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-Lexy-K-Paul-live",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
+    "id": 59886565,
+    "title": "Oliver Huntemann",
+    "date": "2026-11-28",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-OliverHuntemann",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1191847,
@@ -24211,6 +25017,19 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1731686447,
+    "title": "3. JAPANMARKT LEIPZIG",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/japanmarkt-leipzig-2026-november",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1514858798,
@@ -24444,6 +25263,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1119308401,
+    "title": "OOES",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/ooes-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1571628941,
@@ -24906,6 +25738,19 @@
     "ticketUrl": "https://hole-berlin.de/event/2026-12-02-wesghost/",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 400845886,
+    "title": "zeck | „LIFE IS WEIRD SOMETIMES TOUR“",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/zeck-life-is-weird-sometimes-tour-moritzbastei-21598276/?affiliate=LAP&utm_campaign=lkupro&utm_source=LAP&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1795054166,
@@ -25682,6 +26527,32 @@
     "addedAt": "2026-09-23"
   },
   {
+    "id": 954988825,
+    "title": "MICHAEL CANITROT",
+    "date": "2026-12-05",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/051226-MICHAELCANITROT",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
+    "id": 1185673950,
+    "title": "DON DIABLO",
+    "date": "2026-12-05",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/051226-DONDIABLO",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1809739641,
     "title": "24. Japanmarkt",
     "date": "2026-12-06",
@@ -25902,6 +26773,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 2134813209,
+    "title": "STEINER & MADLAINA",
+    "date": "2026-12-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/steiner-madlaina-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1646552977,
     "title": "VOILÀ",
     "date": "2026-12-07",
@@ -26016,6 +26900,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 696155915,
+    "title": "MIGHTY OAKS",
+    "date": "2026-12-08",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/mighty-oaks-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 942504102,
@@ -26210,6 +27107,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 612408185,
+    "title": "Ina Forsman | After Dark Hour Part II European Tour 2026",
+    "date": "2026-12-09",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/ina-forsman-after-dark-hour-tour-part-ii-moritzbastei-21524623/?srsltid=AfmBOorSHIRTlB8g3F2MBacJb8idcKS6hpIf9Z_48AjW92xqaZ0W2WWo",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 773840665,
     "title": "Phoebe Bridgers",
     "date": "2026-12-09",
@@ -26388,6 +27298,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2066307492,
+    "title": "Lennart Schilgen",
+    "date": "2026-12-10",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/73836",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1675941537,
@@ -26596,6 +27519,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 43303557,
+    "title": "Ana Lucia – „Gewinner“",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/spoken_word/2026-12-11/ana-lucia-gewinner",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 974768576,
     "title": "NIMO",
     "date": "2026-12-11",
@@ -26633,6 +27569,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2135306602,
+    "title": "Eskalation w/ Die Gebrüder Brett, KaaCee KomaCasper, Justin Prince, SAGEZZA",
+    "date": "2026-12-11",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/111226-Eskalationw-DieGebruderBrett-KaaCeeKomaCasper-JustinPrince-SAGEZZA",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 108562843,
@@ -26763,6 +27712,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2064951038,
+    "title": "REMODE",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/remode-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 455515506,
@@ -27626,6 +28588,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1230011825,
+    "title": "GOLDROGER",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/goldroger-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 289170602,
     "title": "ORGI’S WEIHNACHTSSHOW",
     "date": "2026-12-18",
@@ -27714,6 +28689,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1193260857,
+    "title": "Deborah De Luca",
+    "date": "2026-12-18",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/181226-DeborahDeLuca",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 2013068191,
@@ -27870,6 +28858,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1037547619,
+    "title": "LEIPZIG XXL",
+    "date": "2026-12-19",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/leipzig-xxl-dezember-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 586999446,
@@ -28390,6 +29391,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 25458672,
+    "title": "NORTHERN LITE - CHRISTMAS SHOW",
+    "date": "2026-12-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/northern-lite-christmas-show-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 2099333188,
     "title": "B-Tight",
     "date": "2026-12-28",
@@ -28584,6 +29598,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1490197346,
+    "title": "SILVESTER XXL",
+    "date": "2026-12-31",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/silvester-xxl-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 149727039,
     "title": "Quasimodo Silvester Party 26/27",
     "date": "2026-12-31",
@@ -28607,6 +29634,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1963724765,
+    "title": "Hippie New Year",
+    "date": "2026-12-31",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/311226-HippieNewYear",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1745908816,
@@ -28765,6 +29805,19 @@
     "addedAt": "2026-09-22"
   },
   {
+    "id": 1410383953,
+    "title": "HAALAND936",
+    "date": "2027-01-11",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/haaland936-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1063940806,
     "title": "U.D.O.",
     "date": "2027-01-11",
@@ -28789,6 +29842,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1178902210,
+    "title": "THE NOTWIST",
+    "date": "2027-01-12",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/the-notwist-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1054195086,
@@ -29139,6 +30205,19 @@
     "spotifyUrl": "",
     "source": "lido",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 467901309,
+    "title": "SO SOON",
+    "date": "2027-01-20",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/so-soon-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 136339945,
@@ -29594,6 +30673,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 241694307,
+    "title": "DR. POP",
+    "date": "2027-01-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/dr-pop-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1164558328,
     "title": "ISAIAH RASHAD",
     "date": "2027-01-28",
@@ -29657,6 +30749,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 102309905,
+    "title": "CALLEJON",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/callejon-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 501722855,
@@ -30048,6 +31153,19 @@
     "addedAt": "2026-09-02"
   },
   {
+    "id": 859439500,
+    "title": "CATT",
+    "date": "2027-02-05",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/CATT-leipzig-taeubchenthal-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1369159141,
     "title": "Ina Müller und Band",
     "date": "2027-02-05",
@@ -30217,6 +31335,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1188678340,
+    "title": "The Surreal Club Night 3027 by 3000Grad",
+    "date": "2027-02-06",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/060227-TheSurrealClubNight3027by3000Grad",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1672165284,
     "title": "Heavysaurus",
     "date": "2027-02-07",
@@ -30369,6 +31500,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 785601591,
+    "title": "BASEMENT",
+    "date": "2027-02-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/basement-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 940797193,
@@ -30668,6 +31812,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 781417310,
+    "title": "anamē",
+    "date": "2027-02-13",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/130227-aname",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 878645258,
@@ -31045,6 +32202,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 552465584,
+    "title": "SPONTY.",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82295/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1995011959,
     "title": "Dominguinho",
     "date": "2027-02-19",
@@ -31198,6 +32368,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 340752038,
+    "title": "REWI",
+    "date": "2027-02-20",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/200227-REWI",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1162901229,
@@ -32250,6 +33433,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 13921615,
+    "title": "PAULWETZ",
+    "date": "2027-03-09",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/paulwetz_leipzig_2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1349680206,
     "title": "twocolors",
     "date": "2027-03-09",
@@ -32313,6 +33509,19 @@
     "spotifyUrl": "",
     "source": "lido",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 1428162488,
+    "title": "TRÄNEN",
+    "date": "2027-03-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tr%C3%A4nrn-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1155734545,
@@ -32391,6 +33600,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1700992266,
+    "title": "ROLF MILLER",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/rolf-miller-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 25426895,
@@ -32575,6 +33797,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1483314545,
+    "title": "ROCK TO MODE",
+    "date": "2027-03-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/rock-to-mode-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 658193713,
     "title": "Docta Rude with Dutch Skaexpress + Supports",
     "date": "2027-03-13",
@@ -32625,6 +33860,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1056067205,
+    "title": "GRAVEYARD & BLUES PILLS",
+    "date": "2027-03-14",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/graveyard-blues-pills-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 188812898,
@@ -32796,6 +34044,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 815758585,
+    "title": "JULIA EFFEKT",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/julia-effekt-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 32289913,
     "title": "OG Keemo (Zusatzshow)",
     "date": "2027-03-18",
@@ -32885,6 +34146,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1356839098,
+    "title": "ANNA-MARIA ZIMMERMANN",
+    "date": "2027-03-20",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/anna-maria-zimmermann-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1421837442,
@@ -33043,6 +34317,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 1939472231,
+    "title": "KMFDM",
+    "date": "2027-03-26",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/kmfdm-leizig-2027-03",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1271663641,
     "title": "Berlin Shake",
     "date": "2027-03-26",
@@ -33080,6 +34367,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 1190283847,
+    "title": "LANCE BUTTERS",
+    "date": "2027-03-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/lance-butters-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 967127720,
@@ -33301,6 +34601,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 796528251,
+    "title": "LEONY",
+    "date": "2027-04-03",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/leony-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 730614453,
@@ -33779,6 +35092,19 @@
     "addedAt": "2026-08-28"
   },
   {
+    "id": 1475194788,
+    "title": "Weltauswahl by Extrawelt",
+    "date": "2027-04-10",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/100427-WeltauswahlbyExtrawelt",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 2123246616,
     "title": "OLAF SCHUBERT UND SEINE FREUNDE",
     "date": "2027-04-11",
@@ -33855,6 +35181,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1728290364,
+    "title": "MONET192",
+    "date": "2027-04-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/monet192-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 909649939,
@@ -33986,6 +35325,19 @@
     "addedAt": "2026-09-23"
   },
   {
+    "id": 910292479,
+    "title": "MARC ATLAS",
+    "date": "2027-04-15",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/marc-atlas-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 2108228459,
     "title": "Raum27",
     "date": "2027-04-15",
@@ -34036,6 +35388,19 @@
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 778413152,
+    "title": "ABBA UNFORGETTABLE",
+    "date": "2027-04-16",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/abba-unforgettable-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 379284317,
@@ -34101,6 +35466,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 1975558565,
+    "title": "DIE LÄRMER",
+    "date": "2027-04-17",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/die-l%C3%A4rmer-tour-2027-leipzig",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1643614814,
@@ -34336,6 +35714,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1155419439,
+    "title": "DREIVIERTELBLUT",
+    "date": "2027-04-22",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/dreiviertelblut-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1724245845,
     "title": "AND ONE",
     "date": "2027-04-22",
@@ -34373,6 +35764,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1771775654,
+    "title": "REIS AGAINST THE SPÜLMASCHINE",
+    "date": "2027-04-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/reis-against-the-spuelmaschine-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 404296791,
@@ -35058,6 +36462,19 @@
     "addedAt": "2026-09-22"
   },
   {
+    "id": 1259987782,
+    "title": "TOM HENGST",
+    "date": "2027-05-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tom-hengst-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1857373810,
     "title": "Laura Abla & Ceddo",
     "date": "2027-05-10",
@@ -35473,6 +36890,19 @@
     "addedAt": "2026-08-28"
   },
   {
+    "id": 61529369,
+    "title": "DIE SKEPTIKER & FREUNDE DER ITALIENISCHEN OPER",
+    "date": "2027-05-29",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/skeptiker-freunde-der-italienischen-oper-leipzig",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 320141606,
     "title": "Mike + The Mechanics",
     "date": "2027-05-29",
@@ -35745,6 +37175,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 927897281,
+    "title": "DIORAMA",
+    "date": "2027-09-17",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/diorama-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1124410725,
     "title": "DIORAMA",
     "date": "2027-09-18",
@@ -35755,6 +37198,19 @@
     "ticketUrl": "https://hole-berlin.de/event/2027-09-18-diorama/",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1955852544,
+    "title": "NIKITA MILLER",
+    "date": "2027-09-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/nikita-miller-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 173003408,
@@ -35910,6 +37366,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-09-16"
+  },
+  {
+    "id": 1114309758,
+    "title": "TOM TWERS",
+    "date": "2027-10-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tom-twers-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 925095485,
@@ -36132,6 +37601,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 968994869,
+    "title": "SHE PAST AWAY",
+    "date": "2027-11-06",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/she-past-away-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
+  },
+  {
     "id": 1342750361,
     "title": "William Shakespeare’s Romeo + Juliet Film in Concert",
     "date": "2027-11-06",
@@ -36351,6 +37833,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 429569225,
+    "title": "DIE PUBERTÄTS-DOCS (Dr. Jan-Uwe Rogge und Matthias Jung)",
+    "date": "2028-01-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/die-pubert%C3%A4ts-docs-leipzig-2028",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 875374159,
