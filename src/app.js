@@ -85,6 +85,13 @@ let going = loadData('going') || []
 let seenEvents = loadData('seenEvents') || []
 let currentView = 'liste'
 let calendarOffset = 0
+// Die Liste-Ansicht rendert bei mehreren tausend Events (z.B. "Alle Locations" in Berlin)
+// nicht mehr alle auf einmal, sondern nur ein anfängliches Fenster - der Rest wird beim
+// Scrollen in Häppchen nachgeladen. Das hält den Re-Render bei jedem Filterwechsel schnell,
+// ohne dass Events unerreichbar würden (man scrollt einfach weiter und es kommt nach).
+const EVENT_RENDER_BATCH = 60
+let renderedEventLimit = EVENT_RENDER_BATCH
+let loadMoreObserver = null
 let swipeActiveWrapper = null
 let swipeDocListenerAdded = false
 let ptrListenerAdded = false
@@ -338,14 +345,18 @@ function getFilteredEvents() {
 }
 
 function renderGroupedEvents() {
-  const filtered = getFilteredEvents()
   const today = new Date()
   today.setHours(0,0,0,0)
+  const future = getFilteredEvents().filter(e => {
+    const d = new Date(e.date + 'T12:00:00')
+    return Math.floor((d - today) / 86400000) >= 0
+  })
+  const filtered = future.slice(0, renderedEventLimit)
+  const hasMore = future.length > filtered.length
   const groups = {}
   filtered.forEach(e => {
     const d = new Date(e.date + 'T12:00:00')
     const diff = Math.floor((d - today) / 86400000)
-    if (diff < 0) return
     let label
     const todayDay = today.getDay() === 0 ? 6 : today.getDay() - 1
     const thisMonday = new Date(today); thisMonday.setDate(today.getDate() - todayDay)
@@ -375,6 +386,7 @@ function renderGroupedEvents() {
         </div>
       `).join('')}
     </div>
+    ${hasMore ? `<div id="load-more-sentinel" style="height:1px;"></div><p class="text-center text-xs py-6 skeleton-pulse" style="color:rgba(255,255,255,0.25);">Weitere Events werden geladen…</p>` : ''}
   `
 }
 
@@ -706,6 +718,10 @@ function refreshCalendarPane() {
 }
 
 function updateView(reRenderFilters = false) {
+  // Jeder Aufruf hier kommt von einer Filteränderung (Stadt/Location/Suche) - das
+  // Render-Fenster wird dabei immer zurückgesetzt, sonst würde z.B. nach dem Scrollen
+  // tief in die Liste ein Filterwechsel plötzlich hunderte Events auf einmal rendern.
+  renderedEventLimit = EVENT_RENDER_BATCH
   if (reRenderFilters) {
     const fbw = document.getElementById('filter-bar-wrap')
     if (fbw) { fbw.innerHTML = renderFilters(); attachFilterBarEvents() }
@@ -1200,6 +1216,25 @@ function attachSwipeGestures() {
     }, { passive: true })
   }
   document.querySelectorAll('.event-swipe-wrapper').forEach(wrapper => attachSwipeToWrapper(wrapper))
+  setupLoadMoreObserver()
+}
+
+// Lädt beim Scrollen in Richtung Listenende das nächste Häppchen Events nach (siehe
+// EVENT_RENDER_BATCH). Wird nach jedem Render der Liste-Ansicht neu aufgesetzt, da der
+// Sentinel-Knoten beim Neu-Rendern jedes Mal ersetzt wird.
+function setupLoadMoreObserver() {
+  if (loadMoreObserver) { loadMoreObserver.disconnect(); loadMoreObserver = null }
+  const sentinel = document.getElementById('load-more-sentinel')
+  if (!sentinel) return
+  loadMoreObserver = new IntersectionObserver((entries) => {
+    if (!entries[0].isIntersecting) return
+    loadMoreObserver.disconnect()
+    loadMoreObserver = null
+    renderedEventLimit += EVENT_RENDER_BATCH
+    const listContent = document.getElementById('event-list-content')
+    if (listContent) { listContent.innerHTML = renderGroupedEvents(); attachSwipeGestures() }
+  }, { rootMargin: '600px 0px' })
+  loadMoreObserver.observe(sentinel)
 }
 
 function updateCard(id) {
