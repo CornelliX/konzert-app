@@ -74,7 +74,6 @@ let dropdownListenerAdded = false
 const bookmarkInFlight = new Set()
 let fetchSeq = 0
 let markSeenTimer = null
-let searchDebounceTimer = null
 let titleAnimated = false
 
 export async function renderApp(el) {
@@ -293,9 +292,12 @@ function renderFilters() {
             `).join('')}
           </div>
         </div>
-        <div style="position:relative; flex:1;">
-          <input id="search-input" type="text" placeholder="Suche…" value="${filters.search || ''}" style="width:100%; box-sizing:border-box; padding:9px 30px 9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none;" />
-          <button id="search-clear" type="button" aria-label="Suche löschen" style="position:absolute; right:4px; top:50%; transform:translateY(-50%); width:24px; height:24px; border:none; background:transparent; color:rgba(255,255,255,0.4); font-size:18px; line-height:1; cursor:pointer; display:${filters.search ? 'flex' : 'none'}; align-items:center; justify-content:center; border-radius:50%;">×</button>
+        <div style="display:flex; gap:10px; align-items:center; flex:1; min-width:0;">
+          <div style="position:relative; flex:1; min-width:0;">
+            <input id="search-input" type="search" placeholder="Suche…" value="${filters.search || ''}" style="width:100%; box-sizing:border-box; padding:9px 30px 9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none; -webkit-appearance:none; appearance:none;" />
+            <button id="search-clear" type="button" aria-label="Suche löschen" style="position:absolute; right:4px; top:50%; transform:translateY(-50%); width:24px; height:24px; border:none; background:transparent; color:rgba(255,255,255,0.4); font-size:18px; line-height:1; cursor:pointer; display:${filters.search ? 'flex' : 'none'}; align-items:center; justify-content:center; border-radius:50%;">×</button>
+          </div>
+          <button id="search-submit" type="button" title="Suchen" aria-label="Suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex-shrink:0; width:34px; height:34px; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
         </div>
       </div>
     </div>
@@ -419,8 +421,8 @@ function renderEventCard(e) {
               ${isBookmarked && !isGoing ? '<span class="text-xs font-semibold" style="color:#f472b6;">♡ gemerkt</span>' : ''}
             </div>
             <h3 class="syne text-white leading-tight mb-1" style="font-size:1rem; font-weight:700; letter-spacing:-0.01em;">${esc(e.title)}</h3>
-            <p class="text-xs mb-2" style="color:rgba(255,255,255,0.5);">
-              ${loc ? esc(loc.name) + ' <span style="color:rgba(255,255,255,0.3);">·</span> ' + esc(loc.city) : (e.locationName ? esc(e.locationName) + ' <span style="color:rgba(255,255,255,0.3);">·</span> ' + esc(e.locationCity || '') : '')}
+            <p class="text-xs mb-2" style="color:rgba(255,255,255,0.62);">
+              ${loc ? esc(loc.name) : esc(e.locationName || '')}
             </p>
             ${e.description ? `<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.5);">${esc(e.description)}</p>` : ''}
           </div>
@@ -641,18 +643,23 @@ function attachFilterBarEvents() {
   })
   const searchInput = document.getElementById('search-input')
   const searchClear = document.getElementById('search-clear')
+  const searchSubmit = document.getElementById('search-submit')
+  // Die Liste wird erst neu gerendert, wenn der Nutzer die Eingabe mit Enter/Suchen-Button
+  // bestätigt - nicht bei jedem Tastendruck. So bleibt die Eingabe beim Tippen immer flüssig,
+  // unabhängig davon, wie teuer der Listen-Re-Render bei vielen Events ist.
+  const commitSearch = () => {
+    filters.search = searchInput ? searchInput.value : ''
+    searchInput?.blur()
+    updateView(false)
+  }
   searchInput?.addEventListener('input', (e) => {
-    filters.search = e.target.value
-    if (searchClear) searchClear.style.display = filters.search ? 'flex' : 'none'
-    // Der Re-Render der Liste ist bei vielen Events teuer (volle Neuerstellung + alle
-    // Swipe-/Button-Listener neu anhängen) - bei jedem einzelnen Tastendruck sofort
-    // ausgeführt ruckelte es beim Tippen und ließ Taps auf den Clear-Button manchmal
-    // ins Leere laufen, weil noch ein Render vom vorherigen Zeichen lief. Jetzt gebündelt.
-    clearTimeout(searchDebounceTimer)
-    searchDebounceTimer = setTimeout(() => updateView(false), 150)
+    if (searchClear) searchClear.style.display = e.target.value ? 'flex' : 'none'
   })
+  searchInput?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); commitSearch() }
+  })
+  searchSubmit?.addEventListener('click', () => commitSearch())
   searchClear?.addEventListener('click', () => {
-    clearTimeout(searchDebounceTimer)
     filters.search = ''
     if (searchInput) { searchInput.value = ''; searchInput.focus() }
     searchClear.style.display = 'none'
