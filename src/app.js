@@ -57,6 +57,24 @@ let locations = getLocations()
 // laufen pro Event bei jedem Tastendruck/Filterwechsel - bei mehreren tausend Events macht
 // der lineare .find()-Scan dort spürbar den Unterschied)
 const locationsById = new Map(locations.map(l => [l.id, l]))
+// Cache für pro Render teure, aber pro Event unveränderliche Werte (Datumsformatierung via
+// toLocaleDateString, Spotify-Erkennung via Regex-Splits). renderEventCard läuft bei jedem
+// Filterwechsel/Suchlauf für alle sichtbaren Events erneut - bei ~2000+ Events (z.B. beim
+// Zurücksetzen der Suche) hat das Neuberechnen dieser Werte bei jedem einzelnen Render
+// spürbar Zeit gekostet, obwohl sich Titel/Datum eines Events zwischen zwei Renders nie ändern.
+const eventRenderMetaCache = new Map()
+function getEventRenderMeta(e) {
+  let meta = eventRenderMetaCache.get(e.id)
+  if (meta) return meta
+  const dateStr = new Date(e.date + 'T12:00:00').toLocaleDateString('de-DE', { weekday: 'short', day: 'numeric', month: 'short' })
+  const showSpotify = e.type === 'konzert' && !looksLikeNonMusicEvent(e.title)
+  // Bei explizit hinterlegtem Spotify-Link (manuell eingetragene Events) keine Mehrfach-Erkennung -
+  // der Link ist dann ja schon eindeutig
+  const spotifyArtists = showSpotify && !e.spotifyUrl ? extractArtists(e.title) : []
+  meta = { dateStr, showSpotify, spotifyArtists, spotifyMulti: spotifyArtists.length >= 2 }
+  eventRenderMetaCache.set(e.id, meta)
+  return meta
+}
 let currentUser = null
 let events = []
 let container = null
@@ -393,16 +411,10 @@ function renderEventCard(e) {
   const isBookmarked = bookmarked.some(b => b == e.id)
   const isGoing = going.some(g => g == e.id)
   const eventIsNew = isNew(e)
-  const dateObj = new Date(e.date + 'T12:00:00')
-  const dateStr = dateObj.toLocaleDateString('de-DE', { weekday: 'short', day: 'numeric', month: 'short' })
+  const { dateStr, showSpotify, spotifyMulti } = getEventRenderMeta(e)
   const accentSolid = '#818cf8'
   const accentAlpha = 'rgba(99,102,241,'
   const spotifyIconSvg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>'
-  const showSpotify = e.type === 'konzert' && !looksLikeNonMusicEvent(e.title)
-  // Bei explizit hinterlegtem Spotify-Link (manuell eingetragene Events) keine Mehrfach-Erkennung -
-  // der Link ist dann ja schon eindeutig
-  const spotifyArtists = showSpotify && !e.spotifyUrl ? extractArtists(e.title) : []
-  const spotifyMulti = spotifyArtists.length >= 2
 
   return `
     <div class="event-swipe-wrapper" data-event-id="${e.id}" style="position:relative; overflow:hidden; border-radius:16px;">
@@ -659,9 +671,14 @@ function attachFilterBarEvents() {
     if (e.key === 'Enter') { e.preventDefault(); commitSearch() }
   })
   searchSubmit?.addEventListener('click', () => commitSearch())
+  // preventDefault auf mousedown verhindert, dass der Tap den Fokus kurz vom Input wegnimmt -
+  // sonst musste unten explizit wieder .focus() aufgerufen werden, was auf Mobilgeräten die
+  // virtuelle Tastatur kurz zu- und wieder aufklappen lässt und den Clear-Tap spürbar träge
+  // wirken ließ. So bleibt der Fokus durchgehend im Feld, Clear reagiert sofort.
+  searchClear?.addEventListener('mousedown', (e) => e.preventDefault())
   searchClear?.addEventListener('click', () => {
     filters.search = ''
-    if (searchInput) { searchInput.value = ''; searchInput.focus() }
+    if (searchInput) searchInput.value = ''
     searchClear.style.display = 'none'
     updateView(false)
   })

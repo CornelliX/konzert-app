@@ -24,6 +24,19 @@ input[type="date"]:valid, input[type="time"]:valid { color: white !important; }
 input, textarea { color-scheme: dark; }
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; appearance: none; }
+#search-submit, #search-clear {
+  transition: transform 0.1s ease, background-color 0.1s ease, color 0.1s ease;
+}
+#search-submit:active {
+  transform: scale(0.86);
+  background: rgba(255,255,255,0.3);
+  color: white;
+}
+#search-clear:active {
+  transform: translateY(-50%) scale(0.8) !important;
+  background: rgba(255,255,255,0.18) !important;
+  color: white !important;
+}
 input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 .noise { position: relative; }
 .noise::after {
