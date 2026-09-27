@@ -71,12 +71,29 @@ function today() {
 
 async function scrapeConne() {
   console.log('📡 Conne Island (RSS)...')
+  let browser
+  const events = []
   try {
+    // conne-island.de sitzt seit Kurzem hinter Anubis (Proof-of-Work-Bot-Schutz) - ein
+    // simpler fetch() bekommt dadurch statt des Feeds nur noch die JS-Challenge-Seite
+    // zurück ("Making sure you're not a bot!"), wodurch der Scraper 0 Events fand. Ein
+    // echter Browser löst die (bewusst leichte) Challenge automatisch; die dabei gesetzten
+    // Auth-Cookies reichen danach für einen normalen fetch() auf den echten Feed-Text.
+    const puppeteer = await import('puppeteer')
+    browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
+    const page = await browser.newPage()
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+    await page.goto('https://conne-island.de/rss.xml', { waitUntil: 'networkidle2', timeout: 30000 })
+    await new Promise(r => setTimeout(r, 4000))
+    const cookies = await page.cookies()
+    await browser.close()
+    browser = null
+
+    const cookieHeader = cookies.map(c => `${c.name}=${c.value}`).join('; ')
     const res = await fetch('https://conne-island.de/rss.xml', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
+      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)', 'Cookie': cookieHeader }
     })
     const text = await res.text()
-    const events = []
 
     // Items aus RSS extrahieren
     const items = text.split('<item>')
@@ -128,6 +145,8 @@ async function scrapeConne() {
   } catch(e) {
     console.log(`  ✗ Fehler: ${e.message}`)
     return []
+  } finally {
+    if (browser) await browser.close().catch(() => {})
   }
 }
 
