@@ -627,13 +627,15 @@ async function scrapeColumbiahalle() {
       const timeMatch = infoText.match(/Beginn:\s*(\d{1,2}):(\d{2})\s*Uhr/)
       const time = timeMatch ? `${String(timeMatch[1]).padStart(2,'0')}:${timeMatch[2]}` : '20:00'
 
-      // Venue-eigene Event-Seite bevorzugen
-      const calHref = $(el).find('div.event_info_spalte.calendar a').first().attr('href') || ''
-      const venueUrl = calHref
-        ? (calHref.startsWith('http') ? calHref : 'https://www.columbiahalle.berlin/' + calHref)
-        : ''
+      // ACHTUNG: div.event_info_spalte.calendar ist trotz der harmlos aussehenden
+      // "veranstaltung/xyz.html"-URL KEIN Event-Detailseiten-Link, sondern ein
+      // "Kalender-Eintrag"-Link, der eine .ics-Datei ausliefert (Content-Type:
+      // text/calendar) - wurde bisher fälschlich als bevorzugte "Venue-eigene
+      // Event-Seite" benutzt, wodurch der Info-Button bei jedem Columbiahalle-Event
+      // statt einer Infoseite einen Kalendereintrag geöffnet hat. Die Site hat keine
+      // echte Detailseite pro Event; der Ticket-Link zeigt dagegen echte Eventinfos.
       const extTicket = $(el).find('div.event_info_spalte.tickets a').first().attr('href') || ''
-      const ticketUrl = venueUrl || extTicket || 'https://www.columbiahalle.berlin/veranstaltungen.html'
+      const ticketUrl = extTicket || 'https://www.columbiahalle.berlin/veranstaltungen.html'
 
       events.push({ title, date, time, locationId: 32, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'columbiahalle' })
     })
