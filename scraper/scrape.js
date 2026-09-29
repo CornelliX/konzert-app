@@ -2800,7 +2800,10 @@ async function scrapeTheaterDesWestens() {
         const lines = art.innerText.split('\n').map(l => l.trim()).filter(Boolean)
         // Genre steht in der 3. nicht-leeren Zeile (nach Bildnachweis und Titel)
         const genre = lines[2] || ''
-        const dateMatch = art.innerText.match(/(\d{1,2})\.\s*(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4}),\s*(\d{2}:\d{2})/)
+        // Uhrzeit optional matchen (nicht im selben Pflicht-Match wie das Datum) - sonst
+        // würden Termine mit noch unbekannter Uhrzeit ("tba") komplett durchfallen, wie es
+        // bei der Zitadelle Spandau (anderer Scraper, gleiches Regex-Muster) passiert ist.
+        const dateMatch = art.innerText.match(/(\d{1,2})\.\s*(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4})(?:,\s*(\d{2}:\d{2}))?/)
         const weitereMatch = art.innerText.match(/\((\d+) weitere[rn]? Termin/)
         return {
           title, href, genre,
@@ -2813,10 +2816,10 @@ async function scrapeTheaterDesWestens() {
     const monthMap = { Januar:'01',Februar:'02',März:'03',April:'04',Mai:'05',Juni:'06',Juli:'07',August:'08',September:'09',Oktober:'10',November:'11',Dezember:'12' }
 
     function parseGermanDate(str) {
-      // "01. Juni 2026, 19:00" oder "09. November 2026, 19:30"
-      const m = str.match(/(\d{1,2})\.\s*(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4}),\s*(\d{2}:\d{2})/)
+      // "01. Juni 2026, 19:00" oder "09. November 2026, 19:30" - Uhrzeit optional, s.o.
+      const m = str.match(/(\d{1,2})\.\s*(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4})(?:,\s*(\d{2}:\d{2}))?/)
       if (!m) return null
-      return { date: `${m[3]}-${monthMap[m[2]]}-${String(m[1]).padStart(2,'0')}`, time: m[4] }
+      return { date: `${m[3]}-${monthMap[m[2]]}-${String(m[1]).padStart(2,'0')}`, time: m[4] || '20:00' }
     }
 
     for (const card of cards) {
@@ -2881,11 +2884,15 @@ async function scrapeZitadelleSpandau() {
       if (!title) return
 
       // Datum aus aria-label: "Event: Fat Freddy's Drop, 05. Juni 2026, Beginn 19:00 – Ausverkauft"
+      // Uhrzeit separat matchen statt im selben Regex zu verlangen - sonst fiel z.B. "Amy
+      // Macdonald, 14. Juli 2027, Beginn tba. – Ausverkauft" (Zeit noch nicht bekannt) komplett
+      // durch den Filter, obwohl das Event selbst gültig ist.
       const ariaLabel = $(el).find('a.cmf-link').attr('aria-label') || ''
-      const dateMatch = ariaLabel.match(/(\d{1,2})\.\s*(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4}),\s*Beginn\s+(\d{2}:\d{2})/)
+      const dateMatch = ariaLabel.match(/(\d{1,2})\.\s*(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4})/)
       if (!dateMatch) return
       const date = `${dateMatch[3]}-${monthMap[dateMatch[2]]}-${String(dateMatch[1]).padStart(2,'0')}`
-      const time = dateMatch[4]
+      const timeMatch = ariaLabel.match(/Beginn\s+(\d{2}:\d{2})/)
+      const time = timeMatch ? timeMatch[1] : '20:00'
       if (date < today()) return
 
       const href = $(el).find('a.cmf-link').attr('href') || 'https://citadel-music-festival.de/events'
