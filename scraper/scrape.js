@@ -3450,6 +3450,14 @@ async function main() {
     return !(compact.includes('abgesagt') || compact.includes('cancelled') || compact.includes('canceled'))
   })
 
+  // Auf eine andere Location verlegte Events am ALTEN Venue rausfiltern (Sicherheitsnetz für
+  // Scraper ohne eigene Prüfung, z.B. "Trinity presents: PI'ERRE BOURNE // verlegt ins
+  // Mikropol" wurde bisher weiter bei der alten Location (Gretchen) UND - falls die neue
+  // Location eigenständig gescraped wird - zusätzlich dort angezeigt). Bewusst nur
+  // "verlegt ins/nach/zu <Ort>" (Ortswechsel), NICHT "verlegt auf <Datum/Jahr>" (reine
+  // Terminverschiebung, bleibt am selben Venue gültig, z.B. "VERLEGT AUF 2027").
+  allEvents = allEvents.filter(e => !/verlegt\s+(ins|nach|zu)\s+\S/i.test(e.title))
+
   // Duplikate entfernen (gleicher Titel + Datum + Location)
   const seen = new Set()
   allEvents = allEvents.filter(e => {
