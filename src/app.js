@@ -66,7 +66,11 @@ const eventRenderMetaCache = new Map()
 function getEventRenderMeta(e) {
   let meta = eventRenderMetaCache.get(e.id)
   if (meta) return meta
-  const dateStr = new Date(e.date + 'T12:00:00').toLocaleDateString('de-DE', { weekday: 'short', day: 'numeric', month: 'short' })
+  // Jahr nur mit anzeigen, wenn das Event nicht im laufenden Jahr stattfindet - sonst wäre
+  // bei z.B. weit vorausgeplanten Konzerten ("27. November 2027") aus dem Datum allein nicht
+  // ersichtlich, dass es nicht im aktuellen Jahr ist.
+  const showYear = new Date(e.date + 'T12:00:00').getFullYear() !== new Date().getFullYear()
+  const dateStr = new Date(e.date + 'T12:00:00').toLocaleDateString('de-DE', { weekday: 'short', day: 'numeric', month: 'short', ...(showYear ? { year: 'numeric' } : {}) })
   const showSpotify = e.type === 'konzert' && !looksLikeNonMusicEvent(e.title)
   // Bei explizit hinterlegtem Spotify-Link (manuell eingetragene Events) keine Mehrfach-Erkennung -
   // der Link ist dann ja schon eindeutig
