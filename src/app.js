@@ -5,6 +5,25 @@ function esc(s) {
   return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
 }
 
+// Nur http(s)-URLs durchlassen, bevor eine gescrapte oder manuell eingetragene URL als href
+// landet - eine kompromittierte/bösartige Venue-Seite oder das öffentliche "Event
+// hinzufügen"-Formular könnten sonst z.B. "javascript:..." einschleusen, das im
+// Seitenkontext ausgeführt würde, sobald jemand klickt.
+function safeUrl(url) {
+  if (!url) return ''
+  try {
+    const u = new URL(url, location.href)
+    return (u.protocol === 'http:' || u.protocol === 'https:') ? u.href : ''
+  } catch { return '' }
+}
+
+// RFC 5545: Komma/Semikolon/Backslash escapen, vor allem aber Zeilenumbrüche entfernen -
+// sonst könnte ein gescrapter Titel mit eingebettetem CR/LF zusätzliche ICS-Zeilen/Felder
+// einschleusen (z.B. eine gefälschte URL oder einen Alarm) statt nur Text in SUMMARY zu sein.
+function icsEscape(s) {
+  return String(s ?? '').replace(/[\r\n]+/g, ' ').replace(/([,;\\])/g, '\\$1')
+}
+
 // Spotify-Suchlink ohne API/Credentials: öffnet die Spotify-Suchergebnisse für den
 // (von Support-Acts/Zusätzen bereinigten) Künstlernamen. Kein direkter Artist-Link,
 // aber robust und wartungsfrei - siehe spotifyUrl für den Fallback auf einen echten Link.
@@ -434,6 +453,10 @@ function renderEventCard(e) {
   const accentSolid = '#818cf8'
   const accentAlpha = 'rgba(99,102,241,'
   const spotifyIconSvg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>'
+  // Beide Felder können aus gescrapten Venue-Seiten oder dem öffentlichen "Event
+  // hinzufügen"-Formular stammen - nie ungeprüft als href verwenden (s. safeUrl)
+  const infoHref = safeUrl(e.ticketUrl) || safeUrl(loc?.website ? 'https://' + loc.website : '')
+  const spotifyHref = safeUrl(e.spotifyUrl) || spotifySearchUrl(e.title)
 
   return `
     <div class="event-swipe-wrapper" data-event-id="${e.id}" style="position:relative; overflow:hidden; border-radius:16px;">
@@ -459,10 +482,10 @@ function renderEventCard(e) {
           </div>
           <div class="flex gap-2 mt-1" style="align-items:center;">
             <div style="display:flex; gap:6px; flex:1; min-width:0;">
-              ${(e.ticketUrl || loc?.website) ? `<a href="${e.ticketUrl || 'https://' + loc.website}" target="_blank" title="Infos" aria-label="Infos" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></a>` : ''}
+              ${infoHref ? `<a href="${esc(infoHref)}" target="_blank" title="Infos" aria-label="Infos" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></a>` : ''}
               ${showSpotify ? (spotifyMulti
                 ? `<button data-spotify-picker="${e.id}" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</button>`
-                : `<a href="${e.spotifyUrl || spotifySearchUrl(e.title)}" target="_blank" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</a>`
+                : `<a href="${esc(spotifyHref)}" target="_blank" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</a>`
               ) : ''}
               <button data-ics="${e.id}" title="Zu Apple Kalender hinzufügen" aria-label="Zu Apple Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.5);"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></button>
               <button data-gcal="${e.id}" title="Zu Google Kalender hinzufügen" aria-label="Zu Google Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.5);"><svg width="14" height="14" viewBox="0 0 48 48" fill="currentColor"><path d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg></button>
@@ -1171,7 +1194,8 @@ function attachSwipeToWrapper(wrapper) {
     if (!e) return
     const loc = locations.find(l => l.id === e.locationId)
     const locName = loc ? loc.name : (e.locationName || '')
-    const infoUrl = e.ticketUrl && e.ticketUrl !== '' ? `\n${e.ticketUrl}` : ''
+    const safeTicketUrl = safeUrl(e.ticketUrl)
+    const infoUrl = safeTicketUrl ? `\n${safeTicketUrl}` : ''
     const text = `${e.title} – ${locName}, ${e.date} ${e.time}${infoUrl}`
     if (navigator.share) navigator.share({ title: e.title, text })
     else { navigator.clipboard.writeText(text); alert('In Zwischenablage kopiert!') }
@@ -1185,7 +1209,7 @@ function attachSwipeToWrapper(wrapper) {
     const startDate = eventDateUTC(e.date, e.time)
     const endDate = new Date(startDate); endDate.setHours(endDate.getHours() + 2)
     const fmt = d => `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}T${String(d.getHours()).padStart(2,'0')}${String(d.getMinutes()).padStart(2,'0')}00`
-    const ics = ['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT',`DTSTART:${fmt(startDate)}`,`DTEND:${fmt(endDate)}`,`SUMMARY:${e.title}`,`LOCATION:${locName}, ${locCity}`,`URL:${e.ticketUrl || ''}`, 'END:VEVENT','END:VCALENDAR'].join('\r\n')
+    const ics = ['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT',`DTSTART:${fmt(startDate)}`,`DTEND:${fmt(endDate)}`,`SUMMARY:${icsEscape(e.title)}`,`LOCATION:${icsEscape(locName)}, ${icsEscape(locCity)}`,`URL:${safeUrl(e.ticketUrl)}`, 'END:VEVENT','END:VCALENDAR'].join('\r\n')
     const blob = new Blob([ics], { type: 'text/calendar' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
