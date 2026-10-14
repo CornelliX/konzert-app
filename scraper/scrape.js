@@ -3356,6 +3356,75 @@ async function scrapeUberArena() {
   return events
 }
 
+async function scrapeWaschhaus() {
+  console.log('📡 Waschhaus Potsdam (Puppeteer)...')
+  const events = []
+  let browser
+  try {
+    const puppeteer = await import('puppeteer')
+    browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
+    const page = await browser.newPage()
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+    await page.goto('https://www.waschhaus.de/veranstaltungen', { waitUntil: 'load', timeout: 60000 })
+
+    // "Zeig mir mehr!" lädt per JS ohne eigenen Query-Param/API-Endpunkt nach - wiederholt
+    // klicken bis sich die Artikel-Anzahl nicht mehr ändert
+    let prevCount = -1
+    for (let i = 0; i < 10; i++) {
+      const count = await page.evaluate(() => document.querySelectorAll('article').length)
+      if (count === prevCount) break
+      prevCount = count
+      const clicked = await page.evaluate(() => {
+        const btn = document.querySelector('.waschhaus-event-load-more')
+        if (btn) { btn.click(); return true }
+        return false
+      })
+      if (!clicked) break
+      await new Promise(r => setTimeout(r, 1500))
+    }
+
+    const rawEvents = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('article')).map(art => {
+        const title = art.querySelector('h3 a')?.textContent?.trim() || ''
+        const dateSpans = Array.from(art.querySelectorAll('.waschhaus-event-date span')).map(s => s.textContent.trim())
+        const type = art.querySelector('.waschhaus-event-list-item__type span')?.textContent?.trim() || ''
+        const infoHref = art.querySelector('a.waschhaus-event-list-item__image')?.getAttribute('href') || ''
+        const ticketHref = art.querySelector('a.btn-primary')?.getAttribute('href') || ''
+        return { title, dateSpans, type, infoHref, ticketHref }
+      })
+    })
+    await browser.close()
+    browser = null
+
+    // Datum steckt als [Wochentag, Tag, Monat(Abk.), Jahr, "", Uhrzeit] in .waschhaus-event-date
+    const monthMap = { Jan:'01',Feb:'02',Mär:'03',Apr:'04',Mai:'05',Jun:'06',Jul:'07',Aug:'08',Sep:'09',Okt:'10',Nov:'11',Dez:'12' }
+    const seen = new Set()
+    for (const { title, dateSpans, type, infoHref, ticketHref } of rawEvents) {
+      if (!title || /abgesagt/i.test(title)) continue
+      const [, day, monthAbbr, year, , time] = dateSpans
+      const month = monthMap[monthAbbr]
+      if (!day || !month || !year) continue
+      const date = `${year}-${month}-${String(day).padStart(2, '0')}`
+      if (date < today()) continue
+      const key = date + title
+      if (seen.has(key)) continue
+      seen.add(key)
+
+      const ticketUrl = ticketHref || (infoHref ? 'https://www.waschhaus.de' + infoHref : 'https://www.waschhaus.de/veranstaltungen')
+      // Venue-eigene Kategorie hat Vorrang vor Titel-Raten, siehe Metropol/Kesselhaus
+      const resolvedType = type === 'Konzert' ? 'konzert' : type === 'Party' ? 'party' : detectType(title)
+      events.push({ title, date, time: time || '20:00', locationId: 58, type: resolvedType, description: '', ticketUrl, spotifyUrl: '', source: 'waschhaus' })
+    }
+
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ Waschhaus: ${e.message}`)
+  } finally {
+    if (browser) await browser.close().catch(() => {})
+  }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -3419,6 +3488,7 @@ async function main() {
     scrapeVelodrom(),
     scrapeUFO(),
     scrapeUberArena(),
+    scrapeWaschhaus(),
   ])
 
   let allEvents = []
@@ -3428,7 +3498,7 @@ async function main() {
 
   // Venues die 0 Events lieferten: aus letztem Snapshot nachladen (CI-IP-Blockierung)
   const scrapedLocationIds = new Set(allEvents.map(e => e.locationId))
-  const fallbackLocationIds = [6, 11, 17, 18, 26, 28, 29, 32, 33, 37, 44, 46] // Frannz, Schokoladen, UT Connewitz, Moritzbastei, Heimathafen, Mikropol, Kesselhaus, Columbiahalle, Uber Eats MH, Quasimodo, Neue Zukunft, Theater des Westens
+  const fallbackLocationIds = [6, 11, 17, 18, 26, 28, 29, 32, 33, 37, 44, 46, 58] // Frannz, Schokoladen, UT Connewitz, Moritzbastei, Heimathafen, Mikropol, Kesselhaus, Columbiahalle, Uber Eats MH, Quasimodo, Neue Zukunft, Theater des Westens, Waschhaus
   const outPathForFallback = path.join(process.cwd(), 'public', 'events.json')
   let snapshotEvents = []
   try { snapshotEvents = JSON.parse(fs.readFileSync(outPathForFallback, 'utf-8')) } catch(e) {}
