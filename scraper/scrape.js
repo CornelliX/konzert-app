@@ -3410,7 +3410,7 @@ async function scrapeWaschhaus() {
       if (seen.has(key)) continue
       seen.add(key)
 
-      const ticketUrl = ticketHref || (infoHref ? 'https://www.waschhaus.de' + infoHref : 'https://www.waschhaus.de/veranstaltungen')
+      const ticketUrl = ticketHref || (infoHref ? (infoHref.startsWith('http') ? infoHref : 'https://www.waschhaus.de' + infoHref) : 'https://www.waschhaus.de/veranstaltungen')
       // Venue-eigene Kategorie hat Vorrang vor Titel-Raten, siehe Metropol/Kesselhaus
       const resolvedType = type === 'Konzert' ? 'konzert' : type === 'Party' ? 'party' : detectType(title)
       events.push({ title, date, time: time || '20:00', locationId: 58, type: resolvedType, description: '', ticketUrl, spotifyUrl: '', source: 'waschhaus' })

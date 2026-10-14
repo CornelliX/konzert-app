@@ -1,0 +1,25 @@
+name: Supabase wach halten
+
+# Eigener, leichtgewichtiger Daily-Cron statt den vollen Scrape+Build+Deploy-Job (deploy.yml)
+# täglich mitlaufen zu lassen - der Ping selbst kostet nur einen curl-Aufruf, der Scrape-Job
+# startet dutzende Headless-Chromium-Instanzen gegen fremde Venue-Seiten und sollte auf seinem
+# ursprünglichen wöchentlichen Rhythmus bleiben.
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      # Free-Tier-Supabase-Projekte pausieren nach 7 Tagen ohne Aktivität automatisch - eine
+      # simple authentifizierte Anfrage zählt als Aktivität und verhindert das. Täglich statt
+      # wöchentlich, damit eine einzelne verzögerte/ausgefallene Cron-Ausführung (bekanntes
+      # GitHub-Actions-Zuverlässigkeitsproblem bei scheduled workflows) nicht gleich die
+      # 7-Tage-Frist reißt.
+      - name: Supabase wach halten
+        run: |
+          curl -sf "https://cqxpjesovcavarrlljpn.supabase.co/rest/v1/manual_events?select=id&limit=1" \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxeHBqZXNvdmNhdmFycmxsanBuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0NjI4MjYsImV4cCI6MjA4ODAzODgyNn0._paXbtV1uecR0AA08KUkKLfRkmkQw2k4W3hT5L2y2ho" \
+            -o /dev/null
