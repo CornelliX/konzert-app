@@ -1,14 +1,13 @@
 import { getLocations, getEvents, saveData, loadData } from './data.js'
-import { saveManualEvent, loadBookmarks, toggleBookmark, getUser, signInWithEmail, verifyOtp, signOut } from './supabase.js'
+import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, removeRadarArtist, getUser, signInWithEmail, verifyOtp, signOut } from './supabase.js'
 
 function esc(s) {
   return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
 }
 
 // Nur http(s)-URLs durchlassen, bevor eine gescrapte oder manuell eingetragene URL als href
-// landet - eine kompromittierte/bösartige Venue-Seite oder das öffentliche "Event
-// hinzufügen"-Formular könnten sonst z.B. "javascript:..." einschleusen, das im
-// Seitenkontext ausgeführt würde, sobald jemand klickt.
+// landet - eine kompromittierte/bösartige Venue-Seite könnte sonst z.B. "javascript:..."
+// einschleusen, das im Seitenkontext ausgeführt würde, sobald jemand klickt.
 function safeUrl(url) {
   if (!url) return ''
   try {
@@ -106,6 +105,7 @@ let headerScrollListenerAdded = false
 let bookmarked = loadData('bookmarked') || []
 let going = loadData('going') || []
 let seenEvents = loadData('seenEvents') || []
+let radar = []
 let currentView = 'liste'
 let calendarOffset = 0
 // Die Liste-Ansicht rendert bei mehreren tausend Events (z.B. "Alle Locations" in Berlin)
@@ -147,6 +147,7 @@ export async function renderApp(el) {
     const merged = await mergeAndSyncBookmarks()
     bookmarked = merged.bookmarked
     going = merged.going
+    await checkRadarMatches()
   }
   sessionStorage.setItem('lebe-loaded', '1')
   const c64El = document.querySelector('.c64-border')
@@ -191,6 +192,66 @@ async function mergeAndSyncBookmarks() {
     bookmarked: synced.bookmarked.filter(id => validIds.some(v => v == id)),
     going: synced.going.filter(id => validIds.some(v => v == id))
   }
+}
+
+// Prüft die Radar-Künstlerliste des Nutzers gegen die frisch geladenen Events - bei Treffer
+// wird das Event automatisch vorgemerkt (wie ein normaler Bookmark) und sofort aus dem Radar
+// gelöscht, statt bei jedem künftigen Scrape erneut zu matchen (Spec: einmaliger Treffer).
+async function checkRadarMatches() {
+  radar = await loadRadar()
+  if (!radar.length) return
+  const matches = []
+  for (const r of radar) {
+    const needle = r.artist.toLowerCase()
+    const hit = events.find(e => e.title.toLowerCase().includes(needle))
+    if (hit) matches.push({ radarEntry: r, event: hit })
+  }
+  for (const { radarEntry, event } of matches) {
+    if (!bookmarked.some(b => b == event.id)) {
+      bookmarked = [...bookmarked, event.id]
+      await toggleBookmark(event.id, 'bookmarked')
+    }
+    radar = radar.filter(r => r.id !== radarEntry.id)
+    await removeRadarArtist(radarEntry.id)
+  }
+  if (matches.length) showRadarBanner(matches)
+}
+
+function showRadarBanner(matches) {
+  const names = matches.map(m => m.event.title).join(', ')
+  const el = document.createElement('div')
+  el.style = 'position:fixed; top:max(12px,env(safe-area-inset-top)); left:16px; right:16px; max-width:544px; margin:0 auto; z-index:9999; background:linear-gradient(135deg,#6366f1,#a855f7); color:white; border-radius:14px; padding:14px 16px; font-size:13px; box-shadow:0 10px 30px rgba(0,0,0,0.4); cursor:pointer;'
+  el.innerHTML = `<strong class="syne">📡 Radar-Treffer!</strong><br>${esc(names)} — automatisch vorgemerkt.`
+  el.addEventListener('click', () => el.remove())
+  document.body.appendChild(el)
+  setTimeout(() => el.remove(), 7000)
+  // Nur eine lokale Notification (kein Push) - kommt nur an, solange der Tab offen ist,
+  // braucht aber kein eigenes Backend (siehe Entscheidung zu VAPID/Push oben im Chat).
+  if (typeof Notification !== 'undefined' && Notification.permission === 'granted') {
+    try { new Notification('📡 Radar-Treffer', { body: names }) } catch {}
+  }
+}
+
+function renderRadarList() {
+  if (!radar.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.3);">Noch keine Künstler im Radar.</p>`
+  return radar.map(r => `
+    <div class="flex items-center justify-between rounded-xl px-3 py-2" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08);">
+      <span style="font-size:14px; color:white;">${esc(r.artist)}</span>
+      <button data-radar-remove="${r.id}" style="color:rgba(255,255,255,0.4); background:none; border:none; cursor:pointer; font-size:16px; line-height:1;">×</button>
+    </div>
+  `).join('')
+}
+
+function attachRadarRemoveEvents() {
+  document.querySelectorAll('[data-radar-remove]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const id = btn.dataset.radarRemove
+      radar = radar.filter(r => String(r.id) !== id)
+      const list = document.getElementById('radar-list')
+      if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
+      await removeRadarArtist(id)
+    })
+  })
 }
 
 function isNew(event) {
@@ -301,9 +362,9 @@ function renderBottomNav() {
           <span class="syne" style="font-size:9px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">${t.label}</span>
         </button>`
       }).join('')}
-      <button data-open-add style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; padding:10px 4px 11px; background:none; border:none; cursor:pointer; color:rgba(99,102,241,0.7); transition:color 0.2s; position:relative;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-        <span class="syne" style="font-size:9px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">Hinzufügen</span>
+      <button data-open-radar style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; padding:10px 4px 11px; background:none; border:none; cursor:pointer; color:rgba(99,102,241,0.7); transition:color 0.2s; position:relative;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+        <span class="syne" style="font-size:9px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">Radar</span>
       </button>
     </div>
   `
@@ -579,84 +640,24 @@ function renderBookmarkedView() {
 const inputStyle = `width:100%; border-radius:12px; padding:10px 14px; font-size:14px; color:white; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); font-family:'DM Sans',sans-serif; color-scheme:dark;`
 
 function renderModals() {
-  const sortedLocs = locations.slice().sort((a,b) => a.name.localeCompare(b.name))
   return `
-    <div id="modal-add" class="hidden fixed inset-0 z-50 overflow-y-auto scrollbar-hide" style="background:rgba(0,0,0,0.8); backdrop-filter:blur(8px);">
+    <div id="modal-radar" class="hidden fixed inset-0 z-50 overflow-y-auto scrollbar-hide" style="background:rgba(0,0,0,0.8); backdrop-filter:blur(8px);">
       <div class="max-w-lg mx-auto mt-8 mb-12 mx-4 rounded-3xl overflow-hidden" style="background:rgba(12,17,32,0.97); border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 80px rgba(0,0,0,0.6);">
         <div class="px-6 py-5" style="background:linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.15)); border-bottom:1px solid rgba(255,255,255,0.06);">
-          <h2 class="syne text-xl text-white" style="font-weight:800;">Hinzufügen</h2>
-          <p class="text-xs mt-0.5" style="color:rgba(255,255,255,0.35);">Event oder Location eintragen</p>
+          <h2 class="syne text-xl text-white" style="font-weight:800;">Radar</h2>
+          <p class="text-xs mt-0.5" style="color:rgba(255,255,255,0.35);">Künstler ohne anstehendes Konzert im Blick behalten</p>
         </div>
         <div class="p-6">
-          <div class="flex gap-1.5 mb-5 p-1 rounded-xl glass">
-            <button data-add-tab="event" class="flex-1 py-2 rounded-lg text-sm font-semibold syne text-white" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3);">Event</button>
-            <button data-add-tab="location" class="flex-1 py-2 rounded-lg text-sm font-semibold syne text-slate-500">Location</button>
-          </div>
-
-          <div id="add-event-form">
-            <div class="space-y-3">
-              <input id="new-title" type="text" placeholder="Titel (z.B. Bandname – Releaseshow)" style="${inputStyle}" />
-              <div class="flex gap-2">
-                <button data-etype="konzert" class="flex-1 py-2.5 rounded-xl text-sm font-semibold syne text-white" style="background:rgba(99,102,241,0.4); border:1px solid rgba(99,102,241,0.3);">Konzert</button>
-                <button data-etype="party" class="flex-1 py-2.5 rounded-xl text-sm font-semibold syne text-slate-500" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">Party</button>
-                <button data-etype="sonstige" class="flex-1 py-2.5 rounded-xl text-sm font-semibold syne text-slate-500" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">Sonstige</button>
-              </div>
-              <input type="hidden" id="new-type" value="konzert" />
-              <div class="flex gap-2">
-                <div style="flex:1; display:flex; flex-direction:column; gap:4px;">
-                  <label style="font-size:11px; color:rgba(255,255,255,0.4); font-family:'DM Sans',sans-serif; padding-left:4px;">Datum</label>
-                  <input id="new-date" type="text" style="width:100%; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color:white; min-width:0;" />
-                </div>
-                <div style="flex:1; display:flex; flex-direction:column; gap:4px;">
-                  <label style="font-size:11px; color:rgba(255,255,255,0.4); font-family:'DM Sans',sans-serif; padding-left:4px;">Uhrzeit</label>
-                  <input id="new-time" type="text" style="width:100%; border-radius:12px; padding:10px 14px; font-size:14px; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.2); font-family:'DM Sans',sans-serif; color:white; min-width:0;" />
-                </div>
-              </div>
-              <div style="position:relative;">
-                <div id="add-loc-selected" style="cursor:pointer; padding:10px 14px; border-radius:12px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
-                  <span id="add-loc-text" style="font-size:14px; color:rgba(255,255,255,0.3);">Location wählen...</span>
-                  <span style="color:rgba(255,255,255,0.3); font-size:12px;">▾</span>
-                </div>
-                <input type="hidden" id="new-location" value="" />
-                <div id="add-loc-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:200; width:100%; max-height:180px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
-                  <div data-add-loc-option="__new__" class="loc-option" style="padding:10px 14px; cursor:pointer; color:#818cf8; font-size:14px; border-bottom:1px solid rgba(255,255,255,0.06);">+ Neue Location eingeben...</div>
-                  ${sortedLocs.map(l => `<div data-add-loc-option="${l.id}" data-add-loc-name="${l.name}" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.8); font-size:14px; border-top:1px solid rgba(255,255,255,0.04);">${l.name} <span style="color:rgba(255,255,255,0.35); font-size:12px;">${l.city}</span></div>`).join('')}
-                </div>
-              </div>
-              <div id="new-location-custom" class="hidden space-y-2">
-                <input id="new-location-name" type="text" placeholder="Name der neuen Location" style="${inputStyle}" />
-                <div class="flex gap-2">
-                  <button data-city-pick="Berlin" class="flex-1 py-2 rounded-xl text-sm syne font-semibold text-white" style="background:rgba(99,102,241,0.3); border:1px solid rgba(99,102,241,0.3);">Berlin</button>
-                  <button data-city-pick="Leipzig" class="flex-1 py-2 rounded-xl text-sm syne font-semibold text-slate-500" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">Leipzig</button>
-                </div>
-                <input type="hidden" id="new-location-city" value="Berlin" />
-              </div>
-              <textarea id="new-desc" placeholder="Kurzbeschreibung: Wer? Woher? Musikrichtung?" style="${inputStyle} height:70px; resize:none;"></textarea>
-              <input id="new-ticket" type="url" placeholder="Ticket-URL (optional)" style="${inputStyle}" />
-              <input id="new-spotify" type="url" placeholder="Spotify-Link (optional)" style="${inputStyle}" />
-              <button data-save-event class="w-full py-3 rounded-xl font-bold text-white text-sm syne transition-all hover:opacity-90" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">
-                Event speichern
-              </button>
+          ${currentUser ? `
+            <div class="flex gap-2 mb-4">
+              <input id="radar-input" type="text" placeholder="Künstlername..." style="${inputStyle}" />
+              <button data-radar-add class="syne text-sm font-bold px-4 rounded-xl text-white" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3); flex-shrink:0;">+</button>
             </div>
-          </div>
-
-          <div id="add-location-form" class="hidden">
-            <div class="space-y-3">
-              <input id="new-loc-name" type="text" placeholder="Name der Location" style="${inputStyle}" />
-              <div class="flex gap-2">
-                <button data-loc-city-pick="Berlin" class="flex-1 py-2 rounded-xl text-sm syne font-semibold text-white" style="background:rgba(99,102,241,0.3); border:1px solid rgba(99,102,241,0.3);">Berlin</button>
-                <button data-loc-city-pick="Leipzig" class="flex-1 py-2 rounded-xl text-sm syne font-semibold text-slate-500" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">Leipzig</button>
-              </div>
-              <input type="hidden" id="new-loc-city" value="Berlin" />
-              <input id="new-loc-website" type="url" placeholder="Website (optional)" style="${inputStyle}" />
-              <input id="new-loc-capacity" type="number" placeholder="Kapazität (optional)" style="${inputStyle}" />
-              <button data-save-location class="w-full py-3 rounded-xl font-bold text-white text-sm syne transition-all hover:opacity-90" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">
-                Location speichern
-              </button>
-            </div>
-          </div>
-
-          <button data-close-add class="mt-3 w-full py-2 text-xs text-slate-600 hover:text-slate-400 transition-colors">Abbrechen</button>
+            <div id="radar-list" class="space-y-2">${renderRadarList()}</div>
+          ` : `
+            <p class="text-sm" style="color:rgba(255,255,255,0.4);">Bitte zuerst mit E-Mail anmelden, um ein Radar anzulegen.</p>
+          `}
+          <button data-close-radar class="mt-4 w-full py-2 text-xs text-slate-600 hover:text-slate-400 transition-colors">Schließen</button>
         </div>
       </div>
     </div>
@@ -698,16 +699,20 @@ function attachFilterBarEvents() {
   const searchInput = document.getElementById('search-input')
   const searchClear = document.getElementById('search-clear')
   const searchSubmit = document.getElementById('search-submit')
-  // Die Liste wird erst neu gerendert, wenn der Nutzer die Eingabe mit Enter/Suchen-Button
-  // bestätigt - nicht bei jedem Tastendruck. So bleibt die Eingabe beim Tippen immer flüssig,
-  // unabhängig davon, wie teuer der Listen-Re-Render bei vielen Events ist.
-  const commitSearch = () => {
+  // Die Liste wird neu gerendert, wenn der Nutzer die Eingabe mit Enter/Suchen-Button bestätigt,
+  // oder automatisch 1s nach dem letzten Tastendruck (debounced) - so bleibt Tippen flüssig,
+  // ohne dass man explizit auf die Lupe tippen muss.
+  let searchDebounceTimer = null
+  const commitSearch = (keepFocus = false) => {
+    clearTimeout(searchDebounceTimer)
     filters.search = searchInput ? searchInput.value : ''
-    searchInput?.blur()
+    if (!keepFocus) searchInput?.blur()
     updateView(false)
   }
   searchInput?.addEventListener('input', (e) => {
     if (searchClear) searchClear.style.display = e.target.value ? 'flex' : 'none'
+    clearTimeout(searchDebounceTimer)
+    searchDebounceTimer = setTimeout(() => commitSearch(true), 1000)
   })
   searchInput?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') { e.preventDefault(); commitSearch() }
@@ -719,6 +724,7 @@ function attachFilterBarEvents() {
   // wirken ließ. So bleibt der Fokus durchgehend im Feld, Clear reagiert sofort.
   searchClear?.addEventListener('mousedown', (e) => e.preventDefault())
   searchClear?.addEventListener('click', () => {
+    clearTimeout(searchDebounceTimer)
     filters.search = ''
     if (searchInput) searchInput.value = ''
     searchClear.style.display = 'none'
@@ -795,7 +801,7 @@ function attachNavEvents() {
       }
       document.getElementById('bottom-nav').innerHTML = renderBottomNav()
       attachNavEvents()
-      document.querySelector('[data-open-add]')?.addEventListener('click', () => document.getElementById('modal-add').classList.remove('hidden'))
+      document.querySelector('[data-open-radar]')?.addEventListener('click', () => document.getElementById('modal-radar').classList.remove('hidden'))
       window.scrollTo(0, 0)
     })
   })
@@ -805,145 +811,35 @@ function attachEvents() {
   attachNavEvents()
 
   // Modal
-  const modal = document.getElementById('modal-add')
-  document.querySelector('[data-open-add]')?.addEventListener('click', () => modal.classList.remove('hidden'))
-  document.querySelector('[data-close-add]')?.addEventListener('click', () => modal.classList.add('hidden'))
+  const radarModal = document.getElementById('modal-radar')
+  document.querySelector('[data-open-radar]')?.addEventListener('click', () => radarModal.classList.remove('hidden'))
+  document.querySelector('[data-close-radar]')?.addEventListener('click', () => radarModal.classList.add('hidden'))
 
   // Spotify-Künstler-Auswahl (mehrere Acts im Lineup erkannt)
   const spotifyPickerModal = document.getElementById('modal-spotify-picker')
   document.querySelector('[data-close-spotify-picker]')?.addEventListener('click', () => spotifyPickerModal?.classList.add('hidden'))
   spotifyPickerModal?.addEventListener('click', (ev) => { if (ev.target === spotifyPickerModal) spotifyPickerModal.classList.add('hidden') })
 
-  // Tabs
-  document.querySelectorAll('[data-add-tab]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const tab = btn.dataset.addTab
-      document.getElementById('add-event-form').classList.toggle('hidden', tab !== 'event')
-      document.getElementById('add-location-form').classList.toggle('hidden', tab !== 'location')
-      document.querySelectorAll('[data-add-tab]').forEach(b => {
-        const active = b.dataset.addTab === tab
-        b.style.background = active ? 'rgba(99,102,241,0.4)' : 'transparent'
-        b.style.border = active ? '1px solid rgba(99,102,241,0.3)' : 'none'
-        b.style.color = active ? 'white' : 'rgba(255,255,255,0.45)'
-      })
-    })
-  })
-
-  // Event-Typ
-  document.querySelectorAll('[data-etype]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.getElementById('new-type').value = btn.dataset.etype
-      document.querySelectorAll('[data-etype]').forEach(b => {
-        const active = b.dataset.etype === btn.dataset.etype
-        b.style.background = active ? 'rgba(99,102,241,0.4)' : 'rgba(255,255,255,0.04)'
-        b.style.border = active ? '1px solid rgba(99,102,241,0.3)' : '1px solid rgba(255,255,255,0.08)'
-        b.style.color = active ? 'white' : 'rgba(255,255,255,0.45)'
-      })
-    })
-  })
-
-  // Add Event Location Dropdown
-  const addLocSelected = document.getElementById('add-loc-selected')
-  const addLocDropdown = document.getElementById('add-loc-dropdown')
-  addLocSelected?.addEventListener('click', (e) => { e.stopPropagation(); addLocDropdown.classList.toggle('hidden') })
-  document.querySelectorAll('[data-add-loc-option]').forEach(opt => {
-    opt.addEventListener('click', () => {
-      const val = opt.dataset.addLocOption
-      document.getElementById('new-location').value = val === '__new__' ? '' : val
-      addLocDropdown.classList.add('hidden')
-      const customDiv = document.getElementById('new-location-custom')
-      const text = document.getElementById('add-loc-text')
-      if (val === '__new__') {
-        text.textContent = '+ Neue Location eingeben...'
-        text.style.color = '#818cf8'
-        customDiv.classList.remove('hidden')
-      } else {
-        text.textContent = opt.dataset.addLocName || opt.textContent.trim()
-        text.style.color = 'rgba(255,255,255,0.8)'
-        customDiv.classList.add('hidden')
-      }
-    })
-  })
-
-  // Stadt-Picker neue Location
-  document.querySelectorAll('[data-city-pick]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.getElementById('new-location-city').value = btn.dataset.cityPick
-      document.querySelectorAll('[data-city-pick]').forEach(b => {
-        const active = b.dataset.cityPick === btn.dataset.cityPick
-        b.style.background = active ? 'rgba(99,102,241,0.3)' : 'rgba(255,255,255,0.04)'
-        b.style.border = active ? '1px solid rgba(99,102,241,0.3)' : '1px solid rgba(255,255,255,0.08)'
-        b.style.color = active ? 'white' : 'rgba(255,255,255,0.45)'
-      })
-    })
-  })
-
-  // Stadt-Picker Location-Form
-  document.querySelectorAll('[data-loc-city-pick]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.getElementById('new-loc-city').value = btn.dataset.locCityPick
-      document.querySelectorAll('[data-loc-city-pick]').forEach(b => {
-        const active = b.dataset.locCityPick === btn.dataset.locCityPick
-        b.style.background = active ? 'rgba(99,102,241,0.3)' : 'rgba(255,255,255,0.04)'
-        b.style.border = active ? '1px solid rgba(99,102,241,0.3)' : '1px solid rgba(255,255,255,0.08)'
-        b.style.color = active ? 'white' : 'rgba(255,255,255,0.45)'
-      })
-    })
-  })
-
-  // Event speichern
-  document.querySelector('[data-save-event]')?.addEventListener('click', async () => {
-    const title = document.getElementById('new-title').value.trim()
-    let date = document.getElementById('new-date').value
-    let time = document.getElementById('new-time').value
-    const dateParts = date.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/)
-    if (dateParts) date = `${dateParts[3]}-${dateParts[2].padStart(2,'0')}-${dateParts[1].padStart(2,'0')}`
-    if (!time.match(/^\d{1,2}:\d{2}$/)) time = '20:00'
-    let locationId = document.getElementById('new-location').value
-    if (!title || !date || !time) { alert('Bitte Titel, Datum und Uhrzeit angeben.'); return }
-    if (!locationId) {
-      const locName = document.getElementById('new-location-name')?.value.trim()
-      if (!locName) { alert('Bitte eine Location wählen oder neue Location eingeben.'); return }
-      const newLoc = { id: Date.now(), name: locName, city: document.getElementById('new-location-city').value, website: '', capacity: 0 }
-      locations.push(newLoc)
-      saveData('locations', locations)
-      locationId = newLoc.id
-    } else {
-      locationId = parseInt(locationId)
+  // Radar: Künstler hinzufügen/entfernen
+  document.querySelector('[data-radar-add]')?.addEventListener('click', async () => {
+    const input = document.getElementById('radar-input')
+    const artist = input?.value.trim()
+    if (!artist) return
+    if (typeof Notification !== 'undefined' && Notification.permission === 'default') Notification.requestPermission()
+    input.value = ''
+    if (await addRadarArtist(artist)) {
+      radar = await loadRadar()
+      const list = document.getElementById('radar-list')
+      if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
     }
-    const newEvent = {
-      id: Date.now(), title,
-      type: document.getElementById('new-type').value,
-      date, time, locationId,
-      description: document.getElementById('new-desc').value.trim(),
-      ticketUrl: document.getElementById('new-ticket').value.trim(),
-      spotifyUrl: document.getElementById('new-spotify').value.trim(),
-      source: 'manual'
-    }
-    const loc = locations.find(l => l.id === locationId)
-    await saveManualEvent(newEvent, loc?.name || '', loc?.city || '')
-    events = await getEvents()
-    modal.classList.add('hidden')
-    render()
   })
-
-  // Location speichern
-  document.querySelector('[data-save-location]')?.addEventListener('click', () => {
-    const name = document.getElementById('new-loc-name').value.trim()
-    if (!name) { alert('Bitte einen Namen eingeben.'); return }
-    const newLoc = { id: Date.now(), name, city: document.getElementById('new-loc-city').value, website: document.getElementById('new-loc-website').value.trim(), capacity: parseInt(document.getElementById('new-loc-capacity').value) || 0 }
-    locations.push(newLoc)
-    saveData('locations', locations)
-    modal.classList.add('hidden')
-    render()
-  })
+  attachRadarRemoveEvents()
 
   // Dropdowns schließen bei Klick außerhalb (nur einmal)
   if (!dropdownListenerAdded) {
     dropdownListenerAdded = true
     document.addEventListener('click', () => {
       document.getElementById('filter-loc-dropdown')?.classList.add('hidden')
-      document.getElementById('add-loc-dropdown')?.classList.add('hidden')
     })
   }
 
@@ -984,27 +880,6 @@ function attachEvents() {
         if (indicator) indicator.style.height = '0'
       }
     }, { passive: true })
-  }
-
-  // Datum/Uhrzeit
-  const dateEl = document.getElementById('new-date')
-  const timeEl = document.getElementById('new-time')
-  if (dateEl) {
-    dateEl.placeholder = 'TT.MM.JJJJ'
-    dateEl.addEventListener('input', e => {
-      let v = e.target.value.replace(/\D/g,'')
-      if (v.length >= 3) v = v.slice(0,2) + '.' + v.slice(2)
-      if (v.length >= 6) v = v.slice(0,5) + '.' + v.slice(5,9)
-      e.target.value = v
-    })
-  }
-  if (timeEl) {
-    timeEl.placeholder = '20:00'
-    timeEl.addEventListener('input', e => {
-      let v = e.target.value.replace(/\D/g,'')
-      if (v.length >= 3) v = v.slice(0,2) + ':' + v.slice(2,4)
-      e.target.value = v
-    })
   }
 
   // Login
@@ -1050,6 +925,7 @@ function attachEvents() {
         const merged = await mergeAndSyncBookmarks()
         bookmarked = merged.bookmarked
         going = merged.going
+        await checkRadarMatches()
         render()
       }, 500)
     } else {

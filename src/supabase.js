@@ -59,15 +59,6 @@ export async function loadManualEvents() {
   }))
 }
 
-export async function saveManualEvent(event, locationName, locationCity) {
-  const { error } = await supabase.from('manual_events').insert({
-    id: event.id, title: event.title, type: event.type, date: event.date, time: event.time,
-    location_id: event.locationId, location_name: locationName, location_city: locationCity,
-    description: event.description, ticket_url: event.ticketUrl, spotify_url: event.spotifyUrl
-  })
-  return !error
-}
-
 export async function deleteOldManualEvents() {
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) return
@@ -84,6 +75,28 @@ export async function loadBookmarks() {
     bookmarked: data.filter(r => r.status === 'bookmarked').map(r => r.event_id),
     going: data.filter(r => r.status === 'going').map(r => r.event_id)
   }
+}
+
+export async function loadRadar() {
+  const user = await getUser()
+  if (!user) return []
+  const { data, error } = await supabase.from('radar').select('*').eq('user_id', user.id).order('created_at')
+  if (error) return []
+  return data.map(r => ({ id: r.id, artist: r.artist }))
+}
+
+export async function addRadarArtist(artist) {
+  const user = await getUser()
+  if (!user) return false
+  const { error } = await supabase.from('radar').insert({ user_id: user.id, artist })
+  return !error
+}
+
+export async function removeRadarArtist(id) {
+  const user = await getUser()
+  if (!user) return false
+  await supabase.from('radar').delete().eq('id', id).eq('user_id', user.id)
+  return true
 }
 
 export async function toggleBookmark(eventId, status) {
