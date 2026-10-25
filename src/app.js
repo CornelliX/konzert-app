@@ -282,7 +282,7 @@ function highlightEventCard(id) {
   // überhaupt zu malen beginnt.
   setTimeout(() => {
     wrapper.classList.add('card-glow-highlight')
-    setTimeout(() => wrapper.classList.remove('card-glow-highlight'), 3200)
+    setTimeout(() => wrapper.classList.remove('card-glow-highlight'), 2000)
   }, 250)
 }
 
