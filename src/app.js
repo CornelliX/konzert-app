@@ -875,13 +875,8 @@ function attachEvents() {
     const match = events.find(e => artistMatchesEvent(artist, e))
     if (match) {
       const onWatchlist = bookmarked.some(b => b == match.id) || going.some(g => g == match.id)
-      if (onWatchlist) {
-        showToast('Schon vorgemerkt', `„${artist}" ist bereits auf deiner Merkliste.`)
-        openBookmarks(match.id)
-      } else {
-        showToast('Konzert gefunden', `„${artist}" hat schon ein anstehendes Konzert.`)
-        focusEvent(match)
-      }
+      if (onWatchlist) openBookmarks(match.id)
+      else focusEvent(match)
       return
     }
     if (typeof Notification !== 'undefined' && Notification.permission === 'default') Notification.requestPermission()
