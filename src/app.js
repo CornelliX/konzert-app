@@ -217,15 +217,22 @@ async function checkRadarMatches() {
   if (matches.length) showRadarBanner(matches)
 }
 
-function showRadarBanner(matches) {
-  const names = matches.map(m => m.event.title).join(', ')
+// Eigene In-App-Toast statt alert() - passt sich dem Dark-Glass-Look der App an, ein
+// natives alert()-Fenster ist immer schwarze Schrift auf weißem Grund und lässt sich
+// nicht stylen.
+function showToast(title, body, duration = 5000) {
   const el = document.createElement('div')
   el.className = 'glass'
   el.style = 'position:fixed; top:max(12px,env(safe-area-inset-top)); left:16px; right:16px; max-width:544px; margin:0 auto; z-index:9999; border-left:3px solid #a855f7; color:white; border-radius:14px; padding:14px 16px; font-size:13px; box-shadow:0 10px 30px rgba(0,0,0,0.5); cursor:pointer;'
-  el.innerHTML = `<strong class="syne" style="color:#c89bfa;">📡 Radar-Treffer!</strong><br><span style="color:rgba(255,255,255,0.75);">${esc(names)} — automatisch vorgemerkt.</span>`
+  el.innerHTML = `<strong class="syne" style="color:#c89bfa;">${esc(title)}</strong><br><span style="color:rgba(255,255,255,0.75);">${esc(body)}</span>`
   el.addEventListener('click', () => el.remove())
   document.body.appendChild(el)
-  setTimeout(() => el.remove(), 7000)
+  setTimeout(() => el.remove(), duration)
+}
+
+function showRadarBanner(matches) {
+  const names = matches.map(m => m.event.title).join(', ')
+  showToast('📡 Radar-Treffer!', `${names} — automatisch vorgemerkt.`, 7000)
   // Nur eine lokale Notification (kein Push) - kommt nur an, solange der Tab offen ist,
   // braucht aber kein eigenes Backend (siehe Entscheidung zu VAPID/Push oben im Chat).
   if (typeof Notification !== 'undefined' && Notification.permission === 'granted') {
@@ -858,10 +865,10 @@ function attachEvents() {
     if (match) {
       const onWatchlist = bookmarked.some(b => b == match.id) || going.some(g => g == match.id)
       if (onWatchlist) {
-        alert(`„${artist}" ist bereits auf deiner Merkliste vorgemerkt.`)
+        showToast('Schon vorgemerkt', `„${artist}" ist bereits auf deiner Merkliste.`)
         openBookmarks()
       } else {
-        alert(`„${artist}" hat schon ein anstehendes Konzert - hier ist es.`)
+        showToast('Konzert gefunden', `„${artist}" hat schon ein anstehendes Konzert.`)
         focusEvent(match)
       }
       return
