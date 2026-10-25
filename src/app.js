@@ -229,7 +229,7 @@ async function checkRadarMatches() {
 // Eigene In-App-Toast statt alert() - passt sich dem Dark-Glass-Look der App an, ein
 // natives alert()-Fenster ist immer schwarze Schrift auf weißem Grund und lässt sich
 // nicht stylen.
-function showToast(title, body, duration = 5000) {
+function showToast(title, body, duration = 2500) {
   const el = document.createElement('div')
   el.className = 'glass'
   el.style = 'position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); width:min(90vw,420px); z-index:9999; background:rgba(22,18,60,0.98); border:1px solid rgba(168,85,247,0.4); border-left:4px solid #a855f7; color:white; border-radius:16px; padding:18px 20px; font-size:14px; box-shadow:0 25px 60px rgba(0,0,0,0.7), 0 0 40px rgba(168,85,247,0.2); cursor:pointer;'
@@ -241,7 +241,7 @@ function showToast(title, body, duration = 5000) {
 
 function showRadarBanner(matches) {
   const names = matches.map(m => m.event.title).join(', ')
-  showToast('📡 Radar-Treffer!', `${names} — automatisch vorgemerkt.`, 7000)
+  showToast('📡 Radar-Treffer!', `${names} — automatisch vorgemerkt.`, 3500)
   // Nur eine lokale Notification (kein Push) - kommt nur an, solange der Tab offen ist,
   // braucht aber kein eigenes Backend (siehe Entscheidung zu VAPID/Push oben im Chat).
   if (typeof Notification !== 'undefined' && Notification.permission === 'granted') {
