@@ -194,6 +194,16 @@ async function mergeAndSyncBookmarks() {
   }
 }
 
+// Exakter (nur Groß-/Kleinschreibung toleranter) Artist-Abgleich statt Substring-Suche -
+// sonst würde z.B. Radar-Eintrag "Pulp" fälschlich auf eine Band wie "Slow Pulp" anschlagen.
+// extractArtists() zerlegt Lineup-Titel nur an eindeutigen Mehrfach-Trennern (+, feat., etc.),
+// lässt aber einzelne Bandnamen mit Leerzeichen ("Slow Pulp") als ein Stück stehen - genau das
+// wird hier für den Vergleich gebraucht.
+function artistMatchesEvent(artist, event) {
+  const needle = artist.trim().toLowerCase()
+  return extractArtists(event.title).some(a => a.toLowerCase() === needle)
+}
+
 // Prüft die Radar-Künstlerliste des Nutzers gegen die frisch geladenen Events - bei Treffer
 // wird das Event automatisch vorgemerkt (wie ein normaler Bookmark) und sofort aus dem Radar
 // gelöscht, statt bei jedem künftigen Scrape erneut zu matchen (Spec: einmaliger Treffer).
@@ -202,8 +212,7 @@ async function checkRadarMatches() {
   if (!radar.length) return
   const matches = []
   for (const r of radar) {
-    const needle = r.artist.toLowerCase()
-    const hit = events.find(e => e.title.toLowerCase().includes(needle))
+    const hit = events.find(e => artistMatchesEvent(r.artist, e))
     if (hit) matches.push({ radarEntry: r, event: hit })
   }
   for (const { radarEntry, event } of matches) {
@@ -262,10 +271,20 @@ function attachRadarRemoveEvents() {
   })
 }
 
-function openBookmarks() {
+function highlightEventCard(id) {
+  const wrapper = document.querySelector(`[data-event-id="${id}"]`)
+  if (!wrapper) return
+  wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  wrapper.style.transition = 'box-shadow 0.3s ease'
+  wrapper.style.boxShadow = '0 0 0 2px rgba(168,85,247,0.8)'
+  setTimeout(() => { wrapper.style.boxShadow = 'none' }, 2000)
+}
+
+function openBookmarks(eventId) {
   document.getElementById('modal-radar')?.classList.add('hidden')
   currentView = 'gemerkt'
   render()
+  if (eventId != null) requestAnimationFrame(() => highlightEventCard(eventId))
 }
 
 function focusEvent(event) {
@@ -276,14 +295,7 @@ function focusEvent(event) {
   filters.locationId = 'alle'
   filters.search = event.title
   render()
-  requestAnimationFrame(() => {
-    const wrapper = document.querySelector(`[data-event-id="${event.id}"]`)
-    if (!wrapper) return
-    wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    wrapper.style.transition = 'box-shadow 0.3s ease'
-    wrapper.style.boxShadow = '0 0 0 2px rgba(168,85,247,0.8)'
-    setTimeout(() => { wrapper.style.boxShadow = 'none' }, 2000)
-  })
+  requestAnimationFrame(() => highlightEventCard(event.id))
 }
 
 function isNew(event) {
@@ -860,13 +872,12 @@ function attachEvents() {
     // Vor dem Speichern prüfen, ob der Künstler nicht längst ein Thema ist - Radar ist nur
     // für Artists ohne jeden Bezug zu einem aktuellen Event gedacht, nicht als Duplikat zur
     // Merkliste oder zu bereits existierenden Eventcards.
-    const needle = artist.toLowerCase()
-    const match = events.find(e => e.title.toLowerCase().includes(needle))
+    const match = events.find(e => artistMatchesEvent(artist, e))
     if (match) {
       const onWatchlist = bookmarked.some(b => b == match.id) || going.some(g => g == match.id)
       if (onWatchlist) {
         showToast('Schon vorgemerkt', `„${artist}" ist bereits auf deiner Merkliste.`)
-        openBookmarks()
+        openBookmarks(match.id)
       } else {
         showToast('Konzert gefunden', `„${artist}" hat schon ein anstehendes Konzert.`)
         focusEvent(match)
