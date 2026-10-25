@@ -95,8 +95,8 @@ export async function addRadarArtist(artist) {
 export async function removeRadarArtist(id) {
   const user = await getUser()
   if (!user) return false
-  await supabase.from('radar').delete().eq('id', id).eq('user_id', user.id)
-  return true
+  const { error } = await supabase.from('radar').delete().eq('id', id).eq('user_id', user.id)
+  return !error
 }
 
 export async function toggleBookmark(eventId, status) {
