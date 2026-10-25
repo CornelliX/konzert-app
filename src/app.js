@@ -223,8 +223,8 @@ async function checkRadarMatches() {
 function showToast(title, body, duration = 5000) {
   const el = document.createElement('div')
   el.className = 'glass'
-  el.style = 'position:fixed; top:max(12px,env(safe-area-inset-top)); left:16px; right:16px; max-width:544px; margin:0 auto; z-index:9999; border-left:3px solid #a855f7; color:white; border-radius:14px; padding:14px 16px; font-size:13px; box-shadow:0 10px 30px rgba(0,0,0,0.5); cursor:pointer;'
-  el.innerHTML = `<strong class="syne" style="color:#c89bfa;">${esc(title)}</strong><br><span style="color:rgba(255,255,255,0.75);">${esc(body)}</span>`
+  el.style = 'position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); width:min(90vw,420px); z-index:9999; background:rgba(22,18,60,0.98); border:1px solid rgba(168,85,247,0.4); border-left:4px solid #a855f7; color:white; border-radius:16px; padding:18px 20px; font-size:14px; box-shadow:0 25px 60px rgba(0,0,0,0.7), 0 0 40px rgba(168,85,247,0.2); cursor:pointer;'
+  el.innerHTML = `<strong class="syne" style="color:#c89bfa; font-size:15px;">${esc(title)}</strong><br><span style="color:rgba(255,255,255,0.85);">${esc(body)}</span>`
   el.addEventListener('click', () => el.remove())
   document.body.appendChild(el)
   setTimeout(() => el.remove(), duration)
