@@ -845,7 +845,7 @@ function attachEvents() {
   spotifyPickerModal?.addEventListener('click', (ev) => { if (ev.target === spotifyPickerModal) spotifyPickerModal.classList.add('hidden') })
 
   // Radar: Künstler hinzufügen/entfernen
-  document.querySelector('[data-radar-add]')?.addEventListener('click', async () => {
+  const submitRadarArtist = async () => {
     const input = document.getElementById('radar-input')
     const artist = input?.value.trim()
     if (!artist) return
@@ -872,6 +872,10 @@ function attachEvents() {
       const list = document.getElementById('radar-list')
       if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
     }
+  }
+  document.querySelector('[data-radar-add]')?.addEventListener('click', submitRadarArtist)
+  document.getElementById('radar-input')?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); submitRadarArtist() }
   })
   attachRadarRemoveEvents()
 
