@@ -275,13 +275,15 @@ function highlightEventCard(id) {
   const wrapper = document.querySelector(`[data-event-id="${id}"]`)
   if (!wrapper) return
   wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  // Reflow erzwingen, damit die Animation auch neu startet, falls die Klasse von einem
-  // vorherigen Sprung noch dran hängt (sonst würde das erneute Hinzufügen derselben Klasse
-  // im selben Frame ignoriert).
   wrapper.classList.remove('card-glow-highlight')
-  void wrapper.offsetWidth
-  wrapper.classList.add('card-glow-highlight')
-  setTimeout(() => wrapper.classList.remove('card-glow-highlight'), 2000)
+  // Kurz warten, bevor die Glow-Animation startet - lief sie direkt parallel zum Start des
+  // Scroll-Kinematik, konkurrierten beide um denselben Frame und das Aufleuchten wirkte
+  // ruckelig. So ist der Scroll schon im Gange, bevor die (teurere) box-shadow-Animation
+  // überhaupt zu malen beginnt.
+  setTimeout(() => {
+    wrapper.classList.add('card-glow-highlight')
+    setTimeout(() => wrapper.classList.remove('card-glow-highlight'), 3200)
+  }, 250)
 }
 
 function openBookmarks(eventId) {
