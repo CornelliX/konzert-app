@@ -275,9 +275,13 @@ function highlightEventCard(id) {
   const wrapper = document.querySelector(`[data-event-id="${id}"]`)
   if (!wrapper) return
   wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  wrapper.style.transition = 'box-shadow 0.3s ease'
-  wrapper.style.boxShadow = '0 0 0 2px rgba(168,85,247,0.8)'
-  setTimeout(() => { wrapper.style.boxShadow = 'none' }, 2000)
+  // Reflow erzwingen, damit die Animation auch neu startet, falls die Klasse von einem
+  // vorherigen Sprung noch dran hängt (sonst würde das erneute Hinzufügen derselben Klasse
+  // im selben Frame ignoriert).
+  wrapper.classList.remove('card-glow-highlight')
+  void wrapper.offsetWidth
+  wrapper.classList.add('card-glow-highlight')
+  setTimeout(() => wrapper.classList.remove('card-glow-highlight'), 2000)
 }
 
 function openBookmarks(eventId) {
