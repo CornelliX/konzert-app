@@ -220,8 +220,9 @@ async function checkRadarMatches() {
 function showRadarBanner(matches) {
   const names = matches.map(m => m.event.title).join(', ')
   const el = document.createElement('div')
-  el.style = 'position:fixed; top:max(12px,env(safe-area-inset-top)); left:16px; right:16px; max-width:544px; margin:0 auto; z-index:9999; background:linear-gradient(135deg,#6366f1,#a855f7); color:white; border-radius:14px; padding:14px 16px; font-size:13px; box-shadow:0 10px 30px rgba(0,0,0,0.4); cursor:pointer;'
-  el.innerHTML = `<strong class="syne">📡 Radar-Treffer!</strong><br>${esc(names)} — automatisch vorgemerkt.`
+  el.className = 'glass'
+  el.style = 'position:fixed; top:max(12px,env(safe-area-inset-top)); left:16px; right:16px; max-width:544px; margin:0 auto; z-index:9999; border-left:3px solid #a855f7; color:white; border-radius:14px; padding:14px 16px; font-size:13px; box-shadow:0 10px 30px rgba(0,0,0,0.5); cursor:pointer;'
+  el.innerHTML = `<strong class="syne" style="color:#c89bfa;">📡 Radar-Treffer!</strong><br><span style="color:rgba(255,255,255,0.75);">${esc(names)} — automatisch vorgemerkt.</span>`
   el.addEventListener('click', () => el.remove())
   document.body.appendChild(el)
   setTimeout(() => el.remove(), 7000)
