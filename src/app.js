@@ -254,6 +254,30 @@ function attachRadarRemoveEvents() {
   })
 }
 
+function openBookmarks() {
+  document.getElementById('modal-radar')?.classList.add('hidden')
+  currentView = 'gemerkt'
+  render()
+}
+
+function focusEvent(event) {
+  const loc = locationsById.get(event.locationId)
+  document.getElementById('modal-radar')?.classList.add('hidden')
+  currentView = 'liste'
+  filters.cities = [loc ? loc.city : (event.locationCity || 'Berlin')]
+  filters.locationId = 'alle'
+  filters.search = event.title
+  render()
+  requestAnimationFrame(() => {
+    const wrapper = document.querySelector(`[data-event-id="${event.id}"]`)
+    if (!wrapper) return
+    wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    wrapper.style.transition = 'box-shadow 0.3s ease'
+    wrapper.style.boxShadow = '0 0 0 2px rgba(168,85,247,0.8)'
+    setTimeout(() => { wrapper.style.boxShadow = 'none' }, 2000)
+  })
+}
+
 function isNew(event) {
   return !seenEvents.includes(event.id)
 }
@@ -825,6 +849,22 @@ function attachEvents() {
     const input = document.getElementById('radar-input')
     const artist = input?.value.trim()
     if (!artist) return
+    // Vor dem Speichern prüfen, ob der Künstler nicht längst ein Thema ist - Radar ist nur
+    // für Artists ohne jeden Bezug zu einem aktuellen Event gedacht, nicht als Duplikat zur
+    // Merkliste oder zu bereits existierenden Eventcards.
+    const needle = artist.toLowerCase()
+    const match = events.find(e => e.title.toLowerCase().includes(needle))
+    if (match) {
+      const onWatchlist = bookmarked.some(b => b == match.id) || going.some(g => g == match.id)
+      if (onWatchlist) {
+        alert(`„${artist}" ist bereits auf deiner Merkliste vorgemerkt.`)
+        openBookmarks()
+      } else {
+        alert(`„${artist}" hat schon ein anstehendes Konzert - hier ist es.`)
+        focusEvent(match)
+      }
+      return
+    }
     if (typeof Notification !== 'undefined' && Notification.permission === 'default') Notification.requestPermission()
     input.value = ''
     if (await addRadarArtist(artist)) {
