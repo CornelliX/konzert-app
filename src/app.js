@@ -934,7 +934,7 @@ const inputStyle =`width:100%; box-sizing:border-box; border-radius:12px; paddin
 
 function renderModals() {
   return `
-    <div id="modal-radar" class="hidden fixed inset-0 z-50 overflow-y-auto scrollbar-hide" style="background:rgba(0,0,0,0.8); backdrop-filter:blur(8px);">
+    <div id="modal-radar" class="hidden fixed inset-0 z-30 overflow-y-auto scrollbar-hide" style="background:rgba(0,0,0,0.8); backdrop-filter:blur(8px); padding-bottom:90px;">
       <div class="max-w-lg mx-auto mt-8 mb-12 mx-4 rounded-3xl overflow-hidden" style="background:rgba(12,17,32,0.97); border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 80px rgba(0,0,0,0.6);">
         <div class="px-6 py-5" style="background:linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.15)); border-bottom:1px solid rgba(255,255,255,0.06);">
           <h2 class="syne text-xl text-white" style="font-weight:800;">Radar</h2>
@@ -1076,6 +1076,10 @@ function scrollToHistorySection() {
 function attachNavEvents() {
   document.querySelectorAll('[data-nav]').forEach(btn => {
     btn.addEventListener('click', () => {
+      // Die Nav-Leiste bleibt jetzt auch bei offenem Radar-Modal sichtbar/bedienbar (statt vom
+      // Modal verdeckt zu werden) - ein Tab-Wechsel von dort aus soll das Modal dann aber auch
+      // wieder schließen, sonst läge es weiter über der neu angezeigten Ansicht.
+      document.getElementById('modal-radar')?.classList.add('hidden')
       // Doppel-Tap auf "Gemerkt" springt direkt zur History-Sektion - über den zeitlichen
       // Abstand zweier click-Events statt des nativen dblclick, da dblclick bei Touch-Taps
       // plattformabhängig unzuverlässig synthetisiert wird.
