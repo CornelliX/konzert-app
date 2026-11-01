@@ -766,6 +766,29 @@ function renderHistoryRow(h) {
   `
 }
 
+// Drei einzelne <select> statt <input type="date"> - auf iOS zeigt auch ein <select> beim
+// Antippen das native Wählrad, damit bekommt man Tag/Monat/Jahr als drei Wählräder ohne
+// eigenes Picker-Widget zu bauen (der native type="date"-Picker ist je nach Plattform ein
+// Kalenderraster statt eines Wählrads).
+function renderHistoryDatePicker() {
+  const months = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
+  const currentYear = new Date().getFullYear()
+  const selectStyle = `flex:1; min-width:0; box-sizing:border-box; border-radius:12px; padding:10px 6px; font-size:13px; color:white; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); font-family:'DM Sans',sans-serif; color-scheme:dark;`
+  const dayOptions = Array.from({ length: 31 }, (_, i) => i + 1).map(d => `<option value="${d}">${d}</option>`).join('')
+  const monthOptions = months.map((m, i) => `<option value="${i + 1}">${m}</option>`).join('')
+  const yearOptions = Array.from({ length: 51 }, (_, i) => currentYear - i).map(y => `<option value="${y}">${y}</option>`).join('')
+  return `
+    <div>
+      <label style="font-size:11px; color:rgba(255,255,255,0.4); font-family:'DM Sans',sans-serif; padding-left:4px; display:block; margin-bottom:4px;">Datum</label>
+      <div style="display:flex; gap:6px;">
+        <select id="history-day" style="${selectStyle}"><option value="">Tag</option>${dayOptions}</select>
+        <select id="history-month" style="${selectStyle}"><option value="">Monat</option>${monthOptions}</select>
+        <select id="history-year" style="${selectStyle}"><option value="">Jahr</option>${yearOptions}</select>
+      </div>
+    </div>
+  `
+}
+
 function renderHistorySection(historyEntries) {
   return `
     <div style="margin-top:28px;">
@@ -776,8 +799,7 @@ function renderHistorySection(historyEntries) {
       <div id="history-add-form" class="hidden space-y-2 mb-3">
         <input id="history-title" type="text" placeholder="Artist / Titel" style="${inputStyle}" />
         <input id="history-location" type="text" placeholder="Location" style="${inputStyle}" />
-        <label for="history-date" style="font-size:11px; color:rgba(255,255,255,0.4); font-family:'DM Sans',sans-serif; padding-left:4px; display:block;">Datum</label>
-        <input id="history-date" type="date" style="${inputStyle}" />
+        ${renderHistoryDatePicker()}
         <button data-history-save class="w-full py-2.5 rounded-xl font-bold text-white text-sm syne" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">Konzert hinzufügen</button>
       </div>
       <div id="history-list" class="space-y-2">
@@ -816,14 +838,19 @@ function attachHistoryEvents() {
   document.querySelector('[data-history-save]')?.addEventListener('click', async () => {
     const title = document.getElementById('history-title')?.value.trim()
     const location = document.getElementById('history-location')?.value.trim()
-    const date = document.getElementById('history-date')?.value
-    if (!title || !date) { alert('Bitte mindestens Titel und Datum angeben.'); return }
+    const day = document.getElementById('history-day')?.value
+    const month = document.getElementById('history-month')?.value
+    const year = document.getElementById('history-year')?.value
+    if (!title || !day || !month || !year) { alert('Bitte mindestens Titel und Datum angeben.'); return }
+    const date = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
     const entry = await addHistoryEntry({ title, locationName: location, locationCity: '', date })
     if (entry) {
       history = [...history, entry]
       document.getElementById('history-title').value = ''
       document.getElementById('history-location').value = ''
-      document.getElementById('history-date').value = ''
+      document.getElementById('history-day').value = ''
+      document.getElementById('history-month').value = ''
+      document.getElementById('history-year').value = ''
       form?.classList.add('hidden')
       refreshHistoryList()
     }
