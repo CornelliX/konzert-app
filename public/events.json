@@ -117,6 +117,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 368833348,
+    "title": "DAIANA LOU - Live in Berlin, Urban Spree",
+    "date": "2026-11-01",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/daiana-lou-live-in-berlin,-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1500043270,
     "title": "Alien Boy + Dead Finks + Musseldog",
     "date": "2026-11-01",
@@ -221,6 +234,32 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1047071950,
+    "title": "Tomora",
+    "date": "2026-11-01",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/tomora-columbiahalle-22226079/?affiliate=GMD",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-10-07"
+  },
+  {
+    "id": 608543315,
+    "title": "Il Civetto",
+    "date": "2026-11-01",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 462568503,
     "title": "Koepke + OLL",
     "date": "2026-11-01",
@@ -284,32 +323,6 @@
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1047071950,
-    "title": "Tomora",
-    "date": "2026-11-01",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/tomora-columbiahalle-22226079/?affiliate=GMD",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-10-07"
-  },
-  {
-    "id": 608543315,
-    "title": "Il Civetto",
-    "date": "2026-11-01",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1130114719,
@@ -507,19 +520,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1652208664,
-    "title": "ROBBER ROBBER",
-    "date": "2026-11-02",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/95213-tickets-robber-robber-exp-indie-rock-us-schokoladen-berlin-am-02-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1886068719,
     "title": "TOKYO TEA ROOM",
     "date": "2026-11-02",
@@ -570,6 +570,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 408936728,
+    "title": "Gentleman",
+    "date": "2026-11-02",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 348391821,
@@ -624,17 +637,17 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 408936728,
-    "title": "Gentleman",
+    "id": 1652208664,
+    "title": "ROBBER ROBBER",
     "date": "2026-11-02",
     "time": "20:00",
-    "locationId": 32,
+    "locationId": 11,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/95213-tickets-robber-robber-exp-indie-rock-us-schokoladen-berlin-am-02-11-2026",
     "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 1854801471,
@@ -790,19 +803,6 @@
     "ticketUrl": "https://columbia-theater.de/event/20261103-alela-diane/",
     "spotifyUrl": "",
     "source": "columbiatheater",
-    "addedAt": "2026-10-25"
-  },
-  {
-    "id": 420352412,
-    "title": "LSD - Liebe Statt Drogen",
-    "date": "2026-11-03",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/94898-tickets-lsd-liebe-statt-drogen-schokoladen-berlin-am-03-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
     "addedAt": "2026-10-25"
   },
   {
@@ -1011,6 +1011,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 420352412,
+    "title": "LSD - Liebe Statt Drogen",
+    "date": "2026-11-03",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/94898-tickets-lsd-liebe-statt-drogen-schokoladen-berlin-am-03-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
+  },
+  {
     "id": 897060670,
     "title": "euro-scene Leipzig 2026: »NKUL NNAM« | Athena Lucie Assamba",
     "date": "2026-11-03",
@@ -1074,6 +1087,19 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 830848183,
+    "title": "DIAMONDSONYMYDICK LIVE BERLIN ft. Aachen…",
+    "date": "2026-11-04",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/diamondsonymydick-live-berlin-ft.-aachen-demon,-psyke,-lil-jibo,-1dontlie.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 189824721,
@@ -1269,19 +1295,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1321449398,
-    "title": "MOVING AS A GIANT",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101408-tickets-moving-as-a-giant-fuzz-noise-rock-slo-schokoladen-berlin-am-04-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 241432162,
     "title": "Cactus In A Garage – Soul Jazz",
     "date": "2026-11-04",
@@ -1411,6 +1424,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1225140449,
+    "title": "Bratwurst & Baklava",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.ticketmaster.de/event/bratwurst-und-baklava-live-mit-bastian-bielendorfer-und-ozcan-cosar-tickets/1411157495",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-10-21"
+  },
+  {
     "id": 1387305480,
     "title": "KYLE ALESSANDRO",
     "date": "2026-11-04",
@@ -1501,17 +1527,17 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1225140449,
-    "title": "Bratwurst & Baklava",
+    "id": 1321449398,
+    "title": "MOVING AS A GIANT",
     "date": "2026-11-04",
     "time": "20:00",
-    "locationId": 32,
+    "locationId": 11,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.ticketmaster.de/event/bratwurst-und-baklava-live-mit-bastian-bielendorfer-und-ozcan-cosar-tickets/1411157495",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101408-tickets-moving-as-a-giant-fuzz-noise-rock-slo-schokoladen-berlin-am-04-11-2026",
     "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-10-21"
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 5806138,
@@ -1629,6 +1655,19 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 238225692,
+    "title": "R.A. THE RUGGED MAN",
+    "date": "2026-11-05",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/r.a.-the-rugged-man.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 838316130,
@@ -1786,19 +1825,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 156399883,
-    "title": "Los Sara Fontán (esp) + Franna",
-    "date": "2026-11-05",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101795-tickets-los-sara-fontan-esp-franna-bln-schokoladen-berlin-am-05-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 850826657,
     "title": "Radwan Ghazi Moumneh & Frédéric D. Oberland",
     "date": "2026-11-05",
@@ -1928,6 +1954,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1203654335,
+    "title": "BEAST IN BLACK",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://trinitymusic.de/events/berlin/beast-in-black-2",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-10-07"
+  },
+  {
     "id": 1038764073,
     "title": "Mietze Conte",
     "date": "2026-11-05",
@@ -2005,17 +2044,17 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1203654335,
-    "title": "BEAST IN BLACK",
+    "id": 156399883,
+    "title": "Los Sara Fontán (esp) + Franna",
     "date": "2026-11-05",
     "time": "20:00",
-    "locationId": 32,
+    "locationId": 11,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://trinitymusic.de/events/berlin/beast-in-black-2",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101795-tickets-los-sara-fontan-esp-franna-bln-schokoladen-berlin-am-05-11-2026",
     "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-10-07"
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 1914597246,
@@ -2237,6 +2276,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1680654769,
+    "title": "SOLD OUT - Tigercub - NETS TO CATCH THE WIND…",
+    "date": "2026-11-06",
+    "time": "19:30",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/tigercub-nets-to-catch-the-wind-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1499184118,
     "title": "NORLYZ feat. MALIKA ALAOUI",
     "date": "2026-11-06",
@@ -2326,19 +2378,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 1715877264,
-    "title": "FERVENTS & ULLA SUSPEKT",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100638-tickets-fervents-ulla-suspekt-schokoladen-berlin-am-06-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-28"
   },
   {
     "id": 536949929,
@@ -2613,6 +2652,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 1715877264,
+    "title": "FERVENTS & ULLA SUSPEKT",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100638-tickets-fervents-ulla-suspekt-schokoladen-berlin-am-06-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-28"
+  },
+  {
     "id": 71819305,
     "title": "Danger Dan",
     "date": "2026-11-06",
@@ -2727,6 +2779,19 @@
     "ticketUrl": "https://quasimodo.club/events/nighthawks-3-7358",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1404761420,
+    "title": "TRAGEDIE x INDISKRET",
+    "date": "2026-11-06",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/061126-TRAGEDIExINDISKRET",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 924469597,
@@ -2975,6 +3040,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1291772025,
+    "title": "No Cigar",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/no-cigar.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2124734575,
     "title": "Landstreicher presents: REY&KJAVIK",
     "date": "2026-11-07",
@@ -3014,6 +3092,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 984968335,
+    "title": "Enter Shikari",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/enter-shikari-support-holding-absence-the-callous-daoboys-columbiahalle-21268435/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-10-07"
+  },
+  {
     "id": 1062037476,
     "title": "Bangs AOB",
     "date": "2026-11-07",
@@ -3038,19 +3129,6 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 984968335,
-    "title": "Enter Shikari",
-    "date": "2026-11-07",
-    "time": "19:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/enter-shikari-support-holding-absence-the-callous-daoboys-columbiahalle-21268435/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-10-07"
   },
   {
     "id": 377290422,
@@ -3142,19 +3220,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-15"
-  },
-  {
-    "id": 1975374640,
-    "title": "Bial Hclap & Band & Yugo Taguchi & Frieda",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102647-tickets-bial-hclap-band-yugo-taguchi-frieda-schokoladen-berlin-am-07-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-28"
   },
   {
     "id": 284270521,
@@ -3402,6 +3467,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1975374640,
+    "title": "Bial Hclap & Band & Yugo Taguchi & Frieda",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102647-tickets-bial-hclap-band-yugo-taguchi-frieda-schokoladen-berlin-am-07-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-28"
+  },
+  {
     "id": 200902024,
     "title": "Danger Dan",
     "date": "2026-11-07",
@@ -3516,6 +3594,19 @@
     "ticketUrl": "https://quasimodo.club/events/we-love-80s-40-7306",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 93526037,
+    "title": "Stil vor Talent w/ Oliver Koletzki",
+    "date": "2026-11-07",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/071126-StilvorTalentw-OliverKoletzki",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1734301250,
@@ -3856,6 +3947,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1522502321,
+    "title": "MAYFLOWER MADAME + BLKE - Berlin Show @Urban…",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/mayflower-madame-blke-berlin-show-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1078838723,
     "title": "D2",
     "date": "2026-11-08",
@@ -3921,6 +4025,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1913887623,
+    "title": "EsDeekid",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/esdeekid-council-house-rat-tour-columbiahalle-21946702/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 363044778,
     "title": "Undacava",
     "date": "2026-11-08",
@@ -3983,19 +4100,6 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1913887623,
-    "title": "EsDeekid",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/esdeekid-council-house-rat-tour-columbiahalle-21946702/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 2046892229,
@@ -4089,19 +4193,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1907507839,
-    "title": "SHAKI TAVI",
-    "date": "2026-11-09",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99742-tickets-shaki-tavi-exp-indie-rock-shoegaze-us-schokoladen-berlin-am-09-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1490910146,
     "title": "deary",
     "date": "2026-11-09",
@@ -4166,6 +4257,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 1346718415,
+    "title": "Bleachers",
+    "date": "2026-11-09",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/bleachers-forever-euuk-2026-columbiahalle-21519701/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 591338418,
     "title": "ZIG ZAG HALL: Nate Smith",
     "date": "2026-11-09",
@@ -4179,17 +4283,17 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1346718415,
-    "title": "Bleachers",
+    "id": 1907507839,
+    "title": "SHAKI TAVI",
     "date": "2026-11-09",
     "time": "20:00",
-    "locationId": 32,
+    "locationId": 11,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/bleachers-forever-euuk-2026-columbiahalle-21519701/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99742-tickets-shaki-tavi-exp-indie-rock-shoegaze-us-schokoladen-berlin-am-09-11-2026",
     "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 17176588,
@@ -4361,16 +4465,16 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 935626267,
-    "title": "EDGING",
+    "id": 558797315,
+    "title": "Koza Mostra",
     "date": "2026-11-10",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/98384-tickets-edging-post-punk-chicago-schokoladen-berlin-am-10-11-2026",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/koza-mostra-urban-spree,-berlin.html",
     "spotifyUrl": "",
-    "source": "schokoladen",
+    "source": "urbanspree",
     "addedAt": "2026-11-01"
   },
   {
@@ -4409,6 +4513,19 @@
     "source": "metropol",
     "ticketUrl": "https://metropol-berlin.de/event/2026-11-10-red-hot-chilli-pipers",
     "spotifyUrl": "",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 108429063,
+    "title": "Bleachers",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
     "addedAt": "2026-08-17"
   },
   {
@@ -4490,17 +4607,17 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 108429063,
-    "title": "Bleachers",
+    "id": 935626267,
+    "title": "EDGING",
     "date": "2026-11-10",
     "time": "20:00",
-    "locationId": 32,
+    "locationId": 11,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/98384-tickets-edging-post-punk-chicago-schokoladen-berlin-am-10-11-2026",
     "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 730292829,
@@ -4607,6 +4724,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 240023082,
+    "title": "Shinedown",
+    "date": "2026-11-11",
+    "time": "19:30",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/shinedown-dance-kid-dance-act-ii-columbiahalle-21329969/?affiliate=GMD",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 129581869,
     "title": "Pubquiz with Simply Quiz",
     "date": "2026-11-11",
@@ -4644,19 +4774,6 @@
     "spotifyUrl": "",
     "source": "nbl",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 240023082,
-    "title": "Shinedown",
-    "date": "2026-11-11",
-    "time": "19:30",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/shinedown-dance-kid-dance-act-ii-columbiahalle-21329969/?affiliate=GMD",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1530108200,
@@ -4722,19 +4839,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 842936726,
-    "title": "Bureau De Change + Mad Kitten",
-    "date": "2026-11-11",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99498-tickets-bureau-de-change-mad-kitten-schokoladen-berlin-am-11-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1023727250,
@@ -4917,6 +5021,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 842936726,
+    "title": "Bureau De Change + Mad Kitten",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99498-tickets-bureau-de-change-mad-kitten-schokoladen-berlin-am-11-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1840925767,
     "title": "drum klub",
     "date": "2026-11-11",
@@ -4993,6 +5110,19 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 739543080,
+    "title": "UNS + GÄSTE BERLIN • URBAN SPREE",
+    "date": "2026-11-12",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/uns-gäste-berlin-•-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1311949892,
@@ -5112,19 +5242,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 1358623971,
-    "title": "Pyro One + KET",
-    "date": "2026-11-12",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/91693-tickets-pyro-one-ket-schokoladen-berlin-am-12-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 765989923,
     "title": "Love'n'Joy",
     "date": "2026-11-12",
@@ -5200,6 +5317,19 @@
     "ticketUrl": "https://metropol-berlin.de/event/2026-11-12-mammoth",
     "spotifyUrl": "",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 1062731314,
+    "title": "Bonaparte",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/Event/66334",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 2057219366,
@@ -5343,17 +5473,17 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1062731314,
-    "title": "Bonaparte",
+    "id": 1358623971,
+    "title": "Pyro One + KET",
     "date": "2026-11-12",
     "time": "20:00",
-    "locationId": 32,
+    "locationId": 11,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/Event/66334",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/91693-tickets-pyro-one-ket-schokoladen-berlin-am-12-11-2026",
     "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1137751084,
@@ -5434,6 +5564,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 22288135,
+    "title": "Hämatom",
+    "date": "2026-11-13",
+    "time": "19:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://tickets.undercover.de/h-matom-tickets-528.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 594688398,
     "title": "LYAPIS TRUBETSKOY - the best & new songs",
     "date": "2026-11-13",
@@ -5473,19 +5616,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 22288135,
-    "title": "Hämatom",
-    "date": "2026-11-13",
-    "time": "19:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://tickets.undercover.de/h-matom-tickets-528.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1141302803,
     "title": "KEIN ALASKA + MALHEUR + HARRY BREAST",
     "date": "2026-11-13",
@@ -5496,6 +5626,19 @@
     "ticketUrl": "http://www.conne-island.de/termin/nr7585.html",
     "spotifyUrl": "",
     "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 820507640,
+    "title": "FRIBERTY Releaseshow",
+    "date": "2026-11-13",
+    "time": "19:30",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/friberty-releaseshow.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-11-01"
   },
   {
@@ -5860,6 +6003,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 844284041,
+    "title": "Bunte Träumerei w/ Marten Lou",
+    "date": "2026-11-13",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/131126-BunteTraumerei",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 117864839,
     "title": "SPLIT",
     "date": "2026-11-13",
@@ -6000,6 +6156,19 @@
     "ticketUrl": "https://www.eventim.de/noapp/event/king-no-one-the-burden-of-empathy-tour-2026-privatclub-21850308/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
     "spotifyUrl": "",
     "source": "privatclub",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1886076046,
+    "title": "Milking the Goatmachine & Endseeker - Urban…",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/milking-the-goatmachine-and-endseeker-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
     "addedAt": "2026-11-01"
   },
   {
@@ -6195,6 +6364,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 28575791,
+    "title": "Tove Lo",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/tove-lo-estrus-tour-2026-columbiahalle-21682068/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-10-07"
+  },
+  {
     "id": 1520452003,
     "title": "The Kid LAROI",
     "date": "2026-11-14",
@@ -6324,19 +6506,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 28575791,
-    "title": "Tove Lo",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/tove-lo-estrus-tour-2026-columbiahalle-21682068/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-10-07"
-  },
-  {
     "id": 540120933,
     "title": "Beat Crazy",
     "date": "2026-11-14",
@@ -6451,6 +6620,19 @@
     "spotifyUrl": "",
     "source": "mvbleipzig",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1044365510,
+    "title": "Monkey Safari - YDKWTD - (All Night Long) Album Release Party",
+    "date": "2026-11-14",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/141126-MonkeySafari",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1594187127,
@@ -6621,19 +6803,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1868991893,
-    "title": "Macht aus dem Staat Gurkensalat",
-    "date": "2026-11-15",
-    "time": "19:30",
-    "locationId": 49,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://nato-leipzig.de/programm/macht-aus-dem-staat-gurkensalat-2026-11-15/",
-    "spotifyUrl": "",
-    "source": "nato",
-    "addedAt": "2026-10-14"
-  },
-  {
     "id": 244317516,
     "title": "Hatebreed x Life Of Agony",
     "date": "2026-11-15",
@@ -6645,6 +6814,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1868991893,
+    "title": "Macht aus dem Staat Gurkensalat",
+    "date": "2026-11-15",
+    "time": "19:30",
+    "locationId": 49,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://nato-leipzig.de/programm/macht-aus-dem-staat-gurkensalat-2026-11-15/",
+    "spotifyUrl": "",
+    "source": "nato",
+    "addedAt": "2026-10-14"
   },
   {
     "id": 244317515,
@@ -6736,6 +6918,19 @@
     "spotifyUrl": "",
     "source": "columbiatheater",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1687017098,
+    "title": "Spike Fuck",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/spike-fuck-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 544140565,
@@ -7036,6 +7231,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1010803837,
+    "title": "Saint Levant",
+    "date": "2026-11-16",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/saint-levant-afandi-world-tour-columbiahalle-21901376/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1699539417,
     "title": "Connor Kelly & The Time Warp – Europe 2026",
     "date": "2026-11-16",
@@ -7060,19 +7268,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1010803837,
-    "title": "Saint Levant",
-    "date": "2026-11-16",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/saint-levant-afandi-world-tour-columbiahalle-21901376/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1111091807,
@@ -7254,6 +7449,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-23"
+  },
+  {
+    "id": 784975701,
+    "title": "JUD | Urban Spree Berlin",
+    "date": "2026-11-17",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/jud-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 250830686,
@@ -7735,6 +7943,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1799832860,
+    "title": "Apsilon",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1311993571,
     "title": "Taemin",
     "date": "2026-11-18",
@@ -7824,19 +8045,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 1799832860,
-    "title": "Apsilon",
-    "date": "2026-11-18",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 592790147,
@@ -8086,6 +8294,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1980345188,
+    "title": "Bragolin + Carrellee",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/bragolin-carrellee-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1993859961,
     "title": "Pupsies",
     "date": "2026-11-19",
@@ -8162,6 +8383,19 @@
     "spotifyUrl": "",
     "source": "madameclaude",
     "addedAt": "2026-09-27"
+  },
+  {
+    "id": 1603319355,
+    "title": "Apsilon",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1300211877,
@@ -8265,19 +8499,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 1603319355,
-    "title": "Apsilon",
-    "date": "2026-11-19",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 369487881,
@@ -8539,6 +8760,19 @@
     "addedAt": "2026-09-30"
   },
   {
+    "id": 2120840893,
+    "title": "Process Party x Effetto Notte: Hall of Bats…",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/process-party-x-effetto-notte-hall-of-bats-with-lovataraxx,-hysteric-helen,-olgha.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1174507424,
     "title": "Psych Dreamers",
     "date": "2026-11-20",
@@ -8639,6 +8873,19 @@
     "ticketUrl": "https://huxleysneuewelt.de/event/2026-11-20-the-hardkiss",
     "spotifyUrl": "",
     "source": "huxleys",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 718133342,
+    "title": "José González",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://landstreicher-konzerte.de/konzerte/jose-gonzalez-b-26",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
     "addedAt": "2026-08-17"
   },
   {
@@ -8795,19 +9042,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 718133342,
-    "title": "José González",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://landstreicher-konzerte.de/konzerte/jose-gonzalez-b-26",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1806724071,
     "title": "Clive (Splitting Image) and friends + Smelly Family",
     "date": "2026-11-20",
@@ -8857,6 +9091,32 @@
     "ticketUrl": "https://quasimodo.club/events/jazz-night-ft-flow-rea-est-7396",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1900309065,
+    "title": "Worakls",
+    "date": "2026-11-20",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/201126-Worakls",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1450507115,
+    "title": "Mollono.Bass",
+    "date": "2026-11-20",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/201126-Mollono-Bass",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1748846356,
@@ -9247,6 +9507,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 676037361,
+    "title": "WISBORG Phantomschmerz Tour - BERLIN | Special…",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/wisborg-phantomschmerz-tour-berlin-special-guest-the-fright.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 184622551,
     "title": "60 JUNO",
     "date": "2026-11-21",
@@ -9334,6 +9607,19 @@
     "ticketUrl": "https://huxleysneuewelt.de/event/2026-11-21-100-kilo-herz-drei-meter-feldweg",
     "spotifyUrl": "",
     "source": "huxleys",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1894990497,
+    "title": "Brings",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.westticket.de/noapp/event/brings-columbiahalle-19751773/?affiliate=5HE&utm_campaign=Heesen+Konzerte&utm_source=5HE&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
     "addedAt": "2026-08-17"
   },
   {
@@ -9466,19 +9752,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1894990497,
-    "title": "Brings",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.westticket.de/noapp/event/brings-columbiahalle-19751773/?affiliate=5HE&utm_campaign=Heesen+Konzerte&utm_source=5HE&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1317242692,
     "title": "DANCING WITH TEARS IN YOUR EYES",
     "date": "2026-11-21",
@@ -9554,6 +9827,32 @@
     "ticketUrl": "https://quasimodo.club/events/barney-millahs-legendary-escobar-7443",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1529910494,
+    "title": "Alan Fitzpatrick",
+    "date": "2026-11-21",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/211126-AlanFitzpatrick",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1153111556,
+    "title": "Klangkarussell pres. Bias Beach",
+    "date": "2026-11-21",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/211126-Klangkarussellpres-BiasBeach",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 469563735,
@@ -9839,6 +10138,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 828498064,
+    "title": "BOY HARSHER",
+    "date": "2026-11-22",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/boy-harsher-columbiahalle-21912768/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-10-07"
+  },
+  {
     "id": 312492150,
     "title": "GENESIS OWUSU",
     "date": "2026-11-22",
@@ -9914,19 +10226,6 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 828498064,
-    "title": "BOY HARSHER",
-    "date": "2026-11-22",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/boy-harsher-columbiahalle-21912768/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-10-07"
   },
   {
     "id": 958740747,
@@ -10448,6 +10747,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1549235190,
+    "title": "Portugal. The Man",
+    "date": "2026-11-24",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/portugal-the-man-the-denali-tour-columbiahalle-20657295/?affiliate=GMD",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 26826813,
     "title": "Moon Walker + Special Guest: ENDLESS MIKE AND THE BEAGLE CLUB",
     "date": "2026-11-24",
@@ -10499,19 +10811,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 1549235190,
-    "title": "Portugal. The Man",
-    "date": "2026-11-24",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/portugal-the-man-the-denali-tour-columbiahalle-20657295/?affiliate=GMD",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 754482728,
     "title": "Die Wut, die bleibt – Strategien gegen die Ohnmacht",
     "date": "2026-11-25",
@@ -10536,6 +10835,19 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 747579778,
+    "title": "Faux Real + Dance Arts Center + The Nightclubs…",
+    "date": "2026-11-25",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/faux-real-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 83888245,
@@ -11058,6 +11370,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 2011466232,
+    "title": "COOGANS BLUFF 10 Years Of Flying To The Stars",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/coogans-bluff-10-years-of-flying-to-the-stars.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 532351317,
     "title": "MARYAM.fyi",
     "date": "2026-11-26",
@@ -11123,6 +11448,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 807855581,
+    "title": "GROSSSTADTGEFLÜSTER",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 736254041,
     "title": "Tori Kelly",
     "date": "2026-11-26",
@@ -11185,19 +11523,6 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 807855581,
-    "title": "GROSSSTADTGEFLÜSTER",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1861756251,
@@ -11470,6 +11795,19 @@
     "addedAt": "2026-08-19"
   },
   {
+    "id": 863594453,
+    "title": "FÏX8:SËD8 + NEROGRIS + SCHNEIDER -  Urban…",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/fïx8sëd8-nerogris-schneider-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1993938195,
     "title": "Torsten Sträter",
     "date": "2026-11-27",
@@ -11532,6 +11870,19 @@
     "ticketUrl": "https://metropol-berlin.de/event/2026-11-27-health",
     "spotifyUrl": "",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 596504668,
+    "title": "GROSSSTADTGEFLÜSTER",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 2040035000,
@@ -11689,19 +12040,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 596504668,
-    "title": "GROSSSTADTGEFLÜSTER",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1128126557,
     "title": "DIE WALLERTS",
     "date": "2026-11-27",
@@ -11803,6 +12141,19 @@
     "ticketUrl": "https://quasimodo.club/events/sting-the-police-a-tribute-by-glam-up-7333",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1272254326,
+    "title": "Soupherb vs psYsq",
+    "date": "2026-11-27",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/271126-SoupherbvspsYsq-thegroovening",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1053814630,
@@ -11972,6 +12323,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 209253489,
+    "title": "Cosmic Gate",
+    "date": "2026-11-28",
+    "time": "19:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-CosmicGate",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1239478578,
     "title": "Podium: Jubiläum - 5 Jahre Fach- und Beratungsstelle bei sexualisierter Gewalt",
     "date": "2026-11-28",
@@ -12076,6 +12440,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 535272738,
+    "title": "Banda Entopica",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/banda-entopica-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1533325692,
     "title": "Cosmo presents: BIG UP! Berlin",
     "date": "2026-11-28",
@@ -12138,6 +12515,19 @@
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
     "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1377599688,
+    "title": "Fatoni",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://fatoni.shop/product/85804/",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
     "addedAt": "2026-08-17"
   },
   {
@@ -12335,19 +12725,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1377599688,
-    "title": "Fatoni",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://fatoni.shop/product/85804/",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1814173282,
     "title": "Factory",
     "date": "2026-11-28",
@@ -12423,6 +12800,32 @@
     "ticketUrl": "https://quasimodo.club/events/90s-reloaded-party-4-7355",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1741914523,
+    "title": "Lexy & K-Paul (live)",
+    "date": "2026-11-28",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-Lexy-K-Paul-live",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 59886565,
+    "title": "Oliver Huntemann",
+    "date": "2026-11-28",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-OliverHuntemann",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1410970501,
@@ -12774,6 +13177,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1088739655,
+    "title": "Filow",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 848970850,
     "title": "Rea Garvey's Christmas Calling",
     "date": "2026-11-29",
@@ -12837,19 +13253,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 1088739655,
-    "title": "Filow",
-    "date": "2026-11-29",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 2064087764,
@@ -13420,6 +13823,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1369249134,
+    "title": "SPK + ALVAR",
+    "date": "2026-12-02",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/spk-alvar-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 345610106,
     "title": "LEDBYHER",
     "date": "2026-12-02",
@@ -13614,6 +14030,19 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 669674097,
+    "title": "SIDOS WEIHNACHTSSHOW 2026",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1296396923,
     "title": "Joss Stone",
     "date": "2026-12-02",
@@ -13663,19 +14092,6 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 669674097,
-    "title": "SIDOS WEIHNACHTSSHOW 2026",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 234604444,
@@ -13899,6 +14315,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1360154713,
+    "title": "Novulent - Live in Europe 2026",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/novulent-live-in-europe-2026.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1089482801,
     "title": "ALEX HENRY FOSTER",
     "date": "2026-12-03",
@@ -13963,6 +14392,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 638654290,
+    "title": "SIDOS WEIHNACHTSSHOW 2026",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1941191090,
     "title": "PRATEEK KUHAD",
     "date": "2026-12-03",
@@ -13999,19 +14441,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-27"
-  },
-  {
-    "id": 638654290,
-    "title": "SIDOS WEIHNACHTSSHOW 2026",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1091556212,
@@ -14261,6 +14690,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 607634483,
+    "title": "SIDOs Weihnachtsshow 2026",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1303807079,
     "title": "JULIA WOLF + Support: SCRO",
     "date": "2026-12-04",
@@ -14312,19 +14754,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 607634483,
-    "title": "SIDOs Weihnachtsshow 2026",
-    "date": "2026-12-04",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1162009943,
     "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
     "date": "2026-12-04",
@@ -14374,6 +14803,19 @@
     "ticketUrl": "https://quasimodo.club/events/jafunk-7436",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1300904446,
+    "title": "KOLLEGIAL pres. by BSTHP - w/ Felix Raphael [ hybrid LiVE ] and many more",
+    "date": "2026-12-04",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/041226-KOLLEGIALpres-byBSTHP-w-FelixRaphael-hybridLiVE-andmanymore",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 986118291,
@@ -14465,6 +14907,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1215451765,
+    "title": "Coilguns - Berlin",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/coilguns-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 553009463,
@@ -14713,6 +15168,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 576614676,
+    "title": "SIDOs Weihnachtsshow 2026",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 440809210,
     "title": "THE NEW ROSES + Support: MASSIVE WAGONS",
     "date": "2026-12-05",
@@ -14775,19 +15243,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 576614676,
-    "title": "SIDOs Weihnachtsshow 2026",
-    "date": "2026-12-05",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1630680124,
@@ -14854,6 +15309,32 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 954988825,
+    "title": "MICHAEL CANITROT",
+    "date": "2026-12-05",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/051226-MICHAELCANITROT",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1185673950,
+    "title": "DON DIABLO",
+    "date": "2026-12-05",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/051226-DONDIABLO",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 814248120,
     "title": "WE ARE THE 80s x UNTER NULL (2 Floors)",
     "date": "2026-12-05",
@@ -14878,6 +15359,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 555236029,
+    "title": "Thaylo x URBAN SPREE",
+    "date": "2026-12-05",
+    "time": "23:59",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/thaylo-darin-epsilon-gareden.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1281956148,
@@ -15049,6 +15543,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 1112039015,
+    "title": "Planta Industrial - berlin",
+    "date": "2026-12-06",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/planta-industrial-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1839634458,
     "title": "Seb Lowe",
     "date": "2026-12-06",
@@ -15101,6 +15608,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 545594869,
+    "title": "SIDOs Weihnachtsshow 2026",
+    "date": "2026-12-06",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 996813893,
     "title": "Kenan Doğulu",
     "date": "2026-12-06",
@@ -15150,19 +15670,6 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 545594869,
-    "title": "SIDOs Weihnachtsshow 2026",
-    "date": "2026-12-06",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 2107001796,
@@ -15476,6 +15983,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 483555255,
+    "title": "SIDOs Weihnachtsshow 2026",
+    "date": "2026-12-08",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1434152943,
     "title": "SAAM SOULTAN",
     "date": "2026-12-08",
@@ -15513,19 +16033,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 483555255,
-    "title": "SIDOs Weihnachtsshow 2026",
-    "date": "2026-12-08",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1477374333,
@@ -15749,6 +16256,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 452535448,
+    "title": "SIDOs Weihnachtsshow 2026",
+    "date": "2026-12-09",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 787573482,
     "title": "Haaland936",
     "date": "2026-12-09",
@@ -15785,19 +16305,6 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 452535448,
-    "title": "SIDOs Weihnachtsshow 2026",
-    "date": "2026-12-09",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 930857625,
@@ -16019,6 +16526,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 229900306,
+    "title": "SIDOs Weihnachtsshow 2026",
+    "date": "2026-12-10",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 999498238,
     "title": "Markus Krebs",
     "date": "2026-12-10",
@@ -16056,19 +16576,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 229900306,
-    "title": "SIDOs Weihnachtsshow 2026",
-    "date": "2026-12-10",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1675941537,
@@ -16290,6 +16797,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 260920113,
+    "title": "SIDOS WEIHNACHTSSHOW 2026",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 836256699,
     "title": "INNA",
     "date": "2026-12-11",
@@ -16393,19 +16913,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 260920113,
-    "title": "SIDOS WEIHNACHTSSHOW 2026",
-    "date": "2026-12-11",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1836022519,
     "title": "🎶 Friday I’m in Love – A Tribute to Post-Punk · Dark 80s + Nick Cave",
     "date": "2026-12-11",
@@ -16429,6 +16936,19 @@
     "ticketUrl": "https://www.wildatheartberlin.de/concerts.php",
     "spotifyUrl": "",
     "source": "wildatheart",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 2135306602,
+    "title": "Eskalation w/ Die Gebrüder Brett, KaaCee KomaCasper, Justin Prince, SAGEZZA",
+    "date": "2026-12-11",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/111226-Eskalationw-DieGebruderBrett-KaaCeeKomaCasper-JustinPrince-SAGEZZA",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
     "addedAt": "2026-11-01"
   },
   {
@@ -16653,6 +17173,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 1678114495,
+    "title": "TWIN NOIR + HINFORT",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/twin-noir-hinfort-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1106670014,
     "title": "FUEGO36",
     "date": "2026-12-12",
@@ -16664,6 +17197,19 @@
     "spotifyUrl": "",
     "source": "binuu",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 291939920,
+    "title": "SIDOS WEIHNACHTSSHOW 2026",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1607252584,
@@ -16767,19 +17313,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 291939920,
-    "title": "SIDOS WEIHNACHTSSHOW 2026",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 195535803,
@@ -17091,19 +17624,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 904517914,
-    "title": "Drei Schwestern | DAS ÜZ",
-    "date": "2026-12-13",
-    "time": "20:00",
-    "locationId": 49,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/Event/77805",
-    "spotifyUrl": "",
-    "source": "nato",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 322959727,
     "title": "SIDOS WEIHNACHTSSHOW 2026",
     "date": "2026-12-13",
@@ -17115,6 +17635,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 904517914,
+    "title": "Drei Schwestern | DAS ÜZ",
+    "date": "2026-12-13",
+    "time": "20:00",
+    "locationId": 49,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/Event/77805",
+    "spotifyUrl": "",
+    "source": "nato",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1209154038,
@@ -17362,19 +17895,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 621546947,
-    "title": "7:77 - Die Open Stage mit Andrea Baccomo",
-    "date": "2026-12-15",
-    "time": "20:00",
-    "locationId": 51,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://pretix.eu/openstage777/dez26/",
-    "spotifyUrl": "",
-    "source": "nsl",
-    "addedAt": "2026-10-21"
-  },
-  {
     "id": 384999341,
     "title": "SIDOS WEIHNACHTSSHOW 2026",
     "date": "2026-12-15",
@@ -17386,6 +17906,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 621546947,
+    "title": "7:77 - Die Open Stage mit Andrea Baccomo",
+    "date": "2026-12-15",
+    "time": "20:00",
+    "locationId": 51,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://pretix.eu/openstage777/dez26/",
+    "spotifyUrl": "",
+    "source": "nsl",
+    "addedAt": "2026-10-21"
   },
   {
     "id": 1822488679,
@@ -17595,6 +18128,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 416019148,
+    "title": "SIDOS WEIHNACHTSSHOW 2026",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1244579586,
     "title": "Emma Smith",
     "date": "2026-12-16",
@@ -17619,19 +18165,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 416019148,
-    "title": "SIDOS WEIHNACHTSSHOW 2026",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 810780519,
@@ -18061,6 +18594,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 478058762,
+    "title": "Sidos Weihnachtsshow 2026",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1898944189,
     "title": "No Angels",
     "date": "2026-12-18",
@@ -18126,19 +18672,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 478058762,
-    "title": "Sidos Weihnachtsshow 2026",
-    "date": "2026-12-18",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 856590432,
     "title": "30 MINUTE GIGS - Vol 19 - 5 Bands à 30 Minuten",
     "date": "2026-12-18",
@@ -18175,6 +18708,19 @@
     "ticketUrl": "https://quasimodo.club/events/selecta-gs-birthday-bash-2026-7507",
     "spotifyUrl": "",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 1193260857,
+    "title": "Deborah De Luca",
+    "date": "2026-12-18",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/181226-DeborahDeLuca",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 487972608,
@@ -18437,6 +18983,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 509078569,
+    "title": "Sidos Weihnachtsshow 2026",
+    "date": "2026-12-19",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1026258908,
     "title": "VEYSEL",
     "date": "2026-12-19",
@@ -18499,19 +19058,6 @@
     "spotifyUrl": "",
     "source": "nato",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 509078569,
-    "title": "Sidos Weihnachtsshow 2026",
-    "date": "2026-12-19",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 258046674,
@@ -18734,6 +19280,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1191514323,
+    "title": "Sidos Weihnachtsshow 2026",
+    "date": "2026-12-20",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 229038131,
     "title": "Klassische Adventsmatinée - mit Yannick Rafalimanana",
     "date": "2026-12-20",
@@ -18760,19 +19319,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1191514323,
-    "title": "Sidos Weihnachtsshow 2026",
-    "date": "2026-12-20",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1556092156,
     "title": "Der Nussknacker – Grand Classic Ballet mit Orchester",
     "date": "2026-12-21",
@@ -18783,6 +19329,19 @@
     "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/nussknacker-2026/2026-12-21-1900",
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1222534130,
+    "title": "Sidos Weihnachtsshow 2026",
+    "date": "2026-12-21",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
     "addedAt": "2026-08-17"
   },
   {
@@ -18825,19 +19384,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1222534130,
-    "title": "Sidos Weihnachtsshow 2026",
-    "date": "2026-12-21",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 414847301,
     "title": "Der Nussknacker – Grand Classic Ballet mit Orchester",
     "date": "2026-12-22",
@@ -18877,19 +19423,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1972115924,
-    "title": "Die (n)A(c)kte Nonne | Das legendäre verko(r)kste Krippenspiel",
-    "date": "2026-12-22",
-    "time": "20:00",
-    "locationId": 49,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/Event/77911",
-    "spotifyUrl": "",
-    "source": "nato",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1253553937,
     "title": "Sidos Weihnachtsshow 2026",
     "date": "2026-12-22",
@@ -18901,6 +19434,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1972115924,
+    "title": "Die (n)A(c)kte Nonne | Das legendäre verko(r)kste Krippenspiel",
+    "date": "2026-12-22",
+    "time": "20:00",
+    "locationId": 49,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/Event/77911",
+    "spotifyUrl": "",
+    "source": "nato",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1909180538,
@@ -19629,6 +20175,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1963724765,
+    "title": "Hippie New Year",
+    "date": "2026-12-31",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/311226-HippieNewYear",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 19849317,
     "title": "Berlin indie Night • Silvester im Privatclub",
     "date": "2026-12-31",
@@ -19692,6 +20251,19 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 402171866,
+    "title": "HANDS LABEL NIGHT BERLIN 2027",
+    "date": "2027-01-02",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/hands-label-night-berlin-2027.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 101969091,
@@ -19899,6 +20471,19 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 2132850111,
+    "title": "LINEAR MOVEMENT + DER KÜNFTIGE MUSIKANT +…",
+    "date": "2027-01-09",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/linear-movement-der-künftige-musikant-twilight-ritual.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 451507154,
@@ -20248,6 +20833,19 @@
     "ticketUrl": "https://www.wildatheartberlin.de/concerts.php",
     "spotifyUrl": "",
     "source": "wildatheart",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1988450557,
+    "title": "Community Rave",
+    "date": "2027-01-15",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/150127-CommunityRave",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
     "addedAt": "2026-11-01"
   },
   {
@@ -22081,6 +22679,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1479218988,
+    "title": "unpeople - berlin",
+    "date": "2027-02-06",
+    "time": "19:30",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/unpeople-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1584931477,
     "title": "CAROLINA DESLANDES",
     "date": "2027-02-06",
@@ -22234,6 +22845,19 @@
     "ticketUrl": "https://quasimodo.club/events/we-love-80s-43-7484",
     "spotifyUrl": "",
     "addedAt": "2026-09-29"
+  },
+  {
+    "id": 1188678340,
+    "title": "The Surreal Club Night 3027 by 3000Grad",
+    "date": "2027-02-06",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/060227-TheSurrealClubNight3027by3000Grad",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1672165284,
@@ -22561,6 +23185,19 @@
     "addedAt": "2026-09-22"
   },
   {
+    "id": 751299584,
+    "title": "Editors",
+    "date": "2027-02-11",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 661765656,
     "title": "BSK.",
     "date": "2027-02-11",
@@ -22598,19 +23235,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 751299584,
-    "title": "Editors",
-    "date": "2027-02-11",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 142576499,
@@ -22935,6 +23559,19 @@
     "ticketUrl": "https://www.wildatheartberlin.de/concerts.php",
     "spotifyUrl": "",
     "source": "wildatheart",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 781417310,
+    "title": "anamē",
+    "date": "2027-02-13",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/130227-aname",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
     "addedAt": "2026-11-01"
   },
   {
@@ -23469,6 +24106,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 1970186958,
+    "title": "Nathalie Froehlich - Berlin",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/nathalie-froehlich-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 552465584,
     "title": "SPONTY.",
     "date": "2027-02-19",
@@ -23664,6 +24314,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 232312166,
+    "title": "DOMINIC FIKE",
+    "date": "2027-02-20",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/dominic-fike-columbiahalle-22298637/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-10-21"
+  },
+  {
     "id": 1376660348,
     "title": "FIL - \"Lieder of the world\"",
     "date": "2027-02-20",
@@ -23690,19 +24353,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 232312166,
-    "title": "DOMINIC FIKE",
-    "date": "2027-02-20",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/dominic-fike-columbiahalle-22298637/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-10-21"
-  },
-  {
     "id": 486560162,
     "title": "Phantom Rockers + The Ripmen",
     "date": "2027-02-20",
@@ -23726,6 +24376,19 @@
     "ticketUrl": "https://quasimodo.club/events/the-ac-dcs-tribute-band-4-7494",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 340752038,
+    "title": "REWI",
+    "date": "2027-02-20",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/200227-REWI",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 644233724,
@@ -24845,6 +25508,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1045063782,
+    "title": "Winona Riders - El Sueño de Dominar el Planeta…",
+    "date": "2027-03-04",
+    "time": "21:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/winona-riders-el-sueño-de-dominar-el-planeta-se-renueva.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1367475729,
     "title": "Los Fastidios + +Guest",
     "date": "2027-03-04",
@@ -25806,19 +26482,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 391667428,
-    "title": "Klavierfest Berlin-Weißensee 2027 - Klavierabend",
-    "date": "2027-03-12",
-    "time": "20:00",
-    "locationId": 41,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.klavierfest-bw.de/programm-2027/fr-12-3-20-00-eri-mantani/",
-    "spotifyUrl": "",
-    "source": "peter-edel",
-    "addedAt": "2026-09-27"
-  },
-  {
     "id": 1482124972,
     "title": "Team Scheisse",
     "date": "2027-03-12",
@@ -25830,6 +26493,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 391667428,
+    "title": "Klavierfest Berlin-Weißensee 2027 - Klavierabend",
+    "date": "2027-03-12",
+    "time": "20:00",
+    "locationId": 41,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.klavierfest-bw.de/programm-2027/fr-12-3-20-00-eri-mantani/",
+    "spotifyUrl": "",
+    "source": "peter-edel",
+    "addedAt": "2026-09-27"
   },
   {
     "id": 1871969442,
@@ -25936,6 +26612,19 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 271533527,
+    "title": "Shygirl",
+    "date": "2027-03-13",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/shygirl-swallow-live-columbiahalle-22283166/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-10-14"
+  },
+  {
     "id": 700886012,
     "title": "The Australian Pink Floyd Show",
     "date": "2027-03-13",
@@ -25973,19 +26662,6 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-09-27"
-  },
-  {
-    "id": 271533527,
-    "title": "Shygirl",
-    "date": "2027-03-13",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/shygirl-swallow-live-columbiahalle-22283166/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-10-14"
   },
   {
     "id": 1303347681,
@@ -26260,19 +26936,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 979915185,
-    "title": "Arnd Zeigler - Verschoben!",
-    "date": "2027-03-17",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/arnd-zeigler-verschoben-17-03-2027",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1639422336,
     "title": "Lizzy McAlpine",
     "date": "2027-03-17",
@@ -26284,6 +26947,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-09-27"
+  },
+  {
+    "id": 979915185,
+    "title": "Arnd Zeigler - Verschoben!",
+    "date": "2027-03-17",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/arnd-zeigler-verschoben-17-03-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 987709711,
@@ -26533,6 +27209,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 654914800,
+    "title": "OG Keemo",
+    "date": "2027-03-20",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 589617523,
     "title": "Klangphonics",
     "date": "2027-03-20",
@@ -26546,17 +27235,17 @@
     "addedAt": "2026-10-28"
   },
   {
-    "id": 654914800,
-    "title": "OG Keemo",
+    "id": 1454267291,
+    "title": "DUSKY pres. SIGNALS  TOUR",
     "date": "2027-03-20",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
     "description": "",
-    "ticketUrl": "https://www.columbiahalle.berlin/veranstaltungen.html",
+    "ticketUrl": "https://club.ritterbutzke.com/event/200327-DUSKYpres-SIGNALSTOUR",
     "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1177271366,
@@ -26598,19 +27287,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1874452784,
-    "title": "The Warning",
-    "date": "2027-03-21",
-    "time": "20:00",
-    "locationId": 33,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/the-warning/2027-03-21-2000",
-    "spotifyUrl": "",
-    "source": "ubereatsmusichall",
-    "addedAt": "2026-09-15"
-  },
-  {
     "id": 458401295,
     "title": "OG Keemo",
     "date": "2027-03-21",
@@ -26622,6 +27298,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1874452784,
+    "title": "The Warning",
+    "date": "2027-03-21",
+    "time": "20:00",
+    "locationId": 33,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/the-warning/2027-03-21-2000",
+    "spotifyUrl": "",
+    "source": "ubereatsmusichall",
+    "addedAt": "2026-09-15"
   },
   {
     "id": 1115527848,
@@ -27209,6 +27898,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1066336964,
+    "title": "Leoniden",
+    "date": "2027-04-02",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://landstreicher-konzerte.de/konzerte/leoniden-b-27",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1334655690,
     "title": "DEADLINE With Special Guest & Support",
     "date": "2027-04-02",
@@ -27245,19 +27947,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 1066336964,
-    "title": "Leoniden",
-    "date": "2027-04-02",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://landstreicher-konzerte.de/konzerte/leoniden-b-27",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 973531682,
@@ -27453,19 +28142,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 902277711,
-    "title": "Trettmann",
-    "date": "2027-04-04",
-    "time": "20:00",
-    "locationId": 56,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.ufo-velodrom.de/events/event/trettmann-ufo-2027-04-04",
-    "spotifyUrl": "",
-    "source": "ufo",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1649154924,
     "title": "THE WOMBATS",
     "date": "2027-04-04",
@@ -27477,6 +28153,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 902277711,
+    "title": "Trettmann",
+    "date": "2027-04-04",
+    "time": "20:00",
+    "locationId": 56,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.ufo-velodrom.de/events/event/trettmann-ufo-2027-04-04",
+    "spotifyUrl": "",
+    "source": "ufo",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1937512523,
@@ -28059,6 +28748,19 @@
     "addedAt": "2026-09-29"
   },
   {
+    "id": 1475194788,
+    "title": "Weltauswahl by Extrawelt",
+    "date": "2027-04-10",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/100427-WeltauswahlbyExtrawelt",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1715211173,
     "title": "Senta",
     "date": "2027-04-11",
@@ -28253,6 +28955,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 433430576,
+    "title": "Snarky Puppy",
+    "date": "2027-04-13",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/snarky-puppy-columbiahalle-22085602/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-09-15"
+  },
+  {
     "id": 1728879510,
     "title": "GHØSTKID +Support: Dropout Kings & Stain The Canvas",
     "date": "2027-04-13",
@@ -28265,17 +28980,17 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 433430576,
-    "title": "Snarky Puppy",
-    "date": "2027-04-13",
-    "time": "20:00",
-    "locationId": 32,
+    "id": 1590477967,
+    "title": "June McDoom - BERLIN • URBAN SPREE",
+    "date": "2027-04-14",
+    "time": "19:00",
+    "locationId": 21,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/snarky-puppy-columbiahalle-22085602/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/june-mcdoom-berlin-•-urban-spree.html",
     "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-09-15"
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1906722231,
@@ -28356,19 +29071,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 427928671,
-    "title": "Hinnerk Köhn",
-    "date": "2027-04-14",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://landstreicher-konzerte.de/konzerte/hinnerk-koehn-p-27",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1788728982,
     "title": "Wanda",
     "date": "2027-04-14",
@@ -28380,6 +29082,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 427928671,
+    "title": "Hinnerk Köhn",
+    "date": "2027-04-14",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://landstreicher-konzerte.de/konzerte/hinnerk-koehn-p-27",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 736719442,
@@ -28510,6 +29225,19 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 1431257313,
+    "title": "GIRLS UNDER GLASS + SUPPORT",
+    "date": "2027-04-16",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/girls-under-glass-support.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1039375232,
@@ -28692,6 +29420,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 1203780674,
+    "title": "Bibiza",
+    "date": "2027-04-18",
+    "time": "20:00",
+    "locationId": 32,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://landstreicher-konzerte.de/konzerte/bibiza-b-27",
+    "spotifyUrl": "",
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 659045496,
     "title": "Karl die Große |  »Platz für eigene Notizen 2027«",
     "date": "2027-04-18",
@@ -28716,19 +29457,6 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1203780674,
-    "title": "Bibiza",
-    "date": "2027-04-18",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://landstreicher-konzerte.de/konzerte/bibiza-b-27",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1323834100,
@@ -29027,6 +29755,19 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 1095848672,
+    "title": "Pure Obsessions & Red Nights + Nico Amara…",
+    "date": "2027-04-23",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/pure-obsessions-and-red-nights-nico-amara-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 537620831,
@@ -30344,19 +31085,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1110471490,
-    "title": "Dieter Bohlen",
-    "date": "2027-05-21",
-    "time": "20:00",
-    "locationId": 33,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/dieter-bohlen-27/2027-05-21-2000",
-    "spotifyUrl": "",
-    "source": "ubereatsmusichall",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1797752945,
     "title": "RIN",
     "date": "2027-05-21",
@@ -30368,6 +31096,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1110471490,
+    "title": "Dieter Bohlen",
+    "date": "2027-05-21",
+    "time": "20:00",
+    "locationId": 33,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/dieter-bohlen-27/2027-05-21-2000",
+    "spotifyUrl": "",
+    "source": "ubereatsmusichall",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1527012692,
@@ -31065,6 +31806,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1223145120,
+    "title": "BERLIN BREAKOUT 2027",
+    "date": "2027-07-03",
+    "time": "14:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/berlin-breakout-2027.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 455098292,
@@ -31947,19 +32701,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 24774545,
-    "title": "Rocko Schamoni",
-    "date": "2027-10-22",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/rocko-schamoni-zu-fu-zum-mond",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1450491463,
     "title": "Eisbrecher",
     "date": "2027-10-22",
@@ -31971,6 +32712,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 24774545,
+    "title": "Rocko Schamoni",
+    "date": "2027-10-22",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/rocko-schamoni-zu-fu-zum-mond",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 1154558164,
