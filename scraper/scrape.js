@@ -33,6 +33,15 @@ function detectType(title, description = '') {
 
 // ─── Hilfsfunktionen ────────────────────────────────────────────────────────
 
+// Manche Venue-Seiten/-APIs legen einen Support-Act in ein separates Subtitle/Untertitel-Feld
+// statt in den Haupttitel - das Feld ist aber meist zweckentfremdet (oft Tour-Name/Teaser-Text
+// statt Lineup-Info), daher wird nur bei eindeutiger "Support:"/"Special Guest:"-Markierung
+// etwas herausgezogen; alles andere bleibt unangetastet statt geraten zu werden.
+function extractSupportAddendum(text) {
+  const m = String(text || '').match(/(?:support|special\s+guests?):?\s*(.+)$/i)
+  return m ? m[1].trim() : null
+}
+
 function slugify(str) {
   return str.toLowerCase()
     .replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss')
@@ -230,7 +239,10 @@ async function scrapeLido() {
         const text = $(line).text().trim()
         if (text) lines.push(text)
       })
-      const title = lines.join(' · ').trim() || $(el).text().replace(/\s+/g, ' ').trim()
+      // Zweite/weitere Board-Zeile trägt den Support-Act meist schon mit eigenem führendem
+      // "+" (z.B. "HI! SPENCER" / "+ KORD") - mit Leerzeichen statt " · " verbinden, damit
+      // extractArtists() später sauber auf dem bereits vorhandenen "+" splitten kann.
+      const title = lines.join(' ').trim() || $(el).text().replace(/\s+/g, ' ').trim()
       if (!title) return
 
       const key = date + title
@@ -448,9 +460,10 @@ async function scrapeSO36() {
       const type = supertitle.includes('party') || supertitle.includes('event') ||
                    supertitle.includes('club') || supertitle.includes('dj')
                    ? 'party' : 'konzert'
+      const support = extractSupportAddendum(p.subtitle)
 
       events.push({
-        title: p.title,
+        title: support ? `${p.title} + ${support}` : p.title,
         date,
         time: time.substring(0, 5),
         locationId: 2,
@@ -656,8 +669,11 @@ async function scrapePrivatclub() {
     const months = { januar:1,februar:2,märz:3,april:4,mai:5,juni:6,juli:7,august:8,september:9,oktober:10,november:11,dezember:12 }
 
     $('.event_wrapper').each((_, el) => {
-      const title = $(el).find('.titel').first().text().trim()
-      if (!title) return
+      const baseTitle = $(el).find('.titel').first().text().trim()
+      if (!baseTitle) return
+      const untertitel = $(el).find('.untertitel').first().text().trim()
+      const support = extractSupportAddendum(untertitel)
+      const title = support ? `${baseTitle} + ${support}` : baseTitle
 
       const part1 = $(el).find('.datum_part1').first().text().trim()
       const part2 = $(el).find('.datum_part2').first().text().trim().toLowerCase()
@@ -686,7 +702,7 @@ async function scrapePrivatclub() {
         title, date, time,
         locationId: 4,
         type,
-        description: $(el).find('.untertitel').first().text().trim(),
+        description: untertitel,
         ticketUrl,
         spotifyUrl: '',
         source: 'privatclub'
@@ -2617,11 +2633,13 @@ async function scrapeWildAtHeart() {
       const date = `${year}-${month}-${day}`
       if (date < today()) return
 
-      // Headliner: erster Bandname in Anführungszeichen
-      const titleMatch = contentText.match(/"([^"]+)"/)
-      if (!titleMatch) return
-      const title = titleMatch[1].trim()
-      if (!title || title.length < 2) return
+      // Alle in Anführungszeichen genannten Bandnamen - meist Headliner + Support, z.B.
+      // '"DeeCracks" (Punk-Rock) "Power Apes" (Rock)' - bewusst nicht nur die erste, sonst
+      // ginge der Support-Act komplett verloren.
+      const titleMatches = contentText.match(/"([^"]+)"/g)
+      if (!titleMatches) return
+      const title = titleMatches.map(t => t.slice(1, -1).trim()).filter(t => t.length >= 2).join(' + ')
+      if (!title) return
 
       const key = date + title
       if (seen.has(key)) return
