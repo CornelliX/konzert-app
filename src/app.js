@@ -760,7 +760,7 @@ function renderHistoryRow(h) {
   return `
     <div class="flex items-start justify-between rounded-xl px-3 py-2.5" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);">
       <div style="min-width:0; flex:1;">
-        <div class="syne" style="font-size:13px; font-weight:700; color:white; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</div>
+        <a href="${esc(spotifySearchUrl(h.title))}" target="_blank" title="Auf Spotify suchen" class="syne" style="display:block; font-size:13px; font-weight:700; color:white; text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</a>
         <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
         <div class="history-stars" data-history-id="${h.id}" style="margin-top:4px; display:flex;">${stars}</div>
       </div>
