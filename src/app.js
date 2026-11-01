@@ -1,5 +1,5 @@
 import { getLocations, getEvents, saveData, loadData } from './data.js'
-import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, getUser, signInWithEmail, verifyOtp, signOut } from './supabase.js'
+import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut } from './supabase.js'
 
 function esc(s) {
   return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
@@ -755,11 +755,14 @@ function renderBookmarkedView() {
 function renderHistoryRow(h) {
   const dateStr = new Date(h.date + 'T12:00:00').toLocaleDateString('de-DE', { day: 'numeric', month: 'short', year: 'numeric' })
   const loc = [h.locationName, h.locationCity].filter(Boolean).join(', ')
+  const rating = h.rating || 0
+  const stars = [1, 2, 3, 4, 5].map(n => `<button data-star="${n}" aria-label="${n} Sterne" style="background:none; border:none; cursor:pointer; padding:0 1px; font-size:15px; line-height:1; color:${n <= rating ? '#facc15' : 'rgba(255,255,255,0.22)'};">★</button>`).join('')
   return `
-    <div class="flex items-center justify-between rounded-xl px-3 py-2.5" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);">
+    <div class="flex items-start justify-between rounded-xl px-3 py-2.5" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);">
       <div style="min-width:0; flex:1;">
         <div class="syne" style="font-size:13px; font-weight:700; color:white; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</div>
         <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
+        <div class="history-stars" data-history-id="${h.id}" style="margin-top:4px; display:flex;">${stars}</div>
       </div>
       <button data-history-remove="${h.id}" aria-label="Aus History löschen" style="flex-shrink:0; margin-left:8px; color:rgba(255,255,255,0.35); background:none; border:none; cursor:pointer; font-size:18px; line-height:1; padding:4px;">×</button>
     </div>
@@ -825,6 +828,20 @@ function attachHistoryRemoveEvents() {
       history = history.filter(h => String(h.id) !== id)
       refreshHistoryList()
       await removeHistoryEntry(id)
+    })
+  })
+  document.querySelectorAll('.history-stars').forEach(container => {
+    const id = container.dataset.historyId
+    container.querySelectorAll('[data-star]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const n = parseInt(btn.dataset.star)
+        const entry = history.find(h => String(h.id) === id)
+        if (!entry) return
+        // Tippen auf den schon gesetzten Stern entfernt die Bewertung wieder (Toggle-to-clear).
+        entry.rating = (entry.rating || 0) === n ? null : n
+        refreshHistoryList()
+        await updateHistoryRating(id, entry.rating)
+      })
     })
   })
 }

@@ -15,6 +15,7 @@ create table public.history (
   location_name text,
   location_city text,
   date date not null,
+  rating smallint check (rating is null or (rating between 1 and 5)),
   created_at timestamptz not null default now()
 );
 
@@ -22,4 +23,5 @@ alter table public.history enable row level security;
 
 create policy history_select_own on public.history for select using (auth.uid() = user_id);
 create policy history_insert_own on public.history for insert with check (auth.uid() = user_id);
+create policy history_update_own on public.history for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
 create policy history_delete_own on public.history for delete using (auth.uid() = user_id);

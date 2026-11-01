@@ -104,7 +104,7 @@ export async function loadHistory() {
   if (!user) return []
   const { data, error } = await supabase.from('history').select('*').eq('user_id', user.id).order('date', { ascending: false })
   if (error) return []
-  return data.map(r => ({ id: r.id, eventId: r.event_id, title: r.title, locationName: r.location_name, locationCity: r.location_city, date: r.date }))
+  return data.map(r => ({ id: r.id, eventId: r.event_id, title: r.title, locationName: r.location_name, locationCity: r.location_city, date: r.date, rating: r.rating }))
 }
 
 export async function addHistoryEntry({ eventId, title, locationName, locationCity, date }) {
@@ -114,7 +114,15 @@ export async function addHistoryEntry({ eventId, title, locationName, locationCi
     user_id: user.id, event_id: eventId ?? null, title, location_name: locationName || null, location_city: locationCity || null, date
   }).select().single()
   if (error || !data) return null
-  return { id: data.id, eventId: data.event_id, title: data.title, locationName: data.location_name, locationCity: data.location_city, date: data.date }
+  return { id: data.id, eventId: data.event_id, title: data.title, locationName: data.location_name, locationCity: data.location_city, date: data.date, rating: data.rating }
+}
+
+// rating: 1-5, oder null zum Entfernen der Bewertung (Toggle-to-clear in der UI).
+export async function updateHistoryRating(id, rating) {
+  const user = await getUser()
+  if (!user) return false
+  const { error } = await supabase.from('history').update({ rating }).eq('id', id).eq('user_id', user.id)
+  return !error
 }
 
 export async function removeHistoryEntry(id) {
