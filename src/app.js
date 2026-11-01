@@ -145,6 +145,7 @@ const bookmarkInFlight = new Set()
 let fetchSeq = 0
 let markSeenTimer = null
 let titleAnimated = false
+let lastGemerktTapAt = 0
 
 export async function renderApp(el) {
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
@@ -815,7 +816,7 @@ function renderHistoryDatePicker() {
 
 function renderHistorySection(historyEntries) {
   return `
-    <div style="margin-top:28px;">
+    <div id="history-section" style="margin-top:28px;">
       <div class="flex items-center justify-between mb-3">
         <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:rgba(255,255,255,0.5);">History</h3>
         <button data-history-add-toggle title="Konzert nachtragen" aria-label="Konzert nachtragen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="width:28px; height:28px; color:rgba(255,255,255,0.6); font-size:16px; line-height:1;">+</button>
@@ -1066,10 +1067,27 @@ function updateView(reRenderFilters = false) {
   }
 }
 
+function scrollToHistorySection() {
+  requestAnimationFrame(() => {
+    document.getElementById('history-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  })
+}
+
 function attachNavEvents() {
   document.querySelectorAll('[data-nav]').forEach(btn => {
     btn.addEventListener('click', () => {
-      if (currentView === btn.dataset.nav) return
+      // Doppel-Tap auf "Gemerkt" springt direkt zur History-Sektion - über den zeitlichen
+      // Abstand zweier click-Events statt des nativen dblclick, da dblclick bei Touch-Taps
+      // plattformabhängig unzuverlässig synthetisiert wird.
+      const isGemerktTap = btn.dataset.nav === 'gemerkt'
+      const now = Date.now()
+      const isDoubleTap = isGemerktTap && (now - lastGemerktTapAt < 400)
+      if (isGemerktTap) lastGemerktTapAt = now
+
+      if (currentView === btn.dataset.nav) {
+        if (isDoubleTap) scrollToHistorySection()
+        return
+      }
       const prevView = currentView
       currentView = btn.dataset.nav
       document.getElementById('pane-' + prevView).style.display = 'none'
@@ -1096,6 +1114,7 @@ function attachNavEvents() {
       attachNavEvents()
       document.querySelector('[data-open-radar]')?.addEventListener('click', () => document.getElementById('modal-radar').classList.remove('hidden'))
       window.scrollTo(0, 0)
+      if (isDoubleTap && currentView === 'gemerkt') scrollToHistorySection()
     })
   })
 }
