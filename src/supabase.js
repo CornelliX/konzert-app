@@ -99,6 +99,40 @@ export async function removeRadarArtist(id) {
   return !error
 }
 
+export async function loadHistory() {
+  const user = await getUser()
+  if (!user) return []
+  const { data, error } = await supabase.from('history').select('*').eq('user_id', user.id).order('date', { ascending: false })
+  if (error) return []
+  return data.map(r => ({ id: r.id, eventId: r.event_id, title: r.title, locationName: r.location_name, locationCity: r.location_city, date: r.date }))
+}
+
+export async function addHistoryEntry({ eventId, title, locationName, locationCity, date }) {
+  const user = await getUser()
+  if (!user) return null
+  const { data, error } = await supabase.from('history').insert({
+    user_id: user.id, event_id: eventId ?? null, title, location_name: locationName || null, location_city: locationCity || null, date
+  }).select().single()
+  if (error || !data) return null
+  return { id: data.id, eventId: data.event_id, title: data.title, locationName: data.location_name, locationCity: data.location_city, date: data.date }
+}
+
+export async function removeHistoryEntry(id) {
+  const user = await getUser()
+  if (!user) return false
+  const { error } = await supabase.from('history').delete().eq('id', id).eq('user_id', user.id)
+  return !error
+}
+
+// Für den Fall, dass ein noch nicht stattgefundenes "dabei"-Event wieder entmarkiert wird -
+// der per event_id verknüpfte History-Snapshot soll dann nicht stehen bleiben.
+export async function removeHistoryEntryByEventId(eventId) {
+  const user = await getUser()
+  if (!user) return false
+  const { error } = await supabase.from('history').delete().eq('event_id', String(eventId)).eq('user_id', user.id)
+  return !error
+}
+
 export async function toggleBookmark(eventId, status) {
   const user = await getUser()
   if (!user) return false

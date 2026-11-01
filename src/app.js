@@ -1,5 +1,5 @@
 import { getLocations, getEvents, saveData, loadData } from './data.js'
-import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, removeRadarArtist, getUser, signInWithEmail, verifyOtp, signOut } from './supabase.js'
+import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, getUser, signInWithEmail, verifyOtp, signOut } from './supabase.js'
 
 function esc(s) {
   return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
@@ -106,6 +106,7 @@ let bookmarked = loadData('bookmarked') || []
 let going = loadData('going') || []
 let seenEvents = loadData('seenEvents') || []
 let radar = []
+let history = []
 let currentView = 'liste'
 let calendarOffset = 0
 // Die Liste-Ansicht rendert bei mehreren tausend Events (z.B. "Alle Locations" in Berlin)
@@ -148,6 +149,8 @@ export async function renderApp(el) {
     bookmarked = merged.bookmarked
     going = merged.going
     await checkRadarMatches()
+    history = await loadHistory()
+    await syncGoingToHistory()
   }
   sessionStorage.setItem('lebe-loaded', '1')
   const c64El = document.querySelector('.c64-border')
@@ -224,6 +227,31 @@ async function checkRadarMatches() {
     await removeRadarArtist(radarEntry.id)
   }
   if (matches.length) showRadarBanner(matches)
+}
+
+// Schreibt für jedes aktuell "dabei"-markierte Event einen History-Snapshot (Titel/Location/
+// Datum), falls noch keiner existiert - unabhängig davon, ob das Event in der Zukunft oder
+// Vergangenheit liegt. Wichtig: der Scraper entfernt vergangene Events aus events.json
+// (spätestens beim nächsten wöchentlichen Lauf), daher wird der Snapshot bewusst sofort bei
+// "dabei" angelegt statt erst nachträglich beim Verstreichen des Datums - sonst könnte das
+// Event schon aus events.json verschwunden sein, bevor die App je Gelegenheit hatte, es zu
+// archivieren. Die History-Sektion selbst blendet Einträge mit Datum >= heute einfach aus.
+async function syncGoingToHistory() {
+  if (!going.length) return
+  const known = new Set(history.map(h => h.eventId).filter(Boolean))
+  for (const id of going) {
+    if (known.has(String(id))) continue
+    const ev = events.find(e => e.id == id)
+    if (!ev) continue
+    const loc = locationsById.get(ev.locationId)
+    const entry = await addHistoryEntry({
+      eventId: String(id), title: ev.title,
+      locationName: loc ? loc.name : (ev.locationName || ''),
+      locationCity: loc ? loc.city : (ev.locationCity || ''),
+      date: ev.date
+    })
+    if (entry) history = [...history, entry]
+  }
 }
 
 // Eigene In-App-Toast statt alert() - passt sich dem Dark-Glass-Look der App an, ein
@@ -673,7 +701,12 @@ function renderBookmarkedView() {
     ...bookmarkedEvents.map(e => ({ ...e, _status: 'gemerkt' }))
   ].sort((a, b) => new Date(a.date + 'T' + a.time) - new Date(b.date + 'T' + b.time))
 
-  if (allEvents.length === 0) return `
+  // Nur bereits stattgefundene Einträge zeigen - zukünftige History-Snapshots existieren
+  // schon (siehe syncGoingToHistory), sollen aber erst nach dem Konzertdatum auftauchen.
+  const todayStr = new Date().toISOString().split('T')[0]
+  const historyEntries = history.filter(h => h.date <= todayStr).sort((a, b) => b.date.localeCompare(a.date))
+
+  if (allEvents.length === 0 && historyEntries.length === 0) return `
     <div class="text-center py-20 text-slate-600">
       <p class="syne text-2xl mb-2">—</p>
       <p class="text-sm">Noch keine Events gespeichert.</p>
@@ -684,10 +717,89 @@ function renderBookmarkedView() {
     <div class="space-y-3 pt-2">
       ${allEvents.map(e => renderEventCard(e)).join('')}
     </div>
+    ${renderHistorySection(historyEntries)}
   `
 }
 
-const inputStyle = `width:100%; border-radius:12px; padding:10px 14px; font-size:14px; color:white; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); font-family:'DM Sans',sans-serif; color-scheme:dark;`
+function renderHistoryRow(h) {
+  const dateStr = new Date(h.date + 'T12:00:00').toLocaleDateString('de-DE', { day: 'numeric', month: 'short', year: 'numeric' })
+  const loc = [h.locationName, h.locationCity].filter(Boolean).join(', ')
+  return `
+    <div class="flex items-center justify-between rounded-xl px-3 py-2.5" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);">
+      <div style="min-width:0; flex:1;">
+        <div class="syne" style="font-size:13px; font-weight:700; color:white; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
+      </div>
+      <button data-history-remove="${h.id}" aria-label="Aus History löschen" style="flex-shrink:0; margin-left:8px; color:rgba(255,255,255,0.35); background:none; border:none; cursor:pointer; font-size:18px; line-height:1; padding:4px;">×</button>
+    </div>
+  `
+}
+
+function renderHistorySection(historyEntries) {
+  return `
+    <div style="margin-top:28px;">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:rgba(255,255,255,0.5);">History</h3>
+        <button data-history-add-toggle title="Konzert nachtragen" aria-label="Konzert nachtragen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="width:28px; height:28px; color:rgba(255,255,255,0.6); font-size:16px; line-height:1;">+</button>
+      </div>
+      <div id="history-add-form" class="hidden space-y-2 mb-3">
+        <input id="history-title" type="text" placeholder="Artist / Titel" style="${inputStyle}" />
+        <input id="history-location" type="text" placeholder="Location" style="${inputStyle}" />
+        <input id="history-date" type="date" style="${inputStyle}" />
+        <button data-history-save class="w-full py-2.5 rounded-xl font-bold text-white text-sm syne" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">Konzert hinzufügen</button>
+      </div>
+      <div id="history-list" class="space-y-2">
+        ${historyEntries.length ? historyEntries.map(renderHistoryRow).join('') : `<p class="text-sm" style="color:rgba(255,255,255,0.3);">Noch keine besuchten Konzerte eingetragen.</p>`}
+      </div>
+    </div>
+  `
+}
+
+function refreshHistoryList() {
+  const list = document.getElementById('history-list')
+  if (!list) return
+  const todayStr = new Date().toISOString().split('T')[0]
+  const historyEntries = history.filter(h => h.date <= todayStr).sort((a, b) => b.date.localeCompare(a.date))
+  list.innerHTML = historyEntries.length ? historyEntries.map(renderHistoryRow).join('') : `<p class="text-sm" style="color:rgba(255,255,255,0.3);">Noch keine besuchten Konzerte eingetragen.</p>`
+  attachHistoryRemoveEvents()
+}
+
+function attachHistoryRemoveEvents() {
+  document.querySelectorAll('[data-history-remove]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const id = btn.dataset.historyRemove
+      history = history.filter(h => String(h.id) !== id)
+      refreshHistoryList()
+      await removeHistoryEntry(id)
+    })
+  })
+}
+
+function attachHistoryEvents() {
+  const form = document.getElementById('history-add-form')
+  document.querySelector('[data-history-add-toggle]')?.addEventListener('click', () => {
+    if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Konzerte nachzutragen.'); return }
+    form?.classList.toggle('hidden')
+  })
+  document.querySelector('[data-history-save]')?.addEventListener('click', async () => {
+    const title = document.getElementById('history-title')?.value.trim()
+    const location = document.getElementById('history-location')?.value.trim()
+    const date = document.getElementById('history-date')?.value
+    if (!title || !date) { alert('Bitte mindestens Titel und Datum angeben.'); return }
+    const entry = await addHistoryEntry({ title, locationName: location, locationCity: '', date })
+    if (entry) {
+      history = [...history, entry]
+      document.getElementById('history-title').value = ''
+      document.getElementById('history-location').value = ''
+      document.getElementById('history-date').value = ''
+      form?.classList.add('hidden')
+      refreshHistoryList()
+    }
+  })
+  attachHistoryRemoveEvents()
+}
+
+const inputStyle =`width:100%; border-radius:12px; padding:10px 14px; font-size:14px; color:white; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); font-family:'DM Sans',sans-serif; color-scheme:dark;`
 
 function renderModals() {
   return `
@@ -837,6 +949,7 @@ function attachNavEvents() {
       if (filterBar) filterBar.style.display = currentView === 'gemerkt' ? 'none' : ''
       if (currentView === 'gemerkt') {
         newPane.innerHTML = renderBookmarkedView()
+        attachHistoryEvents()
         attachSwipeGestures()
       } else if (newPane.dataset.stale) {
         delete newPane.dataset.stale
@@ -990,6 +1103,8 @@ function attachEvents() {
         bookmarked = merged.bookmarked
         going = merged.going
         await checkRadarMatches()
+        history = await loadHistory()
+        await syncGoingToHistory()
         render()
       }, 500)
     } else {
@@ -1008,6 +1123,7 @@ function attachEvents() {
 
   attachFilterBarEvents()
   if (currentView === 'kalender') attachCalendarEvents()
+  if (currentView === 'gemerkt') attachHistoryEvents()
   attachSwipeGestures()
 }
 
@@ -1128,6 +1244,26 @@ function attachSwipeToWrapper(wrapper) {
     setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 400)
     if (wasBookmarked) toggleBookmark(id, 'bookmarked')
     toggleBookmark(id, 'going')
+    const ev = events.find(e => e.id == id)
+    if (isNow && ev) {
+      // Sofortiger History-Snapshot beim Markieren statt erst beim nächsten App-Start -
+      // siehe syncGoingToHistory() für die Begründung (Event kann bis dahin schon aus
+      // events.json verschwunden sein).
+      if (!history.some(h => h.eventId === String(id))) {
+        const loc = locationsById.get(ev.locationId)
+        addHistoryEntry({
+          eventId: String(id), title: ev.title,
+          locationName: loc ? loc.name : (ev.locationName || ''),
+          locationCity: loc ? loc.city : (ev.locationCity || ''),
+          date: ev.date
+        }).then(entry => { if (entry) history = [...history, entry] })
+      }
+    } else if (!isNow && ev && ev.date >= new Date().toISOString().split('T')[0]) {
+      // Nur bei noch nicht stattgefundenen Events den Snapshot mit entfernen - bei bereits
+      // vergangenen bleibt er stehen (Korrektur dafür ist der Lösch-Button in der History).
+      history = history.filter(h => h.eventId !== String(id))
+      removeHistoryEntryByEventId(id)
+    }
   })
   wrapper.querySelector('[data-share]')?.addEventListener('click', () => {
     const e = events.find(ev => ev.id == id)
