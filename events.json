@@ -91,19 +91,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 80676370,
-    "title": "SPOT ON! THE SHOW",
-    "date": "2026-11-01",
-    "time": "18:00",
-    "type": "konzert",
-    "locationId": 26,
-    "description": "",
-    "ticketUrl": "https://heimathafen-neukoelln.de/events/spot-on-the-show-november/",
-    "spotifyUrl": "",
-    "source": "heimathafen",
-    "addedAt": "2026-10-07"
-  },
-  {
     "id": 1242316577,
     "title": "DOK Leipzig: Prelude And Fugues - The Wood Thrush",
     "date": "2026-11-01",
@@ -195,6 +182,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 373275083,
+    "title": "HI! SPENCER · + KORD",
+    "date": "2026-11-01",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-01-hi--spencer",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 967347315,
     "title": "A.Chal",
     "date": "2026-11-01",
@@ -205,19 +205,6 @@
     "ticketUrl": "https://columbia-theater.de/event/20261101-a-chal/",
     "spotifyUrl": "",
     "source": "columbiatheater",
-    "addedAt": "2026-10-25"
-  },
-  {
-    "id": 318483139,
-    "title": "Flowgeist",
-    "date": "2026-11-01",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82079/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-10-25"
   },
   {
@@ -286,19 +273,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1663778865,
-    "title": "My First Time",
-    "date": "2026-11-01",
-    "time": "20:00",
-    "locationId": 36,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://cassiopeia-berlin.de/event/my-first-time-111631647",
-    "spotifyUrl": "",
-    "source": "cassiopeia",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 462568503,
     "title": "Koepke + OLL",
     "date": "2026-11-01",
@@ -362,19 +336,6 @@
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1047072016,
-    "title": "Tomora",
-    "date": "2026-11-01",
-    "time": "20:00",
-    "locationId": 56,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.ufo-velodrom.de/events/event/tomora-ufo-2026-11-01",
-    "spotifyUrl": "",
-    "source": "ufo",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1130114719,
@@ -505,6 +466,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1772861514,
+    "title": "CONWAY THE MACHINE",
+    "date": "2026-11-02",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-02-conway-the-machine",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 50180113,
@@ -689,6 +663,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1370936206,
+    "title": "Don Toliver",
+    "date": "2026-11-02",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/don-toliver/2026-11-02-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1854801471,
     "title": "Gloryhammer",
     "date": "2026-11-03",
@@ -767,6 +754,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1789834218,
+    "title": "Disney in Concert",
+    "date": "2026-11-03",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/disney-in-concert-2026/2026-11-03-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1554292998,
     "title": "Eli Preiss",
     "date": "2026-11-03",
@@ -791,6 +791,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-10-28"
+  },
+  {
+    "id": 1773831191,
+    "title": "panicbaby",
+    "date": "2026-11-03",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-03-panicbaby",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1309466651,
@@ -1243,6 +1256,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 919961744,
+    "title": "Deep Purple",
+    "date": "2026-11-04",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/deep-purple-26/2026-11-04-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 391447983,
     "title": "Lesebühne Schkeuditzer Kreuz: Live-Poetry-Show und Realitätsüberschreitung",
     "date": "2026-11-04",
@@ -1254,6 +1280,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-09-16"
+  },
+  {
+    "id": 1007052519,
+    "title": "DEATH VALLEY GIRLS",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-04-death-valley-girls",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1363779171,
@@ -1825,6 +1864,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 847397481,
+    "title": "UNNV",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-05-unnv",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 718892051,
     "title": "Ceren (neue location)",
     "date": "2026-11-05",
@@ -2328,6 +2380,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 424427862,
+    "title": "THE EARLY DAYS • THROWBACK INDIE PARTY",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-06-the-early-days---let-s-dance-to-joy-division",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 746761240,
     "title": "Fat Dog",
     "date": "2026-11-06",
@@ -2794,6 +2859,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 1404761420,
+    "title": "TRAGEDIE x INDISKRET",
+    "date": "2026-11-06",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/061126-TRAGEDIExINDISKRET",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 924469597,
     "title": "Eisbär",
     "date": "2026-11-06",
@@ -3014,6 +3092,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 690411400,
+    "title": "SMILE AND BURN + PLAIINS + THE PILL / Happy Place Tour",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Alternative]  \n\n07.11.2026, 19:00 Uhr:  \n\nSmile and Burn + PLAIINS + The Pill / Happy Place Tour  \n\nDestiny Tourbooking…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7402.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 660396966,
     "title": "Die Kammer",
     "date": "2026-11-07",
@@ -3116,6 +3207,32 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 377290422,
+    "title": "SECHSER & DJ DISPO",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-07-sechser---dj-dispo",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 65505460,
+    "title": "WE FOUND LOVE!",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-07-we-found-love-",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 75175835,
@@ -3441,6 +3558,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1880822473,
+    "title": "Tokio Hotel",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1828635790,
     "title": "Soulbound x Hell Boulevard",
     "date": "2026-11-07",
@@ -3581,6 +3711,19 @@
     "ticketUrl": "https://quasimodo.club/events/we-love-80s-40-7306",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 93526037,
+    "title": "Stil vor Talent w/ Oliver Koletzki",
+    "date": "2026-11-07",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/071126-StilvorTalentw-OliverKoletzki",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1734301250,
@@ -3739,6 +3882,32 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 729537725,
+    "title": "ROLLSCHUHDISKO PART II",
+    "date": "2026-11-08",
+    "time": "15:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Disco]  \n\n08.11.2026, 15:00 Uhr:  \n\nROLLSCHUHDISKO PART II  \n\nIhr seid geflitzt, ihr seid gerast, ihr seid gerollt!…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7582.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 457641015,
+    "title": "MUSIKEVENT IN LEIPZIG ALS ANZIEHUNGSPUNKT FÜR NEONAZIS?",
+    "date": "2026-11-08",
+    "time": "15:30",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Infoveranstaltung]  \n\n08.11.2026, 15:30 Uhr:  \n\nMusikevent in Leipzig als Anziehungspunkt für Neonazis?  \n\nAnfang…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7591.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1611964472,
     "title": "ALKA UND DER GLÜCKSDRACHE",
     "date": "2026-11-08",
@@ -3854,6 +4023,19 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 139429232,
+    "title": "XANDRIA",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-08-xandria",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1391505979,
@@ -4022,6 +4204,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 2082679369,
+    "title": "Jungle",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 2002838373,
@@ -4206,6 +4401,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 1000811197,
+    "title": "Jenna Raine",
+    "date": "2026-11-09",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P-Iyl1jxH0hYtpkXVZ7",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 767672167,
     "title": "MONTELL FISH",
     "date": "2026-11-09",
@@ -4242,6 +4450,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 1879303067,
+    "title": "Manolito Simonet y su Trabuco",
+    "date": "2026-11-09",
+    "time": "21:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OyIYw1adArOdmuBAYkK",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 17176588,
@@ -4346,6 +4567,19 @@
     "spotifyUrl": "",
     "source": "heimathafen",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 1825988642,
+    "title": "SONS OF LEGION",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-10-sons-of-legion",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 2032815719,
@@ -4465,6 +4699,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 427122475,
+    "title": "Morgan St. Jean",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ozz_i3fCTV3W2k7Y8r9",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 269942610,
     "title": "Red Hot Chilli Pipers",
     "date": "2026-11-10",
@@ -4581,6 +4828,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1658845816,
+    "title": "MUFF POTTER",
+    "date": "2026-11-11",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Punk]  \n\n11.11.2026, 19:00 Uhr:  \n\nMUFF POTTER - Klepto Tour 2026  \n\nDie Gruppe Muff Potter hat ein neues Album…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7393.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1469081979,
     "title": "Tacheles: Zeitzeuginnen Gespräch Renate Aris",
     "date": "2026-11-11",
@@ -4646,6 +4906,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1379348775,
+    "title": "Bloc Party & Interpol",
+    "date": "2026-11-11",
+    "time": "19:15",
+    "locationId": 57,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bloc-party-interpol/2026-11-11-1915",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 775969004,
     "title": "DAN OWEN",
     "date": "2026-11-11",
@@ -4709,6 +4982,19 @@
     "spotifyUrl": "",
     "source": "nbl",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1530108200,
+    "title": "WESTSIDE COWBOY",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-11-westside-cowboys",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1614864482,
@@ -5151,6 +5437,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 223990369,
+    "title": "OUR PROMISE",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-12-our-promise",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2091568765,
     "title": "STEFANIE HEINZMANN",
     "date": "2026-11-12",
@@ -5460,6 +5759,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 1105526645,
+    "title": "THE BROWNING + WITHIN DESTRUCTION + ABBIE FALLS",
+    "date": "2026-11-13",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Metal]  \n\n13.11.2026, 19:00 Uhr:  \n\nTHE BROWNING + WITHIN DESTRUCTION + ABBIE FALLS  \n\nMODERN METALCORE & DEATHCORE…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7499.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1127055654,
     "title": "Bruchbude",
     "date": "2026-11-13",
@@ -5525,6 +5837,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1141302803,
+    "title": "KEIN ALASKA + MALHEUR + HARRY BREAST",
+    "date": "2026-11-13",
+    "time": "19:30",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[HipHop]  \n\n13.11.2026, 19:30 Uhr:  \n\nKEIN ALASKA + MALHEUR + HARRY BREAST   \n\nRecord Release Show , , Kein Alaska - WAS…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7585.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 820507640,
     "title": "FRIBERTY Releaseshow",
     "date": "2026-11-13",
@@ -5562,6 +5887,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 54540701,
+    "title": "JAKUZI",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-13-jakuzi",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 191352835,
@@ -5899,6 +6237,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 844284041,
+    "title": "Bunte Träumerei w/ Marten Lou",
+    "date": "2026-11-13",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/131126-BunteTraumerei",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 117864839,
     "title": "SPLIT",
     "date": "2026-11-13",
@@ -6016,6 +6367,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 443688797,
+    "title": "DOMINIK HARTZ",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Pop]  \n\n14.11.2026, 19:00 Uhr:  \n\nDOMINIK HARTZ  \n\nEs ist viel passiert bei Dominik Hartz: Das erste Album, eine…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7417.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1186551765,
     "title": "KING NO-ONE",
     "date": "2026-11-14",
@@ -6067,6 +6431,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1069568455,
+    "title": "koRn",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/korn-berlin/2026-11-14-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2065269712,
     "title": "Genevieve Stokes",
     "date": "2026-11-14",
@@ -6090,6 +6467,19 @@
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1607855448,
+    "title": "ULTRA SUNN",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-14-ultra-sunn",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 502073208,
@@ -6492,6 +6882,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1044365510,
+    "title": "Monkey Safari - YDKWTD - (All Night Long) Album Release Party",
+    "date": "2026-11-14",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/141126-MonkeySafari",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1594187127,
     "title": "Soul Explosion",
     "date": "2026-11-14",
@@ -6542,6 +6945,19 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 824764068,
+    "title": "ANTIFASCIST WARGAMING CLUB LEIPZIG",
+    "date": "2026-11-15",
+    "time": "11:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "15.11.2026, 11:00 Uhr:  \n\nAntifascist Wargaming Club Leipzig  \n\n(english version below), , Der Antifascist Wargaming…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7590.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 66880806,
@@ -6684,6 +7100,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1718796830,
+    "title": "CEREN",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-15-ceren",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1232889904,
@@ -6997,6 +7426,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1203941293,
+    "title": "FRANKIE AND THE WITCH FINGERS",
+    "date": "2026-11-16",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-16-frankie-and-the-witch-fingers",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1692353151,
     "title": "Caro",
     "date": "2026-11-16",
@@ -7099,6 +7541,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 799250225,
+    "title": "Placebo",
+    "date": "2026-11-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/placebo-26/2026-11-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1111091807,
@@ -7215,6 +7670,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1785308805,
+    "title": "NAPA",
+    "date": "2026-11-17",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-17-napa",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 773817570,
@@ -7476,6 +7944,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 340856542,
+    "title": "SUBBOTNIK",
+    "date": "2026-11-18",
+    "time": "10:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Subbotnik]  \n\n18.11.2026, 10:00 Uhr:  \n\nSUBBOTNIK  \n\nSUBBOTNIK - ein Gedicht!, , Der Herbst ist kalt, der Freisitz alt,…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7578.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1568093486,
     "title": "🔥 HEISSA 🔥 HOLZMARKT WINTERFESTIVAL",
     "date": "2026-11-18",
@@ -7616,6 +8097,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 387436453,
+    "title": "Muse",
+    "date": "2026-11-18",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1003297460,
@@ -7915,6 +8409,19 @@
     "spotifyUrl": "",
     "source": "holzmarkt",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1116823420,
+    "title": "JONNY MAHORO",
+    "date": "2026-11-19",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Pop]  \n\n19.11.2026, 19:00 Uhr:  \n\nJonny Mahoro  \n\nJonny Mahoro war zwar gerade erst auf Tour  aber für alle, dies…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7331.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 771142915,
@@ -8357,6 +8864,19 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 1332673071,
+    "title": "ALLT / EUROPEAN TOUR 2026 / special guests: Avralize and bite down",
+    "date": "2026-11-20",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Metal]  \n\n20.11.2026, 19:00 Uhr:  \n\nALLT / EUROPEAN TOUR 2026 / special guests: Avralize and bite down  \n\nTickets…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7418.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 11430224,
     "title": "Golden Apes & Resplandor",
     "date": "2026-11-20",
@@ -8472,6 +8992,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 301656645,
+    "title": "CASSIA",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-20-cassia",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 836223128,
@@ -8885,6 +9418,32 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 1900309065,
+    "title": "Worakls",
+    "date": "2026-11-20",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/201126-Worakls",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1450507115,
+    "title": "Mollono.Bass",
+    "date": "2026-11-20",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/201126-Mollono-Bass",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1748846356,
     "title": "MX. KOTTI PAGEANT",
     "date": "2026-11-20",
@@ -9027,6 +9586,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 348015507,
+    "title": "Die Schlagernacht des Jahres",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2092823986,
     "title": "Roller Disco",
     "date": "2026-11-21",
@@ -9154,6 +9726,32 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1805611043,
+    "title": "ALLT",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-21-allt",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1127335897,
+    "title": "HEADLESS PARTY • The Home of Core & Alternative Rock",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-21-headless-party---the-home-of-core---alternative-rock-",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 401342706,
@@ -9582,6 +10180,32 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 1529910494,
+    "title": "Alan Fitzpatrick",
+    "date": "2026-11-21",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/211126-AlanFitzpatrick",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1153111556,
+    "title": "Klangkarussell pres. Bias Beach",
+    "date": "2026-11-21",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/211126-Klangkarussellpres-BiasBeach",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 469563735,
     "title": "HOMEPARTY XXL",
     "date": "2026-11-21",
@@ -9773,6 +10397,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 1315658895,
+    "title": "CHICO CHICO",
+    "date": "2026-11-22",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-22-chico-chico",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 104240124,
@@ -10046,6 +10683,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 590146744,
+    "title": "CHAMELEONS & SPECIAL GUEST",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-23-chameleons",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1511522824,
     "title": "YOUTH OF TODAY",
     "date": "2026-11-23",
@@ -10224,6 +10874,19 @@
     "ticketUrl": "https://www.rbb-online.de/unternehmen/service/veranstaltungen/2026/tina-dico.html",
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 316646120,
+    "title": "WEDNESDAY 13 &amp; BIRTHDAY MASSACRE",
+    "date": "2026-11-24",
+    "time": "18:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Punk]  \n\n24.11.2026, 18:00 Uhr:  \n\nWEDNESDAY 13 & BIRTHDAY MASSACRE  \n\nDie Horror-Punk-Ikone Wednesday 13 und die…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7494.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
     "addedAt": "2026-11-01"
   },
   {
@@ -10928,6 +11591,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 369576453,
+    "title": "Konstantinos Argiros",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2118918431,
     "title": "mitte - elektronisches zur nacht - die reihe",
     "date": "2026-11-25",
@@ -10965,6 +11641,19 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 688399497,
+    "title": "KWAM.E",
+    "date": "2026-11-26",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[HipHop]  \n\n26.11.2026, 19:00 Uhr:  \n\nDA IZZA WIEDER LIVE - Kwam.E  \n\nTickets unter: ,…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7538.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 717596008,
@@ -11017,6 +11706,19 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 518407641,
+    "title": "SLIFT",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-26-slift",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 646812771,
@@ -11250,6 +11952,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 579840655,
+    "title": "ZUR DIGITALEN REVOLUTION. WOCHENENDSEMINAR - TAG 1",
+    "date": "2026-11-27",
+    "time": "14:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Seminar]  \n\n27.11.2026, 14:00 Uhr:  \n\nZur digitalen Revolution. Wochenendseminar - Tag 1  \n\nmehr Infos folgen",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7575.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 262057056,
     "title": "BeerMania 2026",
     "date": "2026-11-27",
@@ -11274,6 +11989,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1507856726,
+    "title": "ANDA MORTS - I hate this part of Texas - Tour",
+    "date": "2026-11-27",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Indie]  \n\n27.11.2026, 19:00 Uhr:  \n\nANDA MORTS - I hate this part of Texas - Tour  \n\nNach zwei restlos ausverkauften…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7362.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 24471766,
@@ -11390,6 +12118,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 3213871,
+    "title": "FURIOSA – QUEER LATIN PARTY",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-27-furiosa---queer-latin-party",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 34739167,
@@ -11831,6 +12572,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 1272254326,
+    "title": "Soupherb vs psYsq",
+    "date": "2026-11-27",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/271126-SoupherbvspsYsq-thegroovening",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1053814630,
     "title": "Waschhaus 80er",
     "date": "2026-11-27",
@@ -11870,6 +12624,19 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 1120898863,
+    "title": "ZUR DIGITALEN REVOLUTION. WOCHENENDSEMINAR - TAG 2",
+    "date": "2026-11-28",
+    "time": "14:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Seminar]  \n\n28.11.2026, 14:00 Uhr:  \n\nZur digitalen Revolution. Wochenendseminar - Tag 2  \n\nmehr Infos folgen",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7576.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 601448887,
     "title": "Autumn Bash 2026",
     "date": "2026-11-28",
@@ -11881,6 +12648,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 530863013,
+    "title": "BRETTSPIELENACHMITTAG",
+    "date": "2026-11-28",
+    "time": "15:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "28.11.2026, 15:00 Uhr:  \n\nBrettspielenachmittag  \n\nMensch soll ja den Tag nicht vor dem Abend loben, aber vielleicht vor…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7571.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1330469828,
@@ -11905,6 +12685,19 @@
     "ticketUrl": "https://theater-im-delphi.de/programm/",
     "spotifyUrl": "",
     "addedAt": "2026-09-22"
+  },
+  {
+    "id": 836810315,
+    "title": "ANDA MORTS - I hate this part of Texas - Tour",
+    "date": "2026-11-28",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Indie]  \n\n28.11.2026, 19:00 Uhr:  \n\nANDA MORTS - I hate this part of Texas - Tour  \n\nNach zwei restlos ausverkauften…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7363.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 257835906,
@@ -11983,6 +12776,19 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1424571216,
+    "title": "WILDE HERZEN",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-28-wilde-herzen",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 2049160503,
@@ -12425,6 +13231,45 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 209253489,
+    "title": "Cosmic Gate",
+    "date": "2026-11-28",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-CosmicGate",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1741914523,
+    "title": "Lexy & K-Paul (live)",
+    "date": "2026-11-28",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-Lexy-K-Paul-live",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 59886565,
+    "title": "Oliver Huntemann",
+    "date": "2026-11-28",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-OliverHuntemann",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1410970501,
     "title": "Jubiläums Queer Nacht: 5 Jahre Fach- und Beratungsstelle bei sexualisierter Gewalt",
     "date": "2026-11-28",
@@ -12516,6 +13361,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1473328915,
+    "title": "ZUR DIGITALEN REVOLUTION. WOCHENENDSEMINAR - TAG 3",
+    "date": "2026-11-29",
+    "time": "14:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Seminar]  \n\n29.11.2026, 14:00 Uhr:  \n\nZur digitalen Revolution. Wochenendseminar - Tag 3  \n\nmehr Infos folgen, ,…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7577.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1941851365,
     "title": "Pettersson und Findus",
     "date": "2026-11-29",
@@ -12552,6 +13410,19 @@
     "ticketUrl": "https://theater-im-delphi.de/programm/",
     "spotifyUrl": "",
     "addedAt": "2026-09-22"
+  },
+  {
+    "id": 557897577,
+    "title": "LOST IN KYIV + TEARS &amp; DENIAL",
+    "date": "2026-11-29",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Metal]  \n\n29.11.2026, 19:00 Uhr:  \n\nLOST IN KYIV + Tears & Denial  \n\nDie Pariser Post-Rock-/Post-Metal-Band Lost in…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7502.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 9116831,
@@ -12956,6 +13827,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1362898713,
+    "title": "TEX SINGT LEOANARD COHEN",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-30-tex-singt-leoanard-cohen",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1414565188,
     "title": "KID KAPICHI",
     "date": "2026-11-30",
@@ -13133,6 +14017,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-09-29"
+  },
+  {
+    "id": 332297900,
+    "title": "VONDRÉ + SHOK GÜZEL",
+    "date": "2026-12-01",
+    "time": "18:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Café-Konzert]  \n\n01.12.2026, 18:00 Uhr:  \n\nVONDRÉ + SHOK GÜZEL   \n\nVONDRÉ ist eine Alternative-Rock-Band aus der…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7548.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 8099544,
@@ -13459,6 +14356,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1036952674,
+    "title": "WEDNESDAY 13",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-02-wednesday-13-1",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1274557893,
     "title": "StandUp: Benefizshow",
     "date": "2026-12-02",
@@ -13652,6 +14562,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1795054166,
+    "title": "PUR",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/pur-26/2026-12-02-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 234604444,
     "title": "drum klub",
     "date": "2026-12-02",
@@ -13715,6 +14638,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1904512305,
+    "title": "STAYING ALIVE - Lesung mit Gereon Klug &amp; Alex Solman",
+    "date": "2026-12-03",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Lesung]  \n\n03.12.2026, 19:00 Uhr:  \n\nSTAYING ALIVE (Lesung)  \n\nUnsere größten Idole und warum sie unvergessen sind., ,…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7588.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1829512450,
@@ -13819,6 +14755,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 1225518757,
+    "title": "COCKNEY REJECTS",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-03-cockney-rejects",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 991317016,
@@ -14001,6 +14950,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 836468450,
+    "title": "DELINQUENT HABITS  / 30 YEARS ANNIVERSARY + EL RITMO Tour",
+    "date": "2026-12-04",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[HipHop]  \n\n04.12.2026, 19:00 Uhr:  \n\nDELINQUENT HABITS  / 30 YEARS ANNIVERSARY + EL RITMO Tour  \n\nTickets:…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7589.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1332608730,
     "title": "Songslam Kreuzberg",
     "date": "2026-12-04",
@@ -14079,6 +15041,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 255613365,
+    "title": "SDP & The Capital Dance Orchestra",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1430204938,
     "title": "SingAlong",
     "date": "2026-12-04",
@@ -14090,6 +15065,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1064770762,
+    "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-04-the-early-days---let-s-dance-to-joy-division",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 880789334,
@@ -14311,6 +15299,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 1300904446,
+    "title": "KOLLEGIAL pres. by BSTHP - w/ Felix Raphael [ hybrid LiVE ] and many more",
+    "date": "2026-12-04",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/041226-KOLLEGIALpres-byBSTHP-w-FelixRaphael-hybridLiVE-andmanymore",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 986118291,
     "title": "SCHUTT&ASCHE - 2 Floors",
     "date": "2026-12-04",
@@ -14360,6 +15361,19 @@
     "ticketUrl": "https://www.ilseserika.de/termine-65/troedel-ramsch-coole-lumpen-weihnachtsflohmarkt-im-biergarten-des-ilses-erika-ab-23-00-uhr-party-im-club.html",
     "spotifyUrl": "",
     "source": "ilseserika",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1589522269,
+    "title": "FRITTENBUDE + CAPTAIN CAPA",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Indietronic]  \n\n05.12.2026, 19:00 Uhr:  \n\nFRITTENBUDE - 20 Jahre Filmriss Tour + CAPTAIN CAPA  \n\nFrittenbude sind seit…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7342.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
     "addedAt": "2026-11-01"
   },
   {
@@ -14504,6 +15518,45 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 244297238,
+    "title": "SDP & The Capital Dance Orchestra",
+    "date": "2026-12-05",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-05-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1811680590,
+    "title": "GUANA BATZ",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-05-guana-batz",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1595169557,
+    "title": "DANCING WITH MYSELF!",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-05-dancing-with-myself-",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 130403959,
@@ -14763,6 +15816,32 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 954988825,
+    "title": "MICHAEL CANITROT",
+    "date": "2026-12-05",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/051226-MICHAELCANITROT",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1185673950,
+    "title": "DON DIABLO",
+    "date": "2026-12-05",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/051226-DONDIABLO",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 814248120,
     "title": "WE ARE THE 80s x UNTER NULL (2 Floors)",
     "date": "2026-12-05",
@@ -14800,6 +15879,19 @@
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-10-28"
+  },
+  {
+    "id": 1281956148,
+    "title": "KUNST- &amp; HANDWERKSMARKT",
+    "date": "2026-12-06",
+    "time": "12:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Veranda]  \n\n06.12.2026, 12:00 Uhr:  \n\nKunst &-Handwerksmarkt  \n\nBock auf Keramik, Genähtes, selbstgemachten Schmuck,…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7552.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1809739641,
@@ -14917,6 +16009,19 @@
     "spotifyUrl": "",
     "source": "heimathafen",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 486003023,
+    "title": "SENTA",
+    "date": "2026-12-06",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-06-senta",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1689427563,
@@ -15126,6 +16231,19 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 445232031,
+    "title": "MAUSTETYTÖT",
+    "date": "2026-12-07",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-07-maustetyt-t",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1686104693,
     "title": "THE STRING ARCHESTRA",
     "date": "2026-12-07",
@@ -15216,6 +16334,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1745421240,
+    "title": "CHAPO102 // Ausverkauft",
+    "date": "2026-12-08",
+    "time": "18:30",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Pop]  \n\n08.12.2026, 18:30 Uhr:  \n\nCHAPO102 // Ausverkauft  \n\nChapo102 ist ein Künstler aus Hamburg und Mitglied der 102…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7375.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1358190688,
     "title": "Weihnachten bei Familie Thalbach!",
     "date": "2026-12-08",
@@ -15292,6 +16423,19 @@
     "spotifyUrl": "",
     "source": "heimathafen",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1636806296,
+    "title": "BAP",
+    "date": "2026-12-08",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1309884259,
@@ -15552,6 +16696,32 @@
     "spotifyUrl": "",
     "source": "heimathafen",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1909429347,
+    "title": "GEORGIA CAVALLO",
+    "date": "2026-12-09",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-09-georgia-cavallo",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 382242679,
+    "title": "OATHBREAKER",
+    "date": "2026-12-09",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-09-oathbreaker",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1724475980,
@@ -16082,6 +17252,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 760317278,
+    "title": "REMOTE BONDAGE",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-11-remote-bondage",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 541163396,
     "title": "Sarah Lesch",
     "date": "2026-12-11",
@@ -16302,6 +17485,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 2135306602,
+    "title": "Eskalation w/ Die Gebrüder Brett, KaaCee KomaCasper, Justin Prince, SAGEZZA",
+    "date": "2026-12-11",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/111226-Eskalationw-DieGebruderBrett-KaaCeeKomaCasper-JustinPrince-SAGEZZA",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 108562843,
     "title": "Psychedelic Cumbia Party",
     "date": "2026-12-11",
@@ -16430,6 +17626,32 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 484434621,
+    "title": "RAUHBEIN",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-12-rauhbein",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1130224121,
+    "title": "THE BB SHOW",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-12-the-bb-show",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 499996317,
@@ -16909,6 +18131,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 364158559,
+    "title": "MEGALOH + UMSE + LAKMANN",
+    "date": "2026-12-13",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-13-megaloh---umse---lakmann",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1288136518,
     "title": "Ballet Of Lights",
     "date": "2026-12-13",
@@ -17023,6 +18258,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 860010069,
+    "title": "FEJKÁ",
+    "date": "2026-12-14",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-14-fejk-",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1802712032,
@@ -17271,6 +18519,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 2048213372,
+    "title": "DRANGSAL",
+    "date": "2026-12-16",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Punk]  \n\n16.12.2026, 19:00 Uhr:  \n\nDrangsal - 10 Jahre Harieschaim  \n\n, Drangsal, -, 10 Jahre, »Harieschaim«, &quot;Vor…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7346.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1024078628,
     "title": "Kant",
     "date": "2026-12-16",
@@ -17320,6 +18581,19 @@
     "ticketUrl": "https://theater-im-delphi.de/programm/",
     "spotifyUrl": "",
     "addedAt": "2026-08-26"
+  },
+  {
+    "id": 255997269,
+    "title": "ANKOR & SELF DECEPTION",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-16-ankor---self-deception",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 612539304,
@@ -17439,6 +18713,19 @@
     "addedAt": "2026-09-27"
   },
   {
+    "id": 59852794,
+    "title": "101 Voices - Depeche Mode Special Tribute",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 672809719,
     "title": "Seraphina Kalze",
     "date": "2026-12-16",
@@ -17489,6 +18776,19 @@
     "spotifyUrl": "",
     "source": "holzmarkt",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 2050757903,
+    "title": "ÅRABROT",
+    "date": "2026-12-17",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Rock]  \n\n17.12.2026, 19:00 Uhr:  \n\nÅrabrot  \n\nKjetil Nernes ist ein Überlebender. Im Grunde genommen ist er die…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7546.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 947086806,
@@ -17646,6 +18946,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1699198044,
+    "title": "Die Fantastischen Vier",
+    "date": "2026-12-17",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/die-fantastischen-vier-2/2026-12-17-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2112631106,
     "title": "Total",
     "date": "2026-12-17",
@@ -17760,6 +19073,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2044141868,
+    "title": "EEK A MOUSE",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-18-eek-a-mouse",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 758995277,
@@ -17982,6 +19308,32 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 1193260857,
+    "title": "Deborah De Luca",
+    "date": "2026-12-18",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/181226-DeborahDeLuca",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 487972608,
+    "title": "BENEFIZDISKO / special edition: christmas",
+    "date": "2026-12-18",
+    "time": "23:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Disco]  \n\n18.12.2026, 23:00 Uhr:  \n\nBENEFIZDISKO / special edition: christmas  \n\n- all styles in the mix - P18! -, , -…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7532.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2013068191,
     "title": "Dance Dance Revolution",
     "date": "2026-12-18",
@@ -18073,6 +19425,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1835516005,
+    "title": "MOLA + JUGO ÜRDENS",
+    "date": "2026-12-19",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Pop]  \n\n19.12.2026, 19:00 Uhr:  \n\nMOLA + JUGO ÜRDENS: Weihnachten Brutal - Die große Mola Weihnachtsshow & Friends…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7425.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1704192611,
     "title": "Freddy Fischer",
     "date": "2026-12-19",
@@ -18136,6 +19501,32 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 136737319,
+    "title": "Bonez MC & RAF Camora",
+    "date": "2026-12-19",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bonezmc-rafcamora-26/2026-12-19-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 361588120,
+    "title": "DIE TOTEN ÄRZTE & BERNWARD BÜKER BANDE",
+    "date": "2026-12-19",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-19-die-toten--rzte---bernward-b-ker-bande-",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1204346844,
@@ -18825,6 +20216,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 2021360936,
+    "title": "SHE PAST AWAY",
+    "date": "2026-12-26",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-26-she-past-away",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2087233893,
     "title": "Rummelsnuff • Sechs Jahrzehnte",
     "date": "2026-12-26",
@@ -19057,6 +20461,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 820862807,
+    "title": "Matthias Reim",
+    "date": "2026-12-28",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/matthias-reim-26/2026-12-28-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 576137108,
@@ -19318,6 +20735,19 @@
     "addedAt": "2026-09-29"
   },
   {
+    "id": 1472482889,
+    "title": "FURIOSA – QUEER INTERNATIONAL NEW YEARS EVE",
+    "date": "2026-12-31",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-31-furiosa---queer-international-new-years-eve",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1490197346,
     "title": "SILVESTER XXL",
     "date": "2026-12-31",
@@ -19408,6 +20838,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1963724765,
+    "title": "Hippie New Year",
+    "date": "2026-12-31",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/311226-HippieNewYear",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 19849317,
     "title": "Berlin indie Night • Silvester im Privatclub",
     "date": "2026-12-31",
@@ -19432,6 +20875,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1869244648,
+    "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
+    "date": "2027-01-01",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-01-01-the-early-days---let-s-dance-to-joy-division",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1557871766,
@@ -19510,6 +20966,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 1991012932,
+    "title": "Unheilig",
+    "date": "2027-01-07",
+    "time": "19:15",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/unheilig-27/2027-01-07-1915",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 858686246,
@@ -20082,6 +21551,19 @@
     "addedAt": "2026-09-22"
   },
   {
+    "id": 1988450557,
+    "title": "Community Rave",
+    "date": "2027-01-15",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/150127-CommunityRave",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1556596554,
     "title": "WOW Varieté",
     "date": "2027-01-16",
@@ -20446,6 +21928,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 2123329207,
+    "title": "J. BERNARDT",
+    "date": "2027-01-20",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-01-20-j--bernardt",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2002801613,
     "title": "SO SOON @UT CONNEWITZ VERLEGT AUF 22.04.2027",
     "date": "2027-01-20",
@@ -20483,6 +21978,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-09-22"
+  },
+  {
+    "id": 1073659808,
+    "title": "BLUT MUSS FLIESSEN! (Vortrag)",
+    "date": "2027-01-21",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Infoveranstaltung]  \n\n21.01.2027, 19:00 Uhr:  \n\nBLUT MUSS FLIESSEN! (Vortrag)   \n\nBlut muss fließen! Active Clubs,…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7587.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1822265556,
@@ -20875,6 +22383,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1830715674,
+    "title": "aespa",
+    "date": "2027-01-26",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/aespa/2027-01-26-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1093707975,
     "title": "Michael Mittermeier",
     "date": "2027-01-26",
@@ -20913,6 +22434,19 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 1884360819,
+    "title": "André Rieu",
+    "date": "2027-01-27",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/andrerieu/2027-01-27-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 568272910,
     "title": "FJØRT",
     "date": "2027-01-27",
@@ -20924,6 +22458,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 701471870,
+    "title": "SHRED FEST",
+    "date": "2027-01-27",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-01-27-shred-fest-",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1031222029,
@@ -20989,6 +22536,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1739848827,
+    "title": "CALLEJON",
+    "date": "2027-01-28",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-01-28-callejon",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 241694307,
@@ -21080,6 +22640,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1800049275,
+    "title": "REVEREND HARDY HARDON & THE CHURCH OF ELVIS",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-01-29-reverend-hardy-hardon---the-church-of-elvis",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1914169097,
@@ -21236,6 +22809,19 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1045432205,
+    "title": "YOU'VE GOT THE LOVE!",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-01-30-you-ve-got-the-love-",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1899721172,
@@ -21432,6 +23018,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 2090524344,
+    "title": "GILES COREY",
+    "date": "2027-02-02",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-02-giles-corey",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1857815811,
     "title": "ADÈLA",
     "date": "2027-02-02",
@@ -21534,6 +23133,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 573635492,
+    "title": "BAD COMPANY LEGACY – Dave Colwell & Robert Hart",
+    "date": "2027-02-04",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-04-bad-company-legacy---dave-colwell---robert-hart",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1305064405,
@@ -21664,6 +23276,32 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 751968514,
+    "title": "ANTIFUCHS",
+    "date": "2027-02-05",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-05-antifuchs",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1025174221,
+    "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
+    "date": "2027-02-05",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-05-the-early-days---let-s-dance-to-joy-division",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 859439500,
@@ -21860,6 +23498,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 800406012,
+    "title": "Unheilig",
+    "date": "2027-02-06",
+    "time": "19:15",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/unheilig-27/2027-02-06-1915",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1479218988,
     "title": "unpeople - berlin",
     "date": "2027-02-06",
@@ -21897,6 +23548,32 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 940970697,
+    "title": "FAKE NAMES",
+    "date": "2027-02-06",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-06-fake-names",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 843179342,
+    "title": "DANCING WITH MYSELF!",
+    "date": "2027-02-06",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-06-dancing-with-myself-",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1920396638,
@@ -22000,6 +23677,19 @@
     "ticketUrl": "https://quasimodo.club/events/we-love-80s-43-7484",
     "spotifyUrl": "",
     "addedAt": "2026-09-29"
+  },
+  {
+    "id": 1188678340,
+    "title": "The Surreal Club Night 3027 by 3000Grad",
+    "date": "2027-02-06",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/060227-TheSurrealClubNight3027by3000Grad",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1672165284,
@@ -22117,6 +23807,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 318773111,
+    "title": "One Vision of Queen - feat. Marc Martel",
+    "date": "2027-02-09",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/one-vision-27/2027-02-09-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1324372325,
@@ -22470,6 +24173,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1997400126,
+    "title": "DIRTY HONEY",
+    "date": "2027-02-12",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-12-dirty-honey",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1924060088,
     "title": "OXO86 / UNDERDOGZ / OI!STURM ASOZIAL",
     "date": "2027-02-12",
@@ -22717,6 +24433,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 781417310,
+    "title": "anamē",
+    "date": "2027-02-13",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/130227-aname",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 878645258,
     "title": "LORIOT",
     "date": "2027-02-14",
@@ -22754,6 +24483,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 510469142,
+    "title": "ALEX SAMPSON",
+    "date": "2027-02-14",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-14-alex-sampson",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 957216218,
@@ -22831,6 +24573,19 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82405/",
     "spotifyUrl": "",
     "source": "kantine",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1726080801,
+    "title": "Five Finger Death Punch",
+    "date": "2027-02-16",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/five-finger-death-punch-1/2027-02-16-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -23144,6 +24899,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 210385744,
+    "title": "MC WINDHUND",
+    "date": "2027-02-19",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[HipHop]  \n\n19.02.2027, 19:00 Uhr:  \n\nMC WINDHUND - Für immer zu Besuch - Tour 2027  \n\nMC WINDHUND, gebürtiger Hamburger…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7565.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1757821761,
     "title": "Greyzone presents: LOS BITCHOS & FRIENDS",
     "date": "2027-02-19",
@@ -23181,6 +24949,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2017476375,
+    "title": "DRACONIAN",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-19-draconian",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 583464049,
@@ -23311,6 +25092,32 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 961379871,
+    "title": "90s Super Show",
+    "date": "2027-02-20",
+    "time": "17:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/90s-super-show-2027/2027-02-20-1700",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1520096195,
+    "title": "BAC",
+    "date": "2027-02-20",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Pop]  \n\n20.02.2027, 19:00 Uhr:  \n\nBAC  \n\nManchmal reicht eine Straßenecke, ein Blick aus dem Fenster oder ein Song im…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7504.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 318723534,
@@ -23494,6 +25301,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 340752038,
+    "title": "REWI",
+    "date": "2027-02-20",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/200227-REWI",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 644233724,
     "title": "DIE DREI ??? LESEBÜHNE",
     "date": "2027-02-21",
@@ -23559,6 +25379,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 349806955,
+    "title": "SEAFRET",
+    "date": "2027-02-21",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-21-seafret",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1795380091,
     "title": "Ballet Of Lights",
     "date": "2027-02-21",
@@ -23596,6 +25429,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1242911934,
+    "title": "RUSH",
+    "date": "2027-02-21",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/rush-berlin/2027-02-21-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 956618998,
@@ -23689,6 +25535,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 572064953,
+    "title": "CHARLOTTE WESSELS & THE OBSESSION",
+    "date": "2027-02-23",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-23-charlotte-wessels---the-obsession",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 173109274,
     "title": "dicht & ergreifend",
     "date": "2027-02-23",
@@ -23767,6 +25626,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 734141516,
+    "title": "GLASPERLENSPIEL",
+    "date": "2027-02-24",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-24-glasperlenspiel",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1974209152,
     "title": "jaschu",
     "date": "2027-02-24",
@@ -23843,6 +25715,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 825904811,
+    "title": "jaschu",
+    "date": "2027-02-25",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-25-jaschu",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1903987018,
@@ -23999,6 +25884,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-26"
+  },
+  {
+    "id": 47237002,
+    "title": "ISOLATION BERLIN",
+    "date": "2027-02-26",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-26-isolation-berlin",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1236820580,
@@ -24193,6 +26091,19 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 2089592108,
+    "title": "LIAZE",
+    "date": "2027-02-27",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-02-27-liaze",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1202009711,
@@ -24442,6 +26353,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1739708546,
+    "title": "J.A.W with THE WOMACK SISTERS (live)",
+    "date": "2027-03-03",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-03-03-j-a-w-with-the-womack-sisters--live--",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1776144772,
     "title": "MADELINE JUNO",
     "date": "2027-03-03",
@@ -24559,6 +26483,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1466093164,
+    "title": "OUR MIRAGE",
+    "date": "2027-03-05",
+    "time": "18:30",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Rock]  \n\n05.03.2027, 18:30 Uhr:  \n\nOUR MIRAGE - Live in Leipzig  \n\n Nach einer restlos ausverkauften Tour kehren Our…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7476.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1175112778,
     "title": "Hollywood Tramp: BRITNEY SPEARS CLUB NIGHT (Early Event)",
     "date": "2027-03-05",
@@ -24585,6 +26522,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1395687382,
+    "title": "ENHYPEN",
+    "date": "2027-03-05",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/enhypen-berlin/2027-03-05-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1999494189,
     "title": "Pothead",
     "date": "2027-03-05",
@@ -24596,6 +26546,32 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1387961599,
+    "title": "SOUTH ARCADE",
+    "date": "2027-03-05",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-03-05-south-arcade",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 607629778,
+    "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
+    "date": "2027-03-05",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-03-05-the-early-days---let-s-dance-to-joy-division",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1061015520,
@@ -24713,6 +26689,19 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1199173877,
+    "title": "ENHYPEN",
+    "date": "2027-03-06",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/enhypen-berlin/2027-03-06-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1134406496,
@@ -25130,6 +27119,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1057932399,
+    "title": "HAMMER KING",
+    "date": "2027-03-10",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-03-10-hammer-king",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1428162488,
     "title": "TRÄNEN",
     "date": "2027-03-10",
@@ -25260,6 +27262,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1969561642,
+    "title": "OCEAN GROVE",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-03-11-ocean-grove",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1841548754,
     "title": "Ami Warning",
     "date": "2027-03-11",
@@ -25362,6 +27377,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 617736245,
+    "title": "Teddy Swims",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/teddy-swims/2027-03-11-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1603476598,
@@ -25544,6 +27572,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1313747459,
+    "title": "PAUL SIES",
+    "date": "2027-03-13",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-03-13-paul-ses",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1483314545,
@@ -25805,6 +27846,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 538633975,
+    "title": "DEA MATRONA",
+    "date": "2027-03-15",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-03-15-dea-matrona",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1151086375,
     "title": "Medium Build",
     "date": "2027-03-15",
@@ -26052,6 +28106,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 38507416,
+    "title": "Maite Kelly",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 293050161,
     "title": "Kirsten Fuchs",
     "date": "2027-03-18",
@@ -26273,6 +28340,32 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 1412581907,
+    "title": "James Blunt",
+    "date": "2027-03-20",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/james-blunt-berlin/2027-03-20-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1454267291,
+    "title": "DUSKY pres. SIGNALS  TOUR",
+    "date": "2027-03-20",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/200327-DUSKYpres-SIGNALSTOUR",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1177271366,
     "title": "Jerry Vsan",
     "date": "2027-03-21",
@@ -26375,6 +28468,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-09-29"
+  },
+  {
+    "id": 656283990,
+    "title": "POKEY LAFARGE",
+    "date": "2027-03-23",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-03-23-pokey-lafarge",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 957127907,
@@ -26624,6 +28730,19 @@
     "addedAt": "2026-08-28"
   },
   {
+    "id": 859498805,
+    "title": "Sonu Nigam",
+    "date": "2027-03-28",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sonu-nigam/2027-03-28-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1413897013,
     "title": "Gondwana Records Presents: JACK WYLLIE + PHI-PSONICS",
     "date": "2027-03-29",
@@ -26858,6 +28977,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1273221715,
+    "title": "CLAIR OBSCUR: EXPEDITION 33 - A PAINTED SYMPHONY",
+    "date": "2027-04-01",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/clair-obscur/2027-04-01-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 956324739,
     "title": "K-POP Showdown – The Ultimate Tribute Show",
     "date": "2027-04-02",
@@ -26895,6 +29027,19 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-28"
+  },
+  {
+    "id": 684500308,
+    "title": "THE EARLY DAYS • LET'S DANCE TO JOY DIVISION",
+    "date": "2027-04-02",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-04-02-the-early-days---let-s-dance-to-joy-division",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 184141759,
@@ -26998,6 +29143,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 495670515,
+    "title": "DANCING WITH MYSELF!",
+    "date": "2027-04-03",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-04-03-dancing-with-myself-",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 796528251,
@@ -27190,6 +29348,19 @@
     "ticketUrl": "https://www.ufo-velodrom.de/events/event/trettmann-ufo-2027-04-04",
     "spotifyUrl": "",
     "source": "ufo",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1937512523,
+    "title": "ALBERTA CROSS",
+    "date": "2027-04-06",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-04-06-alberta-cross",
+    "spotifyUrl": "",
+    "source": "lido",
     "addedAt": "2026-11-01"
   },
   {
@@ -27438,6 +29609,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 906846103,
+    "title": "KAMERUN QRELLA GROUP",
+    "date": "2027-04-09",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Indie]  \n\n09.04.2027, 19:00 Uhr:  \n\nKAMERUN QRELLA GROUP  \n\nHinter der KAMERUN QRELLA GROUP stecken die Musikerin Masha…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7586.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1172196142,
     "title": "Damien Rice",
     "date": "2027-04-09",
@@ -27449,6 +29633,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 594473104,
+    "title": "END OF GREEN",
+    "date": "2027-04-09",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-04-09-end-of-green",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1513575784,
@@ -27578,6 +29775,19 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 650284777,
+    "title": "TULPE",
+    "date": "2027-04-10",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-04-10-tulpe",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 119713205,
@@ -27719,6 +29929,19 @@
     "ticketUrl": "https://quasimodo.club/events/we-love-80s-45-7488",
     "spotifyUrl": "",
     "addedAt": "2026-09-29"
+  },
+  {
+    "id": 1475194788,
+    "title": "Weltauswahl by Extrawelt",
+    "date": "2027-04-10",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/100427-WeltauswahlbyExtrawelt",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1715211173,
@@ -28083,6 +30306,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 85087255,
+    "title": "Chris Norman",
+    "date": "2027-04-15",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/chris-norman/2027-04-15-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 895323129,
     "title": "MOOP MAMA",
     "date": "2027-04-15",
@@ -28380,6 +30616,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 1420841181,
+    "title": "Maffay + Oerding",
+    "date": "2027-04-17",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maffay-oerding/2027-04-17-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 207316549,
     "title": "HOT WATER MUSIC",
     "date": "2027-04-18",
@@ -28548,6 +30797,19 @@
     "addedAt": "2026-09-29"
   },
   {
+    "id": 42230374,
+    "title": "Thomas Bergersen",
+    "date": "2027-04-19",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/thomas-bergersen/2027-04-19-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 577238035,
     "title": "Michel von Wussow",
     "date": "2027-04-20",
@@ -28572,6 +30834,19 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 1593906635,
+    "title": "Simple Minds",
+    "date": "2027-04-21",
+    "time": "19:45",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/simple-minds-berlin/2027-04-21-1945",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1608166103,
@@ -28886,6 +31161,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 952358976,
+    "title": "Der Herr der Ringe: Die zwei Türme – in Concert Live to Film",
+    "date": "2027-04-24",
+    "time": "18:30",
+    "locationId": 57,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/herr-der-ringe-27/2027-04-24-1830",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 155135084,
     "title": "Landstreicher presents: XAVI - Sorgenfrei Tour 2027",
     "date": "2027-04-24",
@@ -29014,6 +31302,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1786113435,
+    "title": "AUDIO88",
+    "date": "2027-04-25",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-04-25-audio88",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 69124927,
     "title": "FUFFIFUFZICH",
     "date": "2027-04-25",
@@ -29077,6 +31378,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 845144065,
+    "title": "The World of Hans Zimmer",
+    "date": "2027-04-26",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/hanszimmer-27/2027-04-26-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 438720695,
@@ -29248,6 +31562,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1374967138,
+    "title": "ROGERS",
+    "date": "2027-04-30",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Punk]  \n\n30.04.2027, 19:00 Uhr:  \n\nRogers - Tour 2027  \n\nTickets unter: ,…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7584.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1968105987,
     "title": "BREAKDOWN OF SANITY",
     "date": "2027-04-30",
@@ -29271,6 +31598,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1462508825,
+    "title": "NICHTSEATTLE",
+    "date": "2027-04-30",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-04-30-nichtseattle",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 222948860,
@@ -29373,6 +31713,19 @@
     "ticketUrl": "https://quasimodo.club/events/we-love-80s-46-7490",
     "spotifyUrl": "",
     "addedAt": "2026-09-29"
+  },
+  {
+    "id": 745163424,
+    "title": "LEA",
+    "date": "2027-05-02",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/lea/2027-05-02-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1106580211,
@@ -29542,6 +31895,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1716714363,
+    "title": "Roland Kaiser",
+    "date": "2027-05-06",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/roland-kaiser-2027/2027-05-06-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1932653173,
     "title": "DOCTOR KRAPULA",
     "date": "2027-05-06",
@@ -29566,6 +31932,32 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1406979468,
+    "title": "ACHT EIMER HÜHNERHERZEN - Hearts On Fire Tour",
+    "date": "2027-05-07",
+    "time": "19:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Punk]  \n\n07.05.2027, 19:00 Uhr:  \n\nAcht Eimer Hühnerherzen / Hearts On Fire Tour 2027  \n\nACHT EIMER HÜHNERHERZEN -…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7525.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 209162554,
+    "title": "Roland Kaiser",
+    "date": "2027-05-07",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/roland-kaiser-2027/2027-05-07-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 929587222,
@@ -29659,6 +32051,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 172698137,
+    "title": "THE NERVES",
+    "date": "2027-05-08",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-05-08-the-nerves",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 767326021,
     "title": "PAUL PANZER",
     "date": "2027-05-08",
@@ -29720,6 +32125,19 @@
     "ticketUrl": "https://www.velodrom.de/events/event/jennifer-rostock-2027-velodrom-2027-05-08",
     "spotifyUrl": "",
     "source": "velodrom",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 602267566,
+    "title": "Unser Blauer Planet III",
+    "date": "2027-05-09",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/unser-blauer-planet-iii/2027-05-09-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -29865,6 +32283,32 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 55262890,
+    "title": "Gracie Abrams",
+    "date": "2027-05-12",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/gracie-abrams/2027-05-12-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1037465691,
+    "title": "JAY-JAY JOHANSON",
+    "date": "2027-05-13",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-05-13-jay-jay-johanson",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 697945769,
     "title": "Fortuna Ehrenfeld",
     "date": "2027-05-13",
@@ -29890,6 +32334,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1562814699,
+    "title": "Gracie Abrams",
+    "date": "2027-05-13",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/gracie-abrams/2027-05-13-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1506902406,
     "title": "The Godfathers",
     "date": "2027-05-13",
@@ -29900,6 +32357,19 @@
     "ticketUrl": "https://quasimodo.club/events/the-godfathers-5-7500",
     "spotifyUrl": "",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1349788329,
+    "title": "ABBAMANIA",
+    "date": "2027-05-14",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/abbamania-2027/2027-05-14-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1625170203,
@@ -29952,6 +32422,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1118316212,
+    "title": "sombr",
+    "date": "2027-05-18",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sombr/2027-05-18-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1365829284,
@@ -30019,6 +32502,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 378006403,
+    "title": "beslik",
+    "date": "2027-05-19",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-05-19-beslik",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 948264326,
     "title": "LOREEN",
     "date": "2027-05-19",
@@ -30043,6 +32539,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 869187602,
+    "title": "MILLENIUM KID",
+    "date": "2027-05-20",
+    "time": "18:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Pop]  \n\n20.05.2027, 18:00 Uhr:  \n\nMILLENIUM KID  \n\nEs gibt Karrieren, die sich Schritt für Schritt aufbauen  und es…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7554.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 69353164,
@@ -30110,6 +32619,32 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 433720973,
+    "title": "Greta Van Fleet",
+    "date": "2027-05-21",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/greta-van-fleet-2027/2027-05-21-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1527012692,
+    "title": "EULE FINDET DEN BEAT",
+    "date": "2027-05-22",
+    "time": "14:00",
+    "locationId": 13,
+    "type": "konzert",
+    "description": "[Theater]  \n\n22.05.2027, 14:00 Uhr:  \n\nEULE FINDET DEN BEAT  \n\nSie ist blaugelb, liebt Musik und ist in deutschen…",
+    "ticketUrl": "http://www.conne-island.de/termin/nr7497.html",
+    "spotifyUrl": "",
+    "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 914186608,
     "title": "Christoph Sakwerda",
     "date": "2027-05-22",
@@ -30134,6 +32669,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1634139168,
+    "title": "BLEECH 9:3",
+    "date": "2027-05-22",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-05-22-bleech-9-3",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1787011902,
@@ -30199,6 +32747,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 219602767,
+    "title": "DANI LIA x YOLA",
+    "date": "2027-05-23",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-05-23-dani-lia-x-yola",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 661370673,
@@ -30344,6 +32905,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 381383360,
+    "title": "FEWJAR",
+    "date": "2027-05-28",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-05-28-fewjar",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1054186558,
     "title": "BRAKENCE",
     "date": "2027-05-28",
@@ -30471,6 +33045,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1945817483,
+    "title": "Rod Stewart",
+    "date": "2027-06-01",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/rodstewart/2027-06-01-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2133246707,
     "title": "JORJA SMITH",
     "date": "2027-06-02",
@@ -30534,6 +33121,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1846346573,
+    "title": "KAUTA",
+    "date": "2027-06-05",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-06-05-kauta",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 252337405,
@@ -30742,6 +33342,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 1890634501,
+    "title": "Don Omar",
+    "date": "2027-06-28",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/don-omar/2027-06-28-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2107913300,
     "title": "MARILLION",
     "date": "2027-07-02",
@@ -30831,6 +33444,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-10-28"
+  },
+  {
+    "id": 1499832787,
+    "title": "JOHN BUSH",
+    "date": "2027-07-29",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-07-29-john-bush",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1192067732,
@@ -31079,6 +33705,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1888203783,
+    "title": "Ronan Keating",
+    "date": "2027-09-13",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/ronan-keating/2027-09-13-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 211561530,
     "title": "Hendrik Bolz",
     "date": "2027-09-14",
@@ -31247,6 +33886,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 819080078,
+    "title": "Montez",
+    "date": "2027-09-25",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/montez-berlin/2027-09-25-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 790697447,
     "title": "Christin Stark",
     "date": "2027-09-25",
@@ -31271,6 +33923,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 356493182,
+    "title": "NEW WAVES DAY CLUB EDITION",
+    "date": "2027-09-30",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-09-30-new-waves-day-club-edition",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 796895061,
@@ -31309,6 +33974,19 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 768193340,
+    "title": "Jean-Michel Jarre",
+    "date": "2027-10-02",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jean-michel-jarre-1/2027-10-02-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 382394998,
@@ -31610,6 +34288,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 966037178,
+    "title": "Andreas Gabalier",
+    "date": "2027-10-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/andreas-gabalier-2027/2027-10-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1258191546,
     "title": "Mirja Regensburg",
     "date": "2027-10-17",
@@ -31739,6 +34430,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1154558164,
+    "title": "TONBANDGERÄT",
+    "date": "2027-10-23",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2027-10-23-tonbandger-t",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1966573751,
     "title": "Querbeat",
     "date": "2027-10-23",
@@ -31775,6 +34479,19 @@
     "ticketUrl": "https://hole-berlin.de/event/2027-10-23-romero/",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2011898799,
+    "title": "Nena",
+    "date": "2027-10-23",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/nena-2027/2027-10-23-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1215428163,
@@ -31829,42 +34546,16 @@
     "addedAt": "2026-10-28"
   },
   {
-    "id": 1084557716,
-    "title": "Tony Jack",
+    "id": 536774170,
+    "title": "die PRINZEN",
     "date": "2027-10-28",
-    "time": "18:00",
-    "locationId": 29,
+    "time": "19:30",
+    "locationId": 57,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P2wWixSyxb2dAnZd9UZ",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/die-prinzen/2027-10-28-1930",
     "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1627492279,
-    "title": "Nirvana Tribute",
-    "date": "2027-10-28",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OthzvTRp3yc-Mp5PvwR",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 248705363,
-    "title": "Nemzzz",
-    "date": "2027-10-28",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Oz67iYs5g8S9QQ5EGgl",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -31930,6 +34621,19 @@
     "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P4JWO5Gjw7MwFg-l1_l",
     "spotifyUrl": "",
     "source": "kesselhaus",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1345036848,
+    "title": "Andrea Berg",
+    "date": "2027-10-30",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/andrea-berg-27/2027-10-30-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -32022,6 +34726,32 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1810311631,
+    "title": "Kontra K",
+    "date": "2027-11-02",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/kontra-k-2027/2027-11-02-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1613798126,
+    "title": "Kontra K",
+    "date": "2027-11-03",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/kontra-k-2027/2027-11-03-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1317894991,
@@ -32297,6 +35027,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 363656777,
+    "title": "Disney in Concert",
+    "date": "2027-11-25",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/disney-in-concert-2027/2027-11-25-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 437744653,
     "title": "Simon Stäblein",
     "date": "2027-11-26",
@@ -32321,6 +35064,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1552471871,
+    "title": "Wincent Weiss",
+    "date": "2027-11-27",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/wincent-weiss-2027/2027-11-27-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1191439357,
@@ -32490,6 +35246,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 875374159,
+    "title": "Kool Savas",
+    "date": "2028-01-29",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/kool-savas/2028-01-29-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 585293871,
