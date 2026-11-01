@@ -773,6 +773,30 @@ function renderHistoryRow(h) {
 // Antippen das native Wählrad, damit bekommt man Tag/Monat/Jahr als drei Wählräder ohne
 // eigenes Picker-Widget zu bauen (der native type="date"-Picker ist je nach Plattform ein
 // Kalenderraster statt eines Wählrads).
+// Distinkte Locations, die bereits irgendwo in der History vorkommen - als Schnellwahl beim
+// manuellen Eintragen, damit man den Ort nicht jedes Mal neu tippen muss.
+function historyLocationSuggestions() {
+  const seen = new Set()
+  const list = []
+  for (const h of history) {
+    const loc = [h.locationName, h.locationCity].filter(Boolean).join(', ')
+    if (!loc || seen.has(loc.toLowerCase())) continue
+    seen.add(loc.toLowerCase())
+    list.push(loc)
+  }
+  return list.sort((a, b) => a.localeCompare(b))
+}
+
+function renderHistoryLocationDropdown() {
+  const suggestions = historyLocationSuggestions()
+  if (!suggestions.length) return ''
+  return `
+    <div id="history-location-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:200; width:100%; max-height:180px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
+      ${suggestions.map((loc, i) => `<div data-history-loc-option class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.8); font-size:14px; ${i > 0 ? 'border-top:1px solid rgba(255,255,255,0.04);' : ''}">${esc(loc)}</div>`).join('')}
+    </div>
+  `
+}
+
 function renderHistoryDatePicker() {
   const months = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
   const currentYear = new Date().getFullYear()
@@ -801,7 +825,10 @@ function renderHistorySection(historyEntries) {
       </div>
       <div id="history-add-form" class="hidden space-y-2 mb-3">
         <input id="history-title" type="text" placeholder="Artist / Titel" style="${inputStyle}" />
-        <input id="history-location" type="text" placeholder="Location" style="${inputStyle}" />
+        <div style="position:relative;">
+          <input id="history-location" type="text" placeholder="Location" autocomplete="off" style="${inputStyle}" />
+          ${renderHistoryLocationDropdown()}
+        </div>
         ${renderHistoryDatePicker()}
         <button data-history-save class="w-full py-2.5 rounded-xl font-bold text-white text-sm syne" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">Konzert hinzufügen</button>
       </div>
@@ -851,6 +878,16 @@ function attachHistoryEvents() {
   document.querySelector('[data-history-add-toggle]')?.addEventListener('click', () => {
     if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Konzerte nachzutragen.'); return }
     form?.classList.toggle('hidden')
+  })
+  const locationInput = document.getElementById('history-location')
+  const locationDropdown = document.getElementById('history-location-dropdown')
+  locationInput?.addEventListener('click', (e) => { e.stopPropagation(); locationDropdown?.classList.remove('hidden') })
+  locationInput?.addEventListener('focus', () => locationDropdown?.classList.remove('hidden'))
+  document.querySelectorAll('[data-history-loc-option]').forEach(opt => {
+    opt.addEventListener('click', () => {
+      if (locationInput) locationInput.value = opt.textContent
+      locationDropdown?.classList.add('hidden')
+    })
   })
   document.querySelector('[data-history-save]')?.addEventListener('click', async () => {
     const title = document.getElementById('history-title')?.value.trim()
@@ -1093,6 +1130,7 @@ function attachEvents() {
     dropdownListenerAdded = true
     document.addEventListener('click', () => {
       document.getElementById('filter-loc-dropdown')?.classList.add('hidden')
+      document.getElementById('history-location-dropdown')?.classList.add('hidden')
     })
   }
 
