@@ -861,10 +861,19 @@ function attachHistoryRemoveEvents() {
         const n = parseInt(btn.dataset.star)
         const entry = history.find(h => String(h.id) === id)
         if (!entry) return
+        const prevRating = entry.rating ?? null
         // Tippen auf den schon gesetzten Stern entfernt die Bewertung wieder (Toggle-to-clear).
         entry.rating = (entry.rating || 0) === n ? null : n
         refreshHistoryList()
-        await updateHistoryRating(id, entry.rating)
+        const ok = await updateHistoryRating(id, entry.rating)
+        if (!ok) {
+          // Ohne diesen Revert blieb ein fehlgeschlagenes Speichern (z.B. fehlende rating-Spalte/
+          // RLS-Policy in Supabase) unbemerkt - die Sterne sahen lokal gesetzt aus, waren es in
+          // der DB aber nie, und verschwanden beim nächsten Laden (z.B. nach einem Deploy) wieder.
+          entry.rating = prevRating
+          refreshHistoryList()
+          showToast('Fehler', 'Bewertung konnte nicht gespeichert werden.')
+        }
       })
     })
   })
