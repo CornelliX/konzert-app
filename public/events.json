@@ -117,19 +117,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 368833348,
-    "title": "DAIANA LOU - Live in Berlin, Urban Spree",
-    "date": "2026-11-01",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/daiana-lou-live-in-berlin,-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1500043270,
     "title": "Alien Boy + Dead Finks + Musseldog",
     "date": "2026-11-01",
@@ -520,19 +507,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1652208664,
-    "title": "ROBBER ROBBER",
-    "date": "2026-11-02",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/95213-tickets-robber-robber-exp-indie-rock-us-schokoladen-berlin-am-02-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1886068719,
     "title": "TOKYO TEA ROOM",
     "date": "2026-11-02",
@@ -650,6 +624,32 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1370936206,
+    "title": "Don Toliver",
+    "date": "2026-11-02",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/don-toliver/2026-11-02-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1652208664,
+    "title": "ROBBER ROBBER",
+    "date": "2026-11-02",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/95213-tickets-robber-robber-exp-indie-rock-us-schokoladen-berlin-am-02-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
+  },
+  {
     "id": 1854801471,
     "title": "Gloryhammer",
     "date": "2026-11-03",
@@ -726,6 +726,19 @@
     "spotifyUrl": "",
     "source": "nbl",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1789834218,
+    "title": "Disney in Concert",
+    "date": "2026-11-03",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/disney-in-concert-2026/2026-11-03-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1554292998,
@@ -816,19 +829,6 @@
     "ticketUrl": "https://columbia-theater.de/event/20261103-alela-diane/",
     "spotifyUrl": "",
     "source": "columbiatheater",
-    "addedAt": "2026-10-25"
-  },
-  {
-    "id": 420352412,
-    "title": "LSD - Liebe Statt Drogen",
-    "date": "2026-11-03",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/94898-tickets-lsd-liebe-statt-drogen-schokoladen-berlin-am-03-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
     "addedAt": "2026-10-25"
   },
   {
@@ -1037,6 +1037,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 420352412,
+    "title": "LSD - Liebe Statt Drogen",
+    "date": "2026-11-03",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/94898-tickets-lsd-liebe-statt-drogen-schokoladen-berlin-am-03-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
+  },
+  {
     "id": 897060670,
     "title": "euro-scene Leipzig 2026: »NKUL NNAM« | Athena Lucie Assamba",
     "date": "2026-11-03",
@@ -1100,19 +1113,6 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 830848183,
-    "title": "DIAMONDSONYMYDICK LIVE BERLIN ft. Aachen…",
-    "date": "2026-11-04",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/diamondsonymydick-live-berlin-ft.-aachen-demon,-psyke,-lil-jibo,-1dontlie.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 189824721,
@@ -1215,6 +1215,19 @@
     "spotifyUrl": "",
     "source": "nbl",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 919961744,
+    "title": "Deep Purple",
+    "date": "2026-11-04",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/deep-purple-26/2026-11-04-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 391447983,
@@ -1321,19 +1334,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1321449398,
-    "title": "MOVING AS A GIANT",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101408-tickets-moving-as-a-giant-fuzz-noise-rock-slo-schokoladen-berlin-am-04-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 241432162,
     "title": "Cactus In A Garage – Soul Jazz",
     "date": "2026-11-04",
@@ -1345,19 +1345,6 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 91428241,
-    "title": "Shelter Boy",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81382/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 271496827,
@@ -1566,6 +1553,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1321449398,
+    "title": "MOVING AS A GIANT",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101408-tickets-moving-as-a-giant-fuzz-noise-rock-slo-schokoladen-berlin-am-04-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
+  },
+  {
     "id": 5806138,
     "title": "UNIDRAM: VIOLENT",
     "date": "2026-11-04",
@@ -1681,19 +1681,6 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 238225692,
-    "title": "R.A. THE RUGGED MAN",
-    "date": "2026-11-05",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/r.a.-the-rugged-man.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 838316130,
@@ -1848,32 +1835,6 @@
     "ticketUrl": "https://columbia-theater.de/event/20261105-monolord/",
     "spotifyUrl": "",
     "source": "columbiatheater",
-    "addedAt": "2026-10-25"
-  },
-  {
-    "id": 156399883,
-    "title": "Los Sara Fontán (esp) + Franna",
-    "date": "2026-11-05",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101795-tickets-los-sara-fontan-esp-franna-bln-schokoladen-berlin-am-05-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-25"
-  },
-  {
-    "id": 850826657,
-    "title": "Radwan Ghazi Moumneh & Frédéric D. Oberland",
-    "date": "2026-11-05",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82506/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-10-25"
   },
   {
@@ -2081,6 +2042,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 156399883,
+    "title": "Los Sara Fontán (esp) + Franna",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101795-tickets-los-sara-fontan-esp-franna-bln-schokoladen-berlin-am-05-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 1914597246,
@@ -2302,19 +2276,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1680654769,
-    "title": "SOLD OUT - Tigercub - NETS TO CATCH THE WIND…",
-    "date": "2026-11-06",
-    "time": "19:30",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/tigercub-nets-to-catch-the-wind-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1499184118,
     "title": "NORLYZ feat. MALIKA ALAOUI",
     "date": "2026-11-06",
@@ -2406,19 +2367,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1715877264,
-    "title": "FERVENTS & ULLA SUSPEKT",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100638-tickets-fervents-ulla-suspekt-schokoladen-berlin-am-06-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-28"
-  },
-  {
     "id": 536949929,
     "title": "Viic Woods- Indie Rock",
     "date": "2026-11-06",
@@ -2430,19 +2378,6 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 319707531,
-    "title": "Fleetmac Wood presents Chiffon Frenzy",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81253/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 512349722,
@@ -2689,6 +2624,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1715877264,
+    "title": "FERVENTS & ULLA SUSPEKT",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100638-tickets-fervents-ulla-suspekt-schokoladen-berlin-am-06-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-28"
   },
   {
     "id": 71819305,
@@ -3066,19 +3014,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1291772025,
-    "title": "No Cigar",
-    "date": "2026-11-07",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/no-cigar.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 2124734575,
     "title": "Landstreicher presents: REY&KJAVIK",
     "date": "2026-11-07",
@@ -3272,19 +3207,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-15"
-  },
-  {
-    "id": 1975374640,
-    "title": "Bial Hclap & Band & Yugo Taguchi & Frieda",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102647-tickets-bial-hclap-band-yugo-taguchi-frieda-schokoladen-berlin-am-07-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-28"
   },
   {
     "id": 284270521,
@@ -3506,6 +3428,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1880822473,
+    "title": "Tokio Hotel",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1828635790,
     "title": "Soulbound x Hell Boulevard",
     "date": "2026-11-07",
@@ -3530,6 +3465,19 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1975374640,
+    "title": "Bial Hclap & Band & Yugo Taguchi & Frieda",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102647-tickets-bial-hclap-band-yugo-taguchi-frieda-schokoladen-berlin-am-07-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-28"
   },
   {
     "id": 200902024,
@@ -4012,19 +3960,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1522502321,
-    "title": "MAYFLOWER MADAME + BLKE - Berlin Show @Urban…",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/mayflower-madame-blke-berlin-show-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1078838723,
     "title": "D2",
     "date": "2026-11-08",
@@ -4139,6 +4074,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 2082679369,
+    "title": "Jungle",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 2002838373,
@@ -4258,32 +4206,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1907507839,
-    "title": "SHAKI TAVI",
-    "date": "2026-11-09",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99742-tickets-shaki-tavi-exp-indie-rock-shoegaze-us-schokoladen-berlin-am-09-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1490910146,
-    "title": "deary",
-    "date": "2026-11-09",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82023/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1780164794,
     "title": "FritzSessions",
     "date": "2026-11-09",
@@ -4359,6 +4281,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 1907507839,
+    "title": "SHAKI TAVI",
+    "date": "2026-11-09",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99742-tickets-shaki-tavi-exp-indie-rock-shoegaze-us-schokoladen-berlin-am-09-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 17176588,
@@ -4543,45 +4478,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 935626267,
-    "title": "EDGING",
-    "date": "2026-11-10",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/98384-tickets-edging-post-punk-chicago-schokoladen-berlin-am-10-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 558797315,
-    "title": "Koza Mostra",
-    "date": "2026-11-10",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/koza-mostra-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1164185773,
-    "title": "Feeble Little Horse",
-    "date": "2026-11-10",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82111/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1456743033,
     "title": "Lido Pimienta",
     "date": "2026-11-10",
@@ -4698,6 +4594,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 935626267,
+    "title": "EDGING",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/98384-tickets-edging-post-punk-chicago-schokoladen-berlin-am-10-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 730292829,
     "title": "Ones and Tooze",
     "date": "2026-11-10",
@@ -4787,6 +4696,19 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1379348775,
+    "title": "Bloc Party & Interpol",
+    "date": "2026-11-11",
+    "time": "19:15",
+    "locationId": 57,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bloc-party-interpol/2026-11-11-1915",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 775969004,
@@ -4932,19 +4854,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 842936726,
-    "title": "Bureau De Change + Mad Kitten",
-    "date": "2026-11-11",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99498-tickets-bureau-de-change-mad-kitten-schokoladen-berlin-am-11-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1023727250,
     "title": "Gershkovich/Götze/Stadtfeld – Piano Legacy",
     "date": "2026-11-11",
@@ -4956,19 +4865,6 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-09-29"
-  },
-  {
-    "id": 1706414888,
-    "title": "Sharp Pins",
-    "date": "2026-11-11",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82751/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 1716840020,
@@ -5125,6 +5021,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 842936726,
+    "title": "Bureau De Change + Mad Kitten",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99498-tickets-bureau-de-change-mad-kitten-schokoladen-berlin-am-11-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1840925767,
     "title": "drum klub",
     "date": "2026-11-11",
@@ -5201,19 +5110,6 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 739543080,
-    "title": "UNS + GÄSTE BERLIN • URBAN SPREE",
-    "date": "2026-11-12",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/uns-gäste-berlin-•-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1311949892,
@@ -5331,32 +5227,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 1358623971,
-    "title": "Pyro One + KET",
-    "date": "2026-11-12",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/91693-tickets-pyro-one-ket-schokoladen-berlin-am-12-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 765989923,
-    "title": "Love'n'Joy",
-    "date": "2026-11-12",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82192/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 570851414,
@@ -5577,6 +5447,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1358623971,
+    "title": "Pyro One + KET",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/91693-tickets-pyro-one-ket-schokoladen-berlin-am-12-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1137751084,
     "title": "TIGERBEAT (GER) & PAYOLA (GER) live @ Ilses Erika",
     "date": "2026-11-12",
@@ -5720,19 +5603,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 820507640,
-    "title": "FRIBERTY Releaseshow",
-    "date": "2026-11-13",
-    "time": "19:30",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/friberty-releaseshow.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 190698164,
     "title": "JENSMISSION – FÜR IMMER NIE MEHR UNS",
     "date": "2026-11-13",
@@ -5848,19 +5718,6 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1516204315,
-    "title": "How Noisy are the rooms",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81966/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 1553000931,
@@ -6044,7 +5901,7 @@
   },
   {
     "id": 1706118754,
-    "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s + Talk Talk",
+    "title": "🎶 Friday I’m in Love – A Tribute to Post-Punk · Dark 80s + Talk Talk",
     "date": "2026-11-13",
     "time": "21:00",
     "locationId": 6,
@@ -6263,19 +6120,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1886076046,
-    "title": "Milking the Goatmachine & Endseeker - Urban…",
-    "date": "2026-11-14",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/milking-the-goatmachine-and-endseeker-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1582689731,
     "title": "REALLY GOOD TIME",
     "date": "2026-11-14",
@@ -6299,6 +6143,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1069568455,
+    "title": "koRn",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/korn-berlin/2026-11-14-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 2065269712,
@@ -7050,19 +6907,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1687017098,
-    "title": "Spike Fuck",
-    "date": "2026-11-15",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/spike-fuck-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 544140565,
     "title": "HERMANOS GUTIERREZ",
     "date": "2026-11-15",
@@ -7322,19 +7166,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 206810495,
-    "title": "Omar Doom",
-    "date": "2026-11-16",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82112/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1441569131,
     "title": "Katharina Schmidt + Wild Anima + Ansgar Wilken (DJ-Set)",
     "date": "2026-11-16",
@@ -7398,6 +7229,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 799250225,
+    "title": "Placebo",
+    "date": "2026-11-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/placebo-26/2026-11-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1111091807,
@@ -7579,32 +7423,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-23"
-  },
-  {
-    "id": 784975701,
-    "title": "JUD | Urban Spree Berlin",
-    "date": "2026-11-17",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/jud-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 250830686,
-    "title": "Adult DVD",
-    "date": "2026-11-17",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81351/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 38408344,
@@ -7943,6 +7761,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 387436453,
+    "title": "Muse",
+    "date": "2026-11-18",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1003297460,
     "title": "TRAC#4: OPEN STAGE",
     "date": "2026-11-18",
@@ -8019,19 +7850,6 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 670547241,
-    "title": "Thérèse",
-    "date": "2026-11-18",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81811/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 1258719790,
@@ -8435,32 +8253,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1980345188,
-    "title": "Bragolin + Carrellee",
-    "date": "2026-11-19",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/bragolin-carrellee-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1993859961,
-    "title": "Pupsies",
-    "date": "2026-11-19",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/83202/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-28"
   },
   {
     "id": 1977236741,
@@ -8914,32 +8706,6 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-09-30"
-  },
-  {
-    "id": 2120840893,
-    "title": "Process Party x Effetto Notte: Hall of Bats…",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/process-party-x-effetto-notte-hall-of-bats-with-lovataraxx,-hysteric-helen,-olgha.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1174507424,
-    "title": "Psych Dreamers",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82059/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 2075009973,
@@ -9417,6 +9183,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 348015507,
+    "title": "Die Schlagernacht des Jahres",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2092823986,
     "title": "Roller Disco",
     "date": "2026-11-21",
@@ -9674,32 +9453,6 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 676037361,
-    "title": "WISBORG Phantomschmerz Tour - BERLIN | Special…",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/wisborg-phantomschmerz-tour-berlin-special-guest-the-fright.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 184622551,
-    "title": "60 JUNO",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82137/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 2095937723,
@@ -10269,19 +10022,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 889998840,
-    "title": "Salomea",
-    "date": "2026-11-22",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81363/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 2005131208,
     "title": "Klone",
     "date": "2026-11-22",
@@ -10550,19 +10290,6 @@
     "ticketUrl": "https://www.astra-berlin.de/events/2026-11-23-11freunde-kneipenquiz",
     "spotifyUrl": "",
     "source": "astra",
-    "addedAt": "2026-10-25"
-  },
-  {
-    "id": 116395464,
-    "title": "@ (US, 4AD)",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81917/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-10-25"
   },
   {
@@ -11032,19 +10759,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 747579778,
-    "title": "Faux Real + Dance Arts Center + The Nightclubs…",
-    "date": "2026-11-25",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/faux-real-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 83888245,
     "title": "Loft presents: VENJENT - Live Band Tour",
     "date": "2026-11-25",
@@ -11240,19 +10954,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 2007929070,
-    "title": "Felsmann + Tiley",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82431/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 564712815,
     "title": "LA SONORA SANTANERA",
     "date": "2026-11-25",
@@ -11406,6 +11107,19 @@
     "ticketUrl": "https://www.velodrom.de/events/event/bryson-tiller-velodrom-2026-11-25",
     "spotifyUrl": "",
     "source": "velodrom",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 369576453,
+    "title": "Konstantinos Argiros",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -11575,32 +11289,6 @@
     "ticketUrl": "https://columbia-theater.de/event/20261126-baby-lasagna/",
     "spotifyUrl": "",
     "source": "columbiatheater",
-    "addedAt": "2026-10-25"
-  },
-  {
-    "id": 2011466232,
-    "title": "COOGANS BLUFF 10 Years Of Flying To The Stars",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/coogans-bluff-10-years-of-flying-to-the-stars.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 532351317,
-    "title": "MARYAM.fyi",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82463/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-10-25"
   },
   {
@@ -12027,19 +11715,6 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-08-19"
-  },
-  {
-    "id": 863594453,
-    "title": "FÏX8:SËD8 + NEROGRIS + SCHNEIDER -  Urban…",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/fïx8sëd8-nerogris-schneider-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1993938195,
@@ -12685,19 +12360,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 535272738,
-    "title": "Banda Entopica",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/banda-entopica-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1533325692,
@@ -13398,19 +13060,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1558864804,
-    "title": "TÄRA",
-    "date": "2026-11-29",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81256/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1671478202,
     "title": "Matthew and the Atlas",
     "date": "2026-11-29",
@@ -13694,19 +13343,6 @@
     "ticketUrl": "https://columbia-theater.de/event/20261130-platina/",
     "spotifyUrl": "",
     "source": "columbiatheater",
-    "addedAt": "2026-10-25"
-  },
-  {
-    "id": 1682806312,
-    "title": "Yaeger",
-    "date": "2026-11-30",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82556/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-10-25"
   },
   {
@@ -14096,19 +13732,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1369249134,
-    "title": "SPK + ALVAR",
-    "date": "2026-12-02",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/spk-alvar-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 345610106,
     "title": "LEDBYHER",
     "date": "2026-12-02",
@@ -14224,19 +13847,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 859928620,
-    "title": "OSKAR HAAG",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81794/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 1352104029,
@@ -14365,6 +13975,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1795054166,
+    "title": "PUR",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/pur-26/2026-12-02-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 234604444,
@@ -14586,19 +14209,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1360154713,
-    "title": "Novulent - Live in Europe 2026",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/novulent-live-in-europe-2026.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1089482801,
@@ -14831,6 +14441,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 255613365,
+    "title": "SDP & The Capital Dance Orchestra",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1430204938,
@@ -15182,19 +14805,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1215451765,
-    "title": "Coilguns - Berlin",
-    "date": "2026-12-05",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/coilguns-berlin-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 553009463,
     "title": "Trinity presents: TANK AND THE BANGAS - The Last Balloon Tour",
     "date": "2026-12-05",
@@ -15297,6 +14907,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 244297238,
+    "title": "SDP & The Capital Dance Orchestra",
+    "date": "2026-12-05",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-05-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1811680590,
@@ -15634,19 +15257,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 555236029,
-    "title": "Thaylo x URBAN SPREE",
-    "date": "2026-12-05",
-    "time": "23:59",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/thaylo-darin-epsilon-gareden.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1281956148,
     "title": "KUNST- &amp; HANDWERKSMARKT",
     "date": "2026-12-06",
@@ -15814,32 +15424,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 1112039015,
-    "title": "Planta Industrial - berlin",
-    "date": "2026-12-06",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/planta-industrial-berlin-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1839634458,
-    "title": "Seb Lowe",
-    "date": "2026-12-06",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82169/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 1038850677,
@@ -16191,6 +15775,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 1636806296,
+    "title": "BAP",
+    "date": "2026-12-08",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1309884259,
     "title": "ZAQ Medienquiz",
     "date": "2026-12-08",
@@ -16267,19 +15864,6 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1743949381,
-    "title": "DESINTERESSE + CRUSH OF SOULS",
-    "date": "2026-12-08",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82788/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 483555255,
@@ -16514,19 +16098,6 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1911216848,
-    "title": "rémi.fr",
-    "date": "2026-12-09",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82760/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 1718858193,
@@ -17213,7 +16784,7 @@
   },
   {
     "id": 1836022519,
-    "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s + Nick Cave",
+    "title": "🎶 Friday I’m in Love – A Tribute to Post-Punk · Dark 80s + Nick Cave",
     "date": "2026-12-11",
     "time": "21:00",
     "locationId": 6,
@@ -17483,19 +17054,6 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1678114495,
-    "title": "TWIN NOIR + HINFORT",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/twin-noir-hinfort-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1106670014,
@@ -18181,19 +17739,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 643560769,
-    "title": "Beaks",
-    "date": "2026-12-15",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82617/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 111302381,
     "title": "Das Ilses Erika Weihnachtsspiel - INDIE JONES - Jäger des vergorenen Schatzes - PREMIERE",
     "date": "2026-12-15",
@@ -18388,19 +17933,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 2065165565,
-    "title": "The Tubs",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82198/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 590560679,
     "title": "RAZZZAR",
     "date": "2026-12-16",
@@ -18464,6 +17996,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-27"
+  },
+  {
+    "id": 59852794,
+    "title": "101 Voices - Depeche Mode Special Tribute",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 672809719,
@@ -18596,19 +18141,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1990327964,
-    "title": "Xeno & Oaklander",
-    "date": "2026-12-17",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82409/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1512502820,
     "title": "Roncalli Weihnachtscircus 2026/2027",
     "date": "2026-12-17",
@@ -18683,6 +18215,19 @@
     "ticketUrl": "https://www.peteredel.de/events/after-work-party/",
     "spotifyUrl": "",
     "source": "peter-edel",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1699198044,
+    "title": "Die Fantastischen Vier",
+    "date": "2026-12-17",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/die-fantastischen-vier-2/2026-12-17-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -19228,6 +18773,19 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 136737319,
+    "title": "Bonez MC & RAF Camora",
+    "date": "2026-12-19",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bonezmc-rafcamora-26/2026-12-19-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 361588120,
@@ -20177,6 +19735,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 820862807,
+    "title": "Matthias Reim",
+    "date": "2026-12-28",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/matthias-reim-26/2026-12-28-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 576137108,
     "title": "RUMMELSNUFF",
     "date": "2026-12-29",
@@ -20617,19 +20188,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 402171866,
-    "title": "HANDS LABEL NIGHT BERLIN 2027",
-    "date": "2027-01-02",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/hands-label-night-berlin-2027.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 101969091,
     "title": "Knattertones + +Guest",
     "date": "2027-01-02",
@@ -20667,6 +20225,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 1991012932,
+    "title": "Unheilig",
+    "date": "2027-01-07",
+    "time": "19:15",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/unheilig-27/2027-01-07-1915",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 858686246,
@@ -20848,19 +20419,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 2132850111,
-    "title": "LINEAR MOVEMENT + DER KÜNFTIGE MUSIKANT +…",
-    "date": "2027-01-09",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/linear-movement-der-künftige-musikant-twilight-ritual.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 451507154,
@@ -22071,6 +21629,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1830715674,
+    "title": "aespa",
+    "date": "2027-01-26",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/aespa/2027-01-26-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1093707975,
     "title": "Michael Mittermeier",
     "date": "2027-01-26",
@@ -22106,6 +21677,19 @@
     "source": "monarch",
     "ticketUrl": "https://www.eventim.de/event/immer-wieder-wirsing-neue-dekadenz-tour-2027-monarch-22108320/",
     "spotifyUrl": "",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1884360819,
+    "title": "André Rieu",
+    "date": "2027-01-27",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/andrerieu/2027-01-27-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -22836,19 +22420,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 583493057,
-    "title": "Dummy",
-    "date": "2027-02-04",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82690/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 372086788,
     "title": "Ina Müller und Band",
     "date": "2027-02-04",
@@ -23160,16 +22731,16 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1479218988,
-    "title": "unpeople - berlin",
+    "id": 800406012,
+    "title": "Unheilig",
     "date": "2027-02-06",
-    "time": "19:30",
-    "locationId": 21,
+    "time": "19:15",
+    "locationId": 57,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/unpeople-berlin-urban-spree.html",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/unheilig-27/2027-02-06-1915",
     "spotifyUrl": "",
-    "source": "urbanspree",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -23456,6 +23027,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 318773111,
+    "title": "One Vision of Queen - feat. Marc Martel",
+    "date": "2027-02-09",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/one-vision-27/2027-02-09-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1324372325,
@@ -23848,19 +23432,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 987075514,
-    "title": "In Color",
-    "date": "2027-02-12",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82399/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 2016014944,
     "title": "Tutty Tran",
     "date": "2027-02-12",
@@ -23989,19 +23560,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1347874824,
-    "title": "Ugly",
-    "date": "2027-02-13",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/83004/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 1886932225,
@@ -24199,16 +23757,16 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1714155419,
-    "title": "BINA.",
-    "date": "2027-02-15",
-    "time": "20:00",
-    "locationId": 24,
+    "id": 1726080801,
+    "title": "Five Finger Death Punch",
+    "date": "2027-02-16",
+    "time": "19:00",
+    "locationId": 57,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82405/",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/five-finger-death-punch-1/2027-02-16-1900",
     "spotifyUrl": "",
-    "source": "kantine",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -24626,32 +24184,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1970186958,
-    "title": "Nathalie Froehlich - Berlin",
-    "date": "2027-02-19",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/nathalie-froehlich-berlin-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 552465584,
-    "title": "SPONTY.",
-    "date": "2027-02-19",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82295/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1995011959,
     "title": "Dominguinho",
     "date": "2027-02-19",
@@ -24714,6 +24246,19 @@
     "ticketUrl": "https://www.wildatheartberlin.de/concerts.php",
     "spotifyUrl": "",
     "source": "wildatheart",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 961379871,
+    "title": "90s Super Show",
+    "date": "2027-02-20",
+    "time": "17:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/90s-super-show-2027/2027-02-20-1700",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -25015,19 +24560,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 433089045,
-    "title": "Moyka",
-    "date": "2027-02-21",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82432/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 657643681,
     "title": "Beth Orton",
     "date": "2027-02-21",
@@ -25039,6 +24571,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1242911934,
+    "title": "RUSH",
+    "date": "2027-02-21",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/rush-berlin/2027-02-21-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 956618998,
@@ -25366,19 +24911,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1184307160,
-    "title": "THE HEADLINES",
-    "date": "2027-02-25",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82246/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1780756726,
     "title": "Bloodred Hourglass + Byrmir + Pridian",
     "date": "2027-02-25",
@@ -25533,19 +25065,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 1847156046,
-    "title": "Night Tempo",
-    "date": "2027-02-26",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82361/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 1836774464,
@@ -25833,19 +25352,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 451144863,
-    "title": "error",
-    "date": "2027-02-28",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82435/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1111942313,
     "title": "soak",
     "date": "2027-02-28",
@@ -26028,19 +25534,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1996700639,
-    "title": "SHXCXCHCXSH",
-    "date": "2027-03-04",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82678/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1277826118,
     "title": "Blanco White",
     "date": "2027-03-04",
@@ -26052,19 +25545,6 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1045063782,
-    "title": "Winona Riders - El Sueño de Dominar el Planeta…",
-    "date": "2027-03-04",
-    "time": "21:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/winona-riders-el-sueño-de-dominar-el-planeta-se-renueva.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1367475729,
@@ -26117,6 +25597,19 @@
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1395687382,
+    "title": "ENHYPEN",
+    "date": "2027-03-05",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/enhypen-berlin/2027-03-05-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1999494189,
@@ -26273,6 +25766,19 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1199173877,
+    "title": "ENHYPEN",
+    "date": "2027-03-06",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/enhypen-berlin/2027-03-06-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1134406496,
@@ -26742,19 +26248,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 426845467,
-    "title": "LA Priest",
-    "date": "2027-03-10",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/83059/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 133642644,
     "title": "Evil Invaders + Heathen + Exhorder",
     "date": "2027-03-10",
@@ -26948,6 +26441,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 617736245,
+    "title": "Teddy Swims",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/teddy-swims/2027-03-11-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1603476598,
@@ -27169,19 +26675,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 958633345,
-    "title": "MORITZ SIMON GEIST",
-    "date": "2027-03-13",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82460/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 721470860,
@@ -27638,19 +27131,6 @@
     "addedAt": "2026-09-02"
   },
   {
-    "id": 536680483,
-    "title": "Agassi",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82636/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1472548869,
     "title": "Palaye Royale",
     "date": "2027-03-18",
@@ -27662,6 +27142,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 38507416,
+    "title": "Maite Kelly",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 293050161,
@@ -27883,6 +27376,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-10-28"
+  },
+  {
+    "id": 1412581907,
+    "title": "James Blunt",
+    "date": "2027-03-20",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/james-blunt-berlin/2027-03-20-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1454267291,
@@ -28262,6 +27768,19 @@
     "addedAt": "2026-08-28"
   },
   {
+    "id": 859498805,
+    "title": "Sonu Nigam",
+    "date": "2027-03-28",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sonu-nigam/2027-03-28-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1413897013,
     "title": "Gondwana Records Presents: JACK WYLLIE + PHI-PSONICS",
     "date": "2027-03-29",
@@ -28493,6 +28012,19 @@
     "ticketUrl": "https://www.ufo-velodrom.de/events/event/megadeth-ufo-2027-04-01",
     "spotifyUrl": "",
     "source": "ufo",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1273221715,
+    "title": "CLAIR OBSCUR: EXPEDITION 33 - A PAINTED SYMPHONY",
+    "date": "2027-04-01",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/clair-obscur/2027-04-01-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -29682,19 +29214,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1590477967,
-    "title": "June McDoom - BERLIN • URBAN SPREE",
-    "date": "2027-04-14",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/june-mcdoom-berlin-•-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1906722231,
     "title": "LAURENZ NIKOLAUS",
     "date": "2027-04-14",
@@ -29810,6 +29329,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 85087255,
+    "title": "Chris Norman",
+    "date": "2027-04-15",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/chris-norman/2027-04-15-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 895323129,
@@ -29955,19 +29487,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1431257313,
-    "title": "GIRLS UNDER GLASS + SUPPORT",
-    "date": "2027-04-16",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/girls-under-glass-support.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1039375232,
     "title": "MARC ATLAS",
     "date": "2027-04-16",
@@ -30109,6 +29628,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 1420841181,
+    "title": "Maffay + Oerding",
+    "date": "2027-04-17",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maffay-oerding/2027-04-17-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 833213931,
     "title": "HOT WATER MUSIC + Small Brown Bike",
     "date": "2027-04-18",
@@ -30226,19 +29758,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 226525307,
-    "title": "pippa",
-    "date": "2027-04-19",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82687/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 1798618463,
     "title": "ASHE",
     "date": "2027-04-19",
@@ -30277,6 +29796,19 @@
     "addedAt": "2026-09-29"
   },
   {
+    "id": 42230374,
+    "title": "Thomas Bergersen",
+    "date": "2027-04-19",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/thomas-bergersen/2027-04-19-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 577238035,
     "title": "Michel von Wussow",
     "date": "2027-04-20",
@@ -30301,6 +29833,19 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 1593906635,
+    "title": "Simple Minds",
+    "date": "2027-04-21",
+    "time": "19:45",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/simple-minds-berlin/2027-04-21-1945",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1608166103,
@@ -30446,19 +29991,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1588498983,
-    "title": "Dent May",
-    "date": "2027-04-22",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82626/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 2030258619,
     "title": "Rasha Nahas",
     "date": "2027-04-22",
@@ -30537,19 +30069,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1095848672,
-    "title": "Pure Obsessions & Red Nights + Nico Amara…",
-    "date": "2027-04-23",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/pure-obsessions-and-red-nights-nico-amara-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 537620831,
     "title": "OSAN YARAN",
     "date": "2027-04-23",
@@ -30613,6 +30132,19 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 952358976,
+    "title": "Der Herr der Ringe: Die zwei Türme – in Concert Live to Film",
+    "date": "2027-04-24",
+    "time": "18:30",
+    "locationId": 57,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/herr-der-ringe-27/2027-04-24-1830",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 155135084,
@@ -30819,6 +30351,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 845144065,
+    "title": "The World of Hans Zimmer",
+    "date": "2027-04-26",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/hanszimmer-27/2027-04-26-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 438720695,
@@ -31143,6 +30688,19 @@
     "addedAt": "2026-09-29"
   },
   {
+    "id": 745163424,
+    "title": "LEA",
+    "date": "2027-05-02",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/lea/2027-05-02-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1106580211,
     "title": "Jazzkantine",
     "date": "2027-05-02",
@@ -31310,6 +30868,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1716714363,
+    "title": "Roland Kaiser",
+    "date": "2027-05-06",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/roland-kaiser-2027/2027-05-06-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1932653173,
     "title": "DOCTOR KRAPULA",
     "date": "2027-05-06",
@@ -31346,6 +30917,19 @@
     "ticketUrl": "http://www.conne-island.de/termin/nr7525.html",
     "spotifyUrl": "",
     "source": "conne-island",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 209162554,
+    "title": "Roland Kaiser",
+    "date": "2027-05-07",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/roland-kaiser-2027/2027-05-07-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -31517,6 +31101,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 602267566,
+    "title": "Unser Blauer Planet III",
+    "date": "2027-05-09",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/unser-blauer-planet-iii/2027-05-09-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1050614571,
     "title": "Mathi",
     "date": "2027-05-09",
@@ -31659,6 +31256,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 55262890,
+    "title": "Gracie Abrams",
+    "date": "2027-05-12",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/gracie-abrams/2027-05-12-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1037465691,
     "title": "JAY-JAY JOHANSON",
     "date": "2027-05-13",
@@ -31697,6 +31307,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1562814699,
+    "title": "Gracie Abrams",
+    "date": "2027-05-13",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/gracie-abrams/2027-05-13-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1506902406,
     "title": "The Godfathers",
     "date": "2027-05-13",
@@ -31707,6 +31330,19 @@
     "ticketUrl": "https://quasimodo.club/events/the-godfathers-5-7500",
     "spotifyUrl": "",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1349788329,
+    "title": "ABBAMANIA",
+    "date": "2027-05-14",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/abbamania-2027/2027-05-14-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1625170203,
@@ -31720,19 +31356,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1354682731,
-    "title": "Kitana",
-    "date": "2027-05-14",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82613/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-10-28"
   },
   {
     "id": 956687229,
@@ -31761,6 +31384,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1118316212,
+    "title": "sombr",
+    "date": "2027-05-18",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sombr/2027-05-18-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1365829284,
     "title": "Tex singt Leonard Cohen",
     "date": "2027-05-18",
@@ -31772,19 +31408,6 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-09-16"
-  },
-  {
-    "id": 1079295672,
-    "title": "Snayx",
-    "date": "2027-05-18",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82777/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 2032939941,
@@ -31941,6 +31564,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 433720973,
+    "title": "Greta Van Fleet",
+    "date": "2027-05-21",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/greta-van-fleet-2027/2027-05-21-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1527012692,
@@ -32356,6 +31992,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1945817483,
+    "title": "Rod Stewart",
+    "date": "2027-06-01",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/rodstewart/2027-06-01-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2133246707,
     "title": "JORJA SMITH",
     "date": "2027-06-02",
@@ -32640,6 +32289,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 1890634501,
+    "title": "Don Omar",
+    "date": "2027-06-28",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/don-omar/2027-06-28-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2107913300,
     "title": "MARILLION",
     "date": "2027-07-02",
@@ -32651,19 +32313,6 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1223145120,
-    "title": "BERLIN BREAKOUT 2027",
-    "date": "2027-07-03",
-    "time": "14:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/berlin-breakout-2027.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 455098292,
@@ -32990,6 +32639,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1888203783,
+    "title": "Ronan Keating",
+    "date": "2027-09-13",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/ronan-keating/2027-09-13-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 211561530,
     "title": "Hendrik Bolz",
     "date": "2027-09-14",
@@ -33158,6 +32820,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 819080078,
+    "title": "Montez",
+    "date": "2027-09-25",
+    "time": "19:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/montez-berlin/2027-09-25-1900",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 790697447,
     "title": "Christin Stark",
     "date": "2027-09-25",
@@ -33233,6 +32908,19 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 768193340,
+    "title": "Jean-Michel Jarre",
+    "date": "2027-10-02",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jean-michel-jarre-1/2027-10-02-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 382394998,
@@ -33534,6 +33222,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 966037178,
+    "title": "Andreas Gabalier",
+    "date": "2027-10-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/andreas-gabalier-2027/2027-10-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1258191546,
     "title": "Mirja Regensburg",
     "date": "2027-10-17",
@@ -33714,6 +33415,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 2011898799,
+    "title": "Nena",
+    "date": "2027-10-23",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/nena-2027/2027-10-23-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1215428163,
     "title": "KAYEF",
     "date": "2027-10-24",
@@ -33776,6 +33490,19 @@
     "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P2wWixSyxb2dAnZd9UZ",
     "spotifyUrl": "",
     "source": "kesselhaus",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 536774170,
+    "title": "die PRINZEN",
+    "date": "2027-10-28",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/die-prinzen/2027-10-28-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-01"
   },
   {
@@ -33870,6 +33597,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1345036848,
+    "title": "Andrea Berg",
+    "date": "2027-10-30",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/andrea-berg-27/2027-10-30-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1631585205,
     "title": "Kurt Krömer",
     "date": "2027-10-30",
@@ -33959,6 +33699,32 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1810311631,
+    "title": "Kontra K",
+    "date": "2027-11-02",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/kontra-k-2027/2027-11-02-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1613798126,
+    "title": "Kontra K",
+    "date": "2027-11-03",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/kontra-k-2027/2027-11-03-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1317894991,
@@ -34234,6 +34000,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 363656777,
+    "title": "Disney in Concert",
+    "date": "2027-11-25",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/disney-in-concert-2027/2027-11-25-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 437744653,
     "title": "Simon Stäblein",
     "date": "2027-11-26",
@@ -34258,6 +34037,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1552471871,
+    "title": "Wincent Weiss",
+    "date": "2027-11-27",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/wincent-weiss-2027/2027-11-27-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1191439357,
@@ -34427,6 +34219,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 875374159,
+    "title": "Kool Savas",
+    "date": "2028-01-29",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/kool-savas/2028-01-29-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 585293871,
