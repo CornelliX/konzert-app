@@ -3425,6 +3425,43 @@ async function scrapeWaschhaus() {
   return events
 }
 
+async function scrapeRbbSendesaal() {
+  console.log('📡 rbb Sendesaal...')
+  const events = []
+  try {
+    const res = await fetch('https://www.rbb-online.de/unternehmen/service/veranstaltungen/Veranstaltungen.html', {
+      headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
+    })
+    const html = await res.text()
+    const $ = cheerio.load(html)
+    // Die Seite hat mehrere Tabs (Konzerte, Lesungen, Podcast & Talk, ...), alle als eigenes
+    // <li> im selben <ul class="tab_content"> - in derselben Reihenfolge wie die Tab-Navigation.
+    // Der erste (aktive) Tab ist "Konzerte" - nur daraus lesen, sonst rutschen auch Lesungen/
+    // Talks aus den anderen Tabs mit rein.
+    const konzerteTab = $('ul.tab_content > li').first()
+    konzerteTab.find('article.manualteaser').each((_, el) => {
+      const art = $(el)
+      const [dateRaw, location] = art.find('time.onAirInfo').first().text().split('|').map(s => s.trim())
+      const locText = (location || '').toLowerCase()
+      // Nur Konzerte im Großen oder Kleinen Sendesaal - andere Räume im rbb-Gebäude (z.B.
+      // "Studio 14 – Die rbb-Dachlounge") explizit ausgeschlossen (Nutzervorgabe).
+      const locationId = locText.includes('großer sendesaal') ? 59 : locText.includes('kleiner sendesaal') ? 60 : null
+      if (!locationId) return
+      const title = art.find('.manualteasertitle').first().text().trim()
+      if (!title || /abgesagt/i.test(title)) return
+      const date = parseGermanDate(dateRaw)
+      if (!date || date < today()) return
+      const href = art.find('h3 a.termin').first().attr('href') || ''
+      const ticketUrl = href ? (href.startsWith('http') ? href : 'https://www.rbb-online.de' + href) : 'https://www.rbb-online.de/unternehmen/service/veranstaltungen/Veranstaltungen.html'
+      events.push({ title, date, time: '20:00', locationId, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'rbb-sendesaal' })
+    })
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ rbb Sendesaal: ${e.message}`)
+  }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -3489,6 +3526,7 @@ async function main() {
     scrapeUFO(),
     scrapeUberArena(),
     scrapeWaschhaus(),
+    scrapeRbbSendesaal(),
   ])
 
   let allEvents = []
@@ -3498,7 +3536,7 @@ async function main() {
 
   // Venues die 0 Events lieferten: aus letztem Snapshot nachladen (CI-IP-Blockierung)
   const scrapedLocationIds = new Set(allEvents.map(e => e.locationId))
-  const fallbackLocationIds = [6, 11, 17, 18, 26, 28, 29, 32, 33, 37, 44, 46, 58] // Frannz, Schokoladen, UT Connewitz, Moritzbastei, Heimathafen, Mikropol, Kesselhaus, Columbiahalle, Uber Eats MH, Quasimodo, Neue Zukunft, Theater des Westens, Waschhaus
+  const fallbackLocationIds = [6, 11, 17, 18, 26, 28, 29, 32, 33, 37, 44, 46, 58, 59, 60] // Frannz, Schokoladen, UT Connewitz, Moritzbastei, Heimathafen, Mikropol, Kesselhaus, Columbiahalle, Uber Eats MH, Quasimodo, Neue Zukunft, Theater des Westens, Waschhaus, rbb Großer/Kleiner Sendesaal
   const outPathForFallback = path.join(process.cwd(), 'public', 'events.json')
   let snapshotEvents = []
   try { snapshotEvents = JSON.parse(fs.readFileSync(outPathForFallback, 'utf-8')) } catch(e) {}

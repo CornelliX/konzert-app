@@ -68,6 +68,8 @@ export function getLocations() {
     { id: 56, name: 'UFO im Velodrom', city: 'Berlin', website: 'ufo-velodrom.de', capacity: 1500 },
     { id: 57, name: 'Uber Arena', city: 'Berlin', website: 'uber-arena.de', capacity: 17000 },
     { id: 58, name: 'Waschhaus Potsdam', city: 'Berlin', website: 'waschhaus.de', capacity: 800 },
+    { id: 59, name: 'Großer Sendesaal des rbb', city: 'Berlin', website: 'rbb-online.de/unternehmen/service/veranstaltungen/Veranstaltungen.html', capacity: 850 },
+    { id: 60, name: 'Kleiner Sendesaal des rbb', city: 'Berlin', website: 'rbb-online.de/unternehmen/service/veranstaltungen/Veranstaltungen.html', capacity: 200 },
   ]
   // Gespeicherte Locations mit Defaults zusammenführen, damit neue Einträge immer erscheinen
   if (saved) {
