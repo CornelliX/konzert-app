@@ -40,6 +40,12 @@ function spotifySearchUrl(title) {
   return `https://open.spotify.com/search/${encodeURIComponent(core || title)}`
 }
 
+// Trennzeichen zwischen Hauptact und Support-Act(s)/Zusätzen in einem Lineup-Titel - von
+// extractArtists() (bereinigte Künstlernamen für Spotify/Radar/History) und renderTitleHtml()
+// (Fett/Mager-Darstellung bei unverändertem Original-Text) gemeinsam genutzt, damit beide
+// Stellen konsistent erkennen, wo der Hauptact endet.
+const ACT_SEPARATOR_SOURCE = '\\s*\\+\\s*|\\s+feat\\.?\\s+|\\s+ft\\.?\\s+|\\s+w\\/\\s+|,?\\s*support:?\\s+|\\s+special\\s+guests?:?\\s+|\\s+mit\\s+'
+
 // Erkennt mehrere im Titel genannte Künstler (Vorband + Hauptact etc.), z.B.
 // "Enter Shikari + Holding Absence + The Callous Daoboys" -> 3 Namen. Bewusst kein Split
 // an "/" (anders als spotifySearchUrl oben), da das echte Bandnamen wie "AC/DC" zerreißen
@@ -49,7 +55,7 @@ function extractArtists(title) {
   const prefixMatch = core.match(/^.+?\s+(?:presents?|präsentiert|lädt\s+ein)\s*:\s*(.+)$/i)
   if (prefixMatch) core = prefixMatch[1]
   core = core.split(/\s+live\s+@|\s+-\s+im\s+anschluss/i)[0]
-  const rawParts = core.split(/\s*\+\s*|\s+feat\.?\s+|\s+ft\.?\s+|\s+w\/\s+|,?\s*support:?\s+|\s+special\s+guests?:?\s+|\s+mit\s+/i)
+  const rawParts = core.split(new RegExp(ACT_SEPARATOR_SOURCE, 'i'))
   const seen = new Set()
   const artists = []
   for (const raw of rawParts) {
@@ -59,6 +65,21 @@ function extractArtists(title) {
     artists.push(clean)
   }
   return artists.length ? artists : [title]
+}
+
+// Zeigt den Original-Titel unverändert an, stylt aber den Hauptact fett und alles ab dem
+// ersten Lineup-Trenner (Support-Act, "feat. X" etc.) dünner. Anders als extractArtists()
+// wird hier nichts bereinigt/entfernt (keine Klammern/Promoter-Präfixe gestrippt) - ein
+// "(ausverkauft)"-Zusatz oder "X präsentiert:" soll im Kartentitel sichtbar bleiben.
+function renderTitleHtml(title) {
+  const str = String(title || '')
+  const parts = str.split(new RegExp(`(${ACT_SEPARATOR_SOURCE})`, 'i'))
+  if (parts.length <= 1) return `<span style="font-weight:700;">${esc(str)}</span>`
+  let html = `<span style="font-weight:700;">${esc(parts[0])}</span>`
+  for (let i = 1; i < parts.length; i += 2) {
+    html += `<span style="font-weight:400; color:rgba(255,255,255,0.68);">${esc(parts[i])}${esc(parts[i + 1] || '')}</span>`
+  }
+  return html
 }
 
 // Der Scraper klassifiziert unbekannte Titel standardmäßig als "konzert" (z.B. Vorträge,
@@ -229,6 +250,22 @@ async function checkRadarMatches() {
   if (matches.length) showRadarBanner(matches)
 }
 
+// Legt für ein Event einen History-Eintrag pro Act an (extractArtists() zerlegt "Main Act +
+// Support Act" in einzelne Namen) - so landet ein vorhandener Support-Act als eigener
+// History-Eintrag statt im Titel des Hauptacts versteckt zu bleiben. Bei Events ohne Support
+// liefert extractArtists() genau ein Element (den vollen Titel), Verhalten bleibt dann wie zuvor.
+async function archiveEventToHistory(ev) {
+  const loc = locationsById.get(ev.locationId)
+  const locationName = loc ? loc.name : (ev.locationName || '')
+  const locationCity = loc ? loc.city : (ev.locationCity || '')
+  const added = []
+  for (const artist of extractArtists(ev.title)) {
+    const entry = await addHistoryEntry({ eventId: String(ev.id), title: artist, locationName, locationCity, date: ev.date })
+    if (entry) added.push(entry)
+  }
+  return added
+}
+
 // Schreibt für jedes aktuell "dabei"-markierte Event einen History-Snapshot (Titel/Location/
 // Datum), falls noch keiner existiert - unabhängig davon, ob das Event in der Zukunft oder
 // Vergangenheit liegt. Wichtig: der Scraper entfernt vergangene Events aus events.json
@@ -243,14 +280,8 @@ async function syncGoingToHistory() {
     if (known.has(String(id))) continue
     const ev = events.find(e => e.id == id)
     if (!ev) continue
-    const loc = locationsById.get(ev.locationId)
-    const entry = await addHistoryEntry({
-      eventId: String(id), title: ev.title,
-      locationName: loc ? loc.name : (ev.locationName || ''),
-      locationCity: loc ? loc.city : (ev.locationCity || ''),
-      date: ev.date
-    })
-    if (entry) history = [...history, entry]
+    const added = await archiveEventToHistory(ev)
+    if (added.length) history = [...history, ...added]
   }
 }
 
@@ -613,7 +644,7 @@ function renderEventCard(e) {
               ${isGoing ? '<span class="text-xs font-semibold" style="color:#34d399;">✓ dabei</span>' : ''}
               ${isBookmarked && !isGoing ? '<span class="text-xs font-semibold" style="color:#f472b6;">♡ gemerkt</span>' : ''}
             </div>
-            <h3 class="syne text-white leading-tight mb-1" style="font-size:1rem; font-weight:700; letter-spacing:-0.01em;">${esc(e.title)}</h3>
+            <h3 class="syne text-white leading-tight mb-1" style="font-size:1rem; letter-spacing:-0.01em;">${renderTitleHtml(e.title)}</h3>
             <p class="text-xs mb-2" style="color:rgba(255,255,255,0.62);">
               ${loc ? esc(loc.name) : esc(e.locationName || '')}
             </p>
@@ -745,6 +776,7 @@ function renderHistorySection(historyEntries) {
       <div id="history-add-form" class="hidden space-y-2 mb-3">
         <input id="history-title" type="text" placeholder="Artist / Titel" style="${inputStyle}" />
         <input id="history-location" type="text" placeholder="Location" style="${inputStyle}" />
+        <label for="history-date" style="font-size:11px; color:rgba(255,255,255,0.4); font-family:'DM Sans',sans-serif; padding-left:4px; display:block;">Datum</label>
         <input id="history-date" type="date" style="${inputStyle}" />
         <button data-history-save class="w-full py-2.5 rounded-xl font-bold text-white text-sm syne" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">Konzert hinzufügen</button>
       </div>
@@ -799,7 +831,7 @@ function attachHistoryEvents() {
   attachHistoryRemoveEvents()
 }
 
-const inputStyle =`width:100%; border-radius:12px; padding:10px 14px; font-size:14px; color:white; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); font-family:'DM Sans',sans-serif; color-scheme:dark;`
+const inputStyle =`width:100%; box-sizing:border-box; border-radius:12px; padding:10px 14px; font-size:14px; color:white; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); font-family:'DM Sans',sans-serif; color-scheme:dark;`
 
 function renderModals() {
   return `
@@ -1250,13 +1282,7 @@ function attachSwipeToWrapper(wrapper) {
       // siehe syncGoingToHistory() für die Begründung (Event kann bis dahin schon aus
       // events.json verschwunden sein).
       if (!history.some(h => h.eventId === String(id))) {
-        const loc = locationsById.get(ev.locationId)
-        addHistoryEntry({
-          eventId: String(id), title: ev.title,
-          locationName: loc ? loc.name : (ev.locationName || ''),
-          locationCity: loc ? loc.city : (ev.locationCity || ''),
-          date: ev.date
-        }).then(entry => { if (entry) history = [...history, entry] })
+        archiveEventToHistory(ev).then(added => { if (added.length) history = [...history, ...added] })
       }
     } else if (!isNow && ev && ev.date >= new Date().toISOString().split('T')[0]) {
       // Nur bei noch nicht stattgefundenen Events den Snapshot mit entfernen - bei bereits
