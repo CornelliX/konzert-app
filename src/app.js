@@ -773,26 +773,23 @@ function renderHistoryRow(h) {
 // Antippen das native Wählrad, damit bekommt man Tag/Monat/Jahr als drei Wählräder ohne
 // eigenes Picker-Widget zu bauen (der native type="date"-Picker ist je nach Plattform ein
 // Kalenderraster statt eines Wählrads).
-// Distinkte Locations, die bereits irgendwo in der History vorkommen - als Schnellwahl beim
-// manuellen Eintragen, damit man den Ort nicht jedes Mal neu tippen muss.
-function historyLocationSuggestions() {
-  const seen = new Set()
-  const list = []
-  for (const h of history) {
-    const loc = [h.locationName, h.locationCity].filter(Boolean).join(', ')
-    if (!loc || seen.has(loc.toLowerCase())) continue
-    seen.add(loc.toLowerCase())
-    list.push(loc)
-  }
-  return list.sort((a, b) => a.localeCompare(b))
+// Komplette Berlin/Leipzig-Venueliste, live gefiltert nach dem Tippfortschritt im
+// Location-Feld (Substring, Groß-/Kleinschreibung egal) - nicht nur bereits in der History
+// genutzte Orte, damit auch ein neuer Ort schnell gefunden wird.
+function renderHistoryLocationOptions(filterText = '') {
+  const needle = filterText.trim().toLowerCase()
+  const matches = locations
+    .filter(l => l.city === 'Berlin' || l.city === 'Leipzig')
+    .filter(l => !needle || l.name.toLowerCase().includes(needle))
+    .sort((a, b) => a.name.localeCompare(b.name))
+  if (!matches.length) return `<div style="padding:10px 14px; color:rgba(255,255,255,0.35); font-size:13px;">Keine Treffer</div>`
+  return matches.map((l, i) => `<div data-history-loc-option="${esc(l.name + ', ' + l.city)}" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.8); font-size:14px; ${i > 0 ? 'border-top:1px solid rgba(255,255,255,0.04);' : ''}">${esc(l.name)} <span style="color:rgba(255,255,255,0.35); font-size:12px;">${esc(l.city)}</span></div>`).join('')
 }
 
 function renderHistoryLocationDropdown() {
-  const suggestions = historyLocationSuggestions()
-  if (!suggestions.length) return ''
   return `
-    <div id="history-location-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:200; width:100%; max-height:180px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
-      ${suggestions.map((loc, i) => `<div data-history-loc-option class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.8); font-size:14px; ${i > 0 ? 'border-top:1px solid rgba(255,255,255,0.04);' : ''}">${esc(loc)}</div>`).join('')}
+    <div id="history-location-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:200; width:100%; max-height:200px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
+      ${renderHistoryLocationOptions()}
     </div>
   `
 }
@@ -881,14 +878,25 @@ function attachHistoryEvents() {
   })
   const locationInput = document.getElementById('history-location')
   const locationDropdown = document.getElementById('history-location-dropdown')
+  const attachLocOptionEvents = () => {
+    locationDropdown?.querySelectorAll('[data-history-loc-option]').forEach(opt => {
+      opt.addEventListener('click', () => {
+        if (locationInput) locationInput.value = opt.dataset.historyLocOption
+        locationDropdown.classList.add('hidden')
+      })
+    })
+  }
   locationInput?.addEventListener('click', (e) => { e.stopPropagation(); locationDropdown?.classList.remove('hidden') })
   locationInput?.addEventListener('focus', () => locationDropdown?.classList.remove('hidden'))
-  document.querySelectorAll('[data-history-loc-option]').forEach(opt => {
-    opt.addEventListener('click', () => {
-      if (locationInput) locationInput.value = opt.textContent
-      locationDropdown?.classList.add('hidden')
-    })
+  // Während des Tippens live nachfiltern (Substring, z.B. "C" -> "Ca" -> ...), statt nur
+  // einmal beim Öffnen eine feste Liste zu zeigen.
+  locationInput?.addEventListener('input', () => {
+    if (!locationDropdown) return
+    locationDropdown.innerHTML = renderHistoryLocationOptions(locationInput.value)
+    locationDropdown.classList.remove('hidden')
+    attachLocOptionEvents()
   })
+  attachLocOptionEvents()
   document.querySelector('[data-history-save]')?.addEventListener('click', async () => {
     const title = document.getElementById('history-title')?.value.trim()
     const location = document.getElementById('history-location')?.value.trim()
