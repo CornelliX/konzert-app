@@ -1,5 +1,11 @@
 import { getLocations, getEvents, saveData, loadData } from './data.js'
-import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut } from './supabase.js'
+import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut, localToday } from './supabase.js'
+
+// ISO-Datum + HH:MM sortiert als String korrekt; new Date(date + 'T' + time) wäre bei Events ohne
+// Uhrzeit "Invalid Date" (NaN im Vergleich) und würde die Reihenfolge durcheinanderbringen
+function byDateTime(a, b) {
+  return (a.date + (a.time || '00:00')).localeCompare(b.date + (b.time || '00:00'))
+}
 
 function esc(s) {
   return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
@@ -149,7 +155,8 @@ let lastGemerktTapAt = 0
 let radarOpen = false
 
 export async function renderApp(el) {
-  if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
+  // window.history: der Modul-Scope hat ein eigenes `history` (die History-Einträge)
+  if ('scrollRestoration' in window.history) window.history.scrollRestoration = 'manual'
   window.scrollTo(0, 0)
   container = el
   container.innerHTML = `
@@ -210,8 +217,8 @@ async function mergeAndSyncBookmarks() {
   const toUploadBm = localBm.filter(id => validIds.some(v => v == id) && !bm.bookmarked.some(b => b == id))
   const toUploadGo = localGo.filter(id => validIds.some(v => v == id) && !bm.going.some(g => g == id))
 
-  for (const id of toUploadBm) await toggleBookmark(id, 'bookmarked')
-  for (const id of toUploadGo) await toggleBookmark(id, 'going')
+  for (const id of toUploadBm) await toggleBookmark(id, 'bookmarked', true)
+  for (const id of toUploadGo) await toggleBookmark(id, 'going', true)
 
   const synced = (toUploadBm.length || toUploadGo.length) ? await loadBookmarks() : bm
   return {
@@ -238,13 +245,15 @@ async function checkRadarMatches() {
   if (!radar.length) return
   const matches = []
   for (const r of radar) {
-    const hit = events.find(e => artistMatchesEvent(r.artist, e))
+    // Nur künftige Events: ein vergangener Termin, der noch bis zum nächsten Scrape in
+    // events.json steht, darf den Radar-Eintrag nicht "verbrauchen"
+    const hit = events.find(e => e.date >= localToday() && artistMatchesEvent(r.artist, e))
     if (hit) matches.push({ radarEntry: r, event: hit })
   }
   for (const { radarEntry, event } of matches) {
     if (!bookmarked.some(b => b == event.id)) {
       bookmarked = [...bookmarked, event.id]
-      await toggleBookmark(event.id, 'bookmarked')
+      await toggleBookmark(event.id, 'bookmarked', true)
     }
     radar = radar.filter(r => r.id !== radarEntry.id)
     await removeRadarArtist(radarEntry.id)
@@ -277,7 +286,7 @@ async function archiveEventToHistory(ev) {
 // archivieren. Die History-Sektion selbst blendet Einträge mit Datum >= heute einfach aus.
 async function syncGoingToHistory() {
   if (!going.length) return
-  const known = new Set(history.map(h => h.eventId).filter(Boolean))
+  const known = new Set([...history.map(h => h.eventId).filter(Boolean), ...(loadData('historyDismissed') || [])])
   for (const id of going) {
     if (known.has(String(id))) continue
     const ev = events.find(e => e.id == id)
@@ -332,8 +341,13 @@ function attachRadarRemoveEvents() {
   })
 }
 
+// Event-Karten existieren parallel in Liste und Kalender - nur die der sichtbaren Pane zählt
+function findVisibleCard(id) {
+  return document.getElementById('pane-' + currentView)?.querySelector(`[data-event-id="${id}"]`)
+}
+
 function highlightEventCard(id) {
-  const wrapper = document.querySelector(`[data-event-id="${id}"]`)
+  const wrapper = findVisibleCard(id)
   if (!wrapper) return
   wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' })
   wrapper.classList.remove('card-glow-highlight')
@@ -378,6 +392,8 @@ function markAllSeen() {
 
 function render() {
   swipeActiveWrapper = null
+  // Das Radar-Modal wird unten neu (hidden) gerendert - Zustand und Nav müssen dazu passen
+  radarOpen = false
   const newCount = events.filter(e => isNew(e)).length
   const inner = document.getElementById('app-inner')
   inner.innerHTML = `
@@ -386,7 +402,7 @@ function render() {
   <div class="glass rounded-2xl p-4 mb-4">
     <div id="login-step-1">
       <div style="display:flex; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.06);">
-        <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." value="${localStorage.getItem('lebe-live-email') || ''}" style="flex:1; min-width:0; padding:10px 14px; font-size:14px; color:white; outline:none; background:transparent; border:none; font-family:'DM Sans',sans-serif; color-scheme:dark;" />
+        <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." value="${esc(localStorage.getItem('lebe-live-email'))}" style="flex:1; min-width:0; padding:10px 14px; font-size:14px; color:white; outline:none; background:transparent; border:none; font-family:'DM Sans',sans-serif; color-scheme:dark;" />
         <button id="login-btn" class="syne text-sm font-semibold px-4" style="background:rgba(99,102,241,0.4); border:none; border-left:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer; transition:opacity 0.2s; flex-shrink:0;">Code senden</button>
       </div>
       <p id="login-hint" style="margin-top:8px; font-size:12px; color:rgba(255,255,255,0.35); min-height:16px;"></p>
@@ -401,7 +417,7 @@ function render() {
     </div>
   </div>
 `}
-    ${currentUser ? `<div class="text-right mb-2" style="font-size:11px; color:rgba(255,255,255,0.3);">${currentUser.email} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
+    ${currentUser ? `<div class="text-right mb-2" style="font-size:11px; color:rgba(255,255,255,0.3);">${esc(currentUser.email)} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
     <div id="filter-bar-wrap" style="${currentView === 'gemerkt' ? 'display:none' : ''}">
       ${renderFilters()}
     </div>
@@ -540,7 +556,7 @@ function renderFilters() {
         </div>
         <div style="display:flex; gap:10px; align-items:center; flex:1; min-width:0;">
           <div style="position:relative; flex:1; min-width:0;">
-            <input id="search-input" type="search" placeholder="Suche…" value="${filters.search || ''}" style="width:100%; box-sizing:border-box; padding:9px 30px 9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none; -webkit-appearance:none; appearance:none;" />
+            <input id="search-input" type="search" placeholder="Suche…" value="${esc(filters.search)}" style="width:100%; box-sizing:border-box; padding:9px 30px 9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none; -webkit-appearance:none; appearance:none;" />
             <button id="search-clear" type="button" aria-label="Suche löschen" style="position:absolute; right:4px; top:50%; transform:translateY(-50%); width:24px; height:24px; border:none; background:transparent; color:rgba(255,255,255,0.4); font-size:18px; line-height:1; cursor:pointer; display:${filters.search ? 'flex' : 'none'}; align-items:center; justify-content:center; border-radius:50%;">×</button>
           </div>
           <button id="search-submit" type="button" title="Suchen" aria-label="Suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex-shrink:0; width:34px; height:34px; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
@@ -562,7 +578,7 @@ function getFilteredEvents() {
       if (!e.title.toLowerCase().includes(s)) return false
     }
     return true
-  }).sort((a, b) => new Date(a.date + 'T' + a.time) - new Date(b.date + 'T' + b.time))
+  }).sort(byDateTime)
 }
 
 function renderGroupedEvents() {
@@ -664,7 +680,7 @@ function renderEventCard(e) {
         <div class="p-4">
           <div class="flex-1 min-w-0">
             <div class="flex items-center gap-2 mb-2 flex-wrap">
-              <span class="syne text-xs" style="color:${accentSolid}; font-weight:700;">${dateStr} · ${e.time}</span>
+              <span class="syne text-xs" style="color:${accentSolid}; font-weight:700;">${dateStr} · ${esc(e.time)}</span>
               ${eventIsNew ? '<span class="text-xs font-bold" style="color:#f472b6; letter-spacing:0.05em;">NEW</span>' : ''}
               ${isGoing ? '<span class="text-xs font-semibold" style="color:#34d399;">✓ dabei</span>' : ''}
               ${isBookmarked && !isGoing ? '<span class="text-xs font-semibold" style="color:#f472b6;">♡ gemerkt</span>' : ''}
@@ -755,11 +771,11 @@ function renderBookmarkedView() {
   const allEvents = [
     ...goingEvents.map(e => ({ ...e, _status: 'dabei' })),
     ...bookmarkedEvents.map(e => ({ ...e, _status: 'gemerkt' }))
-  ].sort((a, b) => new Date(a.date + 'T' + a.time) - new Date(b.date + 'T' + b.time))
+  ].sort(byDateTime)
 
   // Nur bereits stattgefundene Einträge zeigen - zukünftige History-Snapshots existieren
   // schon (siehe syncGoingToHistory), sollen aber erst nach dem Konzertdatum auftauchen.
-  const todayStr = new Date().toISOString().split('T')[0]
+  const todayStr = localToday()
   const historyEntries = history.filter(h => h.date <= todayStr).sort((a, b) => b.date.localeCompare(a.date))
 
   if (allEvents.length === 0 && historyEntries.length === 0) return `
@@ -887,7 +903,7 @@ function renderHistorySection(historyEntries) {
 function refreshHistoryList() {
   const list = document.getElementById('history-list')
   if (!list) return
-  const todayStr = new Date().toISOString().split('T')[0]
+  const todayStr = localToday()
   const historyEntries = history.filter(h => h.date <= todayStr).sort((a, b) => b.date.localeCompare(a.date))
   list.innerHTML = renderHistoryListHtml(historyEntries)
   attachHistoryRemoveEvents()
@@ -901,6 +917,10 @@ function attachHistoryRemoveEvents() {
   document.querySelectorAll('[data-history-remove]').forEach(btn => {
     btn.addEventListener('click', async () => {
       const id = btn.dataset.historyRemove
+      // Event merken, damit syncGoingToHistory() den bewusst gelöschten Eintrag nicht beim
+      // nächsten Laden wieder anlegt (das Event bleibt ja "dabei" markiert)
+      const removed = history.find(h => String(h.id) === id)
+      if (removed?.eventId) saveData('historyDismissed', [...new Set([...(loadData('historyDismissed') || []), removed.eventId])])
       history = history.filter(h => String(h.id) !== id)
       refreshHistoryList()
       await removeHistoryEntry(id)
@@ -966,17 +986,18 @@ function attachHistoryEvents() {
     const year = document.getElementById('history-year')?.value
     if (!title || !day || !month || !year) { alert('Bitte mindestens Titel und Datum angeben.'); return }
     const date = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
+    // 31. Februar etc.: Date rollt in den Folgemonat über - dann stimmt der Monat nicht mehr
+    if (new Date(date + 'T00:00:00').getMonth() + 1 !== Number(month)) { alert('Dieses Datum gibt es nicht - bitte Tag und Monat prüfen.'); return }
     const entry = await addHistoryEntry({ title, locationName: location, locationCity: '', date })
-    if (entry) {
-      history = [...history, entry]
-      document.getElementById('history-title').value = ''
-      document.getElementById('history-location').value = ''
-      document.getElementById('history-day').value = ''
-      document.getElementById('history-month').value = ''
-      document.getElementById('history-year').value = ''
-      form?.classList.add('hidden')
-      refreshHistoryList()
-    }
+    if (!entry) { alert('Speichern fehlgeschlagen - bitte nochmal versuchen.'); return }
+    history = [...history, entry]
+    document.getElementById('history-title').value = ''
+    document.getElementById('history-location').value = ''
+    document.getElementById('history-day').value = ''
+    document.getElementById('history-month').value = ''
+    document.getElementById('history-year').value = ''
+    form?.classList.add('hidden')
+    refreshHistoryList()
   })
   attachHistoryRemoveEvents()
 }
@@ -1195,7 +1216,7 @@ function attachEvents() {
     // Vor dem Speichern prüfen, ob der Künstler nicht längst ein Thema ist - Radar ist nur
     // für Artists ohne jeden Bezug zu einem aktuellen Event gedacht, nicht als Duplikat zur
     // Merkliste oder zu bereits existierenden Eventcards.
-    const match = events.find(e => artistMatchesEvent(artist, e))
+    const match = events.find(e => e.date >= localToday() && artistMatchesEvent(artist, e))
     if (match) {
       const onWatchlist = bookmarked.some(b => b == match.id) || going.some(g => g == match.id)
       if (onWatchlist) openBookmarks(match.id)
@@ -1258,7 +1279,7 @@ function attachEvents() {
           render()
         }
         const ind = document.getElementById('ptr-indicator')
-        if (ind) ind.style.height = '0'
+        if (ind) { ind.style.height = '0'; ind.textContent = '↻ Aktualisieren...' }
       } else {
         if (indicator) indicator.style.height = '0'
       }
@@ -1323,7 +1344,13 @@ function attachEvents() {
 
   document.getElementById('logout-btn')?.addEventListener('click', async () => {
     await signOut()
+    // Nutzerdaten nicht im Speicher stehen lassen - sonst sieht auf einem geteilten Gerät die
+    // nächste Person History/Merkliste, bis zum nächsten vollen Laden
     currentUser = null
+    bookmarked = []
+    going = []
+    history = []
+    radar = []
     render()
   })
 
@@ -1346,6 +1373,10 @@ function closeSwipeWrapper(wrapper) {
 function attachSwipeToWrapper(wrapper) {
   const card = wrapper.querySelector('.event-swipe-card, .history-swipe-card')
   if (!card) return
+  // Mehrfachaufrufe (attachSwipeGestures() läuft über alle Panes) dürfen keine zweiten
+  // Handler anhängen - sonst feuern Teilen/ICS/Kalender doppelt
+  if (wrapper.dataset.swipeBound) return
+  wrapper.dataset.swipeBound = '1'
   const REVEAL_WIDTH = 160, THRESHOLD = 60
   const SETTLE_TRANSITION = 'transform 0.3s cubic-bezier(0.22, 1, 0.36, 1)'
   let startX = 0, startY = 0, currentDx = 0
@@ -1434,8 +1465,8 @@ function attachSwipeToWrapper(wrapper) {
     if (wasGoing) going = going.filter(g => g != id)
     bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
     setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 400)
-    if (wasGoing) toggleBookmark(id, 'going')
-    toggleBookmark(id, 'bookmarked')
+    if (wasGoing) toggleBookmark(id, 'going', false)
+    toggleBookmark(id, 'bookmarked', isNow)
   })
   wrapper.querySelector('[data-swipe-going]')?.addEventListener('click', () => {
     if (bookmarkInFlight.has(id)) return
@@ -1448,8 +1479,8 @@ function attachSwipeToWrapper(wrapper) {
     if (wasBookmarked) bookmarked = bookmarked.filter(b => b != id)
     going = isNow ? [...going, id] : going.filter(g => g != id)
     setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 400)
-    if (wasBookmarked) toggleBookmark(id, 'bookmarked')
-    toggleBookmark(id, 'going')
+    if (wasBookmarked) toggleBookmark(id, 'bookmarked', false)
+    toggleBookmark(id, 'going', isNow)
     const ev = events.find(e => e.id == id)
     if (isNow && ev) {
       // Sofortiger History-Snapshot beim Markieren statt erst beim nächsten App-Start -
@@ -1458,7 +1489,7 @@ function attachSwipeToWrapper(wrapper) {
       if (!history.some(h => h.eventId === String(id))) {
         archiveEventToHistory(ev).then(added => { if (added.length) history = [...history, ...added] })
       }
-    } else if (!isNow && ev && ev.date >= new Date().toISOString().split('T')[0]) {
+    } else if (!isNow && ev && ev.date >= localToday()) {
       // Nur bei noch nicht stattgefundenen Events den Snapshot mit entfernen - bei bereits
       // vergangenen bleibt er stehen (Korrektur dafür ist der Lösch-Button in der History).
       history = history.filter(h => h.eventId !== String(id))
@@ -1485,12 +1516,16 @@ function attachSwipeToWrapper(wrapper) {
     const startDate = eventDateUTC(e.date, e.time)
     const endDate = new Date(startDate); endDate.setHours(endDate.getHours() + 2)
     const fmt = d => `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}T${String(d.getHours()).padStart(2,'0')}${String(d.getMinutes()).padStart(2,'0')}00`
-    const ics = ['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT',`DTSTART:${fmt(startDate)}`,`DTEND:${fmt(endDate)}`,`SUMMARY:${icsEscape(e.title)}`,`LOCATION:${icsEscape(locName)}, ${icsEscape(locCity)}`,`URL:${safeUrl(e.ticketUrl)}`, 'END:VEVENT','END:VCALENDAR'].join('\r\n')
+    const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')
+    const ticketUrl = safeUrl(e.ticketUrl)
+    // UID/DTSTAMP sind nach RFC 5545 Pflicht - ohne sie lehnen manche Kalender-Apps den Import ab
+    const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//LE.BE LIVE//DE','BEGIN:VEVENT',`UID:${e.id}@lebe-live`,`DTSTAMP:${stamp}`,`DTSTART:${fmt(startDate)}`,`DTEND:${fmt(endDate)}`,`SUMMARY:${icsEscape(e.title)}`,`LOCATION:${icsEscape(locName)}, ${icsEscape(locCity)}`, ...(ticketUrl ? [`URL:${ticketUrl}`] : []), 'END:VEVENT','END:VCALENDAR'].join('\r\n')
     const blob = new Blob([ics], { type: 'text/calendar' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url; a.download = `${e.title.replace(/\s+/g,'-')}.ics`; a.click()
-    URL.revokeObjectURL(url)
+    // Nicht sofort freigeben - iOS Safari lädt die Datei asynchron und bekäme sonst eine tote URL
+    setTimeout(() => URL.revokeObjectURL(url), 10000)
   })
   wrapper.querySelector('[data-spotify-picker]')?.addEventListener('click', () => {
     const e = events.find(ev => ev.id == id)
@@ -1525,7 +1560,7 @@ function attachSwipeToWrapper(wrapper) {
     wrapper.querySelector('[data-swipe-radar]')?.classList.add('btn-sweep')
     closeSwipeWrapper(wrapper)
     const artist = entry.title
-    const todayStr = new Date().toISOString().split('T')[0]
+    const todayStr = localToday()
     const match = events.find(e => e.date >= todayStr && artistMatchesEvent(artist, e))
     if (match) {
       const onWatchlist = bookmarked.some(b => b == match.id) || going.some(g => g == match.id)
@@ -1576,8 +1611,11 @@ function setupLoadMoreObserver() {
 function updateCard(id) {
   const e = events.find(ev => ev.id == id)
   if (!e) return
-  const wrapper = document.querySelector(`[data-event-id="${id}"]`)
+  const wrapper = findVisibleCard(id)
   if (!wrapper) { render(); return }
+  // Die Karte in der jeweils anderen Pane ist jetzt veraltet - beim Tab-Wechsel neu rendern
+  const other = document.getElementById(currentView === 'liste' ? 'pane-kalender' : 'pane-liste')
+  if (other) other.dataset.stale = '1'
   const temp = document.createElement('div')
   temp.innerHTML = renderEventCard(e)
   const newWrapper = temp.firstElementChild

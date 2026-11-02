@@ -17,7 +17,8 @@ async function init() {
     window.history.replaceState(null, '', window.location.pathname)
   }
 
-  await deleteOldManualEvents()
+  // Aufräumen blockiert den ersten Render nicht (Netzwerk-Roundtrip)
+  deleteOldManualEvents().catch(() => {})
   renderApp(app)
 }
 

@@ -61,11 +61,15 @@ export async function loadManualEvents() {
   }))
 }
 
+// Lokales Datum als YYYY-MM-DD (toISOString wäre UTC: in Berlin zwischen 0 und 2 Uhr "gestern")
+export function localToday() {
+  return new Date().toLocaleDateString('sv-SE')
+}
+
 export async function deleteOldManualEvents() {
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getUser()
   if (!user) return
-  const today = new Date().toISOString().split('T')[0]
-  await supabase.from('manual_events').delete().lt('date', today).eq('user_id', user.id)
+  await supabase.from('manual_events').delete().lt('date', localToday()).eq('user_id', user.id)
 }
 
 export async function loadBookmarks() {
@@ -143,11 +147,20 @@ export async function removeHistoryEntryByEventId(eventId) {
   return !error
 }
 
-export async function toggleBookmark(eventId, status) {
+// `on` setzt den Zielzustand explizit (true = anlegen, false = löschen). Ohne `on` wird anhand
+// des Serverzustands umgeschaltet - die UI kennt aber ihren Zielzustand und soll nicht
+// invertieren, wenn lokaler und Serverstand nach einem Fehler/Zweitgerät auseinanderliegen.
+export async function toggleBookmark(eventId, status, on) {
   const user = await getUser()
   if (!user) return false
-  const { data } = await supabase.from('bookmarks').select('*').eq('user_id', user.id).eq('event_id', String(eventId)).eq('status', status)
-  if (data && data.length > 0) {
+  let exists
+  if (on === undefined) {
+    const { data } = await supabase.from('bookmarks').select('*').eq('user_id', user.id).eq('event_id', String(eventId)).eq('status', status)
+    exists = data && data.length > 0
+  } else {
+    exists = !on
+  }
+  if (exists) {
     await supabase.from('bookmarks').delete().eq('user_id', user.id).eq('event_id', String(eventId)).eq('status', status)
     return false
   } else {
