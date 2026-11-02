@@ -533,6 +533,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 544369013,
+    "title": "Most Wanted: Music",
+    "date": "2026-11-03",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P43SLzoIZLz7dSwgTF8",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-10-25"
+  },
+  {
     "id": 1072235247,
     "title": "Underscores",
     "date": "2026-11-03",
@@ -622,19 +635,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 544369013,
-    "title": "Most Wanted: Music",
-    "date": "2026-11-03",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P43SLzoIZLz7dSwgTF8",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 897060670,
     "title": "euro-scene Leipzig 2026: »NKUL NNAM« | Athena Lucie Assamba",
     "date": "2026-11-03",
@@ -700,16 +700,15 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 830848183,
-    "title": "DIAMONDSONYMYDICK LIVE BERLIN ft. Aachen…",
+    "id": 189824721,
+    "title": "QUIET LIGHT",
     "date": "2026-11-04",
     "time": "19:00",
-    "locationId": 21,
     "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/diamondsonymydick-live-berlin-ft.-aachen-demon,-psyke,-lil-jibo,-1dontlie.html",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.tixforgigs.com/Event/74805",
     "spotifyUrl": "",
-    "source": "urbanspree",
     "addedAt": "2026-11-02"
   },
   {
@@ -986,6 +985,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1087074349,
+    "title": "Lane 8",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OxW09uFc0jVdKcBNQVn",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-10-25"
+  },
+  {
     "id": 1321020804,
     "title": "ED MAVERICK",
     "date": "2026-11-04",
@@ -1112,19 +1124,6 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1087074349,
-    "title": "Lane 8",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OxW09uFc0jVdKcBNQVn",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 5806138,
@@ -1257,17 +1256,16 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1417314976,
-    "title": "Testrogona + Sara ATH / Ingrid Hideki / Lafert  + Dolly Vara",
+    "id": 838316130,
+    "title": "KÄSSY",
     "date": "2026-11-05",
     "time": "19:00",
-    "locationId": 44,
     "type": "konzert",
-    "description": "Join us on Thursday, November 5th for an unpredictable and vibrant musical gathering - an homage to the queer, DIY experimental scenes of Berlin and Athens, taking place at Neue Zukunft…",
-    "ticketUrl": "https://neue-zukunft.org/konzerte.html",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.eventbrite.com/e/kassys-first-berlin-show-ever-tickets-2000143000557",
     "spotifyUrl": "",
-    "source": "neue-zukunft",
-    "addedAt": "2026-10-07"
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1809941120,
@@ -1281,6 +1279,19 @@
     "spotifyUrl": "",
     "source": "kesselhaus",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1417314976,
+    "title": "Testrogona + Sara ATH / Ingrid Hideki / Lafert  + Dolly Vara",
+    "date": "2026-11-05",
+    "time": "19:00",
+    "locationId": 44,
+    "type": "konzert",
+    "description": "Join us on Thursday, November 5th for an unpredictable and vibrant musical gathering - an homage to the queer, DIY experimental scenes of Berlin and Athens, taking place at Neue Zukunft…",
+    "ticketUrl": "https://neue-zukunft.org/konzerte.html",
+    "spotifyUrl": "",
+    "source": "neue-zukunft",
+    "addedAt": "2026-10-07"
   },
   {
     "id": 924246284,
@@ -1413,19 +1424,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 238225692,
-    "title": "R.A. THE RUGGED MAN",
-    "date": "2026-11-05",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/r.a.-the-rugged-man.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 850826657,
     "title": "Radwan Ghazi Moumneh & Frédéric D. Oberland",
     "date": "2026-11-05",
@@ -1515,6 +1513,19 @@
     "spotifyUrl": "",
     "source": "madameclaude",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 890334629,
+    "title": "MasterPeace - The Bob Dylan Project",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Owr1sdrIY0SHAdOoI1R",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1552881075,
@@ -1630,19 +1641,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 890334629,
-    "title": "MasterPeace - The Bob Dylan Project",
-    "date": "2026-11-05",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Owr1sdrIY0SHAdOoI1R",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 829829875,
@@ -1787,16 +1785,15 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1680654769,
-    "title": "SOLD OUT - Tigercub - NETS TO CATCH THE WIND…",
+    "id": 704041090,
+    "title": "FRAU MANSMANN",
     "date": "2026-11-06",
     "time": "19:00",
-    "locationId": 21,
     "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/tigercub-nets-to-catch-the-wind-berlin.html",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://rausgegangen.de/events/driven-by-clockwork-frau-mansmann-livemonarch-0/",
     "spotifyUrl": "",
-    "source": "urbanspree",
     "addedAt": "2026-11-02"
   },
   {
@@ -1811,6 +1808,19 @@
     "spotifyUrl": "",
     "source": "inselberlin",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2107999221,
+    "title": "Preacherman & The Blues Missionaries",
+    "date": "2026-11-06",
+    "time": "19:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P1UTdf5RNKBQ3YgMD7K",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 915457434,
@@ -1837,19 +1847,6 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 2107999221,
-    "title": "Preacherman & The Blues Missionaries",
-    "date": "2026-11-06",
-    "time": "19:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P1UTdf5RNKBQ3YgMD7K",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1625149581,
@@ -2060,6 +2057,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 742235606,
+    "title": "FAYAN",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ou6UDnROMdbdabk3dRT",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1552765710,
     "title": "Clawfinger",
     "date": "2026-11-06",
@@ -2228,19 +2238,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 742235606,
-    "title": "FAYAN",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ou6UDnROMdbdabk3dRT",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 71819305,
     "title": "Danger Dan",
     "date": "2026-11-06",
@@ -2357,19 +2354,6 @@
     "addedAt": "2026-10-28"
   },
   {
-    "id": 1404761420,
-    "title": "TRAGEDIE x INDISKRET",
-    "date": "2026-11-06",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/061126-TRAGEDIExINDISKRET",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 924469597,
     "title": "Eisbär",
     "date": "2026-11-06",
@@ -2381,6 +2365,18 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1183275648,
+    "title": "AMOUR AFRICAIN",
+    "date": "2026-11-06",
+    "time": "23:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.amourafricain.com/",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1507034493,
@@ -2604,19 +2600,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1291772025,
-    "title": "No Cigar",
-    "date": "2026-11-07",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/no-cigar.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2124734575,
     "title": "Landstreicher presents: REY&KJAVIK",
     "date": "2026-11-07",
@@ -2628,6 +2611,19 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 2130793354,
+    "title": "Schattenmann",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ozzixdny4xoODsdgj-4",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 172445304,
@@ -2680,19 +2676,6 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 2130793354,
-    "title": "Schattenmann",
-    "date": "2026-11-07",
-    "time": "19:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ozzixdny4xoODsdgj-4",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 377290422,
@@ -3005,19 +2988,6 @@
     "addedAt": "2026-09-27"
   },
   {
-    "id": 468426139,
-    "title": "fragFrank!",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/fragfrank/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1569214515,
     "title": "The Return of »Ba(a)d Schandau Express« | AG. Geige vs. A.E. Bizottság",
     "date": "2026-11-07",
@@ -3148,6 +3118,19 @@
     "addedAt": "2026-09-02"
   },
   {
+    "id": 2044300814,
+    "title": "Move iT! - die 90er Party",
+    "date": "2026-11-07",
+    "time": "22:00",
+    "locationId": 29,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ot93ch2TMzbtmGNkioh",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1379952369,
     "title": "DTB Maximum Rock Night mit NeRO Award Gewinner 2026",
     "date": "2026-11-07",
@@ -3173,19 +3156,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 93526037,
-    "title": "Stil vor Talent w/ Oliver Koletzki",
-    "date": "2026-11-07",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/071126-StilvorTalentw-OliverKoletzki",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1734301250,
     "title": "Rubys Revival Party",
     "date": "2026-11-07",
@@ -3197,19 +3167,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 2044300814,
-    "title": "Move iT! - die 90er Party",
-    "date": "2026-11-07",
-    "time": "22:00",
-    "locationId": 29,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ot93ch2TMzbtmGNkioh",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 728255439,
@@ -3446,6 +3403,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1562867438,
+    "title": "Fiddlaffairs",
+    "date": "2026-11-08",
+    "time": "19:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OmV3kBRfCpDlQ7n8Kec",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 566996395,
     "title": "La H no Murió",
     "date": "2026-11-08",
@@ -3470,19 +3440,6 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 1562867438,
-    "title": "Fiddlaffairs",
-    "date": "2026-11-08",
-    "time": "19:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OmV3kBRfCpDlQ7n8Kec",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 891646857,
@@ -3550,19 +3507,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1522502321,
-    "title": "MAYFLOWER MADAME + BLKE - Berlin Show @Urban…",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/mayflower-madame-blke-berlin-show-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1078838723,
     "title": "D2",
     "date": "2026-11-08",
@@ -3600,6 +3544,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 329157591,
+    "title": "Dmitry Spirin",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P3UviZwbYzWFgInfTmQ",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1651417688,
@@ -3689,19 +3646,6 @@
     "ticketUrl": "https://www.rbb-online.de/unternehmen/service/veranstaltungen/2026/nichtseattle.html",
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 329157591,
-    "title": "Dmitry Spirin",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P3UviZwbYzWFgInfTmQ",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
     "addedAt": "2026-11-01"
   },
   {
@@ -3899,32 +3843,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1000811197,
-    "title": "Jenna Raine",
-    "date": "2026-11-09",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P-Iyl1jxH0hYtpkXVZ7",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1879303067,
-    "title": "Manolito Simonet y su Trabuco",
-    "date": "2026-11-09",
-    "time": "21:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OyIYw1adArOdmuBAYkK",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 17176588,
     "title": "Matthew Mole",
     "date": "2026-11-10",
@@ -4105,19 +4023,6 @@
     "spotifyUrl": "",
     "source": "schokoladen",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 558797315,
-    "title": "Koza Mostra",
-    "date": "2026-11-10",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/koza-mostra-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1164185773,
@@ -4754,19 +4659,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 739543080,
-    "title": "UNS + GÄSTE BERLIN • URBAN SPREE",
-    "date": "2026-11-12",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/uns-gäste-berlin-•-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1311949892,
     "title": "Isaac Jensen ",
     "date": "2026-11-12",
@@ -5284,19 +5176,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 820507640,
-    "title": "FRIBERTY Releaseshow",
-    "date": "2026-11-13",
-    "time": "19:30",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/friberty-releaseshow.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 190698164,
     "title": "JENSMISSION – FÜR IMMER NIE MEHR UNS",
     "date": "2026-11-13",
@@ -5671,19 +5550,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 844284041,
-    "title": "Bunte Träumerei w/ Marten Lou",
-    "date": "2026-11-13",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/131126-BunteTraumerei",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 117864839,
     "title": "SPLIT",
     "date": "2026-11-13",
@@ -5827,16 +5693,15 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1886076046,
-    "title": "Milking the Goatmachine & Endseeker - Urban…",
+    "id": 1582689731,
+    "title": "REALLY GOOD TIME",
     "date": "2026-11-14",
     "time": "19:00",
-    "locationId": 21,
     "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/milking-the-goatmachine-and-endseeker-urban-spree-berlin.html",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.eventim.de/noapp/event/really-good-time-monarch-21870896/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
     "spotifyUrl": "",
-    "source": "urbanspree",
     "addedAt": "2026-11-02"
   },
   {
@@ -6278,32 +6143,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1674855362,
-    "title": "When the Sun Hits",
-    "date": "2026-11-14",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-7/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1044365510,
-    "title": "Monkey Safari - YDKWTD - (All Night Long) Album Release Party",
-    "date": "2026-11-14",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/141126-MonkeySafari",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1594187127,
     "title": "Soul Explosion",
     "date": "2026-11-14",
@@ -6586,19 +6425,6 @@
     "ticketUrl": "https://columbia-theater.de/event/20261115-ballet-of-lights/",
     "spotifyUrl": "",
     "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1687017098,
-    "title": "Spike Fuck",
-    "date": "2026-11-15",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/spike-fuck-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
     "addedAt": "2026-11-02"
   },
   {
@@ -6991,6 +6817,18 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 94394466,
+    "title": "POETRY SLAM KREUZBERG",
+    "date": "2026-11-17",
+    "time": "19:30",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 438399431,
     "title": "Ginger Hail",
     "date": "2026-11-17",
@@ -7106,19 +6944,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-23"
-  },
-  {
-    "id": 784975701,
-    "title": "JUD | Urban Spree Berlin",
-    "date": "2026-11-17",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/jud-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 250830686,
@@ -7964,19 +7789,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1980345188,
-    "title": "Bragolin + Carrellee",
-    "date": "2026-11-19",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/bragolin-carrellee-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1993859961,
     "title": "Pupsies",
     "date": "2026-11-19",
@@ -8210,6 +8022,18 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1646479207,
+    "title": "CRIS COSMO",
+    "date": "2026-11-20",
+    "time": "18:30",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/cris-cosmo-liebe-dich-selbst-tour-2026-3",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1332673071,
     "title": "ALLT / EUROPEAN TOUR 2026 / special guests: Avralize and bite down",
     "date": "2026-11-20",
@@ -8429,19 +8253,6 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-09-30"
-  },
-  {
-    "id": 2120840893,
-    "title": "Process Party x Effetto Notte: Hall of Bats…",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/process-party-x-effetto-notte-hall-of-bats-with-lovataraxx,-hysteric-helen,-olgha.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1174507424,
@@ -8674,19 +8485,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2022768922,
-    "title": "twiceasmad",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/twiceasmad/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 936328045,
     "title": "SHOW DOWN – Wettstreit der Magier",
     "date": "2026-11-20",
@@ -8762,32 +8560,6 @@
     "ticketUrl": "https://quasimodo.club/events/jazz-night-ft-flow-rea-est-7396",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1900309065,
-    "title": "Worakls",
-    "date": "2026-11-20",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/201126-Worakls",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1450507115,
-    "title": "Mollono.Bass",
-    "date": "2026-11-20",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/201126-Mollono-Bass",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1748846356,
@@ -8942,6 +8714,18 @@
     "ticketUrl": "https://t.rausgegangen.de/tickets/roller-disco-glitzer-beats-rollerskates-1",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1548840700,
+    "title": "STEVE CLASH",
+    "date": "2026-11-21",
+    "time": "18:30",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://ticket2go.de/tickets-kaufen/hits-different-berlin-berlin-21-11-2026-5869",
+    "spotifyUrl": "",
     "addedAt": "2026-11-02"
   },
   {
@@ -9179,19 +8963,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 676037361,
-    "title": "WISBORG Phantomschmerz Tour - BERLIN | Special…",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/wisborg-phantomschmerz-tour-berlin-special-guest-the-fright.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 184622551,
     "title": "60 JUNO",
     "date": "2026-11-21",
@@ -9359,19 +9130,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 400571336,
-    "title": "geburtstag 40 er",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/geburtstag-40-er/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 947644172,
     "title": "SHOW DOWN – Wettstreit der Magier",
     "date": "2026-11-21",
@@ -9499,32 +9257,6 @@
     "ticketUrl": "https://quasimodo.club/events/barney-millahs-legendary-escobar-7443",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1529910494,
-    "title": "Alan Fitzpatrick",
-    "date": "2026-11-21",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/211126-AlanFitzpatrick",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1153111556,
-    "title": "Klangkarussell pres. Bias Beach",
-    "date": "2026-11-21",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/211126-Klangkarussellpres-BiasBeach",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 469563735,
@@ -10108,6 +9840,18 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1739772307,
+    "title": "JUMI",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://dice.fm/event/6dwp83-jumi-berlin-23rd-nov-monarch-berlin-tickets?lng=de",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1078226472,
     "title": "Aurelio Kopainig + Rendering Liturgies + Max Arsava & Grgur Savic + Peter Cusack (DJ-Set)",
     "date": "2026-11-23",
@@ -10509,19 +10253,6 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 747579778,
-    "title": "Faux Real + Dance Arts Center + The Nightclubs…",
-    "date": "2026-11-25",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/faux-real-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 83888245,
@@ -11057,19 +10788,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 2011466232,
-    "title": "COOGANS BLUFF 10 Years Of Flying To The Stars",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/coogans-bluff-10-years-of-flying-to-the-stars.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 532351317,
     "title": "MARYAM.fyi",
     "date": "2026-11-26",
@@ -11222,6 +10940,18 @@
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
     "source": "frannz",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1861756251,
+    "title": "INDIE GROUND",
+    "date": "2026-11-26",
+    "time": "21:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "",
+    "spotifyUrl": "",
     "addedAt": "2026-11-02"
   },
   {
@@ -11509,19 +11239,6 @@
     "addedAt": "2026-08-19"
   },
   {
-    "id": 863594453,
-    "title": "FÏX8:SËD8 + NEROGRIS + SCHNEIDER -  Urban…",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/fïx8sëd8-nerogris-schneider-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1993938195,
     "title": "Torsten Sträter",
     "date": "2026-11-27",
@@ -11689,19 +11406,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1251246961,
-    "title": "Everything Dies + X",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/everything-dies-x/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 933234445,
     "title": "5raumfenster",
     "date": "2026-11-27",
@@ -11857,19 +11561,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1272254326,
-    "title": "Soupherb vs psYsq",
-    "date": "2026-11-27",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/271126-SoupherbvspsYsq-thegroovening",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1053814630,
     "title": "Waschhaus 80er",
     "date": "2026-11-27",
@@ -11948,6 +11639,18 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1330469828,
+    "title": "HERZER & GEBRüDER MANNS & THE HAND CUTS",
+    "date": "2026-11-28",
+    "time": "18:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://vvk.link/xxpjx",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 15045955,
     "title": "The Luxorium – Grand Varieté",
     "date": "2026-11-28",
@@ -12023,19 +11726,6 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 209253489,
-    "title": "Cosmic Gate",
-    "date": "2026-11-28",
-    "time": "19:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/281126-CosmicGate",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1239478578,
@@ -12140,19 +11830,6 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-09-27"
-  },
-  {
-    "id": 535272738,
-    "title": "Banda Entopica",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/banda-entopica-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1533325692,
@@ -12515,32 +12192,6 @@
     "ticketUrl": "https://quasimodo.club/events/90s-reloaded-party-4-7355",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1741914523,
-    "title": "Lexy & K-Paul (live)",
-    "date": "2026-11-28",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/281126-Lexy-K-Paul-live",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 59886565,
-    "title": "Oliver Huntemann",
-    "date": "2026-11-28",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/281126-OliverHuntemann",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1410970501,
@@ -13577,19 +13228,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1369249134,
-    "title": "SPK + ALVAR",
-    "date": "2026-12-02",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/spk-alvar-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 345610106,
     "title": "LEDBYHER",
     "date": "2026-12-02",
@@ -14082,19 +13720,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1360154713,
-    "title": "Novulent - Live in Europe 2026",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/novulent-live-in-europe-2026.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1089482801,
     "title": "ALEX HENRY FOSTER",
     "date": "2026-12-03",
@@ -14119,6 +13744,18 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1982266350,
+    "title": "CITY SLANG XMAS PARTY DOZEN",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "type": "party",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 466748354,
@@ -14560,19 +14197,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1300904446,
-    "title": "KOLLEGIAL pres. by BSTHP - w/ Felix Raphael [ hybrid LiVE ] and many more",
-    "date": "2026-12-04",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/041226-KOLLEGIALpres-byBSTHP-w-FelixRaphael-hybridLiVE-andmanymore",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 986118291,
     "title": "SCHUTT&ASCHE - 2 Floors",
     "date": "2026-12-04",
@@ -14662,19 +14286,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 1215451765,
-    "title": "Coilguns - Berlin",
-    "date": "2026-12-05",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/coilguns-berlin-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 553009463,
@@ -15051,45 +14662,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 168945183,
-    "title": "When the Sun Hits",
-    "date": "2026-12-05",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-8/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 954988825,
-    "title": "MICHAEL CANITROT",
-    "date": "2026-12-05",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/051226-MICHAELCANITROT",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1185673950,
-    "title": "DON DIABLO",
-    "date": "2026-12-05",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/051226-DONDIABLO",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 814248120,
     "title": "WE ARE THE 80s x UNTER NULL (2 Floors)",
     "date": "2026-12-05",
@@ -15113,19 +14685,6 @@
     "ticketUrl": "https://t.rausgegangen.de/tickets/juicy-rap-and-melodies-1",
     "spotifyUrl": "",
     "source": "waschhaus",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 555236029,
-    "title": "Thaylo x URBAN SPREE",
-    "date": "2026-12-05",
-    "time": "23:59",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/thaylo-darin-epsilon-gareden.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
     "addedAt": "2026-11-02"
   },
   {
@@ -15309,19 +14868,6 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 1112039015,
-    "title": "Planta Industrial - berlin",
-    "date": "2026-12-06",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/planta-industrial-berlin-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1839634458,
@@ -15971,6 +15517,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1035378751,
+    "title": "OATHBREAKER",
+    "date": "2026-12-09",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-09-oathbreaker",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1724475980,
     "title": "Herrenmagazin",
     "date": "2026-12-09",
@@ -16098,19 +15657,6 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1035378751,
-    "title": "OATHBREAKER",
-    "date": "2026-12-09",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-12-09-oathbreaker",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 930857625,
@@ -16436,6 +15982,18 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1880700012,
+    "title": "KEIN GEWöHNLICHER STURM",
+    "date": "2026-12-11",
+    "time": "18:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1534254933,
     "title": "Kai & Funky von TON STEINE SCHERBEN",
     "date": "2026-12-11",
@@ -16759,19 +16317,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 2135306602,
-    "title": "Eskalation w/ Die Gebrüder Brett, KaaCee KomaCasper, Justin Prince, SAGEZZA",
-    "date": "2026-12-11",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/111226-Eskalationw-DieGebruderBrett-KaaCeeKomaCasper-JustinPrince-SAGEZZA",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 108562843,
     "title": "Psychedelic Cumbia Party",
     "date": "2026-12-11",
@@ -17006,19 +16551,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1678114495,
-    "title": "TWIN NOIR + HINFORT",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/twin-noir-hinfort-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1106670014,
     "title": "FUEGO36",
     "date": "2026-12-12",
@@ -17080,19 +16612,6 @@
     "ticketUrl": "https://larkberlin.com/event/ebbb/",
     "spotifyUrl": "",
     "source": "lark",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 261913641,
-    "title": "Samsta + ?",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/samsta/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-11-02"
   },
   {
@@ -17649,6 +17168,18 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 727668189,
+    "title": "POETRY SLAM KREUZBERG",
+    "date": "2026-12-15",
+    "time": "19:30",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1833731839,
@@ -18555,19 +18086,6 @@
     "ticketUrl": "https://quasimodo.club/events/selecta-gs-birthday-bash-2026-7507",
     "spotifyUrl": "",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 1193260857,
-    "title": "Deborah De Luca",
-    "date": "2026-12-18",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/181226-DeborahDeLuca",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 487972608,
@@ -20074,19 +19592,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1963724765,
-    "title": "Hippie New Year",
-    "date": "2026-12-31",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/311226-HippieNewYear",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 19849317,
     "title": "Berlin indie Night • Silvester im Privatclub",
     "date": "2026-12-31",
@@ -20150,19 +19655,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 402171866,
-    "title": "HANDS LABEL NIGHT BERLIN 2027",
-    "date": "2027-01-02",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/hands-label-night-berlin-2027.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 101969091,
@@ -20383,19 +19875,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 2132850111,
-    "title": "LINEAR MOVEMENT + DER KÜNFTIGE MUSIKANT +…",
-    "date": "2027-01-09",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/linear-movement-der-künftige-musikant-twilight-ritual.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 451507154,
@@ -20772,19 +20251,6 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1988450557,
-    "title": "Community Rave",
-    "date": "2027-01-15",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/150127-CommunityRave",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1556596554,
@@ -21643,6 +21109,18 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 78190957,
+    "title": "IMMER WIEDER WIRSING",
+    "date": "2027-01-27",
+    "time": "19:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.eventim.de/event/immer-wieder-wirsing-neue-dekadenz-tour-2027-monarch-22108320/",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 568272910,
@@ -22696,19 +22174,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1479218988,
-    "title": "unpeople - berlin",
-    "date": "2027-02-06",
-    "time": "19:30",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/unpeople-berlin-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1584931477,
     "title": "CAROLINA DESLANDES",
     "date": "2027-02-06",
@@ -22862,19 +22327,6 @@
     "ticketUrl": "https://quasimodo.club/events/we-love-80s-43-7484",
     "spotifyUrl": "",
     "addedAt": "2026-09-29"
-  },
-  {
-    "id": 1188678340,
-    "title": "The Surreal Club Night 3027 by 3000Grad",
-    "date": "2027-02-06",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/060227-TheSurrealClubNight3027by3000Grad",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1672165284,
@@ -23618,19 +23070,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 781417310,
-    "title": "anamē",
-    "date": "2027-02-13",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/130227-aname",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 878645258,
     "title": "LORIOT",
     "date": "2027-02-14",
@@ -24175,19 +23614,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1970186958,
-    "title": "Nathalie Froehlich - Berlin",
-    "date": "2027-02-19",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/nathalie-froehlich-berlin-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 552465584,
     "title": "SPONTY.",
     "date": "2027-02-19",
@@ -24458,19 +23884,6 @@
     "ticketUrl": "https://quasimodo.club/events/the-ac-dcs-tribute-band-4-7494",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 340752038,
-    "title": "REWI",
-    "date": "2027-02-20",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/200227-REWI",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 644233724,
@@ -25317,19 +24730,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1075191465,
-    "title": "REPEAT +",
-    "date": "2027-02-27",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/repeat/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 764513275,
     "title": "The Rock’n’Roll Wrestling Bash",
     "date": "2027-02-27",
@@ -25601,19 +25001,6 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1045063782,
-    "title": "Winona Riders - El Sueño de Dominar el Planeta…",
-    "date": "2027-03-04",
-    "time": "21:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/winona-riders-el-sueño-de-dominar-el-planeta-se-renueva.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1367475729,
@@ -27421,19 +26808,6 @@
     "addedAt": "2026-10-28"
   },
   {
-    "id": 1454267291,
-    "title": "DUSKY pres. SIGNALS  TOUR",
-    "date": "2027-03-20",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/200327-DUSKYpres-SIGNALSTOUR",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1177271366,
     "title": "Jerry Vsan",
     "date": "2027-03-21",
@@ -28807,6 +28181,18 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 168759859,
+    "title": "JULE",
+    "date": "2027-04-10",
+    "time": "18:30",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.eventim.de/noapp/event/jule-bis-zur-erschoepfung-monarch-22130637/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 2108724446,
     "title": "IGGI KELLY",
     "date": "2027-04-10",
@@ -28974,19 +28360,6 @@
     "addedAt": "2026-09-29"
   },
   {
-    "id": 1475194788,
-    "title": "Weltauswahl by Extrawelt",
-    "date": "2027-04-10",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/100427-WeltauswahlbyExtrawelt",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1715211173,
     "title": "Senta",
     "date": "2027-04-11",
@@ -29037,6 +28410,18 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1001964720,
+    "title": "BABA BLAKES",
+    "date": "2027-04-11",
+    "time": "19:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.eventbrite.de/e/baba-blakes-monarch-berlin-tickets-2001903405977?aff=odcleoeventsincollection",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1229780829,
@@ -29205,19 +28590,6 @@
     "ticketUrl": "https://hole-berlin.de/event/2027-04-13-ghostkid/",
     "spotifyUrl": "",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1590477967,
-    "title": "June McDoom - BERLIN • URBAN SPREE",
-    "date": "2027-04-14",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/june-mcdoom-berlin-•-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1906722231,
@@ -29478,19 +28850,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 1431257313,
-    "title": "GIRLS UNDER GLASS + SUPPORT",
-    "date": "2027-04-16",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/girls-under-glass-support.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1039375232,
@@ -30086,19 +29445,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 1095848672,
-    "title": "Pure Obsessions & Red Nights + Nico Amara…",
-    "date": "2027-04-23",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/pure-obsessions-and-red-nights-nico-amara-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 537620831,
@@ -32204,19 +31550,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1223145120,
-    "title": "BERLIN BREAKOUT 2027",
-    "date": "2027-07-03",
-    "time": "14:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/berlin-breakout-2027.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 455098292,
     "title": "BERLIN BREAKOUT! 2027",
     "date": "2027-07-03",
@@ -33330,17 +32663,30 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 729653137,
-    "title": "Purple Disco Machine",
-    "date": "2027-10-28",
+    "id": 1332270421,
+    "title": "Potsa Lotsa XL - Pizza Lotsa",
+    "date": "2027-10-27",
     "time": "20:00",
-    "locationId": 33,
-    "type": "party",
+    "locationId": 29,
+    "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/purple-disco-machine/2027-10-28-2000",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OwX9J3p__U0RP7duRfa",
     "spotifyUrl": "",
-    "source": "ubereatsmusichall",
-    "addedAt": "2026-10-07"
+    "source": "kesselhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1084557716,
+    "title": "Tony Jack",
+    "date": "2027-10-28",
+    "time": "18:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P2wWixSyxb2dAnZd9UZ",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1627492279,
@@ -33367,6 +32713,19 @@
     "spotifyUrl": "",
     "source": "kesselhaus",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 729653137,
+    "title": "Purple Disco Machine",
+    "date": "2027-10-28",
+    "time": "20:00",
+    "locationId": 33,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/purple-disco-machine/2027-10-28-2000",
+    "spotifyUrl": "",
+    "source": "ubereatsmusichall",
+    "addedAt": "2026-10-07"
   },
   {
     "id": 219181137,
