@@ -326,7 +326,7 @@ function showRadarBanner(matches) {
 
 function renderRadarList() {
   if (!radar.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.3);">Noch keine Künstler im Radar.</p>`
-  return radar.map(r => `
+  return [...radar].sort((a, b) => a.artist.localeCompare(b.artist, 'de', { sensitivity: 'base' })).map(r => `
     <div class="flex items-center justify-between rounded-xl px-3 py-2" style="background:rgba(8,8,42,0.92); border:1px solid rgba(99,102,241,0.12);">
       <span style="font-size:14px; color:white;">${esc(r.artist)}</span>
       <button data-radar-remove="${r.id}" style="color:rgba(255,255,255,0.4); background:none; border:none; cursor:pointer; font-size:16px; line-height:1;">×</button>
@@ -455,11 +455,12 @@ function render() {
   }
 }
 
-function renderHeader() {
+// inModal: Kopie im Radar-Modal - ohne id (die gehört dem Header der Hauptansicht, siehe Scroll-Fade)
+function renderHeader(inModal = false) {
   const firstRender = !titleAnimated
   titleAnimated = true
   return `
-    <div id="app-header" class="pb-3" style="padding-top:max(1.5rem,env(safe-area-inset-top)); transition:opacity 0.3s ease;">
+    <div ${inModal ? '' : 'id="app-header"'} class="pb-3" style="padding-top:max(1.5rem,env(safe-area-inset-top)); transition:opacity 0.3s ease;">
       <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
         <div class="${firstRender ? 'title-glow-wrap' : ''}" style="flex-shrink:0;">
           <h1 class="syne leading-none ${firstRender ? 'title-glow' : 'title-glow-static'}" style="letter-spacing:-0.02em; font-weight:800; line-height:1; font-size:1.75rem; white-space:nowrap;">
@@ -814,7 +815,10 @@ function renderHistoryRow(h) {
           <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
           <div class="history-stars" data-history-id="${h.id}" style="margin-top:4px; display:flex;">${stars}</div>
         </div>
-        <button data-history-remove="${h.id}" aria-label="Aus History löschen" style="flex-shrink:0; margin-left:8px; color:rgba(255,255,255,0.35); background:none; border:none; cursor:pointer; font-size:18px; line-height:1; padding:4px;">×</button>
+        <div style="flex-shrink:0; margin-left:8px; align-self:stretch; display:flex; flex-direction:column; align-items:flex-end; justify-content:space-between;">
+          <button data-history-remove="${h.id}" aria-label="Aus History löschen" style="color:rgba(255,255,255,0.35); background:none; border:none; cursor:pointer; font-size:18px; line-height:1; padding:4px;">×</button>
+          <span style="color:rgba(255,255,255,0.6); font-size:18px; font-weight:400; letter-spacing:-3px; pointer-events:none; user-select:none; padding-right:2px; line-height:1;">‹‹</span>
+        </div>
       </div>
     </div>
   `
@@ -1011,8 +1015,9 @@ const inputStyle =`width:100%; box-sizing:border-box; border-radius:12px; paddin
 
 function renderModals() {
   return `
-    <div id="modal-radar" class="hidden fixed inset-0 z-30 overflow-y-auto scrollbar-hide" style="background:rgba(0,0,0,0.8); backdrop-filter:blur(8px); padding-bottom:90px;">
-      <div class="max-w-lg mx-auto mt-8 mb-12 mx-4 rounded-3xl overflow-hidden" style="background:rgba(12,17,32,0.97); border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 80px rgba(0,0,0,0.6);">
+    <div id="modal-radar" class="hidden fixed inset-0 z-30 overflow-y-auto scrollbar-hide" style="background:linear-gradient(180deg, #05053a 0%, #120838 25%, #1e0848 45%, #3a0a52 60%, #52083a 78%, #620a1a 100%); overscroll-behavior:contain; padding-bottom:90px;">
+      <div class="max-w-xl mx-auto px-4">${renderHeader(true)}</div>
+      <div class="max-w-lg mx-auto mt-2 mb-12 mx-4 rounded-3xl overflow-hidden" style="background:rgba(12,17,32,0.97); border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 80px rgba(0,0,0,0.6);">
         <div class="px-6 py-5" style="background:linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.15)); border-bottom:1px solid rgba(255,255,255,0.06);">
           <h2 class="syne text-xl text-white" style="font-weight:800;">Radar</h2>
           <p class="text-xs mt-0.5" style="color:rgba(255,255,255,0.35);">Künstler ohne anstehendes Konzert im Blick behalten</p>
@@ -1257,7 +1262,8 @@ function attachEvents() {
     ptrListenerAdded = true
     let ptStart = 0, ptPulling = false
     document.addEventListener('touchstart', e => {
-      if (window.scrollY === 0) { ptStart = e.touches[0].clientY; ptPulling = true }
+      // Nicht bei offenem Radar: dort scrollt das Modal selbst, und der Refresh würde es per render() schließen
+      if (window.scrollY === 0 && !radarOpen) { ptStart = e.touches[0].clientY; ptPulling = true }
     }, { passive: true })
     document.addEventListener('touchmove', e => {
       if (!ptPulling) return
