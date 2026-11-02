@@ -1,5 +1,4 @@
 import { renderApp } from './app.js'
-import { deleteOldManualEvents } from './supabase.js'
 import { supabase } from './supabase.js'
 
 const app = document.getElementById('app')
@@ -17,8 +16,6 @@ async function init() {
     window.history.replaceState(null, '', window.location.pathname)
   }
 
-  // Aufräumen blockiert den ersten Render nicht (Netzwerk-Roundtrip)
-  deleteOldManualEvents().catch(() => {})
   renderApp(app)
 }
 

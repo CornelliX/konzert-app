@@ -66,12 +66,6 @@ export function localToday() {
   return new Date().toLocaleDateString('sv-SE')
 }
 
-export async function deleteOldManualEvents() {
-  const user = await getUser()
-  if (!user) return
-  await supabase.from('manual_events').delete().lt('date', localToday()).eq('user_id', user.id)
-}
-
 export async function loadBookmarks() {
   const user = await getUser()
   if (!user) return { bookmarked: [], going: [] }

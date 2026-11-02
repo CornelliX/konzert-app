@@ -1,11 +1,15 @@
+// localStorage kann werfen (iOS Safari im privaten Modus, blockierte Website-Daten, voller Speicher) -
+// die App muss dann ohne Persistenz weiterlaufen statt beim Start abzustürzen
 export function loadData(key) {
-  const raw = localStorage.getItem(key)
-  if (!raw) return null
-  try { return JSON.parse(raw) } catch { localStorage.removeItem(key); return null }
+  try {
+    const raw = localStorage.getItem(key)
+    if (!raw) return null
+    try { return JSON.parse(raw) } catch { localStorage.removeItem(key); return null }
+  } catch { return null }
 }
 
 export function saveData(key, value) {
-  localStorage.setItem(key, JSON.stringify(value))
+  try { localStorage.setItem(key, JSON.stringify(value)) } catch {}
 }
 
 export function getLocations() {
@@ -71,10 +75,13 @@ export function getLocations() {
     { id: 59, name: 'Großer Sendesaal des rbb', city: 'Berlin', website: 'rbb-online.de/unternehmen/service/veranstaltungen/Veranstaltungen.html', capacity: 850 },
     { id: 60, name: 'Kleiner Sendesaal des rbb', city: 'Berlin', website: 'rbb-online.de/unternehmen/service/veranstaltungen/Veranstaltungen.html', capacity: 200 },
   ]
-  // Gespeicherte Locations mit Defaults zusammenführen, damit neue Einträge immer erscheinen
+  // Gespeicherte Locations mit Defaults zusammenführen. Die Defaults gewinnen für bekannte IDs,
+  // damit Korrekturen (Name, Website, Stadt, Kapazität) auch bei bestehenden Nutzern ankommen -
+  // der gespeicherte Stand ist nur ein Cache, es gibt keine Oberfläche zum Bearbeiten. Gespeicherte
+  // Einträge mit unbekannter ID bleiben erhalten.
   if (saved) {
-    const savedIds = new Set(saved.map(l => l.id))
-    const merged = [...saved, ...defaults.filter(d => !savedIds.has(d.id))]
+    const defaultIds = new Set(defaults.map(d => d.id))
+    const merged = [...defaults, ...saved.filter(l => !defaultIds.has(l.id))]
     const mergedStr = JSON.stringify(merged)
     if (mergedStr !== JSON.stringify(saved)) saveData('locations', merged)
     return merged

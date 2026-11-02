@@ -42,8 +42,11 @@ function detectType(title, description = '') {
     'party', 'club night', 'clubnight', 'dj set', 'dj-set', 'rave',
     'techno', 'house night', 'disco', 'dancehall', 'club event'
   ]
+  // Bewusst Teilstring-Abgleich: deutsche Komposita ("Neujahrsflohmarkt", "Indieparty", "Filmquiz")
+  // sind die Regel. Nur "rave" braucht eine Wortgrenze, sonst werden "Travelling Wilburys",
+  // "Graveyard" oder "Brave Rival" zur Party.
   if (sonstigeKeywords.some(k => t.includes(k))) return 'sonstige'
-  if (partyKeywords.some(k => t.includes(k))) return 'party'
+  if (/\brave(s|rs)?\b/.test(t) || partyKeywords.some(k => k !== 'rave' && t.includes(k))) return 'party'
   return 'konzert'
 }
 
@@ -80,6 +83,19 @@ function parseGermanDate(str) {
     if (r) return `${r[2]}-${String(num+1).padStart(2,'0')}-${r[1].padStart(2,'0')}`
   }
   return null
+}
+
+// Kürzt an der letzten Wortgrenze vor `max`; lastIndexOf liefert -1 (truthy) ohne Leerzeichen,
+// dann hart bei `max` schneiden statt slice(0, -1)
+function cutAtWord(str, max) {
+  if (str.length <= max) return str
+  const cut = str.lastIndexOf(' ', max)
+  return str.slice(0, cut > 0 ? cut : max).trim()
+}
+
+// "&amp;" & Co. aus RSS-/HTML-Texten auflösen (die Frontend-Ausgabe escaped danach selbst)
+function decodeEntities(str) {
+  return cheerio.load(str, null, false).text()
 }
 
 function parseTime(str) {
@@ -134,7 +150,7 @@ async function scrapeConne() {
       const dateMatch = rawTitle.match(/^(\d{2})\.(\d{2})\.(\d{4}):\s*(.+)$/)
       if (!dateMatch) continue
       const date = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`
-      const title = dateMatch[4].trim()
+      const title = decodeEntities(dateMatch[4]).trim()
 
       if (date < today()) continue
 
@@ -148,7 +164,7 @@ async function scrapeConne() {
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
         .trim()
-      if (desc.length > 120) desc = desc.slice(0, desc.lastIndexOf(' ', 120) || 120).trim() + '…'
+      if (desc.length > 120) desc = cutAtWord(desc, 120) + '…'
 
       const timeMatch = descRaw.match(/(\d{2}:\d{2})\s*Uhr/)
       const time = timeMatch ? timeMatch[1] : '20:00'
@@ -156,7 +172,7 @@ async function scrapeConne() {
       // Genre erkennen für Party vs Konzert
       const genreMatch = descRaw.match(/\[([^\]]+)\]/)
       const genre = genreMatch ? genreMatch[1].toLowerCase() : ''
-      const type = genre.includes('party') || genre.includes('club') || genre.includes('dj') ? 'party' : 'konzert'
+      const type = genre.includes('party') || genre.includes('club') || /\bdjs?\b/.test(genre) ? 'party' : 'konzert'
 
       // Ticket-URL
       const linkMatch = item.match(/<link>([^<]+)<\/link>/)
@@ -199,7 +215,7 @@ async function scrapeWerk2() {
       const time = timeMatch ? timeMatch[1].padStart(5, '0') : '20:00'
 
       const genre = $(el).find('.typen').first().text().trim()
-      const type = genre.toLowerCase().includes('party') || genre.toLowerCase().includes('dj') ? 'party' : 'konzert'
+      const type = genre.toLowerCase().includes('party') || /\bdjs?\b/.test(genre.toLowerCase()) ? 'party' : 'konzert'
 
       // Datum aus dem Link extrahieren z.B. /programm/2026-03-04_sampagne
       const link = $(el).find('h2 a').first().attr('href') || ''
@@ -464,7 +480,7 @@ async function scrapeSO36() {
       const time = p.time_begin || p.time_open || '20:00'
       const supertitle = (p.supertitle || '').toLowerCase()
       const type = supertitle.includes('party') || supertitle.includes('event') ||
-                   supertitle.includes('club') || supertitle.includes('dj')
+                   supertitle.includes('club') || /\bdjs?\b/.test(supertitle)
                    ? 'party' : 'konzert'
       const support = extractSupportAddendum(p.subtitle)
 
@@ -710,7 +726,7 @@ async function scrapePrivatclub() {
         || $(el).find('a.event_header').first().attr('href')
         || 'https://www.privatclub-berlin.de'
       const genreText = $(el).find('.typ.typdesktop').first().text().trim().toLowerCase()
-      const type = genreText.includes('party') || genreText.includes('dj') || genreText.includes('club') ? 'party' : 'konzert'
+      const type = genreText.includes('party') || /\bdjs?\b/.test(genreText) || genreText.includes('club') ? 'party' : 'konzert'
 
       events.push({
         title, date, time,
@@ -1163,7 +1179,7 @@ async function scrapeKantine() {
 
       const href = $(el).attr('href')
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('club') ? 'party' : 'konzert'
+      const type = lower.includes('party') || /\bdjs?\b/.test(lower) || lower.includes('club') ? 'party' : 'konzert'
 
       events.push({
         title, date,
@@ -1452,7 +1468,7 @@ async function scrapeMonarch() {
       seen.add(date + title)
       const ticketLink = $(allBold[i]).parent().find('a').first().attr('href') || ''
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') || lower.includes('night') ? 'party' : 'konzert'
+      const type = lower.includes('party') || /\bdjs?\b/.test(lower) || lower.includes('night') ? 'party' : 'konzert'
       events.push({ title, date, time, type, locationId: 7, source: 'monarch', ticketUrl: ticketLink, spotifyUrl: '' })
     }
     console.log(`  ✓ ${events.length} Events`)
@@ -1955,7 +1971,7 @@ async function scrapeTrinity() {
       const href = $(el).attr('href') || ''
       const ticketUrl = href.startsWith('http') ? href : 'https://trinitymusic.de' + href
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
+      const type = lower.includes('party') || /\bdjs?\b/.test(lower) ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
       events.push({ title, date, time: '20:00', type, locationId, source: 'trinity', ticketUrl, spotifyUrl: '' })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -1993,7 +2009,7 @@ async function scrapeHole44() {
       if (!title || seen.has(date + title)) return
       seen.add(date + title)
       const lower = title.toLowerCase()
-      const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
+      const type = lower.includes('party') || /\bdjs?\b/.test(lower) ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 34, source: 'hole44', ticketUrl: link.attr('href') || '', spotifyUrl: '', relocatedTo: relocationTarget(text) })
     })
     console.log(`  ✓ ${events.length} Events`)
@@ -2104,7 +2120,7 @@ async function scrapeQuasimodo() {
         if (!title || title.length < 2 || seen.has(date + title)) return
         seen.add(date + title)
         const lower = title.toLowerCase()
-        const type = lower.includes('party') || lower.includes('dj') || lower.includes('disco') ? 'party' : 'konzert'
+        const type = lower.includes('party') || /\bdjs?\b/.test(lower) || lower.includes('disco') ? 'party' : 'konzert'
         events.push({ title, date, time, type, locationId: 37, source: 'quasimodo', ticketUrl: $(el).attr('href') || '', spotifyUrl: '' })
       })
     }
@@ -2384,7 +2400,7 @@ async function scrapeTheaterImDelphi() {
       const ticketLink = eventLink || $(el).find('a[href*="ticket"], a[href*="eventim"], a[href*="feverup"]').first().attr('href') || 'https://theater-im-delphi.de/programm/'
       const lower = title.toLowerCase()
       const category = $(el).find('td').first().text().toLowerCase()
-      const type = category.includes('party') || lower.includes('party') || lower.includes('dj') ? 'party' :
+      const type = category.includes('party') || lower.includes('party') || /\bdjs?\b/.test(lower) ? 'party' :
                    category.includes('tanz') || category.includes('lesung') || category.includes('theater') || category.includes('comedy') || category.includes('kinder') ? 'sonstige' :
                    lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
       events.push({ title, date, time, type, locationId: 42, source: 'theater-im-delphi', ticketUrl: ticketLink, spotifyUrl: '' })
@@ -2760,7 +2776,7 @@ async function scrapePrachtwerk() {
         .replace(/\s*[-–|]\s*Prachtwerk[^|]*/i, '')
         .replace(/,?\s*Berlin$/i, '')
         .trim()
-      if (title.length > 80) title = title.slice(0, title.lastIndexOf(' ', 80) || 80).trim()
+      title = cutAtWord(title, 80)
       if (!title || title.length < 2) continue
 
       const key = date + title
@@ -3570,8 +3586,10 @@ async function main() {
   }
 
   // Venues die 0 Events lieferten: aus letztem Snapshot nachladen (CI-IP-Blockierung)
-  const scrapedLocationIds = new Set(allEvents.map(e => e.locationId))
-  const fallbackLocationIds = [6, 11, 17, 18, 26, 28, 29, 32, 33, 37, 44, 46, 58, 59, 60] // Frannz, Schokoladen, UT Connewitz, Moritzbastei, Heimathafen, Mikropol, Kesselhaus, Columbiahalle, Uber Eats MH, Quasimodo, Neue Zukunft, Theater des Westens, Waschhaus, rbb Großer/Kleiner Sendesaal
+  // Trinity zählt nicht: es meldet einzelne Shows fremder Venues mit - sonst gälte ein Venue schon
+  // als gescraped, wenn nur Trinity ein paar Events liefert, und das volle Programm käme nicht aus dem Snapshot
+  const scrapedLocationIds = new Set(allEvents.filter(e => e.source !== 'trinity').map(e => e.locationId))
+  const fallbackLocationIds = [6, 11, 13, 17, 18, 26, 28, 29, 32, 33, 37, 44, 46, 58, 59, 60] // Frannz, Schokoladen, Conne Island (Anubis-Schutz), UT Connewitz, Moritzbastei, Heimathafen, Mikropol, Kesselhaus, Columbiahalle, Uber Eats MH, Quasimodo, Neue Zukunft, Theater des Westens, Waschhaus, rbb Großer/Kleiner Sendesaal
   const outPathForFallback = path.join(process.cwd(), 'public', 'events.json')
   let snapshotEvents = []
   try { snapshotEvents = JSON.parse(fs.readFileSync(outPathForFallback, 'utf-8')) } catch(e) {}
@@ -3627,6 +3645,11 @@ async function main() {
     return true
   })
 
+  // Trinity meldet Shows fremder Venues mit festem "20:00" und eigenem Ticket-Link mit - bei
+  // Dubletten sollen die Daten des Venues selbst gewinnen, daher Trinity-Einträge nach hinten
+  // (Array.sort ist stabil, die übrige Reihenfolge bleibt)
+  allEvents.sort((a, b) => (a.source === 'trinity') - (b.source === 'trinity'))
+
   // Duplikate entfernen (gleicher Titel + Datum + Location)
   const seen = new Set()
   allEvents = allEvents.filter(e => {
@@ -3655,8 +3678,13 @@ async function main() {
     // unverwandte Events fälschlich zusammengeworfen
     const key = core.length >= 3 ? `${e.locationId}-${e.date}-${core}` : `unique-${i}`
     const existing = dedupGroups.get(key)
-    if (!existing || e.title.length > existing.title.length) {
-      dedupGroups.set(key, e)
+    if (!existing) dedupGroups.set(key, e)
+    else if (e.title.length > existing.title.length) {
+      // Der längere Titel (vollständigeres Lineup) gewinnt, aber Uhrzeit, Ticket-Link und Quelle
+      // bleiben die des Venues, wenn der längere Eintrag von Trinity stammt
+      dedupGroups.set(key, e.source === 'trinity' && existing.source !== 'trinity'
+        ? { ...e, time: existing.time, ticketUrl: existing.ticketUrl, description: existing.description, source: existing.source }
+        : e)
     }
   })
   allEvents = [...dedupGroups.values()]
