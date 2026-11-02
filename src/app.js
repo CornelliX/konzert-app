@@ -260,7 +260,7 @@ async function checkRadarMatches() {
   for (const r of radar) {
     // Nur künftige Events: ein vergangener Termin, der noch bis zum nächsten Scrape in
     // events.json steht, darf den Radar-Eintrag nicht "verbrauchen"
-    const hit = events.find(e => e.date >= localToday() && artistMatchesEvent(r.artist, e))
+    const hit = events.find(e => !isConcertOver(e.date) && artistMatchesEvent(r.artist, e))
     if (hit) matches.push({ radarEntry: r, event: hit })
   }
   for (const { radarEntry, event } of matches) {
@@ -274,13 +274,28 @@ async function checkRadarMatches() {
   if (matches.length) showRadarBanner(matches)
 }
 
-// Je Artist das jüngste vergangene Konzert aus der History (Schlüssel: Name ohne Groß-/Kleinschreibung).
-// Künftige Einträge zählen nicht: sie sind noch nicht besucht und können keine Bewertung haben.
-function latestConcerts() {
+// Ein Konzert gilt als besucht, sobald sein Tag vorbei ist - oder am Konzerttag selbst ab 20 Uhr
+// Ortszeit: wer den "dabei"-Status bis dahin nicht geändert hat, ist mit Sicherheit dort, und kann
+// direkt nach dem Konzert Sterne vergeben. Einheitliche Regel für History-Sichtbarkeit, "letztes
+// Konzert" (Radar-Automatik), Snapshot-Löschen beim Entmarkieren und die Radar-Termin-Prüfung.
+const CONCERT_OVER_HOUR = 20
+function isConcertOver(date) {
   const today = localToday()
+  return date < today || (date === today && new Date().getHours() >= CONCERT_OVER_HOUR)
+}
+
+// Per Hand nachgetragene Konzerte (ohne event_id) sind per Definition besucht und gelten schon am Tag
+// selbst; aus "Bin dabei" angelegte Snapshots erscheinen erst, wenn das Konzert vorbei ist
+function isHistoryVisible(h) {
+  return isConcertOver(h.date) || (!h.eventId && h.date <= localToday())
+}
+
+// Je Artist das jüngste besuchte Konzert aus der History (Schlüssel: Name ohne Groß-/Kleinschreibung).
+// Noch nicht besuchte Einträge zählen nicht: sie können keine Bewertung haben.
+function latestConcerts() {
   const latest = new Map()
   for (const h of history) {
-    if (!h.date || h.date >= today) continue
+    if (!h.date || !isHistoryVisible(h)) continue
     const key = stripEdgeEmoji(h.title).toLowerCase()
     const cur = latest.get(key)
     if (!cur || h.date > cur.date || (h.date === cur.date && Number(h.id) > Number(cur.id))) latest.set(key, h)
@@ -294,8 +309,7 @@ async function autoAddRadar(artist) {
   const name = stripEdgeEmoji(artist)
   if (!name) return false
   if (radar.some(r => r.artist.trim().toLowerCase() === name.toLowerCase())) return false
-  const today = localToday()
-  if (events.some(e => e.date >= today && artistMatchesEvent(name, e))) return false
+  if (events.some(e => !isConcertOver(e.date) && artistMatchesEvent(name, e))) return false
   const added = await addRadarArtistIfNew(name)
   if (!added) return false
   radar.push(added)
@@ -342,7 +356,7 @@ async function archiveEventToHistory(ev) {
 // (spätestens beim nächsten wöchentlichen Lauf), daher wird der Snapshot bewusst sofort bei
 // "dabei" angelegt statt erst nachträglich beim Verstreichen des Datums - sonst könnte das
 // Event schon aus events.json verschwunden sein, bevor die App je Gelegenheit hatte, es zu
-// archivieren. Die History-Sektion selbst blendet Einträge mit Datum >= heute einfach aus.
+// archivieren. Die History-Sektion zeigt den Snapshot erst, wenn das Konzert vorbei ist (isConcertOver).
 async function syncGoingToHistory() {
   if (!going.length) return
   const known = new Set([...history.map(h => h.eventId).filter(Boolean), ...(loadData('historyDismissed') || [])])
@@ -835,10 +849,9 @@ function renderBookmarkedView() {
     ...bookmarkedEvents.map(e => ({ ...e, _status: 'gemerkt' }))
   ].sort(byDateTime)
 
-  // Nur bereits stattgefundene Einträge zeigen - zukünftige History-Snapshots existieren
-  // schon (siehe syncGoingToHistory), sollen aber erst nach dem Konzertdatum auftauchen.
-  const todayStr = localToday()
-  const historyEntries = history.filter(h => h.date <= todayStr).sort((a, b) => b.date.localeCompare(a.date))
+  // Nur besuchte Einträge zeigen - zukünftige History-Snapshots existieren schon (siehe
+  // syncGoingToHistory), erscheinen aber erst am Konzerttag ab 20 Uhr (siehe isConcertOver).
+  const historyEntries = history.filter(isHistoryVisible).sort((a, b) => b.date.localeCompare(a.date))
 
   if (allEvents.length === 0 && historyEntries.length === 0) return `
     <div class="text-center py-20 text-slate-600">
@@ -968,8 +981,7 @@ function renderHistorySection(historyEntries) {
 function refreshHistoryList() {
   const list = document.getElementById('history-list')
   if (!list) return
-  const todayStr = localToday()
-  const historyEntries = history.filter(h => h.date <= todayStr).sort((a, b) => b.date.localeCompare(a.date))
+  const historyEntries = history.filter(isHistoryVisible).sort((a, b) => b.date.localeCompare(a.date))
   list.innerHTML = renderHistoryListHtml(historyEntries)
   attachHistoryRemoveEvents()
   // Nur die (eben neu gerenderten) History-Zeilen neu verdrahten statt der globalen
@@ -1286,7 +1298,7 @@ function attachEvents() {
     // Vor dem Speichern prüfen, ob der Künstler nicht längst ein Thema ist - Radar ist nur
     // für Artists ohne jeden Bezug zu einem aktuellen Event gedacht, nicht als Duplikat zur
     // Merkliste oder zu bereits existierenden Eventcards.
-    const match = events.find(e => e.date >= localToday() && artistMatchesEvent(artist, e))
+    const match = events.find(e => !isConcertOver(e.date) && artistMatchesEvent(artist, e))
     if (match) {
       const onWatchlist = bookmarked.some(b => b == match.id) || going.some(g => g == match.id)
       if (onWatchlist) openBookmarks(match.id)
@@ -1561,7 +1573,7 @@ function attachSwipeToWrapper(wrapper) {
       if (!history.some(h => h.eventId === String(id))) {
         archiveEventToHistory(ev).then(added => { if (added.length) history = [...history, ...added] })
       }
-    } else if (!isNow && ev && ev.date >= localToday()) {
+    } else if (!isNow && ev && !isConcertOver(ev.date)) {
       // Nur bei noch nicht stattgefundenen Events den Snapshot mit entfernen - bei bereits
       // vergangenen bleibt er stehen (Korrektur dafür ist der Lösch-Button in der History).
       history = history.filter(h => h.eventId !== String(id))
@@ -1632,8 +1644,7 @@ function attachSwipeToWrapper(wrapper) {
     wrapper.querySelector('[data-swipe-radar]')?.classList.add('btn-sweep')
     closeSwipeWrapper(wrapper)
     const artist = entry.title
-    const todayStr = localToday()
-    const match = events.find(e => e.date >= todayStr && artistMatchesEvent(artist, e))
+    const match = events.find(e => !isConcertOver(e.date) && artistMatchesEvent(artist, e))
     if (match) {
       const onWatchlist = bookmarked.some(b => b == match.id) || going.some(g => g == match.id)
       if (onWatchlist) openBookmarks(match.id)
