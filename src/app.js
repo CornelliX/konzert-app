@@ -1535,6 +1535,8 @@ function attachSwipeToWrapper(wrapper) {
     if (typeof Notification !== 'undefined' && Notification.permission === 'default') Notification.requestPermission()
     if (await addRadarArtist(artist)) {
       radar = await loadRadar()
+      const list = document.getElementById('radar-list')
+      if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
       showToast('📡 Zum Radar hinzugefügt', artist)
     }
   })
