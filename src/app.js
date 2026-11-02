@@ -52,6 +52,9 @@ function spotifySearchUrl(title) {
 // Stellen konsistent erkennen, wo der Hauptact endet.
 const ACT_SEPARATOR_SOURCE = '\\s*\\+\\s*|\\s+feat\\.?\\s+|\\s+ft\\.?\\s+|\\s+w\\/\\s+|,?\\s*support:?\\s+|\\s+special\\s+guests?:?\\s+|\\s+mit\\s+'
 
+// Platzhalter statt echter Künstlernamen ("Monad + tba.") - kein eigener Act
+const ACT_PLACEHOLDER = /^(?:t\.?\s?b\.?\s?[acd]\.?|n\.?\s?n\.?|special\s+guests?|support|guests?|gäste|und\s+weitere|u\.?\s?a\.?|\.{2,}|…)$/i
+
 // Erkennt mehrere im Titel genannte Künstler (Vorband + Hauptact etc.), z.B.
 // "Enter Shikari + Holding Absence + The Callous Daoboys" -> 3 Namen. Bewusst kein Split
 // an "/" (anders als spotifySearchUrl oben), da das echte Bandnamen wie "AC/DC" zerreißen
@@ -65,8 +68,8 @@ function extractArtists(title) {
   const seen = new Set()
   const artists = []
   for (const raw of rawParts) {
-    const clean = raw.replace(/\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().replace(/^[|\-–—]\s*/, '').replace(/\s*[|\-–—]\s*$/, '')
-    if (clean.length < 2 || /^\d+$/.test(clean) || seen.has(clean.toLowerCase())) continue
+    const clean = raw.replace(/\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().replace(/^special\s+guests?:?\s+/i, '').replace(/^[|\-–—]\s*/, '').replace(/\s*[|\-–—]\s*$/, '')
+    if (clean.length < 2 || /^\d+$/.test(clean) || ACT_PLACEHOLDER.test(clean) || seen.has(clean.toLowerCase())) continue
     seen.add(clean.toLowerCase())
     artists.push(clean)
   }
@@ -266,6 +269,8 @@ async function checkRadarMatches() {
 // History-Eintrag statt im Titel des Hauptacts versteckt zu bleiben. Bei Events ohne Support
 // liefert extractArtists() genau ein Element (den vollen Titel), Verhalten bleibt dann wie zuvor.
 async function archiveEventToHistory(ev) {
+  // History führt ausschließlich Konzerte (keine Partys/Lesungen/Kurse)
+  if (ev.type !== 'konzert') return []
   const loc = locationsById.get(ev.locationId)
   const locationName = loc ? loc.name : (ev.locationName || '')
   const locationCity = loc ? loc.city : (ev.locationCity || '')
