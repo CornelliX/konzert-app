@@ -23,8 +23,10 @@ supabase.auth.onAuthStateChange((event, session) => {
 })
 
 export async function getUser() {
-  const { data: { user } } = await supabase.auth.getUser()
-  return user
+  // getSession liest lokal (refresht bei Ablauf), getUser wäre jedes Mal ein Auth-Server-Roundtrip;
+  // Datenzugriff schützt serverseitig RLS.
+  const { data: { session } } = await supabase.auth.getSession()
+  return session?.user ?? null
 }
 
 export async function signInWithEmail(email) {
@@ -87,9 +89,9 @@ export async function loadRadar() {
 
 export async function addRadarArtist(artist) {
   const user = await getUser()
-  if (!user) return false
-  const { error } = await supabase.from('radar').insert({ user_id: user.id, artist })
-  return !error
+  if (!user) return null
+  const { data, error } = await supabase.from('radar').insert({ user_id: user.id, artist }).select().single()
+  return error ? null : { id: data.id, artist: data.artist }
 }
 
 export async function removeRadarArtist(id) {

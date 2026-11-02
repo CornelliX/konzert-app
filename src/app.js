@@ -1204,8 +1204,9 @@ function attachEvents() {
     }
     if (typeof Notification !== 'undefined' && Notification.permission === 'default') Notification.requestPermission()
     input.value = ''
-    if (await addRadarArtist(artist)) {
-      radar = await loadRadar()
+    const added = await addRadarArtist(artist)
+    if (added) {
+      radar.push(added)
       const list = document.getElementById('radar-list')
       if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
     }
@@ -1533,8 +1534,9 @@ function attachSwipeToWrapper(wrapper) {
       return
     }
     if (typeof Notification !== 'undefined' && Notification.permission === 'default') Notification.requestPermission()
-    if (await addRadarArtist(artist)) {
-      radar = await loadRadar()
+    const added = await addRadarArtist(artist)
+    if (added) {
+      radar.push(added)
       const list = document.getElementById('radar-list')
       if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
       showToast('📡 Zum Radar hinzugefügt', artist)
