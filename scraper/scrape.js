@@ -390,12 +390,6 @@ async function scrapeFelsenkeller() {
     const $ = cheerio.load(html)
     const seen = new Set()
 
-    // Jeder Event-Block enthält Datum als "15.03. | So. | 20:00"
-    // und h3 als Titel – wir suchen alle Textnodes mit diesem Muster
-    // und nehmen das nächste h3 als Titel
-    const bodyHtml = $.html()
-    const blocks = bodyHtml.split(/<h3[^>]*>/)
-
     // Struktur: div.em-event-list-item → div.event-meta (Datum) + p.event-name (Titel)
     $('div.em-event-list-item').each((_, el) => {
       const title = $(el).find('p.event-name').first().text().trim()
@@ -421,16 +415,11 @@ async function scrapeFelsenkeller() {
       const date = `${year}-${month}-${day}`
       if (date < today()) return
 
-      // Ticket-URL: erster externer Link im Container
-      const ticketUrl = $(el).find('a[href]').filter((_, a) => {
-        const href = $(a).attr('href') || ''
-        return href.startsWith('http') &&
-          !href.includes('facebook.com') &&
-          !href.includes('google.com') &&
-          !href.includes('/ical/') &&
-          !href.includes('felsenkeller-leipzig.com') &&
-          !href.includes('landstreicher-konzerte.de') === false
-      }).first().attr('href')
+      // Ticket-URL: der "Tickets"-Button (a.fk-btn) des Events. Die frühere Host-Filterung war
+      // invertiert und ließ nur landstreicher-konzerte.de durch, sonst fiel fast alles auf den
+      // Standard-Link zurück; ein Filter ohne die Inversion würde dagegen den Reservierungslink
+      // von Naumanns Gaststube (steht in jedem Block) liefern
+      const ticketUrl = $(el).find('a.fk-btn').filter((_, a) => /^\s*tickets\s*$/i.test($(a).text())).first().attr('href')
         || $(el).find('a[href*="ticket"]').first().attr('href')
         || 'https://felsenkeller.ticket.io/'
 
@@ -706,7 +695,10 @@ async function scrapePrivatclub() {
       const month = months[part2]
       if (!day || !month) return
 
-      const year = new Date().getFullYear()
+      // Die Seite nennt keine Jahreszahl und zeigt nur kommende Termine: ein Monat vor dem
+      // aktuellen ist das nächste Jahr (Januar-Termine im Dezember), wie bei Kesselhaus/Frannz
+      const now = new Date()
+      const year = month < now.getMonth() + 1 ? now.getFullYear() + 1 : now.getFullYear()
       const date = `${year}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}`
       if (date < today()) return
 
@@ -1214,7 +1206,7 @@ async function scrapeTempodrom() {
 
       // Datum suchen: "Mittwoch, 18. Mär. 2026" oder "Donnerstag, 25. Jun. 2026"
       const months = { Jan:1, Feb:2, Mär:3, Apr:4, Mai:5, Jun:6, Jul:7, Aug:8, Sep:9, Okt:10, Nov:11, Dez:12 }
-      const dateMatch = blockText.match(/(\d{1,2})\.\s*(\w{3})\.?\s*(\d{4})/)
+      const dateMatch = blockText.match(/(\d{1,2})\.\s*(\p{L}{3})\.?\s*(\d{4})/u)
       if (!dateMatch) return
       const day = dateMatch[1]
       const month = months[dateMatch[2]]
@@ -1767,7 +1759,8 @@ async function scrapeMetropol() {
     $('li').each((_, el) => {
       const text = $(el).text().trim()
       // Format: "18/ März 2026 20:00"
-      const dateMatch = text.match(/(\d{1,2})\s*\/\s*(\w+\.?)\s+(\d{4})\s+(\d{1,2}):(\d{2})/)
+      // \p{L} statt \w: \w trifft keine Umlaute, "März" fiel sonst komplett heraus
+      const dateMatch = text.match(/(\d{1,2})\s*\/\s*(\p{L}+\.?)\s+(\d{4})\s+(\d{1,2}):(\d{2})/u)
       if (!dateMatch) return
       const monthKey = dateMatch[2].replace('.','')
       const month = months[monthKey]
@@ -1986,7 +1979,7 @@ async function scrapeHole44() {
       const dayMatch = text.match(/^(\d{1,2})/)
       if (!dayMatch) return
       const day = parseInt(dayMatch[1])
-      const monthMatch = text.match(/(\w+\.?)\s+\d{4}/)
+      const monthMatch = text.match(/(\p{L}+\.?)\s+\d{4}/u)
       if (!monthMatch) return
       const month = months[monthMatch[1].replace('.','')]
       if (!month) return
@@ -2065,7 +2058,7 @@ async function scrapeCassiopeia() {
         const href = $(el).attr('href') || ''
         const text = $(el).text().trim()
         // Format: "Beginn\n22:00\nParty\n...\n14\n.\n03\n.\nMärz 2026\nDirty Dancing\nSat\n14\n..."
-        const dateMatch = text.match(/(\d{1,2})\s*\.\s*(\d{2})\s*\.\s*(\w+)\s+(\d{4})/)
+        const dateMatch = text.match(/(\d{1,2})\s*\.\s*(\d{2})\s*\.\s*(\p{L}+)\s+(\d{4})/u)
         if (!dateMatch) return
         const month = months[dateMatch[3]]
         if (!month) return
@@ -2366,7 +2359,7 @@ async function scrapeTheaterImDelphi() {
       // Monatsüberschrift
       if ($(el).is('h2')) {
         const text = $(el).text().trim()
-        const monthMatch = text.match(/^(\w+)\s+(\d{4})$/)
+        const monthMatch = text.match(/^(\p{L}+)\s+(\d{4})$/u)
         if (monthMatch) {
           currentMonth = months[monthMatch[1]] || currentMonth
           currentYear = parseInt(monthMatch[2])
@@ -2997,16 +2990,12 @@ async function scrapeMVBLeipzig() {
         // Ganztägige Termine (VALUE=DATE) sind "floating" - über toJSDate() liefe die
         // lokale Zeitzone des Runners mit rein und würde das Datum verschieben.
         // Direkt die iCal-Datumsfelder nehmen statt über ein JS-Date zu gehen.
-        let date, time
-        if (ev.startDate.isDate) {
-          const d = ev.startDate
-          date = `${d.year}-${String(d.month).padStart(2, '0')}-${String(d.day).padStart(2, '0')}`
-          time = '20:00'
-        } else {
-          const jsDate = ev.startDate.toJSDate()
-          date = jsDate.toISOString().split('T')[0]
-          time = jsDate.toISOString().substring(11, 16)
-        }
+        // Auch bei Terminen mit Uhrzeit die Rohfelder nehmen: der Feed beschriftet seine Ortszeit
+        // mit TZID=Etc/GMT+0 (Wandzeit 20:00 steht als 20:00 drin) - über toJSDate()/UTC hing das
+        // Ergebnis davon ab, wie das Plugin die Zone deklariert
+        const d = ev.startDate
+        const date = `${d.year}-${String(d.month).padStart(2, '0')}-${String(d.day).padStart(2, '0')}`
+        const time = d.isDate ? '20:00' : `${String(d.hour).padStart(2, '0')}:${String(d.minute).padStart(2, '0')}`
         if (date < today()) continue
 
         const key = date + title
@@ -3142,7 +3131,8 @@ async function scrapeNeuesSchauspiel() {
       const ts = parseInt($(el).attr('date'))
       if (!ts) return
       const d = new Date(ts * 1000)
-      const date = d.toISOString().split('T')[0]
+      // Berliner Datum: toISOString() wäre UTC, Beginn zwischen 0 und 2 Uhr läge am Vortag
+      const date = d.toLocaleDateString('sv-SE', { timeZone: 'Europe/Berlin' })
       if (date < today()) return
       const timeEl = $(el).find('.time').text().trim()
       const time = parseTime(timeEl)
