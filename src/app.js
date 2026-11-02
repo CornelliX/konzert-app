@@ -863,7 +863,7 @@ function renderHistoryListHtml(historyEntries) {
 
 function renderHistorySection(historyEntries) {
   return `
-    <div id="history-section" style="margin-top:28px;">
+    <div id="history-section" style="margin-top:28px; scroll-margin-top:calc(env(safe-area-inset-top) + 32px);">
       <div class="flex items-center justify-between mb-3">
         <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:rgba(255,255,255,0.5);">History</h3>
         <button data-history-add-toggle title="Konzert nachtragen" aria-label="Konzert nachtragen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="width:28px; height:28px; color:rgba(255,255,255,0.6); font-size:16px; line-height:1;">+</button>
