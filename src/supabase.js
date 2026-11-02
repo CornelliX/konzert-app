@@ -92,6 +92,18 @@ export async function addRadarArtist(artist) {
   return error ? null : { id: data.id, artist: data.artist }
 }
 
+// Wie addRadarArtist, legt den Artist aber nur an, wenn er in der DB noch nicht steht (Groß-/
+// Kleinschreibung egal) - null bei Dublette oder Fehler. `\`, `%` und `_` werden maskiert, sonst
+// wirkten sie im ilike-Muster als Platzhalter.
+export async function addRadarArtistIfNew(artist) {
+  const user = await getUser()
+  if (!user) return null
+  const pattern = artist.replace(/[\\%_]/g, '\\$&')
+  const { data, error } = await supabase.from('radar').select('id').eq('user_id', user.id).ilike('artist', pattern).limit(1)
+  if (error || (data && data.length > 0)) return null
+  return addRadarArtist(artist)
+}
+
 export async function removeRadarArtist(id) {
   const user = await getUser()
   if (!user) return false

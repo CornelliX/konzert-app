@@ -1,5 +1,5 @@
 import { getLocations, getEvents, saveData, loadData } from './data.js'
-import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut, localToday } from './supabase.js'
+import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, addRadarArtistIfNew, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut, localToday } from './supabase.js'
 
 // ISO-Datum + HH:MM sortiert als String korrekt; new Date(date + 'T' + time) wäre bei Events ohne
 // Uhrzeit "Invalid Date" (NaN im Vergleich) und würde die Reihenfolge durcheinanderbringen
@@ -52,6 +52,15 @@ function spotifySearchUrl(title) {
 // Stellen konsistent erkennen, wo der Hauptact endet.
 const ACT_SEPARATOR_SOURCE = '\\s*\\+\\s*|\\s+feat\\.?\\s+|\\s+ft\\.?\\s+|\\s+w\\/\\s+|,?\\s*support:?\\s+|\\s+special\\s+guests?:?\\s+|\\s+mit\\s+'
 
+// Emojis (samt Variation Selector/Joiner/Flaggen) und Leerraum am Anfang/Ende eines Künstlernamens
+// entfernen ("🔥 Band 🎶" -> "Band"); Emojis mitten im Namen bleiben. Bleibt nichts übrig, gilt das Original.
+const EMOJI_CLASS = '\\p{Extended_Pictographic}\\p{Emoji_Modifier}\\u200d\\ufe0f\\u{1F1E6}-\\u{1F1FF}'
+const EDGE_EMOJI_RE = new RegExp(`^[\\s${EMOJI_CLASS}]+|[\\s${EMOJI_CLASS}]+$`, 'gu')
+function stripEdgeEmoji(name) {
+  const str = String(name ?? '')
+  return str.replace(EDGE_EMOJI_RE, '') || str.trim()
+}
+
 // Platzhalter statt echter Künstlernamen ("Monad + tba.") - kein eigener Act
 const ACT_PLACEHOLDER = /^(?:t\.?\s?b\.?\s?[acd]\.?|n\.?\s?n\.?|special\s+guests?|support|guests?|gäste|und\s+weitere|u\.?\s?a\.?|\.{2,}|…)$/i
 
@@ -68,12 +77,12 @@ function extractArtists(title) {
   const seen = new Set()
   const artists = []
   for (const raw of rawParts) {
-    const clean = raw.replace(/\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().replace(/^special\s+guests?:?\s+/i, '').replace(/^[|\-–—]\s*/, '').replace(/\s*[|\-–—]\s*$/, '')
+    const clean = stripEdgeEmoji(raw.replace(/\([^)]*\)/g, '').replace(/\s+/g, ' ').trim().replace(/^special\s+guests?:?\s+/i, '').replace(/^[|\-–—]\s*/, '').replace(/\s*[|\-–—]\s*$/, ''))
     if (clean.length < 2 || /^\d+$/.test(clean) || ACT_PLACEHOLDER.test(clean) || seen.has(clean.toLowerCase())) continue
     seen.add(clean.toLowerCase())
     artists.push(clean)
   }
-  return artists.length ? artists : [title]
+  return artists.length ? artists : [stripEdgeEmoji(title)]
 }
 
 // Zeigt den Original-Titel unverändert an, stylt aber den Hauptact fett und alles ab dem
@@ -184,6 +193,7 @@ export async function renderApp(el) {
     await checkRadarMatches()
     history = await loadHistory()
     await syncGoingToHistory()
+    await backfillRadarFromHistory()
   }
   sessionStorage.setItem('lebe-loaded', '1')
   const c64El = document.querySelector('.c64-border')
@@ -262,6 +272,50 @@ async function checkRadarMatches() {
     await removeRadarArtist(radarEntry.id)
   }
   if (matches.length) showRadarBanner(matches)
+}
+
+// Je Artist das jüngste vergangene Konzert aus der History (Schlüssel: Name ohne Groß-/Kleinschreibung).
+// Künftige Einträge zählen nicht: sie sind noch nicht besucht und können keine Bewertung haben.
+function latestConcerts() {
+  const today = localToday()
+  const latest = new Map()
+  for (const h of history) {
+    if (!h.date || h.date >= today) continue
+    const key = stripEdgeEmoji(h.title).toLowerCase()
+    const cur = latest.get(key)
+    if (!cur || h.date > cur.date || (h.date === cur.date && Number(h.id) > Number(cur.id))) latest.set(key, h)
+  }
+  return latest
+}
+
+// Nimmt einen Artist ins Radar auf, wenn er dort nicht schon steht (lokale Liste + DB-Abgleich) und
+// kein künftiges Event hat - dann ist er ein Fall für die normale Liste, nicht fürs Radar.
+async function autoAddRadar(artist) {
+  const name = stripEdgeEmoji(artist)
+  if (!name) return false
+  if (radar.some(r => r.artist.trim().toLowerCase() === name.toLowerCase())) return false
+  const today = localToday()
+  if (events.some(e => e.date >= today && artistMatchesEvent(name, e))) return false
+  const added = await addRadarArtistIfNew(name)
+  if (!added) return false
+  radar.push(added)
+  const list = document.getElementById('radar-list')
+  if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
+  return true
+}
+
+// Einmalig je Gerät und Nutzer: alle Artists, deren letztes Konzert 4 oder 5 Sterne hat, ins Radar.
+// Läuft nur einmal, sonst käme jeder bewusst aus dem Radar gelöschte Artist beim nächsten Start zurück.
+async function backfillRadarFromHistory() {
+  if (!currentUser) return
+  const flag = 'radarBackfill4Stars:' + currentUser.id
+  if (loadData(flag)) return
+  let added = 0
+  for (const h of latestConcerts().values()) {
+    if ((h.rating || 0) >= 4 && await autoAddRadar(h.title)) added++
+  }
+  saveData(flag, true)
+  if (added) showToast('📡 Radar', `${added} Artist${added > 1 ? 's' : ''} aus gut bewerteten Konzerten hinzugefügt`)
 }
 
 // Legt für ein Event einen History-Eintrag pro Act an (extractArtists() zerlegt "Main Act +
@@ -954,6 +1008,9 @@ function attachHistoryRemoveEvents() {
           entry.rating = prevRating
           refreshHistoryList()
           showToast('Fehler', 'Bewertung konnte nicht gespeichert werden.')
+        } else if ((entry.rating || 0) >= 4 && latestConcerts().get(stripEdgeEmoji(entry.title).toLowerCase())?.id === entry.id) {
+          // 4/5 Sterne für das letzte Konzert dieses Artists: automatisch ins Radar
+          if (await autoAddRadar(entry.title)) showToast('📡 Zum Radar hinzugefügt', entry.title)
         }
       })
     })
@@ -988,7 +1045,7 @@ function attachHistoryEvents() {
   })
   attachLocOptionEvents()
   document.querySelector('[data-history-save]')?.addEventListener('click', async () => {
-    const title = document.getElementById('history-title')?.value.trim()
+    const title = stripEdgeEmoji(document.getElementById('history-title')?.value.trim())
     const location = document.getElementById('history-location')?.value.trim()
     const day = document.getElementById('history-day')?.value
     const month = document.getElementById('history-month')?.value
@@ -1221,7 +1278,7 @@ function attachEvents() {
   // Radar: Künstler hinzufügen/entfernen
   const submitRadarArtist = async () => {
     const input = document.getElementById('radar-input')
-    const artist = input?.value.trim()
+    const artist = stripEdgeEmoji(input?.value.trim())
     if (!artist) return
     // Vor dem Speichern prüfen, ob der Künstler nicht längst ein Thema ist - Radar ist nur
     // für Artists ohne jeden Bezug zu einem aktuellen Event gedacht, nicht als Duplikat zur
@@ -1343,6 +1400,7 @@ function attachEvents() {
         await checkRadarMatches()
         history = await loadHistory()
         await syncGoingToHistory()
+        await backfillRadarFromHistory()
         render()
       }, 500)
     } else {

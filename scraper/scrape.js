@@ -30,6 +30,17 @@ function relocationTarget(text) {
   return m ? relocationVenues.find(([re]) => re.test(m[1]))?.[1] ?? null : null
 }
 
+// Emojis (samt Variation Selector/Joiner/Flaggen) und Leerraum am Anfang/Ende eines Namens entfernen
+// ("🔥 Band 🎶" -> "Band"); Emojis mitten im Namen bleiben. Bleibt nichts übrig, gilt das Original.
+// Dieselbe Logik wie stripEdgeEmoji() in src/app.js. Die Event-ID bleibt davon unberührt (stableId
+// normalisiert auf [a-z0-9]), Merkliste/"dabei" verlieren also keine Events.
+const EMOJI_CLASS = '\\p{Extended_Pictographic}\\p{Emoji_Modifier}\\u200d\\ufe0f\\u{1F1E6}-\\u{1F1FF}'
+const EDGE_EMOJI_RE = new RegExp(`^[\\s${EMOJI_CLASS}]+|[\\s${EMOJI_CLASS}]+$`, 'gu')
+function stripEdgeEmoji(name) {
+  const str = String(name ?? '')
+  return str.replace(EDGE_EMOJI_RE, '') || str.trim()
+}
+
 function detectType(title, description = '') {
   const t = (title + ' ' + description).toLowerCase()
   const sonstigeKeywords = [
@@ -3612,6 +3623,9 @@ async function main() {
     }
   }
 
+  // Emojis am Rand der Titel entfernen, auch bei jedem Act eines "A + B"-Lineups
+  allEvents = allEvents.map(e => ({ ...e, title: e.title.split(/(\s*\+\s*)/).map((part, i) => i % 2 ? part : stripEdgeEmoji(part)).join('') }))
+
   // Global abgesagte Events rausfiltern (Sicherheitsnetz für Scraper ohne eigene Prüfung).
   // Manche Venues markieren das im Titel stilisiert mit Leerzeichen zwischen jedem
   // Buchstaben ("+++ A B G E S A G T +++"), daher zusätzlich mit entfernten Leerzeichen
@@ -3731,7 +3745,10 @@ allEvents = allEvents.map(e => ({ id: stableId(e.date + '|' + e.title + '|' + e.
   // Alte events.json laden um addedAt zu erhalten
   let oldEvents = []
   try { oldEvents = JSON.parse(fs.readFileSync(outPath, 'utf-8')) } catch(e) {}
-  const oldMap = new Map(oldEvents.map(e => [e.date + '|' + e.title + '|' + e.locationId, e.addedAt]))
+  // Titel der alten Datei mit bereinigen, damit "addedAt" (NEW-Markierung) auch für Events mit früher
+  // vorhandenem Emoji erhalten bleibt
+  const cleanTitle = t => t.split(/(\s*\+\s*)/).map((part, i) => i % 2 ? part : stripEdgeEmoji(part)).join('')
+  const oldMap = new Map(oldEvents.map(e => [e.date + '|' + cleanTitle(e.title) + '|' + e.locationId, e.addedAt]))
   const todayStr = new Date().toISOString().split('T')[0]
   allEvents = allEvents.map(e => ({
     ...e,
