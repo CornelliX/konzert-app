@@ -3589,7 +3589,6 @@ async function main() {
   // Trinity zählt nicht: es meldet einzelne Shows fremder Venues mit - sonst gälte ein Venue schon
   // als gescraped, wenn nur Trinity ein paar Events liefert, und das volle Programm käme nicht aus dem Snapshot
   const scrapedLocationIds = new Set(allEvents.filter(e => e.source !== 'trinity').map(e => e.locationId))
-  const fallbackLocationIds = [6, 11, 13, 17, 18, 26, 28, 29, 32, 33, 37, 44, 46, 58, 59, 60] // Frannz, Schokoladen, Conne Island (Anubis-Schutz), UT Connewitz, Moritzbastei, Heimathafen, Mikropol, Kesselhaus, Columbiahalle, Uber Eats MH, Quasimodo, Neue Zukunft, Theater des Westens, Waschhaus, rbb Großer/Kleiner Sendesaal
   const outPathForFallback = path.join(process.cwd(), 'public', 'events.json')
   let snapshotEvents = []
   try { snapshotEvents = JSON.parse(fs.readFileSync(outPathForFallback, 'utf-8')) } catch(e) {}
@@ -3598,6 +3597,11 @@ async function main() {
     try { snapshotEvents = JSON.parse(fs.readFileSync(path.join(process.cwd(), '..', 'public', 'events.json'), 'utf-8')) } catch(e) {}
   }
   const todayStr2 = new Date().toISOString().split('T')[0]
+  // Gilt für ALLE Venues, die im letzten Snapshot Events hatten (früher nur eine feste Liste: ein
+  // zufälliger Abruffehler ließ sonst z.B. Lido, Columbia Theater, Täubchenthal komplett leer ausgehen).
+  // Nachteil: ein Venue, das wirklich nichts mehr anbietet, behält seine alten künftigen Events bis
+  // zum nächsten erfolgreichen Lauf - sie laufen mit ihrem Datum von selbst ab.
+  const fallbackLocationIds = [...new Set(snapshotEvents.map(e => e.locationId).filter(id => id != null))]
   for (const locId of fallbackLocationIds) {
     if (!scrapedLocationIds.has(locId)) {
       const cached = snapshotEvents.filter(e => e.locationId === locId && e.date >= todayStr2)
