@@ -19,10 +19,10 @@ import path from 'path'
 // als locationId. Unbekanntes Ziel oder reine Terminverschiebung ("auf dem 24.10.27 verlegt",
 // "in den Sommer verlegt") -> null.
 const relocationVenues = [
-  [/hole/i, 34], [/mikropol/i, 28], [/metropol/i, 30], [/huxleys/i, 31], [/columbiahalle/i, 32],
-  [/columbia\s*theater/i, 10], [/kesselhaus/i, 29], [/astra/i, 5], [/festsaal/i, 3], [/lido/i, 1],
-  [/so\s*36/i, 2], [/max.schmeling/i, 54], [/uber\s*eats/i, 33], [/uber\s*arena/i, 57],
-  [/tempodrom/i, 25], [/bi\s*nuu/i, 27], [/badehaus/i, 35], [/frannz/i, 6], [/privatclub/i, 4], [/gretchen/i, 22],
+  [/\bhole\b|\bhole\s*44\b/i, 34], [/\bmikropol\b/i, 28], [/\bmetropol\b/i, 30], [/\bhuxleys\b/i, 31], [/\bcolumbiahalle\b/i, 32],
+  [/\bcolumbia\s*theater\b/i, 10], [/\bkesselhaus\b/i, 29], [/\bastra\b/i, 5], [/\bfestsaal\b/i, 3], [/\blido\b/i, 1],
+  [/\bso\s*36\b/i, 2], [/\bmax.schmeling/i, 54], [/\buber\s*eats\b/i, 33], [/\buber\s*arena\b/i, 57],
+  [/\btempodrom\b/i, 25], [/\bbi\s*nuu\b/i, 27], [/\bbadehaus\b/i, 35], [/\bfrannz\b/i, 6], [/\bprivatclub\b/i, 4], [/\bgretchen\b/i, 22],
 ]
 function relocationTarget(text) {
   const m = text.match(/(?:ins|in\s+(?:das|die|den))\s+(.{2,40}?)\s*(?:hoch|runter)?verlegt/i) ||
@@ -3622,7 +3622,9 @@ async function main() {
   // ein Ziel-Venue, gilt nur der Eintrag dort - auch wenn das alte Venue selbst keinen Hinweis
   // zeigt (z.B. Mikropol listet KYLE ALESSANDRO weiter, nur Hole44 sagt "aus dem Mikropol in das
   // Hole44 verlegt"). Listet das Ziel-Venue die Show nicht selbst, wird der Eintrag umgehängt.
-  const relocationKey = e => `${e.date}-${coreTitle(e.title)}`
+  // Zu kurze Kerne (Symbol-Titel) wie beim Dedup nie gruppieren - sonst würde ein Hinweis alle
+  // kurztiteligen Events desselben Tages mitverschieben
+  const relocationKey = e => { const c = coreTitle(e.title); return c.length >= 3 ? `${e.date}-${c}` : `unique-${e.locationId}-${e.title}` }
   const relocations = new Map(allEvents.filter(e => e.relocatedTo).map(e => [relocationKey(e), e.relocatedTo]))
   const atTarget = new Set(allEvents.filter(e => relocations.get(relocationKey(e)) === e.locationId).map(relocationKey))
   allEvents = allEvents.filter(e => {
