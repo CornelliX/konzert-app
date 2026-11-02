@@ -130,19 +130,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1548646429,
-    "title": "Citizen",
-    "date": "2026-11-02",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261102-citizen/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1698630571,
     "title": "40 YEARS OF FUCKIN’ UP - Movie Screening",
     "date": "2026-11-02",
@@ -154,6 +141,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 1652208664,
+    "title": "ROBBER ROBBER",
+    "date": "2026-11-02",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/95213-tickets-robber-robber-exp-indie-rock-us-schokoladen-berlin-am-02-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 1886068719,
@@ -247,6 +247,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1548646429,
+    "title": "Citizen",
+    "date": "2026-11-02",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261102-citizen/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1370936206,
     "title": "Don Toliver",
     "date": "2026-11-02",
@@ -258,19 +271,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1652208664,
-    "title": "ROBBER ROBBER",
-    "date": "2026-11-02",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/95213-tickets-robber-robber-exp-indie-rock-us-schokoladen-berlin-am-02-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-25"
   },
   {
     "id": 1275259505,
@@ -429,19 +429,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 108429740,
-    "title": "JULIA MELADIN",
-    "date": "2026-11-03",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/julia-meladin-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1976326721,
     "title": "Triggerfinger",
     "date": "2026-11-03",
@@ -455,17 +442,17 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 619181624,
-    "title": "Alela Diane",
+    "id": 420352412,
+    "title": "LSD - Liebe Statt Drogen",
     "date": "2026-11-03",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 11,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261103-alela-diane/",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/94898-tickets-lsd-liebe-statt-drogen-schokoladen-berlin-am-03-11-2026",
     "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 1599870897,
@@ -531,6 +518,19 @@
     "spotifyUrl": "",
     "source": "ilseserika",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 544369013,
+    "title": "Most Wanted: Music",
+    "date": "2026-11-03",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P43SLzoIZLz7dSwgTF8",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 1072235247,
@@ -635,17 +635,17 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 420352412,
-    "title": "LSD - Liebe Statt Drogen",
+    "id": 619181624,
+    "title": "Alela Diane",
     "date": "2026-11-03",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 10,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/94898-tickets-lsd-liebe-statt-drogen-schokoladen-berlin-am-03-11-2026",
+    "ticketUrl": "https://columbia-theater.de/event/20261103-alela-diane/",
     "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-25"
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 797533400,
@@ -661,17 +661,17 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 544369013,
-    "title": "Most Wanted: Music",
+    "id": 108429740,
+    "title": "JULIA MELADIN",
     "date": "2026-11-03",
     "time": "20:00",
-    "locationId": 29,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P43SLzoIZLz7dSwgTF8",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/julia-meladin-leipzig-2026",
     "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-10-25"
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 897060670,
@@ -894,19 +894,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 14189384,
-    "title": "За двома зайцями („Zwei Hasen auf einmal“)",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/%D0%97%D0%B0-%D0%B4%D0%B2%D0%BE%D0%BC%D0%B0-%D0%B7%D0%B0%D0%B9%D1%86%D1%8F%D0%BC%D0%B8",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 176725280,
     "title": "GET THE SHOT",
     "date": "2026-11-04",
@@ -933,19 +920,6 @@
     "addedAt": "2026-10-28"
   },
   {
-    "id": 915842897,
-    "title": "Dirty Three",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261104-dirty-three/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1176195526,
     "title": "BRIAN FALLON & THE PAINKILLERS",
     "date": "2026-11-04",
@@ -957,6 +931,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1321449398,
+    "title": "MOVING AS A GIANT",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101408-tickets-moving-as-a-giant-fuzz-noise-rock-slo-schokoladen-berlin-am-04-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 241432162,
@@ -1022,6 +1009,19 @@
     "spotifyUrl": "",
     "source": "madameclaude",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1087074349,
+    "title": "Lane 8",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OxW09uFc0jVdKcBNQVn",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 1321020804,
@@ -1152,17 +1152,17 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1321449398,
-    "title": "MOVING AS A GIANT",
+    "id": 915842897,
+    "title": "Dirty Three",
     "date": "2026-11-04",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 10,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101408-tickets-moving-as-a-giant-fuzz-noise-rock-slo-schokoladen-berlin-am-04-11-2026",
+    "ticketUrl": "https://columbia-theater.de/event/20261104-dirty-three/",
     "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-25"
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1141246891,
@@ -1178,17 +1178,17 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1087074349,
-    "title": "Lane 8",
+    "id": 14189384,
+    "title": "За двома зайцями („Zwei Hasen auf einmal“)",
     "date": "2026-11-04",
     "time": "20:00",
-    "locationId": 29,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OxW09uFc0jVdKcBNQVn",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/%D0%97%D0%B0-%D0%B4%D0%B2%D0%BE%D0%BC%D0%B0-%D0%B7%D0%B0%D0%B9%D1%86%D1%8F%D0%BC%D0%B8",
     "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-10-25"
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 183724661,
@@ -1346,19 +1346,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1417314976,
-    "title": "Testrogona + Sara ATH / Ingrid Hideki / Lafert  + Dolly Vara",
-    "date": "2026-11-05",
-    "time": "19:00",
-    "locationId": 44,
-    "type": "konzert",
-    "description": "Join us on Thursday, November 5th for an unpredictable and vibrant musical gathering - an homage to the queer, DIY experimental scenes of Berlin and Athens, taking place at Neue Zukunft…",
-    "ticketUrl": "https://neue-zukunft.org/konzerte.html",
-    "spotifyUrl": "",
-    "source": "neue-zukunft",
-    "addedAt": "2026-10-07"
-  },
-  {
     "id": 1809941120,
     "title": "President",
     "date": "2026-11-05",
@@ -1370,6 +1357,19 @@
     "spotifyUrl": "",
     "source": "kesselhaus",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1417314976,
+    "title": "Testrogona + Sara ATH / Ingrid Hideki / Lafert  + Dolly Vara",
+    "date": "2026-11-05",
+    "time": "19:00",
+    "locationId": 44,
+    "type": "konzert",
+    "description": "Join us on Thursday, November 5th for an unpredictable and vibrant musical gathering - an homage to the queer, DIY experimental scenes of Berlin and Athens, taking place at Neue Zukunft…",
+    "ticketUrl": "https://neue-zukunft.org/konzerte.html",
+    "spotifyUrl": "",
+    "source": "neue-zukunft",
+    "addedAt": "2026-10-07"
   },
   {
     "id": 924246284,
@@ -1476,17 +1476,17 @@
     "addedAt": "2026-09-30"
   },
   {
-    "id": 1282444254,
-    "title": "Monolord",
+    "id": 156399883,
+    "title": "Los Sara Fontán (esp) + Franna",
     "date": "2026-11-05",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 11,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261105-monolord/",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101795-tickets-los-sara-fontan-esp-franna-bln-schokoladen-berlin-am-05-11-2026",
     "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 238225692,
@@ -1578,6 +1578,19 @@
     "spotifyUrl": "",
     "source": "madameclaude",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 890334629,
+    "title": "MasterPeace - The Bob Dylan Project",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Owr1sdrIY0SHAdOoI1R",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1552881075,
@@ -1695,17 +1708,17 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 156399883,
-    "title": "Los Sara Fontán (esp) + Franna",
+    "id": 1282444254,
+    "title": "Monolord",
     "date": "2026-11-05",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 10,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101795-tickets-los-sara-fontan-esp-franna-bln-schokoladen-berlin-am-05-11-2026",
+    "ticketUrl": "https://columbia-theater.de/event/20261105-monolord/",
     "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-25"
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1079450370,
@@ -1719,19 +1732,6 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 890334629,
-    "title": "MasterPeace - The Bob Dylan Project",
-    "date": "2026-11-05",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Owr1sdrIY0SHAdOoI1R",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 829829875,
@@ -1914,6 +1914,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 2107999221,
+    "title": "Preacherman & The Blues Missionaries",
+    "date": "2026-11-06",
+    "time": "19:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P1UTdf5RNKBQ3YgMD7K",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 915457434,
     "title": "Darlin",
     "date": "2026-11-06",
@@ -1938,19 +1951,6 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 2107999221,
-    "title": "Preacherman & The Blues Missionaries",
-    "date": "2026-11-06",
-    "time": "19:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P1UTdf5RNKBQ3YgMD7K",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1625149581,
@@ -2044,19 +2044,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 778259175,
-    "title": "Coeur De Pirate",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261106-coeur-de-pirate-2/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1035266590,
     "title": "DIE VERLIERER + SCHIMMEL ÜBER BERLIN",
     "date": "2026-11-06",
@@ -2068,6 +2055,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 1715877264,
+    "title": "FERVENTS & ULLA SUSPEKT",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100638-tickets-fervents-ulla-suspekt-schokoladen-berlin-am-06-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-28"
   },
   {
     "id": 536949929,
@@ -2133,6 +2133,19 @@
     "spotifyUrl": "",
     "source": "madameclaude",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 742235606,
+    "title": "FAYAN",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ou6UDnROMdbdabk3dRT",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1552765710,
@@ -2303,17 +2316,17 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1715877264,
-    "title": "FERVENTS & ULLA SUSPEKT",
+    "id": 778259175,
+    "title": "Coeur De Pirate",
     "date": "2026-11-06",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 10,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100638-tickets-fervents-ulla-suspekt-schokoladen-berlin-am-06-11-2026",
+    "ticketUrl": "https://columbia-theater.de/event/20261106-coeur-de-pirate-2/",
     "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-28"
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 401795125,
@@ -2327,19 +2340,6 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-28"
-  },
-  {
-    "id": 742235606,
-    "title": "FAYAN",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ou6UDnROMdbdabk3dRT",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 71819305,
@@ -2743,6 +2743,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 2130793354,
+    "title": "Schattenmann",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ozzixdny4xoODsdgj-4",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 172445304,
     "title": "Acht Eimer Hühnerherzen",
     "date": "2026-11-07",
@@ -2795,19 +2808,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 2130793354,
-    "title": "Schattenmann",
-    "date": "2026-11-07",
-    "time": "19:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ozzixdny4xoODsdgj-4",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 377290422,
     "title": "SECHSER & DJ DISPO",
     "date": "2026-11-07",
@@ -2847,32 +2847,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 123914771,
-    "title": "BONAPARTE",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/bonaparte-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 21180928,
-    "title": "THE BIG 80S & DEPECHE MODE PARTY",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/the-big-80s-and-depeche-mode-party-11-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 100970638,
     "title": "Fancy (ausverkauft)",
     "date": "2026-11-07",
@@ -2899,19 +2873,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 98337865,
-    "title": "Heaven 17",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261107-heaven-17/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1761397473,
     "title": "ALFRED HEINRICHS",
     "date": "2026-11-07",
@@ -2923,6 +2884,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 1975374640,
+    "title": "Bial Hclap & Band & Yugo Taguchi & Frieda",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102647-tickets-bial-hclap-band-yugo-taguchi-frieda-schokoladen-berlin-am-07-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-28"
   },
   {
     "id": 284270521,
@@ -3144,19 +3118,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1880822473,
-    "title": "Tokio Hotel",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1828635790,
     "title": "Soulbound x Hell Boulevard",
     "date": "2026-11-07",
@@ -3183,17 +3144,56 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1975374640,
-    "title": "Bial Hclap & Band & Yugo Taguchi & Frieda",
+    "id": 98337865,
+    "title": "Heaven 17",
     "date": "2026-11-07",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 10,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102647-tickets-bial-hclap-band-yugo-taguchi-frieda-schokoladen-berlin-am-07-11-2026",
+    "ticketUrl": "https://columbia-theater.de/event/20261107-heaven-17/",
     "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-28"
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1880822473,
+    "title": "Tokio Hotel",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 123914771,
+    "title": "BONAPARTE",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/bonaparte-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 21180928,
+    "title": "THE BIG 80S & DEPECHE MODE PARTY",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/the-big-80s-and-depeche-mode-party-11-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 200902024,
@@ -3274,6 +3274,19 @@
     "addedAt": "2026-09-02"
   },
   {
+    "id": 2044300814,
+    "title": "Move iT! - die 90er Party",
+    "date": "2026-11-07",
+    "time": "22:00",
+    "locationId": 29,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ot93ch2TMzbtmGNkioh",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1379952369,
     "title": "DTB Maximum Rock Night mit NeRO Award Gewinner 2026",
     "date": "2026-11-07",
@@ -3323,19 +3336,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 2044300814,
-    "title": "Move iT! - die 90er Party",
-    "date": "2026-11-07",
-    "time": "22:00",
-    "locationId": 29,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ot93ch2TMzbtmGNkioh",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 728255439,
@@ -3572,6 +3572,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1562867438,
+    "title": "Fiddlaffairs",
+    "date": "2026-11-08",
+    "time": "19:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OmV3kBRfCpDlQ7n8Kec",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 566996395,
     "title": "La H no Murió",
     "date": "2026-11-08",
@@ -3596,19 +3609,6 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 1562867438,
-    "title": "Fiddlaffairs",
-    "date": "2026-11-08",
-    "time": "19:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OmV3kBRfCpDlQ7n8Kec",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 891646857,
@@ -3637,19 +3637,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1391505979,
-    "title": "TESSERACT VERLEGT AUF 19.03.2027",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/tesseract-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 119123884,
     "title": "Olli Schulz",
     "date": "2026-11-08",
@@ -3661,19 +3648,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 869822316,
-    "title": "Johana Velandia",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261108-johana-velandia/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1522502321,
@@ -3713,6 +3687,19 @@
     "spotifyUrl": "",
     "source": "mikropol",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 329157591,
+    "title": "Dmitry Spirin",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P3UviZwbYzWFgInfTmQ",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1651417688,
@@ -3779,19 +3766,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 2082679369,
-    "title": "Jungle",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2002838373,
     "title": "Keshavara",
     "date": "2026-11-08",
@@ -3818,6 +3792,32 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 869822316,
+    "title": "Johana Velandia",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261108-johana-velandia/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 2082679369,
+    "title": "Jungle",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1791717909,
     "title": "So Soon",
     "date": "2026-11-08",
@@ -3831,17 +3831,17 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 329157591,
-    "title": "Dmitry Spirin",
+    "id": 1391505979,
+    "title": "TESSERACT VERLEGT AUF 19.03.2027",
     "date": "2026-11-08",
     "time": "20:00",
-    "locationId": 29,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P3UviZwbYzWFgInfTmQ",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tesseract-leipzig-2026",
     "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-01"
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2046892229,
@@ -3935,6 +3935,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 1907507839,
+    "title": "SHAKI TAVI",
+    "date": "2026-11-09",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99742-tickets-shaki-tavi-exp-indie-rock-shoegaze-us-schokoladen-berlin-am-09-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1490910146,
     "title": "deary",
     "date": "2026-11-09",
@@ -4023,45 +4036,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 1907507839,
-    "title": "SHAKI TAVI",
-    "date": "2026-11-09",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99742-tickets-shaki-tavi-exp-indie-rock-shoegaze-us-schokoladen-berlin-am-09-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1000811197,
-    "title": "Jenna Raine",
-    "date": "2026-11-09",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P-Iyl1jxH0hYtpkXVZ7",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1879303067,
-    "title": "Manolito Simonet y su Trabuco",
-    "date": "2026-11-09",
-    "time": "21:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OyIYw1adArOdmuBAYkK",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 17176588,
@@ -4181,19 +4155,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 212713239,
-    "title": "ANY GIVEN DAY- VERLEGT AUF 20.10.2027",
-    "date": "2026-11-10",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/any-given-day-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 394546102,
     "title": "Literatursalon: Emmanuel Carrère",
     "date": "2026-11-10",
@@ -4220,17 +4181,17 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 771073006,
-    "title": "Sons Of Legion",
+    "id": 935626267,
+    "title": "EDGING",
     "date": "2026-11-10",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 11,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261110-sons-of-legion/",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/98384-tickets-edging-post-punk-chicago-schokoladen-berlin-am-10-11-2026",
     "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 558797315,
@@ -4362,17 +4323,30 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 935626267,
-    "title": "EDGING",
+    "id": 771073006,
+    "title": "Sons Of Legion",
     "date": "2026-11-10",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 10,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/98384-tickets-edging-post-punk-chicago-schokoladen-berlin-am-10-11-2026",
+    "ticketUrl": "https://columbia-theater.de/event/20261110-sons-of-legion/",
     "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 212713239,
+    "title": "ANY GIVEN DAY- VERLEGT AUF 20.10.2027",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/any-given-day-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 730292829,
@@ -4570,19 +4544,6 @@
     "addedAt": "2026-09-02"
   },
   {
-    "id": 1848650090,
-    "title": "KYTES",
-    "date": "2026-11-11",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/kytes-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1571619884,
     "title": "Cordoba78",
     "date": "2026-11-11",
@@ -4596,19 +4557,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 268465051,
-    "title": "Ghostly Kisses",
-    "date": "2026-11-11",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261111-ghostly-kisses/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 512811718,
     "title": "EAGLES OF DEATH METAL",
     "date": "2026-11-11",
@@ -4620,6 +4568,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 842936726,
+    "title": "Bureau De Change + Mad Kitten",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99498-tickets-bureau-de-change-mad-kitten-schokoladen-berlin-am-11-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1023727250,
@@ -4802,17 +4763,30 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 842936726,
-    "title": "Bureau De Change + Mad Kitten",
+    "id": 268465051,
+    "title": "Ghostly Kisses",
     "date": "2026-11-11",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 10,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99498-tickets-bureau-de-change-mad-kitten-schokoladen-berlin-am-11-11-2026",
+    "ticketUrl": "https://columbia-theater.de/event/20261111-ghostly-kisses/",
     "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1848650090,
+    "title": "KYTES",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/kytes-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1840925767,
@@ -5036,6 +5010,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 1358623971,
+    "title": "Pyro One + KET",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/91693-tickets-pyro-one-ket-schokoladen-berlin-am-12-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 765989923,
     "title": "Love'n'Joy",
     "date": "2026-11-12",
@@ -5252,19 +5239,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1358623971,
-    "title": "Pyro One + KET",
-    "date": "2026-11-12",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/91693-tickets-pyro-one-ket-schokoladen-berlin-am-12-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1301444211,
@@ -5501,19 +5475,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 989126287,
-    "title": "CARPENTER BRUT X HEALTH",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/carpenter-brut-x-health-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2461484,
     "title": "Four Imaginary Boys – The Cure Tribute",
     "date": "2026-11-13",
@@ -5525,19 +5486,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1079272292,
-    "title": "ARCHSPIRE",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261113-archspire/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1891900934,
@@ -5733,6 +5681,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1079272292,
+    "title": "ARCHSPIRE",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261113-archspire/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1485667857,
     "title": "SingAlong – Das große Mitsing-Konzert in Berlin (ausverkauft)",
     "date": "2026-11-13",
@@ -5744,6 +5705,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 989126287,
+    "title": "CARPENTER BRUT X HEALTH",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/carpenter-brut-x-health-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1378393045,
@@ -6068,19 +6042,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 502073208,
-    "title": "70 JAHRE BRAVO",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/bravo-hits-party-leipzig",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 371393736,
     "title": "BORIS (JPN) + special guest: Planning for Burial (US)",
     "date": "2026-11-14",
@@ -6092,19 +6053,6 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 2026380372,
-    "title": "Enkay",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261114-enkay/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1840704019,
@@ -6339,6 +6287,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 2026380372,
+    "title": "Enkay",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261114-enkay/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 590027034,
     "title": "ANDREAS KÜMMERT & THE ELECTRIC CIRCUS",
     "date": "2026-11-14",
@@ -6350,6 +6311,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 502073208,
+    "title": "70 JAHRE BRAVO",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/bravo-hits-party-leipzig",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 540120933,
@@ -6714,19 +6688,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2008661373,
-    "title": "MINE",
-    "date": "2026-11-15",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/mine-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1980177334,
     "title": "LÙISA",
     "date": "2026-11-15",
@@ -6751,19 +6712,6 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 544260487,
-    "title": "Ballet Of Lights",
-    "date": "2026-11-15",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261115-ballet-of-lights/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1687017098,
@@ -6895,6 +6843,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 544260487,
+    "title": "Ballet Of Lights",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261115-ballet-of-lights/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1362622082,
     "title": "Nachtmahr",
     "date": "2026-11-15",
@@ -6906,6 +6867,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2008661373,
+    "title": "MINE",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/mine-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 578959005,
@@ -7012,19 +6986,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1692353151,
-    "title": "Caro",
-    "date": "2026-11-16",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261116-caro/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2096625993,
     "title": "L'Oreille en friche presents: MARTHE X PILANI BUBU",
     "date": "2026-11-16",
@@ -7114,6 +7075,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 1692353151,
+    "title": "Caro",
+    "date": "2026-11-16",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261116-caro/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 799250225,
@@ -7282,19 +7256,6 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1446138541,
-    "title": "Evgeny Khavtan in Berlin",
-    "date": "2026-11-17",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261117-evgeny-khavtan-in-berlin/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 694940295,
@@ -7476,6 +7437,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1446138541,
+    "title": "Evgeny Khavtan in Berlin",
+    "date": "2026-11-17",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261117-evgeny-khavtan-in-berlin/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 898164500,
@@ -7672,19 +7646,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 387436453,
-    "title": "Muse",
-    "date": "2026-11-18",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1003297460,
     "title": "TRAC#4: OPEN STAGE",
     "date": "2026-11-18",
@@ -7695,6 +7656,19 @@
     "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/trac4-open-stage-potsdam-E17NHG8",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 387436453,
+    "title": "Muse",
+    "date": "2026-11-18",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -7709,32 +7683,6 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1554837565,
-    "title": "NIE UND NIMMER VERLEGT AUF 01.12.2026",
-    "date": "2026-11-18",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/nie-und-nimmer-leipzig-2025",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 298358869,
-    "title": "Despised Icon / Carnifex / Suffocation",
-    "date": "2026-11-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261118-despised-icon-carnifex-suffocation/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1761923239,
@@ -7919,6 +7867,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 298358869,
+    "title": "Despised Icon / Carnifex / Suffocation",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261118-despised-icon-carnifex-suffocation/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 729857533,
     "title": "DESIRE",
     "date": "2026-11-18",
@@ -7930,6 +7891,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1554837565,
+    "title": "NIE UND NIMMER VERLEGT AUF 01.12.2026",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/nie-und-nimmer-leipzig-2025",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 592790147,
@@ -8153,19 +8127,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1430401204,
-    "title": "Bulgarian Cartrader",
-    "date": "2026-11-19",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261119-bulgarian-cartrader/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1333356498,
     "title": "ANNA VON HAUSSWOLFF",
     "date": "2026-11-19",
@@ -8370,6 +8331,19 @@
     "ticketUrl": "https://tix.to/Germany-Tour-2026",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1430401204,
+    "title": "Bulgarian Cartrader",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261119-bulgarian-cartrader/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -8580,19 +8554,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 836223128,
-    "title": "HAZE",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/haze-jubil%C3%A4umstour-2026-leipzig_",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2019819950,
     "title": "Anna von Hausswolff",
     "date": "2026-11-20",
@@ -8630,19 +8591,6 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 683254952,
-    "title": "Nie und Nimmer",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261120-nie-und-nimmer-2/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 886383497,
@@ -8940,6 +8888,32 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 683254952,
+    "title": "Nie und Nimmer",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261120-nie-und-nimmer-2/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 836223128,
+    "title": "HAZE",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/haze-jubil%C3%A4umstour-2026-leipzig_",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1806724071,
     "title": "Clive (Splitting Image) and friends + Smelly Family",
     "date": "2026-11-20",
@@ -9159,19 +9133,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 348015507,
-    "title": "Die Schlagernacht des Jahres",
-    "date": "2026-11-21",
-    "time": "18:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2092823986,
     "title": "Roller Disco",
     "date": "2026-11-21",
@@ -9182,6 +9143,19 @@
     "ticketUrl": "https://t.rausgegangen.de/tickets/roller-disco-glitzer-beats-rollerskates-1",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 348015507,
+    "title": "Die Schlagernacht des Jahres",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -9340,19 +9314,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1597020272,
-    "title": "FUTURE PALACE",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/future-palace-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2048594146,
     "title": "Boy Harsher (ausverkauft)",
     "date": "2026-11-21",
@@ -9390,19 +9351,6 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-09-29"
-  },
-  {
-    "id": 449284696,
-    "title": "Frida Gold",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261121-frida-gold/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 2048195153,
@@ -9674,6 +9622,32 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 449284696,
+    "title": "Frida Gold",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261121-frida-gold/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1597020272,
+    "title": "FUTURE PALACE",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/future-palace-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1317242692,
@@ -10011,19 +9985,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1950506864,
-    "title": "Long Distance Calling",
-    "date": "2026-11-22",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261122-long-distance-calling/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 889998840,
     "title": "Salomea",
     "date": "2026-11-22",
@@ -10150,6 +10111,19 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1950506864,
+    "title": "Long Distance Calling",
+    "date": "2026-11-22",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261122-long-distance-calling/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 958740747,
@@ -10280,19 +10254,6 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1943764399,
-    "title": "LEAP",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/leap-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 768277406,
@@ -10450,6 +10411,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1943764399,
+    "title": "LEAP",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/leap-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 135029508,
     "title": "WEDNESDAY 13 & BIRTHDAY MASSACRE",
     "date": "2026-11-24",
@@ -10593,19 +10567,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 361371043,
-    "title": "NIKITA MILLER VERLEGT AUF 2027",
-    "date": "2026-11-24",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/nikita-miller-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 423648597,
     "title": "Yaris",
     "date": "2026-11-24",
@@ -10617,19 +10578,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1724485791,
-    "title": "Catt",
-    "date": "2026-11-24",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261124-catt/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1631268189,
@@ -10736,6 +10684,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 1724485791,
+    "title": "Catt",
+    "date": "2026-11-24",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261124-catt/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1974643545,
     "title": "Gurriers",
     "date": "2026-11-24",
@@ -10747,6 +10708,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 361371043,
+    "title": "NIKITA MILLER VERLEGT AUF 2027",
+    "date": "2026-11-24",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/nikita-miller-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 754482728,
@@ -10944,19 +10918,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 982100476,
-    "title": "Wasia Project",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261125-wasia-project/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 786487830,
     "title": "Sebastian Krämer: „Wieso überhaupt Alpen in Bielefeld?“ Sticker-Album-Release",
     "date": "2026-11-25",
@@ -11124,6 +11085,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 982100476,
+    "title": "Wasia Project",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261125-wasia-project/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 369576453,
@@ -11295,19 +11269,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 529389105,
-    "title": "AMISTAT",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/amistat-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1642131458,
     "title": "DEM GLÜCK GANZ NAH",
     "date": "2026-11-26",
@@ -11319,19 +11280,6 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1544857754,
-    "title": "Baby Lasagna",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261126-baby-lasagna/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 2011466232,
@@ -11476,6 +11424,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1544857754,
+    "title": "Baby Lasagna",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261126-baby-lasagna/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1034729473,
     "title": "Kinderzimmer Productions",
     "date": "2026-11-26",
@@ -11487,6 +11448,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 529389105,
+    "title": "AMISTAT",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/amistat-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1510889580,
@@ -11707,32 +11681,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 34739167,
-    "title": "KAPELLE PETRA",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/kapelle-petra-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1087743932,
-    "title": "RATHMANN @PRIVATCLUB BERLIN",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/rathmann-privatclub-berlin",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1432963423,
     "title": "TOCHTER",
     "date": "2026-11-27",
@@ -11757,19 +11705,6 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 926659588,
-    "title": "Tonic Walter",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261127-tonic-walter/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1622484429,
@@ -12030,6 +11965,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 926659588,
+    "title": "Tonic Walter",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261127-tonic-walter/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 140616983,
     "title": "SBP4 – New Album Live at FRANNZ",
     "date": "2026-11-27",
@@ -12041,6 +11989,32 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 34739167,
+    "title": "KAPELLE PETRA",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/kapelle-petra-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1087743932,
+    "title": "RATHMANN @PRIVATCLUB BERLIN",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/rathmann-privatclub-berlin",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1128126557,
@@ -12391,19 +12365,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 747506592,
-    "title": "TERROR",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/terror-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 127983021,
     "title": "Perkele",
     "date": "2026-11-28",
@@ -12441,19 +12402,6 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-09-27"
-  },
-  {
-    "id": 1668394557,
-    "title": "Dominik Hartz",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261128-dominik-hartz/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 535272738,
@@ -12741,6 +12689,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1668394557,
+    "title": "Dominik Hartz",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261128-dominik-hartz/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1911223541,
     "title": "Fancy",
     "date": "2026-11-28",
@@ -12752,6 +12713,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 747506592,
+    "title": "TERROR",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/terror-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1814173282,
@@ -13128,19 +13102,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 1731686447,
-    "title": "3. JAPANMARKT LEIPZIG",
-    "date": "2026-11-29",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/japanmarkt-leipzig-2026-november",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1514858798,
     "title": "Elif",
     "date": "2026-11-29",
@@ -13152,19 +13113,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 747946139,
-    "title": "Strongboi",
-    "date": "2026-11-29",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261129-strongboi/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1558864804,
@@ -13294,6 +13242,32 @@
     "ticketUrl": "https://t.rausgegangen.de/tickets/streichelt-12",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 747946139,
+    "title": "Strongboi",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261129-strongboi/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1731686447,
+    "title": "3. JAPANMARKT LEIPZIG",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/japanmarkt-leipzig-2026-november",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -13453,32 +13427,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1119308401,
-    "title": "OOES",
-    "date": "2026-11-30",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/ooes-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1571628941,
-    "title": "Platina",
-    "date": "2026-11-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261130-platina/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1682806312,
     "title": "Yaeger",
     "date": "2026-11-30",
@@ -13590,6 +13538,32 @@
     "ticketUrl": "https://t.rausgegangen.de/tickets/dyse-2",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1571628941,
+    "title": "Platina",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261130-platina/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1119308401,
+    "title": "OOES",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/ooes-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -13982,19 +13956,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 701272904,
-    "title": "Nervy",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261202-nervy/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 258879586,
     "title": "SELIG",
     "date": "2026-12-02",
@@ -14134,6 +14095,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 701272904,
+    "title": "Nervy",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261202-nervy/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1795054166,
@@ -14370,19 +14344,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 991317016,
-    "title": "Enno Bunger",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261203-enno-bunger/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1356028211,
     "title": "THE REVIVAL TOUR",
     "date": "2026-12-03",
@@ -14509,6 +14470,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-27"
+  },
+  {
+    "id": 991317016,
+    "title": "Enno Bunger",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261203-enno-bunger/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1128358634,
@@ -14640,19 +14614,6 @@
     "addedAt": "2026-10-28"
   },
   {
-    "id": 255613365,
-    "title": "SDP & The Capital Dance Orchestra",
-    "date": "2026-12-04",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1430204938,
     "title": "SingAlong",
     "date": "2026-12-04",
@@ -14663,6 +14624,19 @@
     "ticketUrl": "https://bezahlung.singalong.de/bezahlung/806",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 255613365,
+    "title": "SDP & The Capital Dance Orchestra",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -14703,19 +14677,6 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1710615529,
-    "title": "Steve 'n' Seagulls",
-    "date": "2026-12-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261204-steve-n-seagulls/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1105679444,
@@ -14870,6 +14831,19 @@
     "ticketUrl": "https://mamagehttanzen-berlin.ticket.io/dPNjAWqz/",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1710615529,
+    "title": "Steve 'n' Seagulls",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261204-steve-n-seagulls/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -15687,19 +15661,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1689427563,
-    "title": "Julia Meladin",
-    "date": "2026-12-06",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261206-julia-meladin/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1204674347,
     "title": "SHABJDEED & AL NATHER",
     "date": "2026-12-06",
@@ -15829,6 +15790,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 1689427563,
+    "title": "Julia Meladin",
+    "date": "2026-12-06",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261206-julia-meladin/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 700058452,
     "title": "Kuult",
     "date": "2026-12-06",
@@ -15920,32 +15894,6 @@
     "addedAt": "2026-10-28"
   },
   {
-    "id": 2134813209,
-    "title": "STEINER & MADLAINA",
-    "date": "2026-12-07",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/steiner-madlaina-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1526758429,
-    "title": "Oleg Vynnyk",
-    "date": "2026-12-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261207-oleg-vynnyk/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1646552977,
     "title": "VOILÀ",
     "date": "2026-12-07",
@@ -15995,6 +15943,32 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1526758429,
+    "title": "Oleg Vynnyk",
+    "date": "2026-12-07",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261207-oleg-vynnyk/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 2134813209,
+    "title": "STEINER & MADLAINA",
+    "date": "2026-12-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/steiner-madlaina-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1932907466,
@@ -16100,19 +16074,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1636806296,
-    "title": "BAP",
-    "date": "2026-12-08",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1309884259,
     "title": "ZAQ Medienquiz",
     "date": "2026-12-08",
@@ -16123,6 +16084,19 @@
     "ticketUrl": "https://www.waschhaus.de/veranstaltungen/zaq-medienquiz-08-12-2026",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1636806296,
+    "title": "BAP",
+    "date": "2026-12-08",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -16137,32 +16111,6 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 696155915,
-    "title": "MIGHTY OAKS",
-    "date": "2026-12-08",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/mighty-oaks-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 942504102,
-    "title": "Verivery",
-    "date": "2026-12-08",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261208-verivery/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1369033965,
@@ -16254,6 +16202,32 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 942504102,
+    "title": "Verivery",
+    "date": "2026-12-08",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261208-verivery/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 696155915,
+    "title": "MIGHTY OAKS",
+    "date": "2026-12-08",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/mighty-oaks-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1477374333,
@@ -16670,19 +16644,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 235712358,
-    "title": "SOEN",
-    "date": "2026-12-10",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261210-soen/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 978143673,
     "title": "SONGSLAM NEUKÖLLN JAHRESFINALE",
     "date": "2026-12-10",
@@ -16796,6 +16757,19 @@
     "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/havel-slam-havel-slam-potsdam-EUH3XQK",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 235712358,
+    "title": "SOEN",
+    "date": "2026-12-10",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261210-soen/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -16966,19 +16940,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 171881350,
-    "title": "Dillon",
-    "date": "2026-12-11",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261211-dillon/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1969832020,
     "title": "Jule von Da & Love, The Twains – Deutschpop und Indie Pop",
     "date": "2026-12-11",
@@ -17144,6 +17105,19 @@
     "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/ben-becker-liest-tc-no-potsdam-ZUF40X",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 171881350,
+    "title": "Dillon",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261211-dillon/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -17381,19 +17355,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2064951038,
-    "title": "REMODE",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/remode-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 511166605,
     "title": "Freunde der italienischen Oper, Der Expander des Fortschritts, Rosengarten, Rex Joswig & Lutz Schramm",
     "date": "2026-12-12",
@@ -17405,19 +17366,6 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 455515506,
-    "title": "Goldroger",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261212-goldroger/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 547531452,
@@ -17572,6 +17520,32 @@
     "ticketUrl": "https://standup-republic.de/events/Comedyflash%20-%20Potsdam",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 455515506,
+    "title": "Goldroger",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261212-goldroger/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 2064951038,
+    "title": "REMODE",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/remode-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -17845,19 +17819,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1288136518,
-    "title": "Ballet Of Lights",
-    "date": "2026-12-13",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261213-ballet-of-lights/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 448256838,
     "title": "Dayseeker",
     "date": "2026-12-13",
@@ -17895,6 +17856,19 @@
     "spotifyUrl": "",
     "source": "nato",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1288136518,
+    "title": "Ballet Of Lights",
+    "date": "2026-12-13",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261213-ballet-of-lights/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 129361179,
@@ -18103,19 +18077,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1294199127,
-    "title": "5'Nizza",
-    "date": "2026-12-15",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261215-5nizza/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1198815290,
     "title": "ADOLF SÜDKNECHT – Die Seifenoper Improschau – … Adolf auf der Mustermesse",
     "date": "2026-12-15",
@@ -18179,6 +18140,19 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 1294199127,
+    "title": "5'Nizza",
+    "date": "2026-12-15",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261215-5nizza/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1822488679,
@@ -18414,19 +18388,6 @@
     "addedAt": "2026-09-27"
   },
   {
-    "id": 59852794,
-    "title": "101 Voices - Depeche Mode Special Tribute",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 672809719,
     "title": "Seraphina Kalze",
     "date": "2026-12-16",
@@ -18437,6 +18398,19 @@
     "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/seraphina-kalze-jetzt-potsdam-ARQ8B6",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 59852794,
+    "title": "101 Voices - Depeche Mode Special Tribute",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -18531,19 +18505,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1669986674,
-    "title": "Ibeyi",
-    "date": "2026-12-17",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261217-ibeyi/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 122110975,
     "title": "Gotobeat & 7alent Scout present: SILOÉ",
     "date": "2026-12-17",
@@ -18632,6 +18593,19 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1669986674,
+    "title": "Ibeyi",
+    "date": "2026-12-17",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261217-ibeyi/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1699198044,
@@ -18802,19 +18776,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1230011825,
-    "title": "GOLDROGER",
-    "date": "2026-12-18",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/goldroger-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 289170602,
     "title": "ORGI’S WEIHNACHTSSHOW",
     "date": "2026-12-18",
@@ -18839,19 +18800,6 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 2137953432,
-    "title": "Erdmöbel",
-    "date": "2026-12-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261218-erdmoebel/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 96585535,
@@ -18958,6 +18906,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 2137953432,
+    "title": "Erdmöbel",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261218-erdmoebel/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 307648884,
     "title": "SingAlong – Das große Mitsing-Konzert in Berlin",
     "date": "2026-12-18",
@@ -18969,6 +18930,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1230011825,
+    "title": "GOLDROGER",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/goldroger-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 856590432,
@@ -19256,32 +19230,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1037547619,
-    "title": "LEIPZIG XXL",
-    "date": "2026-12-19",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/leipzig-xxl-dezember-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 586999446,
-    "title": "Ultra Night",
-    "date": "2026-12-19",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261219-ultra-night/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1408359785,
     "title": "Knalltheater – Theater / Comedy / Musik",
     "date": "2026-12-19",
@@ -19396,6 +19344,32 @@
     "spotifyUrl": "",
     "source": "nato",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 586999446,
+    "title": "Ultra Night",
+    "date": "2026-12-19",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261219-ultra-night/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1037547619,
+    "title": "LEIPZIG XXL",
+    "date": "2026-12-19",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/leipzig-xxl-dezember-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 258046674,
@@ -20176,17 +20150,17 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 25458672,
-    "title": "NORTHERN LITE - CHRISTMAS SHOW",
+    "id": 453330736,
+    "title": "Crucchi Gang",
     "date": "2026-12-28",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 32,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/northern-lite-christmas-show-leipzig-2026",
+    "ticketUrl": "https://tickets.loft.de/event/crucchi-gang-a9cmjg",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "columbiahalle",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 2099333188,
@@ -20202,19 +20176,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 453330736,
-    "title": "Crucchi Gang",
-    "date": "2026-12-28",
-    "time": "20:00",
-    "locationId": 32,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://tickets.loft.de/event/crucchi-gang-a9cmjg",
-    "spotifyUrl": "",
-    "source": "columbiahalle",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 820862807,
     "title": "Matthias Reim",
     "date": "2026-12-28",
@@ -20225,6 +20186,19 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/matthias-reim-26/2026-12-28-2000",
     "spotifyUrl": "",
     "source": "uberarena",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 25458672,
+    "title": "NORTHERN LITE - CHRISTMAS SHOW",
+    "date": "2026-12-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/northern-lite-christmas-show-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -20318,19 +20292,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1714144765,
-    "title": "Alexa Feser",
-    "date": "2026-12-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261230-alexa-feser/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 57147648,
     "title": "KINDERPHILHARMONIE - Klassik für Kleine (1-3 Jahre)",
     "date": "2026-12-30",
@@ -20381,6 +20342,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1714144765,
+    "title": "Alexa Feser",
+    "date": "2026-12-30",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261230-alexa-feser/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1207881957,
@@ -20500,19 +20474,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1490197346,
-    "title": "SILVESTER XXL",
-    "date": "2026-12-31",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/silvester-xxl-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1236733132,
     "title": "Cheers!",
     "date": "2026-12-31",
@@ -20537,6 +20498,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1490197346,
+    "title": "SILVESTER XXL",
+    "date": "2026-12-31",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/silvester-xxl-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 366892765,
@@ -20927,19 +20901,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 407575566,
-    "title": "90ER & 2000ER PARTY",
-    "date": "2027-01-09",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/90er-2000er-party-leipzig-2027-01",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1373400457,
     "title": "Leipziger Neujahrssingen",
     "date": "2027-01-09",
@@ -20977,6 +20938,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 407575566,
+    "title": "90ER & 2000ER PARTY",
+    "date": "2027-01-09",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/90er-2000er-party-leipzig-2027-01",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1222231152,
@@ -21043,19 +21017,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1410383953,
-    "title": "HAALAND936",
-    "date": "2027-01-11",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/haaland936-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1063940806,
     "title": "U.D.O.",
     "date": "2027-01-11",
@@ -21067,6 +21028,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1410383953,
+    "title": "HAALAND936",
+    "date": "2027-01-11",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/haaland936-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1701373735,
@@ -21082,19 +21056,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1178902210,
-    "title": "THE NOTWIST",
-    "date": "2027-01-12",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/the-notwist-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1716514079,
     "title": "THE NOTWIST (d/ morr music)",
     "date": "2027-01-12",
@@ -21106,6 +21067,19 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1178902210,
+    "title": "THE NOTWIST",
+    "date": "2027-01-12",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/the-notwist-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1054195086,
@@ -21264,19 +21238,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1017470945,
-    "title": "Heavytones",
-    "date": "2027-01-15",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270115-heavytones/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1856394915,
     "title": "Dieter Nuhr",
     "date": "2027-01-15",
@@ -21339,6 +21300,19 @@
     "ticketUrl": "https://t.rausgegangen.de/tickets/hotel-rimini-1",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1017470945,
+    "title": "Heavytones",
+    "date": "2027-01-15",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270115-heavytones/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -21471,19 +21445,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 306664151,
-    "title": "YU",
-    "date": "2027-01-16",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/yu-weirdos-welcome-tour-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 717839043,
     "title": "A´COMA",
     "date": "2027-01-16",
@@ -21510,6 +21471,19 @@
     "addedAt": "2026-09-27"
   },
   {
+    "id": 2145169374,
+    "title": "Dieter Nuhr",
+    "date": "2027-01-16",
+    "time": "20:00",
+    "locationId": 25,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tempodrom.de/event/dieter_nuhr_2027-01-16_20/",
+    "spotifyUrl": "",
+    "source": "tempodrom",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 173443716,
     "title": "Dice Actors Live on Stage",
     "date": "2027-01-16",
@@ -21523,17 +21497,17 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 2145169374,
-    "title": "Dieter Nuhr",
+    "id": 306664151,
+    "title": "YU",
     "date": "2027-01-16",
     "time": "20:00",
-    "locationId": 25,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.tempodrom.de/event/dieter_nuhr_2027-01-16_20/",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/yu-weirdos-welcome-tour-2027",
     "spotifyUrl": "",
-    "source": "tempodrom",
-    "addedAt": "2026-08-17"
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 918106175,
@@ -21640,19 +21614,6 @@
     "addedAt": "2026-09-22"
   },
   {
-    "id": 1593197545,
-    "title": "The Black Dahlia Murder",
-    "date": "2027-01-17",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270117-the-black-dahlia-murder/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2078611157,
     "title": "Blacktoothed",
     "date": "2027-01-17",
@@ -21664,6 +21625,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-09-23"
+  },
+  {
+    "id": 1593197545,
+    "title": "The Black Dahlia Murder",
+    "date": "2027-01-17",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270117-the-black-dahlia-murder/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1043600798,
@@ -21796,19 +21770,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 2002801613,
-    "title": "SO SOON @UT CONNEWITZ VERLEGT AUF 22.04.2027",
-    "date": "2027-01-20",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/so-soon-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 136339945,
     "title": "Kauta",
     "date": "2027-01-20",
@@ -21819,6 +21780,19 @@
     "ticketUrl": "https://columbia-theater.de/event/20270120-kauta/",
     "spotifyUrl": "",
     "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 2002801613,
+    "title": "SO SOON @UT CONNEWITZ VERLEGT AUF 22.04.2027",
+    "date": "2027-01-20",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/so-soon-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -21848,19 +21822,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1822265556,
-    "title": "Slow Pulp",
-    "date": "2027-01-21",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270121-slow-pulp/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1924076760,
     "title": "Das Phantom der Oper",
     "date": "2027-01-21",
@@ -21872,6 +21833,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1822265556,
+    "title": "Slow Pulp",
+    "date": "2027-01-21",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270121-slow-pulp/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1650958142,
@@ -22056,19 +22030,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 11484920,
-    "title": "Catch Your Breath",
-    "date": "2027-01-23",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270123-catch-your-breath/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 24615471,
     "title": "Sainte Vie",
     "date": "2027-01-23",
@@ -22079,6 +22040,19 @@
     "ticketUrl": "https://larkberlin.com/event/sainte-vie/",
     "spotifyUrl": "",
     "source": "lark",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 11484920,
+    "title": "Catch Your Breath",
+    "date": "2027-01-23",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270123-catch-your-breath/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -22185,19 +22159,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 924224132,
-    "title": "Anaïs",
-    "date": "2027-01-24",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270124-anais-2/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 642903988,
     "title": "HAPPY MONDAYS",
     "date": "2027-01-24",
@@ -22250,6 +22211,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 924224132,
+    "title": "Anaïs",
+    "date": "2027-01-24",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270124-anais-2/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 761818808,
     "title": "Der Nussknacker - Royal Classical Ballet",
     "date": "2027-01-25",
@@ -22289,19 +22263,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1830715674,
-    "title": "aespa",
-    "date": "2027-01-26",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/aespa/2027-01-26-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1093707975,
     "title": "Michael Mittermeier",
     "date": "2027-01-26",
@@ -22312,6 +22273,19 @@
     "ticketUrl": "https://www.eventim.de/en/event/michael-mittermeier-oldboy-sind-wir-bald-da-waschhaus-potsdam-21472721/",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1830715674,
+    "title": "aespa",
+    "date": "2027-01-26",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/aespa/2027-01-26-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -22470,19 +22444,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 241694307,
-    "title": "DR. POP",
-    "date": "2027-01-28",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/dr-pop-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1164558328,
     "title": "ISAIAH RASHAD",
     "date": "2027-01-28",
@@ -22506,6 +22467,19 @@
     "ticketUrl": "https://t.rausgegangen.de/tickets/nick-june-6",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 241694307,
+    "title": "DR. POP",
+    "date": "2027-01-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/dr-pop-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -22600,19 +22574,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 102309905,
-    "title": "CALLEJON",
-    "date": "2027-01-29",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/callejon-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 501722855,
     "title": "Get Well Soon",
     "date": "2027-01-29",
@@ -22691,6 +22652,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 102309905,
+    "title": "CALLEJON",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/callejon-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 564652619,
     "title": "The Blue Velvets + Romp`n`Stomp",
     "date": "2027-01-29",
@@ -22756,19 +22730,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1899721172,
-    "title": "FLOOR JANSEN",
-    "date": "2027-01-30",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/floor-jansen-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1820613651,
     "title": "Fancy",
     "date": "2027-01-30",
@@ -22780,19 +22741,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 214325342,
-    "title": "Wage War",
-    "date": "2027-01-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270130-wage-war/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 178704617,
@@ -22819,6 +22767,32 @@
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 214325342,
+    "title": "Wage War",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270130-wage-war/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1899721172,
+    "title": "FLOOR JANSEN",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/floor-jansen-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1687079560,
@@ -23132,19 +23106,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 446871869,
-    "title": "Delain",
-    "date": "2027-02-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270204-delain/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 583493057,
     "title": "Dummy",
     "date": "2027-02-04",
@@ -23194,6 +23155,19 @@
     "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/havel-slam-geburtstag-potsdam-E1PXXXP",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 446871869,
+    "title": "Delain",
+    "date": "2027-02-04",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270204-delain/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -23288,19 +23262,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 859439500,
-    "title": "CATT",
-    "date": "2027-02-05",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/CATT-leipzig-taeubchenthal-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1020201459,
     "title": "ENSLAVED & Sólstafir",
     "date": "2027-02-05",
@@ -23377,6 +23338,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 859439500,
+    "title": "CATT",
+    "date": "2027-02-05",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/CATT-leipzig-taeubchenthal-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1117271180,
@@ -23975,19 +23949,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 785601591,
-    "title": "BASEMENT",
-    "date": "2027-02-10",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/basement-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 34085061,
     "title": "Nickless",
     "date": "2027-02-10",
@@ -24024,6 +23985,19 @@
     "ticketUrl": "https://larkberlin.com/event/eli/",
     "spotifyUrl": "",
     "source": "lark",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 785601591,
+    "title": "BASEMENT",
+    "date": "2027-02-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/basement-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -24456,19 +24430,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 616358846,
-    "title": "THE BIG 80S & DEPECHE MODE PARTY",
-    "date": "2027-02-13",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/the-big-80s-and-depeche-mode-party-11-2026_01",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1347874824,
     "title": "Ugly",
     "date": "2027-02-13",
@@ -24534,6 +24495,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 616358846,
+    "title": "THE BIG 80S & DEPECHE MODE PARTY",
+    "date": "2027-02-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/the-big-80s-and-depeche-mode-party-11-2026_01",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 516103525,
     "title": "WHAT + The Resets + Sprung Ins Leere",
     "date": "2027-02-13",
@@ -24557,6 +24531,19 @@
     "ticketUrl": "https://club.ritterbutzke.com/event/130227-aname",
     "spotifyUrl": "",
     "source": "ritterbutzke",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1592545497,
+    "title": "Soul Explosion",
+    "date": "2027-02-13",
+    "time": "23:00",
+    "locationId": 4,
+    "type": "konzert",
+    "description": "DJ King Dynamite",
+    "ticketUrl": "https://privatclub-berlin.de/event/soul-explosion-2-2-2-2-2-2-2-2-2-2-2-2-2-3-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-3-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-3-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2/",
+    "spotifyUrl": "",
+    "source": "privatclub",
     "addedAt": "2026-11-02"
   },
   {
@@ -24690,19 +24677,6 @@
     "addedAt": "2026-09-02"
   },
   {
-    "id": 59245461,
-    "title": "Dagny",
-    "date": "2027-02-15",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270215-dagny/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1714155419,
     "title": "BINA.",
     "date": "2027-02-15",
@@ -24713,6 +24687,19 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82405/",
     "spotifyUrl": "",
     "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 59245461,
+    "title": "Dagny",
+    "date": "2027-02-15",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270215-dagny/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -24755,19 +24742,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 750200193,
-    "title": "Sampa The Great",
-    "date": "2027-02-16",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270216-sampa-the-great/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 548651662,
     "title": "BEAT IT!",
     "date": "2027-02-16",
@@ -24794,6 +24768,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 750200193,
+    "title": "Sampa The Great",
+    "date": "2027-02-16",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270216-sampa-the-great/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1165110574,
     "title": "Bullet For My Valentine",
     "date": "2027-02-17",
@@ -24818,19 +24805,6 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1737941917,
-    "title": "Michael Schulte",
-    "date": "2027-02-17",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270217-michael-schulte/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1258802801,
@@ -24898,6 +24872,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1737941917,
+    "title": "Michael Schulte",
+    "date": "2027-02-17",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270217-michael-schulte/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 471443795,
     "title": "Ryan Sheridan",
     "date": "2027-02-17",
@@ -24909,6 +24896,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-09-22"
+  },
+  {
+    "id": 1430457724,
+    "title": "EMERGENZA BERLIN",
+    "date": "2027-02-18",
+    "time": "18:00",
+    "locationId": 4,
+    "type": "konzert",
+    "description": "The Best Bands in Town for an Exciting Music Evening",
+    "ticketUrl": "https://emergenza.live/allconcerts",
+    "spotifyUrl": "",
+    "source": "privatclub",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 181608098,
@@ -24960,19 +24960,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1210687447,
-    "title": "Knox",
-    "date": "2027-02-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270218-knox/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1228710032,
@@ -25037,6 +25024,19 @@
     "ticketUrl": "https://www.eventim.de/en/event/betti-kruse-wird-schon-gutgehn-tour-2027-waschhaus-potsdam-21869921/",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1210687447,
+    "title": "Knox",
+    "date": "2027-02-18",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270218-knox/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -25156,19 +25156,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1592264580,
-    "title": "SKI AGGU",
-    "date": "2027-02-19",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/ski-aggu-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1414102525,
     "title": "WARHAUS",
     "date": "2027-02-19",
@@ -25260,6 +25247,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1592264580,
+    "title": "SKI AGGU",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/ski-aggu-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1786829016,
     "title": "Black Magic Six + +Guest",
     "date": "2027-02-19",
@@ -25271,6 +25271,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1942895330,
+    "title": "Dance Dance Revolution",
+    "date": "2027-02-19",
+    "time": "23:00",
+    "locationId": 4,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://privatclub-berlin.de/event/dance-dance-revolution-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-3-2-2-2/",
+    "spotifyUrl": "",
+    "source": "privatclub",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 961379871,
@@ -25338,19 +25351,6 @@
     "addedAt": "2026-09-30"
   },
   {
-    "id": 1099580565,
-    "title": "AFRO BOMB",
-    "date": "2027-02-20",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/afro-bomg-indoor-festival-leipzig",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1671998607,
     "title": "KomaCasper & Friends Tour",
     "date": "2027-02-20",
@@ -25362,19 +25362,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1458902859,
-    "title": "Frozen Soul",
-    "date": "2027-02-20",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270220-frozen-soul/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1474819702,
@@ -25453,6 +25440,32 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1458902859,
+    "title": "Frozen Soul",
+    "date": "2027-02-20",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270220-frozen-soul/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1099580565,
+    "title": "AFRO BOMB",
+    "date": "2027-02-20",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/afro-bomg-indoor-festival-leipzig",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 486560162,
@@ -25583,19 +25596,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1795380091,
-    "title": "Ballet Of Lights",
-    "date": "2027-02-21",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270221-ballet-of-lights/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 433089045,
     "title": "Moyka",
     "date": "2027-02-21",
@@ -25606,6 +25606,19 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82432/",
     "spotifyUrl": "",
     "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1795380091,
+    "title": "Ballet Of Lights",
+    "date": "2027-02-21",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270221-ballet-of-lights/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -25661,19 +25674,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1544092043,
-    "title": "Melrose Avenue",
-    "date": "2027-02-22",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270222-melrose-avenue/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1678534221,
     "title": "ADAM GREEN",
     "date": "2027-02-22",
@@ -25698,6 +25698,19 @@
     "spotifyUrl": "",
     "source": "mikropol",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1544092043,
+    "title": "Melrose Avenue",
+    "date": "2027-02-22",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270222-melrose-avenue/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1253569967,
@@ -25778,19 +25791,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1961004824,
-    "title": "Bernth",
-    "date": "2027-02-23",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270223-bernth/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1044375632,
     "title": "SLEEPING WITH SIRENS",
     "date": "2027-02-23",
@@ -25815,6 +25815,19 @@
     "spotifyUrl": "",
     "source": "mikropol",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1961004824,
+    "title": "Bernth",
+    "date": "2027-02-23",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270223-bernth/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1649641569,
@@ -25869,19 +25882,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1717286794,
-    "title": "Jaill",
-    "date": "2027-02-24",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270224-jaill/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1340551522,
     "title": "Outlander in Concert",
     "date": "2027-02-24",
@@ -25906,6 +25906,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1717286794,
+    "title": "Jaill",
+    "date": "2027-02-24",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270224-jaill/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 6607956,
@@ -25986,19 +25999,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1066619210,
-    "title": "Levka",
-    "date": "2027-02-25",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270225-levka/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1184307160,
     "title": "THE HEADLINES",
     "date": "2027-02-25",
@@ -26048,6 +26048,19 @@
     "ticketUrl": "https://t.rausgegangen.de/tickets/kapa-tult-1",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1066619210,
+    "title": "Levka",
+    "date": "2027-02-25",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270225-levka/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -26142,32 +26155,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1315722699,
-    "title": "ZEROMANCER",
-    "date": "2027-02-26",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/zeromancer-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1426136078,
-    "title": "Jonah Kagen",
-    "date": "2027-02-26",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270226-jonah-kagen/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1262583931,
     "title": "HOT CHIP",
     "date": "2027-02-26",
@@ -26256,6 +26243,32 @@
     "ticketUrl": "https://larkberlin.com/event/neov/",
     "spotifyUrl": "",
     "source": "lark",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1426136078,
+    "title": "Jonah Kagen",
+    "date": "2027-02-26",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270226-jonah-kagen/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1315722699,
+    "title": "ZEROMANCER",
+    "date": "2027-02-26",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/zeromancer-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -26375,19 +26388,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 997718611,
-    "title": "Schandmaul",
-    "date": "2027-02-27",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270227-schandmaul/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1096223388,
     "title": "Jenke von Wilmsdorff",
     "date": "2027-02-27",
@@ -26437,6 +26437,19 @@
     "ticketUrl": "https://mvb-leipzig.de/mc-events/repeat/",
     "spotifyUrl": "",
     "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 997718611,
+    "title": "Schandmaul",
+    "date": "2027-02-27",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270227-schandmaul/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -26893,19 +26906,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 77136657,
-    "title": "South Arcade",
-    "date": "2027-03-05",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270305-south-arcade/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1265457828,
     "title": "LENA & LINUS",
     "date": "2027-03-05",
@@ -26955,6 +26955,19 @@
     "ticketUrl": "https://www.eventim.de/en/event/nightwash-live-nightwash-das-sing-ding-das-lustigste-mit-sing-konzert-aller-zeiten-tour-2027-waschhaus-potsdam-22196293/",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 77136657,
+    "title": "South Arcade",
+    "date": "2027-03-05",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270305-south-arcade/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -27034,19 +27047,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 643489088,
-    "title": "Mamas Gun",
-    "date": "2027-03-06",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270306-mamas-gun/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1022709308,
@@ -27149,6 +27149,19 @@
     "ticketUrl": "https://www.waschhaus.de/veranstaltungen/mia-06-03-2027",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 643489088,
+    "title": "Mamas Gun",
+    "date": "2027-03-06",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270306-mamas-gun/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -27255,19 +27268,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1871023339,
-    "title": "The Haunted Youth",
-    "date": "2027-03-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270307-the-haunted-youth/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 428680035,
     "title": "Dead Butterflies",
     "date": "2027-03-07",
@@ -27278,6 +27278,19 @@
     "ticketUrl": "https://cassiopeia-berlin.de/event/dead-butterflies-111664555",
     "spotifyUrl": "",
     "source": "cassiopeia",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1871023339,
+    "title": "The Haunted Youth",
+    "date": "2027-03-07",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270307-the-haunted-youth/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -27359,19 +27372,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 13921615,
-    "title": "PAULWETZ",
-    "date": "2027-03-09",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/paulwetz_leipzig_2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1349680206,
     "title": "twocolors",
     "date": "2027-03-09",
@@ -27383,19 +27383,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1283451091,
-    "title": "Tiny Habits",
-    "date": "2027-03-09",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270309-tiny-habits/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1008818607,
@@ -27436,6 +27423,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1283451091,
+    "title": "Tiny Habits",
+    "date": "2027-03-09",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270309-tiny-habits/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 979603632,
     "title": "Jayler",
     "date": "2027-03-09",
@@ -27447,6 +27447,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 13921615,
+    "title": "PAULWETZ",
+    "date": "2027-03-09",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/paulwetz_leipzig_2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 636230127,
@@ -27514,19 +27527,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1428162488,
-    "title": "TRÄNEN",
-    "date": "2027-03-10",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/tr%C3%A4nrn-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 489184031,
     "title": "Betterov",
     "date": "2027-03-10",
@@ -27538,19 +27538,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 1155734545,
-    "title": "Haiden Henderson",
-    "date": "2027-03-10",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270310-haiden-henderson/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 426845467,
@@ -27605,6 +27592,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1155734545,
+    "title": "Haiden Henderson",
+    "date": "2027-03-10",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270310-haiden-henderson/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1496151779,
     "title": "Paula Cole",
     "date": "2027-03-10",
@@ -27616,6 +27616,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1428162488,
+    "title": "TRÄNEN",
+    "date": "2027-03-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tr%C3%A4nrn-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 854085152,
@@ -27670,19 +27683,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1700992266,
-    "title": "ROLF MILLER",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/rolf-miller-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 25426895,
     "title": "Team Scheisse",
     "date": "2027-03-11",
@@ -27720,19 +27720,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1123994478,
-    "title": "Tränen",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270311-traenen/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1129907631,
@@ -27773,6 +27760,32 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1603476598,
+    "title": "Schwarze Grütze",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/schwarze-grutze-elegant-potsdam-PAPLD7",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1123994478,
+    "title": "Tränen",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270311-traenen/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 617736245,
     "title": "Teddy Swims",
     "date": "2027-03-11",
@@ -27786,16 +27799,16 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1603476598,
-    "title": "Schwarze Grütze",
+    "id": 1700992266,
+    "title": "ROLF MILLER",
     "date": "2027-03-11",
     "time": "20:00",
-    "locationId": 58,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/schwarze-grutze-elegant-potsdam-PAPLD7",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/rolf-miller-2027",
     "spotifyUrl": "",
-    "source": "waschhaus",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -27862,19 +27875,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 207477860,
-    "title": "Zeromancer",
-    "date": "2027-03-12",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270312-zeromancer/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1851087305,
@@ -27966,6 +27966,19 @@
     "addedAt": "2026-09-27"
   },
   {
+    "id": 207477860,
+    "title": "Zeromancer",
+    "date": "2027-03-12",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270312-zeromancer/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1339019632,
     "title": "KREMER",
     "date": "2027-03-13",
@@ -28028,19 +28041,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2027-03-13-paul-ses",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1483314545,
-    "title": "ROCK TO MODE",
-    "date": "2027-03-13",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/rock-to-mode-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -28173,6 +28173,19 @@
     "addedAt": "2026-09-27"
   },
   {
+    "id": 1483314545,
+    "title": "ROCK TO MODE",
+    "date": "2027-03-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/rock-to-mode-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1303347681,
     "title": "Disco Inferno",
     "date": "2027-03-13",
@@ -28250,19 +28263,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1056067205,
-    "title": "GRAVEYARD & BLUES PILLS",
-    "date": "2027-03-14",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/graveyard-blues-pills-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 188812898,
     "title": "Dea Matrona",
     "date": "2027-03-14",
@@ -28325,6 +28325,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 1056067205,
+    "title": "GRAVEYARD & BLUES PILLS",
+    "date": "2027-03-14",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/graveyard-blues-pills-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 930931243,
@@ -28624,19 +28637,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 815758585,
-    "title": "JULIA EFFEKT",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/julia-effekt-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 32289913,
     "title": "OG Keemo (Zusatzshow)",
     "date": "2027-03-18",
@@ -28702,6 +28702,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 293050161,
+    "title": "Kirsten Fuchs",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/kirsten-fuchs-2",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 38507416,
     "title": "Maite Kelly",
     "date": "2027-03-18",
@@ -28715,16 +28728,16 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 293050161,
-    "title": "Kirsten Fuchs",
+    "id": 815758585,
+    "title": "JULIA EFFEKT",
     "date": "2027-03-18",
     "time": "20:00",
-    "locationId": 58,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/kirsten-fuchs-2",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/julia-effekt-leipzig-2027",
     "spotifyUrl": "",
-    "source": "waschhaus",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -28790,19 +28803,6 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 947768394,
-    "title": "TESSERACT",
-    "date": "2027-03-19",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/tesseract-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 683244556,
@@ -28882,6 +28882,19 @@
     "addedAt": "2026-09-27"
   },
   {
+    "id": 947768394,
+    "title": "TESSERACT",
+    "date": "2027-03-19",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tesseract-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1014845509,
     "title": "Lael Neale",
     "date": "2027-03-20",
@@ -28906,32 +28919,6 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-09-27"
-  },
-  {
-    "id": 1356839098,
-    "title": "ANNA-MARIA ZIMMERMANN",
-    "date": "2027-03-20",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/anna-maria-zimmermann-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 429995761,
-    "title": "THE DEAD DAISIES FEATURING KELLY HANSEN",
-    "date": "2027-03-20",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270320-the-dead-daisies-featuring-kelly-hansen/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1835208510,
@@ -28973,6 +28960,19 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 429995761,
+    "title": "THE DEAD DAISIES FEATURING KELLY HANSEN",
+    "date": "2027-03-20",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270320-the-dead-daisies-featuring-kelly-hansen/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1412581907,
     "title": "James Blunt",
     "date": "2027-03-20",
@@ -28983,6 +28983,19 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/james-blunt-berlin/2027-03-20-2000",
     "spotifyUrl": "",
     "source": "uberarena",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1356839098,
+    "title": "ANNA-MARIA ZIMMERMANN",
+    "date": "2027-03-20",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/anna-maria-zimmermann-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -29245,19 +29258,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 196661891,
-    "title": "KMFDM",
-    "date": "2027-03-25",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270325-kmfdm/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 494632267,
     "title": "BELLA POARCH",
     "date": "2027-03-25",
@@ -29283,27 +29283,14 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1939472231,
+    "id": 196661891,
     "title": "KMFDM",
-    "date": "2027-03-26",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/kmfdm-leizig-2027-03",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 325976119,
-    "title": "Varg",
-    "date": "2027-03-26",
+    "date": "2027-03-25",
     "time": "20:00",
     "locationId": 10,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270326-varg/",
+    "ticketUrl": "https://columbia-theater.de/event/20270325-kmfdm/",
     "spotifyUrl": "",
     "source": "columbiatheater",
     "addedAt": "2026-11-02"
@@ -29322,6 +29309,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 325976119,
+    "title": "Varg",
+    "date": "2027-03-26",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270326-varg/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 122399603,
     "title": "Therodor",
     "date": "2027-03-26",
@@ -29333,6 +29333,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-09-29"
+  },
+  {
+    "id": 1939472231,
+    "title": "KMFDM",
+    "date": "2027-03-26",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/kmfdm-leizig-2027-03",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1271663641,
@@ -29387,19 +29400,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1190283847,
-    "title": "LANCE BUTTERS",
-    "date": "2027-03-27",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/lance-butters-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 967127720,
     "title": "One Step Closer – a Tribute to Linkin Park",
     "date": "2027-03-27",
@@ -29436,6 +29436,19 @@
     "ticketUrl": "https://huxleysneuewelt.de/event/2027-03-27-pascow",
     "spotifyUrl": "",
     "source": "huxleys",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1190283847,
+    "title": "LANCE BUTTERS",
+    "date": "2027-03-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/lance-butters-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -29608,19 +29621,6 @@
     "addedAt": "2026-09-22"
   },
   {
-    "id": 840272208,
-    "title": "Nieve Ella",
-    "date": "2027-03-31",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270331-nieve-ella/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1051507898,
     "title": "TAHNEE",
     "date": "2027-03-31",
@@ -29645,6 +29645,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 840272208,
+    "title": "Nieve Ella",
+    "date": "2027-03-31",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270331-nieve-ella/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1724934685,
@@ -29828,19 +29841,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 321870144,
-    "title": "Lance Butters",
-    "date": "2027-04-02",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270402-lance-butters/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1066336964,
     "title": "Leoniden",
     "date": "2027-04-02",
@@ -29892,6 +29892,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 321870144,
+    "title": "Lance Butters",
+    "date": "2027-04-02",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270402-lance-butters/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 973531682,
     "title": "ACID ARAB live",
     "date": "2027-04-02",
@@ -29928,19 +29941,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2027-04-03-dancing-with-myself-",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 796528251,
-    "title": "LEONY",
-    "date": "2027-04-03",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/leony-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -30031,6 +30031,19 @@
     "ticketUrl": "https://www.aspswelten.de/shop/wunschgegner-tour-2027..87/wunschgegner-tour-2027-potsdam-waschhaus.1366",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 796528251,
+    "title": "LEONY",
+    "date": "2027-04-03",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/leony-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -30163,6 +30176,18 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 511440004,
+    "title": "herbst",
+    "date": "2027-04-06",
+    "time": "20:00",
+    "type": "konzert",
+    "locationId": 34,
+    "source": "hole44",
+    "ticketUrl": "https://hole-berlin.de/event/2027-04-06-herbst/",
+    "spotifyUrl": "",
+    "addedAt": "2026-10-14"
+  },
+  {
     "id": 303010107,
     "title": "Motorpsycho",
     "date": "2027-04-06",
@@ -30174,18 +30199,6 @@
     "spotifyUrl": "",
     "source": "columbiatheater",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 511440004,
-    "title": "herbst",
-    "date": "2027-04-06",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 34,
-    "source": "hole44",
-    "ticketUrl": "https://hole-berlin.de/event/2027-04-06-herbst/",
-    "spotifyUrl": "",
-    "addedAt": "2026-10-14"
   },
   {
     "id": 1476421563,
@@ -30227,19 +30240,6 @@
     "addedAt": "2026-09-22"
   },
   {
-    "id": 822692330,
-    "title": "Sarah Engels",
-    "date": "2027-04-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270407-sarah-engels/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 345926235,
     "title": "DRUCKLUFT",
     "date": "2027-04-07",
@@ -30251,6 +30251,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 822692330,
+    "title": "Sarah Engels",
+    "date": "2027-04-07",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270407-sarah-engels/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 825553514,
@@ -30305,19 +30318,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1080231983,
-    "title": "Blackout Problems",
-    "date": "2027-04-08",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270408-blackout-problems/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1155597902,
     "title": "High Fade",
     "date": "2027-04-08",
@@ -30367,6 +30367,19 @@
     "spotifyUrl": "",
     "source": "max-schmeling-halle",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1080231983,
+    "title": "Blackout Problems",
+    "date": "2027-04-08",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270408-blackout-problems/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1259499312,
@@ -30460,19 +30473,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1665890575,
-    "title": "Kati K",
-    "date": "2027-04-09",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270409-kati-k/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1140925273,
     "title": "CARLO5",
     "date": "2027-04-09",
@@ -30523,6 +30523,19 @@
     "spotifyUrl": "",
     "source": "max-schmeling-halle",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1665890575,
+    "title": "Kati K",
+    "date": "2027-04-09",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270409-kati-k/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 36717021,
@@ -30615,19 +30628,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 941918177,
-    "title": "Josh.",
-    "date": "2027-04-10",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270410-josh-2/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1809848074,
     "title": "DUBIOZA KOLEKTIV",
     "date": "2027-04-10",
@@ -30715,6 +30715,19 @@
     "ticketUrl": "https://t.rausgegangen.de/tickets/kamerun-qrella-group",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 941918177,
+    "title": "Josh.",
+    "date": "2027-04-10",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270410-josh-2/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -30924,19 +30937,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1728290364,
-    "title": "MONET192",
-    "date": "2027-04-13",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/monet192-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 909649939,
     "title": "Laurenz Nikolaus",
     "date": "2027-04-13",
@@ -30948,19 +30948,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 194258547,
-    "title": "Moop Mama",
-    "date": "2027-04-13",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270413-moop-mama/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 433430576,
@@ -30988,6 +30975,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 194258547,
+    "title": "Moop Mama",
+    "date": "2027-04-13",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270413-moop-mama/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 29062532,
     "title": "Kellermensch",
     "date": "2027-04-13",
@@ -30999,6 +30999,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 1728290364,
+    "title": "MONET192",
+    "date": "2027-04-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/monet192-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1590477967,
@@ -31157,19 +31170,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 910292479,
-    "title": "MARC ATLAS",
-    "date": "2027-04-15",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/marc-atlas-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2108228459,
     "title": "Raum27",
     "date": "2027-04-15",
@@ -31206,6 +31206,19 @@
     "ticketUrl": "https://shop.freddyekue.de/catalog/tickets/94764-tickets-freddy-ekue-waschhaus-potsdam-am-15-04-2027",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 910292479,
+    "title": "MARC ATLAS",
+    "date": "2027-04-15",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/marc-atlas-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -31259,19 +31272,6 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 778413152,
-    "title": "ABBA UNFORGETTABLE",
-    "date": "2027-04-16",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/abba-unforgettable-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 379284317,
@@ -31351,6 +31351,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 778413152,
+    "title": "ABBA UNFORGETTABLE",
+    "date": "2027-04-16",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/abba-unforgettable-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 601722576,
     "title": "In Extremo & Feuerschwanz",
     "date": "2027-04-17",
@@ -31375,19 +31388,6 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-09-27"
-  },
-  {
-    "id": 1975558565,
-    "title": "DIE LÄRMER",
-    "date": "2027-04-17",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/die-l%C3%A4rmer-tour-2027-leipzig",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 692080519,
@@ -31454,6 +31454,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1975558565,
+    "title": "DIE LÄRMER",
+    "date": "2027-04-17",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/die-l%C3%A4rmer-tour-2027-leipzig",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 899473846,
     "title": "Michèl von Wussow",
     "date": "2027-04-18",
@@ -31478,19 +31491,6 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 518388325,
-    "title": "Rodrigo y Gabriela",
-    "date": "2027-04-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270418-rodrigo-y-gabriela/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 917804319,
@@ -31556,6 +31556,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 518388325,
+    "title": "Rodrigo y Gabriela",
+    "date": "2027-04-18",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270418-rodrigo-y-gabriela/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1323834100,
@@ -31804,45 +31817,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1155419439,
-    "title": "DREIVIERTELBLUT",
-    "date": "2027-04-22",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/dreiviertelblut-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 600569496,
-    "title": "SO SOON @UT CONNEWITZ",
-    "date": "2027-04-22",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/so-soon-leipzig-2027-04",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1724245845,
-    "title": "AND ONE",
-    "date": "2027-04-22",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270422-and-one/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1588498983,
     "title": "Dent May",
     "date": "2027-04-22",
@@ -31869,6 +31843,19 @@
     "addedAt": "2026-08-26"
   },
   {
+    "id": 1724245845,
+    "title": "AND ONE",
+    "date": "2027-04-22",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270422-and-one/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 2030258619,
     "title": "Rasha Nahas",
     "date": "2027-04-22",
@@ -31880,6 +31867,32 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-09-29"
+  },
+  {
+    "id": 1155419439,
+    "title": "DREIVIERTELBLUT",
+    "date": "2027-04-22",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/dreiviertelblut-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 600569496,
+    "title": "SO SOON @UT CONNEWITZ",
+    "date": "2027-04-22",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/so-soon-leipzig-2027-04",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1616730609,
@@ -31919,19 +31932,6 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1771775654,
-    "title": "REIS AGAINST THE SPÜLMASCHINE",
-    "date": "2027-04-23",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/reis-against-the-spuelmaschine-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 404296791,
@@ -31997,6 +31997,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1771775654,
+    "title": "REIS AGAINST THE SPÜLMASCHINE",
+    "date": "2027-04-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/reis-against-the-spuelmaschine-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 182853534,
@@ -32192,19 +32205,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 69124927,
-    "title": "FUFFIFUFZICH",
-    "date": "2027-04-25",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/fuffifufzich-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1019620350,
     "title": "Remode",
     "date": "2027-04-25",
@@ -32229,6 +32229,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-09-16"
+  },
+  {
+    "id": 69124927,
+    "title": "FUFFIFUFZICH",
+    "date": "2027-04-25",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/fuffifufzich-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 727855850,
@@ -32296,19 +32309,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1482676214,
-    "title": "Marc Broussard",
-    "date": "2027-04-28",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270428-marc-broussard/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1803770209,
     "title": "MERVE",
     "date": "2027-04-28",
@@ -32345,6 +32345,19 @@
     "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/jan-philipp-zymny-potsdam-6PIIQ9",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1482676214,
+    "title": "Marc Broussard",
+    "date": "2027-04-28",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270428-marc-broussard/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -32669,19 +32682,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 1159044888,
-    "title": "Will Burkart",
-    "date": "2027-05-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270504-will-burkart/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1444188964,
     "title": "FLORENCE ROAD",
     "date": "2027-05-04",
@@ -32695,16 +32695,16 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 475071567,
-    "title": "Ax and the Hatchetmen",
-    "date": "2027-05-05",
-    "time": "19:00",
-    "locationId": 4,
+    "id": 1159044888,
+    "title": "Will Burkart",
+    "date": "2027-05-04",
+    "time": "20:00",
+    "locationId": 10,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://tickets.loft.de/event/ax-and-the-hatchetmen-qr2nxw",
+    "ticketUrl": "https://columbia-theater.de/event/20270504-will-burkart/",
     "spotifyUrl": "",
-    "source": "privatclub",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -32837,19 +32837,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1597063336,
-    "title": "BOOSHLE G + NEON DREAMS",
-    "date": "2027-05-07",
-    "time": "19:00",
-    "locationId": 4,
-    "type": "konzert",
-    "description": "Love Is Free | Support: NEON DREAMS",
-    "ticketUrl": "https://www.eventim.de/noapp/event/booshle-g-privatclub-22328683/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "privatclub",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 209162554,
     "title": "Roland Kaiser",
     "date": "2027-05-07",
@@ -32860,19 +32847,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/roland-kaiser-2027/2027-05-07-1930",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 929587222,
-    "title": "NEVERMORE",
-    "date": "2027-05-07",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/Nevermore-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -32900,6 +32874,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 929587222,
+    "title": "NEVERMORE",
+    "date": "2027-05-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/Nevermore-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 68179629,
@@ -33083,19 +33070,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1259987782,
-    "title": "TOM HENGST",
-    "date": "2027-05-10",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/tom-hengst-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1857373810,
     "title": "Laura Abla & Ceddo",
     "date": "2027-05-10",
@@ -33134,6 +33108,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1259987782,
+    "title": "TOM HENGST",
+    "date": "2027-05-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tom-hengst-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 328271626,
     "title": "Jake Isaac",
     "date": "2027-05-11",
@@ -33160,19 +33147,6 @@
     "addedAt": "2026-08-26"
   },
   {
-    "id": 1241423155,
-    "title": "Electric Light Orchestra & Cutting Crew",
-    "date": "2027-05-12",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270512-electric-light-orchestra-cutting-crew/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1600386665,
     "title": "Hilary Duff",
     "date": "2027-05-12",
@@ -33184,6 +33158,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1241423155,
+    "title": "Electric Light Orchestra & Cutting Crew",
+    "date": "2027-05-12",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270512-electric-light-orchestra-cutting-crew/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 55262890,
@@ -33298,19 +33285,6 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82613/",
     "spotifyUrl": "",
     "source": "kantine",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1155036326,
-    "title": "Danny Bryant",
-    "date": "2027-05-15",
-    "time": "19:00",
-    "locationId": 4,
-    "type": "konzert",
-    "description": "Nothing Left Behind Tour",
-    "ticketUrl": "https://www.eventim.de/event/danny-bryant-privatclub-22296406/",
-    "spotifyUrl": "",
-    "source": "privatclub",
     "addedAt": "2026-11-02"
   },
   {
@@ -33496,19 +33470,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 768892659,
-    "title": "WILHELMINE",
-    "date": "2027-05-21",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/wilhelmine-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1797752945,
     "title": "RIN",
     "date": "2027-05-21",
@@ -33545,6 +33506,19 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/greta-van-fleet-2027/2027-05-21-2000",
     "spotifyUrl": "",
     "source": "uberarena",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 768892659,
+    "title": "WILHELMINE",
+    "date": "2027-05-21",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/wilhelmine-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -33860,19 +33834,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 61529369,
-    "title": "DIE SKEPTIKER & FREUNDE DER ITALIENISCHEN OPER",
-    "date": "2027-05-29",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/skeptiker-freunde-der-italienischen-oper-leipzig",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 320141606,
     "title": "Mike + The Mechanics",
     "date": "2027-05-29",
@@ -33909,6 +33870,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 61529369,
+    "title": "DIE SKEPTIKER & FREUNDE DER ITALIENISCHEN OPER",
+    "date": "2027-05-29",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/skeptiker-freunde-der-italienischen-oper-leipzig",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 343800038,
@@ -34660,19 +34634,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 927897281,
-    "title": "DIORAMA",
-    "date": "2027-09-17",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/diorama-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2061347321,
     "title": "THE CHATS",
     "date": "2027-09-17",
@@ -34686,16 +34647,16 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1467367746,
-    "title": "LINA",
-    "date": "2027-09-18",
+    "id": 927897281,
+    "title": "DIORAMA",
+    "date": "2027-09-17",
     "time": "20:00",
-    "locationId": 10,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270918-lina/",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/diorama-leipzig-2027",
     "spotifyUrl": "",
-    "source": "columbiatheater",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -34711,6 +34672,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1467367746,
+    "title": "LINA",
+    "date": "2027-09-18",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270918-lina/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1711825292,
     "title": "6euroneunzig",
     "date": "2027-09-22",
@@ -34722,19 +34696,6 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1955852544,
-    "title": "NIKITA MILLER",
-    "date": "2027-09-23",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/nikita-miller-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 126419691,
@@ -34761,6 +34722,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-08-26"
+  },
+  {
+    "id": 1955852544,
+    "title": "NIKITA MILLER",
+    "date": "2027-09-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/nikita-miller-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 166983375,
@@ -34957,17 +34931,17 @@
     "addedAt": "2026-09-16"
   },
   {
-    "id": 1114309758,
-    "title": "TOM TWERS",
+    "id": 1342671776,
+    "title": "NIGHTS ON BROADWAY: Anniversary Tour '27",
     "date": "2027-10-07",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 25,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/tom-twers-leipzig-2027",
+    "ticketUrl": "https://www.tempodrom.de/event/nights_on_broadway-anniversary_tour-27_2027-10-07_20/",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "tempodrom",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 925095485,
@@ -34983,17 +34957,17 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1342671776,
-    "title": "NIGHTS ON BROADWAY: Anniversary Tour '27",
+    "id": 1114309758,
+    "title": "TOM TWERS",
     "date": "2027-10-07",
     "time": "20:00",
-    "locationId": 25,
+    "locationId": 15,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.tempodrom.de/event/nights_on_broadway-anniversary_tour-27_2027-10-07_20/",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tom-twers-leipzig-2027",
     "spotifyUrl": "",
-    "source": "tempodrom",
-    "addedAt": "2026-10-25"
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 682641543,
@@ -35048,19 +35022,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 640937282,
-    "title": "Skipinnish",
-    "date": "2027-10-09",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20271009-skipinnish/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 331852573,
     "title": "ALAIN FREI",
     "date": "2027-10-09",
@@ -35072,6 +35033,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 640937282,
+    "title": "Skipinnish",
+    "date": "2027-10-09",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20271009-skipinnish/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1929298815,
@@ -35307,19 +35281,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 962707213,
-    "title": "QUERBEAT",
-    "date": "2027-10-22",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/querbeat-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 655692507,
     "title": "HAEVN",
     "date": "2027-10-22",
@@ -35356,6 +35317,19 @@
     "ticketUrl": "https://t.rausgegangen.de/tickets/rocko-schamoni-zu-fu-zum-mond",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 962707213,
+    "title": "QUERBEAT",
+    "date": "2027-10-22",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/querbeat-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -35475,6 +35449,32 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1332270421,
+    "title": "Potsa Lotsa XL - Pizza Lotsa",
+    "date": "2027-10-27",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OwX9J3p__U0RP7duRfa",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1084557716,
+    "title": "Tony Jack",
+    "date": "2027-10-28",
+    "time": "18:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P2wWixSyxb2dAnZd9UZ",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 536774170,
     "title": "die PRINZEN",
     "date": "2027-10-28",
@@ -35486,19 +35486,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 729653137,
-    "title": "Purple Disco Machine",
-    "date": "2027-10-28",
-    "time": "20:00",
-    "locationId": 33,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/purple-disco-machine/2027-10-28-2000",
-    "spotifyUrl": "",
-    "source": "ubereatsmusichall",
-    "addedAt": "2026-10-07"
   },
   {
     "id": 1627492279,
@@ -35527,17 +35514,17 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 219181137,
-    "title": "MATTERZ",
-    "date": "2027-10-29",
+    "id": 729653137,
+    "title": "Purple Disco Machine",
+    "date": "2027-10-28",
     "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
+    "locationId": 33,
+    "type": "party",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20271029-matterz/",
+    "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/purple-disco-machine/2027-10-28-2000",
     "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
+    "source": "ubereatsmusichall",
+    "addedAt": "2026-10-07"
   },
   {
     "id": 860265936,
@@ -35577,6 +35564,19 @@
     "spotifyUrl": "",
     "source": "kesselhaus",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 219181137,
+    "title": "MATTERZ",
+    "date": "2027-10-29",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20271029-matterz/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1345036848,
@@ -35696,19 +35696,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 968994869,
-    "title": "SHE PAST AWAY",
-    "date": "2027-11-06",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/she-past-away-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1342750361,
     "title": "William Shakespeare’s Romeo + Juliet Film in Concert",
     "date": "2027-11-06",
@@ -35720,6 +35707,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-09-16"
+  },
+  {
+    "id": 968994869,
+    "title": "SHE PAST AWAY",
+    "date": "2027-11-06",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/she-past-away-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1817981887,
