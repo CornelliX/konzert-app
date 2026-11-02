@@ -288,7 +288,7 @@ ${m}`}class C extends Error{constructor({message:e,code:r,cause:s,name:n}){var i
       </div>
     </div>
   `}function cs(t){if(!t.length)return'<p class="text-sm" style="color:rgba(255,255,255,0.3);">Noch keine besuchten Konzerte eingetragen.</p>';let e="",r=null;for(const s of t){const n=s.date.slice(0,4);n!==r&&(e+=`<div class="syne" style="margin:${r?"18px":"0"} 0 2px 2px; font-size:11px; font-weight:800; letter-spacing:0.08em; color:rgba(255,255,255,0.3);">${n}</div>`,r=n),e+=fa(s)}return e}function ya(t){return`
-    <div id="history-section" style="margin-top:28px;">
+    <div id="history-section" style="margin-top:28px; scroll-margin-top:calc(env(safe-area-inset-top) + 32px);">
       <div class="flex items-center justify-between mb-3">
         <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:rgba(255,255,255,0.5);">History</h3>
         <button data-history-add-toggle title="Konzert nachtragen" aria-label="Konzert nachtragen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="width:28px; height:28px; color:rgba(255,255,255,0.6); font-size:16px; line-height:1;">+</button>
