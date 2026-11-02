@@ -14,6 +14,22 @@ if (existsSync(envPath)) {
 import ICAL from 'ical.js'
 import fs from 'fs'
 import path from 'path'
+// Ziel-Venue aus Verlegungs-Hinweisen ("Die Show wird aus dem Hole44 in das Mikropol verlegt!",
+// "vom Huxleys ins Hole verlegt", "in das Huxleys HOCHVERLEGT", "RUNTERVERLEGT INS COLUMBIA THEATER.")
+// als locationId. Unbekanntes Ziel oder reine Terminverschiebung ("auf dem 24.10.27 verlegt",
+// "in den Sommer verlegt") -> null.
+const relocationVenues = [
+  [/hole/i, 34], [/mikropol/i, 28], [/metropol/i, 30], [/huxleys/i, 31], [/columbiahalle/i, 32],
+  [/columbia\s*theater/i, 10], [/kesselhaus/i, 29], [/astra/i, 5], [/festsaal/i, 3], [/lido/i, 1],
+  [/so\s*36/i, 2], [/max.schmeling/i, 54], [/uber\s*eats/i, 33], [/uber\s*arena/i, 57],
+  [/tempodrom/i, 25], [/bi\s*nuu/i, 27], [/badehaus/i, 35], [/frannz/i, 6], [/privatclub/i, 4], [/gretchen/i, 22],
+]
+function relocationTarget(text) {
+  const m = text.match(/(?:ins|in\s+(?:das|die|den))\s+(.{2,40}?)\s*(?:hoch|runter)?verlegt/i) ||
+    text.match(/verlegt!?\s+(?:ins|in\s+(?:das|die|den))\s+(.{2,40}?)(?:[.!,;]|$)/i)
+  return m ? relocationVenues.find(([re]) => re.test(m[1]))?.[1] ?? null : null
+}
+
 function detectType(title, description = '') {
   const t = (title + ' ' + description).toLowerCase()
   const sonstigeKeywords = [
@@ -265,7 +281,8 @@ async function scrapeLido() {
         description: '',
         ticketUrl: 'https://www.lido-berlin.de' + href,
         spotifyUrl: '',
-        source: 'lido'
+        source: 'lido',
+        relocatedTo: relocationTarget($(el).closest('.event-ticket').text())
       })
     })
 
@@ -650,7 +667,12 @@ async function scrapeColumbiahalle() {
       const extTicket = $(el).find('div.event_info_spalte.tickets a').first().attr('href') || ''
       const ticketUrl = extTicket || 'https://www.columbiahalle.berlin/veranstaltungen.html'
 
-      events.push({ title, date, time, locationId: 32, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'columbiahalle' })
+      // Banner (div.stoerer) steht nicht im Titel: "ins huxleys verlegt" -> relocatedTo,
+      // "Zusammengelegt mit dem 09.11." -> Termin entfällt, der Zieltermin wird separat gelistet
+      const stoerer = $(el).find('.stoerer').first().text()
+      if (/zusammengelegt/i.test(stoerer)) return
+      const relocatedTo = relocationTarget(stoerer)
+      events.push({ title, date, time, locationId: 32, type: detectType(title), description: '', ticketUrl, spotifyUrl: '', source: 'columbiahalle', relocatedTo })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Columbiahalle: ${e.message}`) }
@@ -753,7 +775,8 @@ async function scrapeAstra() {
         description: '',
         ticketUrl: 'https://www.astra-berlin.de' + href,
         spotifyUrl: '',
-        source: 'astra'
+        source: 'astra',
+        relocatedTo: relocationTarget($(container).text())
       })
     })
 
@@ -1760,7 +1783,7 @@ async function scrapeMetropol() {
       // doppelter "type"-Objektschlüssel, wodurch die Kategorie-Auswertung nie ankam
       const cat = $(el).find('a[href*="/categories/"]').first().text().trim().toLowerCase()
       const type = cat === 'party' ? 'party' : cat === 'ceremony' ? 'sonstige' : detectType(title)
-      events.push({ title, date, time, type, locationId: 30, source: 'metropol', ticketUrl: href, spotifyUrl: '' })
+      events.push({ title, date, time, type, locationId: 30, source: 'metropol', ticketUrl: href, spotifyUrl: '', relocatedTo: relocationTarget(text) })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Metropol: ${e.message}`) }
@@ -1818,7 +1841,8 @@ async function scrapeHuxleys() {
         description: '',
         ticketUrl: href.startsWith('http') ? href : 'https://huxleysneuewelt.de' + href,
         spotifyUrl: '',
-        source: 'huxleys'
+        source: 'huxleys',
+        relocatedTo: relocationTarget(text)
       })
     })
 
@@ -1977,7 +2001,7 @@ async function scrapeHole44() {
       seen.add(date + title)
       const lower = title.toLowerCase()
       const type = lower.includes('party') || lower.includes('dj') ? 'party' : lower.includes('lesung') || lower.includes('theater') || lower.includes('quiz') || lower.includes('flohmarkt') || lower.includes('kino') || lower.includes('vortrag') || lower.includes('ausstellung') || lower.includes('führung') || lower.includes('ballett') || lower.includes('tanzabend') || lower.includes('tanzshow') ? 'sonstige' : 'konzert'
-      events.push({ title, date, time, type, locationId: 34, source: 'hole44', ticketUrl: link.attr('href') || '', spotifyUrl: '' })
+      events.push({ title, date, time, type, locationId: 34, source: 'hole44', ticketUrl: link.attr('href') || '', spotifyUrl: '', relocatedTo: relocationTarget(text) })
     })
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) { console.log(`  ✗ Hole44: ${e.message}`) }
@@ -3284,6 +3308,9 @@ async function scrapeT3Events(url, locationId, source, venueLabel) {
     $('a.ticketWrap').each((_, el) => {
       const title = ($(el).attr('data-headline') || '').trim()
       if (!title) return
+      // Status "verlegt" (transfered, Ziel steht nur auf der Zielseite) und "verschoben" (postponed,
+      // Eintrag behält das ALTE Datum, z.B. RIN 27.11.26 -> Columbiahalle 21.05.27) finden hier nicht statt
+      if ($(el).find('.ticketSignal.transfered, .ticketSignal.postponed').length) return
       // Titel-Attribut endet auf ein ISO-Datum, z.B. "Nena Max-Schmeling-Halle 2026-10-02"
       const dateMatch = ($(el).attr('title') || '').match(/(\d{4}-\d{2}-\d{2})$/)
       if (!dateMatch) return
@@ -3591,6 +3618,23 @@ async function main() {
   // Terminverschiebung, bleibt am selben Venue gültig, z.B. "VERLEGT AUF 2027").
   allEvents = allEvents.filter(e => !/verlegt\s+(ins|nach|zu)\s+\S/i.test(e.title))
 
+  // Verlegungs-Hinweise aus den Listen (relocatedTo): Nennt irgendeine Quelle für Datum + Artist
+  // ein Ziel-Venue, gilt nur der Eintrag dort - auch wenn das alte Venue selbst keinen Hinweis
+  // zeigt (z.B. Mikropol listet KYLE ALESSANDRO weiter, nur Hole44 sagt "aus dem Mikropol in das
+  // Hole44 verlegt"). Listet das Ziel-Venue die Show nicht selbst, wird der Eintrag umgehängt.
+  const relocationKey = e => `${e.date}-${coreTitle(e.title)}`
+  const relocations = new Map(allEvents.filter(e => e.relocatedTo).map(e => [relocationKey(e), e.relocatedTo]))
+  const atTarget = new Set(allEvents.filter(e => relocations.get(relocationKey(e)) === e.locationId).map(relocationKey))
+  allEvents = allEvents.filter(e => {
+    const to = relocations.get(relocationKey(e))
+    delete e.relocatedTo
+    if (!to || e.locationId === to) return true
+    if (atTarget.has(relocationKey(e))) return false
+    e.locationId = to
+    atTarget.add(relocationKey(e))
+    return true
+  })
+
   // Duplikate entfernen (gleicher Titel + Datum + Location)
   const seen = new Set()
   allEvents = allEvents.filter(e => {
@@ -3624,6 +3668,22 @@ async function main() {
     }
   })
   allEvents = [...dedupGroups.values()]
+
+  // Gleicher Artist am selben Tag an verschiedenen Locations = fast immer eine Verlegung, bei der
+  // das alte Venue den Eintrag noch listet. Welche Seite stimmt, steht nur in den Venue-Texten
+  // (je Venue anders formuliert) - hier nur warnen, die Quelle dann gezielt filtern.
+  const sameDayGroups = new Map()
+  for (const e of allEvents) {
+    const core = coreTitle(e.title)
+    if (core.length < 3) continue
+    const key = `${e.date}-${core}`
+    sameDayGroups.set(key, [...(sameDayGroups.get(key) || []), e])
+  }
+  for (const group of sameDayGroups.values()) {
+    if (new Set(group.map(e => e.locationId)).size > 1) {
+      console.log(`  ⚠️  Mögliche Verlegung: "${group[0].title}" am ${group[0].date} bei ${group.map(e => `${e.source}(${e.locationId})`).join(' + ')}`)
+    }
+  }
 
   // IDs vergeben
   function stableId(str) {
