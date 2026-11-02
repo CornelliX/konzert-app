@@ -263,9 +263,9 @@ ${m}`}class C extends Error{constructor({message:e,code:r,cause:s,name:i}){var n
   `}function fa(t){const e=new Date(t.date+"T12:00:00").toLocaleDateString("de-DE",{day:"numeric",month:"short",year:"numeric"}),r=[t.locationName,t.locationCity].filter(Boolean).join(", "),s=t.rating||0,i=[1,2,3,4,5].map(n=>`<button data-star="${n}" aria-label="${n} Sterne" style="background:none; border:none; cursor:pointer; padding:0 1px; font-size:15px; line-height:1; color:${n<=s?"#facc15":"rgba(255,255,255,0.22)"};">★</button>`).join("");return`
     <div class="history-swipe-wrapper" data-history-id="${t.id}" style="position:relative; overflow:hidden; border-radius:12px;">
       <div class="history-swipe-actions" style="position:absolute; right:0; top:0; bottom:0; width:160px; display:flex; align-items:stretch; padding:4px; z-index:0;">
-        <button data-swipe-radar="${t.id}" style="flex:1; border-radius:10px; border:1px solid rgba(99,102,241,0.4); cursor:pointer; font-size:13px; font-weight:600; background:rgba(99,102,241,0.25); color:#a5b4fc; font-family:'DM Sans',sans-serif;">📡 Zum Radar</button>
+        <button data-swipe-radar="${t.id}" style="flex:1; border-radius:10px; border:1px solid rgba(99,102,241,0.4); cursor:pointer; font-size:13px; font-weight:600; background:rgba(99,102,241,0.25); color:#a5b4fc; font-family:'DM Sans',sans-serif;">Zum Radar</button>
       </div>
-      <div class="history-swipe-card flex items-start justify-between rounded-xl px-3 py-2.5" style="position:relative; z-index:1; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);">
+      <div class="history-swipe-card flex items-start justify-between rounded-xl px-3 py-2.5" style="position:relative; z-index:1; background:rgba(8,8,42,0.92); border:1px solid rgba(255,255,255,0.07);">
         <div style="min-width:0; flex:1;">
           <a href="${U(Nt(t.title))}" target="_blank" title="Auf Spotify suchen" class="syne" style="display:block; font-size:13px; font-weight:700; color:white; text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${U(t.title)}</a>
           <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${r?U(r)+" · ":""}${e}</div>
