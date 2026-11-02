@@ -271,9 +271,9 @@ ${m}`}class C extends Error{constructor({message:e,code:r,cause:s,name:n}){var i
           <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${r?R(r)+" · ":""}${e}</div>
           <div class="history-stars" data-history-id="${t.id}" style="margin-top:4px; display:flex;">${n}</div>
         </div>
-        <div style="flex-shrink:0; margin-left:8px; align-self:stretch; display:flex; flex-direction:column; align-items:flex-end; justify-content:space-between;">
+        <div style="flex-shrink:0; margin-left:8px; align-self:stretch; display:flex; flex-direction:column; align-items:center; justify-content:space-between;">
           <button data-history-remove="${t.id}" aria-label="Aus History löschen" style="color:rgba(255,255,255,0.35); background:none; border:none; cursor:pointer; font-size:18px; line-height:1; padding:4px;">×</button>
-          <span style="color:rgba(255,255,255,0.6); font-size:18px; font-weight:400; letter-spacing:-3px; pointer-events:none; user-select:none; padding-right:2px; line-height:1;">‹‹</span>
+          <span style="color:rgba(255,255,255,0.6); font-size:18px; font-weight:400; letter-spacing:-3px; pointer-events:none; user-select:none; padding-right:3px; line-height:1;">‹‹</span>
         </div>
       </div>
     </div>
