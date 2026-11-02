@@ -149,7 +149,7 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
   100% { box-shadow: 0 0 0 0 rgba(192,132,252,0), 0 0 0 0 rgba(240,171,252,0); }
 }
 .card-glow-highlight { animation: card-glow 2s ease-in-out 1 both; }
-#login-btn, #verify-btn, [data-swipe-bookmark], [data-swipe-going] {
+#login-btn, #verify-btn, [data-swipe-bookmark], [data-swipe-going], [data-swipe-radar] {
   position: relative;
   overflow: hidden;
 }

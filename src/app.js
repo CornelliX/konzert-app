@@ -146,6 +146,7 @@ let fetchSeq = 0
 let markSeenTimer = null
 let titleAnimated = false
 let lastGemerktTapAt = 0
+let radarOpen = false
 
 export async function renderApp(el) {
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
@@ -312,7 +313,7 @@ function showRadarBanner(matches) {
 function renderRadarList() {
   if (!radar.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.3);">Noch keine Künstler im Radar.</p>`
   return radar.map(r => `
-    <div class="flex items-center justify-between rounded-xl px-3 py-2" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08);">
+    <div class="flex items-center justify-between rounded-xl px-3 py-2" style="background:rgba(8,8,42,0.92); border:1px solid rgba(99,102,241,0.12);">
       <span style="font-size:14px; color:white;">${esc(r.artist)}</span>
       <button data-radar-remove="${r.id}" style="color:rgba(255,255,255,0.4); background:none; border:none; cursor:pointer; font-size:16px; line-height:1;">×</button>
     </div>
@@ -347,6 +348,7 @@ function highlightEventCard(id) {
 }
 
 function openBookmarks(eventId) {
+  radarOpen = false
   document.getElementById('modal-radar')?.classList.add('hidden')
   currentView = 'gemerkt'
   render()
@@ -355,6 +357,7 @@ function openBookmarks(eventId) {
 
 function focusEvent(event) {
   const loc = locationsById.get(event.locationId)
+  radarOpen = false
   document.getElementById('modal-radar')?.classList.add('hidden')
   currentView = 'liste'
   filters.cities = [loc ? loc.city : (event.locationCity || 'Berlin')]
@@ -462,7 +465,7 @@ function renderBottomNav() {
   return `
     <div style="max-width:576px; margin:0 auto; background:rgba(4,4,32,0.96); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-top:1px solid rgba(255,255,255,0.07); display:flex; padding-bottom:env(safe-area-inset-bottom,0px);">
       ${tabs.map(t => {
-        const active = currentView === t.id
+        const active = !radarOpen && currentView === t.id
         return `<button data-nav="${t.id}" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; padding:10px 4px 11px; background:none; border:none; cursor:pointer; color:${active ? 'white' : 'rgba(255,255,255,0.42)'}; position:relative; transition:color 0.2s;">
           ${active ? `<span style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:28px; height:2px; background:linear-gradient(90deg,#6366f1,#a855f7); border-radius:0 0 3px 3px;"></span>` : ''}
           <span style="position:relative; display:inline-block;">
@@ -472,12 +475,33 @@ function renderBottomNav() {
           <span class="syne" style="font-size:9px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">${t.label}</span>
         </button>`
       }).join('')}
-      <button data-open-radar style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; padding:10px 4px 11px; background:none; border:none; cursor:pointer; color:rgba(99,102,241,0.7); transition:color 0.2s; position:relative;">
+      <button data-open-radar style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; padding:10px 4px 11px; background:none; border:none; cursor:pointer; color:${radarOpen ? 'white' : 'rgba(99,102,241,0.7)'}; transition:color 0.2s; position:relative;">
+        ${radarOpen ? `<span style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:28px; height:2px; background:linear-gradient(90deg,#6366f1,#a855f7); border-radius:0 0 3px 3px;"></span>` : ''}
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
         <span class="syne" style="font-size:9px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">Radar</span>
       </button>
     </div>
   `
+}
+
+function refreshBottomNav() {
+  const nav = document.getElementById('bottom-nav')
+  if (!nav) return
+  nav.innerHTML = renderBottomNav()
+  attachNavEvents()
+  document.querySelector('[data-open-radar]')?.addEventListener('click', openRadarModal)
+}
+
+function openRadarModal() {
+  radarOpen = true
+  document.getElementById('modal-radar')?.classList.remove('hidden')
+  refreshBottomNav()
+}
+
+function closeRadarModal() {
+  radarOpen = false
+  document.getElementById('modal-radar')?.classList.add('hidden')
+  refreshBottomNav()
 }
 
 function renderFilters() {
@@ -759,13 +783,18 @@ function renderHistoryRow(h) {
   const rating = h.rating || 0
   const stars = [1, 2, 3, 4, 5].map(n => `<button data-star="${n}" aria-label="${n} Sterne" style="background:none; border:none; cursor:pointer; padding:0 1px; font-size:15px; line-height:1; color:${n <= rating ? '#facc15' : 'rgba(255,255,255,0.22)'};">★</button>`).join('')
   return `
-    <div class="flex items-start justify-between rounded-xl px-3 py-2.5" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);">
-      <div style="min-width:0; flex:1;">
-        <a href="${esc(spotifySearchUrl(h.title))}" target="_blank" title="Auf Spotify suchen" class="syne" style="display:block; font-size:13px; font-weight:700; color:white; text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</a>
-        <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
-        <div class="history-stars" data-history-id="${h.id}" style="margin-top:4px; display:flex;">${stars}</div>
+    <div class="history-swipe-wrapper" data-history-id="${h.id}" style="position:relative; overflow:hidden; border-radius:12px;">
+      <div class="history-swipe-actions" style="position:absolute; right:0; top:0; bottom:0; width:160px; display:flex; align-items:stretch; padding:4px; z-index:0;">
+        <button data-swipe-radar="${h.id}" style="flex:1; border-radius:10px; border:1px solid rgba(99,102,241,0.4); cursor:pointer; font-size:13px; font-weight:600; background:rgba(99,102,241,0.25); color:#a5b4fc; font-family:'DM Sans',sans-serif;">📡 Zum Radar</button>
       </div>
-      <button data-history-remove="${h.id}" aria-label="Aus History löschen" style="flex-shrink:0; margin-left:8px; color:rgba(255,255,255,0.35); background:none; border:none; cursor:pointer; font-size:18px; line-height:1; padding:4px;">×</button>
+      <div class="history-swipe-card flex items-start justify-between rounded-xl px-3 py-2.5" style="position:relative; z-index:1; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);">
+        <div style="min-width:0; flex:1;">
+          <a href="${esc(spotifySearchUrl(h.title))}" target="_blank" title="Auf Spotify suchen" class="syne" style="display:block; font-size:13px; font-weight:700; color:white; text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</a>
+          <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
+          <div class="history-stars" data-history-id="${h.id}" style="margin-top:4px; display:flex;">${stars}</div>
+        </div>
+        <button data-history-remove="${h.id}" aria-label="Aus History löschen" style="flex-shrink:0; margin-left:8px; color:rgba(255,255,255,0.35); background:none; border:none; cursor:pointer; font-size:18px; line-height:1; padding:4px;">×</button>
+      </div>
     </div>
   `
 }
@@ -814,6 +843,24 @@ function renderHistoryDatePicker() {
   `
 }
 
+// historyEntries kommt bereits absteigend nach Datum sortiert an - ein einfacher
+// Jahreswechsel-Check beim Durchlaufen reicht daher für die Gliederung, ohne vorher
+// extra nach Jahr gruppieren zu müssen.
+function renderHistoryListHtml(historyEntries) {
+  if (!historyEntries.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.3);">Noch keine besuchten Konzerte eingetragen.</p>`
+  let html = ''
+  let lastYear = null
+  for (const h of historyEntries) {
+    const year = h.date.slice(0, 4)
+    if (year !== lastYear) {
+      html += `<div class="syne" style="margin:${lastYear ? '18px' : '0'} 0 2px 2px; font-size:11px; font-weight:800; letter-spacing:0.08em; color:rgba(255,255,255,0.3);">${year}</div>`
+      lastYear = year
+    }
+    html += renderHistoryRow(h)
+  }
+  return html
+}
+
 function renderHistorySection(historyEntries) {
   return `
     <div id="history-section" style="margin-top:28px;">
@@ -831,7 +878,7 @@ function renderHistorySection(historyEntries) {
         <button data-history-save class="w-full py-2.5 rounded-xl font-bold text-white text-sm syne" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">Konzert hinzufügen</button>
       </div>
       <div id="history-list" class="space-y-2">
-        ${historyEntries.length ? historyEntries.map(renderHistoryRow).join('') : `<p class="text-sm" style="color:rgba(255,255,255,0.3);">Noch keine besuchten Konzerte eingetragen.</p>`}
+        ${renderHistoryListHtml(historyEntries)}
       </div>
     </div>
   `
@@ -842,8 +889,12 @@ function refreshHistoryList() {
   if (!list) return
   const todayStr = new Date().toISOString().split('T')[0]
   const historyEntries = history.filter(h => h.date <= todayStr).sort((a, b) => b.date.localeCompare(a.date))
-  list.innerHTML = historyEntries.length ? historyEntries.map(renderHistoryRow).join('') : `<p class="text-sm" style="color:rgba(255,255,255,0.3);">Noch keine besuchten Konzerte eingetragen.</p>`
+  list.innerHTML = renderHistoryListHtml(historyEntries)
   attachHistoryRemoveEvents()
+  // Nur die (eben neu gerenderten) History-Zeilen neu verdrahten statt der globalen
+  // attachSwipeGestures() - die würde sonst auch den unveränderten Event-Karten der
+  // Liste-Ansicht erneut Touch-Listener aufdrücken (Duplikate bei jedem Stern-Klick).
+  list.querySelectorAll('.history-swipe-wrapper').forEach(wrapper => attachSwipeToWrapper(wrapper))
 }
 
 function attachHistoryRemoveEvents() {
@@ -1079,6 +1130,8 @@ function attachNavEvents() {
       // Die Nav-Leiste bleibt jetzt auch bei offenem Radar-Modal sichtbar/bedienbar (statt vom
       // Modal verdeckt zu werden) - ein Tab-Wechsel von dort aus soll das Modal dann aber auch
       // wieder schließen, sonst läge es weiter über der neu angezeigten Ansicht.
+      const wasRadarOpen = radarOpen
+      radarOpen = false
       document.getElementById('modal-radar')?.classList.add('hidden')
       // Doppel-Tap auf "Gemerkt" springt direkt zur History-Sektion - über den zeitlichen
       // Abstand zweier click-Events statt des nativen dblclick, da dblclick bei Touch-Taps
@@ -1089,6 +1142,7 @@ function attachNavEvents() {
       if (isGemerktTap) lastGemerktTapAt = now
 
       if (currentView === btn.dataset.nav) {
+        if (wasRadarOpen) refreshBottomNav()
         if (isDoubleTap) scrollToHistorySection()
         return
       }
@@ -1114,9 +1168,7 @@ function attachNavEvents() {
       } else if (currentView === 'kalender') {
         attachCalendarEvents()
       }
-      document.getElementById('bottom-nav').innerHTML = renderBottomNav()
-      attachNavEvents()
-      document.querySelector('[data-open-radar]')?.addEventListener('click', () => document.getElementById('modal-radar').classList.remove('hidden'))
+      refreshBottomNav()
       window.scrollTo(0, 0)
       if (isDoubleTap && currentView === 'gemerkt') scrollToHistorySection()
     })
@@ -1127,9 +1179,8 @@ function attachEvents() {
   attachNavEvents()
 
   // Modal
-  const radarModal = document.getElementById('modal-radar')
-  document.querySelector('[data-open-radar]')?.addEventListener('click', () => radarModal.classList.remove('hidden'))
-  document.querySelector('[data-close-radar]')?.addEventListener('click', () => radarModal.classList.add('hidden'))
+  document.querySelector('[data-open-radar]')?.addEventListener('click', openRadarModal)
+  document.querySelector('[data-close-radar]')?.addEventListener('click', closeRadarModal)
 
   // Spotify-Künstler-Auswahl (mehrere Acts im Lineup erkannt)
   const spotifyPickerModal = document.getElementById('modal-spotify-picker')
@@ -1292,7 +1343,7 @@ function closeSwipeWrapper(wrapper) {
 }
 
 function attachSwipeToWrapper(wrapper) {
-  const card = wrapper.querySelector('.event-swipe-card')
+  const card = wrapper.querySelector('.event-swipe-card, .history-swipe-card')
   if (!card) return
   const REVEAL_WIDTH = 160, THRESHOLD = 60
   const SETTLE_TRANSITION = 'transform 0.3s cubic-bezier(0.22, 1, 0.36, 1)'
@@ -1461,6 +1512,32 @@ function attachSwipeToWrapper(wrapper) {
     const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(e.title)}&dates=${fmtUtc(startDate)}/${fmtUtc(endDate)}&location=${encodeURIComponent(locName)}&details=${encodeURIComponent(e.ticketUrl || '')}`
     window.open(url, '_blank')
   })
+
+  // History-Eintrag per Wisch zum Radar hinzufügen - gleiche Dubletten-Prüfschleife wie beim
+  // manuellen Hinzufügen (submitRadarArtist), aber nur gegen künftige Events geprüft: ein
+  // History-Snapshot kann wegen des wöchentlichen Scraper-Laufs übergangsweise noch mit einem
+  // bereits vergangenen (gleichnamigen) Event in events.json kollidieren.
+  wrapper.querySelector('[data-swipe-radar]')?.addEventListener('click', async () => {
+    const historyId = wrapper.dataset.historyId
+    const entry = history.find(h => String(h.id) === historyId)
+    if (!entry) return
+    wrapper.querySelector('[data-swipe-radar]')?.classList.add('btn-sweep')
+    closeSwipeWrapper(wrapper)
+    const artist = entry.title
+    const todayStr = new Date().toISOString().split('T')[0]
+    const match = events.find(e => e.date >= todayStr && artistMatchesEvent(artist, e))
+    if (match) {
+      const onWatchlist = bookmarked.some(b => b == match.id) || going.some(g => g == match.id)
+      if (onWatchlist) openBookmarks(match.id)
+      else focusEvent(match)
+      return
+    }
+    if (typeof Notification !== 'undefined' && Notification.permission === 'default') Notification.requestPermission()
+    if (await addRadarArtist(artist)) {
+      radar = await loadRadar()
+      showToast('📡 Zum Radar hinzugefügt', artist)
+    }
+  })
 }
 
 function attachSwipeGestures() {
@@ -1470,7 +1547,7 @@ function attachSwipeGestures() {
       if (swipeActiveWrapper && !swipeActiveWrapper.contains(e.target)) closeSwipeWrapper(swipeActiveWrapper)
     }, { passive: true })
   }
-  document.querySelectorAll('.event-swipe-wrapper').forEach(wrapper => attachSwipeToWrapper(wrapper))
+  document.querySelectorAll('.event-swipe-wrapper, .history-swipe-wrapper').forEach(wrapper => attachSwipeToWrapper(wrapper))
   setupLoadMoreObserver()
 }
 
