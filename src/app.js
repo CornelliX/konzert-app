@@ -392,6 +392,8 @@ function attachRadarRemoveEvents() {
   document.querySelectorAll('[data-radar-remove]').forEach(btn => {
     btn.addEventListener('click', async () => {
       const id = btn.dataset.radarRemove
+      const entry = radar.find(r => String(r.id) === id)
+      if (!confirm(`„${entry?.artist ?? 'Artist'}“ aus dem Radar löschen?`)) return
       radar = radar.filter(r => String(r.id) !== id)
       const list = document.getElementById('radar-list')
       if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
@@ -980,9 +982,10 @@ function attachHistoryRemoveEvents() {
   document.querySelectorAll('[data-history-remove]').forEach(btn => {
     btn.addEventListener('click', async () => {
       const id = btn.dataset.historyRemove
+      const removed = history.find(h => String(h.id) === id)
+      if (!confirm(`„${removed?.title ?? 'Eintrag'}“ aus der History löschen?`)) return
       // Event merken, damit syncGoingToHistory() den bewusst gelöschten Eintrag nicht beim
       // nächsten Laden wieder anlegt (das Event bleibt ja "dabei" markiert)
-      const removed = history.find(h => String(h.id) === id)
       if (removed?.eventId) saveData('historyDismissed', [...new Set([...(loadData('historyDismissed') || []), removed.eventId])])
       history = history.filter(h => String(h.id) !== id)
       refreshHistoryList()
