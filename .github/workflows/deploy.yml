@@ -7,6 +7,12 @@ on:
     - cron: '0 6 * * 3'
   workflow_dispatch:
 
+# Nie zwei Scraper-Läufe gleichzeitig: parallele Abrufe lassen Venues leer ausgehen, und der
+# langsamere Lauf würde Snapshot und Seite des besseren überschreiben. Ein zweiter Lauf wartet.
+concurrency:
+  group: deploy-and-scrape
+  cancel-in-progress: false
+
 jobs:
   scrape-and-deploy:
     runs-on: ubuntu-latest
@@ -29,7 +35,7 @@ jobs:
         run: cp scraper/public/events.json public/events.json
 
       # Frischen Scrape-Stand zurück nach main committen, damit der 0-Events-Fallback in
-      # scrape.js (main(), fallbackLocationIds) bei künftigen einzelnen Scraper-Ausfällen
+      # scrape.js (main(), Snapshot-Fallback für alle Venues) bei künftigen einzelnen Scraper-Ausfällen
       # auf einen aktuellen statt monatealten Snapshot zurückgreifen kann.
       - name: Commit refreshed events.json
         uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0
