@@ -548,7 +548,9 @@ function renderHeader(inModal = false) {
 }
 
 function renderBottomNav() {
-  const bmCount = bookmarked.filter(b => b).length + going.filter(g => g).length
+  // Nur noch anstehende Events zählen (wie die Karten der Merkliste), keine bereits besuchten
+  const markedIds = new Set([...bookmarked, ...going].filter(Boolean).map(String))
+  const bmCount = events.filter(e => markedIds.has(String(e.id)) && !isConcertOver(e.date)).length
   const tabs = [
     { id: 'liste', label: 'Events', icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="4" cy="6" r="1.5" fill="currentColor" stroke="none"/><circle cx="4" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="4" cy="18" r="1.5" fill="currentColor" stroke="none"/></svg>` },
     { id: 'kalender', label: 'Kalender', icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>` },
@@ -842,8 +844,11 @@ function renderCalendarContent() {
 }
 
 function renderBookmarkedView() {
-  const bookmarkedEvents = events.filter(e => bookmarked.some(b => b == e.id) && !going.some(g => g == e.id))
-  const goingEvents = events.filter(e => going.some(g => g == e.id))
+  // Besuchte Konzerte gehören in die History und nicht mehr in die Merkliste. Das darf nicht davon
+  // abhängen, dass der Scraper das Event aus events.json entfernt hat (läuft nur wöchentlich, bis
+  // dahin standen vergangene "dabei"-Events weiter in der Liste - siehe isConcertOver)
+  const bookmarkedEvents = events.filter(e => !isConcertOver(e.date) && bookmarked.some(b => b == e.id) && !going.some(g => g == e.id))
+  const goingEvents = events.filter(e => !isConcertOver(e.date) && going.some(g => g == e.id))
   const allEvents = [
     ...goingEvents.map(e => ({ ...e, _status: 'dabei' })),
     ...bookmarkedEvents.map(e => ({ ...e, _status: 'gemerkt' }))
