@@ -619,6 +619,12 @@ function guideText(text) {
 
 // Anleitung: [Überschrift, [[Stichwort, Text], ...]]
 const SETTINGS_GUIDE = [
+  ['Am Computer', [
+    ['Tippen und Doppeltipp', 'Tippen heißt am Computer klicken, Doppeltipp heißt doppelklicken.'],
+    ['Karte wischen', 'Statt zu wischen, bewegst Du die Maus an den rechten Rand der Karte. Dann erscheinen die Aktionen.'],
+    ['Listen umschalten', 'Statt zu wischen, klickst Du auf die Pfeile {pfeile} oder die Punkte.'],
+    ['Aktualisieren', 'Statt die Seite nach unten zu ziehen, lädst Du sie neu (F5).']
+  ]],
   ['Events', [
     ['Überblick', 'Alle Konzerte und Partys in Berlin und Leipzig, nach Datum sortiert.'],
     ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen (z. B. nach einem Künstler).'],
