@@ -89,7 +89,7 @@ export async function addRadarArtist(artist) {
   const user = await getUser()
   if (!user) return null
   const { data, error } = await supabase.from('radar').insert({ user_id: user.id, artist }).select().single()
-  return error ? null : { id: data.id, artist: data.artist }
+  return error || !data ? null : { id: data.id, artist: data.artist }
 }
 
 // Wie addRadarArtist, legt den Artist aber nur an, wenn er in der DB noch nicht steht (Groß-/
@@ -109,6 +109,81 @@ export async function removeRadarArtist(id) {
   if (!user) return false
   const { error } = await supabase.from('radar').delete().eq('id', id).eq('user_id', user.id)
   return !error
+}
+
+// ── Community (Tabellen/Funktionen: supabase/community.sql) ──────────────────────────────────
+
+// Eigenes Profil: Lord-Titel und die beiden Freigabe-Schalter. Ohne Zeile gelten die Standardwerte
+// (alles aus). null nur bei Fehler oder ohne Anmeldung.
+export async function loadProfile() {
+  const user = await getUser()
+  if (!user) return null
+  const { data, error } = await supabase.from('profiles').select('*').eq('user_id', user.id).maybeSingle()
+  if (error) return null
+  return {
+    lordTitle: data?.lord_title ?? null,
+    shareHistory: data?.share_history ?? false,
+    shareBookmarks: data?.share_bookmarks ?? false
+  }
+}
+
+// Speichert nur die übergebenen Felder ({ lordTitle?, shareHistory?, shareBookmarks? }); legt das Profil an,
+// falls es noch fehlt. Ein leerer Lord-Titel wird als null gespeichert.
+export async function saveProfile(fields) {
+  const user = await getUser()
+  if (!user) return false
+  const row = { user_id: user.id }
+  if ('lordTitle' in fields) row.lord_title = fields.lordTitle?.trim() || null
+  if ('shareHistory' in fields) row.share_history = !!fields.shareHistory
+  if ('shareBookmarks' in fields) row.share_bookmarks = !!fields.shareBookmarks
+  const { error } = await supabase.from('profiles').upsert(row, { onConflict: 'user_id' })
+  return !error
+}
+
+// Freigegebene Histories anderer Nutzer. null bei Fehler (leere Liste = niemand hat etwas freigegeben).
+export async function loadCommunityHistories() {
+  const user = await getUser()
+  if (!user) return null
+  const { data, error } = await supabase.rpc('get_community_histories')
+  if (error || !Array.isArray(data)) return null
+  return data.map(r => ({
+    publicId: r.public_id,
+    lordTitle: r.lord_title,
+    createdAt: r.created_at,
+    entries: (r.entries || []).map(e => ({
+      title: e.title, locationName: e.location_name, locationCity: e.location_city, date: e.date, rating: e.rating
+    }))
+  }))
+}
+
+// Eigene Betrachter-Einstellungen je anderem Nutzer: { [publicId]: { alias, isFavorite } }
+export async function loadPeerPrefs() {
+  const user = await getUser()
+  if (!user) return {}
+  const { data, error } = await supabase.from('peer_prefs').select('*').eq('viewer_id', user.id)
+  if (error) return {}
+  return Object.fromEntries(data.map(r => [r.peer_public_id, { alias: r.alias, isFavorite: r.is_favorite }]))
+}
+
+// Speichert nur die übergebenen Felder ({ alias?, isFavorite? }) für einen anderen Nutzer.
+export async function savePeerPref(publicId, fields) {
+  const user = await getUser()
+  if (!user) return false
+  const row = { viewer_id: user.id, peer_public_id: publicId }
+  if ('alias' in fields) row.alias = fields.alias?.trim() || null
+  if ('isFavorite' in fields) row.is_favorite = !!fields.isFavorite
+  const { error } = await supabase.from('peer_prefs').upsert(row, { onConflict: 'viewer_id,peer_public_id' })
+  return !error
+}
+
+// Zähler anderer Nutzer mit freigegebener Merkliste: { [eventId]: { going, bookmarked } }, nur Events mit
+// mindestens einer Markierung. Nur Zahlen. null bei Fehler (damit der Aufrufer nichts als "0" zwischenspeichert).
+export async function loadEventMarks(eventIds) {
+  const user = await getUser()
+  if (!user || !eventIds.length) return {}
+  const { data, error } = await supabase.rpc('get_event_marks', { event_ids: eventIds.slice(0, 500).map(String) })
+  if (error || !Array.isArray(data)) return null
+  return Object.fromEntries(data.map(r => [r.event_id, { going: r.going, bookmarked: r.bookmarked }]))
 }
 
 export async function loadHistory() {

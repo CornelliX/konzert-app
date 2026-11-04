@@ -74,7 +74,10 @@ Venues are defined in `src/data.js` as a locations array. Each scraper function 
 - `manual_events` — Legacy: nur lesend (Policy "Jeder kann lesen"); der Schreibzugriff wurde entfernt, kein Client-Code fügt mehr Events ein. Wird beim Start in `getEvents()` mit den gescrapten Events zusammengeführt.
 - `bookmarks` — Per-user event bookmarks with status `"bookmarked"` or `"going"`
 - `radar` — Per-user watchlist of artists without an upcoming show; matched against events on load, see `supabase/radar.sql` for schema + RLS
-- `history` — Per-user durable log of attended concerts (title/location/date snapshot, not an event_id reference, since the scraper prunes past events from events.json); shown in the Gemerkt view below the bookmarked/going cards, see `supabase/history.sql` for schema + RLS
+- `history` — Per-user durable log of attended concerts (title/location/date snapshot, not an event_id reference, since the scraper prunes past events from events.json); shown in its own History tab (between Gemerkt and Radar), see `supabase/history.sql` for schema + RLS
+- `profiles` — Per-user Lord-Titel (display name) and opt-in switches `share_history` / `share_bookmarks` (default off); `public_id` is the only ID visible to others (never the auth ID/email). Only `user_id, lord_title, share_*` are client-writable (column grants), see `supabase/community.sql`
+- `peer_prefs` — Per-viewer alias and favorite flag for other users' shared histories (keyed by `peer_public_id`)
+- Other users' data is only reachable through the security-definer RPCs `get_community_histories()` (shared histories, attended concerts only) and `get_event_marks(event_ids)` (counts of Lords with "dabei"/"vorgemerkt" per event, shown on Gemerkt cards); both are `authenticated`-only. In the History tab, shared histories form a swipeable carousel (favorites first, then alphabetical); Settings (gear icon replacing the search lupe) hold Lord-Titel and the two switches
 
 ### PWA
 

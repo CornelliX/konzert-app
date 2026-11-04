@@ -1,5 +1,5 @@
 import { getLocations, getEvents, saveData, loadData } from './data.js'
-import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, addRadarArtistIfNew, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut, localToday } from './supabase.js'
+import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, addRadarArtistIfNew, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut, localToday, loadProfile, saveProfile, loadCommunityHistories, loadPeerPrefs, savePeerPref, loadEventMarks } from './supabase.js'
 
 // ISO-Datum + HH:MM sortiert als String korrekt; new Date(date + 'T' + time) wäre bei Events ohne
 // Uhrzeit "Invalid Date" (NaN im Vergleich) und würde die Reihenfolge durcheinanderbringen
@@ -165,6 +165,19 @@ let markSeenTimer = null
 let titleAnimated = false
 let lastGemerktTapAt = 0
 let radarOpen = false
+
+// Community: Histories anderer Nutzer (freigegeben), eigene Betrachter-Einstellungen (Alias/Favorit)
+// und das eigene Profil (Lord-Titel, Freigaben). historySlide: 0 = "Meine History", 1.. = fremde Listen
+let communityRaw = []
+let communityPeers = []
+let peerPrefs = {}
+let communityLoadedAt = 0
+let historySlide = 0
+let myProfile = null
+let myProfileError = false
+let settingsOpen = false
+let eventMarks = {}
+let eventMarksAt = {}
 
 export async function renderApp(el) {
   // window.history: der Modul-Scope hat ein eigenes `history` (die History-Einträge)
@@ -467,8 +480,9 @@ function markAllSeen() {
 
 function render() {
   swipeActiveWrapper = null
-  // Das Radar-Modal wird unten neu (hidden) gerendert - Zustand und Nav müssen dazu passen
+  // Radar- und Einstellungs-Modal werden unten neu (hidden) gerendert - Zustand und Nav müssen dazu passen
   radarOpen = false
+  settingsOpen = false
   const newCount = events.filter(e => isNew(e)).length
   const inner = document.getElementById('app-inner')
   inner.innerHTML = `
@@ -493,7 +507,7 @@ function render() {
   </div>
 `}
     ${currentUser ? `<div class="text-right mb-2" style="font-size:11px; color:rgba(255,255,255,0.3);">${esc(currentUser.email)} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
-    <div id="filter-bar-wrap" style="${currentView === 'gemerkt' ? 'display:none' : ''}">
+    <div id="filter-bar-wrap" style="${hidesFilterBar(currentView) ? 'display:none' : ''}">
       ${renderFilters()}
     </div>
     <div id="view-content">
@@ -505,6 +519,9 @@ function render() {
       </div>
       <div id="pane-gemerkt" style="${currentView !== 'gemerkt' ? 'display:none' : ''}">
         ${currentView === 'gemerkt' ? renderBookmarkedView() : ''}
+      </div>
+      <div id="pane-history" style="${currentView !== 'history' ? 'display:none' : ''}">
+        ${currentView === 'history' ? renderHistoryView() : ''}
       </div>
     </div>
   `
@@ -547,6 +564,111 @@ function renderHeader(inModal = false) {
   `
 }
 
+// ── Einstellungsmenü (Lord-Titel, Freigaben, Kurzanleitung) ─────────────────────────────────────
+
+// Platzhalter, der Text folgt nach dem Funktionstest
+const SETTINGS_GUIDE_TEXT = 'Die Kurzanleitung folgt nach dem Funktionstest.'
+
+function renderSettingsBody() {
+  const guide = `
+    <details style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.06); padding-top:14px;">
+      <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Kurzanleitung</summary>
+      <p class="text-xs" style="color:rgba(255,255,255,0.45); margin-top:8px; line-height:1.5;">${esc(SETTINGS_GUIDE_TEXT)}</p>
+    </details>
+  `
+  if (!currentUser) return `<p class="text-sm" style="color:rgba(255,255,255,0.4);">Bitte zuerst mit E-Mail anmelden, um Einstellungen vorzunehmen.</p>${guide}`
+  if (myProfileError) return `<p class="text-sm" style="color:rgba(255,120,120,0.85);">Die Einstellungen konnten nicht geladen werden. Bitte später noch einmal versuchen.</p>${guide}`
+  if (!myProfile) return `<p class="text-sm" style="color:rgba(255,255,255,0.4);">Einstellungen werden geladen …</p>${guide}`
+  const row = (key, label, hint) => `
+    <div class="flex items-start justify-between gap-3" style="margin-top:18px;">
+      <div style="min-width:0;">
+        <div class="syne" style="font-size:13px; font-weight:700; color:white;">${label}</div>
+        <p class="text-xs" style="color:rgba(255,255,255,0.4); margin-top:3px; line-height:1.45;">${hint}</p>
+      </div>
+      <button type="button" role="switch" aria-checked="${myProfile[key]}" aria-label="${label}" data-setting="${key}" class="toggle-switch"></button>
+    </div>
+  `
+  return `
+    <div>
+      <label for="settings-lord" class="syne" style="display:block; font-size:13px; font-weight:700; color:white;">Lord-Titel</label>
+      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin:3px 0 8px; line-height:1.45;">Dieser Name wird anderen angezeigt, wenn sie deine History sehen („History von Lord …“).</p>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span class="syne" style="font-size:14px; font-weight:800; color:#818cf8;">Lord</span>
+        <input id="settings-lord" type="text" maxlength="30" autocomplete="off" placeholder="z. B. Fontaines" value="${esc(myProfile.lordTitle ?? '')}" style="${inputStyle}" />
+      </div>
+    </div>
+    ${row('shareBookmarks', 'Merkliste für alle sichtbar', 'Andere Lords sehen nur Zahlen: wie viele ein Event vorgemerkt haben oder „dabei“ sind. Keine Namen, keine Liste.')}
+    ${row('shareHistory', 'History für alle sichtbar', 'Angemeldete Lords können deine besuchten Konzerte samt Sternen unter deinem Lord-Titel ansehen.')}
+    ${guide}
+  `
+}
+
+function refreshSettingsBody() {
+  const body = document.getElementById('settings-body')
+  if (body) body.innerHTML = renderSettingsBody()
+}
+
+async function loadMyProfile() {
+  myProfileError = false
+  myProfile = await loadProfile()
+  if (!myProfile) myProfileError = true
+  refreshSettingsBody()
+}
+
+function openSettingsModal() {
+  settingsOpen = true
+  document.getElementById('modal-settings')?.classList.remove('hidden')
+  refreshSettingsBody()
+  if (currentUser && !myProfile) loadMyProfile()
+}
+
+function closeSettingsModal() {
+  settingsOpen = false
+  document.getElementById('modal-settings')?.classList.add('hidden')
+}
+
+async function toggleSetting(key) {
+  myProfile[key] = !myProfile[key]
+  refreshSettingsBody()
+  if (!(await saveProfile({ [key]: myProfile[key] }))) {
+    myProfile[key] = !myProfile[key]
+    refreshSettingsBody()
+    showToast('Fehler', 'Einstellung konnte nicht gespeichert werden.')
+  }
+}
+
+async function saveLordTitle(value) {
+  const title = value.trim().slice(0, 30)
+  if (title && title.length < 2) {
+    showToast('Lord-Titel', 'Mindestens 2 Zeichen.')
+    refreshSettingsBody()
+    return
+  }
+  const before = myProfile.lordTitle
+  myProfile.lordTitle = title || null
+  if (await saveProfile({ lordTitle: title })) {
+    showToast('Gespeichert', title ? `Lord ${title}` : 'Lord-Titel entfernt')
+  } else {
+    myProfile.lordTitle = before
+    refreshSettingsBody()
+    showToast('Fehler', 'Lord-Titel konnte nicht gespeichert werden.')
+  }
+}
+
+function attachSettingsEvents() {
+  const modal = document.getElementById('modal-settings')
+  if (!modal) return
+  modal.addEventListener('click', async e => {
+    if (e.target === modal || e.target.closest('[data-close-settings]')) { closeSettingsModal(); return }
+    const sw = e.target.closest('[data-setting]')
+    if (sw && myProfile) await toggleSetting(sw.dataset.setting)
+  })
+  // change feuert beim Verlassen des Feldes bzw. mit Enter - gespeichert wird also nicht bei jedem Tastendruck
+  modal.addEventListener('change', async e => {
+    if (e.target.id === 'settings-lord' && myProfile) await saveLordTitle(e.target.value)
+  })
+}
+
 function renderBottomNav() {
   // Nur noch anstehende Events zählen (wie die Karten der Merkliste), keine bereits besuchten
   const markedIds = new Set([...bookmarked, ...going].filter(Boolean).map(String))
@@ -555,6 +677,7 @@ function renderBottomNav() {
     { id: 'liste', label: 'Events', icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="4" cy="6" r="1.5" fill="currentColor" stroke="none"/><circle cx="4" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="4" cy="18" r="1.5" fill="currentColor" stroke="none"/></svg>` },
     { id: 'kalender', label: 'Kalender', icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>` },
     { id: 'gemerkt', label: 'Gemerkt', badge: bmCount, icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="${bmCount > 0 ? 'rgba(244,114,182,0.7)' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>` },
+    { id: 'history', label: 'History', icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 4 3 9 8 9"/><polyline points="12 7 12 12 15 14"/></svg>` },
   ]
   return `
     <div style="max-width:576px; margin:0 auto; background:rgba(4,4,32,0.96); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-top:1px solid rgba(255,255,255,0.07); display:flex; padding-bottom:env(safe-area-inset-bottom,0px);">
@@ -637,7 +760,7 @@ function renderFilters() {
             <input id="search-input" type="search" placeholder="Suche…" value="${esc(filters.search)}" style="width:100%; box-sizing:border-box; padding:9px 30px 9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none; -webkit-appearance:none; appearance:none;" />
             <button id="search-clear" type="button" aria-label="Suche löschen" style="position:absolute; right:4px; top:50%; transform:translateY(-50%); width:24px; height:24px; border:none; background:transparent; color:rgba(255,255,255,0.4); font-size:18px; line-height:1; cursor:pointer; display:${filters.search ? 'flex' : 'none'}; align-items:center; justify-content:center; border-radius:50%;">×</button>
           </div>
-          <button id="search-submit" type="button" title="Suchen" aria-label="Suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex-shrink:0; width:34px; height:34px; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+          <button id="settings-open" type="button" title="Einstellungen" aria-label="Einstellungen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex-shrink:0; width:34px; height:34px; color:rgba(255,255,255,0.6);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
         </div>
       </div>
     </div>
@@ -733,7 +856,34 @@ function renderSkeleton() {
   `
 }
 
-function renderEventCard(e) {
+// Text der Zähler anderer Lords ("✓ 2 Lords dabei · ♡ 1 Lord vorgemerkt"); leer, wenn niemand das Event markiert hat
+function formatEventMarks(m) {
+  if (!m) return ''
+  const part = (n, symbol, color, word) => n > 0 ? `<span style="color:${color};">${symbol} ${n} ${n === 1 ? 'Lord' : 'Lords'} ${word}</span>` : ''
+  return [part(m.going, '✓', '#34d399', 'dabei'), part(m.bookmarked, '♡', '#f472b6', 'vorgemerkt')].filter(Boolean).join(' · ')
+}
+
+function paintEventMarks() {
+  document.querySelectorAll('[data-marks]').forEach(el => { el.innerHTML = formatEventMarks(eventMarks[el.dataset.marks]) })
+}
+
+// Holt die Zähler für die Karten der Merkliste (je Event 60 s zwischengespeichert) und zeigt sie an.
+// Schlägt das Laden fehl, bleibt es bei der bisherigen Anzeige.
+async function loadMarksForVisible() {
+  if (!currentUser) return
+  const ids = [...new Set([...document.querySelectorAll('[data-marks]')].map(el => el.dataset.marks))]
+  const stale = ids.filter(id => Date.now() - (eventMarksAt[id] || 0) >= 60000)
+  if (stale.length) {
+    const result = await loadEventMarks(stale)
+    if (result) {
+      for (const id of stale) { eventMarks[id] = result[id] || { going: 0, bookmarked: 0 }; eventMarksAt[id] = Date.now() }
+    }
+  }
+  paintEventMarks()
+}
+
+// showMarks: nur im Gemerkt-Reiter - Platz für die Zähler anderer Lords mit freigegebener Merkliste
+function renderEventCard(e, { showMarks = false } = {}) {
   const loc = locationsById.get(e.locationId)
   const isBookmarked = bookmarked.some(b => b == e.id)
   const isGoing = going.some(g => g == e.id)
@@ -768,6 +918,7 @@ function renderEventCard(e) {
               ${loc ? esc(loc.name) : esc(e.locationName || '')}
             </p>
             ${e.description ? `<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.5);">${esc(e.description)}</p>` : ''}
+            ${showMarks ? `<div data-marks="${e.id}" class="text-xs font-semibold">${formatEventMarks(eventMarks[e.id])}</div>` : ''}
           </div>
           <div class="flex gap-2 mt-1" style="align-items:center;">
             <div style="display:flex; gap:6px; flex:1; min-width:0;">
@@ -854,11 +1005,8 @@ function renderBookmarkedView() {
     ...bookmarkedEvents.map(e => ({ ...e, _status: 'gemerkt' }))
   ].sort(byDateTime)
 
-  // Nur besuchte Einträge zeigen - zukünftige History-Snapshots existieren schon (siehe
-  // syncGoingToHistory), erscheinen aber erst am Konzerttag ab 20 Uhr (siehe isConcertOver).
-  const historyEntries = history.filter(isHistoryVisible).sort((a, b) => b.date.localeCompare(a.date))
-
-  if (allEvents.length === 0 && historyEntries.length === 0) return `
+  // Die History (besuchte Konzerte) hat seit dem eigenen Reiter "History" ihren Platz dort, siehe renderHistoryView()
+  if (allEvents.length === 0) return `
     <div class="text-center py-20 text-slate-600">
       <p class="syne text-2xl mb-2">—</p>
       <p class="text-sm">Noch keine Events gespeichert.</p>
@@ -867,16 +1015,27 @@ function renderBookmarkedView() {
 
   return `
     <div class="space-y-3 pt-2">
-      ${allEvents.map(e => renderEventCard(e)).join('')}
+      ${allEvents.map(e => renderEventCard(e, { showMarks: true })).join('')}
     </div>
-    ${renderHistorySection(historyEntries)}
   `
 }
 
-function renderHistoryRow(h) {
+// readOnly: Zeile aus der freigegebenen History eines anderen Nutzers - keine Swipe-Aktion, kein Löschen,
+// Sterne nur zur Anzeige. Alle Werte stammen dort aus fremden Konten und gehen ausnahmslos durch esc().
+function renderHistoryRow(h, readOnly = false) {
   const dateStr = new Date(h.date + 'T12:00:00').toLocaleDateString('de-DE', { day: 'numeric', month: 'short', year: 'numeric' })
   const loc = [h.locationName, h.locationCity].filter(Boolean).join(', ')
   const rating = h.rating || 0
+  if (readOnly) {
+    const staticStars = [1, 2, 3, 4, 5].map(n => `<span style="padding:0 1px; font-size:15px; line-height:1; color:${n <= rating ? '#facc15' : 'rgba(255,255,255,0.22)'};">★</span>`).join('')
+    return `
+      <div class="rounded-xl px-3 py-2.5" style="background:rgba(8,8,42,0.92); border:1px solid rgba(255,255,255,0.07);">
+        <a href="${esc(spotifySearchUrl(h.title))}" target="_blank" title="Auf Spotify suchen" class="syne" style="display:block; font-size:13px; font-weight:700; color:white; text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</a>
+        <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
+        <div style="margin-top:4px; display:flex;" aria-label="${rating} von 5 Sternen">${staticStars}</div>
+      </div>
+    `
+  }
   const stars = [1, 2, 3, 4, 5].map(n => `<button data-star="${n}" aria-label="${n} Sterne" style="background:none; border:none; cursor:pointer; padding:0 1px; font-size:15px; line-height:1; color:${n <= rating ? '#facc15' : 'rgba(255,255,255,0.22)'};">★</button>`).join('')
   return `
     <div class="history-swipe-wrapper" data-history-id="${h.id}" style="position:relative; overflow:hidden; border-radius:12px;">
@@ -945,8 +1104,8 @@ function renderHistoryDatePicker() {
 // historyEntries kommt bereits absteigend nach Datum sortiert an - ein einfacher
 // Jahreswechsel-Check beim Durchlaufen reicht daher für die Gliederung, ohne vorher
 // extra nach Jahr gruppieren zu müssen.
-function renderHistoryListHtml(historyEntries) {
-  if (!historyEntries.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.3);">Noch keine besuchten Konzerte eingetragen.</p>`
+function renderHistoryListHtml(historyEntries, readOnly = false) {
+  if (!historyEntries.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.3);">${readOnly ? 'Noch keine besuchten Konzerte sichtbar.' : 'Noch keine besuchten Konzerte eingetragen.'}</p>`
   let html = ''
   let lastYear = null
   for (const h of historyEntries) {
@@ -955,32 +1114,208 @@ function renderHistoryListHtml(historyEntries) {
       html += `<div class="syne" style="margin:${lastYear ? '18px' : '0'} 0 2px 2px; font-size:11px; font-weight:800; letter-spacing:0.08em; color:rgba(255,255,255,0.3);">${year}</div>`
       lastYear = year
     }
-    html += renderHistoryRow(h)
+    html += renderHistoryRow(h, readOnly)
   }
   return html
 }
 
-function renderHistorySection(historyEntries) {
+// ── History-Reiter: "Meine History" und freigegebene Listen anderer Nutzer als Karussell ─────────
+
+// Anzeigenamen und Reihenfolge der fremden Histories. Anzeigename = Lord-Titel des Nutzers, sonst der
+// eigene Name des Betrachters (Alias), sonst "Namenlos" - ein später gesetzter Lord-Titel überschreibt
+// den Alias also automatisch. Gleiche Namen (ohne Groß-/Kleinschreibung) werden fortlaufend nummeriert,
+// der erste ohne Zahl, in der Reihenfolge der Profil-Erstellung. Reihenfolge: Favoriten zuerst, dann die
+// übrigen, jeweils alphabetisch (wie im Radar).
+function resolvePeers(peers, prefs) {
+  const resolved = peers.map(p => {
+    const pref = prefs[p.publicId] || {}
+    return { ...p, isFavorite: !!pref.isFavorite, baseName: p.lordTitle || pref.alias || 'Namenlos' }
+  })
+  const seen = new Map()
+  const byCreation = [...resolved].sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)) || String(a.publicId).localeCompare(String(b.publicId)))
+  for (const p of byCreation) {
+    const key = p.baseName.toLowerCase()
+    const n = (seen.get(key) || 0) + 1
+    seen.set(key, n)
+    p.name = n === 1 ? p.baseName : `${p.baseName} ${n}`
+  }
+  return resolved.sort((a, b) => (Number(b.isFavorite) - Number(a.isFavorite)) || a.name.localeCompare(b.name, 'de', { sensitivity: 'base' }))
+}
+
+// Kopfzeile des Karussells: Titel, Aktionen (eigene Liste: "+"; fremde Liste: Favorit, ggf. Name vergeben)
+// und ein Punkt je Liste (Favoriten in Akzentfarbe, die aktive weiß)
+function renderHistoryHead() {
+  const total = 1 + communityPeers.length
+  const peer = historySlide > 0 ? communityPeers[historySlide - 1] : null
+  const btn = 'btn-glass rounded-lg inline-flex items-center justify-center'
+  const actions = peer
+    ? `${peer.lordTitle ? '' : `<button data-peer-alias="${esc(peer.publicId)}" title="Namen vergeben" aria-label="Namen vergeben" class="${btn}" style="height:28px; padding:0 10px; color:rgba(255,255,255,0.6); font-size:11px;">Name</button>`}
+       <button data-peer-fav="${esc(peer.publicId)}" title="${peer.isFavorite ? 'Favorit entfernen' : 'Als Favorit markieren'}" aria-label="${peer.isFavorite ? 'Favorit entfernen' : 'Als Favorit markieren'}" aria-pressed="${peer.isFavorite}" class="${btn}" style="width:28px; height:28px; color:${peer.isFavorite ? '#818cf8' : 'rgba(255,255,255,0.45)'}; font-size:16px; line-height:1;">${peer.isFavorite ? '★' : '☆'}</button>`
+    : `<button data-history-add-toggle title="Konzert nachtragen" aria-label="Konzert nachtragen" class="${btn}" style="width:28px; height:28px; color:rgba(255,255,255,0.6); font-size:16px; line-height:1;">+</button>`
+  const dots = total > 1
+    ? `<div style="display:flex; justify-content:center; margin:2px 0 8px;">${Array.from({ length: total }, (_, i) => {
+        const p = i > 0 ? communityPeers[i - 1] : null
+        const bg = i === historySlide ? 'white' : p?.isFavorite ? 'rgba(129,140,248,0.8)' : 'rgba(255,255,255,0.25)'
+        return `<button data-dot="${i}" aria-label="${p ? 'History von Lord ' + esc(p.name) : 'Meine History'}" style="width:19px; height:19px; padding:6px; border:none; border-radius:50%; background-color:${bg}; background-clip:content-box; cursor:pointer;"></button>`
+      }).join('')}</div>`
+    : ''
   return `
-    <div id="history-section" style="margin-top:28px; scroll-margin-top:calc(env(safe-area-inset-top) + 32px);">
-      <div class="flex items-center justify-between mb-3">
-        <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:rgba(255,255,255,0.5);">History</h3>
-        <button data-history-add-toggle title="Konzert nachtragen" aria-label="Konzert nachtragen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="width:28px; height:28px; color:rgba(255,255,255,0.6); font-size:16px; line-height:1;">+</button>
-      </div>
-      <div id="history-add-form" class="hidden space-y-2 mb-3">
-        <input id="history-title" type="text" placeholder="Artist / Titel" style="${inputStyle}" />
-        <div style="position:relative;">
-          <input id="history-location" type="text" placeholder="Location" autocomplete="off" style="${inputStyle}" />
-          ${renderHistoryLocationDropdown()}
-        </div>
-        ${renderHistoryDatePicker()}
-        <button data-history-save class="w-full py-2.5 rounded-xl font-bold text-white text-sm syne" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">Konzert hinzufügen</button>
-      </div>
-      <div id="history-list" class="space-y-2">
-        ${renderHistoryListHtml(historyEntries)}
-      </div>
+    <div class="flex items-center justify-between mb-1">
+      <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:rgba(255,255,255,0.5); min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${peer ? 'History von Lord ' + esc(peer.name) : 'Meine History'}</h3>
+      <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">${actions}</div>
+    </div>
+    ${dots}
+  `
+}
+
+function renderPeerSlides() {
+  return communityPeers.map((p, i) => `
+    <div class="history-slide" data-i="${i + 1}" data-peer="${esc(p.publicId)}" style="${historySlide === i + 1 ? '' : 'display:none'}">
+      <div class="space-y-2">${renderHistoryListHtml(p.entries, true)}</div>
+    </div>
+  `).join('')
+}
+
+function renderHistoryView() {
+  if (!currentUser) return `
+    <div class="text-center py-20 text-slate-600">
+      <p class="syne text-2xl mb-2">—</p>
+      <p class="text-sm">Bitte zuerst mit E-Mail anmelden, um deine History zu sehen.</p>
     </div>
   `
+  const historyEntries = history.filter(isHistoryVisible).sort((a, b) => b.date.localeCompare(a.date))
+  return `
+    <div id="history-carousel" class="pt-2">
+      <div id="history-carousel-head">${renderHistoryHead()}</div>
+      <div class="history-slide" data-i="0" style="${historySlide === 0 ? '' : 'display:none'}">
+        <div id="history-add-form" class="hidden space-y-2 mb-3">
+          <input id="history-title" type="text" placeholder="Artist / Titel" style="${inputStyle}" />
+          <div style="position:relative;">
+            <input id="history-location" type="text" placeholder="Location" autocomplete="off" style="${inputStyle}" />
+            ${renderHistoryLocationDropdown()}
+          </div>
+          ${renderHistoryDatePicker()}
+          <button data-history-save class="w-full py-2.5 rounded-xl font-bold text-white text-sm syne" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">Konzert hinzufügen</button>
+        </div>
+        <div id="history-list" class="space-y-2">
+          ${renderHistoryListHtml(historyEntries)}
+        </div>
+        <p id="history-community-hint" class="text-xs" style="margin-top:18px; color:rgba(255,255,255,0.3); ${communityLoadedAt && !communityPeers.length ? '' : 'display:none'}">Hier erscheinen die Histories anderer Lords, sobald sie freigegeben sind.</p>
+      </div>
+      <div id="history-peer-slides">${renderPeerSlides()}</div>
+    </div>
+  `
+}
+
+// Zeigt Liste `i` (0 = eigene) und aktualisiert Kopfzeile und Punkte. dir: 1 = von rechts, -1 = von links einblenden
+function showHistorySlide(i, dir = 0) {
+  historySlide = Math.max(0, Math.min(communityPeers.length, i))
+  document.querySelectorAll('#history-carousel .history-slide').forEach(el => {
+    const active = Number(el.dataset.i) === historySlide
+    el.style.display = active ? '' : 'none'
+    el.classList.remove('slide-from-right', 'slide-from-left')
+    if (active && dir) el.classList.add(dir > 0 ? 'slide-from-right' : 'slide-from-left')
+  })
+  const head = document.getElementById('history-carousel-head')
+  if (head) head.innerHTML = renderHistoryHead()
+  const hint = document.getElementById('history-community-hint')
+  if (hint) hint.style.display = communityLoadedAt && !communityPeers.length ? '' : 'none'
+}
+
+// Fremde Listen neu zeichnen (nach dem Laden oder nach Favorit/Name), eigene Liste und Formular bleiben unberührt
+function refreshCommunityUI() {
+  const slides = document.getElementById('history-peer-slides')
+  if (!slides) return
+  slides.innerHTML = renderPeerSlides()
+  showHistorySlide(historySlide)
+}
+
+// Lädt die freigegebenen Histories und die eigenen Betrachter-Einstellungen (60-s-Cache; force umgeht ihn).
+// Bei einem Ladefehler bleibt die bisherige Anzeige stehen.
+async function ensureCommunityLoaded(force = false) {
+  if (!currentUser) return
+  if (!force && communityLoadedAt && Date.now() - communityLoadedAt < 60000) return
+  const [peers, prefs] = await Promise.all([loadCommunityHistories(), loadPeerPrefs()])
+  if (peers === null) return
+  communityRaw = peers
+  peerPrefs = prefs
+  communityPeers = resolvePeers(communityRaw, peerPrefs)
+  communityLoadedAt = Date.now()
+  historySlide = Math.min(historySlide, communityPeers.length)
+  refreshCommunityUI()
+}
+
+async function togglePeerFavorite(publicId) {
+  const before = peerPrefs[publicId]
+  const next = !before?.isFavorite
+  peerPrefs[publicId] = { ...(before || {}), isFavorite: next }
+  communityPeers = resolvePeers(communityRaw, peerPrefs)
+  // Die Liste rückt an ihre neue Position, die Ansicht bleibt auf ihr
+  historySlide = communityPeers.findIndex(p => p.publicId === publicId) + 1
+  refreshCommunityUI()
+  if (!(await savePeerPref(publicId, { isFavorite: next }))) {
+    if (before) peerPrefs[publicId] = before; else delete peerPrefs[publicId]
+    communityPeers = resolvePeers(communityRaw, peerPrefs)
+    historySlide = communityPeers.findIndex(p => p.publicId === publicId) + 1
+    refreshCommunityUI()
+    showToast('Fehler', 'Favorit konnte nicht gespeichert werden.')
+  }
+}
+
+// Eigener Name für eine Liste, deren Nutzer (noch) keinen Lord-Titel hat. Nur für den Betrachter sichtbar.
+async function assignPeerAlias(publicId) {
+  const current = peerPrefs[publicId]?.alias || ''
+  const input = prompt('Name für diese History (nur für dich sichtbar):', current)
+  if (input === null) return
+  const alias = input.trim().slice(0, 30)
+  const before = peerPrefs[publicId]
+  peerPrefs[publicId] = { ...(before || {}), alias: alias || null }
+  communityPeers = resolvePeers(communityRaw, peerPrefs)
+  historySlide = communityPeers.findIndex(p => p.publicId === publicId) + 1
+  refreshCommunityUI()
+  if (!(await savePeerPref(publicId, { alias }))) {
+    if (before) peerPrefs[publicId] = before; else delete peerPrefs[publicId]
+    communityPeers = resolvePeers(communityRaw, peerPrefs)
+    historySlide = communityPeers.findIndex(p => p.publicId === publicId) + 1
+    refreshCommunityUI()
+    showToast('Fehler', 'Name konnte nicht gespeichert werden.')
+  }
+}
+
+// Wischgeste und Kopfzeilen-Klicks des Karussells (Delegation, überlebt das Neuzeichnen der Kopfzeile).
+// Gewischt wird nur über der Kopfzeile oder in fremden (schreibgeschützten) Listen - in "Meine History"
+// behalten die Zeilen ihren eigenen Links-Wisch ("Zum Radar").
+function attachHistoryCarousel() {
+  const root = document.getElementById('history-carousel')
+  if (!root || root.dataset.bound) return
+  root.dataset.bound = '1'
+  let sx = 0, sy = 0, tracking = false
+  root.addEventListener('touchstart', e => {
+    tracking = !!(e.target.closest('#history-carousel-head') || e.target.closest('.history-slide[data-peer]'))
+    sx = e.touches[0].clientX
+    sy = e.touches[0].clientY
+  }, { passive: true })
+  root.addEventListener('touchend', e => {
+    if (!tracking) return
+    tracking = false
+    const dx = e.changedTouches[0].clientX - sx
+    const dy = e.changedTouches[0].clientY - sy
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return
+    showHistorySlide(historySlide + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1)
+  }, { passive: true })
+  document.getElementById('history-carousel-head')?.addEventListener('click', async e => {
+    const dot = e.target.closest('[data-dot]')
+    if (dot) { const i = Number(dot.dataset.dot); showHistorySlide(i, i > historySlide ? 1 : -1); return }
+    if (e.target.closest('[data-history-add-toggle]')) {
+      if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Konzerte nachzutragen.'); return }
+      document.getElementById('history-add-form')?.classList.toggle('hidden')
+      return
+    }
+    const fav = e.target.closest('[data-peer-fav]')
+    if (fav) { await togglePeerFavorite(fav.dataset.peerFav); return }
+    const alias = e.target.closest('[data-peer-alias]')
+    if (alias) await assignPeerAlias(alias.dataset.peerAlias)
+  })
 }
 
 function refreshHistoryList() {
@@ -1039,10 +1374,9 @@ function attachHistoryRemoveEvents() {
 
 function attachHistoryEvents() {
   const form = document.getElementById('history-add-form')
-  document.querySelector('[data-history-add-toggle]')?.addEventListener('click', () => {
-    if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Konzerte nachzutragen.'); return }
-    form?.classList.toggle('hidden')
-  })
+  // Karussell (Wischen, Punkte, "+", Favorit, Name) und Nachladen der fremden Listen
+  attachHistoryCarousel()
+  if (document.getElementById('history-carousel')) ensureCommunityLoaded()
   const locationInput = document.getElementById('history-location')
   const locationDropdown = document.getElementById('history-location-dropdown')
   const attachLocOptionEvents = () => {
@@ -1114,6 +1448,21 @@ function renderModals() {
       </div>
     </div>
 
+    <div id="modal-settings" class="hidden fixed inset-0 z-50 overflow-y-auto scrollbar-hide" style="background:rgba(0,0,0,0.72); backdrop-filter:blur(8px); overscroll-behavior:contain;">
+      <div class="max-w-lg mx-auto px-4" style="padding-top:max(56px, calc(env(safe-area-inset-top) + 24px)); padding-bottom:48px;">
+        <div class="rounded-2xl overflow-hidden" style="background:rgba(8,8,42,0.96); border:1px solid rgba(99,102,241,0.18); box-shadow:0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);">
+          <div style="height:2px; background:linear-gradient(90deg, #818cf8, transparent);"></div>
+          <div class="p-5">
+            <div class="flex items-center justify-between" style="margin-bottom:6px;">
+              <h2 class="syne text-xl text-white" style="font-weight:800;">Einstellungen</h2>
+              <button data-close-settings type="button" aria-label="Schließen" style="color:rgba(255,255,255,0.45); background:none; border:none; cursor:pointer; font-size:24px; line-height:1; padding:4px 8px;">×</button>
+            </div>
+            <div id="settings-body">${renderSettingsBody()}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="modal-spotify-picker" class="hidden fixed inset-0 z-50 overflow-y-auto scrollbar-hide" style="background:rgba(0,0,0,0.8); backdrop-filter:blur(8px);">
       <div class="max-w-sm mx-auto mt-24 mb-12 mx-4 rounded-3xl overflow-hidden" style="background:rgba(12,17,32,0.97); border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 80px rgba(0,0,0,0.6);">
         <div class="px-6 py-5" style="background:linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.15)); border-bottom:1px solid rgba(255,255,255,0.06);">
@@ -1150,10 +1499,9 @@ function attachFilterBarEvents() {
   })
   const searchInput = document.getElementById('search-input')
   const searchClear = document.getElementById('search-clear')
-  const searchSubmit = document.getElementById('search-submit')
-  // Die Liste wird neu gerendert, wenn der Nutzer die Eingabe mit Enter/Suchen-Button bestätigt,
-  // oder automatisch 1s nach dem letzten Tastendruck (debounced) - so bleibt Tippen flüssig,
-  // ohne dass man explizit auf die Lupe tippen muss.
+  // Die Liste wird neu gerendert, wenn der Nutzer die Eingabe mit Enter/"Suchen" der Tastatur bestätigt,
+  // oder automatisch 1s nach dem letzten Tastendruck (debounced) - so bleibt Tippen flüssig.
+  // (Der frühere Lupen-Button ist dem Einstellungen-Zahnrad gewichen.)
   let searchDebounceTimer = null
   const commitSearch = (keepFocus = false) => {
     clearTimeout(searchDebounceTimer)
@@ -1169,7 +1517,7 @@ function attachFilterBarEvents() {
   searchInput?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') { e.preventDefault(); commitSearch() }
   })
-  searchSubmit?.addEventListener('click', () => commitSearch())
+  document.getElementById('settings-open')?.addEventListener('click', openSettingsModal)
   // preventDefault auf mousedown verhindert, dass der Tap den Fokus kurz vom Input wegnimmt -
   // sonst musste unten explizit wieder .focus() aufgerufen werden, was auf Mobilgeräten die
   // virtuelle Tastatur kurz zu- und wieder aufklappen lässt und den Clear-Tap spürbar träge
@@ -1226,10 +1574,9 @@ function updateView(reRenderFilters = false) {
   }
 }
 
-function scrollToHistorySection() {
-  requestAnimationFrame(() => {
-    document.getElementById('history-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  })
+// Die Filterleiste (Stadt, Location, Suche, Einstellungen) gibt es nur in Events und Kalender
+function hidesFilterBar(view) {
+  return view === 'gemerkt' || view === 'history'
 }
 
 function attachNavEvents() {
@@ -1241,17 +1588,20 @@ function attachNavEvents() {
       const wasRadarOpen = radarOpen
       radarOpen = false
       document.getElementById('modal-radar')?.classList.add('hidden')
-      // Doppel-Tap auf "Gemerkt" springt direkt zur History-Sektion - über den zeitlichen
-      // Abstand zweier click-Events statt des nativen dblclick, da dblclick bei Touch-Taps
-      // plattformabhängig unzuverlässig synthetisiert wird.
+      // Doppel-Tap auf "Gemerkt" öffnet den History-Reiter (frühere Abkürzung zur History-Sektion
+      // unter der Merkliste) - über den zeitlichen Abstand zweier click-Events statt des nativen
+      // dblclick, da dblclick bei Touch-Taps plattformabhängig unzuverlässig synthetisiert wird.
       const isGemerktTap = btn.dataset.nav === 'gemerkt'
       const now = Date.now()
       const isDoubleTap = isGemerktTap && (now - lastGemerktTapAt < 400)
       if (isGemerktTap) lastGemerktTapAt = now
+      if (isDoubleTap) {
+        document.querySelector('[data-nav="history"]')?.click()
+        return
+      }
 
       if (currentView === btn.dataset.nav) {
         if (wasRadarOpen) refreshBottomNav()
-        if (isDoubleTap) scrollToHistorySection()
         return
       }
       const prevView = currentView
@@ -1260,9 +1610,13 @@ function attachNavEvents() {
       const newPane = document.getElementById('pane-' + currentView)
       newPane.style.display = ''
       const filterBar = document.getElementById('filter-bar-wrap')
-      if (filterBar) filterBar.style.display = currentView === 'gemerkt' ? 'none' : ''
+      if (filterBar) filterBar.style.display = hidesFilterBar(currentView) ? 'none' : ''
       if (currentView === 'gemerkt') {
         newPane.innerHTML = renderBookmarkedView()
+        attachSwipeGestures()
+        loadMarksForVisible()
+      } else if (currentView === 'history') {
+        newPane.innerHTML = renderHistoryView()
         attachHistoryEvents()
         attachSwipeGestures()
       } else if (newPane.dataset.stale) {
@@ -1278,13 +1632,13 @@ function attachNavEvents() {
       }
       refreshBottomNav()
       window.scrollTo(0, 0)
-      if (isDoubleTap && currentView === 'gemerkt') scrollToHistorySection()
     })
   })
 }
 
 function attachEvents() {
   attachNavEvents()
+  attachSettingsEvents()
 
   // Modal
   document.querySelector('[data-open-radar]')?.addEventListener('click', openRadarModal)
@@ -1340,7 +1694,7 @@ function attachEvents() {
     let ptStart = 0, ptPulling = false
     document.addEventListener('touchstart', e => {
       // Nicht bei offenem Radar: dort scrollt das Modal selbst, und der Refresh würde es per render() schließen
-      if (window.scrollY === 0 && !radarOpen) { ptStart = e.touches[0].clientY; ptPulling = true }
+      if (window.scrollY === 0 && !radarOpen && !settingsOpen) { ptStart = e.touches[0].clientY; ptPulling = true }
     }, { passive: true })
     document.addEventListener('touchmove', e => {
       if (!ptPulling) return
@@ -1364,6 +1718,9 @@ function attachEvents() {
             going = bm.going.filter(id => validIds.some(v => v == id))
           }
           titleAnimated = false
+          // Pull-to-Refresh holt auch die Community-Daten (fremde Listen, Zähler) frisch
+          communityLoadedAt = 0
+          eventMarksAt = {}
           render()
         }
         const ind = document.getElementById('ptr-indicator')
@@ -1440,12 +1797,22 @@ function attachEvents() {
     going = []
     history = []
     radar = []
+    communityRaw = []
+    communityPeers = []
+    peerPrefs = {}
+    communityLoadedAt = 0
+    historySlide = 0
+    myProfile = null
+    myProfileError = false
+    eventMarks = {}
+    eventMarksAt = {}
     render()
   })
 
   attachFilterBarEvents()
   if (currentView === 'kalender') attachCalendarEvents()
-  if (currentView === 'gemerkt') attachHistoryEvents()
+  if (currentView === 'history') attachHistoryEvents()
+  if (currentView === 'gemerkt') loadMarksForVisible()
   attachSwipeGestures()
 }
 
