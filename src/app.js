@@ -590,6 +590,7 @@ const SETTINGS_GUIDE = [
   ]],
   ['Radar', [
     'Künstler ohne anstehendes Konzert. Sobald ein Konzert angekündigt wird, bekommst Du einen Treffer (mit Benachrichtigung, wenn erlaubt).',
+    'Neu angekündigte Konzerte von Künstlern auf der Radar-Liste werden automatisch in die Merkliste übernommen. Der Künstler wird danach aus der Radar-Liste gestrichen.',
     'Künstler mit 4 oder 5 Sternen in der History kommen automatisch ins Radar.'
   ]],
   ['Einstellungen (Zahnrad)', [
