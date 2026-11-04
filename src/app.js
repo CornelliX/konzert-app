@@ -1347,7 +1347,7 @@ function renderCarouselHead(kind) {
   // Schriftgröße so, dass ein 15 Zeichen langer Name die Zeile bis kurz vor den Favoriten-Stern füllt (390 px Breite).
   // Bei einem Lord ohne Titel steht noch der "Name"-Knopf daneben, dort bleibt es bei der kleineren Schrift.
   const compact = !!peer && !peer.lordTitle
-  const size = compact ? 11 : kind === 'history' ? 14 : 13   // "History von Lord" ist kürzer und braucht mehr Schrift
+  const size = compact ? 11 : 13   // in Merkliste und History gleich groß
   const btn = 'btn-glass rounded-lg inline-flex items-center justify-center'
   const actions = peer
     ? `${peer.lordTitle ? '' : `<button data-peer-alias="${esc(peer.publicId)}" title="Namen vergeben" aria-label="Namen vergeben" class="${btn}" style="height:28px; padding:0 10px; color:rgba(255,255,255,0.6); font-size:11px;">Name</button>`}
