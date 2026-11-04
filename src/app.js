@@ -578,7 +578,7 @@ function renderHeader(inModal = false) {
   `
 }
 
-// ── Einstellungsmenü (Lord-Titel, Freigaben, Kurzanleitung) ─────────────────────────────────────
+// ── Einstellungsmenü (Lord-Titel, Freigaben, Anleitung) ─────────────────────────────────────
 
 // Kleine Symbole im Anleitungstext: {name} im Text wird durch das gleiche Icon ersetzt, das die App an der Stelle zeigt.
 // Als Funktion, da sie Icon-Konstanten weiter unten in der Datei nutzt (sonst Zugriff vor der Definition).
@@ -614,7 +614,7 @@ function guideText(text) {
   return esc(text).replace(/\{(\w+)\}/g, (m, token) => guideIcon(token) ?? m)
 }
 
-// Kurzanleitung: [Überschrift, [[Stichwort, Text], ...]]
+// Anleitung: [Überschrift, [[Stichwort, Text], ...]]
 const SETTINGS_GUIDE = [
   ['Events', [
     ['Überblick', 'Alle Konzerte und Partys in Berlin und Leipzig, nach Datum sortiert.'],
@@ -633,7 +633,7 @@ const SETTINGS_GUIDE = [
   ['History', [
     ['Meine History', 'Deine besuchten Konzerte. Ein Event mit „Bin dabei“ erscheint hier am Konzerttag ab 20 Uhr automatisch. Vergib bis zu 5 Sterne {stern}, mit {plus} trägst Du ein früheres Konzert nach.'],
     ['Icons bei jedem Konzert', '{spotify} Spotify, {radar} zum Radar (nochmal tippen: wieder entfernen, mit Rückfrage; hat der Künstler schon ein anstehendes Konzert, springt die App stattdessen zu diesem Event) und {edit} Bearbeiten. Beim Bearbeiten änderst Du Name, Location und Datum, markierst den Act mit „Support“ (steht dann grau als „(Support)“ hinter dem Namen) oder löschst den Eintrag (roter Knopf).'],
-    ['History anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte. Icons dort: {spotify} Spotify, {radar} zu meinem Radar und {copy} „In meine History“. Das übernimmt das Konzert in Deine History, die Sterne vergibst Du dann selbst. Nochmal tippen macht es rückgängig (mit Rückfrage).'],
+    ['History anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte. Icons dort: {spotify} Spotify, {radar} zu meinem Radar hinzufügen und {copy} „In meine History übernehmen“. Das übernimmt das Konzert in Deine History, die Sterne vergibst Du dann selbst. Nochmal tippen macht es rückgängig (mit Rückfrage).'],
     ['Doppeltipp', 'Doppeltipp auf den Reiter „History“ springt zurück zu „Meine History“.']
   ]],
   ['Listen anderer Lords (Merkliste und History)', [
@@ -662,7 +662,7 @@ const SETTINGS_GUIDE = [
 function renderSettingsBody() {
   const guide = `
     <details style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.06); padding-top:14px;">
-      <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Kurzanleitung</summary>
+      <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Anleitung</summary>
       ${SETTINGS_GUIDE.map(([head, items]) => `
         <h4 class="syne" style="margin:18px 0 6px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.06); font-size:12px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#a5b4fc;">${esc(head)}</h4>
         <ul style="list-style:disc; padding-left:18px; margin:0;">
@@ -701,7 +701,7 @@ function renderSettingsBody() {
 function refreshSettingsBody() {
   const body = document.getElementById('settings-body')
   if (!body) return
-  // Kurzanleitung bleibt aufgeklappt, wenn z. B. ein Schalter das Menü neu zeichnet
+  // Anleitung bleibt aufgeklappt, wenn z. B. ein Schalter das Menü neu zeichnet
   const guideOpen = body.querySelector('details')?.open
   body.innerHTML = renderSettingsBody()
   if (guideOpen) body.querySelector('details').open = true
