@@ -603,6 +603,7 @@ function guideIcon(token) {
     stern: chip('★', '#facc15'),
     fav: chip('☆', '#818cf8'),
     plus: chip('+'),
+    pfeile: chip('‹ ›'),
     name: chip('Name')
   }
   return Object.hasOwn(icons, token) ? icons[token] : null
@@ -626,13 +627,13 @@ const SETTINGS_GUIDE = [
   ]],
   ['Gemerkt', [
     ['Meine Merkliste', 'Deine vorgemerkten Events und die, bei denen Du dabei bist. Unter jeder Karte steht, wer das Event ebenfalls {herz} vorgemerkt hat oder {haken} dabei ist: „Du“, Lords mit Namen und alle übrigen als „weitere Lords“ (nur Lords mit freigegebener Merkliste).'],
-    ['Merklisten anderer Lords', 'Wische oben über die Überschrift (oder tippe auf die Punkte), um „Merkliste von Lord …“ zu sehen. Die Karten dort funktionieren wie in den Events: Nach links wischen und {herz} „Vormerken“ oder {haken} „Bin dabei“ übernimmt das Event in Deine eigene Merkliste. Die fremde Liste änderst Du nie.'],
+    ['Merklisten anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte, um „Merkliste von Lord …“ zu sehen. Die Karten dort funktionieren wie in den Events: Nach links wischen und {herz} „Vormerken“ oder {haken} „Bin dabei“ übernimmt das Event in Deine eigene Merkliste. Die fremde Liste änderst Du nie.'],
     ['Doppeltipp', 'Doppeltipp auf den Reiter „Gemerkt“ springt zurück zu „Meine Merkliste“.']
   ]],
   ['History', [
     ['Meine History', 'Deine besuchten Konzerte. Ein Event mit „Bin dabei“ erscheint hier am Konzerttag ab 20 Uhr automatisch. Vergib bis zu 5 Sterne {stern}, mit {plus} trägst Du ein früheres Konzert nach.'],
-    ['Icons bei jedem Konzert', '{spotify} Spotify, {radar} zum Radar (nochmal tippen: wieder entfernen) und {edit} Bearbeiten. Beim Bearbeiten änderst Du Name, Location und Datum oder löschst den Eintrag (roter Knopf).'],
-    ['History anderer Lords', 'Wische oben über die Überschrift (oder tippe auf die Punkte). Icons dort: {spotify} Spotify, {radar} zu meinem Radar und {copy} „In meine History“. Das übernimmt das Konzert in Deine History, die Sterne vergibst Du dann selbst. Nochmal tippen macht es rückgängig.'],
+    ['Icons bei jedem Konzert', '{spotify} Spotify, {radar} zum Radar (nochmal tippen: wieder entfernen) und {edit} Bearbeiten. Beim Bearbeiten änderst Du Name, Location und Datum, markierst den Act mit „Support“ (steht dann grau als „(Support)“ hinter dem Namen) oder löschst den Eintrag (roter Knopf).'],
+    ['History anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte. Icons dort: {spotify} Spotify, {radar} zu meinem Radar und {copy} „In meine History“. Das übernimmt das Konzert in Deine History, die Sterne vergibst Du dann selbst. Nochmal tippen macht es rückgängig.'],
     ['Doppeltipp', 'Doppeltipp auf den Reiter „History“ springt zurück zu „Meine History“.']
   ]],
   ['Listen anderer Lords (Merkliste und History)', [
@@ -1205,12 +1206,14 @@ function renderHistoryRow(h, readOnly = false) {
       <a href="${esc(spotifySearchUrl(h.title))}" target="_blank" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" style="${HIST_ICON_STYLE}">${HIST_SPOTIFY_SVG}</a>
       ${btn(`data-hist-radar="${esc(h.title)}"`, radarOn ? 'Aus dem Radar entfernen' : readOnly ? 'Zu meinem Radar' : 'Zum Radar', radarOn ? '#818cf8' : HIST_ICON_OFF, HIST_RADAR_SVG)}
       ${readOnly
-        ? btn(`data-hist-copy="1" data-title="${esc(h.title)}" data-date="${esc(h.date)}" data-loc-name="${esc(h.locationName || '')}" data-loc-city="${esc(h.locationCity || '')}"`, copyOn ? 'Aus meiner History entfernen' : 'In meine History', copyOn ? '#34d399' : HIST_ICON_OFF, copyOn ? HIST_COPY_ON_SVG : HIST_COPY_SVG)
+        ? btn(`data-hist-copy="1" data-title="${esc(h.title)}" data-date="${esc(h.date)}" data-loc-name="${esc(h.locationName || '')}" data-loc-city="${esc(h.locationCity || '')}"${h.isSupport ? ' data-support="1"' : ''}`, copyOn ? 'Aus meiner History entfernen' : 'In meine History', copyOn ? '#34d399' : HIST_ICON_OFF, copyOn ? HIST_COPY_ON_SVG : HIST_COPY_SVG)
         : btn(`data-history-edit="${h.id}"`, 'Bearbeiten', HIST_ICON_OFF, HIST_EDIT_SVG)}
     </div>`
   return `
     <div class="rounded-xl px-3 py-2.5" style="background:rgba(8,8,42,0.92); border:1px solid rgba(255,255,255,0.07);">
-      <div class="syne" style="font-size:13px; font-weight:700; color:white; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</div>
+      <div class="syne" style="display:flex; align-items:baseline; gap:5px; font-size:13px; font-weight:700; color:white;">
+        <span style="min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</span>${h.isSupport ? '<span style="flex-shrink:0; font-size:11px; font-weight:400; color:rgba(255,255,255,0.4);">(Support)</span>' : ''}
+      </div>
       <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
       <div style="margin-top:2px; display:flex; align-items:center; justify-content:space-between;">${stars}${actions}</div>
     </div>
@@ -1348,16 +1351,21 @@ function renderCarouselHead(kind) {
     : kind === 'history'
       ? `<button data-history-add-toggle title="Konzert nachtragen" aria-label="Konzert nachtragen" class="${btn}" style="width:28px; height:28px; color:rgba(255,255,255,0.6); font-size:16px; line-height:1;">+</button>`
       : ''
+  // Pfeile links und rechts der Punkte (nicht neben der Überschrift, damit diese ihre Breite behält)
+  const arrow = step => {
+    const disabled = (step < 0 && slide === 0) || (step > 0 && slide === total - 1)
+    return `<button data-slide-step="${step}" ${disabled ? 'disabled' : ''} aria-label="${step < 0 ? 'Vorherige Liste' : 'Nächste Liste'}" style="width:32px; height:24px; padding:0; border:none; background:none; color:rgba(255,255,255,0.85); font-size:26px; line-height:1; cursor:pointer; opacity:${disabled ? 0.2 : 1};">${step < 0 ? '‹' : '›'}</button>`
+  }
   const dots = total > 1
-    ? `<div style="display:flex; justify-content:center; margin:2px 0 8px;">${Array.from({ length: total }, (_, i) => {
+    ? `<div style="display:flex; justify-content:center; align-items:center; margin:2px 0 8px;">${arrow(-1)}${Array.from({ length: total }, (_, i) => {
         const p = i > 0 ? peers[i - 1] : null
         const bg = i === slide ? 'white' : p?.isFavorite ? 'rgba(129,140,248,0.8)' : 'rgba(255,255,255,0.25)'
         return `<button data-dot="${i}" aria-label="${p ? c.other + esc(p.name) : c.own}" style="width:19px; height:19px; padding:6px; border:none; border-radius:50%; background-color:${bg}; background-clip:content-box; cursor:pointer;"></button>`
-      }).join('')}</div>`
+      }).join('')}${arrow(1)}</div>`
     : ''
   return `
     <div class="flex items-center justify-between mb-1" style="min-height:28px; gap:8px;">
-      <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; line-height:1.3; text-transform:uppercase; color:rgba(255,255,255,0.5); min-width:0; overflow-wrap:anywhere; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">${peer ? c.other + esc(peer.name) : c.own}</h3>
+      <h3 class="syne" style="font-size:11px; font-weight:600; letter-spacing:0.02em; text-transform:uppercase; color:rgba(255,255,255,0.5); min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${peer ? c.other + esc(peer.name) : c.own}</h3>
       <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">${actions}</div>
     </div>
     ${dots}
@@ -1506,6 +1514,8 @@ function attachCarousel(kind) {
     showSlide(kind, CAROUSEL[kind].slide() + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1)
   }, { passive: true })
   head.addEventListener('click', async e => {
+    const step = e.target.closest('[data-slide-step]')
+    if (step) { const d = Number(step.dataset.slideStep); showSlide(kind, CAROUSEL[kind].slide() + d, d); return }
     const dot = e.target.closest('[data-dot]')
     if (dot) { const i = Number(dot.dataset.dot); showSlide(kind, i, i > CAROUSEL[kind].slide() ? 1 : -1); return }
     if (e.target.closest('[data-history-add-toggle]')) {
@@ -1653,6 +1663,9 @@ function renderModals() {
               ${renderHistoryLocationDropdown('hedit')}
             </div>
             ${renderHistoryDatePicker('hedit')}
+            <label class="flex items-center gap-2" style="cursor:pointer; color:rgba(255,255,255,0.75); font-size:14px; padding:2px 0;">
+              <input id="hedit-support" type="checkbox" style="width:18px; height:18px; accent-color:#818cf8; cursor:pointer;" /> Support
+            </label>
             <button data-history-edit-save type="button" class="w-full py-2.5 rounded-xl font-bold text-white text-sm syne" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">Speichern</button>
             <button data-history-edit-delete type="button" class="w-full py-2.5 rounded-xl font-bold text-sm syne" style="background:rgba(239,68,68,0.18); border:1px solid rgba(239,68,68,0.55); color:#f87171;">Löschen</button>
           </div>
@@ -2302,7 +2315,7 @@ async function toggleHistoryCopy(btn) {
     }
     return
   }
-  const entry = await addHistoryEntry({ title: stripEdgeEmoji(h.title), locationName: h.locationName, locationCity: h.locationCity, date: h.date })
+  const entry = await addHistoryEntry({ title: stripEdgeEmoji(h.title), locationName: h.locationName, locationCity: h.locationCity, date: h.date, isSupport: btn.dataset.support === '1' })
   if (!entry) { showToast('Fehler', 'Konnte nicht in die History übernommen werden.'); return }
   history = [...history, entry]
   refreshHistoryList()
@@ -2320,6 +2333,7 @@ function openHistoryEdit(id) {
   historyEditOpen = true
   historyEditPrefill = [entry.locationName, entry.locationCity].filter(Boolean).join(', ')
   document.getElementById('hedit-title').value = entry.title
+  document.getElementById('hedit-support').checked = !!entry.isSupport
   document.getElementById('hedit-location').value = historyEditPrefill
   const [y, m, d] = entry.date.split('-').map(Number)
   const yearSel = document.getElementById('hedit-year')
@@ -2345,13 +2359,14 @@ async function saveHistoryEdit() {
   const day = document.getElementById('hedit-day').value
   const month = document.getElementById('hedit-month').value
   const year = document.getElementById('hedit-year').value
+  const isSupport = document.getElementById('hedit-support').checked
   if (!title || !day || !month || !year) { alert('Bitte mindestens Titel und Datum angeben.'); return }
   const date = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
   if (new Date(date + 'T00:00:00').getMonth() + 1 !== Number(month)) { alert('Dieses Datum gibt es nicht - bitte Tag und Monat prüfen.'); return }
   // Ort unverändert: Name und Stadt des Eintrags behalten (sie stehen getrennt in der Datenbank)
   const place = location === historyEditPrefill ? { locationName: entry.locationName, locationCity: entry.locationCity } : { locationName: location, locationCity: '' }
-  if (!(await updateHistoryEntry(entry.id, { title, ...place, date }))) { alert('Speichern fehlgeschlagen - bitte nochmal versuchen.'); return }
-  Object.assign(entry, { title, ...place, date })
+  if (!(await updateHistoryEntry(entry.id, { title, ...place, date, isSupport }))) { alert('Speichern fehlgeschlagen - bitte nochmal versuchen.'); return }
+  Object.assign(entry, { title, ...place, date, isSupport })
   closeHistoryEdit()
   refreshHistoryList()
   paintHistoryIcons()

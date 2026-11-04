@@ -151,7 +151,7 @@ export async function loadCommunityHistories() {
     lordTitle: r.lord_title,
     createdAt: r.created_at,
     entries: (r.entries || []).map(e => ({
-      title: e.title, locationName: e.location_name, locationCity: e.location_city, date: e.date, rating: e.rating
+      title: e.title, locationName: e.location_name, locationCity: e.location_city, date: e.date, rating: e.rating, isSupport: !!e.is_support
     }))
   }))
 }
@@ -207,17 +207,19 @@ export async function loadHistory() {
   if (!user) return []
   const { data, error } = await supabase.from('history').select('*').eq('user_id', user.id).order('date', { ascending: false })
   if (error) return []
-  return data.map(r => ({ id: r.id, eventId: r.event_id, title: r.title, locationName: r.location_name, locationCity: r.location_city, date: r.date, rating: r.rating }))
+  return data.map(r => ({ id: r.id, eventId: r.event_id, title: r.title, locationName: r.location_name, locationCity: r.location_city, date: r.date, rating: r.rating, isSupport: !!r.is_support }))
 }
 
-export async function addHistoryEntry({ eventId, title, locationName, locationCity, date }) {
+export async function addHistoryEntry({ eventId, title, locationName, locationCity, date, isSupport }) {
   const user = await getUser()
   if (!user) return null
   const { data, error } = await supabase.from('history').insert({
-    user_id: user.id, event_id: eventId ?? null, title, location_name: locationName || null, location_city: locationCity || null, date
+    user_id: user.id, event_id: eventId ?? null, title, location_name: locationName || null, location_city: locationCity || null, date,
+    // nur wenn gesetzt: so funktioniert Einfügen auch, bevor die Spalte is_support (supabase/community_v4.sql) existiert
+    ...(isSupport ? { is_support: true } : {})
   }).select().single()
   if (error || !data) return null
-  return { id: data.id, eventId: data.event_id, title: data.title, locationName: data.location_name, locationCity: data.location_city, date: data.date, rating: data.rating }
+  return { id: data.id, eventId: data.event_id, title: data.title, locationName: data.location_name, locationCity: data.location_city, date: data.date, rating: data.rating, isSupport: !!data.is_support }
 }
 
 // rating: 1-5, oder null zum Entfernen der Bewertung (Toggle-to-clear in der UI).
@@ -229,10 +231,10 @@ export async function updateHistoryRating(id, rating) {
 }
 
 // Bearbeiten von Titel, Ort und Datum eines eigenen History-Eintrags
-export async function updateHistoryEntry(id, { title, locationName, locationCity, date }) {
+export async function updateHistoryEntry(id, { title, locationName, locationCity, date, isSupport }) {
   const user = await getUser()
   if (!user) return false
-  const { error } = await supabase.from('history').update({ title, location_name: locationName || null, location_city: locationCity || null, date }).eq('id', id).eq('user_id', user.id)
+  const { error } = await supabase.from('history').update({ title, location_name: locationName || null, location_city: locationCity || null, date, is_support: !!isSupport }).eq('id', id).eq('user_id', user.id)
   return !error
 }
 
