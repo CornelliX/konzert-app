@@ -1354,8 +1354,8 @@ function renderCarouselHead(kind) {
       }).join('')}</div>`
     : ''
   return `
-    <div class="flex items-center justify-between mb-1" style="min-height:28px;">
-      <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:rgba(255,255,255,0.5); min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${peer ? c.other + esc(peer.name) : c.own}</h3>
+    <div class="flex items-center justify-between mb-1" style="min-height:28px; gap:8px;">
+      <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; line-height:1.3; text-transform:uppercase; color:rgba(255,255,255,0.5); min-width:0; overflow-wrap:anywhere;">${peer ? c.other + esc(peer.name) : c.own}</h3>
       <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">${actions}</div>
     </div>
     ${dots}
