@@ -164,7 +164,7 @@ const bookmarkInFlight = new Set()
 let fetchSeq = 0
 let markSeenTimer = null
 let titleAnimated = false
-let lastGemerktTapAt = 0
+let lastHistoryTapAt = 0
 let radarOpen = false
 
 // Community: Histories anderer Nutzer (freigegeben), eigene Betrachter-Einstellungen (Alias/Favorit)
@@ -567,14 +567,50 @@ function renderHeader(inModal = false) {
 
 // ── Einstellungsmenü (Lord-Titel, Freigaben, Kurzanleitung) ─────────────────────────────────────
 
-// Platzhalter, der Text folgt nach dem Funktionstest
-const SETTINGS_GUIDE_TEXT = 'Die Kurzanleitung folgt nach dem Funktionstest.'
+// Kurzanleitung: [Überschrift, [Absätze]]
+const SETTINGS_GUIDE = [
+  ['Events', [
+    'Alle Konzerte und Partys in Berlin und Leipzig, nach Datum sortiert. Filtern kannst Du nach Stadt und Location, suchen über die Suchleiste.',
+    'Karte nach links wischen: „Vormerken“ oder „Bin dabei“ auswählen.',
+    'Icon-Leiste: Link zum Event, Spotify, Kalender (Apple/Google) und Teilen.'
+  ]],
+  ['Kalender', [
+    'Die Events als Monatsübersicht. Tippe auf einen Tag, um alle Events an diesem Tag zu sehen. Mehrfach-Tagesauswahl ist möglich.'
+  ]],
+  ['Gemerkt', [
+    'Deine vorgemerkten Events und die, bei denen Du dabei bist.',
+    'Unter einer Karte steht, wie viele andere Lords das Event auch vorgemerkt haben oder dabei sind (nur Lords mit freigegebener Merkliste).'
+  ]],
+  ['History', [
+    'Deine besuchten Konzerte. Ein Event mit „Bin dabei“ erscheint hier am Konzerttag ab 20 Uhr automatisch.',
+    'Vergib bis zu 5 Sterne. Mit + trägst Du ein früheres Konzert nach.',
+    'Icons: Spotify, zum Radar hinzufügen und Entfernen.',
+    'Wische über den Bildschirm nach links, um die Histories anderer Lords zu sehen. Mit dem Stern oben machst Du eine Liste zum Favoriten, Favoriten werden beim Wischen zuerst angezeigt. Mit „Name“ gibst Du Listen ohne Lord-Titel einen eigenen Namen. Dieser Name wird überschrieben, sobald ein Lord sich in seinen Einstellungen selbst einen Namen gibt.',
+    'Doppeltipp auf den Reiter „History“: springt zurück zu „Meine History“.'
+  ]],
+  ['Radar', [
+    'Künstler ohne anstehendes Konzert. Sobald ein Konzert angekündigt wird, bekommst Du einen Treffer (mit Benachrichtigung, wenn erlaubt).',
+    'Künstler mit 4 oder 5 Sternen in der History kommen automatisch ins Radar.'
+  ]],
+  ['Einstellungen (Zahnrad)', [
+    'Lord-Titel: Hier kannst Du selbst einen Usernamen wählen, den andere dann über Deiner History sehen.',
+    'Merkliste für alle sichtbar: Anschalten, damit andere User sehen, ob ein anderer Lord sich für das gleiche Konzert interessiert. Andere sehen nur Zahlen an ihren Events, keine Namen und keine Liste.',
+    'History für alle sichtbar: Andere Lords sehen Deine besuchten Konzerte mit Sternen.',
+    'Beide Schalter sind standardmäßig auf „off“ und müssen vom Nutzer erst eingeschaltet werden.'
+  ]],
+  ['Anmeldung', [
+    'Merkliste, History und Radar funktionieren nur bei Anmeldung via E-Mail-Code. Ohne Anmeldung kannst Du nur in der Eventübersicht stöbern.'
+  ]]
+]
 
 function renderSettingsBody() {
   const guide = `
     <details style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.06); padding-top:14px;">
       <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Kurzanleitung</summary>
-      <p class="text-xs" style="color:rgba(255,255,255,0.45); margin-top:8px; line-height:1.5;">${esc(SETTINGS_GUIDE_TEXT)}</p>
+      ${SETTINGS_GUIDE.map(([head, paras]) => `
+        <h4 class="syne" style="margin:14px 0 4px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#a5b4fc;">${esc(head)}</h4>
+        ${paras.map(p => `<p class="text-xs" style="color:rgba(255,255,255,0.5); margin-top:4px; line-height:1.5;">${esc(p)}</p>`).join('')}
+      `).join('')}
     </details>
   `
   if (!currentUser) return `<p class="text-sm" style="color:rgba(255,255,255,0.4);">Bitte zuerst mit E-Mail anmelden, um Einstellungen vorzunehmen.</p>${guide}`
@@ -606,7 +642,11 @@ function renderSettingsBody() {
 
 function refreshSettingsBody() {
   const body = document.getElementById('settings-body')
-  if (body) body.innerHTML = renderSettingsBody()
+  if (!body) return
+  // Kurzanleitung bleibt aufgeklappt, wenn z. B. ein Schalter das Menü neu zeichnet
+  const guideOpen = body.querySelector('details')?.open
+  body.innerHTML = renderSettingsBody()
+  if (guideOpen) body.querySelector('details').open = true
 }
 
 async function loadMyProfile() {
@@ -1588,17 +1628,12 @@ function attachNavEvents() {
       const wasRadarOpen = radarOpen
       radarOpen = false
       document.getElementById('modal-radar')?.classList.add('hidden')
-      // Doppel-Tap auf "Gemerkt" öffnet den History-Reiter (frühere Abkürzung zur History-Sektion
-      // unter der Merkliste) - über den zeitlichen Abstand zweier click-Events statt des nativen
-      // dblclick, da dblclick bei Touch-Taps plattformabhängig unzuverlässig synthetisiert wird.
-      const isGemerktTap = btn.dataset.nav === 'gemerkt'
+      // Doppeltipp auf "History" springt zu "Meine History" (über den Abstand zweier click-Events, da
+      // dblclick bei Touch-Taps plattformabhängig unzuverlässig ist)
       const now = Date.now()
-      const isDoubleTap = isGemerktTap && (now - lastGemerktTapAt < 400)
-      if (isGemerktTap) lastGemerktTapAt = now
-      if (isDoubleTap) {
-        document.querySelector('[data-nav="history"]')?.click()
-        return
-      }
+      const isHistoryDoubleTap = btn.dataset.nav === 'history' && now - lastHistoryTapAt < 400
+      if (btn.dataset.nav === 'history') lastHistoryTapAt = now
+      if (isHistoryDoubleTap && currentView === 'history') { showHistorySlide(0, -1); return }
 
       if (currentView === btn.dataset.nav) {
         if (wasRadarOpen) refreshBottomNav()
