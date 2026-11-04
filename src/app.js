@@ -157,6 +157,7 @@ let renderedEventLimit = EVENT_RENDER_BATCH
 let loadMoreObserver = null
 let swipeActiveWrapper = null
 let swipeDocListenerAdded = false
+let historySwipeBound = false
 let ptrListenerAdded = false
 let dropdownListenerAdded = false
 const bookmarkInFlight = new Set()
@@ -1020,39 +1021,33 @@ function renderBookmarkedView() {
   `
 }
 
-// readOnly: Zeile aus der freigegebenen History eines anderen Nutzers - keine Swipe-Aktion, kein Löschen,
-// Sterne nur zur Anzeige. Alle Werte stammen dort aus fremden Konten und gehen ausnahmslos durch esc().
+// Icons rechts neben den Bewertungssternen jedes History-Eintrags: Spotify, zum Radar, entfernen
+const HIST_ICON_STYLE = 'display:inline-flex; align-items:center; justify-content:center; width:30px; height:28px; padding:0; color:rgba(255,255,255,0.55); background:none; border:none; cursor:pointer; text-decoration:none;'
+const HIST_SPOTIFY_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>'
+const HIST_RADAR_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19a10 10 0 0 1 0-14"/></svg>'
+const HIST_TRASH_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>'
+
+// readOnly: Zeile aus der freigegebenen History eines anderen Nutzers - Sterne nur zur Anzeige, kein Entfernen.
+// Alle Werte stammen dort aus fremden Konten und gehen ausnahmslos durch esc().
 function renderHistoryRow(h, readOnly = false) {
   const dateStr = new Date(h.date + 'T12:00:00').toLocaleDateString('de-DE', { day: 'numeric', month: 'short', year: 'numeric' })
   const loc = [h.locationName, h.locationCity].filter(Boolean).join(', ')
   const rating = h.rating || 0
-  if (readOnly) {
-    const staticStars = [1, 2, 3, 4, 5].map(n => `<span style="padding:0 1px; font-size:15px; line-height:1; color:${n <= rating ? '#facc15' : 'rgba(255,255,255,0.22)'};">★</span>`).join('')
-    return `
-      <div class="rounded-xl px-3 py-2.5" style="background:rgba(8,8,42,0.92); border:1px solid rgba(255,255,255,0.07);">
-        <a href="${esc(spotifySearchUrl(h.title))}" target="_blank" title="Auf Spotify suchen" class="syne" style="display:block; font-size:13px; font-weight:700; color:white; text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</a>
-        <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
-        <div style="margin-top:4px; display:flex;" aria-label="${rating} von 5 Sternen">${staticStars}</div>
-      </div>
-    `
-  }
-  const stars = [1, 2, 3, 4, 5].map(n => `<button data-star="${n}" aria-label="${n} Sterne" style="background:none; border:none; cursor:pointer; padding:0 1px; font-size:15px; line-height:1; color:${n <= rating ? '#facc15' : 'rgba(255,255,255,0.22)'};">★</button>`).join('')
+  const starColor = n => n <= rating ? '#facc15' : 'rgba(255,255,255,0.22)'
+  const stars = readOnly
+    ? `<div style="display:flex;" aria-label="${rating} von 5 Sternen">${[1, 2, 3, 4, 5].map(n => `<span style="padding:0 1px; font-size:15px; line-height:1; color:${starColor(n)};">★</span>`).join('')}</div>`
+    : `<div class="history-stars" data-history-id="${h.id}" style="display:flex;">${[1, 2, 3, 4, 5].map(n => `<button data-star="${n}" aria-label="${n} Sterne" style="background:none; border:none; cursor:pointer; padding:0 1px; font-size:15px; line-height:1; color:${starColor(n)};">★</button>`).join('')}</div>`
+  const actions = `
+    <div style="display:flex; align-items:center; flex-shrink:0;">
+      <a href="${esc(spotifySearchUrl(h.title))}" target="_blank" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" style="${HIST_ICON_STYLE}">${HIST_SPOTIFY_SVG}</a>
+      <button data-hist-radar="${esc(h.title)}" title="Zum Radar" aria-label="Zum Radar" style="${HIST_ICON_STYLE}">${HIST_RADAR_SVG}</button>
+      ${readOnly ? '' : `<button data-history-remove="${h.id}" title="Aus History löschen" aria-label="Aus History löschen" style="${HIST_ICON_STYLE}">${HIST_TRASH_SVG}</button>`}
+    </div>`
   return `
-    <div class="history-swipe-wrapper" data-history-id="${h.id}" style="position:relative; overflow:hidden; border-radius:12px;">
-      <div class="history-swipe-actions" style="position:absolute; right:0; top:0; bottom:0; width:160px; display:flex; align-items:stretch; padding:4px; z-index:0;">
-        <button data-swipe-radar="${h.id}" style="flex:1; border-radius:10px; border:1px solid rgba(99,102,241,0.4); cursor:pointer; font-size:13px; font-weight:600; background:rgba(99,102,241,0.25); color:#a5b4fc; font-family:'DM Sans',sans-serif;">Zum Radar</button>
-      </div>
-      <div class="history-swipe-card flex items-start justify-between rounded-xl px-3 py-2.5" style="position:relative; z-index:1; background:rgba(8,8,42,0.92); border:1px solid rgba(255,255,255,0.07);">
-        <div style="min-width:0; flex:1;">
-          <a href="${esc(spotifySearchUrl(h.title))}" target="_blank" title="Auf Spotify suchen" class="syne" style="display:block; font-size:13px; font-weight:700; color:white; text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</a>
-          <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
-          <div class="history-stars" data-history-id="${h.id}" style="margin-top:4px; display:flex;">${stars}</div>
-        </div>
-        <div style="flex-shrink:0; margin-left:8px; align-self:stretch; display:flex; flex-direction:column; align-items:center; justify-content:space-between;">
-          <button data-history-remove="${h.id}" aria-label="Aus History löschen" style="color:rgba(255,255,255,0.35); background:none; border:none; cursor:pointer; font-size:18px; line-height:1; padding:4px;">×</button>
-          <span style="color:rgba(255,255,255,0.6); font-size:18px; font-weight:400; letter-spacing:-3px; pointer-events:none; user-select:none; padding-right:3px; line-height:1;">‹‹</span>
-        </div>
-      </div>
+    <div class="rounded-xl px-3 py-2.5" style="background:rgba(8,8,42,0.92); border:1px solid rgba(255,255,255,0.07);">
+      <div class="syne" style="font-size:13px; font-weight:700; color:white; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</div>
+      <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
+      <div style="margin-top:2px; display:flex; align-items:center; justify-content:space-between;">${stars}${actions}</div>
     </div>
   `
 }
@@ -1283,26 +1278,35 @@ async function assignPeerAlias(publicId) {
 }
 
 // Wischgeste und Kopfzeilen-Klicks des Karussells (Delegation, überlebt das Neuzeichnen der Kopfzeile).
-// Gewischt wird nur über der Kopfzeile oder in fremden (schreibgeschützten) Listen - in "Meine History"
-// behalten die Zeilen ihren eigenen Links-Wisch ("Zum Radar").
+// Gewischt wird über den ganzen Bildschirm des History-Reiters, ebenso gelten die Zeilen-Icons (Radar).
 function attachHistoryCarousel() {
   const root = document.getElementById('history-carousel')
   if (!root || root.dataset.bound) return
   root.dataset.bound = '1'
-  let sx = 0, sy = 0, tracking = false
-  root.addEventListener('touchstart', e => {
-    tracking = !!(e.target.closest('#history-carousel-head') || e.target.closest('.history-slide[data-peer]'))
-    sx = e.touches[0].clientX
-    sy = e.touches[0].clientY
-  }, { passive: true })
-  root.addEventListener('touchend', e => {
-    if (!tracking) return
-    tracking = false
-    const dx = e.changedTouches[0].clientX - sx
-    const dy = e.changedTouches[0].clientY - sy
-    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return
-    showHistorySlide(historySlide + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1)
-  }, { passive: true })
+  // Wischen zwischen den Listen: über den ganzen Bildschirm (Dokument-Listener, nur einmal angehängt).
+  // Die Einträge haben keine eigene Wischgeste mehr, daher keine Konflikte.
+  if (!historySwipeBound) {
+    historySwipeBound = true
+    let sx = 0, sy = 0, tracking = false
+    document.addEventListener('touchstart', e => {
+      tracking = currentView === 'history' && !radarOpen && !settingsOpen && !!document.getElementById('history-carousel') &&
+        !e.target.closest('input, select, textarea, [id^="modal-"]')
+      sx = e.touches[0].clientX
+      sy = e.touches[0].clientY
+    }, { passive: true })
+    document.addEventListener('touchend', e => {
+      if (!tracking) return
+      tracking = false
+      const dx = e.changedTouches[0].clientX - sx
+      const dy = e.changedTouches[0].clientY - sy
+      if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return
+      showHistorySlide(historySlide + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1)
+    }, { passive: true })
+  }
+  root.addEventListener('click', e => {
+    const radarBtn = e.target.closest('[data-hist-radar]')
+    if (radarBtn) addHistoryArtistToRadar(radarBtn.dataset.histRadar)
+  })
   document.getElementById('history-carousel-head')?.addEventListener('click', async e => {
     const dot = e.target.closest('[data-dot]')
     if (dot) { const i = Number(dot.dataset.dot); showHistorySlide(i, i > historySlide ? 1 : -1); return }
@@ -1324,10 +1328,6 @@ function refreshHistoryList() {
   const historyEntries = history.filter(isHistoryVisible).sort((a, b) => b.date.localeCompare(a.date))
   list.innerHTML = renderHistoryListHtml(historyEntries)
   attachHistoryRemoveEvents()
-  // Nur die (eben neu gerenderten) History-Zeilen neu verdrahten statt der globalen
-  // attachSwipeGestures() - die würde sonst auch den unveränderten Event-Karten der
-  // Liste-Ansicht erneut Touch-Listener aufdrücken (Duplikate bei jedem Stern-Klick).
-  list.querySelectorAll('.history-swipe-wrapper').forEach(wrapper => attachSwipeToWrapper(wrapper))
 }
 
 function attachHistoryRemoveEvents() {
@@ -1827,7 +1827,7 @@ function closeSwipeWrapper(wrapper) {
 }
 
 function attachSwipeToWrapper(wrapper) {
-  const card = wrapper.querySelector('.event-swipe-card, .history-swipe-card')
+  const card = wrapper.querySelector('.event-swipe-card')
   if (!card) return
   // Mehrfachaufrufe (attachSwipeGestures() läuft über alle Panes) dürfen keine zweiten
   // Handler anhängen - sonst feuern Teilen/ICS/Kalender doppelt
@@ -2005,33 +2005,32 @@ function attachSwipeToWrapper(wrapper) {
     window.open(url, '_blank')
   })
 
-  // History-Eintrag per Wisch zum Radar hinzufügen - gleiche Dubletten-Prüfschleife wie beim
-  // manuellen Hinzufügen (submitRadarArtist), aber nur gegen künftige Events geprüft: ein
-  // History-Snapshot kann wegen des wöchentlichen Scraper-Laufs übergangsweise noch mit einem
-  // bereits vergangenen (gleichnamigen) Event in events.json kollidieren.
-  wrapper.querySelector('[data-swipe-radar]')?.addEventListener('click', async () => {
-    const historyId = wrapper.dataset.historyId
-    const entry = history.find(h => String(h.id) === historyId)
-    if (!entry) return
-    wrapper.querySelector('[data-swipe-radar]')?.classList.add('btn-sweep')
-    closeSwipeWrapper(wrapper)
-    const artist = entry.title
-    const match = events.find(e => !isConcertOver(e.date) && artistMatchesEvent(artist, e))
-    if (match) {
-      const onWatchlist = bookmarked.some(b => b == match.id) || going.some(g => g == match.id)
-      if (onWatchlist) openBookmarks(match.id)
-      else focusEvent(match)
-      return
-    }
-    if (typeof Notification !== 'undefined' && Notification.permission === 'default') Notification.requestPermission()
-    const added = await addRadarArtist(artist)
-    if (added) {
-      radar.push(added)
-      const list = document.getElementById('radar-list')
-      if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
-      showToast('📡 Zum Radar hinzugefügt', artist)
-    }
-  })
+}
+
+// History-Artist per Icon zum Radar hinzufügen - gleiche Dubletten-Prüfschleife wie beim
+// manuellen Hinzufügen (submitRadarArtist), aber nur gegen künftige Events geprüft: ein
+// History-Snapshot kann wegen des wöchentlichen Scraper-Laufs übergangsweise noch mit einem
+// bereits vergangenen (gleichnamigen) Event in events.json kollidieren.
+async function addHistoryArtistToRadar(artist) {
+  if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden.'); return }
+  const match = events.find(e => !isConcertOver(e.date) && artistMatchesEvent(artist, e))
+  if (match) {
+    const onWatchlist = bookmarked.some(b => b == match.id) || going.some(g => g == match.id)
+    if (onWatchlist) openBookmarks(match.id)
+    else focusEvent(match)
+    return
+  }
+  if (radar.some(r => r.artist.toLowerCase() === artist.toLowerCase())) { showToast('📡 Schon im Radar', artist); return }
+  if (typeof Notification !== 'undefined' && Notification.permission === 'default') Notification.requestPermission()
+  const added = await addRadarArtistIfNew(artist)
+  if (added) {
+    radar.push(added)
+    const list = document.getElementById('radar-list')
+    if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
+    showToast('📡 Zum Radar hinzugefügt', artist)
+  } else {
+    showToast('📡 Schon im Radar', artist)
+  }
 }
 
 function attachSwipeGestures() {
@@ -2041,7 +2040,7 @@ function attachSwipeGestures() {
       if (swipeActiveWrapper && !swipeActiveWrapper.contains(e.target)) closeSwipeWrapper(swipeActiveWrapper)
     }, { passive: true })
   }
-  document.querySelectorAll('.event-swipe-wrapper, .history-swipe-wrapper').forEach(wrapper => attachSwipeToWrapper(wrapper))
+  document.querySelectorAll('.event-swipe-wrapper').forEach(wrapper => attachSwipeToWrapper(wrapper))
   setupLoadMoreObserver()
 }
 
