@@ -9,7 +9,7 @@
 create table public.profiles (
   user_id uuid primary key references auth.users(id) on delete cascade,
   public_id uuid not null unique default gen_random_uuid(),
-  lord_title text check (lord_title is null or (lord_title = btrim(lord_title) and char_length(lord_title) between 2 and 30)),
+  lord_title text check (lord_title is null or (lord_title = btrim(lord_title) and char_length(lord_title) between 2 and 15)),
   share_history boolean not null default false,
   share_bookmarks boolean not null default false,
   created_at timestamptz not null default now()
@@ -33,7 +33,7 @@ grant update (user_id, lord_title, share_history, share_bookmarks) on public.pro
 create table public.peer_prefs (
   viewer_id uuid not null references auth.users(id) on delete cascade,
   peer_public_id uuid not null,
-  alias text check (alias is null or (alias = btrim(alias) and char_length(alias) between 1 and 30)),
+  alias text check (alias is null or (alias = btrim(alias) and char_length(alias) between 1 and 15)),
   is_favorite boolean not null default false,
   primary key (viewer_id, peer_public_id)
 );

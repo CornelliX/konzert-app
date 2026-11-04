@@ -183,6 +183,8 @@ let historyEditPrefill = ''
 let myProfile = null
 let myProfileError = false
 let settingsOpen = false
+// Längster Lord-Titel bzw. selbst vergebener Name (Datenbank: profiles_lord_title_check, peer_prefs_alias_check)
+const LORD_NAME_MAX = 15
 let eventMarks = {}
 let eventMarksAt = {}
 
@@ -681,10 +683,10 @@ function renderSettingsBody() {
   return `
     <div>
       <label for="settings-lord" class="syne" style="display:block; font-size:13px; font-weight:700; color:white;">Lord-Titel</label>
-      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin:3px 0 8px; line-height:1.45;">Dieser Name wird anderen angezeigt, wenn sie deine History oder Merkliste sehen („History von Lord …“, „Merkliste von Lord …“).</p>
+      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin:3px 0 8px; line-height:1.45;">Dieser Name (höchstens 15 Zeichen) wird anderen angezeigt, wenn sie deine History oder Merkliste sehen („History von Lord …“, „Merkliste von Lord …“).</p>
       <div style="display:flex; align-items:center; gap:8px;">
         <span class="syne" style="font-size:14px; font-weight:800; color:#818cf8;">Lord</span>
-        <input id="settings-lord" type="text" maxlength="30" autocomplete="off" placeholder="z. B. Fontaines" value="${esc(myProfile.lordTitle ?? '')}" style="${inputStyle}" />
+        <input id="settings-lord" type="text" maxlength="${LORD_NAME_MAX}" autocomplete="off" placeholder="z. B. Fontaines" value="${esc(myProfile.lordTitle ?? '')}" style="${inputStyle}" />
       </div>
     </div>
     ${row('shareBookmarks', 'Merkliste für alle sichtbar', 'Angemeldete Lords sehen deine vorgemerkten und „dabei“-Events samt deinem Lord-Titel: als Liste „Merkliste von Lord …“ und unter ihren eigenen Events.')}
@@ -732,7 +734,7 @@ async function toggleSetting(key) {
 }
 
 async function saveLordTitle(value) {
-  const title = value.trim().slice(0, 30)
+  const title = value.trim().slice(0, LORD_NAME_MAX)
   if (title && title.length < 2) {
     showToast('Lord-Titel', 'Mindestens 2 Zeichen.')
     refreshSettingsBody()
@@ -1355,7 +1357,7 @@ function renderCarouselHead(kind) {
     : ''
   return `
     <div class="flex items-center justify-between mb-1" style="min-height:28px; gap:8px;">
-      <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; line-height:1.3; text-transform:uppercase; color:rgba(255,255,255,0.5); min-width:0; overflow-wrap:anywhere;">${peer ? c.other + esc(peer.name) : c.own}</h3>
+      <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; line-height:1.3; text-transform:uppercase; color:rgba(255,255,255,0.5); min-width:0; overflow-wrap:anywhere; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">${peer ? c.other + esc(peer.name) : c.own}</h3>
       <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">${actions}</div>
     </div>
     ${dots}
@@ -1473,9 +1475,9 @@ async function togglePeerFavorite(publicId) {
 // Eigener Name für einen Lord ohne Lord-Titel. Nur für den Betrachter sichtbar, gilt in History und Merkliste.
 async function assignPeerAlias(publicId) {
   const current = peerPrefs[publicId]?.alias || ''
-  const input = prompt('Name für diesen Lord (nur für dich sichtbar):', current)
+  const input = prompt(`Name für diesen Lord (nur für dich sichtbar, höchstens ${LORD_NAME_MAX} Zeichen):`, current)
   if (input === null) return
-  const alias = input.trim().slice(0, 30)
+  const alias = input.trim().slice(0, LORD_NAME_MAX)
   const before = peerPrefs[publicId]
   peerPrefs[publicId] = { ...(before || {}), alias: alias || null }
   keepSlides(recomputePeers)
