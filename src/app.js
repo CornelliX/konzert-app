@@ -637,7 +637,7 @@ const SETTINGS_GUIDE = [
   ]],
   ['Gemerkt', [
     ['Meine Merkliste', 'Deine vorgemerkten Events und die, bei denen Du dabei bist. Unter jeder Karte steht, wer das Event ebenfalls {herz} vorgemerkt hat oder {haken} dabei ist: „Du“, Lords mit Namen und alle übrigen als „weitere Lords“ (nur Lords mit freigegebener Merkliste).'],
-    ['Merklisten anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte, um „Merkliste von Lord …“ zu sehen. Gezeigt werden die kommenden Events des Lords, ein Hinweis nennt, ob er {haken} dabei ist oder {herz} vorgemerkt hat. Die Karten funktionieren wie in den Events: Nach links wischen und {herz} „Vormerken“ oder {haken} „Bin dabei“ übernimmt das Event in Deine eigene Merkliste. Die fremde Liste änderst Du nie.'],
+    ['Merklisten anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte, um „Merkliste von Lord …“ zu sehen. Gezeigt werden die kommenden Events des Lords. Unter jeder Karte steht wie in Deiner Merkliste, wer {haken} dabei ist oder {herz} vorgemerkt hat. Die Karten funktionieren wie in den Events: Nach links wischen und {herz} „Vormerken“ oder {haken} „Bin dabei“ übernimmt das Event in Deine eigene Merkliste. Die fremde Liste änderst Du nie.'],
     ['Doppeltipp', 'Doppeltipp auf den Reiter „Gemerkt“ springt zurück zu „Meine Merkliste“.']
   ]],
   ['History', [
@@ -996,18 +996,19 @@ async function loadMarksForVisible() {
   if (!currentUser) return
   const ids = [...new Set([...document.querySelectorAll('[data-marks]')].map(el => el.dataset.marks))]
   const stale = ids.filter(id => Date.now() - (eventMarksAt[id] || 0) >= 60000)
-  if (stale.length) {
-    const result = await loadEventMarks(stale)
+  for (let i = 0; i < stale.length; i += 500) {
+    const chunk = stale.slice(i, i + 500)
+    const result = await loadEventMarks(chunk)
     if (result) {
-      for (const id of stale) { eventMarks[id] = result[id] || []; eventMarksAt[id] = Date.now() }
+      for (const id of chunk) { eventMarks[id] = result[id] || []; eventMarksAt[id] = Date.now() }
     }
   }
   paintEventMarks()
 }
 
-// showMarks: nur in "Meine Merkliste" - eigener Status und andere Lords unter der Karte (statt des Labels oben).
-// peerNote: Karte in der Merkliste eines anderen Lords - Hinweis, ob er dabei ist oder vorgemerkt hat.
-function renderEventCard(e, { showMarks = false, peerNote = null } = {}) {
+// showMarks: Gemerkt-Reiter (eigene und fremde Merklisten) - eigener Status und andere Lords stehen gemeinsam unter der
+// Karte, das Label "dabei"/"gemerkt" oben neben dem Datum entfällt dort.
+function renderEventCard(e, { showMarks = false } = {}) {
   const loc = locationsById.get(e.locationId)
   const isBookmarked = bookmarked.some(b => b == e.id)
   const isGoing = going.some(g => g == e.id)
@@ -1022,7 +1023,7 @@ function renderEventCard(e, { showMarks = false, peerNote = null } = {}) {
   const spotifyHref = safeUrl(e.spotifyUrl) || spotifySearchUrl(e.title)
 
   return `
-    <div class="event-swipe-wrapper" data-event-id="${e.id}" ${peerNote ? `data-peer-status="${esc(peerNote.status)}" data-peer-name="${esc(peerNote.name)}"` : ''} style="position:relative; overflow:hidden; border-radius:16px;">
+    <div class="event-swipe-wrapper" data-event-id="${e.id}" style="position:relative; overflow:hidden; border-radius:16px;">
       <div class="event-swipe-actions" style="position:absolute; right:0; top:0; bottom:0; width:160px; display:flex; flex-direction:column; gap:6px; justify-content:center; padding:6px 8px 6px 4px; z-index:0;">
         <button data-swipe-bookmark="${e.id}" style="flex:1; max-height:54px; border-radius:12px; border:1px solid ${isBookmarked ? 'rgba(244,114,182,0.5)' : 'rgba(244,114,182,0.35)'}; cursor:pointer; font-size:0.875rem; font-weight:600; background:${isBookmarked ? 'rgba(244,114,182,0.3)' : 'rgba(244,114,182,0.15)'}; color:#f472b6; font-family:'DM Sans',sans-serif;">♡ Vormerken</button>
         <button data-swipe-going="${e.id}" style="flex:1; max-height:54px; border-radius:12px; border:1px solid ${isGoing ? 'rgba(52,211,153,0.5)' : 'rgba(52,211,153,0.35)'}; cursor:pointer; font-size:0.875rem; font-weight:600; background:${isGoing ? 'rgba(52,211,153,0.25)' : 'rgba(52,211,153,0.12)'}; color:#34d399; font-family:'DM Sans',sans-serif;">✓ Bin dabei!</button>
@@ -1042,7 +1043,7 @@ function renderEventCard(e, { showMarks = false, peerNote = null } = {}) {
               ${loc ? esc(loc.name) : esc(e.locationName || '')}
             </p>
             ${e.description ? `<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.5);">${esc(e.description)}</p>` : ''}
-            ${showMarks ? `<div data-marks="${e.id}" class="text-xs font-semibold">${formatEventMarks(e.id)}</div>` : peerNote ? `<div class="text-xs font-semibold mb-2" style="color:${peerNote.status === 'going' ? '#34d399' : '#f472b6'};">${peerNote.status === 'going' ? '✓' : '♡'} Lord ${esc(peerNote.name)} ${peerNote.status === 'going' ? 'ist dabei' : 'hat vorgemerkt'}</div>` : ''}
+            ${showMarks ? `<div data-marks="${e.id}" class="text-xs font-semibold">${formatEventMarks(e.id)}</div>` : ''}
           </div>
           <div class="flex gap-2 mt-1" style="align-items:center;">
             <div style="display:flex; gap:6px; flex:1; min-width:0;">
@@ -1153,7 +1154,7 @@ function renderBookmarkPeerHtml(p) {
   const list = events.filter(e => !isConcertOver(e.date) && status.has(String(e.id)))
     .sort((a, b) => (Number(status.get(String(b.id)) === 'going') - Number(status.get(String(a.id)) === 'going')) || byDateTime(a, b))
   if (!list.length) return `<p class="text-sm pt-2" style="color:rgba(255,255,255,0.3);">Keine anstehenden Events vorgemerkt.</p>`
-  return `<div class="space-y-3 pt-2">${list.map(e => renderEventCard(e, { peerNote: { status: status.get(String(e.id)), name: p.name } })).join('')}</div>`
+  return `<div class="space-y-3 pt-2">${list.map(e => renderEventCard(e, { showMarks: true })).join('')}</div>`
 }
 
 // Merkliste: Kopfzeile mit Punkten (Wischen nur hier) und darunter "Meine Merkliste" bzw. die Liste eines anderen Lords
@@ -1460,6 +1461,8 @@ function refreshCommunityUI() {
     showSlide(kind, CAROUSEL[kind].slide())
   }
   attachSwipeGestures()
+  // Die neuen Karten der Merklisten anderer brauchen ihre Zeilen (wer dabei ist / vorgemerkt hat)
+  if (document.getElementById('bookmark-carousel')) loadMarksForVisible()
 }
 
 // Lädt die freigegebenen Histories und Merklisten und die eigenen Betrachter-Einstellungen (60-s-Cache; force
@@ -2516,8 +2519,8 @@ function updateCard(id) {
   const other = document.getElementById(currentView === 'liste' ? 'pane-kalender' : 'pane-liste')
   if (other) other.dataset.stale = '1'
   const temp = document.createElement('div')
-  const note = wrapper.dataset.peerStatus ? { status: wrapper.dataset.peerStatus, name: wrapper.dataset.peerName } : null
-  temp.innerHTML = renderEventCard(e, { peerNote: note })
+  // Karten im Gemerkt-Reiter behalten ihre Zeilen (eigener Status + Lords) unter der Karte
+  temp.innerHTML = renderEventCard(e, { showMarks: !!wrapper.querySelector('[data-marks]') })
   const newWrapper = temp.firstElementChild
   wrapper.replaceWith(newWrapper)
   attachSwipeToWrapper(newWrapper)
