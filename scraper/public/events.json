@@ -206,6 +206,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 14189384,
+    "title": "За двома зайцями („Zwei Hasen auf einmal“)",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/%D0%97%D0%B0-%D0%B4%D0%B2%D0%BE%D0%BC%D0%B0-%D0%B7%D0%B0%D0%B9%D1%86%D1%8F%D0%BC%D0%B8",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 176725280,
     "title": "GET THE SHOT",
     "date": "2026-11-04",
@@ -465,19 +478,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 14189384,
-    "title": "За двома зайцями („Zwei Hasen auf einmal“)",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/%D0%97%D0%B0-%D0%B4%D0%B2%D0%BE%D0%BC%D0%B0-%D0%B7%D0%B0%D0%B9%D1%86%D1%8F%D0%BC%D0%B8",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 183724661,
     "title": "UNIDRAM: LEO",
     "date": "2026-11-04",
@@ -618,6 +618,19 @@
     "ticketUrl": "https://privatclub-berlin.de/event/shearwater-loma-any-kind/",
     "spotifyUrl": "",
     "source": "privatclub",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1829501565,
+    "title": "AVALANCHE EFFECT",
+    "date": "2026-11-05",
+    "time": "19:00",
+    "type": "konzert",
+    "locationId": 28,
+    "description": "",
+    "ticketUrl": "https://mikropol-berlin.de/event/2026-11-05-avalanche-effect/",
+    "spotifyUrl": "",
+    "source": "mikropol",
     "addedAt": "2026-08-17"
   },
   {
@@ -864,19 +877,6 @@
     "spotifyUrl": "",
     "source": "binuu",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 1829501565,
-    "title": "AVALANCHE EFFECT",
-    "date": "2026-11-05",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 28,
-    "description": "",
-    "ticketUrl": "https://mikropol-berlin.de/event/2026-11-05-avalanche-effect/",
-    "spotifyUrl": "",
-    "source": "mikropol",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1079450370,
@@ -2134,6 +2134,32 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 123914771,
+    "title": "BONAPARTE",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/bonaparte-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 21180928,
+    "title": "THE BIG 80S & DEPECHE MODE PARTY",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/the-big-80s-and-depeche-mode-party-11-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 100970638,
     "title": "Fancy (ausverkauft)",
     "date": "2026-11-07",
@@ -2418,19 +2444,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1880822473,
-    "title": "Tokio Hotel",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1828635790,
     "title": "Soulbound x Hell Boulevard",
     "date": "2026-11-07",
@@ -2457,29 +2470,16 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 123914771,
-    "title": "BONAPARTE",
+    "id": 1880822473,
+    "title": "Tokio Hotel",
     "date": "2026-11-07",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 57,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/bonaparte-leipzig-2026",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 21180928,
-    "title": "THE BIG 80S & DEPECHE MODE PARTY",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/the-big-80s-and-depeche-mode-party-11-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -2950,6 +2950,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1391505979,
+    "title": "TESSERACT VERLEGT AUF 19.03.2027",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tesseract-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 119123884,
     "title": "Olli Schulz",
     "date": "2026-11-08",
@@ -3105,19 +3118,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 2082679369,
-    "title": "Jungle",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2002838373,
     "title": "Keshavara",
     "date": "2026-11-08",
@@ -3144,16 +3144,16 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1391505979,
-    "title": "TESSERACT VERLEGT AUF 19.03.2027",
+    "id": 2082679369,
+    "title": "Jungle",
     "date": "2026-11-08",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 57,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/tesseract-leipzig-2026",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -3520,6 +3520,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 212713239,
+    "title": "ANY GIVEN DAY- VERLEGT AUF 20.10.2027",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/any-given-day-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 394546102,
     "title": "Literatursalon: Emmanuel Carrère",
     "date": "2026-11-10",
@@ -3712,19 +3725,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-04"
-  },
-  {
-    "id": 212713239,
-    "title": "ANY GIVEN DAY- VERLEGT AUF 20.10.2027",
-    "date": "2026-11-10",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/any-given-day-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 730292829,
@@ -3933,6 +3933,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-09-02"
+  },
+  {
+    "id": 1848650090,
+    "title": "KYTES",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/kytes-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1571619884,
@@ -4165,19 +4178,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-04"
-  },
-  {
-    "id": 1848650090,
-    "title": "KYTES",
-    "date": "2026-11-11",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/kytes-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1840925767,
@@ -4801,6 +4801,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 594688398,
+    "title": "LYAPIS TRUBETSKOY - the best & new songs",
+    "date": "2026-11-13",
+    "time": "19:00",
+    "locationId": 45,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/lyapis-trubetskoy-best-new-songs",
+    "spotifyUrl": "",
+    "source": "holzmarkt",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 384699828,
     "title": "The Great Marton Experience + Abanamat",
     "date": "2026-11-13",
@@ -4825,19 +4838,6 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 594688398,
-    "title": "LYAPIS TRUBETSKOY - the best & new songs",
-    "date": "2026-11-13",
-    "time": "19:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/lyapis-trubetskoy-best-new-songs",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1141302803,
@@ -4916,6 +4916,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 989126287,
+    "title": "CARPENTER BRUT X HEALTH",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/carpenter-brut-x-health-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2461484,
@@ -5161,19 +5174,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-04"
-  },
-  {
-    "id": 989126287,
-    "title": "CARPENTER BRUT X HEALTH",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/carpenter-brut-x-health-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1378393045,
@@ -5524,6 +5524,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 502073208,
+    "title": "70 JAHRE BRAVO",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/bravo-hits-party-leipzig",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 371393736,
     "title": "BORIS (JPN) + special guest: Planning for Burial (US)",
     "date": "2026-11-14",
@@ -5756,6 +5769,19 @@
     "addedAt": "2026-11-04"
   },
   {
+    "id": 1753152492,
+    "title": "Voodoo Jürgens und die \"Ansa Panier\" LIVE",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "locationId": 45,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/voodoo-juergens-und-die-ansa-panier-live",
+    "spotifyUrl": "",
+    "source": "holzmarkt",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1609555795,
     "title": "VELJANOV",
     "date": "2026-11-14",
@@ -5806,32 +5832,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-04"
-  },
-  {
-    "id": 502073208,
-    "title": "70 JAHRE BRAVO",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/bravo-hits-party-leipzig",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1753152492,
-    "title": "Voodoo Jürgens und die \"Ansa Panier\" LIVE",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/voodoo-juergens-und-die-ansa-panier-live",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 540120933,
@@ -6196,6 +6196,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 2008661373,
+    "title": "MINE",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/mine-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1980177334,
     "title": "LÙISA",
     "date": "2026-11-15",
@@ -6388,19 +6401,6 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 2008661373,
-    "title": "MINE",
-    "date": "2026-11-15",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/mine-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 578959005,
@@ -7219,19 +7219,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 387436453,
-    "title": "Muse",
-    "date": "2026-11-18",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1003297460,
     "title": "TRAC#4: OPEN STAGE",
     "date": "2026-11-18",
@@ -7245,6 +7232,19 @@
     "addedAt": "2026-11-04"
   },
   {
+    "id": 387436453,
+    "title": "Muse",
+    "date": "2026-11-18",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1675873466,
     "title": "QUEER SLAM BERLIN",
     "date": "2026-11-18",
@@ -7256,6 +7256,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1554837565,
+    "title": "NIE UND NIMMER VERLEGT AUF 01.12.2026",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/nie-und-nimmer-leipzig-2025",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 298358869,
@@ -7464,19 +7477,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-04"
-  },
-  {
-    "id": 1554837565,
-    "title": "NIE UND NIMMER VERLEGT AUF 01.12.2026",
-    "date": "2026-11-18",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/nie-und-nimmer-leipzig-2025",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 592790147,
@@ -7698,6 +7698,19 @@
     "spotifyUrl": "",
     "source": "nbl",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1723883936,
+    "title": "TRAC#4: PAS DE DEUX",
+    "date": "2026-11-19",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/trac4-pas-de-deux-potsdam-ETUYGEL",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1285005521,
@@ -7933,6 +7946,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1530597741,
+    "title": "Moneybrother",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://tix.to/Germany-Tour-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 369487881,
     "title": "WYATT E.  (BE) - Antiquity Doom soundtrack of 587 BC - live @ Ilses Erika (pres. by Golden Rhino Booking)",
     "date": "2026-11-19",
@@ -8101,6 +8127,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1248040346,
+    "title": "TRAC#4: ABSCHLUSSVERANSTALTUNG + AFTER SHOW PARTY",
+    "date": "2026-11-20",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/trac-4-abschlussveranstaltung-after-show-party-20-11-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1010353289,
     "title": "Kontrollverlust",
     "date": "2026-11-20",
@@ -8124,6 +8163,19 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-11-20-cassia",
     "spotifyUrl": "",
     "source": "lido",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 836223128,
+    "title": "HAZE",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/haze-jubil%C3%A4umstour-2026-leipzig_",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -8474,19 +8526,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 836223128,
-    "title": "HAZE",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/haze-jubil%C3%A4umstour-2026-leipzig_",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1806724071,
     "title": "Clive (Splitting Image) and friends + Smelly Family",
     "date": "2026-11-20",
@@ -8706,6 +8745,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 2092823986,
+    "title": "Roller Disco",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/roller-disco-glitzer-beats-rollerskates-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 348015507,
     "title": "Die Schlagernacht des Jahres",
     "date": "2026-11-21",
@@ -8885,6 +8937,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1597020272,
+    "title": "FUTURE PALACE",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/future-palace-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2048594146,
@@ -9197,19 +9262,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1597020272,
-    "title": "FUTURE PALACE",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/future-palace-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1317242692,
     "title": "DANCING WITH TEARS IN YOUR EYES",
     "date": "2026-11-21",
@@ -9313,6 +9365,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 469563735,
+    "title": "HOMEPARTY XXL",
+    "date": "2026-11-21",
+    "time": "22:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.citybounce.de/event/homeparty---das-xxl-neonspecial-21-11",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1628668063,
     "title": "THE BUG presents: PRESSURE",
     "date": "2026-11-21",
@@ -9363,6 +9428,19 @@
     "spotifyUrl": "",
     "source": "holzmarkt",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1382270461,
+    "title": "Fitness-Party",
+    "date": "2026-11-22",
+    "time": "14:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://buchung.hochschulsport-potsdam.de/angebote/aktueller_zeitraum/_Fitness-Party.html",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1645667680,
@@ -9790,6 +9868,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1943764399,
+    "title": "LEAP",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/leap-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 768277406,
     "title": "11FREUNDE KNEIPENQUIZ",
     "date": "2026-11-23",
@@ -9943,19 +10034,6 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1943764399,
-    "title": "LEAP",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/leap-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 135029508,
@@ -10114,6 +10192,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 361371043,
+    "title": "NIKITA MILLER VERLEGT AUF 2027",
+    "date": "2026-11-24",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/nikita-miller-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 423648597,
     "title": "Yaris",
     "date": "2026-11-24",
@@ -10255,19 +10346,6 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 361371043,
-    "title": "NIKITA MILLER VERLEGT AUF 2027",
-    "date": "2026-11-24",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/nikita-miller-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 754482728,
@@ -10842,6 +10920,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 529389105,
+    "title": "AMISTAT",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/amistat-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1642131458,
     "title": "DEM GLÜCK GANZ NAH",
     "date": "2026-11-26",
@@ -10997,6 +11088,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1393222770,
+    "title": "Die Gorillas",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://gorillas.billeto.net/basket/event/1/-1172098036?lang=de",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 920226235,
     "title": "Rundfunk-Sinfonieorchester Berlin: Moderierte Probe mit Vladimir Jurowski",
     "date": "2026-11-26",
@@ -11008,19 +11112,6 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 529389105,
-    "title": "AMISTAT",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/amistat-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1510889580,
@@ -11084,6 +11175,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 595483549,
+    "title": "Pong Turnier",
+    "date": "2026-11-27",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventbrite.de/e/pong-turnier-waschhaus-potsdam-weihnachtsfeier-beerpongbierpong-tickets-1984042575753",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1507856726,
@@ -11225,6 +11329,32 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-11-27-furiosa---queer-latin-party",
     "spotifyUrl": "",
     "source": "lido",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 34739167,
+    "title": "KAPELLE PETRA",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/kapelle-petra-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1087743932,
+    "title": "RATHMANN @PRIVATCLUB BERLIN",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/rathmann-privatclub-berlin",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -11421,6 +11551,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 685701319,
+    "title": "frytz -  TOUR 2026",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 45,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/frytz-tour-2026",
+    "spotifyUrl": "",
+    "source": "holzmarkt",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1809149270,
     "title": "Julia Zejn & Matthias Lehmann:  „Die Summe seiner Teile“",
     "date": "2026-11-27",
@@ -11499,43 +11642,30 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 34739167,
-    "title": "KAPELLE PETRA",
+    "id": 1126530133,
+    "title": "Heinz Strunk",
     "date": "2026-11-27",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/kapelle-petra-leipzig-2026",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/heinz-strunk-memories-of-heidelberg",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
-    "id": 1087743932,
-    "title": "RATHMANN @PRIVATCLUB BERLIN",
+    "id": 1403285846,
+    "title": "SIND",
     "date": "2026-11-27",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/rathmann-privatclub-berlin",
+    "ticketUrl": "https://www.ticketbu.de/produkte/400-tickets-sind-waschhaus-potsdam-am-27-11-2026",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 685701319,
-    "title": "frytz -  TOUR 2026",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 45,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.holzmarkt.com/veranstaltung/frytz-tour-2026",
-    "spotifyUrl": "",
-    "source": "holzmarkt",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1128126557,
@@ -11652,6 +11782,19 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1053814630,
+    "title": "Waschhaus 80er",
+    "date": "2026-11-27",
+    "time": "22:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/80er-party-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 290375278,
@@ -11808,6 +11951,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 209253489,
+    "title": "Cosmic Gate",
+    "date": "2026-11-28",
+    "time": "19:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-CosmicGate",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1239478578,
     "title": "Podium: Jubiläum - 5 Jahre Fach- und Beratungsstelle bei sexualisierter Gewalt",
     "date": "2026-11-28",
@@ -11857,6 +12013,19 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-11-28-wilde-herzen",
     "spotifyUrl": "",
     "source": "lido",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 747506592,
+    "title": "TERROR",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/terror-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -12184,17 +12353,30 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 747506592,
-    "title": "TERROR",
+    "id": 654070612,
+    "title": "Filow",
     "date": "2026-11-28",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/terror-leipzig-2026",
+    "ticketUrl": "https://filow.shop/products/tour-2026-28-11-2026-potsdam",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
+    "id": 1459913765,
+    "title": "Rokko Weissensee & Blend",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/rokko-weissensee-blend-potsdam-ZUEWRW",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1814173282,
@@ -12272,19 +12454,6 @@
     "ticketUrl": "https://quasimodo.club/events/90s-reloaded-party-4-7355",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 209253489,
-    "title": "Cosmic Gate",
-    "date": "2026-11-28",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/281126-CosmicGate",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1741914523,
@@ -12545,6 +12714,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 424917923,
+    "title": "Dr. Pop",
+    "date": "2026-11-29",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/dr-pop-29-11-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 837036655,
     "title": "The Gems",
     "date": "2026-11-29",
@@ -12569,6 +12751,19 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 1731686447,
+    "title": "3. JAPANMARKT LEIPZIG",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/japanmarkt-leipzig-2026-november",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1514858798,
@@ -12727,17 +12922,17 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1731686447,
-    "title": "3. JAPANMARKT LEIPZIG",
+    "id": 905268865,
+    "title": "Streichelt",
     "date": "2026-11-29",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/japanmarkt-leipzig-2026-november",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/streichelt-12",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 2064087764,
@@ -12896,6 +13091,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1119308401,
+    "title": "OOES",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/ooes-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1571628941,
     "title": "Platina",
     "date": "2026-11-30",
@@ -13010,17 +13218,17 @@
     "addedAt": "2026-11-04"
   },
   {
-    "id": 1119308401,
-    "title": "OOES",
+    "id": 943766086,
+    "title": "DŸSE",
     "date": "2026-11-30",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/ooes-leipzig-2026",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/dyse-2",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 238062648,
@@ -13138,6 +13346,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 270217521,
+    "title": "NIE UND NIMMER",
+    "date": "2026-12-01",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/nie-und-nimmer-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 845413070,
@@ -13267,19 +13488,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 270217521,
-    "title": "NIE UND NIMMER",
-    "date": "2026-12-01",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/nie-und-nimmer-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-04"
   },
   {
     "id": 1971831988,
@@ -13605,6 +13813,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 234604444,
+    "title": "drum klub",
+    "date": "2026-12-02",
+    "time": "20:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/drum-klub-electro-potsdam-YP5GKY",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 584584033,
     "title": "mitte - elektronisches zur nacht - die reihe",
     "date": "2026-12-02",
@@ -13759,6 +13980,19 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 449187056,
+    "title": "Dirk Michaelis",
+    "date": "2026-12-03",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.reservix.de/tickets-dirk-michaelis-weihnachtstournee-2026-in-potsdam-waschhaus-am-3-12-2026/e2477900",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 619788947,
@@ -14070,6 +14304,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1430204938,
+    "title": "SingAlong",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://bezahlung.singalong.de/bezahlung/806",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 255613365,
     "title": "SDP & The Capital Dance Orchestra",
     "date": "2026-12-04",
@@ -14264,6 +14511,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 1797687810,
+    "title": "Mama geht tanzen",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://mamagehttanzen-berlin.ticket.io/dPNjAWqz/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1162009943,
     "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
     "date": "2026-12-04",
@@ -14288,6 +14548,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1783946128,
+    "title": "Klub Color Revival",
+    "date": "2026-12-04",
+    "time": "21:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/klub-color-revival-2",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1860631794,
@@ -14522,6 +14795,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1194313375,
+    "title": "SHUTDOWN",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/shut-down-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 244297238,
     "title": "SDP & The Capital Dance Orchestra",
     "date": "2026-12-05",
@@ -14741,6 +15027,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1009968147,
+    "title": "BENJAMIN VON STUCKRAD-BARRE",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/benjamin-von-stuckrad-potsdam-MZONPV",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1630680124,
     "title": "Blok3",
     "date": "2026-12-05",
@@ -14870,6 +15169,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 938933293,
+    "title": "Juicy Rap and Melodies",
+    "date": "2026-12-05",
+    "time": "23:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/juicy-rap-and-melodies-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 555236029,
     "title": "Thaylo x URBAN SPREE",
     "date": "2026-12-05",
@@ -14933,6 +15245,19 @@
     "spotifyUrl": "",
     "source": "holzmarkt",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 760508918,
+    "title": "Professor Bummbastic",
+    "date": "2026-12-06",
+    "time": "12:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://tickets.bummbastic.de/event/wow-bummbastic-potsdam-wz1gr5",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 788388338,
@@ -15298,6 +15623,19 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 2134813209,
+    "title": "STEINER & MADLAINA",
+    "date": "2026-12-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/steiner-madlaina-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1526758429,
     "title": "Oleg Vynnyk",
     "date": "2026-12-07",
@@ -15360,19 +15698,6 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 2134813209,
-    "title": "STEINER & MADLAINA",
-    "date": "2026-12-07",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/steiner-madlaina-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1932907466,
@@ -15478,6 +15803,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 1309884259,
+    "title": "ZAQ Medienquiz",
+    "date": "2026-12-08",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/zaq-medienquiz-08-12-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1636806296,
     "title": "BAP",
     "date": "2026-12-08",
@@ -15502,6 +15840,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 696155915,
+    "title": "MIGHTY OAKS",
+    "date": "2026-12-08",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/mighty-oaks-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 942504102,
@@ -15608,19 +15959,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 696155915,
-    "title": "MIGHTY OAKS",
-    "date": "2026-12-08",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/mighty-oaks-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1477374333,
     "title": "Threads",
     "date": "2026-12-09",
@@ -15697,6 +16035,19 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 82700020,
+    "title": "Das 20. Potsdamer RUDELSINGEN",
+    "date": "2026-12-09",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://tickets.rudelsingen.de/event/das-20-vorweihnachtliche-potsdamer-rudelsingen-blubfr",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1184457879,
@@ -16164,6 +16515,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1088678250,
+    "title": "Havel Slam",
+    "date": "2026-12-10",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/havel-slam-havel-slam-potsdam-EUH3XQK",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1675941537,
     "title": "MARCO CASTELLO",
     "date": "2026-12-10",
@@ -16499,6 +16863,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 888326179,
+    "title": "Ben Becker",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/ben-becker-liest-tc-no-potsdam-ZUF40X",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1836022519,
     "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s + Nick Cave",
     "date": "2026-12-11",
@@ -16601,6 +16978,19 @@
     "spotifyUrl": "",
     "source": "inselberlin",
     "addedAt": "2026-11-03"
+  },
+  {
+    "id": 575206249,
+    "title": "Gerhard Schöne",
+    "date": "2026-12-12",
+    "time": "16:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/gerhard-schone-konige-potsdam-HMO1O1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1411838316,
@@ -16718,6 +17108,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2064951038,
+    "title": "REMODE",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/remode-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 511166605,
@@ -16888,17 +17291,17 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 2064951038,
-    "title": "REMODE",
+    "id": 2074100650,
+    "title": "Comedyflash",
     "date": "2026-12-12",
     "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
+    "locationId": 58,
+    "type": "sonstige",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/remode-leipzig-2026",
+    "ticketUrl": "https://standup-republic.de/events/Comedyflash%20-%20Potsdam",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 195535803,
@@ -16963,6 +17366,19 @@
     "ticketUrl": "https://quasimodo.club/events/always-amy-a-tribute-to-amy-winehouse-6-7402",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 137499060,
+    "title": "Prokrastinations-Party",
+    "date": "2026-12-12",
+    "time": "22:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/prokrastinations-party-12-12-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 67606794,
@@ -17118,6 +17534,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 739051732,
+    "title": "Der Physiopath",
+    "date": "2026-12-13",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/der-physiopath-machen-sie-sich-bitte-frei-waschhaus-potsdam-20650157/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 325336418,
@@ -17727,6 +18156,19 @@
     "addedAt": "2026-09-27"
   },
   {
+    "id": 672809719,
+    "title": "Seraphina Kalze",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/seraphina-kalze-jetzt-potsdam-ARQ8B6",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 59852794,
     "title": "101 Voices - Depeche Mode Special Tribute",
     "date": "2026-12-16",
@@ -18102,6 +18544,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1230011825,
+    "title": "GOLDROGER",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/goldroger-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 289170602,
     "title": "ORGI’S WEIHNACHTSSHOW",
     "date": "2026-12-18",
@@ -18232,17 +18687,30 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1230011825,
-    "title": "GOLDROGER",
+    "id": 16906917,
+    "title": "MAMMA MIA",
     "date": "2026-12-18",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://mammamia-partymotto.ticket.io/jpsuX7jt/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
+    "id": 1981332131,
+    "title": "Pinoreks & NOWAVES",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/goldroger-leipzig-2026",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/pinoreks",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 856590432,
@@ -18269,6 +18737,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 976765718,
+    "title": "Pizza Connection 2.0 Pt. XIV",
+    "date": "2026-12-18",
+    "time": "21:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.sup-trip.de/pizza-connection-2-0-speicher-revival-party/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 684643070,
@@ -18530,6 +19011,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1037547619,
+    "title": "LEIPZIG XXL",
+    "date": "2026-12-19",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/leipzig-xxl-dezember-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 586999446,
     "title": "Ultra Night",
     "date": "2026-12-19",
@@ -18657,19 +19151,6 @@
     "spotifyUrl": "",
     "source": "nato",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1037547619,
-    "title": "LEIPZIG XXL",
-    "date": "2026-12-19",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/leipzig-xxl-dezember-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 258046674,
@@ -18838,6 +19319,19 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 400760411,
+    "title": "Trivial Pubsuit",
+    "date": "2026-12-20",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/trivial-pubsuit-20-12-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1406325667,
@@ -19255,6 +19749,19 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 1052661037,
+    "title": "Die Schöne Party",
+    "date": "2026-12-26",
+    "time": "21:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://tickets.schoeneparty.de/20261226/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1975498902,
     "title": "GAYHANE",
     "date": "2026-12-26",
@@ -19372,6 +19879,19 @@
     "addedAt": "2026-09-29"
   },
   {
+    "id": 1885651724,
+    "title": "Die Gorillas",
+    "date": "2026-12-27",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://gorillas.billeto.net/basket/event/1/1821417685?lang=de",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 415984826,
     "title": "Jamaram: Welcome to Arunga",
     "date": "2026-12-28",
@@ -19396,6 +19916,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 25458672,
+    "title": "NORTHERN LITE - CHRISTMAS SHOW",
+    "date": "2026-12-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/northern-lite-christmas-show-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2099333188,
@@ -19434,19 +19967,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/matthias-reim-26/2026-12-28-2000",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 25458672,
-    "title": "NORTHERN LITE - CHRISTMAS SHOW",
-    "date": "2026-12-28",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/northern-lite-christmas-show-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -19499,6 +20019,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 702843895,
+    "title": "Eisheilige Nacht 2026",
+    "date": "2026-12-30",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/subway-to-sally-eisheilige-nacht-2026-waschhaus-potsdam-21057932/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1374513105,
@@ -19644,6 +20177,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 906578461,
+    "title": "Tatjana Meissner",
+    "date": "2026-12-31",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/tatjana-meissner-lieder-potsdam-8DRFPB",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 849041171,
     "title": "Bohème Sauvage Berlin",
     "date": "2026-12-31",
@@ -19696,6 +20242,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1490197346,
+    "title": "SILVESTER XXL",
+    "date": "2026-12-31",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/silvester-xxl-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1236733132,
     "title": "Cheers!",
     "date": "2026-12-31",
@@ -19720,19 +20279,6 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1490197346,
-    "title": "SILVESTER XXL",
-    "date": "2026-12-31",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/silvester-xxl-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 366892765,
@@ -19784,6 +20330,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1773901006,
+    "title": "Silvester im Waschhaus",
+    "date": "2026-12-31",
+    "time": "21:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/silvester-im-waschhaus-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1008455102,
@@ -19968,6 +20527,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 2108164999,
+    "title": "WOW Varieté",
+    "date": "2027-01-08",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://wowvariete.reservix.de/p/reservix/event/2505011",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 179822400,
     "title": "Science Slam",
     "date": "2027-01-08",
@@ -20058,6 +20630,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 2057719578,
+    "title": "WOW Varieté",
+    "date": "2027-01-09",
+    "time": "15:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://wowvariete.reservix.de/p/reservix/event/2505013",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 413768553,
     "title": "Bad Assumption",
     "date": "2027-01-09",
@@ -20110,6 +20695,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 407575566,
+    "title": "90ER & 2000ER PARTY",
+    "date": "2027-01-09",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/90er-2000er-party-leipzig-2027-01",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1373400457,
     "title": "Leipziger Neujahrssingen",
     "date": "2027-01-09",
@@ -20147,19 +20745,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 407575566,
-    "title": "90ER & 2000ER PARTY",
-    "date": "2027-01-09",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/90er-2000er-party-leipzig-2027-01",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1222231152,
@@ -20213,6 +20798,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 782100240,
+    "title": "WOW Varieté",
+    "date": "2027-01-10",
+    "time": "11:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://wowvariete.reservix.de/p/reservix/event/2505015",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1307145564,
     "title": "Ballet Of Lights",
     "date": "2027-01-10",
@@ -20223,6 +20821,19 @@
     "ticketUrl": "https://columbia-theater.de/event/20270110-ballet-of-lights/",
     "spotifyUrl": "",
     "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1410383953,
+    "title": "HAALAND936",
+    "date": "2027-01-11",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/haaland936-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -20239,19 +20850,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1410383953,
-    "title": "HAALAND936",
-    "date": "2027-01-11",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/haaland936-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1701373735,
     "title": "anaïs",
     "date": "2027-01-12",
@@ -20263,19 +20861,6 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1716514079,
-    "title": "THE NOTWIST (d/ morr music)",
-    "date": "2027-01-12",
-    "time": "20:00",
-    "locationId": 17,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/Event/74101",
-    "spotifyUrl": "",
-    "source": "utconnewitz",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1178902210,
@@ -20291,6 +20876,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1716514079,
+    "title": "THE NOTWIST (d/ morr music)",
+    "date": "2027-01-12",
+    "time": "20:00",
+    "locationId": 17,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/Event/74101",
+    "spotifyUrl": "",
+    "source": "utconnewitz",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1054195086,
     "title": "ORDEN OGAN",
     "date": "2027-01-13",
@@ -20304,6 +20902,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1472305090,
+    "title": "The Notwist",
+    "date": "2027-01-13",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/the-notwist-news-from-planet-zombie-tour",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 169583077,
     "title": "Die dunkle Seite der Discokugel",
     "date": "2027-01-13",
@@ -20315,6 +20926,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-09-22"
+  },
+  {
+    "id": 1077421561,
+    "title": "ALL TOGETHER NOW - Schulvorstellung",
+    "date": "2027-01-14",
+    "time": "11:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/all-together-now-schulvorstellung-14-01-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 166111733,
@@ -20369,6 +20993,32 @@
     "addedAt": "2026-11-04"
   },
   {
+    "id": 1841942025,
+    "title": "Sebastian Lehmann",
+    "date": "2027-01-14",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/sebastian-lehmann-potsdam-JOXUXT",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
+    "id": 1106255366,
+    "title": "ALL TOGETHER NOW - Schulvorstellung",
+    "date": "2027-01-15",
+    "time": "11:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/all-together-now-schulvorstellung-15-01-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1144184805,
     "title": "Songslam Kreuzberg",
     "date": "2027-01-15",
@@ -20380,6 +21030,19 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1117410913,
+    "title": "ALL TOGETHER NOW - Premiere",
+    "date": "2027-01-15",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/all-together-now-premiere-15-01-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 936492523,
@@ -20447,6 +21110,32 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1135657102,
+    "title": "Comedyflash",
+    "date": "2027-01-15",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://standup-republic.de/events/comedyflash-potsdam_12523",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
+    "id": 487553667,
+    "title": "Hotel Rimini",
+    "date": "2027-01-15",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/hotel-rimini-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1915281122,
     "title": "SchlagerchampionsDas große Fest der Besten",
     "date": "2027-01-15",
@@ -20499,6 +21188,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1556596554,
+    "title": "WOW Varieté",
+    "date": "2027-01-16",
+    "time": "15:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://wowvariete.reservix.de/p/reservix/event/2505017",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 208468803,
     "title": "Fight 4 Life - Ronny Gabel vs. Marco Martini",
     "date": "2027-01-16",
@@ -20522,6 +21224,19 @@
     "ticketUrl": "https://feverup.com/de/berlin/venue/theather-im-delphi",
     "spotifyUrl": "",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 214781081,
+    "title": "ALL TOGETHER NOW",
+    "date": "2027-01-16",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/all-together-now-16-01-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1071885871,
@@ -20548,6 +21263,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 306664151,
+    "title": "YU",
+    "date": "2027-01-16",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/yu-weirdos-welcome-tour-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 717839043,
@@ -20602,19 +21330,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 306664151,
-    "title": "YU",
-    "date": "2027-01-16",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/yu-weirdos-welcome-tour-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 918106175,
     "title": "SchlagerchampionsDas große Fest der Besten",
     "date": "2027-01-16",
@@ -20654,6 +21369,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1685679273,
+    "title": "WOW Varieté",
+    "date": "2027-01-17",
+    "time": "11:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://wowvariete.reservix.de/p/reservix/event/2505019",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1161355357,
     "title": "Heavysaurus – METAL Tour 2026/27",
     "date": "2027-01-17",
@@ -20665,6 +21393,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1138528616,
+    "title": "ALL TOGETHER NOW",
+    "date": "2027-01-17",
+    "time": "16:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/all-together-now-17-01-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 485176106,
@@ -20849,19 +21590,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 136339945,
-    "title": "Kauta",
-    "date": "2027-01-20",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270120-kauta/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2002801613,
     "title": "SO SOON @UT CONNEWITZ VERLEGT AUF 22.04.2027",
     "date": "2027-01-20",
@@ -20872,6 +21600,19 @@
     "ticketUrl": "https://www.taeubchenthal.com/programm/so-soon-leipzig-2027",
     "spotifyUrl": "",
     "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 136339945,
+    "title": "Kauta",
+    "date": "2027-01-20",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270120-kauta/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -21187,6 +21928,19 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 250841082,
+    "title": "Ronja Räubertochter",
+    "date": "2027-01-24",
+    "time": "15:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://rausgegangen.de/events/ronja-raubertochter-ein-meisterwerk-der-kinderliteratur-als--0/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 699601909,
     "title": "Ballet of Lights: Cinderella",
     "date": "2027-01-24",
@@ -21329,6 +22083,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1093707975,
+    "title": "Michael Mittermeier",
+    "date": "2027-01-26",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/michael-mittermeier-oldboy-sind-wir-bald-da-waschhaus-potsdam-21472721/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1830715674,
     "title": "aespa",
     "date": "2027-01-26",
@@ -21365,6 +22132,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 568272910,
+    "title": "FJØRT",
+    "date": "2027-01-27",
+    "time": "19:45",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/fjort-potsdam-KQSPND",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 701471870,
@@ -21445,6 +22225,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 564402070,
+    "title": "HORST EVERS",
+    "date": "2027-01-28",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/horst-evers-so-gesehen-naturlich-lustig-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1739848827,
     "title": "CALLEJON",
     "date": "2027-01-28",
@@ -21455,6 +22248,19 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2027-01-28-callejon",
     "spotifyUrl": "",
     "source": "lido",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 241694307,
+    "title": "DR. POP",
+    "date": "2027-01-28",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/dr-pop-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -21471,17 +22277,17 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 241694307,
-    "title": "DR. POP",
+    "id": 1076782446,
+    "title": "Nick & June",
     "date": "2027-01-28",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/dr-pop-leipzig-2027",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/nick-june-6",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1033489303,
@@ -21575,6 +22381,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 102309905,
+    "title": "CALLEJON",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/callejon-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 501722855,
     "title": "Get Well Soon",
     "date": "2027-01-29",
@@ -21640,17 +22459,17 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 102309905,
-    "title": "CALLEJON",
+    "id": 2101645617,
+    "title": "Max Goldt liest",
     "date": "2027-01-29",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/callejon-leipzig-2027",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/max-goldt-liest-potsdam-GF9TYV",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 564652619,
@@ -21731,6 +22550,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1899721172,
+    "title": "FLOOR JANSEN",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/floor-jansen-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1820613651,
     "title": "Fancy",
     "date": "2027-01-30",
@@ -21783,19 +22615,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 1899721172,
-    "title": "FLOOR JANSEN",
-    "date": "2027-01-30",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/floor-jansen-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1687079560,
     "title": "Bijelo Dugme",
     "date": "2027-01-30",
@@ -21845,6 +22664,19 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 329801051,
+    "title": "Markus Krebs",
+    "date": "2027-01-31",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.ticketmaster.de/event/15-jahre-markus-krebs-das-beste-aus-6-live-programmen-tickets/137295361",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 791560722,
@@ -21975,6 +22807,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 450763519,
+    "title": "drum klub",
+    "date": "2027-02-03",
+    "time": "20:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/drum-klub-electro-potsdam-EZZQMJW",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 736482571,
@@ -22133,6 +22978,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 708496899,
+    "title": "Havel Slam - Geburtstag",
+    "date": "2027-02-04",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/havel-slam-geburtstag-potsdam-E1PXXXP",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1272292194,
     "title": "PAIN OF TRUTH",
     "date": "2027-02-05",
@@ -22224,6 +23082,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 859439500,
+    "title": "CATT",
+    "date": "2027-02-05",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/CATT-leipzig-taeubchenthal-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1020201459,
     "title": "ENSLAVED & Sólstafir",
     "date": "2027-02-05",
@@ -22300,19 +23171,6 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 859439500,
-    "title": "CATT",
-    "date": "2027-02-05",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/CATT-leipzig-taeubchenthal-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1117271180,
@@ -22833,19 +23691,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1803103784,
-    "title": "Lover - A Tribute to Taylor Swift",
-    "date": "2027-02-09",
-    "time": "20:00",
-    "locationId": 25,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tempodrom.de/event/lover-a_tribute_to_taylor_swift_2027-02-09_20/",
-    "spotifyUrl": "",
-    "source": "tempodrom",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 267142171,
     "title": "Leonard Cohen",
     "date": "2027-02-09",
@@ -22857,6 +23702,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-11-03"
+  },
+  {
+    "id": 1803103784,
+    "title": "Lover - A Tribute to Taylor Swift",
+    "date": "2027-02-09",
+    "time": "20:00",
+    "locationId": 25,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tempodrom.de/event/lover-a_tribute_to_taylor_swift_2027-02-09_20/",
+    "spotifyUrl": "",
+    "source": "tempodrom",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 601535934,
@@ -22924,6 +23782,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 785601591,
+    "title": "BASEMENT",
+    "date": "2027-02-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/basement-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 34085061,
     "title": "Nickless",
     "date": "2027-02-10",
@@ -22974,19 +23845,6 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-11-03"
-  },
-  {
-    "id": 785601591,
-    "title": "BASEMENT",
-    "date": "2027-02-10",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/basement-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 497322675,
@@ -23132,6 +23990,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1903773521,
+    "title": "André Kubiczek",
+    "date": "2027-02-11",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/andre-kubiczek-liest-luxus",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1980526635,
     "title": "VON WELT + Milo030",
     "date": "2027-02-12",
@@ -23171,6 +24042,19 @@
     "addedAt": "2026-09-22"
   },
   {
+    "id": 129515404,
+    "title": "Comedyflash",
+    "date": "2027-02-12",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://standup-republic.de/events/comedyflash-potsdam_12523",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1129946456,
     "title": "Enemy Inside",
     "date": "2027-02-12",
@@ -23182,6 +24066,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 2132771366,
+    "title": "Dirk Zöllner & Manuel Schmid",
+    "date": "2027-02-12",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/zollner-musikanten-potsdam-7HJNRW",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 84629336,
@@ -23379,6 +24276,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 616358846,
+    "title": "THE BIG 80S & DEPECHE MODE PARTY",
+    "date": "2027-02-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/the-big-80s-and-depeche-mode-party-11-2026_01",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1347874824,
     "title": "Ugly",
     "date": "2027-02-13",
@@ -23442,19 +24352,6 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 616358846,
-    "title": "THE BIG 80S & DEPECHE MODE PARTY",
-    "date": "2027-02-13",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/the-big-80s-and-depeche-mode-party-11-2026_01",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 516103525,
@@ -23873,6 +24770,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 841394520,
+    "title": "Sascha Lange",
+    "date": "2027-02-17",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/die-depeche-mode-trilogie-eine-lesung-aus-drei-buchern-uber-",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1430457724,
     "title": "EMERGENZA BERLIN",
     "date": "2027-02-18",
@@ -24028,6 +24938,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 668534519,
+    "title": "Betti Kruse",
+    "date": "2027-02-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/betti-kruse-wird-schon-gutgehn-tour-2027-waschhaus-potsdam-21869921/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1689159907,
     "title": "Donna The Show",
     "date": "2027-02-19",
@@ -24131,6 +25054,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1592264580,
+    "title": "SKI AGGU",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/ski-aggu-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1414102525,
     "title": "WARHAUS",
     "date": "2027-02-19",
@@ -24222,19 +25158,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1592264580,
-    "title": "SKI AGGU",
-    "date": "2027-02-19",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/ski-aggu-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1786829016,
     "title": "Black Magic Six + +Guest",
     "date": "2027-02-19",
@@ -24324,6 +25247,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-09-30"
+  },
+  {
+    "id": 1099580565,
+    "title": "AFRO BOMB",
+    "date": "2027-02-20",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/afro-bomg-indoor-festival-leipzig",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1671998607,
@@ -24428,19 +25364,6 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1099580565,
-    "title": "AFRO BOMB",
-    "date": "2027-02-20",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/afro-bomg-indoor-festival-leipzig",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 486560162,
@@ -25078,6 +26001,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1222149637,
+    "title": "Kapa Tult",
+    "date": "2027-02-25",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/kapa-tult-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 877365918,
     "title": "Robby Hoffman",
     "date": "2027-02-25",
@@ -25154,6 +26090,19 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1315722699,
+    "title": "ZEROMANCER",
+    "date": "2027-02-26",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/zeromancer-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1426136078,
@@ -25257,19 +26206,6 @@
     "ticketUrl": "https://larkberlin.com/event/neov/",
     "spotifyUrl": "",
     "source": "lark",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1315722699,
-    "title": "ZEROMANCER",
-    "date": "2027-02-26",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/zeromancer-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -25998,6 +26934,19 @@
     "addedAt": "2026-09-29"
   },
   {
+    "id": 2034904390,
+    "title": "NightWash – Das Sing Ding",
+    "date": "2027-03-05",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/nightwash-live-nightwash-das-sing-ding-das-lustigste-mit-sing-konzert-aller-zeiten-tour-2027-waschhaus-potsdam-22196293/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1422183629,
     "title": "C2C: Country to Country",
     "date": "2027-03-06",
@@ -26192,6 +27141,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1670069340,
+    "title": "MiA.",
+    "date": "2027-03-06",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/mia-06-03-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 340651777,
     "title": "The Jackets + SuxSuxSux + The Viceroyes",
     "date": "2027-03-06",
@@ -26241,6 +27203,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 217620642,
+    "title": "Jumping-Party",
+    "date": "2027-03-07",
+    "time": "15:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://buchung.hochschulsport-potsdam.de/angebote/aktueller_zeitraum/_Jumping-Party.html",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 615872660,
@@ -26399,6 +27374,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 13921615,
+    "title": "PAULWETZ",
+    "date": "2027-03-09",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/paulwetz_leipzig_2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1349680206,
     "title": "twocolors",
     "date": "2027-03-09",
@@ -26476,19 +27464,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 13921615,
-    "title": "PAULWETZ",
-    "date": "2027-03-09",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/paulwetz_leipzig_2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 636230127,
     "title": "Bojan",
     "date": "2027-03-10",
@@ -26564,6 +27539,19 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2027-03-10-hammer-king",
     "spotifyUrl": "",
     "source": "lido",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1428162488,
+    "title": "TRÄNEN",
+    "date": "2027-03-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tr%C3%A4nrn-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -26645,17 +27633,17 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1428162488,
-    "title": "TRÄNEN",
+    "id": 922600932,
+    "title": "Manja Präkels (Ersatztermin)",
     "date": "2027-03-10",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/tr%C3%A4nrn-leipzig-2027",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/manja-prakels-liest-aus-radiorauschen-im-sternenpark",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 854085152,
@@ -26708,6 +27696,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1700992266,
+    "title": "ROLF MILLER",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/rolf-miller-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 25426895,
@@ -26813,6 +27814,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1603476598,
+    "title": "Schwarze Grütze",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/schwarze-grutze-elegant-potsdam-PAPLD7",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 617736245,
     "title": "Teddy Swims",
     "date": "2027-03-11",
@@ -26823,19 +27837,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/teddy-swims/2027-03-11-2000",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1700992266,
-    "title": "ROLF MILLER",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/rolf-miller-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -27071,6 +28072,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1483314545,
+    "title": "ROCK TO MODE",
+    "date": "2027-03-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/rock-to-mode-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 658193713,
     "title": "Docta Rude with Dutch Skaexpress + Supports",
     "date": "2027-03-13",
@@ -27200,19 +28214,6 @@
     "addedAt": "2026-09-27"
   },
   {
-    "id": 1483314545,
-    "title": "ROCK TO MODE",
-    "date": "2027-03-13",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/rock-to-mode-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 946427060,
     "title": "Van Tastik + +Guest",
     "date": "2027-03-13",
@@ -27264,6 +28265,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 61222390,
+    "title": "QUATSCH COMEDY CLUB",
+    "date": "2027-03-14",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/quatsch-comedy-club-die-live-show-on-tour-waschhaus-potsdam-21168880/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1056067497,
     "title": "ORCHESTRA BAOBAB",
     "date": "2027-03-14",
@@ -27288,6 +28302,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1056067205,
+    "title": "GRAVEYARD & BLUES PILLS",
+    "date": "2027-03-14",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/graveyard-blues-pills-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 188812898,
@@ -27365,19 +28392,6 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-09-27"
-  },
-  {
-    "id": 1056067205,
-    "title": "GRAVEYARD & BLUES PILLS",
-    "date": "2027-03-14",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/graveyard-blues-pills-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 930931243,
@@ -27626,6 +28640,19 @@
     "addedAt": "2026-09-27"
   },
   {
+    "id": 979915185,
+    "title": "Arnd Zeigler - Verschoben!",
+    "date": "2027-03-17",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/arnd-zeigler-verschoben-17-03-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1208539034,
     "title": "Pop Divas - Der Soundtrack Deines Lebens",
     "date": "2027-03-18",
@@ -27688,6 +28715,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-11-04"
+  },
+  {
+    "id": 815758585,
+    "title": "JULIA EFFEKT",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/julia-effekt-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 32289913,
@@ -27755,6 +28795,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 293050161,
+    "title": "Kirsten Fuchs",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/kirsten-fuchs-2",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 38507416,
     "title": "Maite Kelly",
     "date": "2027-03-18",
@@ -27765,19 +28818,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 815758585,
-    "title": "JULIA EFFEKT",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/julia-effekt-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -27858,6 +28898,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 947768394,
+    "title": "TESSERACT",
+    "date": "2027-03-19",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tesseract-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 683244556,
     "title": "OG KEEMO",
     "date": "2027-03-19",
@@ -27935,19 +28988,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 947768394,
-    "title": "TESSERACT",
-    "date": "2027-03-19",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/tesseract-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1014845509,
     "title": "Lael Neale",
     "date": "2027-03-20",
@@ -27972,6 +29012,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-09-27"
+  },
+  {
+    "id": 1356839098,
+    "title": "ANNA-MARIA ZIMMERMANN",
+    "date": "2027-03-20",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/anna-maria-zimmermann-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 429995761,
@@ -28039,19 +29092,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1356839098,
-    "title": "ANNA-MARIA ZIMMERMANN",
-    "date": "2027-03-20",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/anna-maria-zimmermann-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1454267291,
     "title": "DUSKY pres. SIGNALS  TOUR",
     "date": "2027-03-20",
@@ -28063,6 +29103,19 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1177271366,
+    "title": "Jerry Vsan",
+    "date": "2027-03-21",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/jerry-vsan-21-03-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1655132124,
@@ -28336,6 +29389,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1939472231,
+    "title": "KMFDM",
+    "date": "2027-03-26",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/kmfdm-leizig-2027-03",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 325976119,
     "title": "Varg",
     "date": "2027-03-26",
@@ -28373,19 +29439,6 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-09-29"
-  },
-  {
-    "id": 1939472231,
-    "title": "KMFDM",
-    "date": "2027-03-26",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/kmfdm-leizig-2027-03",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1271663641,
@@ -28440,6 +29493,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1190283847,
+    "title": "LANCE BUTTERS",
+    "date": "2027-03-27",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/lance-butters-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 967127720,
     "title": "One Step Closer – a Tribute to Linkin Park",
     "date": "2027-03-27",
@@ -28476,19 +29542,6 @@
     "ticketUrl": "https://huxleysneuewelt.de/event/2027-03-27-pascow",
     "spotifyUrl": "",
     "source": "huxleys",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1190283847,
-    "title": "LANCE BUTTERS",
-    "date": "2027-03-27",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/lance-butters-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -28958,6 +30011,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1524239872,
+    "title": "Kontrollverlust",
+    "date": "2027-04-02",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/kontrollverlust-maerchen-schreit-die-zeit-tour-202627-waschhaus-22260468/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 973531682,
     "title": "ACID ARAB live",
     "date": "2027-04-02",
@@ -28994,6 +30060,19 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2027-04-03-dancing-with-myself-",
     "spotifyUrl": "",
     "source": "lido",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 796528251,
+    "title": "LEONY",
+    "date": "2027-04-03",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/leony-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -29074,17 +30153,17 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 796528251,
-    "title": "LEONY",
+    "id": 978745001,
+    "title": "ASP",
     "date": "2027-04-03",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/leony-leipzig-2027",
+    "ticketUrl": "https://www.aspswelten.de/shop/wunschgegner-tour-2027..87/wunschgegner-tour-2027-potsdam-waschhaus.1366",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 238944388,
@@ -29345,6 +30424,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 401277128,
+    "title": "Wladimir Kaminer",
+    "date": "2027-04-08",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/muttertage-geschichten-von-den-heldinnen-des-alltags-von-wla",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1080231983,
     "title": "Blackout Problems",
     "date": "2027-04-08",
@@ -29420,6 +30512,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1277212692,
+    "title": "Pong Turnier",
+    "date": "2027-04-09",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventbrite.de/e/pong-turnier-waschhaus-potsdam-mallorca-beerpongbierpong-tickets-1984869962489",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 906846103,
@@ -29732,6 +30837,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1261599022,
+    "title": "KAMERUN QRELLA GROUP",
+    "date": "2027-04-10",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/kamerun-qrella-group",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1361648249,
     "title": "WE LOVE 80S",
     "date": "2027-04-10",
@@ -29755,6 +30873,19 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1715211173,
+    "title": "Senta",
+    "date": "2027-04-11",
+    "time": "16:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/senta-ich-bin-stark-tour-konzerte-fur-kinder-und-familien",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 2123246616,
@@ -29912,6 +31043,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1728290364,
+    "title": "MONET192",
+    "date": "2027-04-13",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/monet192-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 909649939,
     "title": "Laurenz Nikolaus",
     "date": "2027-04-13",
@@ -29974,19 +31118,6 @@
     "ticketUrl": "https://hole-berlin.de/event/2027-04-13-ghostkid/",
     "spotifyUrl": "",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1728290364,
-    "title": "MONET192",
-    "date": "2027-04-13",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/monet192-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1590477967,
@@ -30093,6 +31224,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 427928671,
+    "title": "Hinnerk Köhn",
+    "date": "2027-04-14",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://landstreicher-konzerte.de/konzerte/hinnerk-koehn-p-27",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 736719442,
     "title": "LUNE",
     "date": "2027-04-15",
@@ -30132,6 +31276,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 910292479,
+    "title": "MARC ATLAS",
+    "date": "2027-04-15",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/marc-atlas-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 2108228459,
     "title": "Raum27",
     "date": "2027-04-15",
@@ -30158,17 +31315,17 @@
     "addedAt": "2026-09-29"
   },
   {
-    "id": 910292479,
-    "title": "MARC ATLAS",
+    "id": 467272793,
+    "title": "Freddy Ekué",
     "date": "2027-04-15",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/marc-atlas-leipzig-2027",
+    "ticketUrl": "https://shop.freddyekue.de/catalog/tickets/94764-tickets-freddy-ekue-waschhaus-potsdam-am-15-04-2027",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1896342165,
@@ -30221,6 +31378,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 778413152,
+    "title": "ABBA UNFORGETTABLE",
+    "date": "2027-04-16",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/abba-unforgettable-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 379284317,
@@ -30300,19 +31470,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 778413152,
-    "title": "ABBA UNFORGETTABLE",
-    "date": "2027-04-16",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/abba-unforgettable-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 601722576,
     "title": "In Extremo & Feuerschwanz",
     "date": "2027-04-17",
@@ -30337,6 +31494,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-09-27"
+  },
+  {
+    "id": 1975558565,
+    "title": "DIE LÄRMER",
+    "date": "2027-04-17",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/die-l%C3%A4rmer-tour-2027-leipzig",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 692080519,
@@ -30400,19 +31570,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/maffay-oerding/2027-04-17-2000",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1975558565,
-    "title": "DIE LÄRMER",
-    "date": "2027-04-17",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/die-l%C3%A4rmer-tour-2027-leipzig",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -30505,6 +31662,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1710285563,
+    "title": "Nichtseattle",
+    "date": "2027-04-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/nichtseattle-grose-liebe-potsdam-E829L13",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1323834100,
@@ -30753,6 +31923,32 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1155419439,
+    "title": "DREIVIERTELBLUT",
+    "date": "2027-04-22",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/dreiviertelblut-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 600569496,
+    "title": "SO SOON @UT CONNEWITZ",
+    "date": "2027-04-22",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/so-soon-leipzig-2027-04",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1724245845,
     "title": "AND ONE",
     "date": "2027-04-22",
@@ -30805,32 +32001,6 @@
     "addedAt": "2026-08-26"
   },
   {
-    "id": 1155419439,
-    "title": "DREIVIERTELBLUT",
-    "date": "2027-04-22",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/dreiviertelblut-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 600569496,
-    "title": "SO SOON @UT CONNEWITZ",
-    "date": "2027-04-22",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/so-soon-leipzig-2027-04",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1616730609,
     "title": "1986zig",
     "date": "2027-04-23",
@@ -30868,6 +32038,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1771775654,
+    "title": "REIS AGAINST THE SPÜLMASCHINE",
+    "date": "2027-04-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/reis-against-the-spuelmaschine-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 404296791,
@@ -30933,19 +32116,6 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1771775654,
-    "title": "REIS AGAINST THE SPÜLMASCHINE",
-    "date": "2027-04-23",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/reis-against-the-spuelmaschine-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 182853534,
@@ -31128,6 +32298,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 69124927,
+    "title": "FUFFIFUFZICH",
+    "date": "2027-04-25",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/fuffifufzich-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 378081528,
     "title": "Krissy Matthews",
     "date": "2027-04-25",
@@ -31152,19 +32335,6 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 69124927,
-    "title": "FUFFIFUFZICH",
-    "date": "2027-04-25",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/fuffifufzich-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 727855850,
@@ -31282,6 +32452,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1051016840,
+    "title": "Jan Philipp Zymny",
+    "date": "2027-04-28",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/jan-philipp-zymny-potsdam-6PIIQ9",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 357232072,
@@ -31799,6 +32982,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 929587222,
+    "title": "NEVERMORE",
+    "date": "2027-05-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/Nevermore-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1060729028,
     "title": "PAUL PANZER",
     "date": "2027-05-07",
@@ -31823,19 +33019,6 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-09-15"
-  },
-  {
-    "id": 929587222,
-    "title": "NEVERMORE",
-    "date": "2027-05-07",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/Nevermore-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 68179629,
@@ -32032,6 +33215,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1259987782,
+    "title": "TOM HENGST",
+    "date": "2027-05-10",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tom-hengst-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1857373810,
     "title": "Laura Abla & Ceddo",
     "date": "2027-05-10",
@@ -32068,19 +33264,6 @@
     "ticketUrl": "https://metropol-berlin.de/event/2027-05-10-charlotte-cardin",
     "spotifyUrl": "",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 1259987782,
-    "title": "TOM HENGST",
-    "date": "2027-05-10",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/tom-hengst-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 328271626,
@@ -32354,6 +33537,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 779369638,
+    "title": "WILHELMINE",
+    "date": "2027-05-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/wilhelmine-magisch-akustik-tour-2027-waschhaus-potsdam-22286362/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1609177126,
     "title": "Siiga",
     "date": "2027-05-19",
@@ -32391,6 +33587,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 608088996,
+    "title": "Arnd Zeigler",
+    "date": "2027-05-19",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/immer-gluck-ist-konnen-potsdam-EBIH4Y5",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 869187602,
@@ -32432,6 +33641,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 768892659,
+    "title": "WILHELMINE",
+    "date": "2027-05-21",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/wilhelmine-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1797752945,
     "title": "RIN",
     "date": "2027-05-21",
@@ -32468,19 +33690,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/greta-van-fleet-2027/2027-05-21-2000",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 768892659,
-    "title": "WILHELMINE",
-    "date": "2027-05-21",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/wilhelmine-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
     "addedAt": "2026-11-02"
   },
   {
@@ -32718,6 +33927,45 @@
     "addedAt": "2026-08-28"
   },
   {
+    "id": 1289070090,
+    "title": "Quichotte",
+    "date": "2027-05-27",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/quichotte-tba-potsdam-4ZFW0R",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
+    "id": 7626538,
+    "title": "Pong Turnier",
+    "date": "2027-05-28",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventbrite.de/e/pong-turnier-waschhaus-potsdam-saisonfinale-beerpongbierpong-tickets-1984870119960",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
+    "id": 95808797,
+    "title": "Dr. Mark Benecke",
+    "date": "2027-05-28",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/dr-mark-benecke-live-202627-waschhaus-potsdam-21424231/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 97167726,
     "title": "Bee Gees by Maincourse",
     "date": "2027-05-28",
@@ -32755,6 +34003,32 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-10-28"
+  },
+  {
+    "id": 1562802287,
+    "title": "JugendFEIER 2027",
+    "date": "2027-05-29",
+    "time": "10:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://potsdam.jugendfeier.org/waschhaus-potsdam/2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
+    "id": 61529369,
+    "title": "DIE SKEPTIKER & FREUNDE DER ITALIENISCHEN OPER",
+    "date": "2027-05-29",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/skeptiker-freunde-der-italienischen-oper-leipzig",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 320141606,
@@ -32795,17 +34069,17 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 61529369,
-    "title": "DIE SKEPTIKER & FREUNDE DER ITALIENISCHEN OPER",
-    "date": "2027-05-29",
-    "time": "20:00",
-    "locationId": 15,
+    "id": 343800038,
+    "title": "Internationaler Kindertag",
+    "date": "2027-05-30",
+    "time": "13:00",
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/skeptiker-freunde-der-italienischen-oper-leipzig",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/internationaler-kindertag-30-05-2027",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1002926644,
@@ -33103,6 +34377,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1482270459,
+    "title": "FORCED TO MODE - Open Air",
+    "date": "2027-06-19",
+    "time": "20:45",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/forced-to-mode-a-tribute-to-depeche-mode-waschhaus-open-air-gelaende-21927216/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1557579770,
     "title": "Mero",
     "date": "2027-06-20",
@@ -33246,6 +34533,45 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1192067732,
+    "title": "WIZO - Open Air",
+    "date": "2027-07-31",
+    "time": "16:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/wizo-slime-normahl-butterwegge",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
+    "id": 1560610008,
+    "title": "Havelbeats Festival 2027",
+    "date": "2027-08-06",
+    "time": "15:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.citybounce.de/havelbeats-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
+    "id": 657147945,
+    "title": "Havelbeats Festival 2027",
+    "date": "2027-08-07",
+    "time": "15:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.citybounce.de/havelbeats-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1282609619,
     "title": "The Wailers",
     "date": "2027-08-13",
@@ -33311,6 +34637,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 809037388,
+    "title": "Fritz Open Air 2027",
+    "date": "2027-08-28",
+    "time": "16:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/fritz-open-air-2027-potsdam-TNCE8H",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 82557542,
     "title": "absent",
     "date": "2027-09-02",
@@ -33337,16 +34676,16 @@
     "addedAt": "2026-11-04"
   },
   {
-    "id": 984632611,
-    "title": "Helge Schneider",
+    "id": 644856728,
+    "title": "Knorkator - Open Air",
     "date": "2027-09-04",
-    "time": "20:00",
-    "locationId": 25,
+    "time": "19:45",
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.tempodrom.de/event/helge_schneider_2027-09-04_20/",
+    "ticketUrl": "https://www.eventim.de/en/event/knorkator-laedt-ein-zum-open-air-am-4-september-knotsdam-waschhaus-open-air-gelaende-21477104/",
     "spotifyUrl": "",
-    "source": "tempodrom",
+    "source": "waschhaus",
     "addedAt": "2026-11-04"
   },
   {
@@ -33361,6 +34700,32 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 984632611,
+    "title": "Helge Schneider",
+    "date": "2027-09-04",
+    "time": "20:00",
+    "locationId": 25,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tempodrom.de/event/helge_schneider_2027-09-04_20/",
+    "spotifyUrl": "",
+    "source": "tempodrom",
+    "addedAt": "2026-11-04"
+  },
+  {
+    "id": 77385292,
+    "title": "Bodo Wartke - Open Air",
+    "date": "2027-09-05",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/bodo-wartke-wunderpunkt-waschhaus-potsdam-22326720/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1357013669,
@@ -33466,17 +34831,17 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 2061347321,
-    "title": "THE CHATS",
-    "date": "2027-09-17",
+    "id": 94449916,
+    "title": "Fil",
+    "date": "2027-09-15",
     "time": "20:00",
-    "locationId": 5,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.astra-berlin.de/events/2027-09-17-the-chats",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/fil-lieder-of-the-world",
     "spotifyUrl": "",
-    "source": "astra",
-    "addedAt": "2026-11-01"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 927897281,
@@ -33490,6 +34855,19 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 2061347321,
+    "title": "THE CHATS",
+    "date": "2027-09-17",
+    "time": "20:00",
+    "locationId": 5,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.astra-berlin.de/events/2027-09-17-the-chats",
+    "spotifyUrl": "",
+    "source": "astra",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1467367746,
@@ -33530,6 +34908,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 1955852544,
+    "title": "NIKITA MILLER",
+    "date": "2027-09-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/nikita-miller-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 126419691,
     "title": "SIVERT HØYEM",
     "date": "2027-09-23",
@@ -33554,19 +34945,6 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-08-26"
-  },
-  {
-    "id": 1955852544,
-    "title": "NIKITA MILLER",
-    "date": "2027-09-23",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/nikita-miller-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 166983375,
@@ -33788,6 +35166,19 @@
     "addedAt": "2026-09-16"
   },
   {
+    "id": 1114309758,
+    "title": "TOM TWERS",
+    "date": "2027-10-07",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/tom-twers-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 925095485,
     "title": "The Mission",
     "date": "2027-10-07",
@@ -33812,19 +35203,6 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 1114309758,
-    "title": "TOM TWERS",
-    "date": "2027-10-07",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/tom-twers-leipzig-2027",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1831877460,
@@ -33929,6 +35307,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 158404758,
+    "title": "Maria Clara Groppler",
+    "date": "2027-10-10",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/maria-clara-groppler-ehefrau-2027-waschhaus-potsdam-21727082/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 896076118,
@@ -34074,6 +35465,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1258191546,
+    "title": "Mirja Regensburg",
+    "date": "2027-10-17",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/mirja-regensburg-alles-wird-gut-waschhaus-potsdam-21002937",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 2006379159,
     "title": "Frank Turner & The Sleeping Souls",
     "date": "2027-10-17",
@@ -34125,6 +35529,32 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1560967160,
+    "title": "OSAN YARAN",
+    "date": "2027-10-21",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/osan-yaran-wollen-wir-beginnen-waschhaus-potsdam-22139978/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
+    "id": 962707213,
+    "title": "QUERBEAT",
+    "date": "2027-10-22",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/querbeat-leipzig-2027",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 655692507,
     "title": "HAEVN",
     "date": "2027-10-22",
@@ -34151,17 +35581,17 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 962707213,
-    "title": "QUERBEAT",
+    "id": 24774545,
+    "title": "Rocko Schamoni",
     "date": "2027-10-22",
     "time": "20:00",
-    "locationId": 15,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/querbeat-leipzig-2027",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/rocko-schamoni-zu-fu-zum-mond",
     "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1154558164,
@@ -34475,19 +35905,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1342750361,
-    "title": "William Shakespeare’s Romeo + Juliet Film in Concert",
-    "date": "2027-11-06",
-    "time": "20:00",
-    "locationId": 33,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/romeo-und-julia/2027-11-06-2000",
-    "spotifyUrl": "",
-    "source": "ubereatsmusichall",
-    "addedAt": "2026-09-16"
-  },
-  {
     "id": 968994869,
     "title": "SHE PAST AWAY",
     "date": "2027-11-06",
@@ -34499,6 +35916,19 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1342750361,
+    "title": "William Shakespeare’s Romeo + Juliet Film in Concert",
+    "date": "2027-11-06",
+    "time": "20:00",
+    "locationId": 33,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/romeo-und-julia/2027-11-06-2000",
+    "spotifyUrl": "",
+    "source": "ubereatsmusichall",
+    "addedAt": "2026-09-16"
   },
   {
     "id": 1817981887,
@@ -34657,6 +36087,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1516735411,
+    "title": "Yorick Thiede",
+    "date": "2027-11-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.universe.com/events/polygon-tickets-W19XM7",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 387324392,
     "title": "Grey Days Festival 2027 – Celebrating the Life of Michael Smuk",
     "date": "2027-11-20",
@@ -34707,6 +36150,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1984830479,
+    "title": "Josepha Walter",
+    "date": "2027-11-24",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/josepha-walter-crashout-potsdam-VSRVBF",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 363656777,
@@ -34891,6 +36347,19 @@
     "addedAt": "2026-11-03"
   },
   {
+    "id": 1405853410,
+    "title": "Ray Wilson",
+    "date": "2027-12-10",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/ray-wilson-waschhaus-potsdam-22105760/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 411590005,
     "title": "Breakin' Circus",
     "date": "2027-12-11",
@@ -34902,6 +36371,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-11-03"
+  },
+  {
+    "id": 1325602576,
+    "title": "Eule findet den Beat",
+    "date": "2027-12-12",
+    "time": "14:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/eule-findet-den-beat",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1087428197,
@@ -34969,6 +36451,32 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 585293871,
+    "title": "Rolf Miller",
+    "date": "2028-02-06",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://rausgegangen.de/events/rolf-miller-65/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
+    "id": 1508225805,
+    "title": "Northern Lite",
+    "date": "2028-03-10",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/northern-lite-zeitgeist-zombie-tour-2027-waschhaus-potsdam-22337955/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1896654251,
     "title": "Kerstin Ott",
     "date": "2028-03-31",
@@ -34993,6 +36501,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 421308265,
+    "title": "Filiz Tasdan",
+    "date": "2028-04-09",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.filiztasdan.de/catalog/tickets/94058-tickets-filiz-tasdan-waschhaus-potsdam-am-09-04-2028",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 316015661,
