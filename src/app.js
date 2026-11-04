@@ -1347,6 +1347,7 @@ function renderCarouselHead(kind) {
   // Schriftgröße so, dass ein 15 Zeichen langer Name die Zeile bis kurz vor den Favoriten-Stern füllt (390 px Breite).
   // Bei einem Lord ohne Titel steht noch der "Name"-Knopf daneben, dort bleibt es bei der kleineren Schrift.
   const compact = !!peer && !peer.lordTitle
+  const size = compact ? 11 : kind === 'history' ? 14 : 13   // "History von Lord" ist kürzer und braucht mehr Schrift
   const btn = 'btn-glass rounded-lg inline-flex items-center justify-center'
   const actions = peer
     ? `${peer.lordTitle ? '' : `<button data-peer-alias="${esc(peer.publicId)}" title="Namen vergeben" aria-label="Namen vergeben" class="${btn}" style="height:28px; padding:0 10px; color:rgba(255,255,255,0.6); font-size:11px;">Name</button>`}
@@ -1368,7 +1369,7 @@ function renderCarouselHead(kind) {
     : ''
   return `
     <div class="flex items-center justify-between mb-1" style="min-height:28px; gap:8px;">
-      <h3 class="syne" style="font-size:${compact ? 11 : 13}px; font-weight:600; letter-spacing:${compact ? 0.02 : 0.01}em; text-transform:uppercase; color:rgba(255,255,255,0.5); min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${peer ? c.other + esc(peer.name) : c.own}</h3>
+      <h3 class="syne" style="font-size:${size}px; font-weight:600; letter-spacing:${compact ? 0.02 : 0.01}em; text-transform:uppercase; color:#818cf8; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${peer ? c.other + esc(peer.name) : c.own}</h3>
       <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">${actions}</div>
     </div>
     ${dots}
