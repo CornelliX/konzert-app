@@ -176,14 +176,30 @@ export async function savePeerPref(publicId, fields) {
   return !error
 }
 
-// Zähler anderer Nutzer mit freigegebener Merkliste: { [eventId]: { going, bookmarked } }, nur Events mit
-// mindestens einer Markierung. Nur Zahlen. null bei Fehler (damit der Aufrufer nichts als "0" zwischenspeichert).
+// Wer hat diese Events vorgemerkt bzw. ist dabei (nur Nutzer mit freigegebener Merkliste, ohne den Aufrufer):
+// { [eventId]: [{ publicId, lordTitle, createdAt, status }] }. null bei Fehler (damit der Aufrufer nichts als "leer" zwischenspeichert).
 export async function loadEventMarks(eventIds) {
   const user = await getUser()
   if (!user || !eventIds.length) return {}
-  const { data, error } = await supabase.rpc('get_event_marks', { event_ids: eventIds.slice(0, 500).map(String) })
+  const { data, error } = await supabase.rpc('get_event_lords', { event_ids: eventIds.slice(0, 500).map(String) })
   if (error || !Array.isArray(data)) return null
-  return Object.fromEntries(data.map(r => [r.event_id, { going: r.going, bookmarked: r.bookmarked }]))
+  const out = {}
+  for (const r of data) (out[r.event_id] ||= []).push({ publicId: r.public_id, lordTitle: r.lord_title, createdAt: r.created_at, status: r.status })
+  return out
+}
+
+// Freigegebene Merklisten anderer Nutzer. null bei Fehler (leere Liste = niemand hat etwas freigegeben).
+export async function loadCommunityBookmarks() {
+  const user = await getUser()
+  if (!user) return null
+  const { data, error } = await supabase.rpc('get_community_bookmarks')
+  if (error || !Array.isArray(data)) return null
+  return data.map(r => ({
+    publicId: r.public_id,
+    lordTitle: r.lord_title,
+    createdAt: r.created_at,
+    marks: (r.marks || []).map(m => ({ eventId: String(m.event_id), status: m.status }))
+  }))
 }
 
 export async function loadHistory() {
@@ -209,6 +225,14 @@ export async function updateHistoryRating(id, rating) {
   const user = await getUser()
   if (!user) return false
   const { error } = await supabase.from('history').update({ rating }).eq('id', id).eq('user_id', user.id)
+  return !error
+}
+
+// Bearbeiten von Titel, Ort und Datum eines eigenen History-Eintrags
+export async function updateHistoryEntry(id, { title, locationName, locationCity, date }) {
+  const user = await getUser()
+  if (!user) return false
+  const { error } = await supabase.from('history').update({ title, location_name: locationName || null, location_city: locationCity || null, date }).eq('id', id).eq('user_id', user.id)
   return !error
 }
 

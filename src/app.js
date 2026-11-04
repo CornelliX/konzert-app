@@ -1,5 +1,5 @@
 import { getLocations, getEvents, saveData, loadData } from './data.js'
-import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, addRadarArtistIfNew, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut, localToday, loadProfile, saveProfile, loadCommunityHistories, loadPeerPrefs, savePeerPref, loadEventMarks } from './supabase.js'
+import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, addRadarArtistIfNew, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut, localToday, loadProfile, saveProfile, loadCommunityHistories, loadPeerPrefs, savePeerPref, loadEventMarks, loadCommunityBookmarks, updateHistoryEntry } from './supabase.js'
 
 // ISO-Datum + HH:MM sortiert als String korrekt; new Date(date + 'T' + time) wäre bei Events ohne
 // Uhrzeit "Invalid Date" (NaN im Vergleich) und würde die Reihenfolge durcheinanderbringen
@@ -157,23 +157,29 @@ let renderedEventLimit = EVENT_RENDER_BATCH
 let loadMoreObserver = null
 let swipeActiveWrapper = null
 let swipeDocListenerAdded = false
-let historySwipeBound = false
 let ptrListenerAdded = false
 let dropdownListenerAdded = false
 const bookmarkInFlight = new Set()
 let fetchSeq = 0
 let markSeenTimer = null
 let titleAnimated = false
-let lastHistoryTapAt = 0
+let lastNavTap = { view: '', at: 0 }
 let radarOpen = false
 
 // Community: Histories anderer Nutzer (freigegeben), eigene Betrachter-Einstellungen (Alias/Favorit)
 // und das eigene Profil (Lord-Titel, Freigaben). historySlide: 0 = "Meine History", 1.. = fremde Listen
 let communityRaw = []
 let communityPeers = []
+let bmRaw = []
+let bmPeers = []
 let peerPrefs = {}
 let communityLoadedAt = 0
 let historySlide = 0
+let bookmarkSlide = 0
+const peerRegistry = new Map()
+let historyEditId = null
+let historyEditOpen = false
+let historyEditPrefill = ''
 let myProfile = null
 let myProfileError = false
 let settingsOpen = false
@@ -425,6 +431,7 @@ function attachRadarRemoveEvents() {
       radar = radar.filter(r => String(r.id) !== id)
       const list = document.getElementById('radar-list')
       if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
+      paintHistoryIcons()
       await removeRadarArtist(id)
     })
   })
@@ -432,7 +439,9 @@ function attachRadarRemoveEvents() {
 
 // Event-Karten existieren parallel in Liste und Kalender - nur die der sichtbaren Pane zählt
 function findVisibleCard(id) {
-  return document.getElementById('pane-' + currentView)?.querySelector(`[data-event-id="${id}"]`)
+  // Karten können mehrfach vorkommen (Liste/Kalender, eigene und fremde Merkliste) - nur die sichtbare zählt
+  const cards = document.getElementById('pane-' + currentView)?.querySelectorAll(`[data-event-id="${id}"]`) || []
+  return [...cards].find(el => el.offsetParent !== null)
 }
 
 function highlightEventCard(id) {
@@ -454,6 +463,7 @@ function openBookmarks(eventId) {
   radarOpen = false
   document.getElementById('modal-radar')?.classList.add('hidden')
   currentView = 'gemerkt'
+  bookmarkSlide = 0
   render()
   if (eventId != null) requestAnimationFrame(() => highlightEventCard(eventId))
 }
@@ -484,6 +494,7 @@ function render() {
   // Radar- und Einstellungs-Modal werden unten neu (hidden) gerendert - Zustand und Nav müssen dazu passen
   radarOpen = false
   settingsOpen = false
+  historyEditOpen = false
   const newCount = events.filter(e => isNew(e)).length
   const inner = document.getElementById('app-inner')
   inner.innerHTML = `
@@ -567,40 +578,79 @@ function renderHeader(inModal = false) {
 
 // ── Einstellungsmenü (Lord-Titel, Freigaben, Kurzanleitung) ─────────────────────────────────────
 
-// Kurzanleitung: [Überschrift, [Absätze]]
+// Kleine Symbole im Anleitungstext: {name} im Text wird durch das gleiche Icon ersetzt, das die App an der Stelle zeigt.
+// Als Funktion, da sie Icon-Konstanten weiter unten in der Datei nutzt (sonst Zugriff vor der Definition).
+function guideIcon(token) {
+  const chip = (inner, color = 'rgba(255,255,255,0.7)') => `<span style="display:inline-flex; align-items:center; justify-content:center; min-width:22px; height:20px; padding:0 5px; border-radius:6px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); vertical-align:middle; margin:0 1px; color:${color}; font-size:11px; line-height:1;">${inner}</span>`
+  const svg = inner => `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`
+  // Apple- und Google-Logo wie in der Icon-Leiste der Eventkarten (renderEventCard)
+  const apple = '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>'
+  const google = '<svg width="13" height="13" viewBox="0 0 48 48" fill="currentColor"><path d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/></svg>'
+  const icons = {
+    info: chip(svg('<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>')),
+    spotify: chip(HIST_SPOTIFY_SVG),
+    apple: chip(apple),
+    google: chip(google),
+    share: chip(svg('<path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/>')),
+    radar: chip(HIST_RADAR_SVG),
+    edit: chip(HIST_EDIT_SVG),
+    copy: chip(HIST_COPY_SVG),
+    gear: chip(svg('<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>')),
+    herz: chip('♡', '#f472b6'),
+    haken: chip('✓', '#34d399'),
+    stern: chip('★', '#facc15'),
+    fav: chip('☆', '#818cf8'),
+    plus: chip('+'),
+    name: chip('Name')
+  }
+  return Object.hasOwn(icons, token) ? icons[token] : null
+}
+
+// Text der Anleitung: HTML-escaped, nur die bekannten {icon}-Platzhalter werden durch Symbole ersetzt
+function guideText(text) {
+  return esc(text).replace(/\{(\w+)\}/g, (m, token) => guideIcon(token) ?? m)
+}
+
+// Kurzanleitung: [Überschrift, [[Stichwort, Text], ...]]
 const SETTINGS_GUIDE = [
   ['Events', [
-    'Alle Konzerte und Partys in Berlin und Leipzig, nach Datum sortiert. Filtern kannst Du nach Stadt und Location, suchen über die Suchleiste.',
-    'Karte nach links wischen: „Vormerken“ oder „Bin dabei“ auswählen.',
-    'Icon-Leiste: Link zum Event, Spotify, Kalender (Apple/Google) und Teilen.'
+    ['Überblick', 'Alle Konzerte und Partys in Berlin und Leipzig, nach Datum sortiert.'],
+    ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen.'],
+    ['Karte wischen', 'Nach links wischen: {herz} „Vormerken“ oder {haken} „Bin dabei“ auswählen.'],
+    ['Icon-Leiste', '{info} Link zum Event, {spotify} Spotify, {apple} {google} Kalender (Apple/Google), {share} Teilen.']
   ]],
   ['Kalender', [
-    'Die Events als Monatsübersicht. Tippe auf einen Tag, um alle Events an diesem Tag zu sehen. Mehrfach-Tagesauswahl ist möglich.'
+    ['Monatsübersicht', 'Tippe auf einen Tag, um alle Events an diesem Tag zu sehen. Mehrere Tage lassen sich gleichzeitig auswählen.']
   ]],
   ['Gemerkt', [
-    'Deine vorgemerkten Events und die, bei denen Du dabei bist.',
-    'Unter einer Karte steht, wie viele andere Lords das Event auch vorgemerkt haben oder dabei sind (nur Lords mit freigegebener Merkliste).'
+    ['Meine Merkliste', 'Deine vorgemerkten Events und die, bei denen Du dabei bist. Unter jeder Karte steht, wer das Event ebenfalls {herz} vorgemerkt hat oder {haken} dabei ist: „Du“, Lords mit Namen und alle übrigen als „weitere Lords“ (nur Lords mit freigegebener Merkliste).'],
+    ['Merklisten anderer Lords', 'Wische oben über die Überschrift (oder tippe auf die Punkte), um „Merkliste von Lord …“ zu sehen. Die Karten dort funktionieren wie in den Events: Nach links wischen und {herz} „Vormerken“ oder {haken} „Bin dabei“ übernimmt das Event in Deine eigene Merkliste. Die fremde Liste änderst Du nie.'],
+    ['Doppeltipp', 'Doppeltipp auf den Reiter „Gemerkt“ springt zurück zu „Meine Merkliste“.']
   ]],
   ['History', [
-    'Deine besuchten Konzerte. Ein Event mit „Bin dabei“ erscheint hier am Konzerttag ab 20 Uhr automatisch.',
-    'Vergib bis zu 5 Sterne. Mit + trägst Du ein früheres Konzert nach.',
-    'Icons: Spotify, zum Radar hinzufügen und Entfernen.',
-    'Wische über den Bildschirm nach links, um die Histories anderer Lords zu sehen. Mit dem Stern oben machst Du eine Liste zum Favoriten, Favoriten werden beim Wischen zuerst angezeigt. Mit „Name“ gibst Du Listen ohne Lord-Titel einen eigenen Namen. Dieser Name wird überschrieben, sobald ein Lord sich in seinen Einstellungen selbst einen Namen gibt.',
-    'Doppeltipp auf den Reiter „History“: springt zurück zu „Meine History“.'
+    ['Meine History', 'Deine besuchten Konzerte. Ein Event mit „Bin dabei“ erscheint hier am Konzerttag ab 20 Uhr automatisch. Vergib bis zu 5 Sterne {stern}, mit {plus} trägst Du ein früheres Konzert nach.'],
+    ['Icons bei jedem Konzert', '{spotify} Spotify, {radar} zum Radar (nochmal tippen: wieder entfernen) und {edit} Bearbeiten. Beim Bearbeiten änderst Du Name, Location und Datum oder löschst den Eintrag (roter Knopf).'],
+    ['History anderer Lords', 'Wische oben über die Überschrift (oder tippe auf die Punkte). Icons dort: {spotify} Spotify, {radar} zu meinem Radar und {copy} „In meine History“. Das übernimmt das Konzert in Deine History, die Sterne vergibst Du dann selbst. Nochmal tippen macht es rückgängig.'],
+    ['Doppeltipp', 'Doppeltipp auf den Reiter „History“ springt zurück zu „Meine History“.']
+  ]],
+  ['Listen anderer Lords (Merkliste und History)', [
+    ['Favorit', 'Mit dem Stern {fav} oben machst Du einen Lord zum Favoriten. Favoriten werden beim Wischen zuerst angezeigt, danach alle anderen alphabetisch.'],
+    ['Name vergeben', 'Hat ein Lord keinen Lord-Titel, gibst Du ihm mit {name} einen eigenen. Der Name wird überschrieben, sobald der Lord sich in seinen Einstellungen selbst einen gibt.']
   ]],
   ['Radar', [
-    'Künstler ohne anstehendes Konzert. Sobald ein Konzert angekündigt wird, bekommst Du einen Treffer (mit Benachrichtigung, wenn erlaubt).',
-    'Neu angekündigte Konzerte von Künstlern auf der Radar-Liste werden automatisch in die Merkliste übernommen. Der Künstler wird danach aus der Radar-Liste gestrichen.',
-    'Künstler mit 4 oder 5 Sternen in der History kommen automatisch ins Radar.'
+    ['Künstler beobachten', 'Künstler ohne anstehendes Konzert {radar}. Sobald ein Konzert angekündigt wird, bekommst Du einen Treffer (mit Benachrichtigung, wenn erlaubt).'],
+    ['Automatisch in die Merkliste', 'Neu angekündigte Konzerte von Künstlern auf der Radar-Liste werden automatisch in die Merkliste übernommen. Der Künstler wird danach aus der Radar-Liste gestrichen.'],
+    ['Automatisch ins Radar', 'Künstler mit 4 oder 5 Sternen {stern} in der History kommen automatisch ins Radar.']
   ]],
-  ['Einstellungen (Zahnrad)', [
-    'Lord-Titel: Hier kannst Du selbst einen Usernamen wählen, den andere dann über Deiner History sehen.',
-    'Merkliste für alle sichtbar: Anschalten, damit andere User sehen, ob ein anderer Lord sich für das gleiche Konzert interessiert. Andere sehen nur Zahlen an ihren Events, keine Namen und keine Liste.',
-    'History für alle sichtbar: Andere Lords sehen Deine besuchten Konzerte mit Sternen.',
-    'Beide Schalter sind standardmäßig auf „off“ und müssen vom Nutzer erst eingeschaltet werden.'
+  ['Einstellungen', [
+    ['Öffnen', 'Tippe in Events und Kalender oben auf das Zahnrad {gear}.'],
+    ['Lord-Titel', 'Hier wählst Du einen Usernamen, den andere über Deiner Merkliste und Deiner History sehen.'],
+    ['Merkliste für alle sichtbar', 'Andere Lords sehen Deine vorgemerkten und „dabei“-Events samt Lord-Titel, als Liste „Merkliste von Lord …“ und an ihren eigenen Events.'],
+    ['History für alle sichtbar', 'Andere Lords sehen Deine besuchten Konzerte mit Sternen.'],
+    ['Standard', 'Beide Schalter sind zunächst auf „off“ und müssen von Dir eingeschaltet werden.']
   ]],
   ['Anmeldung', [
-    'Merkliste, History und Radar funktionieren nur bei Anmeldung via E-Mail-Code. Ohne Anmeldung kannst Du nur in der Eventübersicht stöbern.'
+    ['E-Mail-Code', 'Merkliste, History und Radar funktionieren nur bei Anmeldung via E-Mail-Code. Ohne Anmeldung kannst Du nur in der Eventübersicht stöbern.']
   ]]
 ]
 
@@ -608,9 +658,11 @@ function renderSettingsBody() {
   const guide = `
     <details style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.06); padding-top:14px;">
       <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Kurzanleitung</summary>
-      ${SETTINGS_GUIDE.map(([head, paras]) => `
-        <h4 class="syne" style="margin:14px 0 4px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#a5b4fc;">${esc(head)}</h4>
-        ${paras.map(p => `<p class="text-xs" style="color:rgba(255,255,255,0.5); margin-top:4px; line-height:1.5;">${esc(p)}</p>`).join('')}
+      ${SETTINGS_GUIDE.map(([head, items]) => `
+        <h4 class="syne" style="margin:18px 0 6px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.06); font-size:12px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#a5b4fc;">${esc(head)}</h4>
+        <ul style="list-style:disc; padding-left:18px; margin:0;">
+          ${items.map(([lead, text]) => `<li class="text-xs" style="color:rgba(255,255,255,0.55); line-height:1.5; margin-top:6px;"><strong style="color:white; font-weight:700;">${esc(lead)}:</strong> ${guideText(text)}</li>`).join('')}
+        </ul>
       `).join('')}
     </details>
   `
@@ -629,13 +681,13 @@ function renderSettingsBody() {
   return `
     <div>
       <label for="settings-lord" class="syne" style="display:block; font-size:13px; font-weight:700; color:white;">Lord-Titel</label>
-      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin:3px 0 8px; line-height:1.45;">Dieser Name wird anderen angezeigt, wenn sie deine History sehen („History von Lord …“).</p>
+      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin:3px 0 8px; line-height:1.45;">Dieser Name wird anderen angezeigt, wenn sie deine History oder Merkliste sehen („History von Lord …“, „Merkliste von Lord …“).</p>
       <div style="display:flex; align-items:center; gap:8px;">
         <span class="syne" style="font-size:14px; font-weight:800; color:#818cf8;">Lord</span>
         <input id="settings-lord" type="text" maxlength="30" autocomplete="off" placeholder="z. B. Fontaines" value="${esc(myProfile.lordTitle ?? '')}" style="${inputStyle}" />
       </div>
     </div>
-    ${row('shareBookmarks', 'Merkliste für alle sichtbar', 'Andere Lords sehen nur Zahlen: wie viele ein Event vorgemerkt haben oder „dabei“ sind. Keine Namen, keine Liste.')}
+    ${row('shareBookmarks', 'Merkliste für alle sichtbar', 'Angemeldete Lords sehen deine vorgemerkten und „dabei“-Events samt deinem Lord-Titel: als Liste „Merkliste von Lord …“ und unter ihren eigenen Events.')}
     ${row('shareHistory', 'History für alle sichtbar', 'Angemeldete Lords können deine besuchten Konzerte samt Sternen unter deinem Lord-Titel ansehen.')}
     ${guide}
   `
@@ -898,18 +950,32 @@ function renderSkeleton() {
   `
 }
 
-// Text der Zähler anderer Lords ("✓ 2 Lords dabei · ♡ 1 Lord vorgemerkt"); leer, wenn niemand das Event markiert hat
-function formatEventMarks(m) {
-  if (!m) return ''
-  const part = (n, symbol, color, word) => n > 0 ? `<span style="color:${color};">${symbol} ${n} ${n === 1 ? 'Lord' : 'Lords'} ${word}</span>` : ''
-  return [part(m.going, '✓', '#34d399', 'dabei'), part(m.bookmarked, '♡', '#f472b6', 'vorgemerkt')].filter(Boolean).join(' · ')
+// Eigene und fremde Markierungen eines Events als Zeilen unter der Karte (Gemerkt-Reiter), je Status eine Zeile:
+// "♡ Vorgemerkt: Du, Lord Thomas und 2 weitere Lords". Lords mit Namen (Lord-Titel oder eigener Name des
+// Betrachters) stehen mit Namen da (höchstens 3), alle übrigen werden als "weitere Lords" gezählt.
+function formatEventMarks(id) {
+  const lords = eventMarks[id] || []
+  registerPeers(lords)
+  const names = peerNames()
+  const line = (status, symbol, color, word, mine) => {
+    const these = lords.filter(l => l.status === status)
+    const named = these.filter(l => names.get(l.publicId)?.named).map(l => names.get(l.publicId).name)
+      .sort((a, b) => a.localeCompare(b, 'de', { sensitivity: 'base' })).slice(0, 3)
+    const rest = these.length - named.length
+    const parts = [...(mine ? ['Du'] : []), ...named.map(n => 'Lord ' + esc(n))]
+    if (rest > 0) parts.push(parts.length ? `${rest} ${rest === 1 ? 'weiterer Lord' : 'weitere Lords'}` : `${rest} ${rest === 1 ? 'Lord' : 'Lords'}`)
+    if (!parts.length) return ''
+    const text = parts.length > 1 ? `${parts.slice(0, -1).join(', ')} und ${parts[parts.length - 1]}` : parts[0]
+    return `<div style="color:${color};">${symbol} ${word}: ${text}</div>`
+  }
+  return line('going', '✓', '#34d399', 'Dabei', going.some(g => g == id)) + line('bookmarked', '♡', '#f472b6', 'Vorgemerkt', bookmarked.some(b => b == id))
 }
 
 function paintEventMarks() {
-  document.querySelectorAll('[data-marks]').forEach(el => { el.innerHTML = formatEventMarks(eventMarks[el.dataset.marks]) })
+  document.querySelectorAll('[data-marks]').forEach(el => { el.innerHTML = formatEventMarks(el.dataset.marks) })
 }
 
-// Holt die Zähler für die Karten der Merkliste (je Event 60 s zwischengespeichert) und zeigt sie an.
+// Holt die Lords für die Karten der Merkliste (je Event 60 s zwischengespeichert) und zeigt sie an.
 // Schlägt das Laden fehl, bleibt es bei der bisherigen Anzeige.
 async function loadMarksForVisible() {
   if (!currentUser) return
@@ -918,14 +984,15 @@ async function loadMarksForVisible() {
   if (stale.length) {
     const result = await loadEventMarks(stale)
     if (result) {
-      for (const id of stale) { eventMarks[id] = result[id] || { going: 0, bookmarked: 0 }; eventMarksAt[id] = Date.now() }
+      for (const id of stale) { eventMarks[id] = result[id] || []; eventMarksAt[id] = Date.now() }
     }
   }
   paintEventMarks()
 }
 
-// showMarks: nur im Gemerkt-Reiter - Platz für die Zähler anderer Lords mit freigegebener Merkliste
-function renderEventCard(e, { showMarks = false } = {}) {
+// showMarks: nur in "Meine Merkliste" - eigener Status und andere Lords unter der Karte (statt des Labels oben).
+// peerNote: Karte in der Merkliste eines anderen Lords - Hinweis, ob er dabei ist oder vorgemerkt hat.
+function renderEventCard(e, { showMarks = false, peerNote = null } = {}) {
   const loc = locationsById.get(e.locationId)
   const isBookmarked = bookmarked.some(b => b == e.id)
   const isGoing = going.some(g => g == e.id)
@@ -940,7 +1007,7 @@ function renderEventCard(e, { showMarks = false } = {}) {
   const spotifyHref = safeUrl(e.spotifyUrl) || spotifySearchUrl(e.title)
 
   return `
-    <div class="event-swipe-wrapper" data-event-id="${e.id}" style="position:relative; overflow:hidden; border-radius:16px;">
+    <div class="event-swipe-wrapper" data-event-id="${e.id}" ${peerNote ? `data-peer-status="${esc(peerNote.status)}" data-peer-name="${esc(peerNote.name)}"` : ''} style="position:relative; overflow:hidden; border-radius:16px;">
       <div class="event-swipe-actions" style="position:absolute; right:0; top:0; bottom:0; width:160px; display:flex; flex-direction:column; gap:6px; justify-content:center; padding:6px 8px 6px 4px; z-index:0;">
         <button data-swipe-bookmark="${e.id}" style="flex:1; max-height:54px; border-radius:12px; border:1px solid ${isBookmarked ? 'rgba(244,114,182,0.5)' : 'rgba(244,114,182,0.35)'}; cursor:pointer; font-size:0.875rem; font-weight:600; background:${isBookmarked ? 'rgba(244,114,182,0.3)' : 'rgba(244,114,182,0.15)'}; color:#f472b6; font-family:'DM Sans',sans-serif;">♡ Vormerken</button>
         <button data-swipe-going="${e.id}" style="flex:1; max-height:54px; border-radius:12px; border:1px solid ${isGoing ? 'rgba(52,211,153,0.5)' : 'rgba(52,211,153,0.35)'}; cursor:pointer; font-size:0.875rem; font-weight:600; background:${isGoing ? 'rgba(52,211,153,0.25)' : 'rgba(52,211,153,0.12)'}; color:#34d399; font-family:'DM Sans',sans-serif;">✓ Bin dabei!</button>
@@ -952,15 +1019,15 @@ function renderEventCard(e, { showMarks = false } = {}) {
             <div class="flex items-center gap-2 mb-2 flex-wrap">
               <span class="syne text-xs" style="color:${accentSolid}; font-weight:700;">${dateStr} · ${esc(e.time)}</span>
               ${eventIsNew ? '<span class="text-xs font-bold" style="color:#f472b6; letter-spacing:0.05em;">NEW</span>' : ''}
-              ${isGoing ? '<span class="text-xs font-semibold" style="color:#34d399;">✓ dabei</span>' : ''}
-              ${isBookmarked && !isGoing ? '<span class="text-xs font-semibold" style="color:#f472b6;">♡ gemerkt</span>' : ''}
+              ${isGoing && !showMarks ? '<span class="text-xs font-semibold" style="color:#34d399;">✓ dabei</span>' : ''}
+              ${isBookmarked && !isGoing && !showMarks ? '<span class="text-xs font-semibold" style="color:#f472b6;">♡ gemerkt</span>' : ''}
             </div>
             <h3 class="syne text-white leading-tight mb-1" style="font-size:1rem; letter-spacing:-0.01em;">${renderTitleHtml(e.title)}</h3>
             <p class="text-xs mb-2" style="color:rgba(255,255,255,0.62);">
               ${loc ? esc(loc.name) : esc(e.locationName || '')}
             </p>
             ${e.description ? `<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.5);">${esc(e.description)}</p>` : ''}
-            ${showMarks ? `<div data-marks="${e.id}" class="text-xs font-semibold">${formatEventMarks(eventMarks[e.id])}</div>` : ''}
+            ${showMarks ? `<div data-marks="${e.id}" class="text-xs font-semibold">${formatEventMarks(e.id)}</div>` : peerNote ? `<div class="text-xs font-semibold mb-2" style="color:${peerNote.status === 'going' ? '#34d399' : '#f472b6'};">${peerNote.status === 'going' ? '✓' : '♡'} Lord ${esc(peerNote.name)} ${peerNote.status === 'going' ? 'ist dabei' : 'hat vorgemerkt'}</div>` : ''}
           </div>
           <div class="flex gap-2 mt-1" style="align-items:center;">
             <div style="display:flex; gap:6px; flex:1; min-width:0;">
@@ -1036,7 +1103,8 @@ function renderCalendarContent() {
   `
 }
 
-function renderBookmarkedView() {
+// Eigene Merkliste (ohne Kopfzeile): Karten mit den Lords darunter
+function renderBookmarkedOwnHtml() {
   // Besuchte Konzerte gehören in die History und nicht mehr in die Merkliste. Das darf nicht davon
   // abhängen, dass der Scraper das Event aus events.json entfernt hat (läuft nur wöchentlich, bis
   // dahin standen vergangene "dabei"-Events weiter in der Liste - siehe isConcertOver)
@@ -1062,13 +1130,62 @@ function renderBookmarkedView() {
   `
 }
 
-// Icons rechts neben den Bewertungssternen jedes History-Eintrags: Spotify, zum Radar, entfernen
+// Merkliste eines anderen Lords: seine anstehenden Events (dabei zuerst), Karten wie in der Event-Übersicht
+// (Wischen: Vormerken / Bin dabei übernimmt das Event in die eigene Merkliste, die fremde bleibt unberührt)
+function renderBookmarkPeerHtml(p) {
+  const status = new Map()
+  for (const m of p.marks) if (m.status === 'going' || !status.has(m.eventId)) status.set(m.eventId, m.status)
+  const list = events.filter(e => !isConcertOver(e.date) && status.has(String(e.id)))
+    .sort((a, b) => (Number(status.get(String(b.id)) === 'going') - Number(status.get(String(a.id)) === 'going')) || byDateTime(a, b))
+  if (!list.length) return `<p class="text-sm pt-2" style="color:rgba(255,255,255,0.3);">Keine anstehenden Events vorgemerkt.</p>`
+  return `<div class="space-y-3 pt-2">${list.map(e => renderEventCard(e, { peerNote: { status: status.get(String(e.id)), name: p.name } })).join('')}</div>`
+}
+
+// Merkliste: Kopfzeile mit Punkten (Wischen nur hier) und darunter "Meine Merkliste" bzw. die Liste eines anderen Lords
+function renderBookmarkedView() {
+  const own = renderBookmarkedOwnHtml()
+  if (!currentUser) return own
+  return `
+    <div id="bookmark-carousel" class="pt-2">
+      <div id="bookmark-carousel-head" style="padding:6px 0 2px;">${renderCarouselHead('bookmark')}</div>
+      <div class="carousel-slide" data-i="0" style="${bookmarkSlide === 0 ? '' : 'display:none'}">${own}</div>
+      <div id="bookmark-peer-slides">${renderPeerSlides('bookmark')}</div>
+    </div>
+  `
+}
+
+// "Meine Merkliste" neu zeichnen, wenn man von der Liste eines anderen Lords zurückkommt (dort kann man die eigene geändert haben)
+function refreshBookmarkOwn() {
+  const slide = document.querySelector('#bookmark-carousel .carousel-slide[data-i="0"]')
+  if (!slide) return
+  slide.innerHTML = renderBookmarkedOwnHtml()
+  attachSwipeGestures()
+  loadMarksForVisible()
+}
+
+function attachBookmarkEvents() {
+  attachCarousel('bookmark')
+  if (document.getElementById('bookmark-carousel')) ensureCommunityLoaded()
+  loadMarksForVisible()
+}
+
+// Icons rechts neben den Bewertungssternen jedes History-Eintrags. Eigene Liste: Spotify, zum Radar, bearbeiten.
+// Liste eines anderen Lords: Spotify, zu meinem Radar, in meine History. Radar und "In meine History" sind
+// Schalter: aktiv gefärbt, ein zweiter Tipp macht die Aktion rückgängig.
 const HIST_ICON_STYLE = 'display:inline-flex; align-items:center; justify-content:center; width:30px; height:28px; padding:0; color:rgba(255,255,255,0.55); background:none; border:none; cursor:pointer; text-decoration:none;'
 const HIST_SPOTIFY_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>'
 const HIST_RADAR_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19a10 10 0 0 1 0-14"/></svg>'
-const HIST_TRASH_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>'
+const HIST_EDIT_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>'
+const HIST_COPY_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>'
+const HIST_COPY_ON_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.5"/></svg>'
+const HIST_ICON_OFF = 'rgba(255,255,255,0.55)'
 
-// readOnly: Zeile aus der freigegebenen History eines anderen Nutzers - Sterne nur zur Anzeige, kein Entfernen.
+// Ist der Artist im eigenen Radar? Gibt es das Konzert (Artist + Datum) schon in der eigenen History?
+const sameName = (a, b) => stripEdgeEmoji(a).toLowerCase() === stripEdgeEmoji(b).toLowerCase()
+function histRadarOn(title) { return radar.some(r => sameName(r.artist, title)) }
+function findHistoryCopy(h) { return history.find(x => x.date === h.date && sameName(x.title, h.title)) }
+
+// readOnly: Zeile aus der freigegebenen History eines anderen Nutzers - Sterne nur zur Anzeige, kein Bearbeiten.
 // Alle Werte stammen dort aus fremden Konten und gehen ausnahmslos durch esc().
 function renderHistoryRow(h, readOnly = false) {
   const dateStr = new Date(h.date + 'T12:00:00').toLocaleDateString('de-DE', { day: 'numeric', month: 'short', year: 'numeric' })
@@ -1078,11 +1195,16 @@ function renderHistoryRow(h, readOnly = false) {
   const stars = readOnly
     ? `<div style="display:flex;" aria-label="${rating} von 5 Sternen">${[1, 2, 3, 4, 5].map(n => `<span style="padding:0 1px; font-size:15px; line-height:1; color:${starColor(n)};">★</span>`).join('')}</div>`
     : `<div class="history-stars" data-history-id="${h.id}" style="display:flex;">${[1, 2, 3, 4, 5].map(n => `<button data-star="${n}" aria-label="${n} Sterne" style="background:none; border:none; cursor:pointer; padding:0 1px; font-size:15px; line-height:1; color:${starColor(n)};">★</button>`).join('')}</div>`
+  const btn = (attrs, label, color, svg) => `<button ${attrs} title="${label}" aria-label="${label}" style="${HIST_ICON_STYLE} color:${color};">${svg}</button>`
+  const radarOn = histRadarOn(h.title)
+  const copyOn = readOnly && !!findHistoryCopy(h)
   const actions = `
     <div style="display:flex; align-items:center; flex-shrink:0;">
       <a href="${esc(spotifySearchUrl(h.title))}" target="_blank" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" style="${HIST_ICON_STYLE}">${HIST_SPOTIFY_SVG}</a>
-      <button data-hist-radar="${esc(h.title)}" title="Zum Radar" aria-label="Zum Radar" style="${HIST_ICON_STYLE}">${HIST_RADAR_SVG}</button>
-      ${readOnly ? '' : `<button data-history-remove="${h.id}" title="Aus History löschen" aria-label="Aus History löschen" style="${HIST_ICON_STYLE}">${HIST_TRASH_SVG}</button>`}
+      ${btn(`data-hist-radar="${esc(h.title)}"`, radarOn ? 'Aus dem Radar entfernen' : readOnly ? 'Zu meinem Radar' : 'Zum Radar', radarOn ? '#818cf8' : HIST_ICON_OFF, HIST_RADAR_SVG)}
+      ${readOnly
+        ? btn(`data-hist-copy="1" data-title="${esc(h.title)}" data-date="${esc(h.date)}" data-loc-name="${esc(h.locationName || '')}" data-loc-city="${esc(h.locationCity || '')}"`, copyOn ? 'Aus meiner History entfernen' : 'In meine History', copyOn ? '#34d399' : HIST_ICON_OFF, copyOn ? HIST_COPY_ON_SVG : HIST_COPY_SVG)
+        : btn(`data-history-edit="${h.id}"`, 'Bearbeiten', HIST_ICON_OFF, HIST_EDIT_SVG)}
     </div>`
   return `
     <div class="rounded-xl px-3 py-2.5" style="background:rgba(8,8,42,0.92); border:1px solid rgba(255,255,255,0.07);">
@@ -1110,15 +1232,15 @@ function renderHistoryLocationOptions(filterText = '') {
   return matches.map((l, i) => `<div data-history-loc-option="${esc(l.name + ', ' + l.city)}" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.8); font-size:14px; ${i > 0 ? 'border-top:1px solid rgba(255,255,255,0.04);' : ''}">${esc(l.name)} <span style="color:rgba(255,255,255,0.35); font-size:12px;">${esc(l.city)}</span></div>`).join('')
 }
 
-function renderHistoryLocationDropdown() {
+function renderHistoryLocationDropdown(prefix = 'history') {
   return `
-    <div id="history-location-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:200; width:100%; max-height:200px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
+    <div id="${prefix}-location-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:200; width:100%; max-height:200px; overflow-y:auto; border-radius:12px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
       ${renderHistoryLocationOptions()}
     </div>
   `
 }
 
-function renderHistoryDatePicker() {
+function renderHistoryDatePicker(prefix = 'history') {
   const months = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
   const currentYear = new Date().getFullYear()
   const selectStyle = `flex:1; min-width:0; box-sizing:border-box; border-radius:12px; padding:10px 6px; font-size:13px; color:white; outline:none; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); font-family:'DM Sans',sans-serif; color-scheme:dark;`
@@ -1129,9 +1251,9 @@ function renderHistoryDatePicker() {
     <div>
       <label style="font-size:11px; color:rgba(255,255,255,0.4); font-family:'DM Sans',sans-serif; padding-left:4px; display:block; margin-bottom:4px;">Datum</label>
       <div style="display:flex; gap:6px;">
-        <select id="history-day" style="${selectStyle}"><option value="">Tag</option>${dayOptions}</select>
-        <select id="history-month" style="${selectStyle}"><option value="">Monat</option>${monthOptions}</select>
-        <select id="history-year" style="${selectStyle}"><option value="">Jahr</option>${yearOptions}</select>
+        <select id="${prefix}-day" style="${selectStyle}"><option value="">Tag</option>${dayOptions}</select>
+        <select id="${prefix}-month" style="${selectStyle}"><option value="">Monat</option>${monthOptions}</select>
+        <select id="${prefix}-year" style="${selectStyle}"><option value="">Jahr</option>${yearOptions}</select>
       </div>
     </div>
   `
@@ -1155,59 +1277,96 @@ function renderHistoryListHtml(historyEntries, readOnly = false) {
   return html
 }
 
-// ── History-Reiter: "Meine History" und freigegebene Listen anderer Nutzer als Karussell ─────────
+// ── Karussell-Reiter History und Merkliste: je "Meine ..." und die freigegebenen Listen anderer Lords ─────
 
-// Anzeigenamen und Reihenfolge der fremden Histories. Anzeigename = Lord-Titel des Nutzers, sonst der
-// eigene Name des Betrachters (Alias), sonst "Namenlos" - ein später gesetzter Lord-Titel überschreibt
-// den Alias also automatisch. Gleiche Namen (ohne Groß-/Kleinschreibung) werden fortlaufend nummeriert,
-// der erste ohne Zahl, in der Reihenfolge der Profil-Erstellung. Reihenfolge: Favoriten zuerst, dann die
-// übrigen, jeweils alphabetisch (wie im Radar).
-function resolvePeers(peers, prefs) {
-  const resolved = peers.map(p => {
-    const pref = prefs[p.publicId] || {}
-    return { ...p, isFavorite: !!pref.isFavorite, baseName: p.lordTitle || pref.alias || 'Namenlos' }
-  })
-  const seen = new Map()
-  const byCreation = [...resolved].sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)) || String(a.publicId).localeCompare(String(b.publicId)))
-  for (const p of byCreation) {
-    const key = p.baseName.toLowerCase()
-    const n = (seen.get(key) || 0) + 1
-    seen.set(key, n)
-    p.name = n === 1 ? p.baseName : `${p.baseName} ${n}`
-  }
-  return resolved.sort((a, b) => (Number(b.isFavorite) - Number(a.isFavorite)) || a.name.localeCompare(b.name, 'de', { sensitivity: 'base' }))
+const CAROUSEL = {
+  history: { peers: () => communityPeers, slide: () => historySlide, set: i => { historySlide = i }, own: 'Meine History', other: 'History von Lord ' },
+  bookmark: { peers: () => bmPeers, slide: () => bookmarkSlide, set: i => { bookmarkSlide = i }, own: 'Meine Merkliste', other: 'Merkliste von Lord ' }
 }
 
-// Kopfzeile des Karussells: Titel, Aktionen (eigene Liste: "+"; fremde Liste: Favorit, ggf. Name vergeben)
-// und ein Punkt je Liste (Favoriten in Akzentfarbe, die aktive weiß)
-function renderHistoryHead() {
-  const total = 1 + communityPeers.length
-  const peer = historySlide > 0 ? communityPeers[historySlide - 1] : null
+// Alle bisher gesehenen Lords (History-Listen, Merklisten, Markierungen an Events), damit ein Lord in allen
+// Ansichten denselben Namen trägt
+function registerPeers(list) {
+  for (const p of list) peerRegistry.set(p.publicId, { lordTitle: p.lordTitle, createdAt: p.createdAt })
+}
+
+// Anzeigename je Lord: Lord-Titel, sonst der eigene Name des Betrachters (Alias), sonst "Namenlos" - ein später
+// gesetzter Lord-Titel überschreibt den Alias also automatisch. Gleiche Namen (ohne Groß-/Kleinschreibung) werden
+// fortlaufend nummeriert, der erste ohne Zahl, in der Reihenfolge der Profil-Erstellung.
+// publicId -> { named: hat Lord-Titel oder Alias, name }
+function peerNames() {
+  const out = new Map()
+  const seen = new Map()
+  const byCreation = [...peerRegistry].sort(([ia, a], [ib, b]) => String(a.createdAt).localeCompare(String(b.createdAt)) || String(ia).localeCompare(String(ib)))
+  for (const [id, p] of byCreation) {
+    const base = p.lordTitle || peerPrefs[id]?.alias || ''
+    const shown = base || 'Namenlos'
+    const n = (seen.get(shown.toLowerCase()) || 0) + 1
+    seen.set(shown.toLowerCase(), n)
+    out.set(id, { named: !!base, name: n === 1 ? shown : `${shown} ${n}` })
+  }
+  return out
+}
+
+// Reihenfolge der Listen anderer Lords: Favoriten zuerst, dann die übrigen, jeweils alphabetisch (wie im Radar)
+function resolvePeers(peers) {
+  registerPeers(peers)
+  const names = peerNames()
+  return peers
+    .map(p => ({ ...p, isFavorite: !!peerPrefs[p.publicId]?.isFavorite, name: names.get(p.publicId).name }))
+    .sort((a, b) => (Number(b.isFavorite) - Number(a.isFavorite)) || a.name.localeCompare(b.name, 'de', { sensitivity: 'base' }))
+}
+
+function recomputePeers() {
+  communityPeers = resolvePeers(communityRaw)
+  bmPeers = resolvePeers(bmRaw)
+}
+
+// Führt fn aus (z. B. neu sortieren) und lässt beide Karussells auf demselben Lord stehen
+function keepSlides(fn) {
+  const hid = communityPeers[historySlide - 1]?.publicId
+  const bid = bmPeers[bookmarkSlide - 1]?.publicId
+  fn()
+  historySlide = hid ? communityPeers.findIndex(p => p.publicId === hid) + 1 : 0
+  bookmarkSlide = bid ? bmPeers.findIndex(p => p.publicId === bid) + 1 : 0
+}
+
+// Kopfzeile: Titel, Aktionen (eigene History: "+"; Liste eines Lords: Favorit, ggf. Name vergeben) und ein Punkt
+// je Liste (Favoriten in Akzentfarbe, die aktive weiß). Nur hier wird zwischen den Listen gewischt.
+function renderCarouselHead(kind) {
+  const c = CAROUSEL[kind]
+  const peers = c.peers()
+  const slide = c.slide()
+  const total = 1 + peers.length
+  const peer = slide > 0 ? peers[slide - 1] : null
   const btn = 'btn-glass rounded-lg inline-flex items-center justify-center'
   const actions = peer
     ? `${peer.lordTitle ? '' : `<button data-peer-alias="${esc(peer.publicId)}" title="Namen vergeben" aria-label="Namen vergeben" class="${btn}" style="height:28px; padding:0 10px; color:rgba(255,255,255,0.6); font-size:11px;">Name</button>`}
        <button data-peer-fav="${esc(peer.publicId)}" title="${peer.isFavorite ? 'Favorit entfernen' : 'Als Favorit markieren'}" aria-label="${peer.isFavorite ? 'Favorit entfernen' : 'Als Favorit markieren'}" aria-pressed="${peer.isFavorite}" class="${btn}" style="width:28px; height:28px; color:${peer.isFavorite ? '#818cf8' : 'rgba(255,255,255,0.45)'}; font-size:16px; line-height:1;">${peer.isFavorite ? '★' : '☆'}</button>`
-    : `<button data-history-add-toggle title="Konzert nachtragen" aria-label="Konzert nachtragen" class="${btn}" style="width:28px; height:28px; color:rgba(255,255,255,0.6); font-size:16px; line-height:1;">+</button>`
+    : kind === 'history'
+      ? `<button data-history-add-toggle title="Konzert nachtragen" aria-label="Konzert nachtragen" class="${btn}" style="width:28px; height:28px; color:rgba(255,255,255,0.6); font-size:16px; line-height:1;">+</button>`
+      : ''
   const dots = total > 1
     ? `<div style="display:flex; justify-content:center; margin:2px 0 8px;">${Array.from({ length: total }, (_, i) => {
-        const p = i > 0 ? communityPeers[i - 1] : null
-        const bg = i === historySlide ? 'white' : p?.isFavorite ? 'rgba(129,140,248,0.8)' : 'rgba(255,255,255,0.25)'
-        return `<button data-dot="${i}" aria-label="${p ? 'History von Lord ' + esc(p.name) : 'Meine History'}" style="width:19px; height:19px; padding:6px; border:none; border-radius:50%; background-color:${bg}; background-clip:content-box; cursor:pointer;"></button>`
+        const p = i > 0 ? peers[i - 1] : null
+        const bg = i === slide ? 'white' : p?.isFavorite ? 'rgba(129,140,248,0.8)' : 'rgba(255,255,255,0.25)'
+        return `<button data-dot="${i}" aria-label="${p ? c.other + esc(p.name) : c.own}" style="width:19px; height:19px; padding:6px; border:none; border-radius:50%; background-color:${bg}; background-clip:content-box; cursor:pointer;"></button>`
       }).join('')}</div>`
     : ''
   return `
-    <div class="flex items-center justify-between mb-1">
-      <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:rgba(255,255,255,0.5); min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${peer ? 'History von Lord ' + esc(peer.name) : 'Meine History'}</h3>
+    <div class="flex items-center justify-between mb-1" style="min-height:28px;">
+      <h3 class="syne" style="font-size:13px; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:rgba(255,255,255,0.5); min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${peer ? c.other + esc(peer.name) : c.own}</h3>
       <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">${actions}</div>
     </div>
     ${dots}
   `
 }
 
-function renderPeerSlides() {
-  return communityPeers.map((p, i) => `
-    <div class="history-slide" data-i="${i + 1}" data-peer="${esc(p.publicId)}" style="${historySlide === i + 1 ? '' : 'display:none'}">
-      <div class="space-y-2">${renderHistoryListHtml(p.entries, true)}</div>
+function renderPeerSlides(kind) {
+  const c = CAROUSEL[kind]
+  return c.peers().map((p, i) => `
+    <div class="carousel-slide" data-i="${i + 1}" data-peer="${esc(p.publicId)}" style="${c.slide() === i + 1 ? '' : 'display:none'}">
+      ${kind === 'history' ? `<div class="space-y-2">${renderHistoryListHtml(p.entries, true)}</div>` : renderBookmarkPeerHtml(p)}
     </div>
   `).join('')
 }
@@ -1222,8 +1381,8 @@ function renderHistoryView() {
   const historyEntries = history.filter(isHistoryVisible).sort((a, b) => b.date.localeCompare(a.date))
   return `
     <div id="history-carousel" class="pt-2">
-      <div id="history-carousel-head">${renderHistoryHead()}</div>
-      <div class="history-slide" data-i="0" style="${historySlide === 0 ? '' : 'display:none'}">
+      <div id="history-carousel-head" style="padding:6px 0 2px;">${renderCarouselHead('history')}</div>
+      <div class="carousel-slide" data-i="0" style="${historySlide === 0 ? '' : 'display:none'}">
         <div id="history-add-form" class="hidden space-y-2 mb-3">
           <input id="history-title" type="text" placeholder="Artist / Titel" style="${inputStyle}" />
           <div style="position:relative;">
@@ -1238,46 +1397,61 @@ function renderHistoryView() {
         </div>
         <p id="history-community-hint" class="text-xs" style="margin-top:18px; color:rgba(255,255,255,0.3); ${communityLoadedAt && !communityPeers.length ? '' : 'display:none'}">Hier erscheinen die Histories anderer Lords, sobald sie freigegeben sind.</p>
       </div>
-      <div id="history-peer-slides">${renderPeerSlides()}</div>
+      <div id="history-peer-slides">${renderPeerSlides('history')}</div>
     </div>
   `
 }
 
 // Zeigt Liste `i` (0 = eigene) und aktualisiert Kopfzeile und Punkte. dir: 1 = von rechts, -1 = von links einblenden
-function showHistorySlide(i, dir = 0) {
-  historySlide = Math.max(0, Math.min(communityPeers.length, i))
-  document.querySelectorAll('#history-carousel .history-slide').forEach(el => {
-    const active = Number(el.dataset.i) === historySlide
+function showSlide(kind, i, dir = 0) {
+  const c = CAROUSEL[kind]
+  const prev = c.slide()
+  c.set(Math.max(0, Math.min(c.peers().length, i)))
+  const slide = c.slide()
+  document.querySelectorAll(`#${kind}-carousel .carousel-slide`).forEach(el => {
+    const active = Number(el.dataset.i) === slide
     el.style.display = active ? '' : 'none'
     el.classList.remove('slide-from-right', 'slide-from-left')
     if (active && dir) el.classList.add(dir > 0 ? 'slide-from-right' : 'slide-from-left')
   })
-  const head = document.getElementById('history-carousel-head')
-  if (head) head.innerHTML = renderHistoryHead()
-  const hint = document.getElementById('history-community-hint')
-  if (hint) hint.style.display = communityLoadedAt && !communityPeers.length ? '' : 'none'
+  const head = document.getElementById(`${kind}-carousel-head`)
+  if (head) head.innerHTML = renderCarouselHead(kind)
+  if (kind === 'history') {
+    const hint = document.getElementById('history-community-hint')
+    if (hint) hint.style.display = communityLoadedAt && !communityPeers.length ? '' : 'none'
+    if (slide === 0 && prev !== 0) { refreshHistoryList(); paintHistoryIcons() }
+  } else if (slide === 0 && prev !== 0) {
+    refreshBookmarkOwn()
+  }
 }
 
-// Fremde Listen neu zeichnen (nach dem Laden oder nach Favorit/Name), eigene Liste und Formular bleiben unberührt
+// Listen anderer Lords neu zeichnen (nach dem Laden oder nach Favorit/Name); eigene Liste und Formular bleiben unberührt
 function refreshCommunityUI() {
-  const slides = document.getElementById('history-peer-slides')
-  if (!slides) return
-  slides.innerHTML = renderPeerSlides()
-  showHistorySlide(historySlide)
+  for (const kind of ['history', 'bookmark']) {
+    const slides = document.getElementById(`${kind}-peer-slides`)
+    if (!slides) continue
+    slides.innerHTML = renderPeerSlides(kind)
+    showSlide(kind, CAROUSEL[kind].slide())
+  }
+  attachSwipeGestures()
 }
 
-// Lädt die freigegebenen Histories und die eigenen Betrachter-Einstellungen (60-s-Cache; force umgeht ihn).
-// Bei einem Ladefehler bleibt die bisherige Anzeige stehen.
+// Lädt die freigegebenen Histories und Merklisten und die eigenen Betrachter-Einstellungen (60-s-Cache; force
+// umgeht ihn). Bei einem Ladefehler bleibt die bisherige Anzeige stehen; fehlt nur eine der beiden Listen
+// (z. B. Datenbank-Funktion noch nicht eingerichtet), wird die andere trotzdem angezeigt.
 async function ensureCommunityLoaded(force = false) {
   if (!currentUser) return
   if (!force && communityLoadedAt && Date.now() - communityLoadedAt < 60000) return
-  const [peers, prefs] = await Promise.all([loadCommunityHistories(), loadPeerPrefs()])
-  if (peers === null) return
-  communityRaw = peers
-  peerPrefs = prefs
-  communityPeers = resolvePeers(communityRaw, peerPrefs)
+  const [peers, bm, prefs] = await Promise.all([loadCommunityHistories(), loadCommunityBookmarks(), loadPeerPrefs()])
+  if (peers === null && bm === null) return
+  keepSlides(() => {
+    if (peers !== null) communityRaw = peers
+    if (bm !== null) bmRaw = bm
+    peerPrefs = prefs
+    peerRegistry.clear()
+    recomputePeers()
+  })
   communityLoadedAt = Date.now()
-  historySlide = Math.min(historySlide, communityPeers.length)
   refreshCommunityUI()
 }
 
@@ -1285,72 +1459,53 @@ async function togglePeerFavorite(publicId) {
   const before = peerPrefs[publicId]
   const next = !before?.isFavorite
   peerPrefs[publicId] = { ...(before || {}), isFavorite: next }
-  communityPeers = resolvePeers(communityRaw, peerPrefs)
   // Die Liste rückt an ihre neue Position, die Ansicht bleibt auf ihr
-  historySlide = communityPeers.findIndex(p => p.publicId === publicId) + 1
+  keepSlides(recomputePeers)
   refreshCommunityUI()
   if (!(await savePeerPref(publicId, { isFavorite: next }))) {
     if (before) peerPrefs[publicId] = before; else delete peerPrefs[publicId]
-    communityPeers = resolvePeers(communityRaw, peerPrefs)
-    historySlide = communityPeers.findIndex(p => p.publicId === publicId) + 1
+    keepSlides(recomputePeers)
     refreshCommunityUI()
     showToast('Fehler', 'Favorit konnte nicht gespeichert werden.')
   }
 }
 
-// Eigener Name für eine Liste, deren Nutzer (noch) keinen Lord-Titel hat. Nur für den Betrachter sichtbar.
+// Eigener Name für einen Lord ohne Lord-Titel. Nur für den Betrachter sichtbar, gilt in History und Merkliste.
 async function assignPeerAlias(publicId) {
   const current = peerPrefs[publicId]?.alias || ''
-  const input = prompt('Name für diese History (nur für dich sichtbar):', current)
+  const input = prompt('Name für diesen Lord (nur für dich sichtbar):', current)
   if (input === null) return
   const alias = input.trim().slice(0, 30)
   const before = peerPrefs[publicId]
   peerPrefs[publicId] = { ...(before || {}), alias: alias || null }
-  communityPeers = resolvePeers(communityRaw, peerPrefs)
-  historySlide = communityPeers.findIndex(p => p.publicId === publicId) + 1
+  keepSlides(recomputePeers)
   refreshCommunityUI()
   if (!(await savePeerPref(publicId, { alias }))) {
     if (before) peerPrefs[publicId] = before; else delete peerPrefs[publicId]
-    communityPeers = resolvePeers(communityRaw, peerPrefs)
-    historySlide = communityPeers.findIndex(p => p.publicId === publicId) + 1
+    keepSlides(recomputePeers)
     refreshCommunityUI()
     showToast('Fehler', 'Name konnte nicht gespeichert werden.')
   }
 }
 
-// Wischgeste und Kopfzeilen-Klicks des Karussells (Delegation, überlebt das Neuzeichnen der Kopfzeile).
-// Gewischt wird über den ganzen Bildschirm des History-Reiters, ebenso gelten die Zeilen-Icons (Radar).
-function attachHistoryCarousel() {
-  const root = document.getElementById('history-carousel')
-  if (!root || root.dataset.bound) return
+// Wischgeste und Kopfzeilen-Klicks eines Karussells. Gewischt wird nur in der Kopfzeile (Überschrift und Punkte),
+// damit es nicht mit den Wischgesten der Karten (Vormerken / Bin dabei) kollidiert. Delegation, überlebt das Neuzeichnen.
+function attachCarousel(kind) {
+  const root = document.getElementById(`${kind}-carousel`)
+  const head = document.getElementById(`${kind}-carousel-head`)
+  if (!root || !head || root.dataset.bound) return
   root.dataset.bound = '1'
-  // Wischen zwischen den Listen: über den ganzen Bildschirm (Dokument-Listener, nur einmal angehängt).
-  // Die Einträge haben keine eigene Wischgeste mehr, daher keine Konflikte.
-  if (!historySwipeBound) {
-    historySwipeBound = true
-    let sx = 0, sy = 0, tracking = false
-    document.addEventListener('touchstart', e => {
-      tracking = currentView === 'history' && !radarOpen && !settingsOpen && !!document.getElementById('history-carousel') &&
-        !e.target.closest('input, select, textarea, [id^="modal-"]')
-      sx = e.touches[0].clientX
-      sy = e.touches[0].clientY
-    }, { passive: true })
-    document.addEventListener('touchend', e => {
-      if (!tracking) return
-      tracking = false
-      const dx = e.changedTouches[0].clientX - sx
-      const dy = e.changedTouches[0].clientY - sy
-      if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return
-      showHistorySlide(historySlide + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1)
-    }, { passive: true })
-  }
-  root.addEventListener('click', e => {
-    const radarBtn = e.target.closest('[data-hist-radar]')
-    if (radarBtn) addHistoryArtistToRadar(radarBtn.dataset.histRadar)
-  })
-  document.getElementById('history-carousel-head')?.addEventListener('click', async e => {
+  let sx = 0, sy = 0
+  head.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY }, { passive: true })
+  head.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - sx
+    const dy = e.changedTouches[0].clientY - sy
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return
+    showSlide(kind, CAROUSEL[kind].slide() + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1)
+  }, { passive: true })
+  head.addEventListener('click', async e => {
     const dot = e.target.closest('[data-dot]')
-    if (dot) { const i = Number(dot.dataset.dot); showHistorySlide(i, i > historySlide ? 1 : -1); return }
+    if (dot) { const i = Number(dot.dataset.dot); showSlide(kind, i, i > CAROUSEL[kind].slide() ? 1 : -1); return }
     if (e.target.closest('[data-history-add-toggle]')) {
       if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Konzerte nachzutragen.'); return }
       document.getElementById('history-add-form')?.classList.toggle('hidden')
@@ -1361,6 +1516,16 @@ function attachHistoryCarousel() {
     const alias = e.target.closest('[data-peer-alias]')
     if (alias) await assignPeerAlias(alias.dataset.peerAlias)
   })
+  if (kind === 'history') {
+    root.addEventListener('click', e => {
+      const radarBtn = e.target.closest('[data-hist-radar]')
+      if (radarBtn) { toggleHistoryRadar(radarBtn.dataset.histRadar); return }
+      const copyBtn = e.target.closest('[data-hist-copy]')
+      if (copyBtn) { toggleHistoryCopy(copyBtn); return }
+      const editBtn = e.target.closest('[data-history-edit]')
+      if (editBtn) openHistoryEdit(editBtn.dataset.historyEdit)
+    })
+  }
 }
 
 function refreshHistoryList() {
@@ -1372,19 +1537,6 @@ function refreshHistoryList() {
 }
 
 function attachHistoryRemoveEvents() {
-  document.querySelectorAll('[data-history-remove]').forEach(btn => {
-    btn.addEventListener('click', async () => {
-      const id = btn.dataset.historyRemove
-      const removed = history.find(h => String(h.id) === id)
-      if (!confirm(`„${removed?.title ?? 'Eintrag'}“ aus der History löschen?`)) return
-      // Event merken, damit syncGoingToHistory() den bewusst gelöschten Eintrag nicht beim
-      // nächsten Laden wieder anlegt (das Event bleibt ja "dabei" markiert)
-      if (removed?.eventId) saveData('historyDismissed', [...new Set([...(loadData('historyDismissed') || []), removed.eventId])])
-      history = history.filter(h => String(h.id) !== id)
-      refreshHistoryList()
-      await removeHistoryEntry(id)
-    })
-  })
   document.querySelectorAll('.history-stars').forEach(container => {
     const id = container.dataset.historyId
     container.querySelectorAll('[data-star]').forEach(btn => {
@@ -1415,30 +1567,10 @@ function attachHistoryRemoveEvents() {
 
 function attachHistoryEvents() {
   const form = document.getElementById('history-add-form')
-  // Karussell (Wischen, Punkte, "+", Favorit, Name) und Nachladen der fremden Listen
-  attachHistoryCarousel()
+  // Karussell (Wischen, Punkte, "+", Favorit, Name), Icons und Nachladen der fremden Listen
+  attachCarousel('history')
   if (document.getElementById('history-carousel')) ensureCommunityLoaded()
-  const locationInput = document.getElementById('history-location')
-  const locationDropdown = document.getElementById('history-location-dropdown')
-  const attachLocOptionEvents = () => {
-    locationDropdown?.querySelectorAll('[data-history-loc-option]').forEach(opt => {
-      opt.addEventListener('click', () => {
-        if (locationInput) locationInput.value = opt.dataset.historyLocOption
-        locationDropdown.classList.add('hidden')
-      })
-    })
-  }
-  locationInput?.addEventListener('click', (e) => { e.stopPropagation(); locationDropdown?.classList.remove('hidden') })
-  locationInput?.addEventListener('focus', () => locationDropdown?.classList.remove('hidden'))
-  // Während des Tippens live nachfiltern (Substring, z.B. "C" -> "Ca" -> ...), statt nur
-  // einmal beim Öffnen eine feste Liste zu zeigen.
-  locationInput?.addEventListener('input', () => {
-    if (!locationDropdown) return
-    locationDropdown.innerHTML = renderHistoryLocationOptions(locationInput.value)
-    locationDropdown.classList.remove('hidden')
-    attachLocOptionEvents()
-  })
-  attachLocOptionEvents()
+  bindLocationPicker(document.getElementById('history-location'), document.getElementById('history-location-dropdown'))
   document.querySelector('[data-history-save]')?.addEventListener('click', async () => {
     const title = stripEdgeEmoji(document.getElementById('history-title')?.value.trim())
     const location = document.getElementById('history-location')?.value.trim()
@@ -1499,6 +1631,28 @@ function renderModals() {
               <button data-close-settings type="button" aria-label="Schließen" style="color:rgba(255,255,255,0.45); background:none; border:none; cursor:pointer; font-size:24px; line-height:1; padding:4px 8px;">×</button>
             </div>
             <div id="settings-body">${renderSettingsBody()}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-history-edit" class="hidden fixed inset-0 z-50 overflow-y-auto scrollbar-hide" style="background:rgba(0,0,0,0.72); backdrop-filter:blur(8px); overscroll-behavior:contain;">
+      <div class="max-w-lg mx-auto px-4" style="padding-top:max(56px, calc(env(safe-area-inset-top) + 24px)); padding-bottom:48px;">
+        <div class="rounded-2xl" style="background:rgba(8,8,42,0.96); border:1px solid rgba(99,102,241,0.18); box-shadow:0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);">
+          <div style="height:2px; border-radius:16px 16px 0 0; background:linear-gradient(90deg, #818cf8, transparent);"></div>
+          <div class="p-5 space-y-3">
+            <div class="flex items-center justify-between">
+              <h2 class="syne text-xl text-white" style="font-weight:800;">Eintrag bearbeiten</h2>
+              <button data-close-history-edit type="button" aria-label="Schließen" style="color:rgba(255,255,255,0.45); background:none; border:none; cursor:pointer; font-size:24px; line-height:1; padding:4px 8px;">×</button>
+            </div>
+            <input id="hedit-title" type="text" placeholder="Artist / Titel" style="${inputStyle}" />
+            <div style="position:relative;">
+              <input id="hedit-location" type="text" placeholder="Location" autocomplete="off" style="${inputStyle}" />
+              ${renderHistoryLocationDropdown('hedit')}
+            </div>
+            ${renderHistoryDatePicker('hedit')}
+            <button data-history-edit-save type="button" class="w-full py-2.5 rounded-xl font-bold text-white text-sm syne" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">Speichern</button>
+            <button data-history-edit-delete type="button" class="w-full py-2.5 rounded-xl font-bold text-sm syne" style="background:rgba(239,68,68,0.18); border:1px solid rgba(239,68,68,0.55); color:#f87171;">Löschen</button>
           </div>
         </div>
       </div>
@@ -1629,12 +1783,15 @@ function attachNavEvents() {
       const wasRadarOpen = radarOpen
       radarOpen = false
       document.getElementById('modal-radar')?.classList.add('hidden')
-      // Doppeltipp auf "History" springt zu "Meine History" (über den Abstand zweier click-Events, da
-      // dblclick bei Touch-Taps plattformabhängig unzuverlässig ist)
-      const now = Date.now()
-      const isHistoryDoubleTap = btn.dataset.nav === 'history' && now - lastHistoryTapAt < 400
-      if (btn.dataset.nav === 'history') lastHistoryTapAt = now
-      if (isHistoryDoubleTap && currentView === 'history') { showHistorySlide(0, -1); return }
+      // Doppeltipp auf "History" bzw. "Gemerkt" springt zu "Meine History" bzw. "Meine Merkliste" (über den Abstand
+      // zweier click-Events, da dblclick bei Touch-Taps plattformabhängig unzuverlässig ist)
+      const tapNow = Date.now()
+      const isDoubleTap = lastNavTap.view === btn.dataset.nav && tapNow - lastNavTap.at < 400
+      lastNavTap = { view: btn.dataset.nav, at: tapNow }
+      if (isDoubleTap && currentView === btn.dataset.nav && (currentView === 'history' || currentView === 'gemerkt')) {
+        showSlide(currentView === 'history' ? 'history' : 'bookmark', 0, -1)
+        return
+      }
 
       if (currentView === btn.dataset.nav) {
         if (wasRadarOpen) refreshBottomNav()
@@ -1650,7 +1807,7 @@ function attachNavEvents() {
       if (currentView === 'gemerkt') {
         newPane.innerHTML = renderBookmarkedView()
         attachSwipeGestures()
-        loadMarksForVisible()
+        attachBookmarkEvents()
       } else if (currentView === 'history') {
         newPane.innerHTML = renderHistoryView()
         attachHistoryEvents()
@@ -1721,6 +1878,7 @@ function attachEvents() {
     document.addEventListener('click', () => {
       document.getElementById('filter-loc-dropdown')?.classList.add('hidden')
       document.getElementById('history-location-dropdown')?.classList.add('hidden')
+      document.getElementById('hedit-location-dropdown')?.classList.add('hidden')
     })
   }
 
@@ -1730,7 +1888,7 @@ function attachEvents() {
     let ptStart = 0, ptPulling = false
     document.addEventListener('touchstart', e => {
       // Nicht bei offenem Radar: dort scrollt das Modal selbst, und der Refresh würde es per render() schließen
-      if (window.scrollY === 0 && !radarOpen && !settingsOpen) { ptStart = e.touches[0].clientY; ptPulling = true }
+      if (window.scrollY === 0 && !radarOpen && !settingsOpen && !historyEditOpen) { ptStart = e.touches[0].clientY; ptPulling = true }
     }, { passive: true })
     document.addEventListener('touchmove', e => {
       if (!ptPulling) return
@@ -1835,9 +1993,13 @@ function attachEvents() {
     radar = []
     communityRaw = []
     communityPeers = []
+    bmRaw = []
+    bmPeers = []
     peerPrefs = {}
+    peerRegistry.clear()
     communityLoadedAt = 0
     historySlide = 0
+    bookmarkSlide = 0
     myProfile = null
     myProfileError = false
     eventMarks = {}
@@ -1847,9 +2009,10 @@ function attachEvents() {
 
   attachFilterBarEvents()
   if (currentView === 'kalender') attachCalendarEvents()
+  attachHistoryEditModal()
   if (currentView === 'history') attachHistoryEvents()
-  if (currentView === 'gemerkt') loadMarksForVisible()
   attachSwipeGestures()
+  if (currentView === 'gemerkt') attachBookmarkEvents()
 }
 
 function eventDateUTC(dateStr, timeStr) {
@@ -1956,7 +2119,7 @@ function attachSwipeToWrapper(wrapper) {
     const isNow = !bookmarked.some(b => b == id)
     if (wasGoing) going = going.filter(g => g != id)
     bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
-    setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 400)
+    setTimeout(() => { if (currentView === 'gemerkt' && bookmarkSlide === 0) { render() } else { updateCard(id) } }, 400)
     if (wasGoing) toggleBookmark(id, 'going', false)
     toggleBookmark(id, 'bookmarked', isNow)
   })
@@ -1970,7 +2133,7 @@ function attachSwipeToWrapper(wrapper) {
     const isNow = !going.some(g => g == id)
     if (wasBookmarked) bookmarked = bookmarked.filter(b => b != id)
     going = isNow ? [...going, id] : going.filter(g => g != id)
-    setTimeout(() => { if (currentView === 'gemerkt') { render() } else { updateCard(id) } }, 400)
+    setTimeout(() => { if (currentView === 'gemerkt' && bookmarkSlide === 0) { render() } else { updateCard(id) } }, 400)
     if (wasBookmarked) toggleBookmark(id, 'bookmarked', false)
     toggleBookmark(id, 'going', isNow)
     const ev = events.find(e => e.id == id)
@@ -2043,12 +2206,34 @@ function attachSwipeToWrapper(wrapper) {
 
 }
 
+function refreshRadarList() {
+  const list = document.getElementById('radar-list')
+  if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
+}
+
+// Radar- und "In meine History"-Icons in allen Listen an den aktuellen Stand anpassen
+function paintHistoryIcons() {
+  document.querySelectorAll('[data-hist-radar]').forEach(b => {
+    const on = histRadarOn(b.dataset.histRadar)
+    b.style.color = on ? '#818cf8' : HIST_ICON_OFF
+    b.title = on ? 'Aus dem Radar entfernen' : b.closest('[data-peer]') ? 'Zu meinem Radar' : 'Zum Radar'
+    b.setAttribute('aria-label', b.title)
+  })
+  document.querySelectorAll('[data-hist-copy]').forEach(b => {
+    const on = !!findHistoryCopy({ title: b.dataset.title, date: b.dataset.date })
+    b.style.color = on ? '#34d399' : HIST_ICON_OFF
+    b.innerHTML = on ? HIST_COPY_ON_SVG : HIST_COPY_SVG
+    b.title = on ? 'Aus meiner History entfernen' : 'In meine History'
+    b.setAttribute('aria-label', b.title)
+  })
+}
+
 // History-Artist per Icon zum Radar hinzufügen - gleiche Dubletten-Prüfschleife wie beim
 // manuellen Hinzufügen (submitRadarArtist), aber nur gegen künftige Events geprüft: ein
 // History-Snapshot kann wegen des wöchentlichen Scraper-Laufs übergangsweise noch mit einem
 // bereits vergangenen (gleichnamigen) Event in events.json kollidieren.
 async function addHistoryArtistToRadar(artist) {
-  if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden.'); return }
+  artist = stripEdgeEmoji(artist)
   const match = events.find(e => !isConcertOver(e.date) && artistMatchesEvent(artist, e))
   if (match) {
     const onWatchlist = bookmarked.some(b => b == match.id) || going.some(g => g == match.id)
@@ -2056,17 +2241,157 @@ async function addHistoryArtistToRadar(artist) {
     else focusEvent(match)
     return
   }
-  if (radar.some(r => r.artist.toLowerCase() === artist.toLowerCase())) { showToast('📡 Schon im Radar', artist); return }
   if (typeof Notification !== 'undefined' && Notification.permission === 'default') Notification.requestPermission()
   const added = await addRadarArtistIfNew(artist)
   if (added) {
     radar.push(added)
-    const list = document.getElementById('radar-list')
-    if (list) { list.innerHTML = renderRadarList(); attachRadarRemoveEvents() }
+    refreshRadarList()
     showToast('📡 Zum Radar hinzugefügt', artist)
   } else {
-    showToast('📡 Schon im Radar', artist)
+    showToast('Fehler', 'Konnte nicht zum Radar hinzugefügt werden.')
   }
+}
+
+// Radar-Icon: ein Tipp legt den Artist an, ein zweiter Tipp entfernt ihn nach Rückfrage wieder
+async function toggleHistoryRadar(artist) {
+  if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden.'); return }
+  const existing = radar.find(r => sameName(r.artist, artist))
+  if (!existing) {
+    await addHistoryArtistToRadar(artist)
+    paintHistoryIcons()
+    return
+  }
+  if (!confirm(`„${existing.artist}“ aus dem Radar löschen?`)) return
+  radar = radar.filter(r => r.id !== existing.id)
+  refreshRadarList()
+  paintHistoryIcons()
+  if (!(await removeRadarArtist(existing.id))) {
+    radar.push(existing)
+    refreshRadarList()
+    paintHistoryIcons()
+    showToast('Fehler', 'Konnte nicht aus dem Radar entfernt werden.')
+  }
+}
+
+// Löscht einen eigenen History-Eintrag (die Rückfrage stellt der Aufrufer)
+async function deleteHistoryEntry(entry) {
+  // Event merken, damit syncGoingToHistory() den bewusst gelöschten Eintrag nicht beim
+  // nächsten Laden wieder anlegt (das Event bleibt ja "dabei" markiert)
+  if (entry.eventId) saveData('historyDismissed', [...new Set([...(loadData('historyDismissed') || []), entry.eventId])])
+  history = history.filter(h => String(h.id) !== String(entry.id))
+  refreshHistoryList()
+  paintHistoryIcons()
+  return removeHistoryEntry(entry.id)
+}
+
+// "In meine History": übernimmt ein Konzert aus der Liste eines anderen Lords (ohne dessen Sterne),
+// ein zweiter Tipp entfernt den Eintrag nach Rückfrage wieder
+async function toggleHistoryCopy(btn) {
+  if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden.'); return }
+  const h = { title: btn.dataset.title, date: btn.dataset.date, locationName: btn.dataset.locName, locationCity: btn.dataset.locCity }
+  const existing = findHistoryCopy(h)
+  if (existing) {
+    if (!confirm(`„${existing.title}“ aus der History löschen?`)) return
+    if (!(await deleteHistoryEntry(existing))) {
+      history = [...history, existing]
+      refreshHistoryList()
+      paintHistoryIcons()
+      showToast('Fehler', 'Konnte nicht aus der History entfernt werden.')
+    }
+    return
+  }
+  const entry = await addHistoryEntry({ title: stripEdgeEmoji(h.title), locationName: h.locationName, locationCity: h.locationCity, date: h.date })
+  if (!entry) { showToast('Fehler', 'Konnte nicht in die History übernommen werden.'); return }
+  history = [...history, entry]
+  refreshHistoryList()
+  paintHistoryIcons()
+  showToast('✓ In meine History übernommen', entry.title)
+}
+
+// ── Eintrag bearbeiten (Titel, Ort, Datum; Löschen) ─────────────────────────────────────────────
+
+function openHistoryEdit(id) {
+  const entry = history.find(h => String(h.id) === String(id))
+  const modal = document.getElementById('modal-history-edit')
+  if (!entry || !modal) return
+  historyEditId = entry.id
+  historyEditOpen = true
+  historyEditPrefill = [entry.locationName, entry.locationCity].filter(Boolean).join(', ')
+  document.getElementById('hedit-title').value = entry.title
+  document.getElementById('hedit-location').value = historyEditPrefill
+  const [y, m, d] = entry.date.split('-').map(Number)
+  const yearSel = document.getElementById('hedit-year')
+  if (![...yearSel.options].some(o => o.value === String(y))) yearSel.add(new Option(y, y))
+  document.getElementById('hedit-day').value = String(d)
+  document.getElementById('hedit-month').value = String(m)
+  yearSel.value = String(y)
+  modal.classList.remove('hidden')
+}
+
+function closeHistoryEdit() {
+  historyEditOpen = false
+  historyEditId = null
+  document.getElementById('modal-history-edit')?.classList.add('hidden')
+  document.getElementById('hedit-location-dropdown')?.classList.add('hidden')
+}
+
+async function saveHistoryEdit() {
+  const entry = history.find(h => String(h.id) === String(historyEditId))
+  if (!entry) { closeHistoryEdit(); return }
+  const title = stripEdgeEmoji(document.getElementById('hedit-title').value.trim())
+  const location = document.getElementById('hedit-location').value.trim()
+  const day = document.getElementById('hedit-day').value
+  const month = document.getElementById('hedit-month').value
+  const year = document.getElementById('hedit-year').value
+  if (!title || !day || !month || !year) { alert('Bitte mindestens Titel und Datum angeben.'); return }
+  const date = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
+  if (new Date(date + 'T00:00:00').getMonth() + 1 !== Number(month)) { alert('Dieses Datum gibt es nicht - bitte Tag und Monat prüfen.'); return }
+  // Ort unverändert: Name und Stadt des Eintrags behalten (sie stehen getrennt in der Datenbank)
+  const place = location === historyEditPrefill ? { locationName: entry.locationName, locationCity: entry.locationCity } : { locationName: location, locationCity: '' }
+  if (!(await updateHistoryEntry(entry.id, { title, ...place, date }))) { alert('Speichern fehlgeschlagen - bitte nochmal versuchen.'); return }
+  Object.assign(entry, { title, ...place, date })
+  closeHistoryEdit()
+  refreshHistoryList()
+  paintHistoryIcons()
+}
+
+async function deleteHistoryFromEdit() {
+  const entry = history.find(h => String(h.id) === String(historyEditId))
+  if (!entry) { closeHistoryEdit(); return }
+  if (!confirm(`„${entry.title}“ aus der History löschen?`)) return
+  closeHistoryEdit()
+  await deleteHistoryEntry(entry)
+}
+
+function attachHistoryEditModal() {
+  const modal = document.getElementById('modal-history-edit')
+  if (!modal) return
+  bindLocationPicker(document.getElementById('hedit-location'), document.getElementById('hedit-location-dropdown'))
+  modal.addEventListener('click', async e => {
+    if (e.target === modal || e.target.closest('[data-close-history-edit]')) { closeHistoryEdit(); return }
+    if (e.target.closest('[data-history-edit-save]')) { await saveHistoryEdit(); return }
+    if (e.target.closest('[data-history-edit-delete]')) await deleteHistoryFromEdit()
+  })
+}
+
+// Location-Feld mit live gefilterter Venue-Liste (Substring, z.B. "C" -> "Ca" -> ...), statt nur einmal
+// beim Öffnen eine feste Liste zu zeigen
+function bindLocationPicker(input, dropdown) {
+  if (!input || !dropdown) return
+  const bindOptions = () => dropdown.querySelectorAll('[data-history-loc-option]').forEach(opt => {
+    opt.addEventListener('click', () => {
+      input.value = opt.dataset.historyLocOption
+      dropdown.classList.add('hidden')
+    })
+  })
+  input.addEventListener('click', e => { e.stopPropagation(); dropdown.classList.remove('hidden') })
+  input.addEventListener('focus', () => dropdown.classList.remove('hidden'))
+  input.addEventListener('input', () => {
+    dropdown.innerHTML = renderHistoryLocationOptions(input.value)
+    dropdown.classList.remove('hidden')
+    bindOptions()
+  })
+  bindOptions()
 }
 
 function attachSwipeGestures() {
@@ -2107,7 +2432,8 @@ function updateCard(id) {
   const other = document.getElementById(currentView === 'liste' ? 'pane-kalender' : 'pane-liste')
   if (other) other.dataset.stale = '1'
   const temp = document.createElement('div')
-  temp.innerHTML = renderEventCard(e)
+  const note = wrapper.dataset.peerStatus ? { status: wrapper.dataset.peerStatus, name: wrapper.dataset.peerName } : null
+  temp.innerHTML = renderEventCard(e, { peerNote: note })
   const newWrapper = temp.firstElementChild
   wrapper.replaceWith(newWrapper)
   attachSwipeToWrapper(newWrapper)
