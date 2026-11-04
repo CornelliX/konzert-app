@@ -627,27 +627,29 @@ const SETTINGS_GUIDE = [
   ]],
   ['Gemerkt', [
     ['Meine Merkliste', 'Deine vorgemerkten Events und die, bei denen Du dabei bist. Unter jeder Karte steht, wer das Event ebenfalls {herz} vorgemerkt hat oder {haken} dabei ist: „Du“, Lords mit Namen und alle übrigen als „weitere Lords“ (nur Lords mit freigegebener Merkliste).'],
-    ['Merklisten anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte, um „Merkliste von Lord …“ zu sehen. Die Karten dort funktionieren wie in den Events: Nach links wischen und {herz} „Vormerken“ oder {haken} „Bin dabei“ übernimmt das Event in Deine eigene Merkliste. Die fremde Liste änderst Du nie.'],
+    ['Merklisten anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte, um „Merkliste von Lord …“ zu sehen. Gezeigt werden die kommenden Events des Lords, ein Hinweis nennt, ob er {haken} dabei ist oder {herz} vorgemerkt hat. Die Karten funktionieren wie in den Events: Nach links wischen und {herz} „Vormerken“ oder {haken} „Bin dabei“ übernimmt das Event in Deine eigene Merkliste. Die fremde Liste änderst Du nie.'],
     ['Doppeltipp', 'Doppeltipp auf den Reiter „Gemerkt“ springt zurück zu „Meine Merkliste“.']
   ]],
   ['History', [
     ['Meine History', 'Deine besuchten Konzerte. Ein Event mit „Bin dabei“ erscheint hier am Konzerttag ab 20 Uhr automatisch. Vergib bis zu 5 Sterne {stern}, mit {plus} trägst Du ein früheres Konzert nach.'],
-    ['Icons bei jedem Konzert', '{spotify} Spotify, {radar} zum Radar (nochmal tippen: wieder entfernen) und {edit} Bearbeiten. Beim Bearbeiten änderst Du Name, Location und Datum, markierst den Act mit „Support“ (steht dann grau als „(Support)“ hinter dem Namen) oder löschst den Eintrag (roter Knopf).'],
-    ['History anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte. Icons dort: {spotify} Spotify, {radar} zu meinem Radar und {copy} „In meine History“. Das übernimmt das Konzert in Deine History, die Sterne vergibst Du dann selbst. Nochmal tippen macht es rückgängig.'],
+    ['Icons bei jedem Konzert', '{spotify} Spotify, {radar} zum Radar (nochmal tippen: wieder entfernen, mit Rückfrage; hat der Künstler schon ein anstehendes Konzert, springt die App stattdessen zu diesem Event) und {edit} Bearbeiten. Beim Bearbeiten änderst Du Name, Location und Datum, markierst den Act mit „Support“ (steht dann grau als „(Support)“ hinter dem Namen) oder löschst den Eintrag (roter Knopf).'],
+    ['History anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte. Icons dort: {spotify} Spotify, {radar} zu meinem Radar und {copy} „In meine History“. Das übernimmt das Konzert in Deine History, die Sterne vergibst Du dann selbst. Nochmal tippen macht es rückgängig (mit Rückfrage).'],
     ['Doppeltipp', 'Doppeltipp auf den Reiter „History“ springt zurück zu „Meine History“.']
   ]],
   ['Listen anderer Lords (Merkliste und History)', [
     ['Favorit', 'Mit dem Stern {fav} oben machst Du einen Lord zum Favoriten. Favoriten werden beim Wischen zuerst angezeigt, danach alle anderen alphabetisch.'],
-    ['Name vergeben', 'Hat ein Lord keinen Lord-Titel, gibst Du ihm mit {name} einen eigenen. Der Name wird überschrieben, sobald der Lord sich in seinen Einstellungen selbst einen gibt.']
+    ['Name vergeben', 'Hat ein Lord keinen Lord-Titel, gibst Du ihm mit {name} einen eigenen (höchstens 15 Zeichen). Der Name wird überschrieben, sobald der Lord sich in seinen Einstellungen selbst einen gibt. Gleiche Namen werden durchnummeriert.'],
+    ['Aktualisieren', 'Neue Freigaben und Einträge anderer Lords erscheinen, wenn Du den Reiter öffnest oder die Seite oben nach unten ziehst.']
   ]],
   ['Radar', [
-    ['Künstler beobachten', 'Künstler ohne anstehendes Konzert {radar}. Sobald ein Konzert angekündigt wird, bekommst Du einen Treffer (mit Benachrichtigung, wenn erlaubt).'],
+    ['Künstler beobachten', 'Künstler ohne anstehendes Konzert {radar}. Den Radar öffnest Du über den Reiter „Radar“ unten rechts. Mit Künstlername und + fügst Du jemanden hinzu, mit × entfernst Du ihn (mit Rückfrage).'],
+    ['Treffer', 'Sobald ein Konzert des Künstlers angekündigt wird, bekommst Du einen Treffer (mit Benachrichtigung, wenn erlaubt).'],
     ['Automatisch in die Merkliste', 'Neu angekündigte Konzerte von Künstlern auf der Radar-Liste werden automatisch in die Merkliste übernommen. Der Künstler wird danach aus der Radar-Liste gestrichen.'],
-    ['Automatisch ins Radar', 'Künstler mit 4 oder 5 Sternen {stern} in der History kommen automatisch ins Radar.']
+    ['Automatisch ins Radar', 'Künstler, deren letztes Konzert Du in der History mit 4 oder 5 Sternen {stern} bewertet hast, kommen automatisch ins Radar.']
   ]],
   ['Einstellungen', [
     ['Öffnen', 'Tippe in Events und Kalender oben auf das Zahnrad {gear}.'],
-    ['Lord-Titel', 'Hier wählst Du einen Usernamen, den andere über Deiner Merkliste und Deiner History sehen.'],
+    ['Lord-Titel', 'Hier wählst Du einen Usernamen (2 bis 15 Zeichen), den andere über Deiner Merkliste und Deiner History sehen.'],
     ['Merkliste für alle sichtbar', 'Andere Lords sehen Deine vorgemerkten und „dabei“-Events samt Lord-Titel, als Liste „Merkliste von Lord …“ und an ihren eigenen Events.'],
     ['History für alle sichtbar', 'Andere Lords sehen Deine besuchten Konzerte mit Sternen.'],
     ['Standard', 'Beide Schalter sind zunächst auf „off“ und müssen von Dir eingeschaltet werden.']
