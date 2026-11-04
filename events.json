@@ -65,18 +65,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 189824721,
-    "title": "QUIET LIGHT",
-    "date": "2026-11-04",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://www.tixforgigs.com/Event/74805",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 711634555,
     "title": "Noah Guthrie",
     "date": "2026-11-04",
@@ -114,6 +102,18 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 189824721,
+    "title": "QUIET LIGHT",
+    "date": "2026-11-04",
+    "time": "19:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.tixforgigs.com/Event/74805",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 273561889,
@@ -490,19 +490,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1321449398,
-    "title": "MOVING AS A GIANT",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101408-tickets-moving-as-a-giant-fuzz-noise-rock-slo-schokoladen-berlin-am-04-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 183724661,
     "title": "UNIDRAM: LEO",
     "date": "2026-11-04",
@@ -646,18 +633,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 838316130,
-    "title": "KÄSSY",
-    "date": "2026-11-05",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://www.eventbrite.com/e/kassys-first-berlin-show-ever-tickets-2000143000557",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1809941120,
     "title": "President",
     "date": "2026-11-05",
@@ -694,6 +669,18 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 838316130,
+    "title": "KÄSSY",
+    "date": "2026-11-05",
+    "time": "19:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.eventbrite.com/e/kassys-first-berlin-show-ever-tickets-2000143000557",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1271582809,
@@ -811,6 +798,19 @@
     "spotifyUrl": "",
     "source": "columbiatheater",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 156399883,
+    "title": "Los Sara Fontán (esp) + Franna",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101795-tickets-los-sara-fontan-esp-franna-bln-schokoladen-berlin-am-05-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 238225692,
@@ -1033,19 +1033,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 156399883,
-    "title": "Los Sara Fontán (esp) + Franna",
-    "date": "2026-11-05",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101795-tickets-los-sara-fontan-esp-franna-bln-schokoladen-berlin-am-05-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 829829875,
     "title": "Red RHYTHM – Swing Dance Night",
     "date": "2026-11-05",
@@ -1214,18 +1201,6 @@
     "addedAt": "2026-08-28"
   },
   {
-    "id": 704041090,
-    "title": "FRAU MANSMANN",
-    "date": "2026-11-06",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://rausgegangen.de/events/driven-by-clockwork-frau-mansmann-livemonarch-0/",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 669761063,
     "title": "Die Weiteren Aussichten",
     "date": "2026-11-06",
@@ -1276,6 +1251,18 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 704041090,
+    "title": "FRAU MANSMANN",
+    "date": "2026-11-06",
+    "time": "19:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://rausgegangen.de/events/driven-by-clockwork-frau-mansmann-livemonarch-0/",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1625149581,
@@ -1393,6 +1380,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 1715877264,
+    "title": "FERVENTS & ULLA SUSPEKT",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100638-tickets-fervents-ulla-suspekt-schokoladen-berlin-am-06-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-28"
   },
   {
     "id": 536949929,
@@ -1641,19 +1641,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1715877264,
-    "title": "FERVENTS & ULLA SUSPEKT",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100638-tickets-fervents-ulla-suspekt-schokoladen-berlin-am-06-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-28"
-  },
-  {
     "id": 71819305,
     "title": "Danger Dan",
     "date": "2026-11-06",
@@ -1796,18 +1783,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1183275648,
-    "title": "AMOUR AFRICAIN",
-    "date": "2026-11-06",
-    "time": "23:00",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://www.amourafricain.com/",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1507034493,
     "title": "ALL YOU CAN TRANCE No 3 - by Trash'n'Trance - on 2 floors!!!",
     "date": "2026-11-06",
@@ -1819,6 +1794,18 @@
     "spotifyUrl": "",
     "source": "ilseserika",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1183275648,
+    "title": "AMOUR AFRICAIN",
+    "date": "2026-11-06",
+    "time": "23:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.amourafricain.com/",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 780844350,
@@ -2237,6 +2224,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 1975374640,
+    "title": "Bial Hclap & Band & Yugo Taguchi & Frieda",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102647-tickets-bial-hclap-band-yugo-taguchi-frieda-schokoladen-berlin-am-07-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-28"
+  },
+  {
     "id": 284270521,
     "title": "Lament – Dark Pop",
     "date": "2026-11-07",
@@ -2456,6 +2456,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1880822473,
+    "title": "Tokio Hotel",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1828635790,
     "title": "Soulbound x Hell Boulevard",
     "date": "2026-11-07",
@@ -2480,32 +2493,6 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1880822473,
-    "title": "Tokio Hotel",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1975374640,
-    "title": "Bial Hclap & Band & Yugo Taguchi & Frieda",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102647-tickets-bial-hclap-band-yugo-taguchi-frieda-schokoladen-berlin-am-07-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-28"
   },
   {
     "id": 200902024,
@@ -3143,6 +3130,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 2082679369,
+    "title": "Jungle",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 2002838373,
     "title": "Keshavara",
     "date": "2026-11-08",
@@ -3167,19 +3167,6 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 2082679369,
-    "title": "Jungle",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 2046892229,
@@ -3286,6 +3273,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 1907507839,
+    "title": "SHAKI TAVI",
+    "date": "2026-11-09",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99742-tickets-shaki-tavi-exp-indie-rock-shoegaze-us-schokoladen-berlin-am-09-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1490910146,
     "title": "deary",
     "date": "2026-11-09",
@@ -3387,19 +3387,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 1907507839,
-    "title": "SHAKI TAVI",
-    "date": "2026-11-09",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99742-tickets-shaki-tavi-exp-indie-rock-shoegaze-us-schokoladen-berlin-am-09-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1879303067,
@@ -3597,6 +3584,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 935626267,
+    "title": "EDGING",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/98384-tickets-edging-post-punk-chicago-schokoladen-berlin-am-10-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 558797315,
     "title": "Koza Mostra",
     "date": "2026-11-10",
@@ -3634,6 +3634,19 @@
     "spotifyUrl": "",
     "source": "binuu",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 427122475,
+    "title": "Morgan St. Jean",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Ozz_i3fCTV3W2k7Y8r9",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 269942610,
@@ -3726,19 +3739,6 @@
     "addedAt": "2026-11-03"
   },
   {
-    "id": 935626267,
-    "title": "EDGING",
-    "date": "2026-11-10",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/98384-tickets-edging-post-punk-chicago-schokoladen-berlin-am-10-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 730292829,
     "title": "Ones and Tooze",
     "date": "2026-11-10",
@@ -3750,6 +3750,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1566513558,
+    "title": "Werner Bettge Band",
+    "date": "2026-11-11",
+    "time": "18:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P2wXD8NYJ03MiBftSGH",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1658845816,
@@ -3999,6 +4012,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 842936726,
+    "title": "Bureau De Change + Mad Kitten",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99498-tickets-bureau-de-change-mad-kitten-schokoladen-berlin-am-11-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1023727250,
     "title": "Gershkovich/Götze/Stadtfeld – Piano Legacy",
     "date": "2026-11-11",
@@ -4177,19 +4203,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-03"
-  },
-  {
-    "id": 842936726,
-    "title": "Bureau De Change + Mad Kitten",
-    "date": "2026-11-11",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99498-tickets-bureau-de-change-mad-kitten-schokoladen-berlin-am-11-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1840925767,
@@ -4439,6 +4452,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 1358623971,
+    "title": "Pyro One + KET",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/91693-tickets-pyro-one-ket-schokoladen-berlin-am-12-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 765989923,
     "title": "Love'n'Joy",
     "date": "2026-11-12",
@@ -4681,19 +4707,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-03"
-  },
-  {
-    "id": 1358623971,
-    "title": "Pyro One + KET",
-    "date": "2026-11-12",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/91693-tickets-pyro-one-ket-schokoladen-berlin-am-12-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1698384471,
@@ -4982,6 +4995,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 60967497,
+    "title": "FLIGHTMODE",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101564-tickets-flightmode-schokoladen-berlin-am-13-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1630653339,
     "title": "Jakob Maes Jazzorchester – Big Band, Jazz",
     "date": "2026-11-13",
@@ -5173,19 +5199,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-03"
-  },
-  {
-    "id": 60967497,
-    "title": "FLIGHTMODE",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101564-tickets-flightmode-schokoladen-berlin-am-13-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1378393045,
@@ -5460,18 +5473,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1582689731,
-    "title": "REALLY GOOD TIME",
-    "date": "2026-11-14",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://www.eventim.de/noapp/event/really-good-time-monarch-21870896/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 620161160,
     "title": "Tex Brasket",
     "date": "2026-11-14",
@@ -5495,6 +5496,18 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/korn-berlin/2026-11-14-1900",
     "spotifyUrl": "",
     "source": "uberarena",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1582689731,
+    "title": "REALLY GOOD TIME",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.eventim.de/noapp/event/really-good-time-monarch-21870896/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
     "addedAt": "2026-11-02"
   },
   {
@@ -5573,6 +5586,19 @@
     "spotifyUrl": "",
     "source": "columbiatheater",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1675904006,
+    "title": "UltraNothing",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100603-tickets-ultranothing-post-punk-luxembourg-schokoladen-berlin-am-14-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-03"
   },
   {
     "id": 1840704019,
@@ -5830,19 +5856,6 @@
     "ticketUrl": "https://t.rausgegangen.de/tickets/kochkraft-durch-kma-2",
     "spotifyUrl": "",
     "source": "waschhaus",
-    "addedAt": "2026-11-03"
-  },
-  {
-    "id": 1675904006,
-    "title": "UltraNothing",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100603-tickets-ultranothing-post-punk-luxembourg-schokoladen-berlin-am-14-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
     "addedAt": "2026-11-03"
   },
   {
@@ -6532,6 +6545,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1251235866,
+    "title": "ILA & I Love You Honey Bunny",
+    "date": "2026-11-16",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/94890-tickets-ila-i-love-you-honey-bunny-schokoladen-berlin-am-16-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 2096625993,
     "title": "L'Oreille en friche presents: MARTHE X PILANI BUBU",
     "date": "2026-11-16",
@@ -6701,18 +6727,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 94394466,
-    "title": "POETRY SLAM KREUZBERG",
-    "date": "2026-11-17",
-    "time": "19:30",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 438399431,
     "title": "Ginger Hail",
     "date": "2026-11-17",
@@ -6750,6 +6764,18 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-03"
+  },
+  {
+    "id": 94394466,
+    "title": "POETRY SLAM KREUZBERG",
+    "date": "2026-11-17",
+    "time": "19:30",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1652513778,
@@ -7218,19 +7244,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1003297460,
-    "title": "TRAC#4: OPEN STAGE",
-    "date": "2026-11-18",
-    "time": "19:30",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/trac4-open-stage-potsdam-E17NHG8",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-03"
-  },
-  {
     "id": 387436453,
     "title": "Muse",
     "date": "2026-11-18",
@@ -7242,6 +7255,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1003297460,
+    "title": "TRAC#4: OPEN STAGE",
+    "date": "2026-11-18",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/trac4-open-stage-potsdam-E17NHG8",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-03"
   },
   {
     "id": 1675873466,
@@ -8744,19 +8770,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2092823986,
-    "title": "Roller Disco",
-    "date": "2026-11-21",
-    "time": "18:00",
-    "locationId": 58,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/roller-disco-glitzer-beats-rollerskates-1",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-04"
-  },
-  {
     "id": 348015507,
     "title": "Die Schlagernacht des Jahres",
     "date": "2026-11-21",
@@ -8768,6 +8781,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 2092823986,
+    "title": "Roller Disco",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/roller-disco-glitzer-beats-rollerskates-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1548840700,
@@ -9945,18 +9971,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1739772307,
-    "title": "JUMI",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://dice.fm/event/6dwp83-jumi-berlin-23rd-nov-monarch-berlin-tickets?lng=de",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1078226472,
     "title": "Aurelio Kopainig + Rendering Liturgies + Max Arsava & Grgur Savic + Peter Cusack (DJ-Set)",
     "date": "2026-11-23",
@@ -10033,6 +10047,18 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1739772307,
+    "title": "JUMI",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://dice.fm/event/6dwp83-jumi-berlin-23rd-nov-monarch-berlin-tickets?lng=de",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 135029508,
@@ -11861,18 +11887,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1330469828,
-    "title": "HERZER & GEBRüDER MANNS & THE HAND CUTS",
-    "date": "2026-11-28",
-    "time": "18:00",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://vvk.link/xxpjx",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 15045955,
     "title": "The Luxorium – Grand Varieté",
     "date": "2026-11-28",
@@ -11883,6 +11897,18 @@
     "ticketUrl": "https://theater-im-delphi.de/programm/",
     "spotifyUrl": "",
     "addedAt": "2026-09-22"
+  },
+  {
+    "id": 1330469828,
+    "title": "HERZER & GEBRüDER MANNS & THE HAND CUTS",
+    "date": "2026-11-28",
+    "time": "18:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://vvk.link/xxpjx",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 836810315,
@@ -14085,18 +14111,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1982266350,
-    "title": "CITY SLANG XMAS PARTY DOZEN",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "type": "party",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 466748354,
     "title": "Edgars Rubenis + Pan Salmenhaara + Paulina Panik (DJ-Set)",
     "date": "2026-12-03",
@@ -14172,6 +14186,18 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-27"
+  },
+  {
+    "id": 1982266350,
+    "title": "CITY SLANG XMAS PARTY DOZEN",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "type": "party",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1091556212,
@@ -14303,19 +14329,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1430204938,
-    "title": "SingAlong",
-    "date": "2026-12-04",
-    "time": "19:30",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://bezahlung.singalong.de/bezahlung/806",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-04"
-  },
-  {
     "id": 255613365,
     "title": "SDP & The Capital Dance Orchestra",
     "date": "2026-12-04",
@@ -14327,6 +14340,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1430204938,
+    "title": "SingAlong",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://bezahlung.singalong.de/bezahlung/806",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 1064770762,
@@ -15802,19 +15828,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1309884259,
-    "title": "ZAQ Medienquiz",
-    "date": "2026-12-08",
-    "time": "19:30",
-    "locationId": 58,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/zaq-medienquiz-08-12-2026",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-04"
-  },
-  {
     "id": 1636806296,
     "title": "BAP",
     "date": "2026-12-08",
@@ -15826,6 +15839,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1309884259,
+    "title": "ZAQ Medienquiz",
+    "date": "2026-12-08",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/zaq-medienquiz-08-12-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 621241441,
@@ -18155,19 +18181,6 @@
     "addedAt": "2026-09-27"
   },
   {
-    "id": 672809719,
-    "title": "Seraphina Kalze",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/seraphina-kalze-jetzt-potsdam-ARQ8B6",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-04"
-  },
-  {
     "id": 59852794,
     "title": "101 Voices - Depeche Mode Special Tribute",
     "date": "2026-12-16",
@@ -18179,6 +18192,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 672809719,
+    "title": "Seraphina Kalze",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/seraphina-kalze-jetzt-potsdam-ARQ8B6",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 810780519,
@@ -22082,19 +22108,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1093707975,
-    "title": "Michael Mittermeier",
-    "date": "2027-01-26",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/en/event/michael-mittermeier-oldboy-sind-wir-bald-da-waschhaus-potsdam-21472721/",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-04"
-  },
-  {
     "id": 1830715674,
     "title": "aespa",
     "date": "2027-01-26",
@@ -22106,6 +22119,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1093707975,
+    "title": "Michael Mittermeier",
+    "date": "2027-01-26",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/michael-mittermeier-oldboy-sind-wir-bald-da-waschhaus-potsdam-21472721/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 78190957,
@@ -27813,19 +27839,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1603476598,
-    "title": "Schwarze Grütze",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/schwarze-grutze-elegant-potsdam-PAPLD7",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-04"
-  },
-  {
     "id": 617736245,
     "title": "Teddy Swims",
     "date": "2027-03-11",
@@ -27837,6 +27850,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1603476598,
+    "title": "Schwarze Grütze",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/schwarze-grutze-elegant-potsdam-PAPLD7",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 2103522278,
@@ -28794,19 +28820,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 293050161,
-    "title": "Kirsten Fuchs",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/kirsten-fuchs-2",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-04"
-  },
-  {
     "id": 38507416,
     "title": "Maite Kelly",
     "date": "2027-03-18",
@@ -28818,6 +28831,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 293050161,
+    "title": "Kirsten Fuchs",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/kirsten-fuchs-2",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-04"
   },
   {
     "id": 539720315,
@@ -30926,18 +30952,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1001964720,
-    "title": "BABA BLAKES",
-    "date": "2027-04-11",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://www.eventbrite.de/e/baba-blakes-monarch-berlin-tickets-2001903405977?aff=odcleoeventsincollection",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1229780829,
     "title": "Queen Mahoro",
     "date": "2027-04-11",
@@ -30949,6 +30963,18 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1001964720,
+    "title": "BABA BLAKES",
+    "date": "2027-04-11",
+    "time": "19:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.eventbrite.de/e/baba-blakes-monarch-berlin-tickets-2001903405977?aff=odcleoeventsincollection",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1472949841,
@@ -35722,19 +35748,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 248705363,
-    "title": "Nemzzz",
-    "date": "2027-10-28",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Oz67iYs5g8S9QQ5EGgl",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-04"
-  },
-  {
     "id": 729653137,
     "title": "Purple Disco Machine",
     "date": "2027-10-28",
@@ -35772,19 +35785,6 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-28"
-  },
-  {
-    "id": 995535951,
-    "title": "WEGZ",
-    "date": "2027-10-29",
-    "time": "20:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P4JULVJaYPniYkwBlrM",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-04"
   },
   {
     "id": 1132507868,
