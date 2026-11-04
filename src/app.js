@@ -567,8 +567,8 @@ function renderHeader(inModal = false) {
     <div ${inModal ? '' : 'id="app-header"'} class="pb-3" style="padding-top:max(1.5rem,env(safe-area-inset-top)); transition:opacity 0.3s ease;">
       <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
         <div class="${firstRender ? 'title-glow-wrap' : ''}" style="flex-shrink:0;">
-          <h1 class="syne leading-none ${firstRender ? 'title-glow' : 'title-glow-static'}" style="letter-spacing:-0.02em; font-weight:800; line-height:1; font-size:1.75rem; white-space:nowrap;">
-            LE.BE LIVE
+          <h1 class="syne leading-none ${firstRender ? 'title-glow' : 'title-glow-static'}" style="letter-spacing:-0.02em; font-weight:800; line-height:1; font-size:1.55rem; white-space:nowrap;">
+            <span style="font-size:calc(1.55rem + 2pt);">L</span>IVE<span style="font-size:calc(1.55rem + 2pt);">L</span>ORDS
           </h1>
         </div>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">
@@ -950,7 +950,7 @@ function renderSkeleton() {
         <div>64K RAM SYSTEM&nbsp; 38911 BASIC BYTES FREE</div>
         <div>&nbsp;</div>
         <div>READY.</div>
-        <div>LOAD &quot;LE.BE_LIVE&quot;,8,1</div>
+        <div>LOAD &quot;LIVELORDS&quot;,8,1</div>
         <div>&nbsp;</div>
         <div>PRESS PLAY ON TAPE</div>
         <div>OK</div>
@@ -2256,7 +2256,7 @@ function attachSwipeToWrapper(wrapper) {
     const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')
     const ticketUrl = safeUrl(e.ticketUrl)
     // UID/DTSTAMP sind nach RFC 5545 Pflicht - ohne sie lehnen manche Kalender-Apps den Import ab
-    const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//LE.BE LIVE//DE','BEGIN:VEVENT',`UID:${e.id}@lebe-live`,`DTSTAMP:${stamp}`,`DTSTART:${fmt(startDate)}`,`DTEND:${fmt(endDate)}`,`SUMMARY:${icsEscape(e.title)}`,`LOCATION:${icsEscape(locName)}, ${icsEscape(locCity)}`, ...(ticketUrl ? [`URL:${ticketUrl}`] : []), 'END:VEVENT','END:VCALENDAR'].join('\r\n')
+    const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//LIVELORDS//DE','BEGIN:VEVENT',`UID:${e.id}@lebe-live`,`DTSTAMP:${stamp}`,`DTSTART:${fmt(startDate)}`,`DTEND:${fmt(endDate)}`,`SUMMARY:${icsEscape(e.title)}`,`LOCATION:${icsEscape(locName)}, ${icsEscape(locCity)}`, ...(ticketUrl ? [`URL:${ticketUrl}`] : []), 'END:VEVENT','END:VCALENDAR'].join('\r\n')
     const blob = new Blob([ics], { type: 'text/calendar' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
