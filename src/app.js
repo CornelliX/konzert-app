@@ -157,6 +157,7 @@ let renderedEventLimit = EVENT_RENDER_BATCH
 let loadMoreObserver = null
 let swipeActiveWrapper = null
 let swipeDocListenerAdded = false
+let searchActivityBound = false
 let ptrListenerAdded = false
 let dropdownListenerAdded = false
 const bookmarkInFlight = new Set()
@@ -478,6 +479,8 @@ function focusEvent(event) {
   filters.cities = [loc ? loc.city : (event.locationCity || 'Berlin')]
   filters.locationId = 'alle'
   filters.search = event.title
+  searchTyped = false
+  clearTimeout(searchAutoClearTimer)
   render()
   requestAnimationFrame(() => highlightEventCard(event.id))
 }
@@ -618,7 +621,8 @@ function guideText(text) {
 const SETTINGS_GUIDE = [
   ['Events', [
     ['Überblick', 'Alle Konzerte und Partys in Berlin und Leipzig, nach Datum sortiert.'],
-    ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen.'],
+    ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen (z. B. nach einem Künstler).'],
+    ['Suche leert sich selbst', 'Gibt es keinen Treffer, verschwindet der Suchbegriff nach 2 Sekunden. Gibt es Treffer, wird das Suchfeld geleert, sobald Du ein Event vormerkst oder „Bin dabei“ wählst, oder wenn Du 5 Sekunden lang nichts tippst oder berührst.'],
     ['Karte wischen', 'Nach links wischen: {herz} „Vormerken“ oder {haken} „Bin dabei“ auswählen.'],
     ['Icon-Leiste', '{info} Link zum Event, {spotify} Spotify, {apple} {google} Kalender (Apple/Google), {share} Teilen.']
   ]],
@@ -1695,6 +1699,46 @@ function renderModals() {
 }
 
 
+// ── Suchfeld leert sich selbst (nur bei einer selbst eingetippten Suche) ─────────────────────────
+// Ohne Treffer nach 2 s, mit Treffern nach 5 s ohne Eingabe/Berührung, und sofort nachdem der Nutzer aus den
+// Treffern ein Event vorgemerkt bzw. "Bin dabei" gewählt hat. Eine Suche, die die App selbst setzt (Sprung vom
+// Radar zu einem Event, siehe focusEvent), bleibt stehen - dort soll das angesprungene Event sichtbar bleiben.
+const SEARCH_MISS_CLEAR_MS = 2000
+const SEARCH_IDLE_CLEAR_MS = 5000
+let searchAutoClearTimer = null
+let searchClearMs = 0
+let searchTyped = false
+
+function searchHasHits() {
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+  return getFilteredEvents().some(e => new Date(e.date + 'T12:00:00') >= today)
+}
+
+// recheck: Treffer neu bestimmen (nach jeder Suche); sonst nur den Zeitgeber neu starten (nach Nutzeraktivität)
+function armSearchAutoClear(recheck = true) {
+  clearTimeout(searchAutoClearTimer)
+  if (!searchTyped || !filters.search) return
+  if (recheck) searchClearMs = searchHasHits() ? SEARCH_IDLE_CLEAR_MS : SEARCH_MISS_CLEAR_MS
+  searchAutoClearTimer = setTimeout(clearTypedSearch, searchClearMs)
+}
+
+function clearTypedSearch() {
+  clearTimeout(searchAutoClearTimer)
+  if (!searchTyped || !filters.search) return
+  filters.search = ''
+  searchTyped = false
+  const input = document.getElementById('search-input')
+  if (input) input.value = ''
+  const clearBtn = document.getElementById('search-clear')
+  if (clearBtn) clearBtn.style.display = 'none'
+  // Läuft das gerade in Gemerkt/History, müssen Liste und Kalender beim nächsten Besuch neu gezeichnet werden
+  if (currentView !== 'liste' && currentView !== 'kalender') {
+    for (const id of ['pane-liste', 'pane-kalender']) { const pane = document.getElementById(id); if (pane) pane.dataset.stale = '1' }
+  }
+  updateView(false)
+}
+
 function attachFilterBarEvents() {
   document.querySelectorAll('[data-city]').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1724,9 +1768,12 @@ function attachFilterBarEvents() {
     filters.search = searchInput ? searchInput.value : ''
     if (!keepFocus) searchInput?.blur()
     updateView(false)
+    searchTyped = !!filters.search
+    armSearchAutoClear()
   }
   searchInput?.addEventListener('input', (e) => {
     if (searchClear) searchClear.style.display = e.target.value ? 'flex' : 'none'
+    clearTimeout(searchAutoClearTimer)
     clearTimeout(searchDebounceTimer)
     searchDebounceTimer = setTimeout(() => commitSearch(true), 1000)
   })
@@ -1734,6 +1781,12 @@ function attachFilterBarEvents() {
     if (e.key === 'Enter') { e.preventDefault(); commitSearch() }
   })
   document.getElementById('settings-open')?.addEventListener('click', openSettingsModal)
+  // Jede Eingabe oder Berührung startet die 5 Sekunden neu (nur wenn die Suche Treffer hat; ohne Treffer bleibt es bei 2 s)
+  if (!searchActivityBound) {
+    searchActivityBound = true
+    const onActivity = () => { if (searchTyped && searchClearMs === SEARCH_IDLE_CLEAR_MS) armSearchAutoClear(false) }
+    for (const type of ['touchstart', 'pointerdown', 'keydown', 'scroll']) document.addEventListener(type, onActivity, { passive: true, capture: true })
+  }
   // preventDefault auf mousedown verhindert, dass der Tap den Fokus kurz vom Input wegnimmt -
   // sonst musste unten explizit wieder .focus() aufgerufen werden, was auf Mobilgeräten die
   // virtuelle Tastatur kurz zu- und wieder aufklappen lässt und den Clear-Tap spürbar träge
@@ -1741,6 +1794,8 @@ function attachFilterBarEvents() {
   searchClear?.addEventListener('mousedown', (e) => e.preventDefault())
   searchClear?.addEventListener('click', () => {
     clearTimeout(searchDebounceTimer)
+    clearTimeout(searchAutoClearTimer)
+    searchTyped = false
     filters.search = ''
     if (searchInput) searchInput.value = ''
     searchClear.style.display = 'none'
@@ -2140,7 +2195,7 @@ function attachSwipeToWrapper(wrapper) {
     const isNow = !bookmarked.some(b => b == id)
     if (wasGoing) going = going.filter(g => g != id)
     bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
-    setTimeout(() => { if (currentView === 'gemerkt' && bookmarkSlide === 0) { render() } else { updateCard(id) } }, 400)
+    setTimeout(() => { if (currentView === 'gemerkt' && bookmarkSlide === 0) { render() } else { updateCard(id) } if (isNow) clearTypedSearch() }, 400)
     if (wasGoing) toggleBookmark(id, 'going', false)
     toggleBookmark(id, 'bookmarked', isNow)
   })
@@ -2154,7 +2209,7 @@ function attachSwipeToWrapper(wrapper) {
     const isNow = !going.some(g => g == id)
     if (wasBookmarked) bookmarked = bookmarked.filter(b => b != id)
     going = isNow ? [...going, id] : going.filter(g => g != id)
-    setTimeout(() => { if (currentView === 'gemerkt' && bookmarkSlide === 0) { render() } else { updateCard(id) } }, 400)
+    setTimeout(() => { if (currentView === 'gemerkt' && bookmarkSlide === 0) { render() } else { updateCard(id) } if (isNow) clearTypedSearch() }, 400)
     if (wasBookmarked) toggleBookmark(id, 'bookmarked', false)
     toggleBookmark(id, 'going', isNow)
     const ev = events.find(e => e.id == id)
