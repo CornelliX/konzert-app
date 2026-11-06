@@ -71,8 +71,19 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 }
 @keyframes c64in { from { opacity:0; } to { opacity:1; } }
 @keyframes c64blink { 0%,49%{ opacity:1; } 50%,100%{ opacity:0; } }
-@keyframes c64bars { from { background-position: 0 0; } to { background-position: 0 -256px; } }
+/* Farbbalken des C64-Intros: per transform verschoben (läuft im Compositor und steht nicht still, wenn
+   beim Start der Main-Thread mit JSON-Parsen/Rendern beschäftigt ist; background-position tat das) */
+@keyframes c64slide { from { transform: translateY(0); } to { transform: translateY(-256px); } }
 .c64-border {
+  position: fixed;
+  overflow: hidden;
+  background: #000000;
+}
+.c64-border::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: calc(100% + 256px);
   background: repeating-linear-gradient(
     to bottom,
     #000000  0px, #000000  16px,
@@ -93,8 +104,10 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
     #9f9f9f 240px,#9f9f9f 256px
   );
   background-size: 100% 256px;
-  animation: c64bars 1.6s linear infinite;
+  animation: c64slide 1.6s linear infinite;
+  will-change: transform;
 }
+.c64-border > div { position: relative; }
 #app-header { transition: opacity 0.3s ease; }
 @keyframes title-sweep {
   from { background-position: 100% center; }
