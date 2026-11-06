@@ -751,14 +751,14 @@ function renderStatsHtml() {
         ${li('Verschiedene Künstler', me.artists.size + crown(me.artists.size, o => o.artists.size))}
         ${li('Besuchte Locations', me.locations.size + crown(me.locations.size, o => o.locations.size))}
         ${li('Top 5 der meistbesuchten Locations', top5Html)}
-        ${li('Meistgesehener Künstler', topArtist ? `${esc(topArtist[1].name)} (${topArtist[1].n}×)${crown(topArtist[1].n, o => o.artists.get(topArtist[0])?.n)}` : 'Bisher kein Künstler mehr als 1x gesehen')}
+        ${li('Meistgesehener Künstler', topArtist ? `${esc(topArtist[1].name)} (${topArtist[1].n}×)${crown(topArtist[1].n, o => o.artists.get(topArtist[0])?.n)}` : 'Kein Künstler mehr als 1x')}
         ${li('Monat mit meisten Konzerten', bestMonth ? `${MONTH_NAMES[+bestMonth[0].slice(5) - 1]} ${bestMonth[0].slice(0, 4)}: ${bestMonth[1].n}${crown(bestMonth[1].n, monthMax)}` : '–')}
       </ul>`
   }
   return `
     <details style="margin-top:14px; border-top:1px solid rgba(255,255,255,0.06); padding-top:14px;">
       <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Statistik</summary>
-      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin-top:10px; line-height:1.45;">${STATS_CROWN} bedeutet LORD-REKORD (kein Lord hat einen höheren Wert)</p>
+      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin-top:10px; line-height:1.45;"><strong style="color:rgba(255,255,255,0.8); font-weight:700;">${STATS_CROWN} bedeutet LORD-REKORD</strong> (kein Lord hat einen höheren Wert, mehrere Lords können sich den Rekord teilen)</p>
       ${section('Dieses Jahr', thisYear)}
       ${section('Insgesamt', null)}
     </details>
