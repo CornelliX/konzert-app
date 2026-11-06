@@ -190,7 +190,29 @@ const LORD_NAME_MAX = 15
 let eventMarks = {}
 let eventMarksAt = {}
 
+let globalDelegatesBound = false
+function openHelp() {
+  openSettingsModal()
+  const d = document.querySelector('#settings-body details')
+  if (d) { d.open = true; d.scrollIntoView({ block: 'start' }) }
+}
+function onGlobalClick(e) {
+  const t = e.target
+  const go = t.closest?.('[data-goto-view]')
+  if (go) { document.querySelector(`[data-nav="${go.dataset.gotoView}"]`)?.click(); return }
+  if (t.closest?.('[data-reset-filters]')) {
+    filters.locationId = 'alle'; filters.search = ''; filters.when = ''; filters.type = ''; filters.dates = []
+    searchTyped = false; clearTimeout(searchAutoClearTimer)
+    updateView(true)
+    return
+  }
+  const tip = t.closest?.('[data-dismiss-tip]')
+  if (tip) { saveData('tipSeen', true); tip.closest('[data-first-tip]')?.remove(); return }
+  if (t.closest?.('[data-open-help]')) openHelp()
+}
+
 export async function renderApp(el) {
+  if (!globalDelegatesBound) { globalDelegatesBound = true; document.addEventListener('click', onGlobalClick) }
   // window.history: der Modul-Scope hat ein eigenes `history` (die History-Einträge)
   if ('scrollRestoration' in window.history) window.history.scrollRestoration = 'manual'
   window.scrollTo(0, 0)
@@ -422,7 +444,7 @@ function showRadarBanner(matches) {
 }
 
 function renderRadarList() {
-  if (!radar.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Noch keine Künstler im Radar.</p>`
+  if (!radar.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Noch keine Künstler im Radar.</p><p class="text-xs" style="color:rgba(255,255,255,0.6); margin-top:6px; line-height:1.5;">Trage oben einen Künstler ein, dessen Konzert Du erwartest. Sobald ein Termin angekündigt wird, merkt die App ihn automatisch vor.</p>`
   return [...radar].sort((a, b) => a.artist.localeCompare(b.artist, 'de', { sensitivity: 'base' })).map(r => `
     <div class="flex items-center justify-between rounded-xl px-3 py-2" style="background:rgba(8,8,42,0.92); border:1px solid rgba(99,102,241,0.12);">
       <span style="font-size:14px; color:white;">${esc(r.artist)}</span>
@@ -515,11 +537,12 @@ function render() {
     ${currentUser ? '' : `
   <div class="glass rounded-2xl p-4 mb-4">
     <div id="login-step-1">
+      <p style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5; margin-bottom:10px;">Melde Dich an, um Events vorzumerken, Konzerte in Deiner History zu sammeln und den Radar zu nutzen. <button type="button" data-open-help style="background:none; border:none; padding:0; color:#a5b4fc; cursor:pointer; text-decoration:underline; font-size:12px;">Mehr in der Hilfe</button></p>
       <div style="display:flex; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.06);">
         <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." value="${esc(localStorage.getItem('lebe-live-email'))}" style="flex:1; min-width:0; padding:10px 14px; font-size:14px; color:white; outline:none; background:transparent; border:none; font-family:'DM Sans',sans-serif; color-scheme:dark;" />
         <button id="login-btn" class="syne text-sm font-semibold px-4" style="background:rgba(99,102,241,0.4); border:none; border-left:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer; transition:opacity 0.2s; flex-shrink:0;">Code senden</button>
       </div>
-      <p id="login-hint" style="margin-top:8px; font-size:12px; color:rgba(255,255,255,0.6); min-height:16px;"></p>
+      <p id="login-hint" style="margin-top:8px; font-size:12px; color:rgba(255,255,255,0.6);"></p>
     </div>
     <div id="login-step-2" style="display:none;">
       <p style="font-size:12px; color:rgba(255,255,255,0.6); margin-bottom:10px;">Code per E-Mail gesendet — bitte Postfach prüfen.</p>
@@ -531,12 +554,13 @@ function render() {
     </div>
   </div>
 `}
-    ${currentUser ? `<div class="text-right mb-2" style="font-size:12px; color:rgba(255,255,255,0.6);">${esc(currentUser.email)} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline; display:inline-block; padding:12px 6px; margin:-12px -6px;">Abmelden</span></div>` : ''}
+    ${currentUser ? `<div class="mb-2" style="display:flex; align-items:center; justify-content:space-between; font-size:12px; color:rgba(255,255,255,0.6);"><button type="button" data-open-help style="background:none; border:none; cursor:pointer; padding:12px 6px; margin:-12px -6px; font-size:12px; font-weight:600; color:#a5b4fc;">? Hilfe</button><span>${esc(currentUser.email)} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline; display:inline-block; padding:12px 6px; margin:-12px -6px;">Abmelden</span></span></div>` : ''}
     <div id="filter-bar-wrap" style="${hidesFilterBar(currentView) ? 'display:none' : ''}">
       ${renderFilters()}
     </div>
     <div id="view-content">
       <div id="pane-liste" style="${currentView !== 'liste' ? 'display:none' : ''}">
+        ${loadData('tipSeen') ? '' : `<div data-first-tip class="glass rounded-2xl" style="display:flex; align-items:flex-start; gap:4px; padding:10px 4px 10px 14px; margin-bottom:16px;"><p class="text-xs" style="flex:1; color:rgba(255,255,255,0.8); line-height:1.5; margin-top:5px;"><strong style="color:white;">Tipp:</strong> Tippe bei einem Event auf „♡ Merken“ oder „✓ Dabei“. Alternativ wischst Du die Karte nach links. Alles Weitere steht unter Hilfe.</p><button data-dismiss-tip aria-label="Tipp schließen" style="width:44px; height:44px; flex-shrink:0; background:none; border:none; color:rgba(255,255,255,0.7); font-size:22px; cursor:pointer;">×</button></div>`}
         <div id="event-list-content">${renderGroupedEvents()}</div>
       </div>
       <div id="pane-kalender" style="${currentView !== 'kalender' ? 'display:none' : ''}">
@@ -637,7 +661,8 @@ const SETTINGS_GUIDE = [
     ['Überblick', 'Alle Konzerte und Partys in Berlin und Leipzig, nach Datum sortiert.'],
     ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen (z. B. nach einem Künstler). Mit den Knöpfen darunter zeigst Du nur „Heute“, „Wochenende“ (Freitag bis Sonntag), „Konzerte“ oder „Partys“, nochmal tippen schaltet den Filter wieder aus. Über der Liste steht, wie viele Events passen.'],
     ['Suche leert sich selbst', 'Gibt es keinen Treffer, verschwindet der Suchbegriff nach 2 Sekunden. Gibt es Treffer, wird das Suchfeld geleert, sobald Du ein Event vormerkst oder „Bin dabei“ wählst, oder wenn Du 5 Sekunden lang nichts tippst oder berührst.'],
-    ['Vormerken und Dabei', 'Tippe unter der Karte auf {herz} „Merken“ oder {haken} „Dabei“, nochmal tippen nimmt es zurück. Alternativ wischst Du die Karte nach links.'],
+    ['Hilfe und Tipp', 'Der Knopf „? Hilfe“ über der Filterleiste öffnet diese Anleitung. Den einmaligen Tipp oben in der Liste schließt Du mit ×.'],
+    ['Vormerken und Dabei', 'Tippe unter der Karte auf {herz} „Merken“ oder {haken} „Dabei“, nochmal tippen nimmt es zurück. Alternativ wischst Du die Karte nach links. Unten erscheint kurz „Rückgängig“.'],
     ['Icon-Leiste', '{info} Link zum Event, {spotify} Spotify, hinter ⋯ der Kalender ({apple} Apple, {google} Google) und {share} Teilen.']
   ]],
   ['Kalender', [
@@ -1048,7 +1073,7 @@ function renderGroupedEvents() {
     groups[label].push(e)
   })
   if (Object.keys(groups).length === 0) {
-    return `<div class="text-center py-20" style="color:rgba(255,255,255,0.6);"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p></div>`
+    return `<div class="text-center py-20" style="color:rgba(255,255,255,0.6);"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p>${(filters.search || filters.when || filters.type || filters.locationId !== 'alle') ? `<button data-reset-filters class="btn-glass rounded-xl syne text-sm font-semibold" style="height:44px; padding:0 22px; margin-top:18px; color:white;">Filter zurücksetzen</button>` : ''}</div>`
   }
   return `
     <p class="text-xs" style="color:rgba(255,255,255,0.6); margin:-6px 0 14px;" aria-live="polite">${future.length} ${future.length === 1 ? 'Event' : 'Events'}</p>
@@ -1272,9 +1297,11 @@ function renderBookmarkedOwnHtml() {
 
   // Die History (besuchte Konzerte) hat seit dem eigenen Reiter "History" ihren Platz dort, siehe renderHistoryView()
   if (allEvents.length === 0) return `
-    <div class="text-center py-20 text-slate-600">
-      <p class="syne text-2xl mb-2">—</p>
-      <p class="text-sm">Noch keine Events gespeichert.</p>
+    <div class="text-center py-14" style="color:rgba(255,255,255,0.7);">
+      <p class="syne text-2xl mb-2">♡</p>
+      <p class="text-sm" style="font-weight:600;">Noch nichts gemerkt.</p>
+      <p class="text-xs" style="color:rgba(255,255,255,0.6); margin:6px 0 18px; line-height:1.5;">Tippe bei einem Event auf „Merken“ oder „Dabei“,<br>dann erscheint es hier.</p>
+      <button data-goto-view="liste" class="btn-glass rounded-xl syne text-sm font-semibold" style="height:44px; padding:0 22px; color:white;">Zu den Events</button>
     </div>
   `
 
@@ -1420,7 +1447,9 @@ function renderHistoryDatePicker(prefix = 'history') {
 // Jahreswechsel-Check beim Durchlaufen reicht daher für die Gliederung, ohne vorher
 // extra nach Jahr gruppieren zu müssen.
 function renderHistoryListHtml(historyEntries, readOnly = false) {
-  if (!historyEntries.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">${readOnly ? 'Noch keine besuchten Konzerte sichtbar.' : 'Noch keine besuchten Konzerte eingetragen.'}</p>`
+  if (!historyEntries.length) return readOnly
+    ? `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Noch keine besuchten Konzerte sichtbar.</p>`
+    : `<div style="color:rgba(255,255,255,0.6);"><p class="text-sm">Noch keine besuchten Konzerte eingetragen.</p><p class="text-xs" style="margin:6px 0 14px; line-height:1.5;">Mit „Dabei“ markierte Konzerte erscheinen hier am Konzerttag ab 20 Uhr von selbst. Frühere Konzerte trägst Du nach.</p><button data-history-add-toggle class="btn-glass rounded-xl syne text-sm font-semibold" style="height:44px; padding:0 22px; color:white;">Konzert nachtragen</button></div>`
   let html = ''
   let lastYear = null
   for (const h of historyEntries) {
@@ -1690,6 +1719,12 @@ function attachCarousel(kind) {
   })
   if (kind === 'history') {
     root.addEventListener('click', e => {
+      // "Konzert nachtragen" im Leerzustand der Liste (der "+" in der Kopfzeile wird dort oben behandelt)
+      if (!head.contains(e.target) && e.target.closest('[data-history-add-toggle]')) {
+        if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Konzerte nachzutragen.'); return }
+        document.getElementById('history-add-form')?.classList.toggle('hidden')
+        return
+      }
       const radarBtn = e.target.closest('[data-hist-radar]')
       if (radarBtn) { toggleHistoryRadar(radarBtn.dataset.histRadar); return }
       const copyBtn = e.target.closest('[data-hist-copy]')
@@ -2261,6 +2296,86 @@ function closeSwipeWrapper(wrapper) {
   if (wrapper && wrapper._closeSwipe) wrapper._closeSwipe()
 }
 
+// Status eines Events in der eigenen Liste: 'going' | 'bookmarked' | 'none'
+function statusOf(id) {
+  return going.some(g => g == id) ? 'going' : bookmarked.some(b => b == id) ? 'bookmarked' : 'none'
+}
+
+// Vormerken an/aus (Wischen, Knopf in der Karte, Rückgängig). Ein Event ist entweder vorgemerkt oder "dabei".
+function toggleBookmarkStatus(id, { undoable = true } = {}) {
+  if (bookmarkInFlight.has(id)) return
+  bookmarkInFlight.add(id)
+  setTimeout(() => bookmarkInFlight.delete(id), 400)
+  if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
+  const before = statusOf(id)
+  findVisibleCard(id)?.querySelector('[data-swipe-bookmark]')?.classList.add('btn-sweep')
+  const wasGoing = going.some(g => g == id)
+  const isNow = !bookmarked.some(b => b == id)
+  if (wasGoing) going = going.filter(g => g != id)
+  bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
+  setTimeout(() => { if (currentView === 'gemerkt' && bookmarkSlide === 0) { render() } else { updateCard(id) } if (isNow) clearTypedSearch() }, 400)
+  if (wasGoing) toggleBookmark(id, 'going', false)
+  toggleBookmark(id, 'bookmarked', isNow)
+  if (undoable) offerUndo(id, before)
+}
+
+// "Bin dabei" an/aus, inklusive History-Snapshot (siehe syncGoingToHistory)
+function toggleGoingStatus(id, { undoable = true } = {}) {
+  if (bookmarkInFlight.has(id)) return
+  bookmarkInFlight.add(id)
+  setTimeout(() => bookmarkInFlight.delete(id), 400)
+  if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
+  const before = statusOf(id)
+  findVisibleCard(id)?.querySelector('[data-swipe-going]')?.classList.add('btn-sweep')
+  const wasBookmarked = bookmarked.some(b => b == id)
+  const isNow = !going.some(g => g == id)
+  if (wasBookmarked) bookmarked = bookmarked.filter(b => b != id)
+  going = isNow ? [...going, id] : going.filter(g => g != id)
+  setTimeout(() => { if (currentView === 'gemerkt' && bookmarkSlide === 0) { render() } else { updateCard(id) } if (isNow) clearTypedSearch() }, 400)
+  if (wasBookmarked) toggleBookmark(id, 'bookmarked', false)
+  toggleBookmark(id, 'going', isNow)
+  const ev = events.find(e => e.id == id)
+  if (isNow && ev) {
+    // Sofortiger History-Snapshot beim Markieren statt erst beim nächsten App-Start -
+    // siehe syncGoingToHistory() für die Begründung (Event kann bis dahin schon aus
+    // events.json verschwunden sein).
+    if (!history.some(h => h.eventId === String(id))) {
+      archiveEventToHistory(ev).then(added => { if (added.length) history = [...history, ...added] })
+    }
+  } else if (!isNow && ev && !isConcertOver(ev.date)) {
+    // Nur bei noch nicht stattgefundenen Events den Snapshot mit entfernen - bei bereits
+    // vergangenen bleibt er stehen (Korrektur dafür ist der Lösch-Button in der History).
+    history = history.filter(h => h.eventId !== String(id))
+    removeHistoryEntryByEventId(id)
+  }
+  if (undoable) offerUndo(id, before)
+}
+
+// Kurze Rückmeldung mit "Rückgängig" nach jeder Statusänderung. Jeder Wechsel braucht genau einen Klick:
+// war es vorher "keiner", schaltet man den jetzigen Status aus, sonst den früheren wieder ein.
+function offerUndo(id, before) {
+  const ev = events.find(e => e.id == id)
+  const name = ev ? (ev.title.length > 26 ? ev.title.slice(0, 25) + '…' : ev.title) : 'Event'
+  const now = statusOf(id)
+  const text = now === 'bookmarked' ? `♡ Vorgemerkt: ${name}` : now === 'going' ? `✓ Dabei: ${name}` : before === 'going' ? 'Nicht mehr dabei' : 'Vormerkung entfernt'
+  const kind = before === 'none' ? now : before
+  showUndoToast(text, () => (kind === 'going' ? toggleGoingStatus : toggleBookmarkStatus)(id, { undoable: false }))
+}
+
+let undoToastEl = null, undoToastTimer = null
+function showUndoToast(text, onUndo) {
+  undoToastEl?.remove()
+  clearTimeout(undoToastTimer)
+  const el = document.createElement('div')
+  el.setAttribute('role', 'status')
+  el.style.cssText = 'position:fixed; left:50%; transform:translateX(-50%); bottom:calc(74px + env(safe-area-inset-bottom, 0px)); width:min(92vw,420px); box-sizing:border-box; z-index:60; display:flex; align-items:center; gap:8px; padding:2px 2px 2px 16px; background:rgba(22,18,60,0.98); border:1px solid rgba(168,85,247,0.4); border-radius:14px; box-shadow:0 12px 36px rgba(0,0,0,0.6); color:white; font-size:13px;'
+  el.innerHTML = `<span style="flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(text)}</span><button type="button" data-undo style="height:44px; padding:0 14px; background:none; border:none; color:#c89bfa; font-weight:700; cursor:pointer; flex-shrink:0;">Rückgängig</button>`
+  el.querySelector('[data-undo]').addEventListener('click', () => { el.remove(); onUndo() })
+  document.body.appendChild(el)
+  undoToastEl = el
+  undoToastTimer = setTimeout(() => el.remove(), 4500)
+}
+
 function attachSwipeToWrapper(wrapper) {
   const card = wrapper.querySelector('.event-swipe-card')
   if (!card) return
@@ -2353,48 +2468,8 @@ function attachSwipeToWrapper(wrapper) {
 
   // Card-level event handlers
   const id = wrapper.dataset.eventId
-  wrapper.querySelector('[data-swipe-bookmark]')?.addEventListener('click', () => {
-    if (bookmarkInFlight.has(id)) return
-    bookmarkInFlight.add(id)
-    setTimeout(() => bookmarkInFlight.delete(id), 400)
-    if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
-    wrapper.querySelector('[data-swipe-bookmark]')?.classList.add('btn-sweep')
-    const wasGoing = going.some(g => g == id)
-    const isNow = !bookmarked.some(b => b == id)
-    if (wasGoing) going = going.filter(g => g != id)
-    bookmarked = isNow ? [...bookmarked, id] : bookmarked.filter(b => b != id)
-    setTimeout(() => { if (currentView === 'gemerkt' && bookmarkSlide === 0) { render() } else { updateCard(id) } if (isNow) clearTypedSearch() }, 400)
-    if (wasGoing) toggleBookmark(id, 'going', false)
-    toggleBookmark(id, 'bookmarked', isNow)
-  })
-  wrapper.querySelector('[data-swipe-going]')?.addEventListener('click', () => {
-    if (bookmarkInFlight.has(id)) return
-    bookmarkInFlight.add(id)
-    setTimeout(() => bookmarkInFlight.delete(id), 400)
-    if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Events vorzumerken.'); return }
-    wrapper.querySelector('[data-swipe-going]')?.classList.add('btn-sweep')
-    const wasBookmarked = bookmarked.some(b => b == id)
-    const isNow = !going.some(g => g == id)
-    if (wasBookmarked) bookmarked = bookmarked.filter(b => b != id)
-    going = isNow ? [...going, id] : going.filter(g => g != id)
-    setTimeout(() => { if (currentView === 'gemerkt' && bookmarkSlide === 0) { render() } else { updateCard(id) } if (isNow) clearTypedSearch() }, 400)
-    if (wasBookmarked) toggleBookmark(id, 'bookmarked', false)
-    toggleBookmark(id, 'going', isNow)
-    const ev = events.find(e => e.id == id)
-    if (isNow && ev) {
-      // Sofortiger History-Snapshot beim Markieren statt erst beim nächsten App-Start -
-      // siehe syncGoingToHistory() für die Begründung (Event kann bis dahin schon aus
-      // events.json verschwunden sein).
-      if (!history.some(h => h.eventId === String(id))) {
-        archiveEventToHistory(ev).then(added => { if (added.length) history = [...history, ...added] })
-      }
-    } else if (!isNow && ev && !isConcertOver(ev.date)) {
-      // Nur bei noch nicht stattgefundenen Events den Snapshot mit entfernen - bei bereits
-      // vergangenen bleibt er stehen (Korrektur dafür ist der Lösch-Button in der History).
-      history = history.filter(h => h.eventId !== String(id))
-      removeHistoryEntryByEventId(id)
-    }
-  })
+  wrapper.querySelector('[data-swipe-bookmark]')?.addEventListener('click', () => toggleBookmarkStatus(id))
+  wrapper.querySelector('[data-swipe-going]')?.addEventListener('click', () => toggleGoingStatus(id))
   // Sichtbare Knöpfe lösen dieselbe Aktion aus wie die Wisch-Felder
   wrapper.querySelectorAll('[data-quick]').forEach(b => b.addEventListener('click', () => {
     wrapper.querySelector(b.dataset.quick === 'going' ? '[data-swipe-going]' : '[data-swipe-bookmark]')?.click()
