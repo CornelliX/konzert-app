@@ -3419,72 +3419,65 @@ async function scrapeUberArena() {
 }
 
 async function scrapeWaschhaus() {
-  console.log('📡 Waschhaus Potsdam (Puppeteer)...')
+  console.log('📡 Waschhaus Potsdam (JSON-API)...')
   const events = []
-  let browser
   try {
-    const puppeteer = await import('puppeteer')
-    browser = await puppeteer.default.launch({ headless: true, args: ['--no-sandbox'] })
-    const page = await browser.newPage()
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
-    await page.goto('https://www.waschhaus.de/veranstaltungen', { waitUntil: 'load', timeout: 60000 })
-    // Die Liste kommt per JS: erst warten, bis die ersten Events da sind (sonst 0 Events, wenn die Seite langsam ist)
-    const ITEM = 'article.waschhaus-event-list-item'
-    await page.waitForSelector(ITEM, { timeout: 30000 })
-
-    // "Zeig mir mehr!" lädt per JS ohne eigenen Query-Param/API-Endpunkt nach - klicken, auf neue Einträge
-    // warten (bis zu 10 s, früher nur 1,5 s: bei langsamer Antwort brach es nach den ersten 30 Events ab)
-    // und aufhören, wenn der Knopf weg ist oder nichts mehr nachkommt
-    for (let i = 0; i < 30; i++) {
-      const before = await page.evaluate(sel => document.querySelectorAll(sel).length, ITEM)
-      const clicked = await page.evaluate(() => {
-        const btn = document.querySelector('.waschhaus-event-load-more')
-        if (btn && btn.offsetParent !== null) { btn.click(); return true }
-        return false
-      })
-      if (!clicked) break
-      const grew = await page.waitForFunction((sel, n) => document.querySelectorAll(sel).length > n, { timeout: 10000 }, ITEM, before).then(() => true, () => false)
-      if (!grew) break
+    // Die Seite lädt ihre Liste per JSON-RPC ("Zeig mir mehr!" = nächster offset). Direkt abfragen statt
+    // Puppeteer: kein Warten auf JS/Klicks, die in langsamer CI-Umgebung nur 30 oder 0 Events lieferten.
+    const post = async (offset) => {
+      for (let attempt = 1; attempt <= 3; attempt++) {
+        try {
+          const res = await fetch('https://www.waschhaus.de/theme_prime_waschhaus/events', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' },
+            body: JSON.stringify({ id: 1, jsonrpc: '2.0', method: 'call', params: { offset, limit: 30, type_ids: [], search: null, month: null, show_done: false, load_filters: false } }),
+            signal: AbortSignal.timeout(30000)
+          })
+          if (!res.ok) throw new Error('HTTP ' + res.status)
+          const json = await res.json()
+          if (!json.result || !Array.isArray(json.result.events)) throw new Error('unerwartete Antwort')
+          return json.result
+        } catch (e) {
+          if (attempt === 3) throw e
+          await new Promise(r => setTimeout(r, 2000 * attempt))
+        }
+      }
+    }
+    const raw = []
+    let offset = 0
+    for (let page = 0; page < 40; page++) {
+      const r = await post(offset)
+      raw.push(...r.events)
+      if (!r.has_more || !(r.next_offset > offset)) break
+      offset = r.next_offset
     }
 
-    const rawEvents = await page.evaluate(() => {
-      return Array.from(document.querySelectorAll('article.waschhaus-event-list-item')).map(art => {
-        const title = art.querySelector('h3 a')?.textContent?.trim() || ''
-        const dateSpans = Array.from(art.querySelectorAll('.waschhaus-event-date span')).map(s => s.textContent.trim())
-        const type = art.querySelector('.waschhaus-event-list-item__type span')?.textContent?.trim() || ''
-        const infoHref = art.querySelector('a.waschhaus-event-list-item__image')?.getAttribute('href') || ''
-        const ticketHref = art.querySelector('a.btn-primary')?.getAttribute('href') || ''
-        return { title, dateSpans, type, infoHref, ticketHref }
-      })
-    })
-    await browser.close()
-    browser = null
-
-    // Datum steckt als [Wochentag, Tag, Monat(Abk.), Jahr, "", Uhrzeit] in .waschhaus-event-date
-    const monthMap = { Jan:'01',Feb:'02',Mär:'03',Apr:'04',Mai:'05',Jun:'06',Jul:'07',Aug:'08',Sep:'09',Okt:'10',Nov:'11',Dez:'12' }
     const seen = new Set()
-    for (const { title, dateSpans, type, infoHref, ticketHref } of rawEvents) {
+    for (const ev of raw) {
+      // Einzelne kaputte Zeichen (unpaarige Surrogate) aus dem Titel entfernen, Emojis bleiben
+      const title = String(ev.name || '').replace(/[\ud800-\udbff](?![\udc00-\udfff])|(?<![\ud800-\udbff])[\udc00-\udfff]/g, '').trim()
       if (!title || /abgesagt/i.test(title)) continue
-      const [, day, monthAbbr, year, , time] = dateSpans
-      const month = monthMap[monthAbbr]
-      if (!day || !month || !year) continue
-      const date = `${year}-${month}-${String(day).padStart(2, '0')}`
+      // date_begin kommt in UTC (date_tz = Europe/Berlin): in Berliner Zeit umrechnen (Sommer-/Winterzeit)
+      const begin = new Date(String(ev.date_begin || '').replace(' ', 'T') + 'Z')
+      if (isNaN(begin)) continue
+      const date = begin.toLocaleDateString('sv-SE', { timeZone: 'Europe/Berlin' })
+      const time = begin.toLocaleTimeString('de-DE', { timeZone: 'Europe/Berlin', hour: '2-digit', minute: '2-digit' })
       if (date < today()) continue
       const key = date + title
       if (seen.has(key)) continue
       seen.add(key)
 
-      const ticketUrl = ticketHref || (infoHref ? (infoHref.startsWith('http') ? infoHref : 'https://www.waschhaus.de' + infoHref) : 'https://www.waschhaus.de/veranstaltungen')
+      const type = ev.event_type?.name
+      const infoUrl = ev.url ? (ev.url.startsWith('http') ? ev.url : 'https://www.waschhaus.de' + ev.url) : 'https://www.waschhaus.de/veranstaltungen'
+      const ticketUrl = (typeof ev.ticket_url === 'string' && ev.ticket_url) || infoUrl
       // Venue-eigene Kategorie hat Vorrang vor Titel-Raten, siehe Metropol/Kesselhaus
       const resolvedType = type === 'Konzert' ? 'konzert' : type === 'Party' ? 'party' : detectType(title)
-      events.push({ title, date, time: time || '20:00', locationId: 58, type: resolvedType, description: '', ticketUrl, spotifyUrl: '', source: 'waschhaus' })
+      events.push({ title, date, time, locationId: 58, type: resolvedType, description: '', ticketUrl, spotifyUrl: '', source: 'waschhaus' })
     }
 
     console.log(`  ✓ ${events.length} Events`)
   } catch(e) {
     console.log(`  ✗ Waschhaus: ${e.message}`)
-  } finally {
-    if (browser) await browser.close().catch(() => {})
   }
   return events
 }
