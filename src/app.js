@@ -139,7 +139,8 @@ function getEventRenderMeta(e) {
 let currentUser = null
 let events = []
 let container = null
-let filters = { cities: ['Berlin'], locationId: 'alle', dates: [], search: '' }
+// when: '' | 'heute' | 'wochenende', type: '' | 'konzert' | 'party' (Schnellfilter unter der Filterleiste)
+let filters = { cities: ['Berlin'], locationId: 'alle', dates: [], search: '', when: '', type: '' }
 let headerScrollListenerAdded = false
 let bookmarked = loadData('bookmarked') || []
 let going = loadData('going') || []
@@ -483,6 +484,8 @@ function focusEvent(event) {
   currentView = 'liste'
   filters.cities = [loc ? loc.city : (event.locationCity || 'Berlin')]
   filters.locationId = 'alle'
+  filters.when = ''
+  filters.type = ''
   filters.search = event.title
   searchTyped = false
   clearTimeout(searchAutoClearTimer)
@@ -632,13 +635,13 @@ const SETTINGS_GUIDE = [
   ]],
   ['Events', [
     ['Überblick', 'Alle Konzerte und Partys in Berlin und Leipzig, nach Datum sortiert.'],
-    ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen (z. B. nach einem Künstler).'],
+    ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen (z. B. nach einem Künstler). Mit den Knöpfen darunter zeigst Du nur „Heute“, „Wochenende“ (Freitag bis Sonntag), „Konzerte“ oder „Partys“, nochmal tippen schaltet den Filter wieder aus. Über der Liste steht, wie viele Events passen.'],
     ['Suche leert sich selbst', 'Gibt es keinen Treffer, verschwindet der Suchbegriff nach 2 Sekunden. Gibt es Treffer, wird das Suchfeld geleert, sobald Du ein Event vormerkst oder „Bin dabei“ wählst, oder wenn Du 5 Sekunden lang nichts tippst oder berührst.'],
     ['Vormerken und Dabei', 'Tippe unter der Karte auf {herz} „Merken“ oder {haken} „Dabei“, nochmal tippen nimmt es zurück. Alternativ wischst Du die Karte nach links.'],
     ['Icon-Leiste', '{info} Link zum Event, {spotify} Spotify, hinter ⋯ der Kalender ({apple} Apple, {google} Google) und {share} Teilen.']
   ]],
   ['Kalender', [
-    ['Monatsübersicht', 'Tippe auf einen Tag, um alle Events an diesem Tag zu sehen. Mehrere Tage lassen sich gleichzeitig auswählen.']
+    ['Monatsübersicht', 'Tage mit Events sind hervorgehoben, die Punkte darunter zeigen, wie viel los ist (1 Punkt: 1 bis 2 Events, 2 Punkte: 3 bis 5, 3 Punkte: mehr). Heute hat einen hellen Ring. Tippe auf einen Tag, um alle Events an diesem Tag zu sehen, mehrere Tage lassen sich gleichzeitig auswählen. Die Schnellfilter wirken auch hier.']
   ]],
   ['Gemerkt', [
     ['Meine Merkliste', 'Deine vorgemerkten Events und die, bei denen Du dabei bist. Unter jeder Karte steht, wer das Event ebenfalls {herz} vorgemerkt hat oder {haken} dabei ist: „Du“, Lords mit Namen und alle übrigen als „weitere Lords“ (nur Lords mit freigegebener Merkliste).'],
@@ -943,7 +946,7 @@ function renderFilters() {
     : (locations.find(l => l.id == filters.locationId)?.name || 'Alle Locations')
 
   return `
-    <div class="glass rounded-2xl p-3 mb-5" style="overflow:visible; position:relative; z-index:10; display:flex; flex-direction:column; gap:8px;">
+    <div class="glass rounded-2xl p-3 mb-3" style="overflow:visible; position:relative; z-index:10; display:flex; flex-direction:column; gap:8px;">
       <div style="display:flex; gap:0; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:3px;">
         ${['Berlin', 'Leipzig'].map(c => {
           const active = filters.cities[0] === c
@@ -976,11 +979,35 @@ function renderFilters() {
         </div>
       </div>
     </div>
+    <div role="group" aria-label="Schnellfilter" style="display:flex; gap:6px; margin-bottom:20px;">
+      ${[['when:heute', 'Heute'], ['when:wochenende', 'Wochenende'], ['type:konzert', 'Konzerte'], ['type:party', 'Partys']].map(([key, label]) => {
+        const [k, v] = key.split(':')
+        const on = filters[k] === v
+        return `<button data-chip="${key}" aria-pressed="${on}" class="syne" style="flex:1 1 auto; min-width:0; height:40px; padding:0 8px; border-radius:12px; cursor:pointer; font-size:12px; font-weight:600; white-space:nowrap; ${on
+          ? 'background:linear-gradient(135deg,rgba(99,102,241,0.55),rgba(168,85,247,0.45)); border:1px solid rgba(129,140,248,0.6); color:white;'
+          : 'background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.7);'}">${label}</button>`
+      }).join('')}
+    </div>
   `
 }
 
+// Freitag bis Sonntag des kommenden bzw. laufenden Wochenendes (YYYY-MM-DD)
+function weekendDates() {
+  const now = new Date(); now.setHours(12, 0, 0, 0)
+  const dow = now.getDay()   // 0 = Sonntag
+  const start = new Date(now)
+  if (dow >= 1 && dow <= 4) start.setDate(now.getDate() + (5 - dow))
+  const days = start.getDay() === 5 ? 3 : start.getDay() === 6 ? 2 : 1
+  return Array.from({ length: days }, (_, i) => { const d = new Date(start); d.setDate(start.getDate() + i); return d.toLocaleDateString('sv-SE') })
+}
+
 function getFilteredEvents() {
+  const weekend = filters.when === 'wochenende' ? weekendDates() : null
+  const todayStr = localToday()
   return events.filter(e => {
+    if (filters.type && e.type !== filters.type) return false
+    if (filters.when === 'heute' && e.date !== todayStr) return false
+    if (weekend && !weekend.includes(e.date)) return false
     const loc = locationsById.get(e.locationId)
     const city = loc ? loc.city : (e.locationCity || '')
     if (!city) return true
@@ -1024,6 +1051,7 @@ function renderGroupedEvents() {
     return `<div class="text-center py-20" style="color:rgba(255,255,255,0.6);"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p></div>`
   }
   return `
+    <p class="text-xs" style="color:rgba(255,255,255,0.6); margin:-6px 0 14px;" aria-live="polite">${future.length} ${future.length === 1 ? 'Event' : 'Events'}</p>
     <div class="space-y-8">
       ${Object.entries(groups).map(([label, evts]) => `
         <div>
@@ -1181,14 +1209,16 @@ function renderCalendarContent() {
   const monthName = viewDate.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })
   const filteredAll = getFilteredEvents()
   const eventDates = filteredAll.map(e => e.date)
+  const eventCount = {}
+  for (const d of eventDates) eventCount[d] = (eventCount[d] || 0) + 1
   const filtered = filters.dates.length > 0 ? filteredAll.filter(e => filters.dates.includes(e.date)) : []
 
   return `
     <div class="glass rounded-2xl p-5 mb-5" style="position:relative; z-index:1;">
       <div class="flex items-center justify-between mb-5">
-        <button data-cal-prev class="btn-glass w-9 h-9 rounded-xl flex items-center justify-center text-slate-400 hover:text-white">‹</button>
+        <button data-cal-prev aria-label="Vorheriger Monat" class="btn-glass w-11 h-11 rounded-xl flex items-center justify-center text-slate-300 hover:text-white">‹</button>
         <h2 class="syne font-700 text-white tracking-wide capitalize">${monthName}</h2>
-        <button data-cal-next class="btn-glass w-9 h-9 rounded-xl flex items-center justify-center text-slate-400 hover:text-white">›</button>
+        <button data-cal-next aria-label="Nächster Monat" class="btn-glass w-11 h-11 rounded-xl flex items-center justify-center text-slate-300 hover:text-white">›</button>
       </div>
       <div class="grid grid-cols-7 gap-1 text-center mb-3">
         ${['Mo','Di','Mi','Do','Fr','Sa','So'].map(d => `<div class="text-xs font-semibold py-1" style="color:rgba(255,255,255,0.6);">${d}</div>`).join('')}
@@ -1204,12 +1234,14 @@ function renderCalendarContent() {
           const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`
           const isPast = dateStr < todayStr && !isToday
           return `
-            <button data-date="${dateStr}" style="aspect-ratio:1; border-radius:12px; font-size:14px; font-weight:500; display:flex; align-items:center; justify-content:center; position:relative; transition:all 0.15s; ${isPast ? 'opacity:0.25;' : ''} color:${!hasEvent && !isSelected && !isToday ? 'rgba(255,255,255,0.2)' : 'white'}; background:${isSelected ? 'rgba(99,102,241,0.5)' : hasEvent ? 'rgba(99,102,241,0.12)' : 'transparent'}; border:${isSelected ? '1px solid rgba(99,102,241,0.6)' : hasEvent ? '1px solid rgba(99,102,241,0.25)' : isToday ? '1px solid rgba(255,255,255,0.2)' : '1px solid transparent'}; padding:4px; cursor:pointer;">
+            <button data-date="${dateStr}" style="aspect-ratio:1; border-radius:12px; font-size:14px; font-weight:500; display:flex; align-items:center; justify-content:center; position:relative; transition:all 0.15s; ${isPast ? 'opacity:0.25;' : ''} color:${!hasEvent && !isSelected && !isToday ? 'rgba(255,255,255,0.2)' : 'white'}; background:${isSelected ? 'rgba(99,102,241,0.5)' : hasEvent ? 'rgba(99,102,241,0.12)' : 'transparent'}; border:${isSelected ? '1px solid rgba(99,102,241,0.6)' : hasEvent ? '1px solid rgba(99,102,241,0.25)' : isToday ? '1px solid rgba(255,255,255,0.2)' : '1px solid transparent'}; ${isToday ? 'box-shadow:0 0 0 2px rgba(165,180,252,0.85); font-weight:700;' : ''} padding:4px; cursor:pointer;" aria-label="${day}.${hasEvent ? ', ' + eventCount[dateStr] + (eventCount[dateStr] === 1 ? ' Event' : ' Events') : ''}${isToday ? ', heute' : ''}">
               ${day}
+              ${hasEvent ? `<span aria-hidden="true" style="position:absolute; bottom:5px; left:0; right:0; display:flex; justify-content:center; gap:2px;">${Array.from({ length: eventCount[dateStr] <= 2 ? 1 : eventCount[dateStr] <= 5 ? 2 : 3 }, () => '<i style="width:4px; height:4px; border-radius:50%; background:#a5b4fc; display:block;"></i>').join('')}</span>` : ''}
             </button>
           `
         }).join('')}
       </div>
+      ${calendarOffset !== 0 ? `<button data-cal-today class="mt-4 w-full text-xs rounded-xl text-slate-300 hover:text-white transition-all btn-glass" style="height:44px;">Zurück zum aktuellen Monat</button>` : ''}
       ${filters.dates.length > 0 ? `
         <button data-clear-dates class="mt-4 w-full text-xs py-2 rounded-xl text-slate-300 hover:text-white transition-all btn-glass">
           Auswahl zurücksetzen (${filters.dates.length} ${filters.dates.length === 1 ? 'Tag' : 'Tage'})
@@ -1859,6 +1891,14 @@ function clearTypedSearch() {
 }
 
 function attachFilterBarEvents() {
+  // Schnellfilter: nochmal tippen schaltet aus
+  document.querySelectorAll('[data-chip]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const [k, v] = btn.dataset.chip.split(':')
+      filters[k] = filters[k] === v ? '' : v
+      updateView(true)
+    })
+  })
   document.querySelectorAll('[data-city]').forEach(btn => {
     btn.addEventListener('click', () => {
       filters.cities = [btn.dataset.city]
@@ -1932,6 +1972,7 @@ function attachCalendarEvents() {
       refreshCalendarPane()
     })
   })
+  document.querySelector('[data-cal-today]')?.addEventListener('click', () => { calendarOffset = 0; refreshCalendarPane() })
   document.querySelector('[data-clear-dates]')?.addEventListener('click', () => { filters.dates = []; refreshCalendarPane() })
 }
 
