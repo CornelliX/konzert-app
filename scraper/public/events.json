@@ -297,6 +297,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 1715877264,
+    "title": "FERVENTS & ULLA SUSPEKT",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100638-tickets-fervents-ulla-suspekt-schokoladen-berlin-am-06-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-28"
+  },
+  {
     "id": 536949929,
     "title": "Viic Woods- Indie Rock",
     "date": "2026-11-06",
@@ -541,19 +554,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1715877264,
-    "title": "FERVENTS & ULLA SUSPEKT",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100638-tickets-fervents-ulla-suspekt-schokoladen-berlin-am-06-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-28"
   },
   {
     "id": 71819305,
@@ -1126,6 +1126,19 @@
     "addedAt": "2026-09-15"
   },
   {
+    "id": 1975374640,
+    "title": "Bial Hclap & Band & Yugo Taguchi & Frieda",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102647-tickets-bial-hclap-band-yugo-taguchi-frieda-schokoladen-berlin-am-07-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-10-28"
+  },
+  {
     "id": 284270521,
     "title": "Lament – Dark Pop",
     "date": "2026-11-07",
@@ -1306,6 +1319,19 @@
     "addedAt": "2026-09-27"
   },
   {
+    "id": 468426139,
+    "title": "fragFrank!",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/fragfrank/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1569214515,
     "title": "The Return of »Ba(a)d Schandau Express« | AG. Geige vs. A.E. Bizottság",
     "date": "2026-11-07",
@@ -1345,17 +1371,17 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1975374640,
-    "title": "Bial Hclap & Band & Yugo Taguchi & Frieda",
+    "id": 1553634135,
+    "title": "Stefanie Heinzmann - Circles Tour 2026",
     "date": "2026-11-07",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 59,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102647-tickets-bial-hclap-band-yugo-taguchi-frieda-schokoladen-berlin-am-07-11-2026",
+    "ticketUrl": "https://www.rbb-online.de/unternehmen/service/veranstaltungen/2026/stefanie-heinzmann.html",
     "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-28"
+    "source": "rbb-sendesaal",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 123914771,
@@ -1384,19 +1410,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 468426139,
-    "title": "fragFrank!",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/fragfrank/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1880822473,
     "title": "Tokio Hotel",
     "date": "2026-11-07",
@@ -1408,19 +1421,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1553634135,
-    "title": "Stefanie Heinzmann - Circles Tour 2026",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 59,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.rbb-online.de/unternehmen/service/veranstaltungen/2026/stefanie-heinzmann.html",
-    "spotifyUrl": "",
-    "source": "rbb-sendesaal",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 200902024,
@@ -2071,6 +2071,19 @@
     "addedAt": "2026-11-06"
   },
   {
+    "id": 1117313662,
+    "title": "Nichtseattle",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 59,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.rbb-online.de/unternehmen/service/veranstaltungen/2026/nichtseattle.html",
+    "spotifyUrl": "",
+    "source": "rbb-sendesaal",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1522502321,
     "title": "MAYFLOWER MADAME + BLKE - Berlin Show @Urban…",
     "date": "2026-11-08",
@@ -2108,19 +2121,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1117313662,
-    "title": "Nichtseattle",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 59,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.rbb-online.de/unternehmen/service/veranstaltungen/2026/nichtseattle.html",
-    "spotifyUrl": "",
-    "source": "rbb-sendesaal",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 2046892229,
@@ -2240,6 +2240,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 1907507839,
+    "title": "SHAKI TAVI",
+    "date": "2026-11-09",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99742-tickets-shaki-tavi-exp-indie-rock-shoegaze-us-schokoladen-berlin-am-09-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1490910146,
     "title": "deary",
     "date": "2026-11-09",
@@ -2328,19 +2341,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 1907507839,
-    "title": "SHAKI TAVI",
-    "date": "2026-11-09",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99742-tickets-shaki-tavi-exp-indie-rock-shoegaze-us-schokoladen-berlin-am-09-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1879303067,
@@ -2525,6 +2525,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 935626267,
+    "title": "EDGING",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/98384-tickets-edging-post-punk-chicago-schokoladen-berlin-am-10-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1164185773,
     "title": "Feeble Little Horse",
     "date": "2026-11-10",
@@ -2652,19 +2665,6 @@
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 935626267,
-    "title": "EDGING",
-    "date": "2026-11-10",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/98384-tickets-edging-post-punk-chicago-schokoladen-berlin-am-10-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 212713239,
@@ -2953,6 +2953,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 842936726,
+    "title": "Bureau De Change + Mad Kitten",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99498-tickets-bureau-de-change-mad-kitten-schokoladen-berlin-am-11-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1023727250,
     "title": "Gershkovich/Götze/Stadtfeld – Piano Legacy",
     "date": "2026-11-11",
@@ -3118,19 +3131,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 842936726,
-    "title": "Bureau De Change + Mad Kitten",
-    "date": "2026-11-11",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99498-tickets-bureau-de-change-mad-kitten-schokoladen-berlin-am-11-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1848650090,
@@ -3418,6 +3418,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 1358623971,
+    "title": "Pyro One + KET",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/91693-tickets-pyro-one-ket-schokoladen-berlin-am-12-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 765989923,
     "title": "Love'n'Joy",
     "date": "2026-11-12",
@@ -3675,19 +3688,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1358623971,
-    "title": "Pyro One + KET",
-    "date": "2026-11-12",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/91693-tickets-pyro-one-ket-schokoladen-berlin-am-12-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1698384471,
     "title": "Red RHYTHM – Swing Dance Night",
     "date": "2026-11-12",
@@ -3803,6 +3803,19 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 692293428,
+    "title": "Dying Phoenix - XV Years in Fire",
+    "date": "2026-11-13",
+    "time": "19:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OuLq5WEE-D5-tQcOUTx",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 22288135,
@@ -3974,6 +3987,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 60967497,
+    "title": "FLIGHTMODE",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101564-tickets-flightmode-schokoladen-berlin-am-13-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1630653339,
     "title": "Jakob Maes Jazzorchester – Big Band, Jazz",
     "date": "2026-11-13",
@@ -4050,6 +4076,19 @@
     "spotifyUrl": "",
     "source": "madameclaude",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1572310326,
+    "title": "Digitalism",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OoPYR3hTJtXuAT6LPer",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 31273447,
@@ -4165,19 +4204,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 60967497,
-    "title": "FLIGHTMODE",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101564-tickets-flightmode-schokoladen-berlin-am-13-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 989126287,
@@ -4568,6 +4594,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1675904006,
+    "title": "UltraNothing",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100603-tickets-ultranothing-post-punk-luxembourg-schokoladen-berlin-am-14-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-03"
+  },
+  {
     "id": 1840704019,
     "title": "Camona – Soul",
     "date": "2026-11-14",
@@ -4826,19 +4865,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1675904006,
-    "title": "UltraNothing",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100603-tickets-ultranothing-post-punk-luxembourg-schokoladen-berlin-am-14-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-03"
-  },
-  {
     "id": 502073208,
     "title": "70 JAHRE BRAVO",
     "date": "2026-11-14",
@@ -4955,19 +4981,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1044365510,
-    "title": "Monkey Safari - YDKWTD - (All Night Long) Album Release Party",
-    "date": "2026-11-14",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/141126-MonkeySafari",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1674855362,
     "title": "When the Sun Hits",
     "date": "2026-11-14",
@@ -4978,6 +4991,19 @@
     "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-7/",
     "spotifyUrl": "",
     "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1044365510,
+    "title": "Monkey Safari - YDKWTD - (All Night Long) Album Release Party",
+    "date": "2026-11-14",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/141126-MonkeySafari",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
     "addedAt": "2026-11-02"
   },
   {
@@ -5395,6 +5421,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 952666035,
+    "title": "Eine große Liebe",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "locationId": 59,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.rbb-online.de/unternehmen/service/veranstaltungen/2026/kiko_15112026.html",
+    "spotifyUrl": "",
+    "source": "rbb-sendesaal",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1687017098,
     "title": "Spike Fuck",
     "date": "2026-11-15",
@@ -5419,19 +5458,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 952666035,
-    "title": "Eine große Liebe",
-    "date": "2026-11-15",
-    "time": "20:00",
-    "locationId": 59,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.rbb-online.de/unternehmen/service/veranstaltungen/2026/kiko_15112026.html",
-    "spotifyUrl": "",
-    "source": "rbb-sendesaal",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 578959005,
@@ -5551,6 +5577,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1251235866,
+    "title": "ILA & I Love You Honey Bunny",
+    "date": "2026-11-16",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/94890-tickets-ila-i-love-you-honey-bunny-schokoladen-berlin-am-16-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 2096625993,
     "title": "L'Oreille en friche presents: MARTHE X PILANI BUBU",
     "date": "2026-11-16",
@@ -5640,19 +5679,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 1251235866,
-    "title": "ILA & I Love You Honey Bunny",
-    "date": "2026-11-16",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/94890-tickets-ila-i-love-you-honey-bunny-schokoladen-berlin-am-16-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-04"
   },
   {
     "id": 799250225,
@@ -5875,6 +5901,19 @@
     "addedAt": "2026-09-23"
   },
   {
+    "id": 2102826329,
+    "title": "LSD - Liebe Statt Drogen",
+    "date": "2026-11-17",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/94899-tickets-lsd-liebe-statt-drogen-schokoladen-berlin-am-17-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 250830686,
     "title": "Adult DVD",
     "date": "2026-11-17",
@@ -6054,19 +6093,6 @@
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 2102826329,
-    "title": "LSD - Liebe Statt Drogen",
-    "date": "2026-11-17",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/94899-tickets-lsd-liebe-statt-drogen-schokoladen-berlin-am-17-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-06"
   },
   {
     "id": 27453938,
@@ -7557,6 +7583,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 2022768922,
+    "title": "twiceasmad",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/twiceasmad/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 936328045,
     "title": "SHOW DOWN – Wettstreit der Magier",
     "date": "2026-11-20",
@@ -7606,19 +7645,6 @@
     "ticketUrl": "https://www.taeubchenthal.com/programm/haze-jubil%C3%A4umstour-2026-leipzig_",
     "spotifyUrl": "",
     "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 2022768922,
-    "title": "twiceasmad",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/twiceasmad/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-11-02"
   },
   {
@@ -8267,6 +8293,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 400571336,
+    "title": "geburtstag 40 er",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/geburtstag-40-er/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 947644172,
     "title": "SHOW DOWN – Wettstreit der Magier",
     "date": "2026-11-21",
@@ -8342,19 +8381,6 @@
     "ticketUrl": "https://www.taeubchenthal.com/programm/future-palace-leipzig-2026",
     "spotifyUrl": "",
     "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 400571336,
-    "title": "geburtstag 40 er",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/geburtstag-40-er/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-11-02"
   },
   {
@@ -9119,19 +9145,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 1943764399,
-    "title": "LEAP",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "locationId": 15,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.taeubchenthal.com/programm/leap-leipzig-2026",
-    "spotifyUrl": "",
-    "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1388601363,
     "title": "TINA DICO & BAND auf Herbsttour 2026",
     "date": "2026-11-23",
@@ -9143,6 +9156,19 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1943764399,
+    "title": "LEAP",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "locationId": 15,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.taeubchenthal.com/programm/leap-leipzig-2026",
+    "spotifyUrl": "",
+    "source": "taeubchenthal",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 135029508,
@@ -10184,6 +10210,19 @@
     "addedAt": "2026-11-06"
   },
   {
+    "id": 920226235,
+    "title": "Rundfunk-Sinfonieorchester Berlin: Moderierte Probe mit Vladimir Jurowski",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 59,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.rbb-online.de/unternehmen/service/veranstaltungen/2026/rsb-offene-Probe11.html",
+    "spotifyUrl": "",
+    "source": "rbb-sendesaal",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 2011466232,
     "title": "COOGANS BLUFF 10 Years Of Flying To The Stars",
     "date": "2026-11-26",
@@ -10208,19 +10247,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 920226235,
-    "title": "Rundfunk-Sinfonieorchester Berlin: Moderierte Probe mit Vladimir Jurowski",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 59,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.rbb-online.de/unternehmen/service/veranstaltungen/2026/rsb-offene-Probe11.html",
-    "spotifyUrl": "",
-    "source": "rbb-sendesaal",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1510889580,
@@ -10673,6 +10699,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1251246961,
+    "title": "Everything Dies + X",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/everything-dies-x/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 933234445,
     "title": "5raumfenster",
     "date": "2026-11-27",
@@ -10774,19 +10813,6 @@
     "ticketUrl": "https://www.taeubchenthal.com/programm/rathmann-privatclub-berlin",
     "spotifyUrl": "",
     "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1251246961,
-    "title": "Everything Dies + X",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/everything-dies-x/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-11-02"
   },
   {
@@ -14291,6 +14317,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 168945183,
+    "title": "When the Sun Hits",
+    "date": "2026-12-05",
+    "time": "22:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-8/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 954988825,
     "title": "MICHAEL CANITROT",
     "date": "2026-12-05",
@@ -14314,19 +14353,6 @@
     "ticketUrl": "https://club.ritterbutzke.com/event/051226-DONDIABLO",
     "spotifyUrl": "",
     "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 168945183,
-    "title": "When the Sun Hits",
-    "date": "2026-12-05",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-8/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-11-02"
   },
   {
@@ -15092,6 +15118,19 @@
     "spotifyUrl": "",
     "source": "kantine",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 793835076,
+    "title": "Dr. Khaled Ghattass",
+    "date": "2026-12-08",
+    "time": "20:00",
+    "locationId": 25,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tempodrom.de/event/dr-khaled_ghattass_2026-12-08_20/",
+    "spotifyUrl": "",
+    "source": "tempodrom",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 483555255,
@@ -16517,6 +16556,19 @@
     "addedAt": "2026-11-06"
   },
   {
+    "id": 261913641,
+    "title": "Samsta + ?",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/samsta/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1297070537,
     "title": "Generation Parocktikum | im UT Connewitz",
     "date": "2026-12-12",
@@ -16592,19 +16644,6 @@
     "ticketUrl": "https://www.taeubchenthal.com/programm/remode-leipzig-2026",
     "spotifyUrl": "",
     "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 261913641,
-    "title": "Samsta + ?",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/samsta/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
     "addedAt": "2026-11-02"
   },
   {
@@ -18587,6 +18626,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1026917258,
+    "title": "Thomas Schernikau | From Forced To Mode",
+    "date": "2026-12-19",
+    "time": "20:30",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/thomas-schernikau-moritzbastei-21701611/?srsltid=AfmBOoqQzNDcteYncIF6anF7u-29gVjQX5CHYE6vfzy7bbw0GslqP2gl",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 258046674,
     "title": "DANCING WITH TEARS IN YOUR EYES",
     "date": "2026-12-19",
@@ -19092,6 +19144,19 @@
     "addedAt": "2026-11-03"
   },
   {
+    "id": 1674407436,
+    "title": "CAFÉ geschlossen",
+    "date": "2026-12-26",
+    "time": "10:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/special/2026-12-26/cafe-geschlossen-9",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 671421410,
     "title": "Schwanensee – Grand Classic Ballet mit Orchester",
     "date": "2026-12-26",
@@ -19313,6 +19378,19 @@
     "addedAt": "2026-09-29"
   },
   {
+    "id": 77477897,
+    "title": "PHILLIP BOA AND THE VOODOOCLUB",
+    "date": "2026-12-27",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77041",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1885651724,
     "title": "Die Gorillas",
     "date": "2026-12-27",
@@ -19452,6 +19530,19 @@
     "ticketUrl": "https://www.ilseserika.de/termine-65/gelee-ger-lynt-ger-live-ilses-erika-a-disco-80s-vs-italo-disco.html",
     "spotifyUrl": "",
     "source": "ilseserika",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1147411493,
+    "title": "CAFÉ geschlossen",
+    "date": "2026-12-30",
+    "time": "10:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/special/2026-12-30/cafe-geschlossen-11",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
     "addedAt": "2026-11-06"
   },
   {
@@ -19818,6 +19909,19 @@
     "addedAt": "2026-11-04"
   },
   {
+    "id": 228498048,
+    "title": "Moritzbastei SILVESTERPARTY 2026",
+    "date": "2026-12-31",
+    "time": "22:00",
+    "locationId": 18,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/78138",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1963724765,
     "title": "Hippie New Year",
     "date": "2026-12-31",
@@ -19959,6 +20063,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 204505914,
+    "title": "11Freunde Kneipenquiz",
+    "date": "2027-01-07",
+    "time": "19:30",
+    "locationId": 18,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-07/11freunde-kneipenquiz-2",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 858686246,
@@ -20557,6 +20674,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 749080878,
+    "title": "Only Stillness",
+    "date": "2027-01-15",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77419",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1135657102,
     "title": "Comedyflash",
     "date": "2027-01-15",
@@ -20762,6 +20892,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 157356685,
+    "title": "Grausame Töchter  + Special Guest: VAMPYROS LESBOS",
+    "date": "2027-01-16",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim-light.com/de/a/5c7ffae04d96f500018ae55f/e/6a55f3be8728b2492791ab67",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 306664151,
@@ -24681,6 +24824,18 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1664471150,
+    "title": "Havana Berlin Express",
+    "date": "2027-02-19",
+    "time": "22:00",
+    "type": "konzert",
+    "locationId": 37,
+    "source": "quasimodo",
+    "ticketUrl": "https://quasimodo.club/events/havana-berlin-express-2-7520",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1942895330,
@@ -35545,32 +35700,6 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 463511561,
-    "title": "Halloween in der Kulturbrauerei",
-    "date": "2027-10-30",
-    "time": "22:00",
-    "locationId": 29,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P-TNJbhSxtb5kNsnin1",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
-    "id": 814311498,
-    "title": "Halloween in der Kulturbrauerei",
-    "date": "2027-10-31",
-    "time": "22:00",
-    "locationId": 29,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P-TOxDWIq2E9JwLC4-M",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-06"
   },
   {
     "id": 728135420,
