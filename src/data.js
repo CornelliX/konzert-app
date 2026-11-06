@@ -94,9 +94,11 @@ import { loadManualEvents } from './supabase.js'
 
 export async function getEvents() {
   try {
-    const res = await fetch('./events.json')
-    const scraped = res.ok ? await res.json() : []
-    const manual = await loadManualEvents()
+    // Gleichzeitig laden statt nacheinander (verkürzt die Startzeit um eine Netzwerk-Runde)
+    const [scraped, manual] = await Promise.all([
+      fetch('./events.json').then(res => res.ok ? res.json() : []),
+      loadManualEvents()
+    ])
     return [...scraped, ...manual]
   } catch(e) {
     console.log('Fehler beim Laden:', e)

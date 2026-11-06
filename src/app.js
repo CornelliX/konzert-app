@@ -208,13 +208,17 @@ export async function renderApp(el) {
   if (!isReload) {
     document.getElementById('app-inner').innerHTML = renderSkeleton()
   }
-  ;[currentUser, events] = await Promise.all([getUser(), getEvents()])
+  // Alles Unabhängige gleichzeitig laden (das C64-Intro steht, bis das fertig ist). Ohne Anmeldung liefern
+  // loadBookmarks/loadRadar/loadHistory sofort leer zurück, ohne Netzwerkzugriff.
+  const [user, evs, bm, radarList, hist] = await Promise.all([getUser(), getEvents(), loadBookmarks(), loadRadar(), loadHistory()])
+  currentUser = user
+  events = evs
   if (currentUser) {
-    const merged = await mergeAndSyncBookmarks()
+    const merged = await mergeAndSyncBookmarks(bm)
     bookmarked = merged.bookmarked
     going = merged.going
-    await checkRadarMatches()
-    history = await loadHistory()
+    await checkRadarMatches(radarList)
+    history = hist
     await syncGoingToHistory()
     await backfillRadarFromHistory()
   }
@@ -228,7 +232,7 @@ export async function renderApp(el) {
     // Die App selbst lädt inzwischen (Netzwerk + Render) in ca. 1s - das C64-Intro sollte
     // diese Zeit überbrücken, nicht selbst noch draufsatteln. Früher 0.6s Fade + 800ms
     // Fallback, das hängte nach fertigem Laden nochmal spürbar Zeit an. Jetzt kürzer.
-    c64El.style.transition = 'opacity 0.25s ease'
+    c64El.style.transition = 'opacity 0.15s ease'
     requestAnimationFrame(() => {
       c64El.style.opacity = '0'
       // Sofort klick-durchlässig machen, sobald das Ausblenden beginnt - so kann das
@@ -238,13 +242,14 @@ export async function renderApp(el) {
       const removeC64 = () => c64El.remove()
       c64El.addEventListener('transitionend', removeC64, { once: true })
       // Fallback: Element in jedem Fall entfernen, auch wenn transitionend nie feuert
-      setTimeout(removeC64, 400)
+      setTimeout(removeC64, 300)
     })
   }
 }
 
-async function mergeAndSyncBookmarks() {
-  const bm = await loadBookmarks()
+// bm: bereits geladene Lesezeichen (Start lädt sie parallel zu den Events), sonst wird hier geladen
+async function mergeAndSyncBookmarks(bm = null) {
+  bm ??= await loadBookmarks()
   const validIds = events.map(e => e.id)
 
   const localBm = loadData('bookmarked') || []
@@ -276,8 +281,8 @@ function artistMatchesEvent(artist, event) {
 // Prüft die Radar-Künstlerliste des Nutzers gegen die frisch geladenen Events - bei Treffer
 // wird das Event automatisch vorgemerkt (wie ein normaler Bookmark) und sofort aus dem Radar
 // gelöscht, statt bei jedem künftigen Scrape erneut zu matchen (Spec: einmaliger Treffer).
-async function checkRadarMatches() {
-  radar = await loadRadar()
+async function checkRadarMatches(loaded = null) {
+  radar = loaded ?? await loadRadar()
   if (!radar.length) return
   const matches = []
   for (const r of radar) {
