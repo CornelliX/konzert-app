@@ -662,12 +662,79 @@ const SETTINGS_GUIDE = [
     ['Lord-Titel', 'Hier wählst Du einen Usernamen (2 bis 15 Zeichen), den andere über Deiner Merkliste und Deiner History sehen.'],
     ['Merkliste für alle sichtbar', 'Andere Lords sehen Deine vorgemerkten und „dabei“-Events samt Lord-Titel, als Liste „Merkliste von Lord …“ und an ihren eigenen Events.'],
     ['History für alle sichtbar', 'Andere Lords sehen Deine besuchten Konzerte mit Sternen.'],
-    ['Standard', 'Beide Schalter sind zunächst auf „off“ und müssen von Dir eingeschaltet werden.']
+    ['Standard', 'Beide Schalter sind zunächst auf „off“ und müssen von Dir eingeschaltet werden.'],
+    ['Statistik', 'Unter der Anleitung klappst Du die Statistik auf: Zahlen aus Deiner History für „Dieses Jahr“ und „Insgesamt“ (Konzerte, Sterne, Locations, Künstler, Monat mit meisten Konzerten). Hat kein anderer Lord einen höheren Wert, steht dahinter 👑 LORD-REKORD! 👑, bei Gleichstand bei allen. Verglichen wird mit allen Lords, die ihre History freigegeben haben.']
   ]],
   ['Anmeldung', [
     ['E-Mail-Code', 'Merkliste, History und Radar funktionieren nur bei Anmeldung via E-Mail-Code. Ohne Anmeldung kannst Du nur in der Eventübersicht stöbern.']
   ]]
 ]
+
+// ── Statistik (Einstellungen): eigene History gegen die der Lords mit freigegebener History ──────────
+
+const MONTH_NAMES = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
+const STATS_CROWN = '<span style="color:#facc15; font-weight:800; white-space:nowrap;">👑 LORD-REKORD! 👑</span>'
+
+// entries: History-Einträge; year: "2026" für "Dieses Jahr", null für "Insgesamt"
+function computeStats(entries, year) {
+  const list = year ? entries.filter(h => h.date.startsWith(year + '-')) : entries
+  const locations = new Map(), artists = new Map(), months = new Map()
+  const bump = (map, key, name) => { const e = map.get(key); if (e) e.n++; else map.set(key, { name, n: 1 }) }
+  let rated = 0, sum = 0, five = 0
+  for (const h of list) {
+    if (h.rating) { rated++; sum += h.rating; if (h.rating === 5) five++ }
+    const loc = String(h.locationName ?? '').trim()
+    if (loc) bump(locations, `${loc}|${String(h.locationCity ?? '').trim()}`.toLowerCase(), loc)
+    const act = stripEdgeEmoji(h.title).trim()
+    if (act) bump(artists, act.toLowerCase(), act)
+    bump(months, h.date.slice(0, 7), h.date.slice(0, 7))
+  }
+  return { count: list.length, avg: rated ? Math.round(sum / rated * 10) / 10 : null, five, locations, artists, months }
+}
+
+// Absteigend nach Anzahl, bei Gleichstand nach Name (Monate: der jüngere zuerst)
+const rankStats = (map, months = false) => [...map].sort(([ka, a], [kb, b]) => b.n - a.n || (months ? kb.localeCompare(ka) : a.name.localeCompare(b.name, 'de')))
+
+// Rekord: kein anderer Lord hat mehr (Gleichstand = alle bekommen ihn). Nicht bei 0/leer und nicht ohne Vergleichspartner.
+const isStatRecord = (mine, others) => mine > 0 && others.length > 0 && others.every(o => (o || 0) <= mine)
+
+function renderStatsHtml() {
+  const mine = history.filter(isHistoryVisible)
+  const peerEntries = communityRaw.map(p => p.entries)
+  const thisYear = localToday().slice(0, 4)
+  const section = (title, year) => {
+    const me = computeStats(mine, year)
+    const others = peerEntries.map(e => computeStats(e, year))
+    const crown = (v, pick) => isStatRecord(v, others.map(pick)) ? ' ' + STATS_CROWN : ''
+    const li = (label, value) => `<li class="text-xs" style="color:rgba(255,255,255,0.55); line-height:1.5; margin-top:6px;"><strong style="color:white; font-weight:700;">${label}:</strong> ${value}</li>`
+    const top5 = rankStats(me.locations).slice(0, 5)
+    const topArtist = rankStats(me.artists)[0]
+    const bestMonth = rankStats(me.months, true)[0]
+    const monthMax = s => Math.max(0, ...[...s.months.values()].map(m => m.n))
+    const top5Html = top5.length
+      ? `<div style="margin-top:3px;">${top5.map(([key, loc], i) => `<div>${i + 1}. ${esc(loc.name)} · ${loc.n}×${crown(loc.n, o => o.locations.get(key)?.n)}</div>`).join('')}</div>`
+      : '–'
+    return `
+      <h4 class="syne" style="margin:18px 0 6px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.06); font-size:12px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#a5b4fc;">${title}</h4>
+      <ul style="list-style:disc; padding-left:18px; margin:0;">
+        ${li('Besuchte Konzerte', me.count + crown(me.count, o => o.count))}
+        ${li('Vergebene Sterne (Ø)', (me.avg === null ? '–' : String(me.avg).replace('.', ',')) + crown(me.avg, o => o.avg))}
+        ${li('Anzahl der 5-Sterne-Konzerte', me.five + crown(me.five, o => o.five))}
+        ${li('Besuchte Locations', me.locations.size + crown(me.locations.size, o => o.locations.size))}
+        ${li('Top 5 der meistbesuchten Locations', top5Html)}
+        ${li('Verschiedene Künstler', me.artists.size + crown(me.artists.size, o => o.artists.size))}
+        ${li('Meistgesehener Künstler', topArtist ? `${esc(topArtist[1].name)} (${topArtist[1].n}×)${crown(topArtist[1].n, o => o.artists.get(topArtist[0])?.n)}` : '–')}
+        ${li('Monat mit meisten Konzerten', bestMonth ? `${MONTH_NAMES[+bestMonth[0].slice(5) - 1]} ${bestMonth[0].slice(0, 4)}: ${bestMonth[1].n}${crown(bestMonth[1].n, monthMax)}` : '–')}
+      </ul>`
+  }
+  return `
+    <details style="margin-top:14px; border-top:1px solid rgba(255,255,255,0.06); padding-top:14px;">
+      <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Statistik</summary>
+      ${section('Dieses Jahr', thisYear)}
+      ${section('Insgesamt', null)}
+    </details>
+  `
+}
 
 function renderSettingsBody() {
   const guide = `
@@ -705,16 +772,17 @@ function renderSettingsBody() {
     ${row('shareBookmarks', 'Merkliste für alle sichtbar', 'Angemeldete Lords sehen deine vorgemerkten und „dabei“-Events samt deinem Lord-Titel: als Liste „Merkliste von Lord …“ und unter ihren eigenen Events.')}
     ${row('shareHistory', 'History für alle sichtbar', 'Angemeldete Lords können deine besuchten Konzerte samt Sternen unter deinem Lord-Titel ansehen.')}
     ${guide}
+    ${renderStatsHtml()}
   `
 }
 
 function refreshSettingsBody() {
   const body = document.getElementById('settings-body')
   if (!body) return
-  // Anleitung bleibt aufgeklappt, wenn z. B. ein Schalter das Menü neu zeichnet
-  const guideOpen = body.querySelector('details')?.open
+  // Anleitung und Statistik bleiben aufgeklappt, wenn z. B. ein Schalter das Menü neu zeichnet
+  const open = [...body.querySelectorAll('details')].map(d => d.open)
   body.innerHTML = renderSettingsBody()
-  if (guideOpen) body.querySelector('details').open = true
+  body.querySelectorAll('details').forEach((d, i) => { d.open = !!open[i] })
 }
 
 async function loadMyProfile() {
@@ -729,6 +797,7 @@ function openSettingsModal() {
   document.getElementById('modal-settings')?.classList.remove('hidden')
   refreshSettingsBody()
   if (currentUser && !myProfile) loadMyProfile()
+  ensureCommunityLoaded()   // Vergleichswerte der Statistik
 }
 
 function closeSettingsModal() {
@@ -1460,6 +1529,8 @@ function refreshCommunityUI() {
     slides.innerHTML = renderPeerSlides(kind)
     showSlide(kind, CAROUSEL[kind].slide())
   }
+  // Statistik im Einstellungsmenü (nicht neu zeichnen, während der Lord-Titel getippt wird)
+  if (settingsOpen && document.activeElement?.id !== 'settings-lord') refreshSettingsBody()
   attachSwipeGestures()
   // Die neuen Karten der Merklisten anderer brauchen ihre Zeilen (wer dabei ist / vorgemerkt hat)
   if (document.getElementById('bookmark-carousel')) loadMarksForVisible()
