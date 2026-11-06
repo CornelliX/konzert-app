@@ -696,7 +696,7 @@ const SETTINGS_GUIDE = [
     ['Merkliste für alle sichtbar', 'Andere Lords sehen Deine vorgemerkten und „dabei“-Events samt Lord-Titel, als Liste „Merkliste von Lord …“ und an ihren eigenen Events.'],
     ['History für alle sichtbar', 'Andere Lords sehen Deine besuchten Konzerte mit Sternen.'],
     ['Standard', 'Beide Schalter sind zunächst auf „off“ und müssen von Dir eingeschaltet werden.'],
-    ['Statistik', 'In den Einstellungen klappst Du „Statistik“ auf: Zahlen aus Deiner History für „Dieses Jahr“ und „Insgesamt“ (Konzerte, Sterne, Locations, Künstler, Monat mit meisten Konzerten). Hat kein anderer Lord einen höheren Wert, steht dahinter eine Krone 👑 (LORD-REKORD), bei Gleichstand bei allen. Mehrere Konzerte an einem Abend in derselben Location (z. B. Support und Hauptact) zählen für die Top 5 der Locations als ein Besuch. Verglichen wird mit allen Lords, die ihre History freigegeben haben.']
+    ['Statistik', 'In den Einstellungen klappst Du „Statistik“ auf: Zahlen aus Deiner History für „Dieses Jahr“, „Vorherige Jahre“ (aufklappbar, jedes Jahr mit Einträgen einzeln) und „Insgesamt“ (Konzerte, Sterne, Locations, Künstler, Monat mit meisten Konzerten). Hat kein anderer Lord einen höheren Wert, steht dahinter eine Krone 👑 (LORD-REKORD), bei Gleichstand bei allen. Mehrere Konzerte an einem Abend in derselben Location (z. B. Support und Hauptact) zählen für die Top 5 der Locations als ein Besuch. Verglichen wird mit allen Lords, die ihre History freigegeben haben.']
   ]],
   ['Anmeldung', [
     ['E-Mail-Code', 'Merkliste, History und Radar funktionieren nur bei Anmeldung via E-Mail-Code. Ohne Anmeldung kannst Du nur in der Eventübersicht stöbern.']
@@ -754,6 +754,8 @@ function renderStatsHtml() {
   const mine = history.filter(isHistoryVisible)
   const peerEntries = communityRaw.map(p => p.entries)
   const thisYear = localToday().slice(0, 4)
+  // Alle früheren Jahre, in denen die eigene History Einträge hat (neuestes zuerst)
+  const prevYears = [...new Set(mine.map(h => h.date.slice(0, 4)))].filter(y => y < thisYear).sort().reverse()
   const section = (title, year) => {
     const me = computeStats(mine, year)
     const others = peerEntries.map(e => computeStats(e, year))
@@ -793,6 +795,10 @@ function renderStatsHtml() {
       <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Statistik</summary>
       <p class="text-xs" style="color:rgba(255,255,255,0.6); margin-top:10px; line-height:1.45;"><strong style="color:rgba(255,255,255,0.8); font-weight:700;">${STATS_CROWN} = LORD-REKORD</strong> (kein Lord hat einen höheren Wert, mehrere Lords können sich den Rekord teilen)</p>
       ${section('Dieses Jahr', thisYear)}
+      ${prevYears.length ? `<details style="margin-top:18px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.06);">
+        <summary class="syne" style="font-size:12px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#a5b4fc; cursor:pointer;">Vorherige Jahre</summary>
+        ${prevYears.map(y => section(y, y)).join('')}
+      </details>` : ''}
       ${section('Insgesamt', null)}
     </details>
   `
