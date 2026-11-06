@@ -104,7 +104,7 @@ ${v}`}class U extends Error{constructor({message:e,code:r,cause:n,name:s}){var i
           </h1>
         </div>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-          <div class="syne text-right header-tagline" style="color:#c4a1fb; font-weight:700; font-size:min(0.52em, 1.95vw); line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${e?"animation:tagline-appear 1.5s ease 3.5s both;":""}">
+          <div class="syne text-right header-tagline" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:min(0.52em, 1.95vw); line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${e?"animation:tagline-appear 1.5s ease 3.5s both;":""}">
             KONZERTE UND PARTYS<br>IN BERLIN UND LEIPZIG
           </div>
         </div>
