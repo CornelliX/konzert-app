@@ -675,6 +675,19 @@ const SETTINGS_GUIDE = [
 const MONTH_NAMES = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
 const STATS_CROWN = '<span role="img" aria-label="LORD-REKORD" title="LORD-REKORD">👑</span>'
 
+// Vereinheitlicht eine Location-Angabe aus der History. Ältere und von Hand getippte Einträge stehen teils als
+// "Neue Zukunft, Berlin" (Stadt im Namen, city leer), automatisch angelegte als "Neue Zukunft" + city "Berlin".
+// Ist die Location aus der Venueliste bekannt, gilt deren Schreibweise; sonst wird nur ein bekanntes
+// Stadt-Suffix abgetrennt. -> { name, city }
+function canonLocation(rawName, rawCity) {
+  const raw = String(rawName ?? '').trim()
+  let name = raw, city = String(rawCity ?? '').trim()
+  const m = raw.match(/^(.*\S)\s*,\s*([^,]+)$/)
+  if (m && locations.some(l => l.city.toLowerCase() === m[2].trim().toLowerCase())) { name = m[1]; city = city || m[2].trim() }
+  const known = locations.find(l => l.name.toLowerCase() === name.toLowerCase())
+  return known ? { name: known.name, city: known.city } : { name, city }
+}
+
 // entries: History-Einträge; year: "2026" für "Dieses Jahr", null für "Insgesamt"
 function computeStats(entries, year) {
   const list = year ? entries.filter(h => h.date.startsWith(year + '-')) : entries
@@ -683,10 +696,10 @@ function computeStats(entries, year) {
   let rated = 0, sum = 0, five = 0
   for (const h of list) {
     if (h.rating) { rated++; sum += h.rating; if (h.rating === 5) five++ }
-    const loc = String(h.locationName ?? '').trim()
+    const loc = canonLocation(h.locationName, h.locationCity).name
     if (loc) {
       // Ein Besuch = ein Tag an der Location: Haupt- und Support-Act desselben Abends zählen nur einmal
-      const key = `${loc}|${String(h.locationCity ?? '').trim()}`.toLowerCase()
+      const key = loc.toLowerCase()
       const e = locations.get(key) || { name: loc, days: new Set(), n: 0 }
       e.days.add(h.date); e.n = e.days.size
       locations.set(key, e)
@@ -1694,7 +1707,8 @@ function attachHistoryEvents() {
     const date = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
     // 31. Februar etc.: Date rollt in den Folgemonat über - dann stimmt der Monat nicht mehr
     if (new Date(date + 'T00:00:00').getMonth() + 1 !== Number(month)) { alert('Dieses Datum gibt es nicht - bitte Tag und Monat prüfen.'); return }
-    const entry = await addHistoryEntry({ title, locationName: location, locationCity: '', date })
+    const place = canonLocation(location, '')
+    const entry = await addHistoryEntry({ title, locationName: place.name, locationCity: place.city, date })
     if (!entry) { alert('Speichern fehlgeschlagen - bitte nochmal versuchen.'); return }
     history = [...history, entry]
     document.getElementById('history-title').value = ''
@@ -2467,7 +2481,8 @@ async function toggleHistoryCopy(btn) {
     }
     return
   }
-  const entry = await addHistoryEntry({ title: stripEdgeEmoji(h.title), locationName: h.locationName, locationCity: h.locationCity, date: h.date, isSupport: btn.dataset.support === '1' })
+  const c = canonLocation(h.locationName, h.locationCity)
+  const entry = await addHistoryEntry({ title: stripEdgeEmoji(h.title), locationName: c.name, locationCity: c.city, date: h.date, isSupport: btn.dataset.support === '1' })
   if (!entry) { showToast('Fehler', 'Konnte nicht in die History übernommen werden.'); return }
   history = [...history, entry]
   refreshHistoryList()
@@ -2516,7 +2531,8 @@ async function saveHistoryEdit() {
   const date = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
   if (new Date(date + 'T00:00:00').getMonth() + 1 !== Number(month)) { alert('Dieses Datum gibt es nicht - bitte Tag und Monat prüfen.'); return }
   // Ort unverändert: Name und Stadt des Eintrags behalten (sie stehen getrennt in der Datenbank)
-  const place = location === historyEditPrefill ? { locationName: entry.locationName, locationCity: entry.locationCity } : { locationName: location, locationCity: '' }
+  const c = location === historyEditPrefill ? canonLocation(entry.locationName, entry.locationCity) : canonLocation(location, '')
+  const place = { locationName: c.name, locationCity: c.city }
   if (!(await updateHistoryEntry(entry.id, { title, ...place, date, isSupport }))) { alert('Speichern fehlgeschlagen - bitte nochmal versuchen.'); return }
   Object.assign(entry, { title, ...place, date, isSupport })
   closeHistoryEdit()
