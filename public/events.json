@@ -13,19 +13,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1568474546,
-    "title": "GROSSSTADTWAHNSINN 2026 - FESTIVALTICKET",
-    "date": "2026-11-06",
-    "time": "16:30",
-    "locationId": 2,
-    "type": "konzert",
-    "description": "+ Warm Up im Franken",
-    "ticketUrl": "https://www.so36.com/produkte/91592-tickets-grossstadtwahnsinn-2026-festivalticket-so36-berlin-am-06-11-2026",
-    "spotifyUrl": "",
-    "source": "so36",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1473577709,
     "title": "Flugmodus",
     "date": "2026-11-06",
@@ -140,19 +127,6 @@
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1625149581,
-    "title": "ELEINE",
-    "date": "2026-11-06",
-    "time": "19:05",
-    "locationId": 36,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://cassiopeia-berlin.de/event/eleine-111604299",
-    "spotifyUrl": "",
-    "source": "cassiopeia",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1242066285,
@@ -311,19 +285,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 235236666,
-    "title": "Mehnersmoos",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "locationId": 33,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/mehnersmoos/2026-11-06-2000",
-    "spotifyUrl": "",
-    "source": "ubereatsmusichall",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 812335249,
     "title": "234",
     "date": "2026-11-06",
@@ -441,19 +402,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 71819305,
-    "title": "Danger Dan",
-    "date": "2026-11-06",
-    "time": "20:30",
-    "locationId": 25,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tempodrom.de/event/danger_dan_2026-11-06_20/",
-    "spotifyUrl": "",
-    "source": "tempodrom",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 247680552,
     "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
     "date": "2026-11-06",
@@ -478,19 +426,6 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1233467847,
-    "title": "80s Party - Das Beste aus dem buntesten Jahrzehnt aller Zeiten",
-    "date": "2026-11-06",
-    "time": "22:00",
-    "locationId": 14,
-    "type": "party",
-    "description": "Party",
-    "ticketUrl": "https://www.tixforgigs.com/Event/77411?af=cwduw3m5zhp3&saf=fxojhpe",
-    "spotifyUrl": "",
-    "source": "werk2",
-    "addedAt": "2026-10-14"
   },
   {
     "id": 998387073,
@@ -1231,19 +1166,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1880822473,
-    "title": "Tokio Hotel",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1828635790,
     "title": "Soulbound x Hell Boulevard",
     "date": "2026-11-07",
@@ -1268,6 +1190,19 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1880822473,
+    "title": "Tokio Hotel",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1975374640,
@@ -1931,19 +1866,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 2082679369,
-    "title": "Jungle",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2002838373,
     "title": "Keshavara",
     "date": "2026-11-08",
@@ -1980,6 +1902,19 @@
     "ticketUrl": "https://www.urbanspree.com/program/concerts/mayflower-madame-blke-berlin-show-urban-spree.html",
     "spotifyUrl": "",
     "source": "urbanspree",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 2082679369,
+    "title": "Jungle",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -5035,19 +4970,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1352153611,
-    "title": "Little Big",
-    "date": "2026-11-15",
-    "time": "19:00",
-    "locationId": 29,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OrTweTI-LvaS6ufTSjm",
-    "spotifyUrl": "",
-    "source": "kesselhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 1073149009,
     "title": "Avery Friedman",
     "date": "2026-11-15",
@@ -5541,19 +5463,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 799250225,
-    "title": "Placebo",
-    "date": "2026-11-16",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/placebo-26/2026-11-16-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 206810495,
     "title": "Omar Doom",
     "date": "2026-11-16",
@@ -5564,6 +5473,19 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82112/",
     "spotifyUrl": "",
     "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 799250225,
+    "title": "Placebo",
+    "date": "2026-11-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/placebo-26/2026-11-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -6201,19 +6123,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 387436453,
-    "title": "Muse",
-    "date": "2026-11-18",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1003297460,
     "title": "TRAC#4: OPEN STAGE",
     "date": "2026-11-18",
@@ -6225,6 +6134,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 387436453,
+    "title": "Muse",
+    "date": "2026-11-18",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1675873466,
@@ -7766,19 +7688,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 348015507,
-    "title": "Die Schlagernacht des Jahres",
-    "date": "2026-11-21",
-    "time": "18:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2092823986,
     "title": "Roller Disco",
     "date": "2026-11-21",
@@ -7790,6 +7699,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 348015507,
+    "title": "Die Schlagernacht des Jahres",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1548840700,
@@ -9772,19 +9694,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 369576453,
-    "title": "Konstantinos Argiros",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2007929070,
     "title": "Felsmann + Tiley",
     "date": "2026-11-25",
@@ -9795,6 +9704,19 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82431/",
     "spotifyUrl": "",
     "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 369576453,
+    "title": "Konstantinos Argiros",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -12860,19 +12782,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1795054166,
-    "title": "PUR",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/pur-26/2026-12-02-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 859928620,
     "title": "OSKAR HAAG",
     "date": "2026-12-02",
@@ -12883,6 +12792,19 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/81794/",
     "spotifyUrl": "",
     "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1795054166,
+    "title": "PUR",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/pur-26/2026-12-02-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -13403,19 +13325,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 255613365,
-    "title": "SDP & The Capital Dance Orchestra",
-    "date": "2026-12-04",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1430204938,
     "title": "SingAlong",
     "date": "2026-12-04",
@@ -13427,6 +13336,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 255613365,
+    "title": "SDP & The Capital Dance Orchestra",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1064770762,
@@ -14928,19 +14850,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1636806296,
-    "title": "BAP",
-    "date": "2026-12-08",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1309884259,
     "title": "ZAQ Medienquiz",
     "date": "2026-12-08",
@@ -14952,6 +14861,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1636806296,
+    "title": "BAP",
+    "date": "2026-12-08",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 621241441,
@@ -17385,19 +17307,6 @@
     "addedAt": "2026-09-27"
   },
   {
-    "id": 59852794,
-    "title": "101 Voices - Depeche Mode Special Tribute",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 672809719,
     "title": "Seraphina Kalze",
     "date": "2026-12-16",
@@ -17421,6 +17330,19 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82198/",
     "spotifyUrl": "",
     "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 59852794,
+    "title": "101 Voices - Depeche Mode Special Tribute",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -17618,19 +17540,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1699198044,
-    "title": "Die Fantastischen Vier",
-    "date": "2026-12-17",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/die-fantastischen-vier-2/2026-12-17-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1990327964,
     "title": "Xeno & Oaklander",
     "date": "2026-12-17",
@@ -17641,6 +17550,19 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82409/",
     "spotifyUrl": "",
     "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1699198044,
+    "title": "Die Fantastischen Vier",
+    "date": "2026-12-17",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/die-fantastischen-vier-2/2026-12-17-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -21390,19 +21312,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1830715674,
-    "title": "aespa",
-    "date": "2027-01-26",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/aespa/2027-01-26-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1093707975,
     "title": "Michael Mittermeier",
     "date": "2027-01-26",
@@ -21414,6 +21323,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1830715674,
+    "title": "aespa",
+    "date": "2027-01-26",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/aespa/2027-01-26-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 78190957,
@@ -23037,19 +22959,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1803103784,
-    "title": "Lover - A Tribute to Taylor Swift",
-    "date": "2027-02-09",
-    "time": "20:00",
-    "locationId": 25,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tempodrom.de/event/lover-a_tribute_to_taylor_swift_2027-02-09_20/",
-    "spotifyUrl": "",
-    "source": "tempodrom",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 267142171,
     "title": "Leonard Cohen",
     "date": "2027-02-09",
@@ -23061,6 +22970,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-11-03"
+  },
+  {
+    "id": 1803103784,
+    "title": "Lover - A Tribute to Taylor Swift",
+    "date": "2027-02-09",
+    "time": "20:00",
+    "locationId": 25,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tempodrom.de/event/lover-a_tribute_to_taylor_swift_2027-02-09_20/",
+    "spotifyUrl": "",
+    "source": "tempodrom",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 601535934,
@@ -24904,19 +24826,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1242911934,
-    "title": "RUSH",
-    "date": "2027-02-21",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/rush-berlin/2027-02-21-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 433089045,
     "title": "Moyka",
     "date": "2027-02-21",
@@ -24927,6 +24836,19 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82432/",
     "spotifyUrl": "",
     "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1242911934,
+    "title": "RUSH",
+    "date": "2027-02-21",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/rush-berlin/2027-02-21-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -27211,19 +27133,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 617736245,
-    "title": "Teddy Swims",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/teddy-swims/2027-03-11-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1603476598,
     "title": "Schwarze Grütze",
     "date": "2027-03-11",
@@ -27235,6 +27144,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 617736245,
+    "title": "Teddy Swims",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/teddy-swims/2027-03-11-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2103522278,
@@ -28192,19 +28114,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 38507416,
-    "title": "Maite Kelly",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 293050161,
     "title": "Kirsten Fuchs",
     "date": "2027-03-18",
@@ -28228,6 +28137,19 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82636/",
     "spotifyUrl": "",
     "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 38507416,
+    "title": "Maite Kelly",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
@@ -31255,19 +31177,6 @@
     "addedAt": "2026-09-29"
   },
   {
-    "id": 42230374,
-    "title": "Thomas Bergersen",
-    "date": "2027-04-19",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/thomas-bergersen/2027-04-19-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 226525307,
     "title": "pippa",
     "date": "2027-04-19",
@@ -31278,6 +31187,19 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82687/",
     "spotifyUrl": "",
     "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 42230374,
+    "title": "Thomas Bergersen",
+    "date": "2027-04-19",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/thomas-bergersen/2027-04-19-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
     "addedAt": "2026-11-02"
   },
   {
