@@ -730,12 +730,17 @@ function renderStatsHtml() {
     // Gleich oft besuchte Locations teilen sich den Platz (1., 1., 3.); gezeigt werden alle bis Platz 5
     const rankedLocs = rankStats(me.locations).map(e => [1 + [...me.locations.values()].filter(o => o.n > e[1].n).length, ...e])
     const top5 = rankedLocs.filter(([rank]) => rank <= 5)
+    // Mehrere Locations mit je einem Besuch werden zu einer Zeile zusammengefasst ("7 Locations mit je 1 Besuch")
+    const singles = top5.filter(([, , loc]) => loc.n === 1)
+    const top5Rows = singles.length > 1 ? [...top5.filter(([, , loc]) => loc.n > 1), singles[0]] : top5
     // Nur Künstler, die mehr als einmal gesehen wurden, sind "meistgesehen"
     const topArtist = rankStats(me.artists).filter(([, a]) => a.n > 1)[0]
     const bestMonth = rankStats(me.months, true)[0]
     const monthMax = s => Math.max(0, ...[...s.months.values()].map(m => m.n))
     const top5Html = top5.length
-      ? `<div style="margin-top:3px;">${top5.map(([rank, key, loc]) => `<div>${rank}. ${esc(loc.name)} · ${loc.n}×${crown(loc.n, o => o.locations.get(key)?.n)}</div>`).join('')}</div>`
+      ? `<div style="margin-top:3px;">${top5Rows.map(([rank, key, loc]) => singles.length > 1 && loc.n === 1
+        ? `<div>${rank}. ${singles.length} Locations mit je 1 Besuch</div>`
+        : `<div>${rank}. ${esc(loc.name)} · ${loc.n}×${crown(loc.n, o => o.locations.get(key)?.n)}</div>`).join('')}</div>`
       : '–'
     return `
       <h4 class="syne" style="margin:18px 0 6px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.06); font-size:12px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#a5b4fc;">${title}</h4>
