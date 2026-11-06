@@ -560,7 +560,7 @@ function render() {
     </div>
     <div id="view-content">
       <div id="pane-liste" style="${currentView !== 'liste' ? 'display:none' : ''}">
-        ${loadData('tipSeen') ? '' : `<div data-first-tip class="glass rounded-2xl" style="display:flex; align-items:flex-start; gap:4px; padding:10px 4px 10px 14px; margin-bottom:16px;"><p class="text-xs" style="flex:1; color:rgba(255,255,255,0.8); line-height:1.5; margin-top:5px;"><strong style="color:white;">Tipp:</strong> Tippe bei einem Event auf „♡ Merken“ oder „✓ Dabei“. Alternativ wischst Du die Karte nach links. Alles Weitere steht unter Hilfe.</p><button data-dismiss-tip aria-label="Tipp schließen" style="width:44px; height:44px; flex-shrink:0; background:none; border:none; color:rgba(255,255,255,0.7); font-size:22px; cursor:pointer;">×</button></div>`}
+        ${loadData('tipSeen') ? '' : `<div data-first-tip class="glass rounded-2xl" style="display:flex; align-items:flex-start; gap:4px; padding:10px 4px 10px 14px; margin-bottom:16px;"><p class="text-xs" style="flex:1; color:rgba(255,255,255,0.8); line-height:1.5; margin-top:5px;"><strong style="color:white;">Tipp:</strong> Wische ein Event nach links, dann kannst Du es „♡ Vormerken“ oder „✓ Bin dabei“ wählen (am Computer: Maus an den rechten Kartenrand). Alles Weitere steht unter Hilfe.</p><button data-dismiss-tip aria-label="Tipp schließen" style="width:44px; height:44px; flex-shrink:0; background:none; border:none; color:rgba(255,255,255,0.7); font-size:22px; cursor:pointer;">×</button></div>`}
         <div id="event-list-content">${renderGroupedEvents()}</div>
       </div>
       <div id="pane-kalender" style="${currentView !== 'kalender' ? 'display:none' : ''}">
@@ -662,8 +662,8 @@ const SETTINGS_GUIDE = [
     ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen (z. B. nach einem Künstler). Mit den Knöpfen darunter zeigst Du nur „Heute“, „Wochenende“ (Freitag bis Sonntag), „Konzerte“ oder „Partys“, nochmal tippen schaltet den Filter wieder aus. Über der Liste steht, wie viele Events passen.'],
     ['Suche leert sich selbst', 'Gibt es keinen Treffer, verschwindet der Suchbegriff nach 2 Sekunden. Gibt es Treffer, wird das Suchfeld geleert, sobald Du ein Event vormerkst oder „Bin dabei“ wählst, oder wenn Du 5 Sekunden lang nichts tippst oder berührst.'],
     ['Hilfe und Tipp', 'Der Knopf „? Hilfe“ über der Filterleiste öffnet diese Anleitung. Den einmaligen Tipp oben in der Liste schließt Du mit ×.'],
-    ['Vormerken und Dabei', 'Tippe unter der Karte auf {herz} „Merken“ oder {haken} „Dabei“, nochmal tippen nimmt es zurück. Alternativ wischst Du die Karte nach links. Unten erscheint kurz „Rückgängig“.'],
-    ['Icon-Leiste', '{info} Link zum Event, {spotify} Spotify, hinter ⋯ der Kalender ({apple} Apple, {google} Google) und {share} Teilen.']
+    ['Karte wischen', 'Nach links wischen: {herz} „Vormerken“ oder {haken} „Bin dabei“ auswählen, nochmal wählen nimmt es zurück. Unten erscheint kurz „Rückgängig“.'],
+    ['Icon-Leiste', '{info} Link zum Event, {spotify} Spotify, {apple} {google} Kalender (Apple/Google), {share} Teilen.']
   ]],
   ['Kalender', [
     ['Monatsübersicht', 'Tage mit Events sind hervorgehoben, die Punkte darunter zeigen, wie viel los ist (1 Punkt: 1 bis 2 Events, 2 Punkte: 3 bis 5, 3 Punkte: mehr). Heute hat einen hellen Ring. Tippe auf einen Tag, um alle Events an diesem Tag zu sehen, mehrere Tage lassen sich gleichzeitig auswählen. Die Schnellfilter wirken auch hier.']
@@ -1177,8 +1177,6 @@ function renderEventCard(e, { showMarks = false } = {}) {
   // hinzufügen"-Formular stammen - nie ungeprüft als href verwenden (s. safeUrl)
   const infoHref = safeUrl(e.ticketUrl) || safeUrl(loc?.website ? 'https://' + loc.website : '')
   const spotifyHref = safeUrl(e.spotifyUrl) || spotifySearchUrl(e.title)
-  // Sichtbare Ein-Tipp-Knöpfe für "Vormerken" und "Bin dabei" (Wischen/Hover am Rand bleibt zusätzlich)
-  const quickBtn = (kind, on, rgb, color, label, aria) => `<button data-quick="${kind}" aria-pressed="${on}" aria-label="${aria}" style="flex:1.7; min-width:0; height:44px; border-radius:12px; border:1px solid rgba(${rgb},${on ? 0.6 : 0.35}); background:rgba(${rgb},${on ? 0.3 : 0.12}); color:${color}; font-size:13px; font-weight:600; font-family:'DM Sans',sans-serif; cursor:pointer; white-space:nowrap;">${label}</button>`
 
   return `
     <div class="event-swipe-wrapper" data-event-id="${e.id}" style="position:relative; overflow:hidden; border-radius:16px;">
@@ -1204,19 +1202,17 @@ function renderEventCard(e, { showMarks = false } = {}) {
             ${showMarks ? `<div data-marks="${e.id}" class="text-xs font-semibold">${formatEventMarks(e.id)}</div>` : ''}
           </div>
           <div class="flex gap-2 mt-1" style="align-items:center;">
-            ${quickBtn('bookmark', isBookmarked, '244,114,182', '#f472b6', isBookmarked ? '♥ Gemerkt' : '♡ Merken', isBookmarked ? 'Vormerkung entfernen' : 'Vormerken')}
-            ${quickBtn('going', isGoing, '52,211,153', '#34d399', '✓ Dabei', isGoing ? 'Nicht mehr dabei' : 'Bin dabei')}
-            ${infoHref ? `<a href="${esc(infoHref)}" target="_blank" title="Infos" aria-label="Infos" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; height:44px; padding:0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></a>` : ''}
-            ${showSpotify ? (spotifyMulti
-              ? `<button data-spotify-picker="${e.id}" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; height:44px; padding:0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</button>`
-              : `<a href="${esc(spotifyHref)}" target="_blank" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; height:44px; padding:0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</a>`
-            ) : ''}
-            <button data-more="${e.id}" aria-expanded="false" title="Kalender und Teilen" aria-label="Kalender und Teilen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; height:44px; padding:0; color:rgba(255,255,255,0.6); font-size:20px; line-height:1;">⋯</button>
-          </div>
-          <div data-more-panel style="display:none; gap:6px; margin-top:6px;">
-            <button data-ics="${e.id}" title="Zu Apple Kalender hinzufügen" aria-label="Zu Apple Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center gap-2" style="flex:1; min-width:0; height:44px; padding:0 4px; color:rgba(255,255,255,0.6); font-size:12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg> Apple</button>
-            <button data-gcal="${e.id}" title="Zu Google Kalender hinzufügen" aria-label="Zu Google Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center gap-2" style="flex:1; min-width:0; height:44px; padding:0 4px; color:rgba(255,255,255,0.6); font-size:12px;"><svg width="14" height="14" viewBox="0 0 48 48" fill="currentColor"><path d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg> Google</button>
-            <button data-share="${e.id}" title="Teilen" aria-label="Teilen" class="btn-glass rounded-lg inline-flex items-center justify-center gap-2" style="flex:1; min-width:0; height:44px; padding:0 4px; color:rgba(255,255,255,0.6); font-size:12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg> Teilen</button>
+            <div style="display:flex; gap:6px; flex:1; min-width:0;">
+              ${infoHref ? `<a href="${esc(infoHref)}" target="_blank" title="Infos" aria-label="Infos" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></a>` : ''}
+              ${showSpotify ? (spotifyMulti
+                ? `<button data-spotify-picker="${e.id}" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</button>`
+                : `<a href="${esc(spotifyHref)}" target="_blank" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</a>`
+              ) : ''}
+              <button data-ics="${e.id}" title="Zu Apple Kalender hinzufügen" aria-label="Zu Apple Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></button>
+              <button data-gcal="${e.id}" title="Zu Google Kalender hinzufügen" aria-label="Zu Google Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 48 48" fill="currentColor"><path d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg></button>
+              <button data-share="${e.id}" title="Teilen" aria-label="Teilen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg></button>
+            </div>
+            <span style="flex-shrink:0; color:rgba(255,255,255,0.6); font-size:18px; font-weight:400; letter-spacing:-3px; pointer-events:none; user-select:none; padding-right:2px; line-height:1;">‹‹</span>
           </div>
         </div>
       </div>
@@ -1300,7 +1296,7 @@ function renderBookmarkedOwnHtml() {
     <div class="text-center py-14" style="color:rgba(255,255,255,0.7);">
       <p class="syne text-2xl mb-2">♡</p>
       <p class="text-sm" style="font-weight:600;">Noch nichts gemerkt.</p>
-      <p class="text-xs" style="color:rgba(255,255,255,0.6); margin:6px 0 18px; line-height:1.5;">Tippe bei einem Event auf „Merken“ oder „Dabei“,<br>dann erscheint es hier.</p>
+      <p class="text-xs" style="color:rgba(255,255,255,0.6); margin:6px 0 18px; line-height:1.5;">Wische ein Event nach links und wähle<br>„Vormerken“ oder „Bin dabei“.</p>
       <button data-goto-view="liste" class="btn-glass rounded-xl syne text-sm font-semibold" style="height:44px; padding:0 22px; color:white;">Zu den Events</button>
     </div>
   `
@@ -1449,7 +1445,7 @@ function renderHistoryDatePicker(prefix = 'history') {
 function renderHistoryListHtml(historyEntries, readOnly = false) {
   if (!historyEntries.length) return readOnly
     ? `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Noch keine besuchten Konzerte sichtbar.</p>`
-    : `<div style="color:rgba(255,255,255,0.6);"><p class="text-sm">Noch keine besuchten Konzerte eingetragen.</p><p class="text-xs" style="margin:6px 0 14px; line-height:1.5;">Mit „Dabei“ markierte Konzerte erscheinen hier am Konzerttag ab 20 Uhr von selbst. Frühere Konzerte trägst Du nach.</p><button data-history-add-toggle class="btn-glass rounded-xl syne text-sm font-semibold" style="height:44px; padding:0 22px; color:white;">Konzert nachtragen</button></div>`
+    : `<div style="color:rgba(255,255,255,0.6);"><p class="text-sm">Noch keine besuchten Konzerte eingetragen.</p><p class="text-xs" style="margin:6px 0 14px; line-height:1.5;">Mit „Bin dabei“ markierte Konzerte erscheinen hier am Konzerttag ab 20 Uhr von selbst. Frühere Konzerte trägst Du nach.</p><button data-history-add-toggle class="btn-glass rounded-xl syne text-sm font-semibold" style="height:44px; padding:0 22px; color:white;">Konzert nachtragen</button></div>`
   let html = ''
   let lastYear = null
   for (const h of historyEntries) {
@@ -2470,16 +2466,6 @@ function attachSwipeToWrapper(wrapper) {
   const id = wrapper.dataset.eventId
   wrapper.querySelector('[data-swipe-bookmark]')?.addEventListener('click', () => toggleBookmarkStatus(id))
   wrapper.querySelector('[data-swipe-going]')?.addEventListener('click', () => toggleGoingStatus(id))
-  // Sichtbare Knöpfe lösen dieselbe Aktion aus wie die Wisch-Felder
-  wrapper.querySelectorAll('[data-quick]').forEach(b => b.addEventListener('click', () => {
-    wrapper.querySelector(b.dataset.quick === 'going' ? '[data-swipe-going]' : '[data-swipe-bookmark]')?.click()
-  }))
-  wrapper.querySelector('[data-more]')?.addEventListener('click', e => {
-    const panel = wrapper.querySelector('[data-more-panel]')
-    const open = panel.style.display === 'none'
-    panel.style.display = open ? 'flex' : 'none'
-    e.currentTarget.setAttribute('aria-expanded', String(open))
-  })
   wrapper.querySelector('[data-share]')?.addEventListener('click', () => {
     const e = events.find(ev => ev.id == id)
     if (!e) return
