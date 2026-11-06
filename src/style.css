@@ -208,3 +208,7 @@ input:not([type="checkbox"]):not([type="radio"]), select, textarea { font-size: 
     scroll-behavior: auto !important;
   }
 }
+
+/* Wisch-Felder hinter der Karte: nur sichtbar, solange gewischt bzw. geöffnet wird (sonst schimmerten sie durch) */
+.event-swipe-actions { visibility: hidden; }
+.event-swipe-wrapper.actions-visible .event-swipe-actions { visibility: visible; }

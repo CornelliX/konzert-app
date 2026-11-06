@@ -528,7 +528,7 @@ function render() {
     </div>
   </div>
 `}
-    ${currentUser ? `<div class="text-right mb-2" style="font-size:12px; color:rgba(255,255,255,0.6);">${esc(currentUser.email)} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
+    ${currentUser ? `<div class="text-right mb-2" style="font-size:12px; color:rgba(255,255,255,0.6);">${esc(currentUser.email)} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline; display:inline-block; padding:12px 6px; margin:-12px -6px;">Abmelden</span></div>` : ''}
     <div id="filter-bar-wrap" style="${hidesFilterBar(currentView) ? 'display:none' : ''}">
       ${renderFilters()}
     </div>
@@ -634,8 +634,8 @@ const SETTINGS_GUIDE = [
     ['Überblick', 'Alle Konzerte und Partys in Berlin und Leipzig, nach Datum sortiert.'],
     ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen (z. B. nach einem Künstler).'],
     ['Suche leert sich selbst', 'Gibt es keinen Treffer, verschwindet der Suchbegriff nach 2 Sekunden. Gibt es Treffer, wird das Suchfeld geleert, sobald Du ein Event vormerkst oder „Bin dabei“ wählst, oder wenn Du 5 Sekunden lang nichts tippst oder berührst.'],
-    ['Karte wischen', 'Nach links wischen: {herz} „Vormerken“ oder {haken} „Bin dabei“ auswählen.'],
-    ['Icon-Leiste', '{info} Link zum Event, {spotify} Spotify, {apple} {google} Kalender (Apple/Google), {share} Teilen.']
+    ['Vormerken und Dabei', 'Tippe unter der Karte auf {herz} „Merken“ oder {haken} „Dabei“, nochmal tippen nimmt es zurück. Alternativ wischst Du die Karte nach links.'],
+    ['Icon-Leiste', '{info} Link zum Event, {spotify} Spotify, hinter ⋯ der Kalender ({apple} Apple, {google} Google) und {share} Teilen.']
   ]],
   ['Kalender', [
     ['Monatsübersicht', 'Tippe auf einen Tag, um alle Events an diesem Tag zu sehen. Mehrere Tage lassen sich gleichzeitig auswählen.']
@@ -947,21 +947,21 @@ function renderFilters() {
       <div style="display:flex; gap:0; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:3px;">
         ${['Berlin', 'Leipzig'].map(c => {
           const active = filters.cities[0] === c
-          return `<button data-city="${c}" class="syne text-sm font-semibold transition-all duration-200" style="flex:1; padding:7px; border-radius:7px; cursor:pointer; border:none; ${active
+          return `<button data-city="${c}" class="syne text-sm font-semibold transition-all duration-200" style="flex:1; padding:12px 7px; border-radius:7px; cursor:pointer; border:none; ${active
             ? 'background:linear-gradient(135deg,rgba(99,102,241,0.55),rgba(168,85,247,0.45)); color:white; box-shadow:0 1px 8px rgba(99,102,241,0.25);'
             : 'background:transparent; color:rgba(255,255,255,0.6);'}">${c}</button>`
         }).join('')}
       </div>
       <div style="display:flex; gap:8px;">
         <div style="position:relative; flex:1;">
-          <div id="filter-loc-selected" style="cursor:pointer; padding:9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; gap:6px;">
+          <div id="filter-loc-selected" style="cursor:pointer; padding:12px; min-height:44px; box-sizing:border-box; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; gap:6px;">
             <span style="font-size:13px; color:rgba(255,255,255,0.6); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${locName}</span>
             <span style="color:rgba(255,255,255,0.6); font-size:12px; flex-shrink:0;">▾</span>
           </div>
           <div id="filter-loc-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:1000; width:100%; max-height:200px; overflow-y:auto; border-radius:10px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
-            <div data-filter-loc="alle" class="loc-option" style="padding:9px 12px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:13px;">Alle Locations</div>
+            <div data-filter-loc="alle" class="loc-option" style="padding:12px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:13px;">Alle Locations</div>
             ${locationOptions.map(l => `
-              <div data-filter-loc="${l.id}" class="loc-option" style="padding:9px 12px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:13px; border-top:1px solid rgba(255,255,255,0.04);">
+              <div data-filter-loc="${l.id}" class="loc-option" style="padding:12px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:13px; border-top:1px solid rgba(255,255,255,0.04);">
                 ${l.name}
               </div>
             `).join('')}
@@ -969,10 +969,10 @@ function renderFilters() {
         </div>
         <div style="display:flex; gap:10px; align-items:center; flex:1; min-width:0;">
           <div style="position:relative; flex:1; min-width:0;">
-            <input id="search-input" type="search" placeholder="Suche…" value="${esc(filters.search)}" style="width:100%; box-sizing:border-box; padding:9px 30px 9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none; -webkit-appearance:none; appearance:none;" />
-            <button id="search-clear" type="button" aria-label="Suche löschen" style="position:absolute; right:4px; top:50%; transform:translateY(-50%); width:24px; height:24px; border:none; background:transparent; color:rgba(255,255,255,0.6); font-size:18px; line-height:1; cursor:pointer; display:${filters.search ? 'flex' : 'none'}; align-items:center; justify-content:center; border-radius:50%;">×</button>
+            <input id="search-input" type="search" placeholder="Suche…" value="${esc(filters.search)}" style="width:100%; box-sizing:border-box; min-height:44px; padding:10px 34px 10px 10px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none; -webkit-appearance:none; appearance:none;" />
+            <button id="search-clear" type="button" aria-label="Suche löschen" style="position:absolute; right:0; top:50%; transform:translateY(-50%); width:34px; height:40px; border:none; background:transparent; color:rgba(255,255,255,0.6); font-size:18px; line-height:1; cursor:pointer; display:${filters.search ? 'flex' : 'none'}; align-items:center; justify-content:center; border-radius:50%;">×</button>
           </div>
-          <button id="settings-open" type="button" title="Einstellungen" aria-label="Einstellungen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex-shrink:0; width:34px; height:34px; color:rgba(255,255,255,0.6);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
+          <button id="settings-open" type="button" title="Einstellungen" aria-label="Einstellungen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex-shrink:0; width:44px; height:44px; color:rgba(255,255,255,0.6);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
         </div>
       </div>
     </div>
@@ -1124,6 +1124,8 @@ function renderEventCard(e, { showMarks = false } = {}) {
   // hinzufügen"-Formular stammen - nie ungeprüft als href verwenden (s. safeUrl)
   const infoHref = safeUrl(e.ticketUrl) || safeUrl(loc?.website ? 'https://' + loc.website : '')
   const spotifyHref = safeUrl(e.spotifyUrl) || spotifySearchUrl(e.title)
+  // Sichtbare Ein-Tipp-Knöpfe für "Vormerken" und "Bin dabei" (Wischen/Hover am Rand bleibt zusätzlich)
+  const quickBtn = (kind, on, rgb, color, label, aria) => `<button data-quick="${kind}" aria-pressed="${on}" aria-label="${aria}" style="flex:1.7; min-width:0; height:44px; border-radius:12px; border:1px solid rgba(${rgb},${on ? 0.6 : 0.35}); background:rgba(${rgb},${on ? 0.3 : 0.12}); color:${color}; font-size:13px; font-weight:600; font-family:'DM Sans',sans-serif; cursor:pointer; white-space:nowrap;">${label}</button>`
 
   return `
     <div class="event-swipe-wrapper" data-event-id="${e.id}" style="position:relative; overflow:hidden; border-radius:16px;">
@@ -1149,17 +1151,19 @@ function renderEventCard(e, { showMarks = false } = {}) {
             ${showMarks ? `<div data-marks="${e.id}" class="text-xs font-semibold">${formatEventMarks(e.id)}</div>` : ''}
           </div>
           <div class="flex gap-2 mt-1" style="align-items:center;">
-            <div style="display:flex; gap:6px; flex:1; min-width:0;">
-              ${infoHref ? `<a href="${esc(infoHref)}" target="_blank" title="Infos" aria-label="Infos" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></a>` : ''}
-              ${showSpotify ? (spotifyMulti
-                ? `<button data-spotify-picker="${e.id}" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</button>`
-                : `<a href="${esc(spotifyHref)}" target="_blank" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</a>`
-              ) : ''}
-              <button data-ics="${e.id}" title="Zu Apple Kalender hinzufügen" aria-label="Zu Apple Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></button>
-              <button data-gcal="${e.id}" title="Zu Google Kalender hinzufügen" aria-label="Zu Google Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 48 48" fill="currentColor"><path d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg></button>
-              <button data-share="${e.id}" title="Teilen" aria-label="Teilen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg></button>
-            </div>
-            <span style="flex-shrink:0; color:rgba(255,255,255,0.6); font-size:18px; font-weight:400; letter-spacing:-3px; pointer-events:none; user-select:none; padding-right:2px; line-height:1;">‹‹</span>
+            ${quickBtn('bookmark', isBookmarked, '244,114,182', '#f472b6', isBookmarked ? '♥ Gemerkt' : '♡ Merken', isBookmarked ? 'Vormerkung entfernen' : 'Vormerken')}
+            ${quickBtn('going', isGoing, '52,211,153', '#34d399', '✓ Dabei', isGoing ? 'Nicht mehr dabei' : 'Bin dabei')}
+            ${infoHref ? `<a href="${esc(infoHref)}" target="_blank" title="Infos" aria-label="Infos" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; height:44px; padding:0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></a>` : ''}
+            ${showSpotify ? (spotifyMulti
+              ? `<button data-spotify-picker="${e.id}" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; height:44px; padding:0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</button>`
+              : `<a href="${esc(spotifyHref)}" target="_blank" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; height:44px; padding:0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</a>`
+            ) : ''}
+            <button data-more="${e.id}" aria-expanded="false" title="Kalender und Teilen" aria-label="Kalender und Teilen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; height:44px; padding:0; color:rgba(255,255,255,0.6); font-size:20px; line-height:1;">⋯</button>
+          </div>
+          <div data-more-panel style="display:none; gap:6px; margin-top:6px;">
+            <button data-ics="${e.id}" title="Zu Apple Kalender hinzufügen" aria-label="Zu Apple Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center gap-2" style="flex:1; min-width:0; height:44px; padding:0 4px; color:rgba(255,255,255,0.6); font-size:12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg> Apple</button>
+            <button data-gcal="${e.id}" title="Zu Google Kalender hinzufügen" aria-label="Zu Google Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center gap-2" style="flex:1; min-width:0; height:44px; padding:0 4px; color:rgba(255,255,255,0.6); font-size:12px;"><svg width="14" height="14" viewBox="0 0 48 48" fill="currentColor"><path d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg> Google</button>
+            <button data-share="${e.id}" title="Teilen" aria-label="Teilen" class="btn-glass rounded-lg inline-flex items-center justify-center gap-2" style="flex:1; min-width:0; height:44px; padding:0 4px; color:rgba(255,255,255,0.6); font-size:12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg> Teilen</button>
           </div>
         </div>
       </div>
@@ -1291,7 +1295,7 @@ function attachBookmarkEvents() {
 // Icons rechts neben den Bewertungssternen jedes History-Eintrags. Eigene Liste: Spotify, zum Radar, bearbeiten.
 // Liste eines anderen Lords: Spotify, zu meinem Radar, in meine History. Radar und "In meine History" sind
 // Schalter: aktiv gefärbt, ein zweiter Tipp macht die Aktion rückgängig.
-const HIST_ICON_STYLE = 'display:inline-flex; align-items:center; justify-content:center; width:30px; height:28px; padding:0; color:rgba(255,255,255,0.6); background:none; border:none; cursor:pointer; text-decoration:none;'
+const HIST_ICON_STYLE = 'display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; margin:-6px 0; padding:0; color:rgba(255,255,255,0.6); background:none; border:none; cursor:pointer; text-decoration:none;'
 const HIST_SPOTIFY_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>'
 const HIST_RADAR_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19a10 10 0 0 1 0-14"/></svg>'
 const HIST_EDIT_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>'
@@ -1313,7 +1317,7 @@ function renderHistoryRow(h, readOnly = false) {
   const starColor = n => n <= rating ? '#facc15' : 'rgba(255,255,255,0.22)'
   const stars = readOnly
     ? `<div style="display:flex;" aria-label="${rating} von 5 Sternen">${[1, 2, 3, 4, 5].map(n => `<span style="padding:0 1px; font-size:15px; line-height:1; color:${starColor(n)};">★</span>`).join('')}</div>`
-    : `<div class="history-stars" data-history-id="${h.id}" style="display:flex;">${[1, 2, 3, 4, 5].map(n => `<button data-star="${n}" aria-label="${n} Sterne" style="background:none; border:none; cursor:pointer; padding:0 1px; font-size:15px; line-height:1; color:${starColor(n)};">★</button>`).join('')}</div>`
+    : `<div class="history-stars" data-history-id="${h.id}" style="display:flex;">${[1, 2, 3, 4, 5].map(n => `<button data-star="${n}" aria-label="${n} Sterne" style="background:none; border:none; cursor:pointer; padding:12px 4px; margin:-12px 0; font-size:15px; line-height:1; color:${starColor(n)};">★</button>`).join('')}</div>`
   const btn = (attrs, label, color, svg) => `<button ${attrs} title="${label}" aria-label="${label}" style="${HIST_ICON_STYLE} color:${color};">${svg}</button>`
   const radarOn = histRadarOn(h.title)
   const copyOn = readOnly && !!findHistoryCopy(h)
@@ -1474,7 +1478,7 @@ function renderCarouselHead(kind) {
   // Pfeile links und rechts der Punkte (nicht neben der Überschrift, damit diese ihre Breite behält)
   const arrow = step => {
     const disabled = (step < 0 && slide === 0) || (step > 0 && slide === total - 1)
-    return `<button data-slide-step="${step}" ${disabled ? 'disabled' : ''} aria-label="${step < 0 ? 'Vorherige Liste' : 'Nächste Liste'}" style="width:32px; height:24px; padding:0; border:none; background:none; color:rgba(255,255,255,0.85); font-size:26px; line-height:1; cursor:pointer; opacity:${disabled ? 0.2 : 1};">${step < 0 ? '‹' : '›'}</button>`
+    return `<button data-slide-step="${step}" ${disabled ? 'disabled' : ''} aria-label="${step < 0 ? 'Vorherige Liste' : 'Nächste Liste'}" style="width:44px; height:36px; margin:-6px 0; padding:0; border:none; background:none; color:rgba(255,255,255,0.85); font-size:26px; line-height:1; cursor:pointer; opacity:${disabled ? 0.2 : 1};">${step < 0 ? '‹' : '›'}</button>`
   }
   const dots = total > 1
     ? `<div style="display:flex; justify-content:center; align-items:center; margin:2px 0 8px;">${arrow(-1)}${Array.from({ length: total }, (_, i) => {
@@ -2258,6 +2262,7 @@ function attachSwipeToWrapper(wrapper) {
     }
     if (directionLocked !== 'h') return
     e.preventDefault()
+    wrapper.classList.add('actions-visible')
     const base = isOpen ? -REVEAL_WIDTH : 0
     currentDx = Math.max(-REVEAL_WIDTH, Math.min(0, base + dx))
     scheduleTransform()
@@ -2272,9 +2277,15 @@ function attachSwipeToWrapper(wrapper) {
     if (!isOpen && delta < -THRESHOLD) openCard()
     else if (isOpen && delta > THRESHOLD) closeCard()
     else card.style.transform = `translateX(${isOpen ? -REVEAL_WIDTH : 0}px)`
+    hideActionsIfClosed()
   }, { passive: true })
 
+  // Die Wisch-Felder liegen hinter der Karte und schimmerten durch - nur beim Wischen/Öffnen sichtbar
+  function hideActionsIfClosed() {
+    setTimeout(() => { if (!isOpen) wrapper.classList.remove('actions-visible') }, 320)
+  }
   function openCard() {
+    wrapper.classList.add('actions-visible')
     if (swipeActiveWrapper && swipeActiveWrapper !== wrapper) closeSwipeWrapper(swipeActiveWrapper)
     card.style.transition = SETTLE_TRANSITION
     card.style.transform = `translateX(${-REVEAL_WIDTH}px)`
@@ -2286,6 +2297,7 @@ function attachSwipeToWrapper(wrapper) {
     card.style.transform = 'translateX(0)'
     isOpen = false
     if (swipeActiveWrapper === wrapper) swipeActiveWrapper = null
+    hideActionsIfClosed()
   }
   wrapper._closeSwipe = closeCard
 
@@ -2341,6 +2353,16 @@ function attachSwipeToWrapper(wrapper) {
       history = history.filter(h => h.eventId !== String(id))
       removeHistoryEntryByEventId(id)
     }
+  })
+  // Sichtbare Knöpfe lösen dieselbe Aktion aus wie die Wisch-Felder
+  wrapper.querySelectorAll('[data-quick]').forEach(b => b.addEventListener('click', () => {
+    wrapper.querySelector(b.dataset.quick === 'going' ? '[data-swipe-going]' : '[data-swipe-bookmark]')?.click()
+  }))
+  wrapper.querySelector('[data-more]')?.addEventListener('click', e => {
+    const panel = wrapper.querySelector('[data-more-panel]')
+    const open = panel.style.display === 'none'
+    panel.style.display = open ? 'flex' : 'none'
+    e.currentTarget.setAttribute('aria-expanded', String(open))
   })
   wrapper.querySelector('[data-share]')?.addEventListener('click', () => {
     const e = events.find(ev => ev.id == id)
