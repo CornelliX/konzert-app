@@ -195,7 +195,7 @@ export async function renderApp(el) {
   window.scrollTo(0, 0)
   container = el
   container.innerHTML = `
-    <div id="ptr-indicator" style="text-align:center; height:0; overflow:hidden; transition:height 0.2s; color:rgba(255,255,255,0.5); font-size:13px; display:flex; align-items:center; justify-content:center;">↻ Aktualisieren...</div>
+    <div id="ptr-indicator" style="text-align:center; height:0; overflow:hidden; transition:height 0.2s; color:rgba(255,255,255,0.6); font-size:13px; display:flex; align-items:center; justify-content:center;">↻ Aktualisieren...</div>
     <div class="noise min-h-screen" style="background: linear-gradient(180deg, #05053a 0%, #120838 25%, #1e0848 45%, #3a0a52 60%, #52083a 78%, #620a1a 100%);">
       <div style="position:fixed; top:-10%; left:-10%; width:50vw; height:50vw; background:radial-gradient(circle, rgba(60,40,180,0.12) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
       <div style="position:fixed; bottom:-10%; right:-10%; width:40vw; height:40vw; background:radial-gradient(circle, rgba(140,20,60,0.10) 0%, transparent 70%); pointer-events:none; z-index:0;"></div>
@@ -421,11 +421,11 @@ function showRadarBanner(matches) {
 }
 
 function renderRadarList() {
-  if (!radar.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.3);">Noch keine Künstler im Radar.</p>`
+  if (!radar.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Noch keine Künstler im Radar.</p>`
   return [...radar].sort((a, b) => a.artist.localeCompare(b.artist, 'de', { sensitivity: 'base' })).map(r => `
     <div class="flex items-center justify-between rounded-xl px-3 py-2" style="background:rgba(8,8,42,0.92); border:1px solid rgba(99,102,241,0.12);">
       <span style="font-size:14px; color:white;">${esc(r.artist)}</span>
-      <button data-radar-remove="${r.id}" style="color:rgba(255,255,255,0.4); background:none; border:none; cursor:pointer; font-size:16px; line-height:1;">×</button>
+      <button data-radar-remove="${r.id}" style="color:rgba(255,255,255,0.6); background:none; border:none; cursor:pointer; font-size:16px; line-height:1;">×</button>
     </div>
   `).join('')
 }
@@ -516,10 +516,10 @@ function render() {
         <input id="login-email" type="email" placeholder="E-Mail für Merkliste..." value="${esc(localStorage.getItem('lebe-live-email'))}" style="flex:1; min-width:0; padding:10px 14px; font-size:14px; color:white; outline:none; background:transparent; border:none; font-family:'DM Sans',sans-serif; color-scheme:dark;" />
         <button id="login-btn" class="syne text-sm font-semibold px-4" style="background:rgba(99,102,241,0.4); border:none; border-left:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer; transition:opacity 0.2s; flex-shrink:0;">Code senden</button>
       </div>
-      <p id="login-hint" style="margin-top:8px; font-size:12px; color:rgba(255,255,255,0.35); min-height:16px;"></p>
+      <p id="login-hint" style="margin-top:8px; font-size:12px; color:rgba(255,255,255,0.6); min-height:16px;"></p>
     </div>
     <div id="login-step-2" style="display:none;">
-      <p style="font-size:12px; color:rgba(255,255,255,0.45); margin-bottom:10px;">Code per E-Mail gesendet — bitte Postfach prüfen.</p>
+      <p style="font-size:12px; color:rgba(255,255,255,0.6); margin-bottom:10px;">Code per E-Mail gesendet — bitte Postfach prüfen.</p>
       <div style="display:flex; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.06);">
         <input id="login-code" type="text" autocomplete="one-time-code" placeholder="6-stelliger Code..." style="flex:1; min-width:0; padding:10px 14px; font-size:14px; color:white; outline:none; background:transparent; border:none; font-family:'DM Sans',sans-serif; color-scheme:dark; letter-spacing:0.2em;" />
         <button id="verify-btn" class="syne text-sm font-semibold px-4" style="background:rgba(99,102,241,0.4); border:none; border-left:1px solid rgba(99,102,241,0.3); color:white; white-space:nowrap; cursor:pointer; transition:opacity 0.2s; flex-shrink:0;">Bestätigen</button>
@@ -528,7 +528,7 @@ function render() {
     </div>
   </div>
 `}
-    ${currentUser ? `<div class="text-right mb-2" style="font-size:11px; color:rgba(255,255,255,0.3);">${esc(currentUser.email)} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
+    ${currentUser ? `<div class="text-right mb-2" style="font-size:12px; color:rgba(255,255,255,0.6);">${esc(currentUser.email)} · <span id="logout-btn" style="cursor:pointer; text-decoration:underline;">Abmelden</span></div>` : ''}
     <div id="filter-bar-wrap" style="${hidesFilterBar(currentView) ? 'display:none' : ''}">
       ${renderFilters()}
     </div>
@@ -572,12 +572,12 @@ function renderHeader(inModal = false) {
     <div ${inModal ? '' : 'id="app-header"'} class="pb-3" style="padding-top:max(1.5rem,env(safe-area-inset-top)); transition:opacity 0.3s ease;">
       <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
         <div class="${firstRender ? 'title-glow-wrap' : ''}" style="flex-shrink:0;">
-          <h1 class="syne leading-none ${firstRender ? 'title-glow' : 'title-glow-static'}" style="letter-spacing:-0.02em; font-weight:800; line-height:1; font-size:1.55rem; white-space:nowrap;">
-            <span style="font-size:calc(1.55rem + 2pt);">L</span>IVE<span style="font-size:calc(1.55rem + 2pt);">L</span>ORDS
+          <h1 class="syne leading-none ${firstRender ? 'title-glow' : 'title-glow-static'}" style="letter-spacing:-0.02em; font-weight:800; line-height:1; font-size:min(1.55rem, 6.4vw); white-space:nowrap;">
+            <span style="font-size:calc(min(1.55rem, 6.4vw) + 2pt);">L</span>IVE<span style="font-size:calc(min(1.55rem, 6.4vw) + 2pt);">L</span>ORDS
           </h1>
         </div>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:0.52em; line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${firstRender ? 'animation:tagline-appear 1.5s ease 1s both;' : ''}">
+          <div class="syne text-right" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:min(0.52em, 1.95vw); line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${firstRender ? 'animation:tagline-appear 1.5s ease 1s both;' : ''}">
             KONZERTE UND PARTYS<br>IN COOLEN LOCATIONS
           </div>
         </div>
@@ -591,7 +591,7 @@ function renderHeader(inModal = false) {
 // Kleine Symbole im Anleitungstext: {name} im Text wird durch das gleiche Icon ersetzt, das die App an der Stelle zeigt.
 // Als Funktion, da sie Icon-Konstanten weiter unten in der Datei nutzt (sonst Zugriff vor der Definition).
 function guideIcon(token) {
-  const chip = (inner, color = 'rgba(255,255,255,0.7)') => `<span style="display:inline-flex; align-items:center; justify-content:center; min-width:22px; height:20px; padding:0 5px; border-radius:6px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); vertical-align:middle; margin:0 1px; color:${color}; font-size:11px; line-height:1;">${inner}</span>`
+  const chip = (inner, color = 'rgba(255,255,255,0.7)') => `<span style="display:inline-flex; align-items:center; justify-content:center; min-width:22px; height:20px; padding:0 5px; border-radius:6px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); vertical-align:middle; margin:0 1px; color:${color}; font-size:12px; line-height:1;">${inner}</span>`
   const svg = inner => `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`
   // Apple- und Google-Logo wie in der Icon-Leiste der Eventkarten (renderEventCard)
   const apple = '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>'
@@ -731,7 +731,7 @@ function renderStatsHtml() {
     const others = peerEntries.map(e => computeStats(e, year))
     const crown = (v, pick) => isStatRecord(v, others.map(pick)) ? ' ' + STATS_CROWN : ''
     // Rubrik normal, Wert (und Krone) fett
-    const li = (label, value) => `<li class="text-xs" style="color:rgba(255,255,255,0.55); line-height:1.5; margin-top:6px;">${label}: <strong style="color:white; font-weight:700;">${value}</strong></li>`
+    const li = (label, value) => `<li class="text-xs" style="color:rgba(255,255,255,0.6); line-height:1.5; margin-top:6px;">${label}: <strong style="color:white; font-weight:700;">${value}</strong></li>`
     // Gleich oft besuchte Locations teilen sich den Platz (1., 1., 3.); gezeigt werden alle bis Platz 5
     const rankedLocs = rankStats(me.locations).map(e => [1 + [...me.locations.values()].filter(o => o.n > e[1].n).length, ...e])
     const top5 = rankedLocs.filter(([rank]) => rank <= 5)
@@ -763,7 +763,7 @@ function renderStatsHtml() {
   return `
     <details style="margin-top:14px; border-top:1px solid rgba(255,255,255,0.06); padding-top:14px;">
       <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Statistik</summary>
-      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin-top:10px; line-height:1.45;"><strong style="color:rgba(255,255,255,0.8); font-weight:700;">${STATS_CROWN} = LORD-REKORD</strong> (kein Lord hat einen höheren Wert, mehrere Lords können sich den Rekord teilen)</p>
+      <p class="text-xs" style="color:rgba(255,255,255,0.6); margin-top:10px; line-height:1.45;"><strong style="color:rgba(255,255,255,0.8); font-weight:700;">${STATS_CROWN} = LORD-REKORD</strong> (kein Lord hat einen höheren Wert, mehrere Lords können sich den Rekord teilen)</p>
       ${section('Dieses Jahr', thisYear)}
       ${section('Insgesamt', null)}
     </details>
@@ -777,19 +777,19 @@ function renderSettingsBody() {
       ${SETTINGS_GUIDE.map(([head, items]) => `
         <h4 class="syne" style="margin:18px 0 6px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.06); font-size:12px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#a5b4fc;">${esc(head)}</h4>
         <ul style="list-style:disc; padding-left:18px; margin:0;">
-          ${items.map(([lead, text]) => `<li class="text-xs" style="color:rgba(255,255,255,0.55); line-height:1.5; margin-top:6px;"><strong style="color:white; font-weight:700;">${esc(lead)}:</strong> ${guideText(text)}</li>`).join('')}
+          ${items.map(([lead, text]) => `<li class="text-xs" style="color:rgba(255,255,255,0.6); line-height:1.5; margin-top:6px;"><strong style="color:white; font-weight:700;">${esc(lead)}:</strong> ${guideText(text)}</li>`).join('')}
         </ul>
       `).join('')}
     </details>
   `
-  if (!currentUser) return `<p class="text-sm" style="color:rgba(255,255,255,0.4);">Bitte zuerst mit E-Mail anmelden, um Einstellungen vorzunehmen.</p>${guide}`
+  if (!currentUser) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Bitte zuerst mit E-Mail anmelden, um Einstellungen vorzunehmen.</p>${guide}`
   if (myProfileError) return `<p class="text-sm" style="color:rgba(255,120,120,0.85);">Die Einstellungen konnten nicht geladen werden. Bitte später noch einmal versuchen.</p>${guide}`
-  if (!myProfile) return `<p class="text-sm" style="color:rgba(255,255,255,0.4);">Einstellungen werden geladen …</p>${guide}`
+  if (!myProfile) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Einstellungen werden geladen …</p>${guide}`
   const row = (key, label, hint) => `
     <div class="flex items-start justify-between gap-3" style="margin-top:18px;">
       <div style="min-width:0;">
         <div class="syne" style="font-size:13px; font-weight:700; color:white;">${label}</div>
-        <p class="text-xs" style="color:rgba(255,255,255,0.4); margin-top:3px; line-height:1.45;">${hint}</p>
+        <p class="text-xs" style="color:rgba(255,255,255,0.6); margin-top:3px; line-height:1.45;">${hint}</p>
       </div>
       <button type="button" role="switch" aria-checked="${myProfile[key]}" aria-label="${label}" data-setting="${key}" class="toggle-switch"></button>
     </div>
@@ -797,7 +797,7 @@ function renderSettingsBody() {
   return `
     <div>
       <label for="settings-lord" class="syne" style="display:block; font-size:13px; font-weight:700; color:white;">Lord-Titel</label>
-      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin:3px 0 8px; line-height:1.45;">Dieser Name (höchstens 15 Zeichen) wird anderen angezeigt, wenn sie deine History oder Merkliste sehen („History von Lord …“, „Merkliste von Lord …“).</p>
+      <p class="text-xs" style="color:rgba(255,255,255,0.6); margin:3px 0 8px; line-height:1.45;">Dieser Name (höchstens 15 Zeichen) wird anderen angezeigt, wenn sie deine History oder Merkliste sehen („History von Lord …“, „Merkliste von Lord …“).</p>
       <div style="display:flex; align-items:center; gap:8px;">
         <span class="syne" style="font-size:14px; font-weight:800; color:#818cf8;">Lord</span>
         <input id="settings-lord" type="text" maxlength="${LORD_NAME_MAX}" autocomplete="off" placeholder="z. B. Fontaines" value="${esc(myProfile.lordTitle ?? '')}" style="${inputStyle}" />
@@ -899,15 +899,15 @@ function renderBottomNav() {
           ${active ? `<span style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:28px; height:2px; background:linear-gradient(90deg,#6366f1,#a855f7); border-radius:0 0 3px 3px;"></span>` : ''}
           <span style="position:relative; display:inline-block;">
             ${t.icon}
-            ${t.badge > 0 ? `<span style="position:absolute; top:-4px; right:-6px; min-width:16px; height:16px; border-radius:8px; background:#f472b6; color:white; font-size:9px; font-weight:700; display:flex; align-items:center; justify-content:center; padding:0 3px;">${t.badge > 99 ? '99+' : t.badge}</span>` : ''}
+            ${t.badge > 0 ? `<span style="position:absolute; top:-4px; right:-6px; min-width:16px; height:16px; border-radius:8px; background:#f472b6; color:white; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; padding:0 3px;">${t.badge > 99 ? '99+' : t.badge}</span>` : ''}
           </span>
-          <span class="syne" style="font-size:9px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">${t.label}</span>
+          <span class="syne" style="font-size:10px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">${t.label}</span>
         </button>`
       }).join('')}
       <button data-open-radar style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; padding:10px 4px 11px; background:none; border:none; cursor:pointer; color:${radarOpen ? 'white' : 'rgba(99,102,241,0.7)'}; transition:color 0.2s; position:relative;">
         ${radarOpen ? `<span style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:28px; height:2px; background:linear-gradient(90deg,#6366f1,#a855f7); border-radius:0 0 3px 3px;"></span>` : ''}
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
-        <span class="syne" style="font-size:9px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">Radar</span>
+        <span class="syne" style="font-size:10px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">Radar</span>
       </button>
     </div>
   `
@@ -949,14 +949,14 @@ function renderFilters() {
           const active = filters.cities[0] === c
           return `<button data-city="${c}" class="syne text-sm font-semibold transition-all duration-200" style="flex:1; padding:7px; border-radius:7px; cursor:pointer; border:none; ${active
             ? 'background:linear-gradient(135deg,rgba(99,102,241,0.55),rgba(168,85,247,0.45)); color:white; box-shadow:0 1px 8px rgba(99,102,241,0.25);'
-            : 'background:transparent; color:rgba(255,255,255,0.32);'}">${c}</button>`
+            : 'background:transparent; color:rgba(255,255,255,0.6);'}">${c}</button>`
         }).join('')}
       </div>
       <div style="display:flex; gap:8px;">
         <div style="position:relative; flex:1;">
           <div id="filter-loc-selected" style="cursor:pointer; padding:9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; gap:6px;">
-            <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${locName}</span>
-            <span style="color:rgba(255,255,255,0.25); font-size:11px; flex-shrink:0;">▾</span>
+            <span style="font-size:13px; color:rgba(255,255,255,0.6); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${locName}</span>
+            <span style="color:rgba(255,255,255,0.6); font-size:12px; flex-shrink:0;">▾</span>
           </div>
           <div id="filter-loc-dropdown" class="hidden scrollbar-hide" style="position:absolute; z-index:1000; width:100%; max-height:200px; overflow-y:auto; border-radius:10px; background:#0d1530; border:1px solid rgba(255,255,255,0.12); margin-top:4px;">
             <div data-filter-loc="alle" class="loc-option" style="padding:9px 12px; cursor:pointer; color:rgba(255,255,255,0.7); font-size:13px;">Alle Locations</div>
@@ -970,7 +970,7 @@ function renderFilters() {
         <div style="display:flex; gap:10px; align-items:center; flex:1; min-width:0;">
           <div style="position:relative; flex:1; min-width:0;">
             <input id="search-input" type="search" placeholder="Suche…" value="${esc(filters.search)}" style="width:100%; box-sizing:border-box; padding:9px 30px 9px 12px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:white; font-size:13px; outline:none; -webkit-appearance:none; appearance:none;" />
-            <button id="search-clear" type="button" aria-label="Suche löschen" style="position:absolute; right:4px; top:50%; transform:translateY(-50%); width:24px; height:24px; border:none; background:transparent; color:rgba(255,255,255,0.4); font-size:18px; line-height:1; cursor:pointer; display:${filters.search ? 'flex' : 'none'}; align-items:center; justify-content:center; border-radius:50%;">×</button>
+            <button id="search-clear" type="button" aria-label="Suche löschen" style="position:absolute; right:4px; top:50%; transform:translateY(-50%); width:24px; height:24px; border:none; background:transparent; color:rgba(255,255,255,0.6); font-size:18px; line-height:1; cursor:pointer; display:${filters.search ? 'flex' : 'none'}; align-items:center; justify-content:center; border-radius:50%;">×</button>
           </div>
           <button id="settings-open" type="button" title="Einstellungen" aria-label="Einstellungen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex-shrink:0; width:34px; height:34px; color:rgba(255,255,255,0.6);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
         </div>
@@ -1021,7 +1021,7 @@ function renderGroupedEvents() {
     groups[label].push(e)
   })
   if (Object.keys(groups).length === 0) {
-    return `<div class="text-center py-20" style="color:rgba(255,255,255,0.45);"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p></div>`
+    return `<div class="text-center py-20" style="color:rgba(255,255,255,0.6);"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p></div>`
   }
   return `
     <div class="space-y-8">
@@ -1029,14 +1029,14 @@ function renderGroupedEvents() {
         <div>
           <div class="flex items-center gap-3 mb-4">
             <div class="h-px flex-1" style="background:rgba(255,255,255,0.06);"></div>
-            <span class="syne text-xs tracking-widest uppercase" style="color:rgba(255,255,255,0.45); font-weight:700;">${label}</span>
+            <span class="syne text-xs tracking-widest uppercase" style="color:rgba(255,255,255,0.6); font-weight:700;">${label}</span>
             <div class="h-px flex-1" style="background:rgba(255,255,255,0.06);"></div>
           </div>
           <div class="space-y-3">${evts.map(e => renderEventCard(e)).join('')}</div>
         </div>
       `).join('')}
     </div>
-    ${hasMore ? `<div id="load-more-sentinel" style="height:1px;"></div><p class="text-center text-xs py-6 skeleton-pulse" style="color:rgba(255,255,255,0.25);">Weitere Events werden geladen…</p>` : ''}
+    ${hasMore ? `<div id="load-more-sentinel" style="height:1px;"></div><p class="text-center text-xs py-6 skeleton-pulse" style="color:rgba(255,255,255,0.6);">Weitere Events werden geladen…</p>` : ''}
   `
 }
 
@@ -1145,7 +1145,7 @@ function renderEventCard(e, { showMarks = false } = {}) {
             <p class="text-xs mb-2" style="color:rgba(255,255,255,0.62);">
               ${loc ? esc(loc.name) : esc(e.locationName || '')}
             </p>
-            ${e.description ? `<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.5);">${esc(e.description)}</p>` : ''}
+            ${e.description ? `<p class="text-xs leading-relaxed mb-3" style="color:rgba(255,255,255,0.6);">${esc(e.description)}</p>` : ''}
             ${showMarks ? `<div data-marks="${e.id}" class="text-xs font-semibold">${formatEventMarks(e.id)}</div>` : ''}
           </div>
           <div class="flex gap-2 mt-1" style="align-items:center;">
@@ -1155,9 +1155,9 @@ function renderEventCard(e, { showMarks = false } = {}) {
                 ? `<button data-spotify-picker="${e.id}" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</button>`
                 : `<a href="${esc(spotifyHref)}" target="_blank" title="Auf Spotify suchen" aria-label="Auf Spotify suchen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);">${spotifyIconSvg}</a>`
               ) : ''}
-              <button data-ics="${e.id}" title="Zu Apple Kalender hinzufügen" aria-label="Zu Apple Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.5);"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></button>
-              <button data-gcal="${e.id}" title="Zu Google Kalender hinzufügen" aria-label="Zu Google Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.5);"><svg width="14" height="14" viewBox="0 0 48 48" fill="currentColor"><path d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg></button>
-              <button data-share="${e.id}" title="Teilen" aria-label="Teilen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.5);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg></button>
+              <button data-ics="${e.id}" title="Zu Apple Kalender hinzufügen" aria-label="Zu Apple Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></button>
+              <button data-gcal="${e.id}" title="Zu Google Kalender hinzufügen" aria-label="Zu Google Kalender hinzufügen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 48 48" fill="currentColor"><path d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg></button>
+              <button data-share="${e.id}" title="Teilen" aria-label="Teilen" class="btn-glass rounded-lg inline-flex items-center justify-center" style="flex:1; min-width:0; padding:7px 0; color:rgba(255,255,255,0.6);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg></button>
             </div>
             <span style="flex-shrink:0; color:rgba(255,255,255,0.6); font-size:18px; font-weight:400; letter-spacing:-3px; pointer-events:none; user-select:none; padding-right:2px; line-height:1;">‹‹</span>
           </div>
@@ -1187,7 +1187,7 @@ function renderCalendarContent() {
         <button data-cal-next class="btn-glass w-9 h-9 rounded-xl flex items-center justify-center text-slate-400 hover:text-white">›</button>
       </div>
       <div class="grid grid-cols-7 gap-1 text-center mb-3">
-        ${['Mo','Di','Mi','Do','Fr','Sa','So'].map(d => `<div class="text-xs font-semibold py-1" style="color:rgba(255,255,255,0.2);">${d}</div>`).join('')}
+        ${['Mo','Di','Mi','Do','Fr','Sa','So'].map(d => `<div class="text-xs font-semibold py-1" style="color:rgba(255,255,255,0.6);">${d}</div>`).join('')}
       </div>
       <div class="grid grid-cols-7 gap-1">
         ${Array(firstDay).fill('<div></div>').join('')}
@@ -1207,10 +1207,10 @@ function renderCalendarContent() {
         }).join('')}
       </div>
       ${filters.dates.length > 0 ? `
-        <button data-clear-dates class="mt-4 w-full text-xs py-2 rounded-xl text-slate-500 hover:text-slate-300 transition-all btn-glass">
+        <button data-clear-dates class="mt-4 w-full text-xs py-2 rounded-xl text-slate-300 hover:text-white transition-all btn-glass">
           Auswahl zurücksetzen (${filters.dates.length} ${filters.dates.length === 1 ? 'Tag' : 'Tage'})
         </button>
-      ` : `<p class="text-center text-xs mt-4" style="color:rgba(255,255,255,0.15);">Tage antippen zum Filtern · Mehrfachauswahl möglich</p>`}
+      ` : `<p class="text-center text-xs mt-4" style="color:rgba(255,255,255,0.6);">Tage antippen zum Filtern · Mehrfachauswahl möglich</p>`}
     </div>
     <div class="space-y-3">
       ${filters.dates.length === 0
@@ -1256,7 +1256,7 @@ function renderBookmarkPeerHtml(p) {
   for (const m of p.marks) if (m.status === 'going' || !status.has(m.eventId)) status.set(m.eventId, m.status)
   const list = events.filter(e => !isConcertOver(e.date) && status.has(String(e.id)))
     .sort((a, b) => (Number(status.get(String(b.id)) === 'going') - Number(status.get(String(a.id)) === 'going')) || byDateTime(a, b))
-  if (!list.length) return `<p class="text-sm pt-2" style="color:rgba(255,255,255,0.3);">Keine anstehenden Events vorgemerkt.</p>`
+  if (!list.length) return `<p class="text-sm pt-2" style="color:rgba(255,255,255,0.6);">Keine anstehenden Events vorgemerkt.</p>`
   return `<div class="space-y-3 pt-2">${list.map(e => renderEventCard(e, { showMarks: true })).join('')}</div>`
 }
 
@@ -1291,7 +1291,7 @@ function attachBookmarkEvents() {
 // Icons rechts neben den Bewertungssternen jedes History-Eintrags. Eigene Liste: Spotify, zum Radar, bearbeiten.
 // Liste eines anderen Lords: Spotify, zu meinem Radar, in meine History. Radar und "In meine History" sind
 // Schalter: aktiv gefärbt, ein zweiter Tipp macht die Aktion rückgängig.
-const HIST_ICON_STYLE = 'display:inline-flex; align-items:center; justify-content:center; width:30px; height:28px; padding:0; color:rgba(255,255,255,0.55); background:none; border:none; cursor:pointer; text-decoration:none;'
+const HIST_ICON_STYLE = 'display:inline-flex; align-items:center; justify-content:center; width:30px; height:28px; padding:0; color:rgba(255,255,255,0.6); background:none; border:none; cursor:pointer; text-decoration:none;'
 const HIST_SPOTIFY_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>'
 const HIST_RADAR_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19a10 10 0 0 1 0-14"/></svg>'
 const HIST_EDIT_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>'
@@ -1328,9 +1328,9 @@ function renderHistoryRow(h, readOnly = false) {
   return `
     <div class="rounded-xl px-3 py-2.5" style="background:rgba(8,8,42,0.92); border:1px solid rgba(255,255,255,0.07);">
       <div class="syne" style="display:flex; align-items:baseline; gap:5px; font-size:13px; font-weight:700; color:white;">
-        <span style="min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</span>${h.isSupport ? '<span style="flex-shrink:0; font-size:11px; font-weight:400; color:rgba(255,255,255,0.4);">(Support)</span>' : ''}
+        <span style="min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(h.title)}</span>${h.isSupport ? '<span style="flex-shrink:0; font-size:12px; font-weight:400; color:rgba(255,255,255,0.6);">(Support)</span>' : ''}
       </div>
-      <div style="font-size:11px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
+      <div style="font-size:12px; color:rgba(255,255,255,0.6); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
       <div style="margin-top:2px; display:flex; align-items:center; justify-content:space-between;">${stars}${actions}</div>
     </div>
   `
@@ -1349,8 +1349,8 @@ function renderHistoryLocationOptions(filterText = '') {
     .filter(l => l.city === 'Berlin' || l.city === 'Leipzig')
     .filter(l => !needle || l.name.toLowerCase().includes(needle))
     .sort((a, b) => a.name.localeCompare(b.name))
-  if (!matches.length) return `<div style="padding:10px 14px; color:rgba(255,255,255,0.35); font-size:13px;">Keine Treffer</div>`
-  return matches.map((l, i) => `<div data-history-loc-option="${esc(l.name + ', ' + l.city)}" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.8); font-size:14px; ${i > 0 ? 'border-top:1px solid rgba(255,255,255,0.04);' : ''}">${esc(l.name)} <span style="color:rgba(255,255,255,0.35); font-size:12px;">${esc(l.city)}</span></div>`).join('')
+  if (!matches.length) return `<div style="padding:10px 14px; color:rgba(255,255,255,0.6); font-size:13px;">Keine Treffer</div>`
+  return matches.map((l, i) => `<div data-history-loc-option="${esc(l.name + ', ' + l.city)}" class="loc-option" style="padding:10px 14px; cursor:pointer; color:rgba(255,255,255,0.8); font-size:14px; ${i > 0 ? 'border-top:1px solid rgba(255,255,255,0.04);' : ''}">${esc(l.name)} <span style="color:rgba(255,255,255,0.6); font-size:12px;">${esc(l.city)}</span></div>`).join('')
 }
 
 function renderHistoryLocationDropdown(prefix = 'history') {
@@ -1370,7 +1370,7 @@ function renderHistoryDatePicker(prefix = 'history') {
   const yearOptions = Array.from({ length: 51 }, (_, i) => currentYear - i).map(y => `<option value="${y}">${y}</option>`).join('')
   return `
     <div>
-      <label style="font-size:11px; color:rgba(255,255,255,0.4); font-family:'DM Sans',sans-serif; padding-left:4px; display:block; margin-bottom:4px;">Datum</label>
+      <label style="font-size:12px; color:rgba(255,255,255,0.6); font-family:'DM Sans',sans-serif; padding-left:4px; display:block; margin-bottom:4px;">Datum</label>
       <div style="display:flex; gap:6px;">
         <select id="${prefix}-day" style="${selectStyle}"><option value="">Tag</option>${dayOptions}</select>
         <select id="${prefix}-month" style="${selectStyle}"><option value="">Monat</option>${monthOptions}</select>
@@ -1384,13 +1384,13 @@ function renderHistoryDatePicker(prefix = 'history') {
 // Jahreswechsel-Check beim Durchlaufen reicht daher für die Gliederung, ohne vorher
 // extra nach Jahr gruppieren zu müssen.
 function renderHistoryListHtml(historyEntries, readOnly = false) {
-  if (!historyEntries.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.3);">${readOnly ? 'Noch keine besuchten Konzerte sichtbar.' : 'Noch keine besuchten Konzerte eingetragen.'}</p>`
+  if (!historyEntries.length) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">${readOnly ? 'Noch keine besuchten Konzerte sichtbar.' : 'Noch keine besuchten Konzerte eingetragen.'}</p>`
   let html = ''
   let lastYear = null
   for (const h of historyEntries) {
     const year = h.date.slice(0, 4)
     if (year !== lastYear) {
-      html += `<div class="syne" style="margin:${lastYear ? '18px' : '0'} 0 2px 2px; font-size:11px; font-weight:800; letter-spacing:0.08em; color:rgba(255,255,255,0.3);">${year}</div>`
+      html += `<div class="syne" style="margin:${lastYear ? '18px' : '0'} 0 2px 2px; font-size:12px; font-weight:800; letter-spacing:0.08em; color:rgba(255,255,255,0.6);">${year}</div>`
       lastYear = year
     }
     html += renderHistoryRow(h, readOnly)
@@ -1466,7 +1466,7 @@ function renderCarouselHead(kind) {
   const size = compact ? 11 : 13   // in Merkliste und History gleich groß
   const btn = 'btn-glass rounded-lg inline-flex items-center justify-center'
   const actions = peer
-    ? `${peer.lordTitle ? '' : `<button data-peer-alias="${esc(peer.publicId)}" title="Namen vergeben" aria-label="Namen vergeben" class="${btn}" style="height:28px; padding:0 10px; color:rgba(255,255,255,0.6); font-size:11px;">Name</button>`}
+    ? `${peer.lordTitle ? '' : `<button data-peer-alias="${esc(peer.publicId)}" title="Namen vergeben" aria-label="Namen vergeben" class="${btn}" style="height:28px; padding:0 10px; color:rgba(255,255,255,0.6); font-size:12px;">Name</button>`}
        <button data-peer-fav="${esc(peer.publicId)}" title="${peer.isFavorite ? 'Favorit entfernen' : 'Als Favorit markieren'}" aria-label="${peer.isFavorite ? 'Favorit entfernen' : 'Als Favorit markieren'}" aria-pressed="${peer.isFavorite}" class="${btn}" style="width:28px; height:28px; color:${peer.isFavorite ? '#818cf8' : 'rgba(255,255,255,0.45)'}; font-size:16px; line-height:1;">${peer.isFavorite ? '★' : '☆'}</button>`
     : kind === 'history'
       ? `<button data-history-add-toggle title="Konzert nachtragen" aria-label="Konzert nachtragen" class="${btn}" style="width:28px; height:28px; color:rgba(255,255,255,0.6); font-size:16px; line-height:1;">+</button>`
@@ -1525,7 +1525,7 @@ function renderHistoryView() {
         <div id="history-list" class="space-y-2">
           ${renderHistoryListHtml(historyEntries)}
         </div>
-        <p id="history-community-hint" class="text-xs" style="margin-top:18px; color:rgba(255,255,255,0.3); ${communityLoadedAt && !communityPeers.length ? '' : 'display:none'}">Hier erscheinen die Histories anderer Lords, sobald sie freigegeben sind.</p>
+        <p id="history-community-hint" class="text-xs" style="margin-top:18px; color:rgba(255,255,255,0.6); ${communityLoadedAt && !communityPeers.length ? '' : 'display:none'}">Hier erscheinen die Histories anderer Lords, sobald sie freigegeben sind.</p>
       </div>
       <div id="history-peer-slides">${renderPeerSlides('history')}</div>
     </div>
@@ -1741,7 +1741,7 @@ function renderModals() {
       <div class="max-w-lg mx-auto mt-2 mb-12 mx-4 rounded-3xl overflow-hidden" style="background:rgba(12,17,32,0.97); border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 80px rgba(0,0,0,0.6);">
         <div class="px-6 py-5" style="background:linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.15)); border-bottom:1px solid rgba(255,255,255,0.06);">
           <h2 class="syne text-xl text-white" style="font-weight:800;">Radar</h2>
-          <p class="text-xs mt-0.5" style="color:rgba(255,255,255,0.35);">Künstler ohne anstehendes Konzert im Blick behalten</p>
+          <p class="text-xs mt-0.5" style="color:rgba(255,255,255,0.6);">Künstler ohne anstehendes Konzert im Blick behalten</p>
         </div>
         <div class="p-6">
           ${currentUser ? `
@@ -1751,9 +1751,9 @@ function renderModals() {
             </div>
             <div id="radar-list" class="space-y-2">${renderRadarList()}</div>
           ` : `
-            <p class="text-sm" style="color:rgba(255,255,255,0.4);">Bitte zuerst mit E-Mail anmelden, um ein Radar anzulegen.</p>
+            <p class="text-sm" style="color:rgba(255,255,255,0.6);">Bitte zuerst mit E-Mail anmelden, um ein Radar anzulegen.</p>
           `}
-          <button data-close-radar class="mt-4 w-full py-2 text-xs text-slate-600 hover:text-slate-400 transition-colors">Schließen</button>
+          <button data-close-radar class="mt-4 w-full py-2 text-xs text-slate-300 hover:text-white transition-colors">Schließen</button>
         </div>
       </div>
     </div>
@@ -1765,7 +1765,7 @@ function renderModals() {
           <div class="p-5">
             <div class="flex items-center justify-between" style="margin-bottom:6px;">
               <h2 class="syne text-xl text-white" style="font-weight:800;">Einstellungen</h2>
-              <button data-close-settings type="button" aria-label="Schließen" style="color:rgba(255,255,255,0.45); background:none; border:none; cursor:pointer; font-size:24px; line-height:1; padding:4px 8px;">×</button>
+              <button data-close-settings type="button" aria-label="Schließen" style="color:rgba(255,255,255,0.6); background:none; border:none; cursor:pointer; font-size:24px; line-height:1; padding:4px 8px;">×</button>
             </div>
             <div id="settings-body">${renderSettingsBody()}</div>
           </div>
@@ -1780,7 +1780,7 @@ function renderModals() {
           <div class="p-5 space-y-3">
             <div class="flex items-center justify-between">
               <h2 class="syne text-xl text-white" style="font-weight:800;">Eintrag bearbeiten</h2>
-              <button data-close-history-edit type="button" aria-label="Schließen" style="color:rgba(255,255,255,0.45); background:none; border:none; cursor:pointer; font-size:24px; line-height:1; padding:4px 8px;">×</button>
+              <button data-close-history-edit type="button" aria-label="Schließen" style="color:rgba(255,255,255,0.6); background:none; border:none; cursor:pointer; font-size:24px; line-height:1; padding:4px 8px;">×</button>
             </div>
             <input id="hedit-title" type="text" placeholder="Artist / Titel" style="${inputStyle}" />
             <div style="position:relative;">
@@ -1802,11 +1802,11 @@ function renderModals() {
       <div class="max-w-sm mx-auto mt-24 mb-12 mx-4 rounded-3xl overflow-hidden" style="background:rgba(12,17,32,0.97); border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 80px rgba(0,0,0,0.6);">
         <div class="px-6 py-5" style="background:linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.15)); border-bottom:1px solid rgba(255,255,255,0.06);">
           <h2 class="syne text-xl text-white" style="font-weight:800;">Künstler wählen</h2>
-          <p class="text-xs mt-0.5" style="color:rgba(255,255,255,0.35);">Mehrere Acts erkannt – wen auf Spotify suchen?</p>
+          <p class="text-xs mt-0.5" style="color:rgba(255,255,255,0.6);">Mehrere Acts erkannt – wen auf Spotify suchen?</p>
         </div>
         <div id="spotify-picker-list" class="p-4 space-y-2"></div>
         <div class="px-6 pb-6">
-          <button data-close-spotify-picker class="mt-1 w-full py-2 text-xs text-slate-600 hover:text-slate-400 transition-colors">Abbrechen</button>
+          <button data-close-spotify-picker class="mt-1 w-full py-2 text-xs text-slate-300 hover:text-white transition-colors">Abbrechen</button>
         </div>
       </div>
     </div>
@@ -2379,7 +2379,7 @@ function attachSwipeToWrapper(wrapper) {
     const list = document.getElementById('spotify-picker-list')
     const pickerModal = document.getElementById('modal-spotify-picker')
     if (!list || !pickerModal) return
-    list.innerHTML = extractArtists(e.title).map(name => `<a href="${spotifySearchUrl(name)}" target="_blank" class="btn-glass rounded-xl flex items-center justify-between px-4 py-3 text-sm text-white" style="text-decoration:none;">${esc(name)}<span style="color:rgba(255,255,255,0.3);">›</span></a>`).join('')
+    list.innerHTML = extractArtists(e.title).map(name => `<a href="${spotifySearchUrl(name)}" target="_blank" class="btn-glass rounded-xl flex items-center justify-between px-4 py-3 text-sm text-white" style="text-decoration:none;">${esc(name)}<span style="color:rgba(255,255,255,0.6);">›</span></a>`).join('')
     list.querySelectorAll('a').forEach(a => a.addEventListener('click', () => pickerModal.classList.add('hidden')))
     pickerModal.classList.remove('hidden')
   })

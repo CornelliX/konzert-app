@@ -1,7 +1,7 @@
 * { box-sizing: border-box; }
 body { font-family: 'DM Sans', sans-serif; overscroll-behavior-y: none; }
 .syne { font-family: 'Syne', sans-serif; }
-input[type="date"], input[type="time"] { color-scheme: dark; color: rgba(255,255,255,0.4) !important; }
+input[type="date"], input[type="time"] { color-scheme: dark; color: rgba(255,255,255,0.6) !important; }
 input[type="date"]:valid, input[type="time"]:valid { color: white !important; }
 .glass {
   background: rgba(8,8,42,0.97);
@@ -37,7 +37,7 @@ input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; appe
   background: rgba(255,255,255,0.18) !important;
   color: white !important;
 }
-input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
+input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.5); }
 .noise { position: relative; }
 .noise::after {
   content: '';
@@ -54,7 +54,7 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 .flatpickr-day { color:white; }
 .flatpickr-day:hover { background:rgba(99,102,241,0.3); }
 .flatpickr-day.selected { background:rgba(99,102,241,0.6); border-color:transparent; }
-.flatpickr-months, .flatpickr-weekdays, span.flatpickr-weekday { background:transparent; color:rgba(255,255,255,0.5); }
+.flatpickr-months, .flatpickr-weekdays, span.flatpickr-weekday { background:transparent; color:rgba(255,255,255,0.6); }
 .flatpickr-current-month, .numInputWrapper { color:white; }
 .flatpickr-prev-month svg, .flatpickr-next-month svg { fill:white; }
 .flatpickr-time { background:#1a1a3a !important; border-radius:12px !important; }
@@ -191,3 +191,20 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
 /* Zähler anderer Lords an den Karten der Merkliste: ohne Inhalt kein Platz */
 [data-marks] { margin-bottom: 8px; }
 [data-marks]:empty { display: none; }
+
+/* Barrierefreiheit */
+/* Doppeltipp-Zoom aus (Doppeltipp auf die Reiter ist eine App-Funktion), Pinch-Zoom bleibt erlaubt */
+html { touch-action: manipulation; }
+/* iOS zoomt beim Fokus in Felder unter 16 px hinein - mit 16 px kann der Zoom des Nutzers erlaubt bleiben */
+input:not([type="checkbox"]):not([type="radio"]), select, textarea { font-size: 16px !important; }
+/* Sichtbarer Fokus bei Tastaturbedienung (Inline-Styles setzen outline:none, daher !important) */
+:focus-visible { outline: 2px solid #a5b4fc !important; outline-offset: 2px; }
+/* Wer Bewegung reduziert haben möchte: Animationen und Übergänge praktisch aus */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
