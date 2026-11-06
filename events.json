@@ -1293,19 +1293,6 @@
     "addedAt": "2026-09-27"
   },
   {
-    "id": 468426139,
-    "title": "fragFrank!",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/fragfrank/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1569214515,
     "title": "The Return of »Ba(a)d Schandau Express« | AG. Geige vs. A.E. Bizottság",
     "date": "2026-11-07",
@@ -1332,19 +1319,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1880822473,
-    "title": "Tokio Hotel",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1828635790,
     "title": "Soulbound x Hell Boulevard",
     "date": "2026-11-07",
@@ -1369,6 +1343,32 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 468426139,
+    "title": "fragFrank!",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/fragfrank/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1880822473,
+    "title": "Tokio Hotel",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 123914771,
@@ -1526,19 +1526,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1734301250,
-    "title": "Rubys Revival Party",
-    "date": "2026-11-07",
-    "time": "22:00",
-    "locationId": 58,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/rubys-revival",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 93526037,
     "title": "Stil vor Talent w/ Oliver Koletzki",
     "date": "2026-11-07",
@@ -1550,6 +1537,19 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1734301250,
+    "title": "Rubys Revival Party",
+    "date": "2026-11-07",
+    "time": "22:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/rubys-revival",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 728255439,
@@ -2045,19 +2045,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 2082679369,
-    "title": "Jungle",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2002838373,
     "title": "Keshavara",
     "date": "2026-11-08",
@@ -2082,6 +2069,19 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 2082679369,
+    "title": "Jungle",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1391505979,
@@ -4283,19 +4283,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 117864839,
-    "title": "SPLIT",
-    "date": "2026-11-13",
-    "time": "22:00",
-    "locationId": 58,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/split-von-studis-fur-studis",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 844284041,
     "title": "Bunte Träumerei w/ Marten Lou",
     "date": "2026-11-13",
@@ -4307,6 +4294,19 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 117864839,
+    "title": "SPLIT",
+    "date": "2026-11-13",
+    "time": "22:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/split-von-studis-fur-studis",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1427452913,
@@ -4968,19 +4968,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1674855362,
-    "title": "When the Sun Hits",
-    "date": "2026-11-14",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-7/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1044365510,
     "title": "Monkey Safari - YDKWTD - (All Night Long) Album Release Party",
     "date": "2026-11-14",
@@ -4991,6 +4978,19 @@
     "ticketUrl": "https://club.ritterbutzke.com/event/141126-MonkeySafari",
     "spotifyUrl": "",
     "source": "ritterbutzke",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1674855362,
+    "title": "When the Sun Hits",
+    "date": "2026-11-14",
+    "time": "22:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-7/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
     "addedAt": "2026-11-02"
   },
   {
@@ -5147,6 +5147,19 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1352153611,
+    "title": "Little Big",
+    "date": "2026-11-15",
+    "time": "19:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OrTweTI-LvaS6ufTSjm",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1073149009,
@@ -5966,6 +5979,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 909342281,
+    "title": "Papi Hans",
+    "date": "2026-11-17",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P3zqdI4gxoHVarodqm9",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 714460103,
     "title": "Kingfishr",
     "date": "2026-11-17",
@@ -6302,19 +6328,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 387436453,
-    "title": "Muse",
-    "date": "2026-11-18",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1003297460,
     "title": "TRAC#4: OPEN STAGE",
     "date": "2026-11-18",
@@ -6326,6 +6339,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 387436453,
+    "title": "Muse",
+    "date": "2026-11-18",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1675873466,
@@ -7596,19 +7622,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2022768922,
-    "title": "twiceasmad",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/twiceasmad/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 936328045,
     "title": "SHOW DOWN – Wettstreit der Magier",
     "date": "2026-11-20",
@@ -7633,6 +7646,19 @@
     "spotifyUrl": "",
     "source": "nbl",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 2022768922,
+    "title": "twiceasmad",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/twiceasmad/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 836223128,
@@ -7867,19 +7893,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 348015507,
-    "title": "Die Schlagernacht des Jahres",
-    "date": "2026-11-21",
-    "time": "18:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2092823986,
     "title": "Roller Disco",
     "date": "2026-11-21",
@@ -7891,6 +7904,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 348015507,
+    "title": "Die Schlagernacht des Jahres",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1548840700,
@@ -8306,19 +8332,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 400571336,
-    "title": "geburtstag 40 er",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/geburtstag-40-er/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 947644172,
     "title": "SHOW DOWN – Wettstreit der Magier",
     "date": "2026-11-21",
@@ -8369,6 +8382,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 400571336,
+    "title": "geburtstag 40 er",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/geburtstag-40-er/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1597020272,
@@ -10673,19 +10699,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1251246961,
-    "title": "Everything Dies + X",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/everything-dies-x/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 933234445,
     "title": "5raumfenster",
     "date": "2026-11-27",
@@ -10709,6 +10722,19 @@
     "ticketUrl": "https://neuesschauspielleipzig.de/spielplan/meine-hande-wie-die-deinen/date:1795806000",
     "spotifyUrl": "",
     "source": "nsl",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1251246961,
+    "title": "Everything Dies + X",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/everything-dies-x/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
     "addedAt": "2026-11-02"
   },
   {
@@ -14070,19 +14096,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 168945183,
-    "title": "When the Sun Hits",
-    "date": "2026-12-05",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-8/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 954988825,
     "title": "MICHAEL CANITROT",
     "date": "2026-12-05",
@@ -14106,6 +14119,19 @@
     "ticketUrl": "https://club.ritterbutzke.com/event/051226-DONDIABLO",
     "spotifyUrl": "",
     "source": "ritterbutzke",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 168945183,
+    "title": "When the Sun Hits",
+    "date": "2026-12-05",
+    "time": "22:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-8/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
     "addedAt": "2026-11-02"
   },
   {
@@ -16231,19 +16257,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 261913641,
-    "title": "Samsta + ?",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/samsta/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1297070537,
     "title": "Generation Parocktikum | im UT Connewitz",
     "date": "2026-12-12",
@@ -16281,6 +16294,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 261913641,
+    "title": "Samsta + ?",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/samsta/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2064951038,
@@ -18197,19 +18223,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1026917258,
-    "title": "Thomas Schernikau | From Forced To Mode",
-    "date": "2026-12-19",
-    "time": "20:30",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/thomas-schernikau-moritzbastei-21701611/?srsltid=AfmBOoqQzNDcteYncIF6anF7u-29gVjQX5CHYE6vfzy7bbw0GslqP2gl",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 258046674,
     "title": "DANCING WITH TEARS IN YOUR EYES",
     "date": "2026-12-19",
@@ -18702,19 +18715,6 @@
     "addedAt": "2026-11-03"
   },
   {
-    "id": 1674407436,
-    "title": "CAFÉ geschlossen",
-    "date": "2026-12-26",
-    "time": "10:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/special/2026-12-26/cafe-geschlossen-9",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 671421410,
     "title": "Schwanensee – Grand Classic Ballet mit Orchester",
     "date": "2026-12-26",
@@ -18921,19 +18921,6 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-09-29"
-  },
-  {
-    "id": 77477897,
-    "title": "PHILLIP BOA AND THE VOODOOCLUB",
-    "date": "2026-12-27",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77041",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
   },
   {
     "id": 415984826,
