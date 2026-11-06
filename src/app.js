@@ -2082,6 +2082,8 @@ function attachNavEvents() {
       lastNavTap = { view: btn.dataset.nav, at: tapNow }
       if (isDoubleTap && currentView === btn.dataset.nav && (currentView === 'history' || currentView === 'gemerkt')) {
         showSlide(currentView === 'history' ? 'history' : 'bookmark', 0, -1)
+        window.scrollTo(0, 0)
+        if (wasRadarOpen) refreshBottomNav()
         return
       }
 
