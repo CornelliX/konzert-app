@@ -103,19 +103,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 401795125,
-    "title": "Radio Free Alice",
-    "date": "2026-11-06",
-    "time": "19:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/radio-free-alice-frannz-club-22045591",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-28"
-  },
-  {
     "id": 704041090,
     "title": "FRAU MANSMANN",
     "date": "2026-11-06",
@@ -178,6 +165,19 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 401795125,
+    "title": "Radio Free Alice",
+    "date": "2026-11-06",
+    "time": "19:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/radio-free-alice-frannz-club-22045591",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-28"
   },
   {
     "id": 1625149581,
@@ -582,19 +582,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 247680552,
-    "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
-    "date": "2026-11-06",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/1cc02bcc-643d-4267-91dc-22e55c422b9e",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 669898722,
     "title": "Grumpynators + Kollision",
     "date": "2026-11-06",
@@ -606,6 +593,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 247680552,
+    "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
+    "date": "2026-11-06",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/1cc02bcc-643d-4267-91dc-22e55c422b9e",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1233467847,
@@ -866,19 +866,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1697924672,
-    "title": "„Das Gold in den Fugen -Poesie zum Hoffen-“ ausverkauft",
-    "date": "2026-11-07",
-    "time": "18:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1123475229,
     "title": "UNIDRAM: LAB RATS",
     "date": "2026-11-07",
@@ -890,6 +877,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1697924672,
+    "title": "„Das Gold in den Fugen -Poesie zum Hoffen-“ ausverkauft",
+    "date": "2026-11-07",
+    "time": "18:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-11-01"
   },
   {
     "id": 1883374397,
@@ -1371,19 +1371,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1880822473,
-    "title": "Tokio Hotel",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1828635790,
     "title": "Soulbound x Hell Boulevard",
     "date": "2026-11-07",
@@ -1423,6 +1410,19 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 1880822473,
+    "title": "Tokio Hotel",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 200902024,
     "title": "Danger Dan",
     "date": "2026-11-07",
@@ -1434,19 +1434,6 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 521214328,
-    "title": "Die Schöne Party",
-    "date": "2026-11-07",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-14"
   },
   {
     "id": 891845315,
@@ -1486,6 +1473,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 521214328,
+    "title": "Die Schöne Party",
+    "date": "2026-11-07",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-10-14"
   },
   {
     "id": 2001227923,
@@ -1994,19 +1994,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1791717909,
-    "title": "So Soon",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 329157591,
     "title": "Dmitry Spirin",
     "date": "2026-11-08",
@@ -2084,19 +2071,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 2082679369,
-    "title": "Jungle",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2002838373,
     "title": "Keshavara",
     "date": "2026-11-08",
@@ -2121,6 +2095,32 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1791717909,
+    "title": "So Soon",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2082679369,
+    "title": "Jungle",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/jungle-26/2026-11-08-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2046892229,
@@ -3457,19 +3457,6 @@
     "addedAt": "2026-10-28"
   },
   {
-    "id": 1301444211,
-    "title": "Messa -ausverkauft-",
-    "date": "2026-11-12",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-02"
-  },
-  {
     "id": 1094759064,
     "title": "Open Mic L. J. Fox + Ængellll (DJ-Set)",
     "date": "2026-11-12",
@@ -3675,6 +3662,19 @@
     "addedAt": "2026-11-06"
   },
   {
+    "id": 1301444211,
+    "title": "Messa -ausverkauft-",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-02"
+  },
+  {
     "id": 1358623971,
     "title": "Pyro One + KET",
     "date": "2026-11-12",
@@ -3688,19 +3688,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1698384471,
-    "title": "Red RHYTHM – Swing Dance Night",
-    "date": "2026-11-12",
-    "time": "20:30",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1137751084,
     "title": "TIGERBEAT (GER) & PAYOLA (GER) live @ Ilses Erika",
     "date": "2026-11-12",
@@ -3712,6 +3699,19 @@
     "spotifyUrl": "",
     "source": "ilseserika",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1698384471,
+    "title": "Red RHYTHM – Swing Dance Night",
+    "date": "2026-11-12",
+    "time": "20:30",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 447024753,
@@ -4052,19 +4052,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 1485667857,
-    "title": "SingAlong – Das große Mitsing-Konzert in Berlin (ausverkauft)",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-07"
-  },
-  {
     "id": 1206127766,
     "title": "Vera Nois + The Chee Awai + Infinite Livez (DJ-Set)",
     "date": "2026-11-13",
@@ -4206,6 +4193,19 @@
     "addedAt": "2026-11-06"
   },
   {
+    "id": 1485667857,
+    "title": "SingAlong – Das große Mitsing-Konzert in Berlin (ausverkauft)",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-10-07"
+  },
+  {
     "id": 60967497,
     "title": "FLIGHTMODE",
     "date": "2026-11-13",
@@ -4245,19 +4245,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1706118754,
-    "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s + Talk Talk",
-    "date": "2026-11-13",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/f1f0e04f-aadf-4a0a-9e83-d393e87ae7d4",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 160102047,
     "title": "Stoner’s Fall – Sheev + Ghostones + Caosonora",
     "date": "2026-11-13",
@@ -4282,6 +4269,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1706118754,
+    "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s + Talk Talk",
+    "date": "2026-11-13",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/f1f0e04f-aadf-4a0a-9e83-d393e87ae7d4",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1710067143,
@@ -4659,19 +4659,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 590027034,
-    "title": "ANDREAS KÜMMERT & THE ELECTRIC CIRCUS",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/andreas-kuemmert-the-electric-circus-frannz-club-20383467/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1642765066,
     "title": "Zach Phillips & friends + Brigadera + Acid Washed",
     "date": "2026-11-14",
@@ -4865,6 +4852,19 @@
     "addedAt": "2026-11-06"
   },
   {
+    "id": 590027034,
+    "title": "ANDREAS KÜMMERT & THE ELECTRIC CIRCUS",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/andreas-kuemmert-the-electric-circus-frannz-club-20383467/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1675904006,
     "title": "UltraNothing",
     "date": "2026-11-14",
@@ -4889,19 +4889,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 102428952,
-    "title": "Millennial Mixtape",
-    "date": "2026-11-14",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/820df3ed-f0bf-4d98-ad28-aa2f26619ae6",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-14"
   },
   {
     "id": 1644836029,
@@ -4941,6 +4928,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 102428952,
+    "title": "Millennial Mixtape",
+    "date": "2026-11-14",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/820df3ed-f0bf-4d98-ad28-aa2f26619ae6",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-10-14"
   },
   {
     "id": 2007612381,
@@ -5370,19 +5370,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1362622082,
-    "title": "Nachtmahr",
-    "date": "2026-11-15",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 414650959,
     "title": "ALL(H)OURS",
     "date": "2026-11-15",
@@ -5458,6 +5445,19 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1362622082,
+    "title": "Nachtmahr",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 578959005,
@@ -5668,19 +5668,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 799250225,
-    "title": "Placebo",
-    "date": "2026-11-16",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/placebo-26/2026-11-16-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1251235866,
     "title": "ILA & I Love You Honey Bunny",
     "date": "2026-11-16",
@@ -5692,6 +5679,19 @@
     "spotifyUrl": "",
     "source": "schokoladen",
     "addedAt": "2026-11-04"
+  },
+  {
+    "id": 799250225,
+    "title": "Placebo",
+    "date": "2026-11-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/placebo-26/2026-11-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1729317900,
@@ -5953,19 +5953,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 898164500,
-    "title": "Home Front",
-    "date": "2026-11-17",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-14"
-  },
-  {
     "id": 714460103,
     "title": "Kingfishr",
     "date": "2026-11-17",
@@ -6080,6 +6067,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 898164500,
+    "title": "Home Front",
+    "date": "2026-11-17",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-10-14"
   },
   {
     "id": 2102826329,
@@ -6315,19 +6315,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 387436453,
-    "title": "Muse",
-    "date": "2026-11-18",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1003297460,
     "title": "TRAC#4: OPEN STAGE",
     "date": "2026-11-18",
@@ -6339,6 +6326,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 387436453,
+    "title": "Muse",
+    "date": "2026-11-18",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/muse_2026/2026-11-18-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1675873466,
@@ -6429,19 +6429,6 @@
     "ticketUrl": "https://www.tempodrom.de/event/mirella_precek_2026-11-18_20/",
     "spotifyUrl": "",
     "source": "tempodrom",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 729857533,
-    "title": "DESIRE",
-    "date": "2026-11-18",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/artist/desire/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -6573,6 +6560,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 729857533,
+    "title": "DESIRE",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/artist/desire/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 592790147,
@@ -6913,19 +6913,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1707224571,
-    "title": "Chinchilla",
-    "date": "2026-11-19",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/chinchilla-the-bigger-rooms-eu-tour-2026-frannz-club-21429378",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 641986806,
     "title": "SHORTIES FILMS SCREENING #30",
     "date": "2026-11-19",
@@ -7068,6 +7055,19 @@
     "addedAt": "2026-11-06"
   },
   {
+    "id": 1707224571,
+    "title": "Chinchilla",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/chinchilla-the-bigger-rooms-eu-tour-2026-frannz-club-21429378",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 369487881,
     "title": "WYATT E.  (BE) - Antiquity Doom soundtrack of 587 BC - live @ Ilses Erika (pres. by Golden Rhino Booking)",
     "date": "2026-11-19",
@@ -7171,19 +7171,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1401915550,
-    "title": "Soffie",
-    "date": "2026-11-20",
-    "time": "19:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1139121933,
     "title": "Marlin Beach",
     "date": "2026-11-20",
@@ -7221,6 +7208,19 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1401915550,
+    "title": "Soffie",
+    "date": "2026-11-20",
+    "time": "19:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1917057265,
@@ -7674,19 +7674,6 @@
     "addedAt": "2026-10-28"
   },
   {
-    "id": 40846695,
-    "title": "Tannz im Frannz mit  HipHop Special",
-    "date": "2026-11-20",
-    "time": "22:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/309e88e6-fa2e-4c37-b281-5f8a625e06d7",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-21"
-  },
-  {
     "id": 222557383,
     "title": "Jazz Night ft. Flow Rea (Est)",
     "date": "2026-11-20",
@@ -7723,6 +7710,19 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 40846695,
+    "title": "Tannz im Frannz mit  HipHop Special",
+    "date": "2026-11-20",
+    "time": "22:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/309e88e6-fa2e-4c37-b281-5f8a625e06d7",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-10-21"
   },
   {
     "id": 1748846356,
@@ -7867,19 +7867,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 348015507,
-    "title": "Die Schlagernacht des Jahres",
-    "date": "2026-11-21",
-    "time": "18:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2092823986,
     "title": "Roller Disco",
     "date": "2026-11-21",
@@ -7891,6 +7878,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 348015507,
+    "title": "Die Schlagernacht des Jahres",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1548840700,
@@ -8397,19 +8397,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1997658944,
-    "title": "Die Schöne Party",
-    "date": "2026-11-21",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-14"
-  },
-  {
     "id": 1237903414,
     "title": "Krashkarma + Blitzeinbruch",
     "date": "2026-11-21",
@@ -8421,6 +8408,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1997658944,
+    "title": "Die Schöne Party",
+    "date": "2026-11-21",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-10-14"
   },
   {
     "id": 1161079496,
@@ -8487,6 +8487,32 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 469563735,
+    "title": "HOMEPARTY XXL",
+    "date": "2026-11-21",
+    "time": "22:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.citybounce.de/event/homeparty---das-xxl-neonspecial-21-11",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1825335909,
+    "title": "MIXTAPE ’84",
+    "date": "2026-11-21",
+    "time": "23:00",
+    "locationId": 4,
+    "type": "konzert",
+    "description": "Die fabulöse 80er Nacht im Privatclub",
+    "ticketUrl": "https://privatclub-berlin.de/event/mixtape-1984/",
+    "spotifyUrl": "",
+    "source": "privatclub",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1628668063,
     "title": "THE BUG presents: PRESSURE",
     "date": "2026-11-21",
@@ -8537,6 +8563,19 @@
     "spotifyUrl": "",
     "source": "holzmarkt",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1382270461,
+    "title": "Fitness-Party",
+    "date": "2026-11-22",
+    "time": "14:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://buchung.hochschulsport-potsdam.de/angebote/aktueller_zeitraum/_Fitness-Party.html",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1645667680,
@@ -9029,19 +9068,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 870020969,
-    "title": "Tinie Tempah",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/tinie-tempah-the-nights-not-dead-tour-frannz-club-21933824",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1739772307,
     "title": "JUMI",
     "date": "2026-11-23",
@@ -9130,6 +9156,19 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 870020969,
+    "title": "Tinie Tempah",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/tinie-tempah-the-nights-not-dead-tour-frannz-club-21933824",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 135029508,
@@ -9366,19 +9405,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 1974643545,
-    "title": "Gurriers",
-    "date": "2026-11-24",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.ticketmaster.de/event/gurriers-nobodys-coming-to-save-you-tour-2026-tickets/2079703805?",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1789253390,
     "title": "Strangelove – The DEPECHE MODE Experience",
     "date": "2026-11-24",
@@ -9442,6 +9468,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 1974643545,
+    "title": "Gurriers",
+    "date": "2026-11-24",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.ticketmaster.de/event/gurriers-nobodys-coming-to-save-you-tour-2026-tickets/2079703805?",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 754482728,
@@ -9730,19 +9769,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 337740392,
-    "title": "The Scratch",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/the-scratch-world-tour-2026-frannz-club-21536798",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1978530838,
     "title": "Music Quiz",
     "date": "2026-11-25",
@@ -9845,6 +9871,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 337740392,
+    "title": "The Scratch",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/the-scratch-world-tour-2026-frannz-club-21536798",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 369576453,
@@ -10094,19 +10133,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1034729473,
-    "title": "Kinderzimmer Productions",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 262376956,
     "title": "Open Mic L. J. Fox + TBA (DJ-Set)",
     "date": "2026-11-26",
@@ -10184,6 +10210,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1393222770,
+    "title": "Die Gorillas",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://gorillas.billeto.net/basket/event/1/-1172098036?lang=de",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 920226235,
     "title": "Rundfunk-Sinfonieorchester Berlin: Moderierte Probe mit Vladimir Jurowski",
     "date": "2026-11-26",
@@ -10195,6 +10234,19 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1034729473,
+    "title": "Kinderzimmer Productions",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1510889580,
@@ -10260,17 +10312,30 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1507856726,
-    "title": "ANDA MORTS - I hate this part of Texas - Tour",
+    "id": 595483549,
+    "title": "Pong Turnier",
+    "date": "2026-11-27",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventbrite.de/e/pong-turnier-waschhaus-potsdam-weihnachtsfeier-beerpongbierpong-tickets-1984042575753",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1939029615,
+    "title": "ANDA MORTS - Hektomatik WÖD Tour // Ausverkauft!",
     "date": "2026-11-27",
     "time": "19:00",
     "locationId": 13,
     "type": "konzert",
-    "description": "[Indie]  \n\n27.11.2026, 19:00 Uhr:  \n\nANDA MORTS - I hate this part of Texas - Tour  \n\nNach zwei restlos ausverkauften…",
+    "description": "[Indie]  \n\n27.11.2026, 19:00 Uhr:  \n\nANDA MORTS - Hektomatik WÖD Tour // Ausverkauft!  \n\nNach zwei restlos ausverkauften…",
     "ticketUrl": "http://www.conne-island.de/termin/nr7362.html",
     "spotifyUrl": "",
     "source": "conne-island",
-    "addedAt": "2026-11-01"
+    "addedAt": "2026-11-06"
   },
   {
     "id": 24471766,
@@ -10545,19 +10610,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 140616983,
-    "title": "SBP4 – New Album Live at FRANNZ",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 621446907,
     "title": "HealthSUPPORT: Vowws + Doodseskader",
     "date": "2026-11-27",
@@ -10725,6 +10777,45 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1126530133,
+    "title": "Heinz Strunk",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/heinz-strunk-memories-of-heidelberg",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1403285846,
+    "title": "SIND",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.ticketbu.de/produkte/400-tickets-sind-waschhaus-potsdam-am-27-11-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 140616983,
+    "title": "SBP4 – New Album Live at FRANNZ",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1128126557,
     "title": "DIE WALLERTS",
     "date": "2026-11-27",
@@ -10736,19 +10827,6 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-09-21"
-  },
-  {
-    "id": 556049019,
-    "title": "Rock@Frannz",
-    "date": "2026-11-27",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/c182203c-37b4-4765-aa4d-366379f60b70",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-07"
   },
   {
     "id": 1402074738,
@@ -10788,6 +10866,19 @@
     "spotifyUrl": "",
     "source": "nbl",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 556049019,
+    "title": "Rock@Frannz",
+    "date": "2026-11-27",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/c182203c-37b4-4765-aa4d-366379f60b70",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-10-07"
   },
   {
     "id": 1831819661,
@@ -10839,6 +10930,19 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1053814630,
+    "title": "Waschhaus 80er",
+    "date": "2026-11-27",
+    "time": "22:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/80er-party-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 290375278,
@@ -10930,17 +11034,17 @@
     "addedAt": "2026-09-22"
   },
   {
-    "id": 836810315,
-    "title": "ANDA MORTS - I hate this part of Texas - Tour",
+    "id": 1016346032,
+    "title": "ANDA MORTS - Hektomatik WÖD Tour // Ausverkauft!",
     "date": "2026-11-28",
     "time": "19:00",
     "locationId": 13,
     "type": "konzert",
-    "description": "[Indie]  \n\n28.11.2026, 19:00 Uhr:  \n\nANDA MORTS - I hate this part of Texas - Tour  \n\nNach zwei restlos ausverkauften…",
+    "description": "[Indie]  \n\n28.11.2026, 19:00 Uhr:  \n\nANDA MORTS - Hektomatik WÖD Tour // Ausverkauft!  \n\nNach zwei restlos ausverkauften…",
     "ticketUrl": "http://www.conne-island.de/termin/nr7363.html",
     "spotifyUrl": "",
     "source": "conne-island",
-    "addedAt": "2026-11-01"
+    "addedAt": "2026-11-06"
   },
   {
     "id": 257835906,
@@ -11190,19 +11294,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1911223541,
-    "title": "Fancy",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 486975251,
     "title": "Lyndon Lewis Mayhew Dodd & Marius Hay-Smith (DJ-Set)",
     "date": "2026-11-28",
@@ -11410,6 +11501,45 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 654070612,
+    "title": "Filow",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://filow.shop/products/tour-2026-28-11-2026-potsdam",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1459913765,
+    "title": "Rokko Weissensee & Blend",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/rokko-weissensee-blend-potsdam-ZUEWRW",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1911223541,
+    "title": "Fancy",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1814173282,
     "title": "Factory",
     "date": "2026-11-28",
@@ -11462,19 +11592,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 437472447,
-    "title": "„Flashbacks mit Liebe“",
-    "date": "2026-11-28",
-    "time": "22:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-14"
-  },
-  {
     "id": 2128818517,
     "title": "BAMBULE BLN",
     "date": "2026-11-28",
@@ -11524,6 +11641,19 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 437472447,
+    "title": "„Flashbacks mit Liebe“",
+    "date": "2026-11-28",
+    "time": "22:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-10-14"
   },
   {
     "id": 1410970501,
@@ -11630,6 +11760,18 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 2062163388,
+    "title": "The Luxorium – Grand Varieté",
+    "date": "2026-11-29",
+    "time": "18:00",
+    "type": "konzert",
+    "locationId": 42,
+    "source": "theater-im-delphi",
+    "ticketUrl": "https://theater-im-delphi.de/programm/",
+    "spotifyUrl": "",
+    "addedAt": "2026-09-22"
+  },
+  {
     "id": 1496240074,
     "title": "Fancy",
     "date": "2026-11-29",
@@ -11641,18 +11783,6 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 2062163388,
-    "title": "The Luxorium – Grand Varieté",
-    "date": "2026-11-29",
-    "time": "18:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-09-22"
   },
   {
     "id": 802989331,
@@ -11769,6 +11899,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 424917923,
+    "title": "Dr. Pop",
+    "date": "2026-11-29",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/dr-pop-29-11-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 837036655,
@@ -11951,6 +12094,19 @@
     "spotifyUrl": "",
     "source": "max-schmeling-halle",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 905268865,
+    "title": "Streichelt",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/streichelt-12",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 2064087764,
@@ -12236,6 +12392,19 @@
     "addedAt": "2026-11-04"
   },
   {
+    "id": 943766086,
+    "title": "DŸSE",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/dyse-2",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 238062648,
     "title": "Weihnachtsfeier für Ältere",
     "date": "2026-12-01",
@@ -12431,19 +12600,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1646325254,
-    "title": "WIDOWSPEAK",
-    "date": "2026-12-01",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 792295540,
     "title": "MNEK",
     "date": "2026-12-01",
@@ -12493,6 +12649,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1646325254,
+    "title": "WIDOWSPEAK",
+    "date": "2026-12-01",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1971831988,
@@ -12703,19 +12872,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 871076128,
-    "title": "Crashdiet",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1672530070,
     "title": "Music Quiz",
     "date": "2026-12-02",
@@ -12805,6 +12961,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 871076128,
+    "title": "Crashdiet",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1795054166,
     "title": "PUR",
     "date": "2026-12-02",
@@ -12816,6 +12985,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 234604444,
+    "title": "drum klub",
+    "date": "2026-12-02",
+    "time": "20:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/drum-klub-electro-potsdam-YP5GKY",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 584584033,
@@ -12987,6 +13169,19 @@
     "addedAt": "2026-11-06"
   },
   {
+    "id": 449187056,
+    "title": "Dirk Michaelis",
+    "date": "2026-12-03",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.reservix.de/tickets-dirk-michaelis-weihnachtstournee-2026-in-potsdam-waschhaus-am-3-12-2026/e2477900",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 619788947,
     "title": "Shantel & Bucovina Club Soundsystem",
     "date": "2026-12-03",
@@ -13062,19 +13257,6 @@
     "ticketUrl": "https://mikropol-berlin.de/event/2026-12-03-alex-henry-foster/",
     "spotifyUrl": "",
     "source": "mikropol",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1128358634,
-    "title": "Dreiviertelblut",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/dreiviertelblut-frannz-club-20882294/",
-    "spotifyUrl": "",
-    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -13165,6 +13347,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-27"
+  },
+  {
+    "id": 1128358634,
+    "title": "Dreiviertelblut",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/dreiviertelblut-frannz-club-20882294/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1091556212,
@@ -13283,19 +13478,6 @@
     "addedAt": "2026-10-28"
   },
   {
-    "id": 2141133245,
-    "title": "Four Imaginary Boys",
-    "date": "2026-12-04",
-    "time": "19:30",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/436ffc02-2606-47d3-a9b5-cdb2aaad2cc0",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1766221609,
     "title": "THE NATURE WE MAKE by English Theatre Leipzig",
     "date": "2026-12-04",
@@ -13307,6 +13489,32 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1430204938,
+    "title": "SingAlong",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://bezahlung.singalong.de/bezahlung/806",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 2141133245,
+    "title": "Four Imaginary Boys",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/436ffc02-2606-47d3-a9b5-cdb2aaad2cc0",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 255613365,
@@ -13503,17 +13711,17 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1162009943,
-    "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
+    "id": 1797687810,
+    "title": "Mama geht tanzen",
     "date": "2026-12-04",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "party",
     "description": "",
-    "ticketUrl": "https://frannz.eu/",
+    "ticketUrl": "https://mamagehttanzen-berlin.ticket.io/dPNjAWqz/",
     "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1683264397,
@@ -13527,6 +13735,32 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1783946128,
+    "title": "Klub Color Revival",
+    "date": "2026-12-04",
+    "time": "21:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/klub-color-revival-2",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1162009943,
+    "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
+    "date": "2026-12-04",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1860631794,
@@ -13761,6 +13995,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1194313375,
+    "title": "SHUTDOWN",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/shut-down-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 169438678,
     "title": "THE NATURE WE MAKE by English Theatre Leipzig",
     "date": "2026-12-05",
@@ -13993,6 +14240,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1009968147,
+    "title": "BENJAMIN VON STUCKRAD-BARRE",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/benjamin-von-stuckrad-potsdam-MZONPV",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1630680124,
     "title": "Blok3",
     "date": "2026-12-05",
@@ -14122,6 +14382,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 938933293,
+    "title": "Juicy Rap and Melodies",
+    "date": "2026-12-05",
+    "time": "23:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/juicy-rap-and-melodies-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 555236029,
     "title": "Thaylo x URBAN SPREE",
     "date": "2026-12-05",
@@ -14185,6 +14458,19 @@
     "spotifyUrl": "",
     "source": "holzmarkt",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 760508918,
+    "title": "Professor Bummbastic",
+    "date": "2026-12-06",
+    "time": "12:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://tickets.bummbastic.de/event/wow-bummbastic-potsdam-wz1gr5",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 788388338,
@@ -14382,19 +14668,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 700058452,
-    "title": "Kuult",
-    "date": "2026-12-06",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/kuult-polaroid-tour-2026-frannz-club-21325313/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 211921646,
     "title": "ARTEMAS",
     "date": "2026-12-06",
@@ -14470,6 +14743,19 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 700058452,
+    "title": "Kuult",
+    "date": "2026-12-06",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/kuult-polaroid-tour-2026-frannz-club-21325313/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 2107001796,
@@ -14640,16 +14926,16 @@
   },
   {
     "id": 1745421240,
-    "title": "CHAPO102 // Ausverkauft",
+    "title": "CHAPO102 // Ausverkauft!",
     "date": "2026-12-08",
     "time": "18:30",
     "locationId": 13,
     "type": "konzert",
-    "description": "[Pop]  \n\n08.12.2026, 18:30 Uhr:  \n\nCHAPO102 // Ausverkauft  \n\nChapo102 ist ein Künstler aus Hamburg und Mitglied der 102…",
+    "description": "[Pop]  \n\n08.12.2026, 18:30 Uhr:  \n\nCHAPO102 // Ausverkauft!  \n\nChapo102 ist ein Künstler aus Hamburg und Mitglied der…",
     "ticketUrl": "http://www.conne-island.de/termin/nr7375.html",
     "spotifyUrl": "",
     "source": "conne-island",
-    "addedAt": "2026-11-01"
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1358190688,
@@ -14740,6 +15026,19 @@
     "ticketUrl": "https://www.facebook.com/events/3156238357915836",
     "spotifyUrl": "",
     "source": "prachtwerk",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1309884259,
+    "title": "ZAQ Medienquiz",
+    "date": "2026-12-08",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/zaq-medienquiz-08-12-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
     "addedAt": "2026-11-06"
   },
   {
@@ -14975,6 +15274,19 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 82700020,
+    "title": "Das 20. Potsdamer RUDELSINGEN",
+    "date": "2026-12-09",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://tickets.rudelsingen.de/event/das-20-vorweihnachtliche-potsdamer-rudelsingen-blubfr",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1184457879,
@@ -15352,19 +15664,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 422393984,
-    "title": "Ina Forsman",
-    "date": "2026-12-10",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1259024396,
     "title": "Open Mic L. J. Fox + M Love (DJ-Set)",
     "date": "2026-12-10",
@@ -15453,6 +15752,32 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1088678250,
+    "title": "Havel Slam",
+    "date": "2026-12-10",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/havel-slam-havel-slam-potsdam-EUH3XQK",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 422393984,
+    "title": "Ina Forsman",
+    "date": "2026-12-10",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1675941537,
@@ -15674,19 +15999,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1948774285,
-    "title": "SingAlong – Das große Mitsing-Konzert in Berlin",
-    "date": "2026-12-11",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-14"
-  },
-  {
     "id": 2119743864,
     "title": "Kwam.E",
     "date": "2026-12-11",
@@ -15816,17 +16128,30 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1836022519,
-    "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s + Nick Cave",
+    "id": 888326179,
+    "title": "Ben Becker",
     "date": "2026-12-11",
-    "time": "21:00",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/ben-becker-liest-tc-no-potsdam-ZUF40X",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1948774285,
+    "title": "SingAlong – Das große Mitsing-Konzert in Berlin",
+    "date": "2026-12-11",
+    "time": "20:00",
     "locationId": 6,
     "type": "konzert",
     "description": "",
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
     "source": "frannz",
-    "addedAt": "2026-11-02"
+    "addedAt": "2026-10-14"
   },
   {
     "id": 228716632,
@@ -15840,6 +16165,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1836022519,
+    "title": "Friday I’m in Love – A Tribute to Post-Punk · Dark 80s + Nick Cave",
+    "date": "2026-12-11",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2135306602,
@@ -15933,6 +16271,19 @@
     "addedAt": "2026-11-03"
   },
   {
+    "id": 575206249,
+    "title": "Gerhard Schöne",
+    "date": "2026-12-12",
+    "time": "16:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/gerhard-schone-konige-potsdam-HMO1O1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1411838316,
     "title": "Jerome Froese",
     "date": "2026-12-12",
@@ -15944,19 +16295,6 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-09-02"
-  },
-  {
-    "id": 1194723011,
-    "title": "A night with GULVØSS II",
-    "date": "2026-12-12",
-    "time": "19:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 111851289,
@@ -15996,6 +16334,19 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1194723011,
+    "title": "A night with GULVØSS II",
+    "date": "2026-12-12",
+    "time": "19:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1466648134,
@@ -16205,19 +16556,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 954536058,
-    "title": "Fliegende Haie | Alle Gehn Dumm Tour 2026",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2026-12-12/fliegende-haie-alle-gehn-dumm-tour-2026",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 261913641,
     "title": "Samsta + ?",
     "date": "2026-12-12",
@@ -16268,6 +16606,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 2074100650,
+    "title": "Comedyflash",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://standup-republic.de/events/Comedyflash%20-%20Potsdam",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 195535803,
@@ -16332,6 +16683,19 @@
     "ticketUrl": "https://quasimodo.club/events/always-amy-a-tribute-to-amy-winehouse-6-7402",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 137499060,
+    "title": "Prokrastinations-Party",
+    "date": "2026-12-12",
+    "time": "22:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/prokrastinations-party-12-12-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 67606794,
@@ -16425,19 +16789,6 @@
     "addedAt": "2026-09-29"
   },
   {
-    "id": 484569578,
-    "title": "KRIPPENSPIEL 2026",
-    "date": "2026-12-13",
-    "time": "16:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/show/2026-12-13/krippenspiel-2026",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 886359843,
     "title": "GWF Wrestling",
     "date": "2026-12-13",
@@ -16515,6 +16866,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 739051732,
+    "title": "Der Physiopath",
+    "date": "2026-12-13",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/der-physiopath-machen-sie-sich-bitte-frei-waschhaus-potsdam-20650157/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 325336418,
     "title": "Sly5thAve",
     "date": "2026-12-13",
@@ -16566,19 +16930,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 129361179,
-    "title": "Sebastian Hämer",
-    "date": "2026-12-13",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim-light.com/de/a/60895dd7a2027845db426ef9/e/69dcbb81033faf7a4fb2ba75",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 448256838,
     "title": "Dayseeker",
     "date": "2026-12-13",
@@ -16616,6 +16967,19 @@
     "spotifyUrl": "",
     "source": "nato",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 129361179,
+    "title": "Sebastian Hämer",
+    "date": "2026-12-13",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim-light.com/de/a/60895dd7a2027845db426ef9/e/69dcbb81033faf7a4fb2ba75",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1209154038,
@@ -16706,32 +17070,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1329041449,
-    "title": "KRIPPENSPIEL 2026",
-    "date": "2026-12-14",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/show/2026-12-14/krippenspiel-2026-2",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
-  },
-  {
-    "id": 827590370,
-    "title": "Riskier dein Bier!",
-    "date": "2026-12-14",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/73799",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
   },
   {
     "id": 300044804,
@@ -16900,19 +17238,6 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 2121453976,
-    "title": "KRIPPENSPIEL 2026",
-    "date": "2026-12-15",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/show/2026-12-15/krippenspiel-2026-3",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
   },
   {
     "id": 621546947,
@@ -17161,29 +17486,16 @@
     "addedAt": "2026-09-27"
   },
   {
-    "id": 258807507,
-    "title": "FILMRISS FILMQUIZ – Dezember 2026",
+    "id": 672809719,
+    "title": "Seraphina Kalze",
     "date": "2026-12-16",
     "time": "20:00",
-    "locationId": 18,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/76955",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
-  },
-  {
-    "id": 1276982105,
-    "title": "KRIPPENSPIEL 2026",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 18,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/show/2026-12-16/krippenspiel-2026-4",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/seraphina-kalze-jetzt-potsdam-ARQ8B6",
     "spotifyUrl": "",
-    "source": "moritzbastei",
+    "source": "waschhaus",
     "addedAt": "2026-11-06"
   },
   {
@@ -17356,19 +17668,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 450462665,
-    "title": "David J  (Bauhaus / Love & Rockets)",
-    "date": "2026-12-17",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1872112182,
     "title": "SHORTIES FILMS SCREENING #31",
     "date": "2026-12-17",
@@ -17405,6 +17704,19 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 450462665,
+    "title": "David J  (Bauhaus / Love & Rockets)",
+    "date": "2026-12-17",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1699198044,
@@ -17508,19 +17820,6 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-09-09"
-  },
-  {
-    "id": 515906178,
-    "title": "From Dinner to Disco – Weihnachtsfeiern in der Moritzbastei",
-    "date": "2026-12-18",
-    "time": "19:00",
-    "locationId": 18,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/73540",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
   },
   {
     "id": 558171073,
@@ -17653,19 +17952,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 307648884,
-    "title": "SingAlong – Das große Mitsing-Konzert in Berlin",
-    "date": "2026-12-18",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-14"
-  },
-  {
     "id": 1762246364,
     "title": "343 Labs Live Electronic Showcase",
     "date": "2026-12-18",
@@ -17718,19 +18004,6 @@
     "addedAt": "2026-09-27"
   },
   {
-    "id": 1439069910,
-    "title": "Engerling | 40 Jahre Weihnachtskonzerte",
-    "date": "2026-12-18",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77599",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 857300222,
     "title": "Cinesque | Leipzig Burlesque Club",
     "date": "2026-12-18",
@@ -17742,6 +18015,45 @@
     "spotifyUrl": "",
     "source": "nato",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 16906917,
+    "title": "MAMMA MIA",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://mammamia-partymotto.ticket.io/jpsuX7jt/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1981332131,
+    "title": "Pinoreks & NOWAVES",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/pinoreks",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 307648884,
+    "title": "SingAlong – Das große Mitsing-Konzert in Berlin",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-10-14"
   },
   {
     "id": 856590432,
@@ -17768,6 +18080,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 976765718,
+    "title": "Pizza Connection 2.0 Pt. XIV",
+    "date": "2026-12-18",
+    "time": "21:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.sup-trip.de/pizza-connection-2-0-speicher-revival-party/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 684643070,
@@ -18171,19 +18496,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1026917258,
-    "title": "Thomas Schernikau | From Forced To Mode",
-    "date": "2026-12-19",
-    "time": "20:30",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/thomas-schernikau-moritzbastei-21701611/?srsltid=AfmBOoqQzNDcteYncIF6anF7u-29gVjQX5CHYE6vfzy7bbw0GslqP2gl",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 258046674,
     "title": "DANCING WITH TEARS IN YOUR EYES",
     "date": "2026-12-19",
@@ -18352,6 +18664,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 400760411,
+    "title": "Trivial Pubsuit",
+    "date": "2026-12-20",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/trivial-pubsuit-20-12-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1406325667,
     "title": "KADAVAR + Earth Tongue und Scott Hepple & The Sun Band",
     "date": "2026-12-20",
@@ -18363,19 +18688,6 @@
     "spotifyUrl": "",
     "source": "so36",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 416702090,
-    "title": "Christian Schottstädt",
-    "date": "2026-12-20",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/7fe1bfc0-1cfc-4be3-aee0-e79098294e84",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1191514323,
@@ -18414,6 +18726,19 @@
     "ticketUrl": "https://www.greyzone-tickets.de/produkte/1363-tickets-patrick-wolf-theater-im-delphi-berlin-am-20-12-2026",
     "spotifyUrl": "",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 416702090,
+    "title": "Christian Schottstädt",
+    "date": "2026-12-20",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/7fe1bfc0-1cfc-4be3-aee0-e79098294e84",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1556092156,
@@ -18572,19 +18897,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1841210741,
-    "title": "Rocking Round The Xmas Tree",
-    "date": "2026-12-23",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 372020866,
     "title": "mitte - elektronisches zur nacht - die reihe",
     "date": "2026-12-23",
@@ -18596,6 +18908,19 @@
     "spotifyUrl": "",
     "source": "ilseserika",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1841210741,
+    "title": "Rocking Round The Xmas Tree",
+    "date": "2026-12-23",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 61758919,
@@ -18674,19 +18999,6 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-03"
-  },
-  {
-    "id": 1674407436,
-    "title": "CAFÉ geschlossen",
-    "date": "2026-12-26",
-    "time": "10:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/special/2026-12-26/cafe-geschlossen-9",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-06"
   },
   {
     "id": 671421410,
@@ -18778,6 +19090,19 @@
     "spotifyUrl": "",
     "source": "slaughterhouse",
     "addedAt": "2026-10-28"
+  },
+  {
+    "id": 1052661037,
+    "title": "Die Schöne Party",
+    "date": "2026-12-26",
+    "time": "21:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://tickets.schoeneparty.de/20261226/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1975498902,
@@ -18897,16 +19222,16 @@
     "addedAt": "2026-09-29"
   },
   {
-    "id": 77477897,
-    "title": "PHILLIP BOA AND THE VOODOOCLUB",
+    "id": 1885651724,
+    "title": "Die Gorillas",
     "date": "2026-12-27",
     "time": "20:00",
-    "locationId": 18,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77041",
+    "ticketUrl": "https://gorillas.billeto.net/basket/event/1/1821417685?lang=de",
     "spotifyUrl": "",
-    "source": "moritzbastei",
+    "source": "waschhaus",
     "addedAt": "2026-11-06"
   },
   {
@@ -19052,6 +19377,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 702843895,
+    "title": "Eisheilige Nacht 2026",
+    "date": "2026-12-30",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/subway-to-sally-eisheilige-nacht-2026-waschhaus-potsdam-21057932/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1374513105,
     "title": "LaFee",
     "date": "2026-12-30",
@@ -19195,6 +19533,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 906578461,
+    "title": "Tatjana Meissner",
+    "date": "2026-12-31",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/tatjana-meissner-lieder-potsdam-8DRFPB",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 849041171,
     "title": "Bohème Sauvage Berlin",
     "date": "2026-12-31",
@@ -19335,6 +19686,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1773901006,
+    "title": "Silvester im Waschhaus",
+    "date": "2026-12-31",
+    "time": "21:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/silvester-im-waschhaus-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1008455102,
@@ -19519,6 +19883,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 2108164999,
+    "title": "WOW Varieté",
+    "date": "2027-01-08",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://wowvariete.reservix.de/p/reservix/event/2505011",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 179822400,
     "title": "Science Slam",
     "date": "2027-01-08",
@@ -19558,19 +19935,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1153908220,
-    "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
-    "date": "2027-01-08",
-    "time": "21:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 2014873985,
     "title": "Veto + Barking Spiders",
     "date": "2027-01-08",
@@ -19582,6 +19946,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1153908220,
+    "title": "Rebel Yell Love the 80s! -auf 3 Floors-",
+    "date": "2027-01-08",
+    "time": "21:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 706940871,
@@ -19607,6 +19984,19 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 2057719578,
+    "title": "WOW Varieté",
+    "date": "2027-01-09",
+    "time": "15:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://wowvariete.reservix.de/p/reservix/event/2505013",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 413768553,
@@ -19764,6 +20154,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 782100240,
+    "title": "WOW Varieté",
+    "date": "2027-01-10",
+    "time": "11:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://wowvariete.reservix.de/p/reservix/event/2505015",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1307145564,
     "title": "Ballet Of Lights",
     "date": "2027-01-10",
@@ -19855,6 +20258,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1472305090,
+    "title": "The Notwist",
+    "date": "2027-01-13",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/the-notwist-news-from-planet-zombie-tour",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 169583077,
     "title": "Die dunkle Seite der Discokugel",
     "date": "2027-01-13",
@@ -19866,6 +20282,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-09-22"
+  },
+  {
+    "id": 1077421561,
+    "title": "ALL TOGETHER NOW - Schulvorstellung",
+    "date": "2027-01-14",
+    "time": "11:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/all-together-now-schulvorstellung-14-01-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 166111733,
@@ -19920,6 +20349,32 @@
     "addedAt": "2026-11-04"
   },
   {
+    "id": 1841942025,
+    "title": "Sebastian Lehmann",
+    "date": "2027-01-14",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/sebastian-lehmann-potsdam-JOXUXT",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1106255366,
+    "title": "ALL TOGETHER NOW - Schulvorstellung",
+    "date": "2027-01-15",
+    "time": "11:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/all-together-now-schulvorstellung-15-01-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1144184805,
     "title": "Songslam Kreuzberg",
     "date": "2027-01-15",
@@ -19931,6 +20386,19 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1117410913,
+    "title": "ALL TOGETHER NOW - Premiere",
+    "date": "2027-01-15",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/all-together-now-premiere-15-01-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 936492523,
@@ -19998,6 +20466,32 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 1135657102,
+    "title": "Comedyflash",
+    "date": "2027-01-15",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://standup-republic.de/events/comedyflash-potsdam_12523",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 487553667,
+    "title": "Hotel Rimini",
+    "date": "2027-01-15",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/hotel-rimini-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1915281122,
     "title": "SchlagerchampionsDas große Fest der Besten",
     "date": "2027-01-15",
@@ -20050,6 +20544,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1556596554,
+    "title": "WOW Varieté",
+    "date": "2027-01-16",
+    "time": "15:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://wowvariete.reservix.de/p/reservix/event/2505017",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 208468803,
     "title": "Fight 4 Life - Ronny Gabel vs. Marco Martini",
     "date": "2027-01-16",
@@ -20073,6 +20580,19 @@
     "ticketUrl": "https://feverup.com/de/berlin/venue/theather-im-delphi",
     "spotifyUrl": "",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 214781081,
+    "title": "ALL TOGETHER NOW",
+    "date": "2027-01-16",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/all-together-now-16-01-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1071885871,
@@ -20218,6 +20738,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1685679273,
+    "title": "WOW Varieté",
+    "date": "2027-01-17",
+    "time": "11:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://wowvariete.reservix.de/p/reservix/event/2505019",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1161355357,
     "title": "Heavysaurus – METAL Tour 2026/27",
     "date": "2027-01-17",
@@ -20229,6 +20762,19 @@
     "spotifyUrl": "",
     "source": "werk2",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1138528616,
+    "title": "ALL TOGETHER NOW",
+    "date": "2027-01-17",
+    "time": "16:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/all-together-now-17-01-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 485176106,
@@ -20608,19 +21154,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 858093951,
-    "title": "Dave Hause & The Mermaid",
-    "date": "2027-01-23",
-    "time": "19:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/dave-hause-the-mermaid-cellmates-european-tour-2027-frannz-club-21573231/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 960438625,
     "title": "Transsylvanians",
     "date": "2027-01-23",
@@ -20632,6 +21165,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 858093951,
+    "title": "Dave Hause & The Mermaid",
+    "date": "2027-01-23",
+    "time": "19:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/dave-hause-the-mermaid-cellmates-european-tour-2027-frannz-club-21573231/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 68923606,
@@ -20762,6 +21308,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-10-28"
+  },
+  {
+    "id": 250841082,
+    "title": "Ronja Räubertochter",
+    "date": "2027-01-24",
+    "time": "15:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://rausgegangen.de/events/ronja-raubertochter-ein-meisterwerk-der-kinderliteratur-als--0/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 699601909,
@@ -20919,6 +21478,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1093707975,
+    "title": "Michael Mittermeier",
+    "date": "2027-01-26",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/michael-mittermeier-oldboy-sind-wir-bald-da-waschhaus-potsdam-21472721/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1830715674,
     "title": "aespa",
     "date": "2027-01-26",
@@ -20957,6 +21529,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 568272910,
+    "title": "FJØRT",
+    "date": "2027-01-27",
+    "time": "19:45",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/fjort-potsdam-KQSPND",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 701471870,
     "title": "SHRED FEST",
     "date": "2027-01-27",
@@ -20970,19 +21555,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1031222029,
-    "title": "Friendly Fires",
-    "date": "2027-01-27",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-16"
-  },
-  {
     "id": 755541472,
     "title": "Levin Liam",
     "date": "2027-01-27",
@@ -20994,6 +21566,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1031222029,
+    "title": "Friendly Fires",
+    "date": "2027-01-27",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-16"
   },
   {
     "id": 1498343900,
@@ -21035,6 +21620,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 564402070,
+    "title": "HORST EVERS",
+    "date": "2027-01-28",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/horst-evers-so-gesehen-naturlich-lustig-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1739848827,
     "title": "CALLEJON",
     "date": "2027-01-28",
@@ -21072,6 +21670,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 1076782446,
+    "title": "Nick & June",
+    "date": "2027-01-28",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/nick-june-6",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1033489303,
@@ -21113,19 +21724,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1537668825,
-    "title": "Transmission",
-    "date": "2027-01-29",
-    "time": "19:30",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/transmission-the-sound-of-joy-divison-love-will-tear-us-apart-tour-2027-frannz-club-22136003/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 571027923,
     "title": "Imminence",
     "date": "2027-01-29",
@@ -21137,6 +21735,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1537668825,
+    "title": "Transmission",
+    "date": "2027-01-29",
+    "time": "19:30",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/transmission-the-sound-of-joy-divison-love-will-tear-us-apart-tour-2027-frannz-club-22136003/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-21"
   },
   {
     "id": 1800049275,
@@ -21241,6 +21852,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 2101645617,
+    "title": "Max Goldt liest",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/max-goldt-liest-potsdam-GF9TYV",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 564652619,
@@ -21437,6 +22061,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 329801051,
+    "title": "Markus Krebs",
+    "date": "2027-01-31",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.ticketmaster.de/event/15-jahre-markus-krebs-das-beste-aus-6-live-programmen-tickets/137295361",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 791560722,
     "title": "DEPRESIÓN SONORA",
     "date": "2027-01-31",
@@ -21450,19 +22087,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1411605510,
-    "title": "A Life Divided",
-    "date": "2027-01-31",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/a-life-divided-the-closing-tour-2027-frannz-club-21045974",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 755330715,
     "title": "Get Well Soon",
     "date": "2027-01-31",
@@ -21473,6 +22097,19 @@
     "ticketUrl": "https://huxleysneuewelt.de/event/2027-01-31-get-well-soon",
     "spotifyUrl": "",
     "source": "huxleys",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1411605510,
+    "title": "A Life Divided",
+    "date": "2027-01-31",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/a-life-divided-the-closing-tour-2027-frannz-club-21045974",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -21565,6 +22202,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 450763519,
+    "title": "drum klub",
+    "date": "2027-02-03",
+    "time": "20:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/drum-klub-electro-potsdam-EZZQMJW",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 736482571,
@@ -21710,19 +22360,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 462414687,
-    "title": "Show Me The Body",
-    "date": "2027-02-04",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/show-me-the-body-frannz-club-22338352",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 73247195,
     "title": "JESSE WELLES",
     "date": "2027-02-04",
@@ -21734,6 +22371,32 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 708496899,
+    "title": "Havel Slam - Geburtstag",
+    "date": "2027-02-04",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/havel-slam-geburtstag-potsdam-E1PXXXP",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 462414687,
+    "title": "Show Me The Body",
+    "date": "2027-02-04",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/show-me-the-body-frannz-club-22338352",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1272292194,
@@ -22696,19 +23359,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 672308880,
-    "title": "NAFT",
-    "date": "2027-02-11",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-22"
-  },
-  {
     "id": 751299584,
     "title": "Editors",
     "date": "2027-02-11",
@@ -22748,6 +23398,32 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1903773521,
+    "title": "André Kubiczek",
+    "date": "2027-02-11",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/andre-kubiczek-liest-luxus",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 672308880,
+    "title": "NAFT",
+    "date": "2027-02-11",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-22"
+  },
+  {
     "id": 1980526635,
     "title": "VON WELT + Milo030",
     "date": "2027-02-12",
@@ -22785,6 +23461,32 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-09-22"
+  },
+  {
+    "id": 129515404,
+    "title": "Comedyflash",
+    "date": "2027-02-12",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://standup-republic.de/events/comedyflash-potsdam_12523",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 2132771366,
+    "title": "Dirk Zöllner & Manuel Schmid",
+    "date": "2027-02-12",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/zollner-musikanten-potsdam-7HJNRW",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1129946456,
@@ -23047,19 +23749,6 @@
     "addedAt": "2026-09-16"
   },
   {
-    "id": 647341721,
-    "title": "Die Bolschewistische Kurkapelle Schwarz-Rot",
-    "date": "2027-02-13",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/43f45a29-2351-47ef-bb47-05710af707df",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1895391464,
     "title": "EZRA COLLECTIVE",
     "date": "2027-02-13",
@@ -23070,6 +23759,19 @@
     "ticketUrl": "https://www.greyzone-tickets.de/produkte/1329",
     "spotifyUrl": "",
     "source": "columbiahalle",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 647341721,
+    "title": "Die Bolschewistische Kurkapelle Schwarz-Rot",
+    "date": "2027-02-13",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/43f45a29-2351-47ef-bb47-05710af707df",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -23450,19 +24152,6 @@
     "addedAt": "2026-09-02"
   },
   {
-    "id": 471443795,
-    "title": "Ryan Sheridan",
-    "date": "2027-02-17",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-22"
-  },
-  {
     "id": 1978601815,
     "title": "Masego",
     "date": "2027-02-17",
@@ -23474,6 +24163,32 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 841394520,
+    "title": "Sascha Lange",
+    "date": "2027-02-17",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/die-depeche-mode-trilogie-eine-lesung-aus-drei-buchern-uber-",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 471443795,
+    "title": "Ryan Sheridan",
+    "date": "2027-02-17",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-22"
   },
   {
     "id": 1430457724,
@@ -23605,19 +24320,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1842362079,
-    "title": "Yendry",
-    "date": "2027-02-18",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/yendry-como-agua-tour-frannz-club-22288069",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 274988741,
     "title": "John Summit",
     "date": "2027-02-18",
@@ -23629,6 +24331,32 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 668534519,
+    "title": "Betti Kruse",
+    "date": "2027-02-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/betti-kruse-wird-schon-gutgehn-tour-2027-waschhaus-potsdam-21869921/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1842362079,
+    "title": "Yendry",
+    "date": "2027-02-18",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/yendry-como-agua-tour-frannz-club-22288069",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 1689159907,
@@ -23812,19 +24540,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1341634246,
-    "title": "BRUNKE",
-    "date": "2027-02-19",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/brunke-tour-2027-frannz-club-21626756",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 645541458,
     "title": "MALCOLM TODD",
     "date": "2027-02-19",
@@ -23836,6 +24551,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1341634246,
+    "title": "BRUNKE",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/brunke-tour-2027-frannz-club-21626756",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1786829016,
@@ -24681,19 +25409,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 55746832,
-    "title": "Luca Vasta",
-    "date": "2027-02-25",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/luca-vasta-disco-mare-tour-2027-frannz-club-21590949/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 823395615,
     "title": "Matze Rossi & Band",
     "date": "2027-02-25",
@@ -24704,6 +25419,32 @@
     "ticketUrl": "https://cassiopeia-berlin.de/event/matze-rossi-band-111664365",
     "spotifyUrl": "",
     "source": "cassiopeia",
+    "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1222149637,
+    "title": "Kapa Tult",
+    "date": "2027-02-25",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/kapa-tult-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 55746832,
+    "title": "Luca Vasta",
+    "date": "2027-02-25",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/luca-vasta-disco-mare-tour-2027-frannz-club-21590949/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-08-17"
   },
   {
@@ -25640,6 +26381,19 @@
     "addedAt": "2026-09-29"
   },
   {
+    "id": 2034904390,
+    "title": "NightWash – Das Sing Ding",
+    "date": "2027-03-05",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/nightwash-live-nightwash-das-sing-ding-das-lustigste-mit-sing-konzert-aller-zeiten-tour-2027-waschhaus-potsdam-22196293/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1422183629,
     "title": "C2C: Country to Country",
     "date": "2027-03-06",
@@ -25847,6 +26601,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1670069340,
+    "title": "MiA.",
+    "date": "2027-03-06",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/mia-06-03-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 340651777,
     "title": "The Jackets + SuxSuxSux + The Viceroyes",
     "date": "2027-03-06",
@@ -25908,6 +26675,19 @@
     "ticketUrl": "https://nato-leipzig.de/programm/bauerntochter-2027-03-07/",
     "spotifyUrl": "",
     "source": "nato",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 217620642,
+    "title": "Jumping-Party",
+    "date": "2027-03-07",
+    "time": "15:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://buchung.hochschulsport-potsdam.de/angebote/aktueller_zeitraum/_Jumping-Party.html",
+    "spotifyUrl": "",
+    "source": "waschhaus",
     "addedAt": "2026-11-06"
   },
   {
@@ -26119,19 +26899,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 979603632,
-    "title": "Jayler",
-    "date": "2027-03-09",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/jayler-voices-unheard-europe-tour-2027-frannz-club-22325405",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-25"
-  },
-  {
     "id": 2125108425,
     "title": "Kula Shaker",
     "date": "2027-03-09",
@@ -26155,6 +26922,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 979603632,
+    "title": "Jayler",
+    "date": "2027-03-09",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/jayler-voices-unheard-europe-tour-2027-frannz-club-22325405",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-10-25"
   },
   {
     "id": 636230127,
@@ -26311,6 +27091,19 @@
     "spotifyUrl": "",
     "source": "mikropol",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 922600932,
+    "title": "Manja Präkels (Ersatztermin)",
+    "date": "2027-03-10",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/manja-prakels-liest-aus-radiorauschen-im-sternenpark",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1496151779,
@@ -26479,6 +27272,19 @@
     "ticketUrl": "https://hole-berlin.de/event/2027-03-11-despairsray/",
     "spotifyUrl": "",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1603476598,
+    "title": "Schwarze Grütze",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/schwarze-grutze-elegant-potsdam-PAPLD7",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 617736245,
@@ -26932,6 +27738,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 61222390,
+    "title": "QUATSCH COMEDY CLUB",
+    "date": "2027-03-14",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/quatsch-comedy-club-die-live-show-on-tour-waschhaus-potsdam-21168880/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1056067497,
     "title": "ORCHESTRA BAOBAB",
     "date": "2027-03-14",
@@ -26982,19 +27801,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 780197059,
-    "title": "Kalandra",
-    "date": "2027-03-14",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-28"
   },
   {
     "id": 529572805,
@@ -27048,6 +27854,19 @@
     "addedAt": "2026-09-27"
   },
   {
+    "id": 780197059,
+    "title": "Kalandra",
+    "date": "2027-03-14",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-28"
+  },
+  {
     "id": 930931243,
     "title": "International Ocean Film Tour Volume 13",
     "date": "2027-03-15",
@@ -27087,19 +27906,6 @@
     "addedAt": "2026-11-03"
   },
   {
-    "id": 1151086375,
-    "title": "Medium Build",
-    "date": "2027-03-15",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/medium-build-frannz-club-22078929",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-16"
-  },
-  {
     "id": 1664577166,
     "title": "Hex Girlfriend",
     "date": "2027-03-15",
@@ -27111,6 +27917,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1151086375,
+    "title": "Medium Build",
+    "date": "2027-03-15",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/medium-build-frannz-club-22078929",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-16"
   },
   {
     "id": 1957340063,
@@ -27152,19 +27971,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 286186985,
-    "title": "THE DEVON ALLMAN BLUES SUMMIT",
-    "date": "2027-03-16",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-15"
-  },
-  {
     "id": 2079613405,
     "title": "Mark Eitzel (+ Our Man In The Field)",
     "date": "2027-03-16",
@@ -27188,6 +27994,19 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 286186985,
+    "title": "THE DEVON ALLMAN BLUES SUMMIT",
+    "date": "2027-03-16",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-15"
   },
   {
     "id": 2144408774,
@@ -27255,19 +28074,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 93631957,
-    "title": "Edelle",
-    "date": "2027-03-17",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/edelle-a-night-about-adele-frannz-club-22006706/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-02"
-  },
-  {
     "id": 558060186,
     "title": "PaulWetz",
     "date": "2027-03-17",
@@ -27292,6 +28098,32 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-09-27"
+  },
+  {
+    "id": 979915185,
+    "title": "Arnd Zeigler - Verschoben!",
+    "date": "2027-03-17",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/arnd-zeigler-verschoben-17-03-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 93631957,
+    "title": "Edelle",
+    "date": "2027-03-17",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/edelle-a-night-about-adele-frannz-club-22006706/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-02"
   },
   {
     "id": 1208539034,
@@ -27436,6 +28268,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 293050161,
+    "title": "Kirsten Fuchs",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/kirsten-fuchs-2",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 38507416,
     "title": "Maite Kelly",
     "date": "2027-03-18",
@@ -27578,19 +28423,6 @@
     "addedAt": "2026-11-04"
   },
   {
-    "id": 1721470684,
-    "title": "Ruby Haunt",
-    "date": "2027-03-19",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/ruby-haunt-north-america-europe-tour-frannz-club-21917281",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-27"
-  },
-  {
     "id": 1433371141,
     "title": "Kakkmaddafakka",
     "date": "2027-03-19",
@@ -27640,6 +28472,19 @@
     "spotifyUrl": "",
     "source": "lark",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1721470684,
+    "title": "Ruby Haunt",
+    "date": "2027-03-19",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/ruby-haunt-north-america-europe-tour-frannz-club-21917281",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-27"
   },
   {
     "id": 1014845509,
@@ -27770,6 +28615,19 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1177271366,
+    "title": "Jerry Vsan",
+    "date": "2027-03-21",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/jerry-vsan-21-03-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1655132124,
@@ -28678,6 +29536,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1524239872,
+    "title": "Kontrollverlust",
+    "date": "2027-04-02",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/kontrollverlust-maerchen-schreit-die-zeit-tour-202627-waschhaus-22260468/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 973531682,
     "title": "ACID ARAB live",
     "date": "2027-04-02",
@@ -28807,6 +29678,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 978745001,
+    "title": "ASP",
+    "date": "2027-04-03",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.aspswelten.de/shop/wunschgegner-tour-2027..87/wunschgegner-tour-2027-potsdam-waschhaus.1366",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 238944388,
     "title": "Devision Redux",
     "date": "2027-04-03",
@@ -28846,19 +29730,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1773424735,
-    "title": "Mael & Jonas",
-    "date": "2027-04-04",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/mael-jonas-halsschmerzen-tour-2027-frannz-club-22010783",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-26"
-  },
-  {
     "id": 559990897,
     "title": "The Pineapple Thief",
     "date": "2027-04-04",
@@ -28895,6 +29766,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1773424735,
+    "title": "Mael & Jonas",
+    "date": "2027-04-04",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/mael-jonas-halsschmerzen-tour-2027-frannz-club-22010783",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-26"
   },
   {
     "id": 1937512523,
@@ -29052,6 +29936,19 @@
     "addedAt": "2026-10-28"
   },
   {
+    "id": 401277128,
+    "title": "Wladimir Kaminer",
+    "date": "2027-04-08",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/muttertage-geschichten-von-den-heldinnen-des-alltags-von-wla",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1830614562,
     "title": "Iggi Kelly Nachholtermin vom 28.04.26-",
     "date": "2027-04-08",
@@ -29140,6 +30037,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1277212692,
+    "title": "Pong Turnier",
+    "date": "2027-04-09",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventbrite.de/e/pong-turnier-waschhaus-potsdam-mallorca-beerpongbierpong-tickets-1984869962489",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 906846103,
@@ -29246,19 +30156,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 36717021,
-    "title": "Die Art",
-    "date": "2027-04-09",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/508c4a76-ee73-40f7-bedd-c7299e93cddb",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1140445112,
     "title": "Nouvelle Vague",
     "date": "2027-04-09",
@@ -29283,6 +30180,19 @@
     "spotifyUrl": "",
     "source": "max-schmeling-halle",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 36717021,
+    "title": "Die Art",
+    "date": "2027-04-09",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/508c4a76-ee73-40f7-bedd-c7299e93cddb",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 263658985,
@@ -29427,19 +30337,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1461702926,
-    "title": "Jack Pott",
-    "date": "2027-04-10",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/jack-pott-in-bewegung-tour-2027-frannz-club-22054789/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-15"
-  },
-  {
     "id": 1944389863,
     "title": "LEONY",
     "date": "2027-04-10",
@@ -29478,6 +30375,32 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1261599022,
+    "title": "KAMERUN QRELLA GROUP",
+    "date": "2027-04-10",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/kamerun-qrella-group",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1461702926,
+    "title": "Jack Pott",
+    "date": "2027-04-10",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/jack-pott-in-bewegung-tour-2027-frannz-club-22054789/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-15"
+  },
+  {
     "id": 1361648249,
     "title": "WE LOVE 80S",
     "date": "2027-04-10",
@@ -29501,6 +30424,19 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1715211173,
+    "title": "Senta",
+    "date": "2027-04-11",
+    "time": "16:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/senta-ich-bin-stark-tour-konzerte-fur-kinder-und-familien",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 2123246616,
@@ -29710,19 +30646,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 29062532,
-    "title": "Kellermensch",
-    "date": "2027-04-13",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/kellermensch-frannz-club-22087538",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-09"
-  },
-  {
     "id": 433430576,
     "title": "Snarky Puppy",
     "date": "2027-04-13",
@@ -29746,6 +30669,19 @@
     "ticketUrl": "https://hole-berlin.de/event/2027-04-13-ghostkid/",
     "spotifyUrl": "",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 29062532,
+    "title": "Kellermensch",
+    "date": "2027-04-13",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/kellermensch-frannz-club-22087538",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-09"
   },
   {
     "id": 1590477967,
@@ -29852,6 +30788,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 427928671,
+    "title": "Hinnerk Köhn",
+    "date": "2027-04-14",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://landstreicher-konzerte.de/konzerte/hinnerk-koehn-p-27",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 736719442,
     "title": "LUNE",
     "date": "2027-04-15",
@@ -29928,6 +30877,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-09-29"
+  },
+  {
+    "id": 467272793,
+    "title": "Freddy Ekué",
+    "date": "2027-04-15",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.freddyekue.de/catalog/tickets/94764-tickets-freddy-ekue-waschhaus-potsdam-am-15-04-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1896342165,
@@ -30034,19 +30996,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1742670392,
-    "title": "Les Bummms Boys",
-    "date": "2027-04-16",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://shop.copilot.events/frannz/events/b3ea180a-b8cf-4733-bca9-143c7adae43a",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1741883561,
     "title": "Daniel Norgren",
     "date": "2027-04-16",
@@ -30070,6 +31019,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1742670392,
+    "title": "Les Bummms Boys",
+    "date": "2027-04-16",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.copilot.events/frannz/events/b3ea180a-b8cf-4733-bca9-143c7adae43a",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 601722576,
@@ -30175,19 +31137,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 899473846,
-    "title": "Michèl von Wussow",
-    "date": "2027-04-18",
-    "time": "19:00",
-    "locationId": 4,
-    "type": "konzert",
-    "description": "Tour 2027",
-    "ticketUrl": "https://www.eventim.de/event/michel-von-wussow-tour-2026-privatclub-20350532/?affiliate=ET3",
-    "spotifyUrl": "",
-    "source": "privatclub",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 833213931,
     "title": "HOT WATER MUSIC + Small Brown Bike",
     "date": "2027-04-18",
@@ -30277,6 +31226,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1710285563,
+    "title": "Nichtseattle",
+    "date": "2027-04-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/nichtseattle-grose-liebe-potsdam-E829L13",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1323834100,
@@ -30577,19 +31539,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 2030258619,
-    "title": "Rasha Nahas",
-    "date": "2027-04-22",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-29"
-  },
-  {
     "id": 1420217046,
     "title": "1986zig",
     "date": "2027-04-22",
@@ -30601,6 +31550,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-26"
+  },
+  {
+    "id": 2030258619,
+    "title": "Rasha Nahas",
+    "date": "2027-04-22",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-29"
   },
   {
     "id": 1616730609,
@@ -30798,19 +31760,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1250358662,
-    "title": "MOONKID",
-    "date": "2027-04-24",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/artist/moonkid/moonkid-der-letzte-deutsche-rockstar-4187189/?srsltid=AfmBOopE8Q-lNqO2F1p5nL-Ai-Z1LDaKWFXeWNAlwZdAokoBCR8ughRT",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1365306909,
     "title": "Waving The Guns",
     "date": "2027-04-24",
@@ -30847,6 +31796,19 @@
     "ticketUrl": "https://hole-berlin.de/event/2027-04-24-the-lainey-wilson-experience/",
     "spotifyUrl": "",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 1250358662,
+    "title": "MOONKID",
+    "date": "2027-04-24",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/artist/moonkid/moonkid-der-letzte-deutsche-rockstar-4187189/?srsltid=AfmBOopE8Q-lNqO2F1p5nL-Ai-Z1LDaKWFXeWNAlwZdAokoBCR8ughRT",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 641292286,
@@ -30913,19 +31875,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 378081528,
-    "title": "Krissy Matthews",
-    "date": "2027-04-25",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/krissy-matthews-guitarmania-2027-frannz-club-22121922",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-16"
-  },
-  {
     "id": 1019620350,
     "title": "Remode",
     "date": "2027-04-25",
@@ -30937,6 +31886,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 378081528,
+    "title": "Krissy Matthews",
+    "date": "2027-04-25",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/krissy-matthews-guitarmania-2027-frannz-club-22121922",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-16"
   },
   {
     "id": 727855850,
@@ -31043,6 +32005,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1051016840,
+    "title": "Jan Philipp Zymny",
+    "date": "2027-04-28",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/jan-philipp-zymny-potsdam-6PIIQ9",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1442890947,
     "title": "THE CORONAS",
     "date": "2027-04-28",
@@ -31121,19 +32096,6 @@
     "addedAt": "2026-11-04"
   },
   {
-    "id": 1068005051,
-    "title": "This Is The Kit",
-    "date": "2027-04-29",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-23"
-  },
-  {
     "id": 1804364926,
     "title": "Fuffifufzich",
     "date": "2027-04-29",
@@ -31145,6 +32107,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1068005051,
+    "title": "This Is The Kit",
+    "date": "2027-04-29",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-23"
   },
   {
     "id": 1374967138,
@@ -31326,19 +32301,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1106580211,
-    "title": "Jazzkantine",
-    "date": "2027-05-02",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/jazzkantine-bang-bang-tour-2027-frannz-club-22314724/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-10-21"
-  },
-  {
     "id": 1444752622,
     "title": "ELLICE",
     "date": "2027-05-02",
@@ -31362,6 +32324,19 @@
     "ticketUrl": "https://hole-berlin.de/event/2027-05-02-pibes-chorros/",
     "spotifyUrl": "",
     "addedAt": "2026-09-22"
+  },
+  {
+    "id": 1106580211,
+    "title": "Jazzkantine",
+    "date": "2027-05-02",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/jazzkantine-bang-bang-tour-2027-frannz-club-22314724/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-10-21"
   },
   {
     "id": 1512140791,
@@ -31714,19 +32689,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 588381575,
-    "title": "Cardinal Black",
-    "date": "2027-05-08",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 969153379,
     "title": "Crystal F",
     "date": "2027-05-08",
@@ -31763,6 +32725,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 588381575,
+    "title": "Cardinal Black",
+    "date": "2027-05-08",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 602267566,
@@ -32139,6 +33114,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 779369638,
+    "title": "WILHELMINE",
+    "date": "2027-05-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/wilhelmine-magisch-akustik-tour-2027-waschhaus-potsdam-22286362/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1609177126,
     "title": "Siiga",
     "date": "2027-05-19",
@@ -32176,6 +33164,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-09-09"
+  },
+  {
+    "id": 608088996,
+    "title": "Arnd Zeigler",
+    "date": "2027-05-19",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/immer-gluck-ist-konnen-potsdam-EBIH4Y5",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 869187602,
@@ -32282,19 +33283,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 914186608,
-    "title": "Christoph Sakwerda",
-    "date": "2027-05-22",
-    "time": "19:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-08-17"
-  },
-  {
     "id": 1528742454,
     "title": "Tyler Hilton",
     "date": "2027-05-22",
@@ -32306,6 +33294,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 914186608,
+    "title": "Christoph Sakwerda",
+    "date": "2027-05-22",
+    "time": "19:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-08-17"
   },
   {
     "id": 1634139168,
@@ -32503,6 +33504,45 @@
     "addedAt": "2026-08-28"
   },
   {
+    "id": 1289070090,
+    "title": "Quichotte",
+    "date": "2027-05-27",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/quichotte-tba-potsdam-4ZFW0R",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 7626538,
+    "title": "Pong Turnier",
+    "date": "2027-05-28",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventbrite.de/e/pong-turnier-waschhaus-potsdam-saisonfinale-beerpongbierpong-tickets-1984870119960",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 95808797,
+    "title": "Dr. Mark Benecke",
+    "date": "2027-05-28",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/dr-mark-benecke-live-202627-waschhaus-potsdam-21424231/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 97167726,
     "title": "Bee Gees by Maincourse",
     "date": "2027-05-28",
@@ -32540,6 +33580,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-10-28"
+  },
+  {
+    "id": 1562802287,
+    "title": "JugendFEIER 2027",
+    "date": "2027-05-29",
+    "time": "10:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://potsdam.jugendfeier.org/waschhaus-potsdam/2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 61529369,
@@ -32591,6 +33644,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 343800038,
+    "title": "Internationaler Kindertag",
+    "date": "2027-05-30",
+    "time": "13:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/internationaler-kindertag-30-05-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1002926644,
@@ -32901,6 +33967,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1482270459,
+    "title": "FORCED TO MODE - Open Air",
+    "date": "2027-06-19",
+    "time": "20:45",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/forced-to-mode-a-tribute-to-depeche-mode-waschhaus-open-air-gelaende-21927216/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1557579770,
     "title": "Mero",
     "date": "2027-06-20",
@@ -33044,6 +34123,45 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1192067732,
+    "title": "WIZO - Open Air",
+    "date": "2027-07-31",
+    "time": "16:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/wizo-slime-normahl-butterwegge",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1560610008,
+    "title": "Havelbeats Festival 2027",
+    "date": "2027-08-06",
+    "time": "15:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.citybounce.de/havelbeats-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 657147945,
+    "title": "Havelbeats Festival 2027",
+    "date": "2027-08-07",
+    "time": "15:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.citybounce.de/havelbeats-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1282609619,
     "title": "The Wailers",
     "date": "2027-08-13",
@@ -33109,6 +34227,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 809037388,
+    "title": "Fritz Open Air 2027",
+    "date": "2027-08-28",
+    "time": "16:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/fritz-open-air-2027-potsdam-TNCE8H",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 82557542,
     "title": "absent",
     "date": "2027-09-02",
@@ -33135,6 +34266,19 @@
     "addedAt": "2026-11-04"
   },
   {
+    "id": 644856728,
+    "title": "Knorkator - Open Air",
+    "date": "2027-09-04",
+    "time": "19:45",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/knorkator-laedt-ein-zum-open-air-am-4-september-knotsdam-waschhaus-open-air-gelaende-21477104/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 762615917,
     "title": "absent",
     "date": "2027-09-04",
@@ -33159,6 +34303,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-11-04"
+  },
+  {
+    "id": 77385292,
+    "title": "Bodo Wartke - Open Air",
+    "date": "2027-09-05",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/bodo-wartke-wunderpunkt-waschhaus-potsdam-22326720/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1357013669,
@@ -33262,6 +34419,19 @@
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-09-21"
+  },
+  {
+    "id": 94449916,
+    "title": "Fil",
+    "date": "2027-09-15",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/fil-lieder-of-the-world",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 927897281,
@@ -33625,19 +34795,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1831877460,
-    "title": "D/TROIT",
-    "date": "2027-10-08",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/event/dtroit-frannz-club-22026353/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 682641543,
     "title": "Tom Twers",
     "date": "2027-10-08",
@@ -33661,6 +34818,19 @@
     "ticketUrl": "https://www.max-schmeling-halle.de/events/event/sido-max-schmeling-halle-2027-09-24",
     "spotifyUrl": "",
     "source": "max-schmeling-halle",
+    "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1831877460,
+    "title": "D/TROIT",
+    "date": "2027-10-08",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/dtroit-frannz-club-22026353/",
+    "spotifyUrl": "",
+    "source": "frannz",
     "addedAt": "2026-11-01"
   },
   {
@@ -33727,6 +34897,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 158404758,
+    "title": "Maria Clara Groppler",
+    "date": "2027-10-10",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/maria-clara-groppler-ehefrau-2027-waschhaus-potsdam-21727082/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 896076118,
@@ -33885,6 +35068,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1258191546,
+    "title": "Mirja Regensburg",
+    "date": "2027-10-17",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/mirja-regensburg-alles-wird-gut-waschhaus-potsdam-21002937",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 2006379159,
     "title": "Frank Turner & The Sleeping Souls",
     "date": "2027-10-17",
@@ -33936,6 +35132,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1560967160,
+    "title": "OSAN YARAN",
+    "date": "2027-10-21",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/osan-yaran-wollen-wir-beginnen-waschhaus-potsdam-22139978/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 962707213,
     "title": "QUERBEAT",
     "date": "2027-10-22",
@@ -33973,6 +35182,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 24774545,
+    "title": "Rocko Schamoni",
+    "date": "2027-10-22",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/rocko-schamoni-zu-fu-zum-mond",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1154558164,
@@ -34416,6 +35638,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1516735411,
+    "title": "Yorick Thiede",
+    "date": "2027-11-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.universe.com/events/polygon-tickets-W19XM7",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 387324392,
     "title": "Grey Days Festival 2027 – Celebrating the Life of Michael Smuk",
     "date": "2027-11-20",
@@ -34466,6 +35701,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1984830479,
+    "title": "Josepha Walter",
+    "date": "2027-11-24",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/josepha-walter-crashout-potsdam-VSRVBF",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 363656777,
@@ -34650,6 +35898,19 @@
     "addedAt": "2026-11-03"
   },
   {
+    "id": 1405853410,
+    "title": "Ray Wilson",
+    "date": "2027-12-10",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/ray-wilson-waschhaus-potsdam-22105760/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 411590005,
     "title": "Breakin' Circus",
     "date": "2027-12-11",
@@ -34661,6 +35922,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-11-03"
+  },
+  {
+    "id": 1325602576,
+    "title": "Eule findet den Beat",
+    "date": "2027-12-12",
+    "time": "14:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/eule-findet-den-beat",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1087428197,
@@ -34728,6 +36002,32 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 585293871,
+    "title": "Rolf Miller",
+    "date": "2028-02-06",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://rausgegangen.de/events/rolf-miller-65/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1508225805,
+    "title": "Northern Lite",
+    "date": "2028-03-10",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/northern-lite-zeitgeist-zombie-tour-2027-waschhaus-potsdam-22337955/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1896654251,
     "title": "Kerstin Ott",
     "date": "2028-03-31",
@@ -34752,6 +36052,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 421308265,
+    "title": "Filiz Tasdan",
+    "date": "2028-04-09",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://shop.filiztasdan.de/catalog/tickets/94058-tickets-filiz-tasdan-waschhaus-potsdam-am-09-04-2028",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 316015661,
