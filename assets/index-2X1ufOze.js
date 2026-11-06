@@ -117,12 +117,12 @@ ${v}`}class D extends Error{constructor({message:e,code:r,cause:n,name:s}){var i
         ${c("Verschiedene Künstler",a.artists.size+l(a.artists.size,y=>y.artists.size))}
         ${c("Besuchte Locations",a.locations.size+l(a.locations.size,y=>y.locations.size))}
         ${c("Top 5 der meistbesuchten Locations",v)}
-        ${c("Meistgesehener Künstler",h?`${S(h[1].name)} (${h[1].n}×)${l(h[1].n,y=>y.artists.get(h[0])?.n)}`:"Bisher kein Künstler mehr als 1x gesehen")}
+        ${c("Meistgesehener Künstler",h?`${S(h[1].name)} (${h[1].n}×)${l(h[1].n,y=>y.artists.get(h[0])?.n)}`:"Kein Künstler mehr als 1x")}
         ${c("Monat mit meisten Konzerten",g?`${Jo[+g[0].slice(5)-1]} ${g[0].slice(0,4)}: ${g[1].n}${l(g[1].n,m)}`:"–")}
       </ul>`};return`
     <details style="margin-top:14px; border-top:1px solid rgba(255,255,255,0.06); padding-top:14px;">
       <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Statistik</summary>
-      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin-top:10px; line-height:1.45;">${xn} bedeutet LORD-REKORD (kein Lord hat einen höheren Wert)</p>
+      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin-top:10px; line-height:1.45;"><strong style="color:rgba(255,255,255,0.8); font-weight:700;">${xn} bedeutet LORD-REKORD</strong> (kein Lord hat einen höheren Wert, mehrere Lords können sich den Rekord teilen)</p>
       ${n("Dieses Jahr",r)}
       ${n("Insgesamt",null)}
     </details>
