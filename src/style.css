@@ -214,3 +214,5 @@ input:not([type="checkbox"]):not([type="radio"]), select, textarea { font-size: 
 /* Wisch-Felder hinter der Karte: nur sichtbar, solange gewischt bzw. geöffnet wird (sonst schimmerten sie durch) */
 .event-swipe-actions { visibility: hidden; }
 .event-swipe-wrapper.actions-visible .event-swipe-actions { visibility: visible; }
+/* Sehr schmale Handys (320 px): Slogan etwas kleiner, damit "IN BERLIN UND LEIPZIG" nicht abgeschnitten wird */
+@media (max-width: 340px) { .header-tagline { font-size: 1.75vw !important; } }
