@@ -3428,25 +3428,27 @@ async function scrapeWaschhaus() {
     const page = await browser.newPage()
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
     await page.goto('https://www.waschhaus.de/veranstaltungen', { waitUntil: 'load', timeout: 60000 })
+    // Die Liste kommt per JS: erst warten, bis die ersten Events da sind (sonst 0 Events, wenn die Seite langsam ist)
+    const ITEM = 'article.waschhaus-event-list-item'
+    await page.waitForSelector(ITEM, { timeout: 30000 })
 
-    // "Zeig mir mehr!" lädt per JS ohne eigenen Query-Param/API-Endpunkt nach - wiederholt
-    // klicken bis sich die Artikel-Anzahl nicht mehr ändert
-    let prevCount = -1
-    for (let i = 0; i < 10; i++) {
-      const count = await page.evaluate(() => document.querySelectorAll('article').length)
-      if (count === prevCount) break
-      prevCount = count
+    // "Zeig mir mehr!" lädt per JS ohne eigenen Query-Param/API-Endpunkt nach - klicken, auf neue Einträge
+    // warten (bis zu 10 s, früher nur 1,5 s: bei langsamer Antwort brach es nach den ersten 30 Events ab)
+    // und aufhören, wenn der Knopf weg ist oder nichts mehr nachkommt
+    for (let i = 0; i < 30; i++) {
+      const before = await page.evaluate(sel => document.querySelectorAll(sel).length, ITEM)
       const clicked = await page.evaluate(() => {
         const btn = document.querySelector('.waschhaus-event-load-more')
-        if (btn) { btn.click(); return true }
+        if (btn && btn.offsetParent !== null) { btn.click(); return true }
         return false
       })
       if (!clicked) break
-      await new Promise(r => setTimeout(r, 1500))
+      const grew = await page.waitForFunction((sel, n) => document.querySelectorAll(sel).length > n, { timeout: 10000 }, ITEM, before).then(() => true, () => false)
+      if (!grew) break
     }
 
     const rawEvents = await page.evaluate(() => {
-      return Array.from(document.querySelectorAll('article')).map(art => {
+      return Array.from(document.querySelectorAll('article.waschhaus-event-list-item')).map(art => {
         const title = art.querySelector('h3 a')?.textContent?.trim() || ''
         const dateSpans = Array.from(art.querySelectorAll('.waschhaus-event-date span')).map(s => s.textContent.trim())
         const type = art.querySelector('.waschhaus-event-list-item__type span')?.textContent?.trim() || ''
