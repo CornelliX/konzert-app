@@ -663,7 +663,7 @@ const SETTINGS_GUIDE = [
     ['Merkliste für alle sichtbar', 'Andere Lords sehen Deine vorgemerkten und „dabei“-Events samt Lord-Titel, als Liste „Merkliste von Lord …“ und an ihren eigenen Events.'],
     ['History für alle sichtbar', 'Andere Lords sehen Deine besuchten Konzerte mit Sternen.'],
     ['Standard', 'Beide Schalter sind zunächst auf „off“ und müssen von Dir eingeschaltet werden.'],
-    ['Statistik', 'Unter der Anleitung klappst Du die Statistik auf: Zahlen aus Deiner History für „Dieses Jahr“ und „Insgesamt“ (Konzerte, Sterne, Locations, Künstler, Monat mit meisten Konzerten). Hat kein anderer Lord einen höheren Wert, steht dahinter 👑 LORD-REKORD! 👑, bei Gleichstand bei allen. Verglichen wird mit allen Lords, die ihre History freigegeben haben.']
+    ['Statistik', 'Unter der Anleitung klappst Du die Statistik auf: Zahlen aus Deiner History für „Dieses Jahr“ und „Insgesamt“ (Konzerte, Sterne, Locations, Künstler, Monat mit meisten Konzerten). Hat kein anderer Lord einen höheren Wert, steht dahinter eine Krone 👑 (LORD-REKORD), bei Gleichstand bei allen. Mehrere Konzerte an einem Abend in derselben Location (z. B. Support und Hauptact) zählen für die Top 5 der Locations als ein Besuch. Verglichen wird mit allen Lords, die ihre History freigegeben haben.']
   ]],
   ['Anmeldung', [
     ['E-Mail-Code', 'Merkliste, History und Radar funktionieren nur bei Anmeldung via E-Mail-Code. Ohne Anmeldung kannst Du nur in der Eventübersicht stöbern.']
@@ -673,7 +673,7 @@ const SETTINGS_GUIDE = [
 // ── Statistik (Einstellungen): eigene History gegen die der Lords mit freigegebener History ──────────
 
 const MONTH_NAMES = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
-const STATS_CROWN = '<span style="color:#facc15; font-weight:800; white-space:nowrap;">👑 LORD-REKORD! 👑</span>'
+const STATS_CROWN = '<span role="img" aria-label="LORD-REKORD" title="LORD-REKORD">👑</span>'
 
 // entries: History-Einträge; year: "2026" für "Dieses Jahr", null für "Insgesamt"
 function computeStats(entries, year) {
@@ -684,7 +684,13 @@ function computeStats(entries, year) {
   for (const h of list) {
     if (h.rating) { rated++; sum += h.rating; if (h.rating === 5) five++ }
     const loc = String(h.locationName ?? '').trim()
-    if (loc) bump(locations, `${loc}|${String(h.locationCity ?? '').trim()}`.toLowerCase(), loc)
+    if (loc) {
+      // Ein Besuch = ein Tag an der Location: Haupt- und Support-Act desselben Abends zählen nur einmal
+      const key = `${loc}|${String(h.locationCity ?? '').trim()}`.toLowerCase()
+      const e = locations.get(key) || { name: loc, days: new Set(), n: 0 }
+      e.days.add(h.date); e.n = e.days.size
+      locations.set(key, e)
+    }
     const act = stripEdgeEmoji(h.title).trim()
     if (act) bump(artists, act.toLowerCase(), act)
     bump(months, h.date.slice(0, 7), h.date.slice(0, 7))
@@ -706,30 +712,35 @@ function renderStatsHtml() {
     const me = computeStats(mine, year)
     const others = peerEntries.map(e => computeStats(e, year))
     const crown = (v, pick) => isStatRecord(v, others.map(pick)) ? ' ' + STATS_CROWN : ''
-    const li = (label, value) => `<li class="text-xs" style="color:rgba(255,255,255,0.55); line-height:1.5; margin-top:6px;"><strong style="color:white; font-weight:700;">${label}:</strong> ${value}</li>`
-    const top5 = rankStats(me.locations).slice(0, 5)
-    const topArtist = rankStats(me.artists)[0]
+    // Rubrik normal, Wert (und Krone) fett
+    const li = (label, value) => `<li class="text-xs" style="color:rgba(255,255,255,0.55); line-height:1.5; margin-top:6px;">${label}: <strong style="color:white; font-weight:700;">${value}</strong></li>`
+    // Gleich oft besuchte Locations teilen sich den Platz (1., 1., 3.); gezeigt werden alle bis Platz 5
+    const rankedLocs = rankStats(me.locations).map(e => [1 + [...me.locations.values()].filter(o => o.n > e[1].n).length, ...e])
+    const top5 = rankedLocs.filter(([rank]) => rank <= 5)
+    // Nur Künstler, die mehr als einmal gesehen wurden, sind "meistgesehen"
+    const topArtist = rankStats(me.artists).filter(([, a]) => a.n > 1)[0]
     const bestMonth = rankStats(me.months, true)[0]
     const monthMax = s => Math.max(0, ...[...s.months.values()].map(m => m.n))
     const top5Html = top5.length
-      ? `<div style="margin-top:3px;">${top5.map(([key, loc], i) => `<div>${i + 1}. ${esc(loc.name)} · ${loc.n}×${crown(loc.n, o => o.locations.get(key)?.n)}</div>`).join('')}</div>`
+      ? `<div style="margin-top:3px;">${top5.map(([rank, key, loc]) => `<div>${rank}. ${esc(loc.name)} · ${loc.n}×${crown(loc.n, o => o.locations.get(key)?.n)}</div>`).join('')}</div>`
       : '–'
     return `
       <h4 class="syne" style="margin:18px 0 6px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.06); font-size:12px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#a5b4fc;">${title}</h4>
       <ul style="list-style:disc; padding-left:18px; margin:0;">
         ${li('Besuchte Konzerte', me.count + crown(me.count, o => o.count))}
         ${li('Vergebene Sterne (Ø)', (me.avg === null ? '–' : String(me.avg).replace('.', ',')) + crown(me.avg, o => o.avg))}
-        ${li('Anzahl der 5-Sterne-Konzerte', me.five + crown(me.five, o => o.five))}
+        ${li('5-Sterne-Konzerte', me.five + crown(me.five, o => o.five))}
+        ${li('Verschiedene Künstler', me.artists.size + crown(me.artists.size, o => o.artists.size))}
         ${li('Besuchte Locations', me.locations.size + crown(me.locations.size, o => o.locations.size))}
         ${li('Top 5 der meistbesuchten Locations', top5Html)}
-        ${li('Verschiedene Künstler', me.artists.size + crown(me.artists.size, o => o.artists.size))}
-        ${li('Meistgesehener Künstler', topArtist ? `${esc(topArtist[1].name)} (${topArtist[1].n}×)${crown(topArtist[1].n, o => o.artists.get(topArtist[0])?.n)}` : '–')}
+        ${li('Meistgesehener Künstler', topArtist ? `${esc(topArtist[1].name)} (${topArtist[1].n}×)${crown(topArtist[1].n, o => o.artists.get(topArtist[0])?.n)}` : 'Bisher kein Künstler mehr als 1x gesehen')}
         ${li('Monat mit meisten Konzerten', bestMonth ? `${MONTH_NAMES[+bestMonth[0].slice(5) - 1]} ${bestMonth[0].slice(0, 4)}: ${bestMonth[1].n}${crown(bestMonth[1].n, monthMax)}` : '–')}
       </ul>`
   }
   return `
     <details style="margin-top:14px; border-top:1px solid rgba(255,255,255,0.06); padding-top:14px;">
       <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Statistik</summary>
+      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin-top:10px; line-height:1.45;">${STATS_CROWN} bedeutet LORD-REKORD (kein Lord hat einen höheren Wert)</p>
       ${section('Dieses Jahr', thisYear)}
       ${section('Insgesamt', null)}
     </details>
