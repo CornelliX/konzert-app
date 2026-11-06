@@ -122,7 +122,7 @@ ${v}`}class D extends Error{constructor({message:e,code:r,cause:n,name:s}){var i
       </ul>`};return`
     <details style="margin-top:14px; border-top:1px solid rgba(255,255,255,0.06); padding-top:14px;">
       <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Statistik</summary>
-      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin-top:10px; line-height:1.45;"><strong style="color:rgba(255,255,255,0.8); font-weight:700;">${xn} bedeutet LORD-REKORD</strong> (kein Lord hat einen höheren Wert, mehrere Lords können sich den Rekord teilen)</p>
+      <p class="text-xs" style="color:rgba(255,255,255,0.4); margin-top:10px; line-height:1.45;"><strong style="color:rgba(255,255,255,0.8); font-weight:700;">${xn} = LORD-REKORD</strong> (kein Lord hat einen höheren Wert, mehrere Lords können sich den Rekord teilen)</p>
       ${n("Dieses Jahr",r)}
       ${n("Insgesamt",null)}
     </details>
