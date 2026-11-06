@@ -179,6 +179,8 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.5); }
 /* History-Karussell: Liste gleitet beim Blättern von der Seite herein */
 @keyframes history-slide-from-right { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: none; } }
 @keyframes history-slide-from-left { from { opacity: 0; transform: translateX(-28px); } to { opacity: 1; transform: none; } }
+/* Die Liste startet 28 px außerhalb: ohne Beschneiden wird die Seite kurz breiter und iOS skaliert sie (Zoom ist erlaubt) */
+#history-carousel, #bookmark-carousel { overflow-x: clip; }
 .slide-from-right { animation: history-slide-from-right 0.25s ease-out both; }
 .slide-from-left { animation: history-slide-from-left 0.25s ease-out both; }
 

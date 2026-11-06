@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**LIVELORDS** (formerly "LE.BE LIVE") is a PWA concert and club event discovery app for Berlin and Leipzig. It combines a Vite-based frontend, a Node.js multi-venue scraper, and Supabase for auth/bookmarks.
+**LiveLords** (written LIVELORDS in the in-app header logo; formerly "LE.BE LIVE") is a PWA concert and club event discovery app for Berlin and Leipzig. It combines a Vite-based frontend, a Node.js multi-venue scraper, and Supabase for auth/bookmarks.
 
 ## Commands
 
@@ -85,4 +85,4 @@ Service worker (`public/sw.js`) uses cache-first strategy for the app shell. `vi
 
 ### UI notes
 
-Event cards keep the swipe/hover actions only (visible Merken/Dabei buttons and a "⋯" menu were tried and removed on request); `toggleBookmarkStatus`/`toggleGoingStatus` do the work and every status change offers an undo toast (`offerUndo`). All icons (info, Spotify, Apple, Google, share) stay in one row. Quick filters (`filters.when`/`filters.type`) sit under the filter bar. Touch targets are >= 44 px, faint text is >= 0.6 alpha white, inputs are 16 px (zoom stays allowed). The C64 intro bars animate via `transform` (compositor) so they keep moving while the main thread renders. A git tag `vor-ux-umbau` marks the state before this UX overhaul.
+Event cards keep the swipe/hover actions only (visible Merken/Dabei buttons and a "⋯" menu were tried and removed on request); `toggleBookmarkStatus`/`toggleGoingStatus` do the work and every status change offers an undo toast (`offerUndo`). All icons (info, Spotify, Apple, Google, share) stay in one row. The event list appends the next batch on scroll (`appendMoreEvents`, no full re-render) and the carousels clip horizontally (`overflow-x: clip`) because zoom is allowed and a horizontal overflow makes iOS rescale the page. Double tap on a nav tab: Events = scroll to top, Kalender = current month, Radar = radar list to top, Gemerkt/History = own list. "? Hilfe" shows only the guide (`settingsMode = 'help'`), the settings modal has no guide. Touch targets are >= 44 px, faint text is >= 0.6 alpha white, inputs are 16 px (zoom stays allowed). The C64 intro bars animate via `transform` (compositor) so they keep moving while the main thread renders. A git tag `vor-ux-umbau` marks the state before this UX overhaul.

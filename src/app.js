@@ -139,8 +139,7 @@ function getEventRenderMeta(e) {
 let currentUser = null
 let events = []
 let container = null
-// when: '' | 'heute' | 'wochenende', type: '' | 'konzert' | 'party' (Schnellfilter unter der Filterleiste)
-let filters = { cities: ['Berlin'], locationId: 'alle', dates: [], search: '', when: '', type: '' }
+let filters = { cities: ['Berlin'], locationId: 'alle', dates: [], search: '' }
 let headerScrollListenerAdded = false
 let bookmarked = loadData('bookmarked') || []
 let going = loadData('going') || []
@@ -192,16 +191,14 @@ let eventMarksAt = {}
 
 let globalDelegatesBound = false
 function openHelp() {
-  openSettingsModal()
-  const d = document.querySelector('#settings-body details')
-  if (d) { d.open = true; d.scrollIntoView({ block: 'start' }) }
+  openSettingsModal('help')
 }
 function onGlobalClick(e) {
   const t = e.target
   const go = t.closest?.('[data-goto-view]')
   if (go) { document.querySelector(`[data-nav="${go.dataset.gotoView}"]`)?.click(); return }
   if (t.closest?.('[data-reset-filters]')) {
-    filters.locationId = 'alle'; filters.search = ''; filters.when = ''; filters.type = ''; filters.dates = []
+    filters.locationId = 'alle'; filters.search = ''; filters.dates = []
     searchTyped = false; clearTimeout(searchAutoClearTimer)
     updateView(true)
     return
@@ -506,8 +503,6 @@ function focusEvent(event) {
   currentView = 'liste'
   filters.cities = [loc ? loc.city : (event.locationCity || 'Berlin')]
   filters.locationId = 'alle'
-  filters.when = ''
-  filters.type = ''
   filters.search = event.title
   searchTyped = false
   clearTimeout(searchAutoClearTimer)
@@ -587,6 +582,8 @@ function render() {
     window.addEventListener('scroll', () => {
       const hdr = document.getElementById('app-header')
       if (hdr) hdr.style.opacity = String(Math.max(0, 1 - window.scrollY / 90))
+      // Unten kein Zurückfedern (die Liste soll beim letzten Eintrag stehen bleiben); oben bleibt es für "Ziehen zum Aktualisieren"
+      document.documentElement.style.overscrollBehaviorY = window.scrollY > 40 ? 'none' : 'auto'
     }, { passive: true })
   }
 }
@@ -659,14 +656,16 @@ const SETTINGS_GUIDE = [
   ]],
   ['Events', [
     ['Überblick', 'Alle Konzerte und Partys in Berlin und Leipzig, nach Datum sortiert.'],
-    ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen (z. B. nach einem Künstler). Mit den Knöpfen darunter zeigst Du nur „Heute“, „Wochenende“ (Freitag bis Sonntag), „Konzerte“ oder „Partys“, nochmal tippen schaltet den Filter wieder aus. Über der Liste steht, wie viele Events passen.'],
+    ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen (z. B. nach einem Künstler). Über der Liste steht, wie viele Events passen.'],
     ['Suche leert sich selbst', 'Gibt es keinen Treffer, verschwindet der Suchbegriff nach 2 Sekunden. Gibt es Treffer, wird das Suchfeld geleert, sobald Du ein Event vormerkst oder „Bin dabei“ wählst, oder wenn Du 5 Sekunden lang nichts tippst oder berührst.'],
-    ['Hilfe und Tipp', 'Der Knopf „? Hilfe“ über der Filterleiste öffnet diese Anleitung. Den einmaligen Tipp oben in der Liste schließt Du mit ×.'],
+    ['Hilfe und Tipp', 'Der Knopf „? Hilfe“ über der Filterleiste zeigt diese Anleitung. Den einmaligen Tipp oben in der Liste schließt Du mit ×.'],
+    ['Doppeltipp', 'Doppeltipp auf den Reiter „Events“ springt in der Liste ganz nach oben. Die Liste lädt beim Scrollen von selbst weiter und endet beim letzten Event.'],
     ['Karte wischen', 'Nach links wischen: {herz} „Vormerken“ oder {haken} „Bin dabei“ auswählen, nochmal wählen nimmt es zurück. Unten erscheint kurz „Rückgängig“.'],
     ['Icon-Leiste', '{info} Link zum Event, {spotify} Spotify, {apple} {google} Kalender (Apple/Google), {share} Teilen.']
   ]],
   ['Kalender', [
-    ['Monatsübersicht', 'Tage mit Events sind hervorgehoben, die Punkte darunter zeigen, wie viel los ist (1 Punkt: 1 bis 2 Events, 2 Punkte: 3 bis 5, 3 Punkte: mehr). Heute hat einen hellen Ring. Tippe auf einen Tag, um alle Events an diesem Tag zu sehen, mehrere Tage lassen sich gleichzeitig auswählen. Die Schnellfilter wirken auch hier.']
+    ['Doppeltipp', 'Doppeltipp auf den Reiter „Kalender“ springt immer zum aktuellen Monat.'],
+    ['Monatsübersicht', 'Tage mit Events sind hervorgehoben, die Punkte darunter zeigen, wie viel los ist (1 Punkt: 1 bis 2 Events, 2 Punkte: 3 bis 5, 3 Punkte: mehr). Heute hat einen hellen Ring. Tippe auf einen Tag, um alle Events an diesem Tag zu sehen, mehrere Tage lassen sich gleichzeitig auswählen.']
   ]],
   ['Gemerkt', [
     ['Meine Merkliste', 'Deine vorgemerkten Events und die, bei denen Du dabei bist. Unter jeder Karte steht, wer das Event ebenfalls {herz} vorgemerkt hat oder {haken} dabei ist: „Du“, Lords mit Namen und alle übrigen als „weitere Lords“ (nur Lords mit freigegebener Merkliste).'],
@@ -685,6 +684,7 @@ const SETTINGS_GUIDE = [
     ['Aktualisieren', 'Neue Freigaben und Einträge anderer Lords erscheinen, wenn Du den Reiter öffnest oder die Seite oben nach unten ziehst.']
   ]],
   ['Radar', [
+    ['Doppeltipp', 'Doppeltipp auf den Reiter „Radar“ springt in der Radar-Liste ganz nach oben.'],
     ['Künstler beobachten', 'Künstler ohne anstehendes Konzert {radar}. Den Radar öffnest Du über den Reiter „Radar“ unten rechts. Mit Künstlername und + fügst Du jemanden hinzu, mit × entfernst Du ihn (mit Rückfrage).'],
     ['Treffer', 'Sobald ein Konzert des Künstlers angekündigt wird, bekommst Du einen Treffer (mit Benachrichtigung, wenn erlaubt).'],
     ['Automatisch in die Merkliste', 'Neu angekündigte Konzerte von Künstlern auf der Radar-Liste werden automatisch in die Merkliste übernommen. Der Künstler wird danach aus der Radar-Liste gestrichen.'],
@@ -696,7 +696,7 @@ const SETTINGS_GUIDE = [
     ['Merkliste für alle sichtbar', 'Andere Lords sehen Deine vorgemerkten und „dabei“-Events samt Lord-Titel, als Liste „Merkliste von Lord …“ und an ihren eigenen Events.'],
     ['History für alle sichtbar', 'Andere Lords sehen Deine besuchten Konzerte mit Sternen.'],
     ['Standard', 'Beide Schalter sind zunächst auf „off“ und müssen von Dir eingeschaltet werden.'],
-    ['Statistik', 'Unter der Anleitung klappst Du die Statistik auf: Zahlen aus Deiner History für „Dieses Jahr“ und „Insgesamt“ (Konzerte, Sterne, Locations, Künstler, Monat mit meisten Konzerten). Hat kein anderer Lord einen höheren Wert, steht dahinter eine Krone 👑 (LORD-REKORD), bei Gleichstand bei allen. Mehrere Konzerte an einem Abend in derselben Location (z. B. Support und Hauptact) zählen für die Top 5 der Locations als ein Besuch. Verglichen wird mit allen Lords, die ihre History freigegeben haben.']
+    ['Statistik', 'In den Einstellungen klappst Du „Statistik“ auf: Zahlen aus Deiner History für „Dieses Jahr“ und „Insgesamt“ (Konzerte, Sterne, Locations, Künstler, Monat mit meisten Konzerten). Hat kein anderer Lord einen höheren Wert, steht dahinter eine Krone 👑 (LORD-REKORD), bei Gleichstand bei allen. Mehrere Konzerte an einem Abend in derselben Location (z. B. Support und Hauptact) zählen für die Top 5 der Locations als ein Besuch. Verglichen wird mit allen Lords, die ihre History freigegeben haben.']
   ]],
   ['Anmeldung', [
     ['E-Mail-Code', 'Merkliste, History und Radar funktionieren nur bei Anmeldung via E-Mail-Code. Ohne Anmeldung kannst Du nur in der Eventübersicht stöbern.']
@@ -798,21 +798,23 @@ function renderStatsHtml() {
   `
 }
 
-function renderSettingsBody() {
-  const guide = `
-    <details style="margin-top:20px; border-top:1px solid rgba(255,255,255,0.06); padding-top:14px;">
-      <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Anleitung</summary>
-      ${SETTINGS_GUIDE.map(([head, items]) => `
-        <h4 class="syne" style="margin:18px 0 6px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.06); font-size:12px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#a5b4fc;">${esc(head)}</h4>
+// 'settings' = Einstellungen (ohne Anleitung), 'help' = nur die Anleitung (Knopf "? Hilfe")
+let settingsMode = 'settings'
+
+function renderGuideHtml() {
+  return SETTINGS_GUIDE.map(([head, items], i) => `
+        <h4 class="syne" style="margin:${i === 0 ? '8px' : '18px'} 0 6px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.06); font-size:12px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#a5b4fc;">${esc(head)}</h4>
         <ul style="list-style:disc; padding-left:18px; margin:0;">
           ${items.map(([lead, text]) => `<li class="text-xs" style="color:rgba(255,255,255,0.6); line-height:1.5; margin-top:6px;"><strong style="color:white; font-weight:700;">${esc(lead)}:</strong> ${guideText(text)}</li>`).join('')}
         </ul>
-      `).join('')}
-    </details>
-  `
-  if (!currentUser) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Bitte zuerst mit E-Mail anmelden, um Einstellungen vorzunehmen.</p>${guide}`
-  if (myProfileError) return `<p class="text-sm" style="color:rgba(255,120,120,0.85);">Die Einstellungen konnten nicht geladen werden. Bitte später noch einmal versuchen.</p>${guide}`
-  if (!myProfile) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Einstellungen werden geladen …</p>${guide}`
+      `).join('')
+}
+
+function renderSettingsBody() {
+  if (settingsMode === 'help') return renderGuideHtml()
+  if (!currentUser) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Bitte zuerst mit E-Mail anmelden, um Einstellungen vorzunehmen.</p>`
+  if (myProfileError) return `<p class="text-sm" style="color:rgba(255,120,120,0.85);">Die Einstellungen konnten nicht geladen werden. Bitte später noch einmal versuchen.</p>`
+  if (!myProfile) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Einstellungen werden geladen …</p>`
   const row = (key, label, hint) => `
     <div class="flex items-start justify-between gap-3" style="margin-top:18px;">
       <div style="min-width:0;">
@@ -833,7 +835,6 @@ function renderSettingsBody() {
     </div>
     ${row('shareBookmarks', 'Merkliste für alle sichtbar', 'Angemeldete Lords sehen deine vorgemerkten und „dabei“-Events samt deinem Lord-Titel: als Liste „Merkliste von Lord …“ und unter ihren eigenen Events.')}
     ${row('shareHistory', 'History für alle sichtbar', 'Angemeldete Lords können deine besuchten Konzerte samt Sternen unter deinem Lord-Titel ansehen.')}
-    ${guide}
     ${renderStatsHtml()}
   `
 }
@@ -841,7 +842,7 @@ function renderSettingsBody() {
 function refreshSettingsBody() {
   const body = document.getElementById('settings-body')
   if (!body) return
-  // Anleitung und Statistik bleiben aufgeklappt, wenn z. B. ein Schalter das Menü neu zeichnet
+  // Die Statistik bleibt aufgeklappt, wenn z. B. ein Schalter das Menü neu zeichnet
   const open = [...body.querySelectorAll('details')].map(d => d.open)
   body.innerHTML = renderSettingsBody()
   body.querySelectorAll('details').forEach((d, i) => { d.open = !!open[i] })
@@ -854,10 +855,16 @@ async function loadMyProfile() {
   refreshSettingsBody()
 }
 
-function openSettingsModal() {
+function openSettingsModal(mode = 'settings') {
+  settingsMode = mode === 'help' ? 'help' : 'settings'
   settingsOpen = true
-  document.getElementById('modal-settings')?.classList.remove('hidden')
+  const modal = document.getElementById('modal-settings')
+  modal?.classList.remove('hidden')
+  const title = document.getElementById('settings-title')
+  if (title) title.textContent = settingsMode === 'help' ? 'Anleitung' : 'Einstellungen'
+  modal?.scrollTo({ top: 0 })
   refreshSettingsBody()
+  if (settingsMode === 'help') return
   if (currentUser && !myProfile) loadMyProfile()
   ensureCommunityLoaded()   // Vergleichswerte der Statistik
 }
@@ -949,7 +956,13 @@ function refreshBottomNav() {
   document.querySelector('[data-open-radar]')?.addEventListener('click', openRadarModal)
 }
 
+let lastRadarTap = 0
 function openRadarModal() {
+  // Doppeltipp auf "Radar" springt in der Radar-Liste ganz nach oben
+  const now = Date.now()
+  const isDoubleTap = radarOpen && now - lastRadarTap < 400
+  lastRadarTap = now
+  if (isDoubleTap) { document.getElementById('modal-radar')?.scrollTo({ top: 0 }); return }
   radarOpen = true
   document.getElementById('modal-radar')?.classList.remove('hidden')
   refreshBottomNav()
@@ -971,7 +984,7 @@ function renderFilters() {
     : (locations.find(l => l.id == filters.locationId)?.name || 'Alle Locations')
 
   return `
-    <div class="glass rounded-2xl p-3 mb-3" style="overflow:visible; position:relative; z-index:10; display:flex; flex-direction:column; gap:8px;">
+    <div class="glass rounded-2xl p-3 mb-5" style="overflow:visible; position:relative; z-index:10; display:flex; flex-direction:column; gap:8px;">
       <div style="display:flex; gap:0; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:3px;">
         ${['Berlin', 'Leipzig'].map(c => {
           const active = filters.cities[0] === c
@@ -1004,35 +1017,11 @@ function renderFilters() {
         </div>
       </div>
     </div>
-    <div role="group" aria-label="Schnellfilter" style="display:flex; gap:6px; margin-bottom:20px;">
-      ${[['when:heute', 'Heute'], ['when:wochenende', 'Wochenende'], ['type:konzert', 'Konzerte'], ['type:party', 'Partys']].map(([key, label]) => {
-        const [k, v] = key.split(':')
-        const on = filters[k] === v
-        return `<button data-chip="${key}" aria-pressed="${on}" class="syne" style="flex:1 1 auto; min-width:0; height:40px; padding:0 8px; border-radius:12px; cursor:pointer; font-size:12px; font-weight:600; white-space:nowrap; ${on
-          ? 'background:linear-gradient(135deg,rgba(99,102,241,0.55),rgba(168,85,247,0.45)); border:1px solid rgba(129,140,248,0.6); color:white;'
-          : 'background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.7);'}">${label}</button>`
-      }).join('')}
-    </div>
   `
 }
 
-// Freitag bis Sonntag des kommenden bzw. laufenden Wochenendes (YYYY-MM-DD)
-function weekendDates() {
-  const now = new Date(); now.setHours(12, 0, 0, 0)
-  const dow = now.getDay()   // 0 = Sonntag
-  const start = new Date(now)
-  if (dow >= 1 && dow <= 4) start.setDate(now.getDate() + (5 - dow))
-  const days = start.getDay() === 5 ? 3 : start.getDay() === 6 ? 2 : 1
-  return Array.from({ length: days }, (_, i) => { const d = new Date(start); d.setDate(start.getDate() + i); return d.toLocaleDateString('sv-SE') })
-}
-
 function getFilteredEvents() {
-  const weekend = filters.when === 'wochenende' ? weekendDates() : null
-  const todayStr = localToday()
   return events.filter(e => {
-    if (filters.type && e.type !== filters.type) return false
-    if (filters.when === 'heute' && e.date !== todayStr) return false
-    if (weekend && !weekend.includes(e.date)) return false
     const loc = locationsById.get(e.locationId)
     const city = loc ? loc.city : (e.locationCity || '')
     if (!city) return true
@@ -1046,51 +1035,95 @@ function getFilteredEvents() {
   }).sort(byDateTime)
 }
 
-function renderGroupedEvents() {
-  const today = new Date()
-  today.setHours(0,0,0,0)
-  const future = getFilteredEvents().filter(e => {
+// Kommende Events der aktuellen Filter (heute und später)
+function futureEventList(today) {
+  return getFilteredEvents().filter(e => {
     const d = new Date(e.date + 'T12:00:00')
     return Math.floor((d - today) / 86400000) >= 0
   })
-  const filtered = future.slice(0, renderedEventLimit)
-  const hasMore = future.length > filtered.length
-  const groups = {}
-  filtered.forEach(e => {
-    const d = new Date(e.date + 'T12:00:00')
-    const diff = Math.floor((d - today) / 86400000)
-    let label
-    const todayDay = today.getDay() === 0 ? 6 : today.getDay() - 1
-    const thisMonday = new Date(today); thisMonday.setDate(today.getDate() - todayDay)
-    const nextMonday = new Date(thisMonday); nextMonday.setDate(thisMonday.getDate() + 7)
-    const weekAfter = new Date(nextMonday); weekAfter.setDate(nextMonday.getDate() + 7)
-    if (diff === 0) label = 'Heute'
-    else if (diff === 1) label = 'Morgen'
-    else if (d < nextMonday) label = 'Diese Woche'
-    else if (d < weekAfter) label = 'Nächste Woche'
-    else label = d.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })
-    if (!groups[label]) groups[label] = []
-    groups[label].push(e)
-  })
-  if (Object.keys(groups).length === 0) {
-    return `<div class="text-center py-20" style="color:rgba(255,255,255,0.6);"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p>${(filters.search || filters.when || filters.type || filters.locationId !== 'alle') ? `<button data-reset-filters class="btn-glass rounded-xl syne text-sm font-semibold" style="height:44px; padding:0 22px; margin-top:18px; color:white;">Filter zurücksetzen</button>` : ''}</div>`
+}
+
+function startOfToday() {
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+  return today
+}
+
+function eventGroupLabel(e, today) {
+  const d = new Date(e.date + 'T12:00:00')
+  const diff = Math.floor((d - today) / 86400000)
+  const todayDay = today.getDay() === 0 ? 6 : today.getDay() - 1
+  const thisMonday = new Date(today); thisMonday.setDate(today.getDate() - todayDay)
+  const nextMonday = new Date(thisMonday); nextMonday.setDate(thisMonday.getDate() + 7)
+  const weekAfter = new Date(nextMonday); weekAfter.setDate(nextMonday.getDate() + 7)
+  if (diff === 0) return 'Heute'
+  if (diff === 1) return 'Morgen'
+  if (d < nextMonday) return 'Diese Woche'
+  if (d < weekAfter) return 'Nächste Woche'
+  return d.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })
+}
+
+// Events (nach Datum sortiert) in aufeinanderfolgende Gruppen mit Überschrift: [[label, [events]], ...]
+function groupEventList(list, today) {
+  const groups = []
+  for (const e of list) {
+    const label = eventGroupLabel(e, today)
+    const last = groups[groups.length - 1]
+    if (last && last[0] === label) last[1].push(e); else groups.push([label, [e]])
   }
+  return groups
+}
+
+function renderEventGroup(label, evts) {
   return `
-    <p class="text-xs" style="color:rgba(255,255,255,0.6); margin:-6px 0 14px;" aria-live="polite">${future.length} ${future.length === 1 ? 'Event' : 'Events'}</p>
-    <div class="space-y-8">
-      ${Object.entries(groups).map(([label, evts]) => `
-        <div>
+        <div data-group="${esc(label)}">
           <div class="flex items-center gap-3 mb-4">
             <div class="h-px flex-1" style="background:rgba(255,255,255,0.06);"></div>
-            <span class="syne text-xs tracking-widest uppercase" style="color:rgba(255,255,255,0.6); font-weight:700;">${label}</span>
+            <span class="syne text-xs tracking-widest uppercase" style="color:rgba(255,255,255,0.6); font-weight:700;">${esc(label)}</span>
             <div class="h-px flex-1" style="background:rgba(255,255,255,0.06);"></div>
           </div>
           <div class="space-y-3">${evts.map(e => renderEventCard(e)).join('')}</div>
         </div>
-      `).join('')}
+      `
+}
+
+function renderGroupedEvents() {
+  const today = startOfToday()
+  const future = futureEventList(today)
+  const filtered = future.slice(0, renderedEventLimit)
+  const hasMore = future.length > filtered.length
+  const groups = groupEventList(filtered, today)
+  if (groups.length === 0) {
+    return `<div class="text-center py-20" style="color:rgba(255,255,255,0.6);"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p>${(filters.search || filters.locationId !== 'alle') ? `<button data-reset-filters class="btn-glass rounded-xl syne text-sm font-semibold" style="height:44px; padding:0 22px; margin-top:18px; color:white;">Filter zurücksetzen</button>` : ''}</div>`
+  }
+  return `
+    <p class="text-xs" style="color:rgba(255,255,255,0.6); margin:-6px 0 14px;" aria-live="polite">${future.length} ${future.length === 1 ? 'Event' : 'Events'}</p>
+    <div class="space-y-8">
+      ${groups.map(([label, evts]) => renderEventGroup(label, evts)).join('')}
     </div>
-    ${hasMore ? `<div id="load-more-sentinel" style="height:1px;"></div><p class="text-center text-xs py-6 skeleton-pulse" style="color:rgba(255,255,255,0.6);">Weitere Events werden geladen…</p>` : ''}
+    ${hasMore ? `<div id="load-more-sentinel" style="height:1px;"></div><p id="load-more-footer" class="text-center text-xs py-6 skeleton-pulse" style="color:rgba(255,255,255,0.6);">Weitere Events werden geladen…</p>` : ''}
   `
+}
+
+// Beim Scrollen nur die nächsten Events anhängen. Die ganze Liste jedes Mal neu zu zeichnen (bei bis zu 2000 Karten)
+// blockierte das Handy kurz und ließ die Ansicht am Ende der geladenen Liste zurückfedern.
+function appendMoreEvents() {
+  const groupsEl = document.querySelector('#event-list-content .space-y-8')
+  if (!groupsEl) return
+  const today = startOfToday()
+  const future = futureEventList(today)
+  const from = renderedEventLimit
+  renderedEventLimit += EVENT_RENDER_BATCH
+  for (const [label, evts] of groupEventList(future.slice(from, renderedEventLimit), today)) {
+    const last = groupsEl.lastElementChild
+    if (last && last.dataset.group === label) last.querySelector('.space-y-3').insertAdjacentHTML('beforeend', evts.map(e => renderEventCard(e)).join(''))
+    else groupsEl.insertAdjacentHTML('beforeend', renderEventGroup(label, evts))
+  }
+  if (future.length <= renderedEventLimit) {
+    document.getElementById('load-more-sentinel')?.remove()
+    document.getElementById('load-more-footer')?.remove()
+  }
+  attachSwipeGestures()
 }
 
 function renderSkeleton() {
@@ -1831,7 +1864,7 @@ function renderModals() {
           <div style="height:2px; background:linear-gradient(90deg, #818cf8, transparent);"></div>
           <div class="p-5">
             <div class="flex items-center justify-between" style="margin-bottom:6px;">
-              <h2 class="syne text-xl text-white" style="font-weight:800;">Einstellungen</h2>
+              <h2 id="settings-title" class="syne text-xl text-white" style="font-weight:800;">Einstellungen</h2>
               <button data-close-settings type="button" aria-label="Schließen" style="color:rgba(255,255,255,0.6); background:none; border:none; cursor:pointer; font-size:24px; line-height:1; padding:4px 8px;">×</button>
             </div>
             <div id="settings-body">${renderSettingsBody()}</div>
@@ -1922,14 +1955,6 @@ function clearTypedSearch() {
 }
 
 function attachFilterBarEvents() {
-  // Schnellfilter: nochmal tippen schaltet aus
-  document.querySelectorAll('[data-chip]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const [k, v] = btn.dataset.chip.split(':')
-      filters[k] = filters[k] === v ? '' : v
-      updateView(true)
-    })
-  })
   document.querySelectorAll('[data-city]').forEach(btn => {
     btn.addEventListener('click', () => {
       filters.cities = [btn.dataset.city]
@@ -1970,7 +1995,7 @@ function attachFilterBarEvents() {
   searchInput?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') { e.preventDefault(); commitSearch() }
   })
-  document.getElementById('settings-open')?.addEventListener('click', openSettingsModal)
+  document.getElementById('settings-open')?.addEventListener('click', () => openSettingsModal())
   // Jede Eingabe oder Berührung startet die 5 Sekunden neu (nur wenn die Suche Treffer hat; ohne Treffer bleibt es bei 2 s)
   if (!searchActivityBound) {
     searchActivityBound = true
@@ -2060,6 +2085,18 @@ function attachNavEvents() {
         return
       }
 
+      if (isDoubleTap && currentView === btn.dataset.nav && currentView === 'liste') {
+        window.scrollTo(0, 0)
+        if (wasRadarOpen) refreshBottomNav()
+        return
+      }
+      if (isDoubleTap && currentView === btn.dataset.nav && currentView === 'kalender') {
+        calendarOffset = 0
+        refreshCalendarPane()
+        window.scrollTo(0, 0)
+        if (wasRadarOpen) refreshBottomNav()
+        return
+      }
       if (currentView === btn.dataset.nav) {
         if (wasRadarOpen) refreshBottomNav()
         return
@@ -2735,10 +2772,8 @@ function setupLoadMoreObserver() {
     if (!entries[0].isIntersecting) return
     loadMoreObserver.disconnect()
     loadMoreObserver = null
-    renderedEventLimit += EVENT_RENDER_BATCH
-    const listContent = document.getElementById('event-list-content')
-    if (listContent) { listContent.innerHTML = renderGroupedEvents(); attachSwipeGestures() }
-  }, { rootMargin: '600px 0px' })
+    appendMoreEvents()
+  }, { rootMargin: '1200px 0px' })
   loadMoreObserver.observe(sentinel)
 }
 
