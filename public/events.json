@@ -9137,19 +9137,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 369576453,
-    "title": "Konstantinos Argiros",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1388964272,
     "title": "Bryson Tiller",
     "date": "2026-11-25",
@@ -9161,6 +9148,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 369576453,
+    "title": "Konstantinos Argiros",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2118918431,
@@ -10778,6 +10778,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1800531529,
+    "title": "berq",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 54,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.max-schmeling-halle.de/events/event/berq-max-schmeling-halle-2026-11-28",
+    "spotifyUrl": "",
+    "source": "max-schmeling-halle",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 654070612,
     "title": "Filow",
     "date": "2026-11-28",
@@ -10802,19 +10815,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 1800531529,
-    "title": "berq",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 54,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.max-schmeling-halle.de/events/event/berq-max-schmeling-halle-2026-11-28",
-    "spotifyUrl": "",
-    "source": "max-schmeling-halle",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 1814173282,
@@ -11178,19 +11178,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 424917923,
-    "title": "Dr. Pop",
-    "date": "2026-11-29",
-    "time": "19:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/dr-pop-29-11-2026",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 118703637,
     "title": "Kehlani",
     "date": "2026-11-29",
@@ -11202,6 +11189,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 424917923,
+    "title": "Dr. Pop",
+    "date": "2026-11-29",
+    "time": "19:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/dr-pop-29-11-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 837036655,
@@ -11373,19 +11373,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 905268865,
-    "title": "Streichelt",
-    "date": "2026-11-29",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/streichelt-12",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 401954006,
     "title": "Ikkimel",
     "date": "2026-11-29",
@@ -11397,6 +11384,19 @@
     "spotifyUrl": "",
     "source": "max-schmeling-halle",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 905268865,
+    "title": "Streichelt",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/streichelt-12",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 2064087764,
@@ -15470,19 +15470,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 888326179,
-    "title": "Ben Becker",
-    "date": "2026-12-11",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/ben-becker-liest-tc-no-potsdam-ZUF40X",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 974768576,
     "title": "NIMO",
     "date": "2026-12-11",
@@ -15494,6 +15481,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 888326179,
+    "title": "Ben Becker",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/ben-becker-liest-tc-no-potsdam-ZUF40X",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 228716632,
@@ -15950,19 +15950,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 2074100650,
-    "title": "Comedyflash",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://standup-republic.de/events/Comedyflash%20-%20Potsdam",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 1862272257,
     "title": "NIMO",
     "date": "2026-12-12",
@@ -15974,6 +15961,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 2074100650,
+    "title": "Comedyflash",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://standup-republic.de/events/Comedyflash%20-%20Potsdam",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 195535803,
@@ -18538,19 +18538,6 @@
     "addedAt": "2026-11-03"
   },
   {
-    "id": 1674407436,
-    "title": "CAFÉ geschlossen",
-    "date": "2026-12-26",
-    "time": "10:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/special/2026-12-26/cafe-geschlossen-9",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 671421410,
     "title": "Schwanensee – Grand Classic Ballet mit Orchester",
     "date": "2026-12-26",
@@ -18785,19 +18772,6 @@
     "addedAt": "2026-09-29"
   },
   {
-    "id": 77477897,
-    "title": "PHILLIP BOA AND THE VOODOOCLUB",
-    "date": "2026-12-27",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77041",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1885651724,
     "title": "Die Gorillas",
     "date": "2026-12-27",
@@ -18937,19 +18911,6 @@
     "ticketUrl": "https://www.ilseserika.de/termine-65/gelee-ger-lynt-ger-live-ilses-erika-a-disco-80s-vs-italo-disco.html",
     "spotifyUrl": "",
     "source": "ilseserika",
-    "addedAt": "2026-11-07"
-  },
-  {
-    "id": 1147411493,
-    "title": "CAFÉ geschlossen",
-    "date": "2026-12-30",
-    "time": "10:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/special/2026-12-30/cafe-geschlossen-11",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
     "addedAt": "2026-11-07"
   },
   {
@@ -19329,19 +19290,6 @@
     "addedAt": "2026-11-04"
   },
   {
-    "id": 228498048,
-    "title": "Moritzbastei SILVESTERPARTY 2026",
-    "date": "2026-12-31",
-    "time": "22:00",
-    "locationId": 18,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/78138",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1963724765,
     "title": "Hippie New Year",
     "date": "2026-12-31",
@@ -19483,19 +19431,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 204505914,
-    "title": "11Freunde Kneipenquiz",
-    "date": "2027-01-07",
-    "time": "19:30",
-    "locationId": 18,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-07/11freunde-kneipenquiz-2",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-07"
   },
   {
     "id": 858686246,
@@ -20094,19 +20029,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 749080878,
-    "title": "Only Stillness",
-    "date": "2027-01-15",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77419",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1135657102,
     "title": "Comedyflash",
     "date": "2027-01-15",
@@ -20325,19 +20247,6 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 157356685,
-    "title": "Grausame Töchter  + Special Guest: VAMPYROS LESBOS",
-    "date": "2027-01-16",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim-light.com/de/a/5c7ffae04d96f500018ae55f/e/6a55f3be8728b2492791ab67",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-07"
   },
   {
     "id": 918106175,
@@ -20561,19 +20470,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1195600044,
-    "title": "Götz Widmann",
-    "date": "2027-01-19",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/71218",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 218714370,
     "title": "7:77 - Die Open Stage mit Andrea Baccomo",
     "date": "2027-01-19",
@@ -20665,19 +20561,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 964298814,
-    "title": "Götz Widmann",
-    "date": "2027-01-20",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/71221",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1640476213,
     "title": "Undead Abuelas",
     "date": "2027-01-20",
@@ -20767,19 +20650,6 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-25"
-  },
-  {
-    "id": 1545983973,
-    "title": "Eva Karl Faltermeier: Ding Dong",
-    "date": "2027-01-22",
-    "time": "19:30",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/75258",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-07"
   },
   {
     "id": 1473985013,
@@ -24039,19 +23909,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 668534519,
-    "title": "Betti Kruse",
-    "date": "2027-02-18",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/en/event/betti-kruse-wird-schon-gutgehn-tour-2027-waschhaus-potsdam-21869921/",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 274988741,
     "title": "John Summit",
     "date": "2027-02-18",
@@ -24063,6 +23920,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 668534519,
+    "title": "Betti Kruse",
+    "date": "2027-02-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/betti-kruse-wird-schon-gutgehn-tour-2027-waschhaus-potsdam-21869921/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1689159907,
@@ -26306,19 +26176,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1670069340,
-    "title": "MiA.",
-    "date": "2027-03-06",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://tickets.miarockt.de/produkte/185-tickets-mia-waschhaus-potsdam-am-06-03-2027",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 1950040374,
     "title": "Kool & The Gang",
     "date": "2027-03-06",
@@ -26330,6 +26187,19 @@
     "spotifyUrl": "",
     "source": "max-schmeling-halle",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1670069340,
+    "title": "MiA.",
+    "date": "2027-03-06",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://tickets.miarockt.de/produkte/185-tickets-mia-waschhaus-potsdam-am-06-03-2027",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 340651777,
@@ -29138,19 +29008,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1273221715,
-    "title": "CLAIR OBSCUR: EXPEDITION 33 - A PAINTED SYMPHONY",
-    "date": "2027-04-01",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/clair-obscur/2027-04-01-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1480200304,
     "title": "Megadeth",
     "date": "2027-04-01",
@@ -29162,6 +29019,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1273221715,
+    "title": "CLAIR OBSCUR: EXPEDITION 33 - A PAINTED SYMPHONY",
+    "date": "2027-04-01",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/clair-obscur/2027-04-01-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 956324739,
@@ -29267,19 +29137,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1524239872,
-    "title": "Kontrollverlust",
-    "date": "2027-04-02",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/en/event/kontrollverlust-maerchen-schreit-die-zeit-tour-202627-waschhaus-22260468/",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 1354475027,
     "title": "Samra & Capital Bra",
     "date": "2027-04-02",
@@ -29291,6 +29148,19 @@
     "spotifyUrl": "",
     "source": "max-schmeling-halle",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1524239872,
+    "title": "Kontrollverlust",
+    "date": "2027-04-02",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/kontrollverlust-maerchen-schreit-die-zeit-tour-202627-waschhaus-22260468/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 973531682,
@@ -29409,19 +29279,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 978745001,
-    "title": "ASP",
-    "date": "2027-04-03",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.aspswelten.de/shop/wunschgegner-tour-2027..87/wunschgegner-tour-2027-potsdam-waschhaus.1366",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 1723912918,
     "title": "AK Ausserkontrolle",
     "date": "2027-04-03",
@@ -29433,6 +29290,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 978745001,
+    "title": "ASP",
+    "date": "2027-04-03",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.aspswelten.de/shop/wunschgegner-tour-2027..87/wunschgegner-tour-2027-potsdam-waschhaus.1366",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 238944388,
@@ -30119,19 +29989,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1261599022,
-    "title": "KAMERUN QRELLA GROUP",
-    "date": "2027-04-10",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/kamerun-qrella-group",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 784934854,
     "title": "PA69",
     "date": "2027-04-10",
@@ -30143,6 +30000,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1261599022,
+    "title": "KAMERUN QRELLA GROUP",
+    "date": "2027-04-10",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/kamerun-qrella-group",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1361648249,
@@ -30985,19 +30855,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1710285563,
-    "title": "Nichtseattle",
-    "date": "2027-04-18",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/nichtseattle-grose-liebe-potsdam-E829L13",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 404841951,
     "title": "Thirty Seconds To Mars",
     "date": "2027-04-18",
@@ -31009,6 +30866,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1710285563,
+    "title": "Nichtseattle",
+    "date": "2027-04-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/nichtseattle-grose-liebe-potsdam-E829L13",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1323834100,
@@ -32678,19 +32548,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 55262890,
-    "title": "Gracie Abrams",
-    "date": "2027-05-12",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/gracie-abrams/2027-05-12-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1600386665,
     "title": "Hilary Duff",
     "date": "2027-05-12",
@@ -32702,6 +32559,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 55262890,
+    "title": "Gracie Abrams",
+    "date": "2027-05-12",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/gracie-abrams/2027-05-12-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1037465691,
