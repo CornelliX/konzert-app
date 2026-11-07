@@ -1,18 +1,5 @@
 [
   {
-    "id": 80702560,
-    "title": "Papiertiger / Familienwerkstatt",
-    "date": "2026-11-07",
-    "time": "10:00",
-    "locationId": 14,
-    "type": "konzert",
-    "description": "Mitmachangebot",
-    "ticketUrl": "https://www.werk-2.de/programm/2026-11-07_papiertiger-familienwerkstatt",
-    "spotifyUrl": "",
-    "source": "werk2",
-    "addedAt": "2026-09-29"
-  },
-  {
     "id": 998446261,
     "title": "TRÖDEL, RAMSCH & COOLE LUMPEN - Flohmarkt im Biergarten des Ilses Erika (ab 23:00 Uhr Party im Club!)",
     "date": "2026-11-07",
@@ -52,19 +39,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1949645385,
-    "title": "Berlin Tattoo",
-    "date": "2026-11-07",
-    "time": "13:30",
-    "locationId": 54,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://www.max-schmeling-halle.de/events/event/berlin-tattoo-max-schmeling-halle-2026-11-07-14-30",
-    "spotifyUrl": "",
-    "source": "max-schmeling-halle",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 1778585550,
     "title": "Unter meinem Bett",
     "date": "2026-11-07",
@@ -91,19 +65,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1702952790,
-    "title": "UNIDRAM: Dreamland / Territorium der Träume",
-    "date": "2026-11-07",
-    "time": "17:30",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/unidram-dreamland-territorium-der-traeume-07-11-2026",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-10-14"
-  },
-  {
     "id": 1697924672,
     "title": "„Das Gold in den Fugen -Poesie zum Hoffen-“ ausverkauft",
     "date": "2026-11-07",
@@ -114,58 +75,6 @@
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
     "source": "frannz",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1123475229,
-    "title": "UNIDRAM: LAB RATS",
-    "date": "2026-11-07",
-    "time": "18:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://t-werk.reservix.de/p/reservix/event/2589167",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
-    "id": 1883374397,
-    "title": "GROSSSTADTWAHNSINN 2026 | TAG 2",
-    "date": "2026-11-07",
-    "time": "18:30",
-    "locationId": 2,
-    "type": "konzert",
-    "description": "TAG 2 MIT ULTIMO ASALTO / VIOLENT TIMES / TELEKOMA / UNDERDOGZ / MIKE AND THE… / GEWOHNHEITSTRINKER ",
-    "ticketUrl": "https://www.so36.com/produkte/102037-tickets-grossstadtwahnsinn-2026-tag-2-so36-berlin-am-07-11-2026",
-    "spotifyUrl": "",
-    "source": "so36",
-    "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1395407451,
-    "title": "Amon Amarth",
-    "date": "2026-11-07",
-    "time": "18:30",
-    "locationId": 55,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.velodrom.de/events/event/amon-amarth-velodrom-2026-11-07",
-    "spotifyUrl": "",
-    "source": "velodrom",
-    "addedAt": "2026-11-01"
-  },
-  {
-    "id": 690411400,
-    "title": "SMILE AND BURN + PLAIINS + THE PILL / Happy Place Tour",
-    "date": "2026-11-07",
-    "time": "19:00",
-    "locationId": 13,
-    "type": "konzert",
-    "description": "[Alternative]  \n\n07.11.2026, 19:00 Uhr:  \n\nSmile and Burn + PLAIINS + The Pill / Happy Place Tour  \n\nDestiny Tourbooking…",
-    "ticketUrl": "http://www.conne-island.de/termin/nr7402.html",
-    "spotifyUrl": "",
-    "source": "conne-island",
     "addedAt": "2026-11-01"
   },
   {
@@ -180,19 +89,6 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1291772025,
-    "title": "No Cigar",
-    "date": "2026-11-07",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/no-cigar.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
   },
   {
     "id": 2124734575,
@@ -219,19 +115,6 @@
     "spotifyUrl": "",
     "source": "kesselhaus",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 172445304,
-    "title": "Acht Eimer Hühnerherzen",
-    "date": "2026-11-07",
-    "time": "19:00",
-    "locationId": 31,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://huxleysneuewelt.de/event/2026-11-07-acht-eimer-huehnerherzen",
-    "spotifyUrl": "",
-    "source": "huxleys",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 984968335,
@@ -273,8 +156,34 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 2095782423,
-    "title": "SECHSER & DJ DISPO „EINS SECHSER EINS Tour\"",
+    "id": 1291772025,
+    "title": "No Cigar",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/no-cigar.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
+  },
+  {
+    "id": 2031623427,
+    "title": "WE FOUND LOVE! 2000s, 2010s, 2020s - Pop Hits Party",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-07-we-found-love-",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-07"
+  },
+  {
+    "id": 377290422,
+    "title": "SECHSER & DJ DISPO",
     "date": "2026-11-07",
     "time": "20:00",
     "locationId": 1,
@@ -284,19 +193,6 @@
     "spotifyUrl": "",
     "source": "lido",
     "addedAt": "2026-11-07"
-  },
-  {
-    "id": 65505460,
-    "title": "WE FOUND LOVE!",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-07-we-found-love-",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 75175835,
@@ -390,32 +286,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1975374640,
-    "title": "Bial Hclap & Band & Yugo Taguchi & Frieda",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102647-tickets-bial-hclap-band-yugo-taguchi-frieda-schokoladen-berlin-am-07-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-10-28"
-  },
-  {
-    "id": 284270521,
-    "title": "Lament – Dark Pop",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 19,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://horns-erben.de/event/lament-dark-pop/",
-    "spotifyUrl": "",
-    "source": "hornserben",
-    "addedAt": "2026-09-21"
-  },
-  {
     "id": 448566218,
     "title": "SHADEN (أنا إمرأة تعبانة) Show",
     "date": "2026-11-07",
@@ -479,31 +349,6 @@
     "spotifyUrl": "",
     "source": "madameclaude",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 740795291,
-    "title": "Mehnersmoos",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 33,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/mehnersmoos/2026-11-07-2000",
-    "spotifyUrl": "",
-    "source": "ubereatsmusichall",
-    "addedAt": "2026-08-17"
-  },
-  {
-    "id": 2105416775,
-    "title": "April Art + Special Guest: Dymytry Paradox",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 34,
-    "source": "hole44",
-    "ticketUrl": "https://hole-berlin.de/event/2026-11-07-april-art/",
-    "spotifyUrl": "",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 503720498,
@@ -622,45 +467,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1880822473,
-    "title": "Tokio Hotel",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/tokio-hotel-2026/2026-11-07-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1828635790,
-    "title": "Soulbound x Hell Boulevard",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/en/artist/soulbound/soulbound-x-hell-boulevard-made-in-syn-tour-2026-4144786/",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
-    "id": 1553634135,
-    "title": "Stefanie Heinzmann - Circles Tour 2026",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "locationId": 59,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.rbb-online.de/unternehmen/service/veranstaltungen/2026/stefanie-heinzmann.html",
-    "spotifyUrl": "",
-    "source": "rbb-sendesaal",
-    "addedAt": "2026-11-01"
-  },
-  {
     "id": 200902024,
     "title": "Danger Dan",
     "date": "2026-11-07",
@@ -726,19 +532,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 2001227923,
-    "title": "SPOT ON",
-    "date": "2026-11-07",
-    "time": "22:00",
-    "locationId": 14,
-    "type": "party",
-    "description": "Party",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/spot-on-eine-nacht-voller-entdeckungen",
-    "spotifyUrl": "",
-    "source": "werk2",
-    "addedAt": "2026-10-14"
-  },
-  {
     "id": 107810541,
     "title": "Balliamo! – 80s Eurodance & Italo Disco",
     "date": "2026-11-07",
@@ -776,18 +569,6 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-11-03"
-  },
-  {
-    "id": 1798424854,
-    "title": "WE LOVE 80S",
-    "date": "2026-11-07",
-    "time": "22:00",
-    "type": "konzert",
-    "locationId": 37,
-    "source": "quasimodo",
-    "ticketUrl": "https://quasimodo.club/events/we-love-80s-40-7306",
-    "spotifyUrl": "",
-    "addedAt": "2026-10-14"
   },
   {
     "id": 93526037,
@@ -1193,19 +974,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1522502321,
-    "title": "MAYFLOWER MADAME + BLKE - Berlin Show @Urban…",
-    "date": "2026-11-08",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/mayflower-madame-blke-berlin-show-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1078838723,
     "title": "D2",
     "date": "2026-11-08",
@@ -1359,6 +1127,19 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1522502321,
+    "title": "MAYFLOWER MADAME + BLKE - Berlin Show @Urban…",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/mayflower-madame-blke-berlin-show-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 2046892229,
@@ -1789,19 +1570,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 558797315,
-    "title": "Koza Mostra",
-    "date": "2026-11-10",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/koza-mostra-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1164185773,
     "title": "Feeble Little Horse",
     "date": "2026-11-10",
@@ -1916,6 +1684,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 558797315,
+    "title": "Koza Mostra",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/koza-mostra-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 730292829,
@@ -2488,19 +2269,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 739543080,
-    "title": "UNS + GÄSTE BERLIN • URBAN SPREE",
-    "date": "2026-11-12",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/uns-gäste-berlin-•-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1311949892,
     "title": "Isaac Jensen",
     "date": "2026-11-12",
@@ -2551,6 +2319,19 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 739543080,
+    "title": "UNS + GÄSTE BERLIN • URBAN SPREE",
+    "date": "2026-11-12",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/uns-gäste-berlin-•-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 1573180180,
@@ -3108,19 +2889,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 419059931,
-    "title": "FRIBERTY “FRIBERTY I”-Releaseshow featuring…",
-    "date": "2026-11-13",
-    "time": "19:30",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/friberty-releaseshow.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 190698164,
     "title": "JENSMISSION – FÜR IMMER NIE MEHR UNS",
     "date": "2026-11-13",
@@ -3145,6 +2913,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 419059931,
+    "title": "FRIBERTY “FRIBERTY I”-Releaseshow featuring…",
+    "date": "2026-11-13",
+    "time": "19:30",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/friberty-releaseshow.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 54540701,
@@ -3716,19 +3497,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1886076046,
-    "title": "Milking the Goatmachine & Endseeker - Urban…",
-    "date": "2026-11-14",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/milking-the-goatmachine-and-endseeker-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 620161160,
     "title": "Tex Brasket",
     "date": "2026-11-14",
@@ -3740,6 +3508,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1886076046,
+    "title": "Milking the Goatmachine & Endseeker - Urban…",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/milking-the-goatmachine-and-endseeker-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 2065269712,
@@ -4556,19 +4337,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1687017098,
-    "title": "Spike Fuck",
-    "date": "2026-11-15",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/spike-fuck-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 544140565,
     "title": "HERMANOS GUTIERREZ",
     "date": "2026-11-15",
@@ -4709,6 +4477,19 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1687017098,
+    "title": "Spike Fuck",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/spike-fuck-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 578959005,
@@ -5165,19 +4946,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 784975701,
-    "title": "JUD | Urban Spree Berlin",
-    "date": "2026-11-17",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/jud-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 250830686,
     "title": "Adult DVD",
     "date": "2026-11-17",
@@ -5228,6 +4996,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 909342281,
+    "title": "Papi Hans",
+    "date": "2026-11-17",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P3zqdI4gxoHVarodqm9",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 714460103,
@@ -5346,6 +5127,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 784975701,
+    "title": "JUD | Urban Spree Berlin",
+    "date": "2026-11-17",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/jud-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
+  },
+  {
     "id": 27453938,
     "title": "OMAD - Open Mic am Dienstag - Hip Hop Cypher (heute in der Albrecht-Halle) + 80s Party ab 23:00 Uhr auf dem Hauptfloor (siehe weiter unten)",
     "date": "2026-11-17",
@@ -5422,6 +5216,19 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1678639590,
+    "title": "4 Pistoleros",
+    "date": "2026-11-18",
+    "time": "18:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-P2wXPSvDdd4zSvDiCgz",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 1280361187,
@@ -6112,16 +5919,16 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1980345188,
-    "title": "Bragolin + Carrellee",
+    "id": 1307163542,
+    "title": "APART & LLANA",
     "date": "2026-11-19",
     "time": "20:00",
-    "locationId": 21,
+    "locationId": 11,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/bragolin-carrellee-urban-spree,-berlin.html",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100444-tickets-apart-llana-schokoladen-berlin-am-19-11-2026",
     "spotifyUrl": "",
-    "source": "urbanspree",
+    "source": "schokoladen",
     "addedAt": "2026-11-07"
   },
   {
@@ -6330,6 +6137,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1980345188,
+    "title": "Bragolin + Carrellee",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/bragolin-carrellee-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 369487881,
@@ -6617,19 +6437,6 @@
     "addedAt": "2026-09-30"
   },
   {
-    "id": 2120840893,
-    "title": "Process Party x Effetto Notte: Hall of Bats…",
-    "date": "2026-11-20",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/process-party-x-effetto-notte-hall-of-bats-with-lovataraxx,-hysteric-helen,-olgha.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1174507424,
     "title": "Psych Dreamers",
     "date": "2026-11-20",
@@ -6910,6 +6717,19 @@
     "spotifyUrl": "",
     "source": "nbl",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 2120840893,
+    "title": "Process Party x Effetto Notte: Hall of Bats…",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/process-party-x-effetto-notte-hall-of-bats-with-lovataraxx,-hysteric-helen,-olgha.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 1806724071,
@@ -7416,19 +7236,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 676037361,
-    "title": "WISBORG Phantomschmerz Tour - BERLIN | Special…",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/wisborg-phantomschmerz-tour-berlin-special-guest-the-fright.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 184622551,
     "title": "60 JUNO",
     "date": "2026-11-21",
@@ -7646,6 +7453,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 676037361,
+    "title": "WISBORG Phantomschmerz Tour - BERLIN | Special…",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/wisborg-phantomschmerz-tour-berlin-special-guest-the-fright.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 1317242692,
@@ -8773,19 +8593,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 747579778,
-    "title": "Faux Real + Dance Arts Center + The Nightclubs…",
-    "date": "2026-11-25",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/faux-real-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 83888245,
     "title": "Loft presents: VENJENT - Live Band Tour",
     "date": "2026-11-25",
@@ -8823,6 +8630,19 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 747579778,
+    "title": "Faux Real + Dance Arts Center + The Nightclubs…",
+    "date": "2026-11-25",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/faux-real-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 312313726,
@@ -9358,19 +9178,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 2011466232,
-    "title": "COOGANS BLUFF 10 Years Of Flying To The Stars",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/coogans-bluff-10-years-of-flying-to-the-stars.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 532351317,
     "title": "MARYAM.fyi",
     "date": "2026-11-26",
@@ -9511,6 +9318,19 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 2011466232,
+    "title": "COOGANS BLUFF 10 Years Of Flying To The Stars",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/coogans-bluff-10-years-of-flying-to-the-stars.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 1510889580,
@@ -9835,19 +9655,6 @@
     "addedAt": "2026-11-07"
   },
   {
-    "id": 863594453,
-    "title": "FÏX8:SËD8 + NEROGRIS + SCHNEIDER -  Urban…",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/fïx8sëd8-nerogris-schneider-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1993938195,
     "title": "Torsten Sträter",
     "date": "2026-11-27",
@@ -10091,6 +9898,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 863594453,
+    "title": "FÏX8:SËD8 + NEROGRIS + SCHNEIDER -  Urban…",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/fïx8sëd8-nerogris-schneider-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 1128126557,
@@ -10506,19 +10326,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 535272738,
-    "title": "Banda Entopica",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/banda-entopica-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1533325692,
     "title": "Cosmo presents: BIG UP! Berlin",
     "date": "2026-11-28",
@@ -10815,6 +10622,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 535272738,
+    "title": "Banda Entopica",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/banda-entopica-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 1814173282,
@@ -11993,19 +11813,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1369249134,
-    "title": "SPK + ALVAR",
-    "date": "2026-12-02",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/spk-alvar-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 345610106,
     "title": "LEDBYHER",
     "date": "2026-12-02",
@@ -12017,6 +11824,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 1369249134,
+    "title": "SPK + ALVAR",
+    "date": "2026-12-02",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/spk-alvar-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 1911640528,
@@ -12524,19 +12344,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1360154713,
-    "title": "Novulent - Live in Europe 2026",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/novulent-live-in-europe-2026.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1089482801,
     "title": "ALEX HENRY FOSTER",
     "date": "2026-12-03",
@@ -12650,6 +12457,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-27"
+  },
+  {
+    "id": 1360154713,
+    "title": "Novulent - Live in Europe 2026",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/novulent-live-in-europe-2026.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 828576915,
@@ -13182,19 +13002,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1215451765,
-    "title": "Coilguns - Berlin",
-    "date": "2026-12-05",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/coilguns-berlin-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 553009463,
     "title": "Trinity presents: TANK AND THE BANGAS - The Last Balloon Tour",
     "date": "2026-12-05",
@@ -13309,6 +13116,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1215451765,
+    "title": "Coilguns - Berlin",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/coilguns-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 169438678,
@@ -13945,19 +13765,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 1112039015,
-    "title": "Planta Industrial - berlin",
-    "date": "2026-12-06",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/planta-industrial-berlin-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1839634458,
     "title": "Seb Lowe",
     "date": "2026-12-06",
@@ -14072,6 +13879,19 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 1112039015,
+    "title": "Planta Industrial - berlin",
+    "date": "2026-12-06",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/planta-industrial-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 2107001796,
@@ -15808,19 +15628,6 @@
     "addedAt": "2026-11-07"
   },
   {
-    "id": 1678114495,
-    "title": "TWIN NOIR + HINFORT",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/twin-noir-hinfort-urban-spree,-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-07"
-  },
-  {
     "id": 1106670014,
     "title": "FUEGO36",
     "date": "2026-12-12",
@@ -15976,6 +15783,19 @@
     "addedAt": "2026-11-06"
   },
   {
+    "id": 1678114495,
+    "title": "TWIN NOIR + HINFORT",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/twin-noir-hinfort-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-07"
+  },
+  {
     "id": 195535803,
     "title": "35YLOKI Part One / Der Tag der Befreiung ist nah!! (24)",
     "date": "2026-12-12",
@@ -16076,6 +15896,19 @@
     "ticketUrl": "https://www.ilseserika.de/termine-65/die-grosse-ilses-erika-tanznacht-2-floors-5.html",
     "spotifyUrl": "",
     "source": "ilseserika",
+    "addedAt": "2026-11-07"
+  },
+  {
+    "id": 1915165485,
+    "title": "Naumanns Adventssbrunch",
+    "date": "2026-12-13",
+    "time": "10:00",
+    "locationId": 16,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://naumanns-gaststube.de/reservierung/",
+    "spotifyUrl": "",
+    "source": "felsenkeller",
     "addedAt": "2026-11-07"
   },
   {
@@ -18538,6 +18371,19 @@
     "addedAt": "2026-11-03"
   },
   {
+    "id": 1674407436,
+    "title": "CAFÉ geschlossen",
+    "date": "2026-12-26",
+    "time": "10:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/special/2026-12-26/cafe-geschlossen-9",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-07"
+  },
+  {
     "id": 671421410,
     "title": "Schwanensee – Grand Classic Ballet mit Orchester",
     "date": "2026-12-26",
@@ -18770,6 +18616,19 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-09-29"
+  },
+  {
+    "id": 77477897,
+    "title": "PHILLIP BOA AND THE VOODOOCLUB",
+    "date": "2026-12-27",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77041",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-07"
   },
   {
     "id": 1885651724,
@@ -19640,19 +19499,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 2132850111,
-    "title": "LINEAR MOVEMENT + DER KÜNFTIGE MUSIKANT +…",
-    "date": "2027-01-09",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/linear-movement-der-künftige-musikant-twilight-ritual.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 451507154,
     "title": "Toby's Birthday Bash Dream Band",
     "date": "2027-01-09",
@@ -19664,6 +19510,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 2132850111,
+    "title": "LINEAR MOVEMENT + DER KÜNFTIGE MUSIKANT +…",
+    "date": "2027-01-09",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/linear-movement-der-künftige-musikant-twilight-ritual.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1222231152,
@@ -22286,19 +22145,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1479218988,
-    "title": "unpeople - berlin",
-    "date": "2027-02-06",
-    "time": "19:30",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/unpeople-berlin-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1584931477,
     "title": "CAROLINA DESLANDES",
     "date": "2027-02-06",
@@ -22310,6 +22156,19 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1479218988,
+    "title": "unpeople - berlin",
+    "date": "2027-02-06",
+    "time": "19:30",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/unpeople-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 675561706,
@@ -24064,19 +23923,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1970186958,
-    "title": "Nathalie Froehlich - Berlin",
-    "date": "2027-02-19",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/nathalie-froehlich-berlin-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 552465584,
     "title": "SPONTY.",
     "date": "2027-02-19",
@@ -24140,6 +23986,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1970186958,
+    "title": "Nathalie Froehlich - Berlin",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/nathalie-froehlich-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1786829016,
@@ -25774,19 +25633,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1045063782,
-    "title": "Winona Riders - El Sueño de Dominar el Planeta…",
-    "date": "2027-03-04",
-    "time": "21:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/winona-riders-el-sueño-de-dominar-el-planeta-se-renueva.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1367475729,
     "title": "Los Fastidios + +Guest",
     "date": "2027-03-04",
@@ -25798,6 +25644,19 @@
     "spotifyUrl": "",
     "source": "wildatheart",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1045063782,
+    "title": "Winona Riders - El Sueño de Dominar el Planeta…",
+    "date": "2027-03-04",
+    "time": "21:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/winona-riders-el-sueño-de-dominar-el-planeta-se-renueva.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1466093164,
@@ -30298,19 +30157,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 1590477967,
-    "title": "June McDoom - BERLIN • URBAN SPREE",
-    "date": "2027-04-14",
-    "time": "19:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/june-mcdoom-berlin-•-urban-spree.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1906722231,
     "title": "LAURENZ NIKOLAUS",
     "date": "2027-04-14",
@@ -30322,6 +30168,19 @@
     "spotifyUrl": "",
     "source": "badehaus",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1590477967,
+    "title": "June McDoom - BERLIN • URBAN SPREE",
+    "date": "2027-04-14",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/june-mcdoom-berlin-•-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2060389097,
@@ -30597,19 +30456,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1431257313,
-    "title": "GIRLS UNDER GLASS + SUPPORT",
-    "date": "2027-04-16",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/girls-under-glass-support.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1039375232,
     "title": "MARC ATLAS",
     "date": "2027-04-16",
@@ -30659,6 +30505,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1431257313,
+    "title": "GIRLS UNDER GLASS + SUPPORT",
+    "date": "2027-04-16",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/girls-under-glass-support.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 601722576,
@@ -31270,19 +31129,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1095848672,
-    "title": "Pure Obsessions & Red Nights + Nico Amara…",
-    "date": "2027-04-23",
-    "time": "20:00",
-    "locationId": 21,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.urbanspree.com/program/concerts/pure-obsessions-and-red-nights-nico-amara-urban-spree-berlin.html",
-    "spotifyUrl": "",
-    "source": "urbanspree",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 537620831,
     "title": "OSAN YARAN",
     "date": "2027-04-23",
@@ -31320,6 +31166,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1095848672,
+    "title": "Pure Obsessions & Red Nights + Nico Amara…",
+    "date": "2027-04-23",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/pure-obsessions-and-red-nights-nico-amara-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 182853534,
