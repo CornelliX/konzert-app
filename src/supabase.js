@@ -123,7 +123,8 @@ export async function loadProfile() {
   return {
     lordTitle: data?.lord_title ?? null,
     shareHistory: data?.share_history ?? false,
-    shareBookmarks: data?.share_bookmarks ?? false
+    shareBookmarks: data?.share_bookmarks ?? false,
+    sharePhotos: data?.share_photos ?? false
   }
 }
 
@@ -136,6 +137,7 @@ export async function saveProfile(fields) {
   if ('lordTitle' in fields) row.lord_title = fields.lordTitle?.trim() || null
   if ('shareHistory' in fields) row.share_history = !!fields.shareHistory
   if ('shareBookmarks' in fields) row.share_bookmarks = !!fields.shareBookmarks
+  if ('sharePhotos' in fields) row.share_photos = !!fields.sharePhotos
   const { error } = await supabase.from('profiles').upsert(row, { onConflict: 'user_id' })
   return !error
 }
@@ -151,7 +153,7 @@ export async function loadCommunityHistories() {
     lordTitle: r.lord_title,
     createdAt: r.created_at,
     entries: (r.entries || []).map(e => ({
-      title: e.title, locationName: e.location_name, locationCity: e.location_city, date: e.date, rating: e.rating, isSupport: !!e.is_support
+      title: e.title, locationName: e.location_name, locationCity: e.location_city, date: e.date, rating: e.rating, isSupport: !!e.is_support, photoPaths: e.photo_paths || []
     }))
   }))
 }
@@ -207,7 +209,39 @@ export async function loadHistory() {
   if (!user) return []
   const { data, error } = await supabase.from('history').select('*').eq('user_id', user.id).order('date', { ascending: false })
   if (error) return []
-  return data.map(r => ({ id: r.id, eventId: r.event_id, title: r.title, locationName: r.location_name, locationCity: r.location_city, date: r.date, rating: r.rating, isSupport: !!r.is_support }))
+  return data.map(r => ({ id: r.id, eventId: r.event_id, title: r.title, locationName: r.location_name, locationCity: r.location_city, date: r.date, rating: r.rating, isSupport: !!r.is_support, photoPaths: r.photo_paths || [] }))
+}
+
+// ── Erinnerungsfotos (Bucket und Spalte: supabase/photos.sql) ───────────────────────────────────
+const PHOTO_BUCKET = 'history-photos'
+
+// Lädt ein bereits verkleinertes JPEG in den eigenen Ordner; gibt den Objektnamen zurück (null bei Fehler)
+export async function uploadHistoryPhoto(blob) {
+  const user = await getUser()
+  if (!user) return null
+  const path = `${user.id}/${crypto.randomUUID()}.jpg`
+  const { error } = await supabase.storage.from(PHOTO_BUCKET).upload(path, blob, { contentType: 'image/jpeg', cacheControl: '31536000' })
+  return error ? null : path
+}
+
+export async function removeHistoryPhotos(paths) {
+  if (!paths.length) return
+  await supabase.storage.from(PHOTO_BUCKET).remove(paths)
+}
+
+// Speichert die Fotoliste eines eigenen Eintrags (höchstens 3, sonst lehnt die Datenbank ab)
+export async function setHistoryPhotos(id, photoPaths) {
+  const user = await getUser()
+  if (!user) return false
+  const { error } = await supabase.from('history').update({ photo_paths: photoPaths }).eq('id', id).eq('user_id', user.id)
+  return !error
+}
+
+// Objektname -> zeitlich begrenzte Adresse (nur für eigene und freigegebene Fotos, sonst fehlt der Eintrag)
+export async function signPhotoPaths(paths) {
+  const { data, error } = await supabase.storage.from(PHOTO_BUCKET).createSignedUrls(paths, 3600)
+  if (error || !data) return {}
+  return Object.fromEntries(data.filter(d => d.signedUrl && d.path).map(d => [d.path, d.signedUrl]))
 }
 
 export async function addHistoryEntry({ eventId, title, locationName, locationCity, date, isSupport }) {
@@ -219,7 +253,7 @@ export async function addHistoryEntry({ eventId, title, locationName, locationCi
     ...(isSupport ? { is_support: true } : {})
   }).select().single()
   if (error || !data) return null
-  return { id: data.id, eventId: data.event_id, title: data.title, locationName: data.location_name, locationCity: data.location_city, date: data.date, rating: data.rating, isSupport: !!data.is_support }
+  return { id: data.id, eventId: data.event_id, title: data.title, locationName: data.location_name, locationCity: data.location_city, date: data.date, rating: data.rating, isSupport: !!data.is_support, photoPaths: data.photo_paths || [] }
 }
 
 // rating: 1-5, oder null zum Entfernen der Bewertung (Toggle-to-clear in der UI).
@@ -231,10 +265,11 @@ export async function updateHistoryRating(id, rating) {
 }
 
 // Bearbeiten von Titel, Ort und Datum eines eigenen History-Eintrags
-export async function updateHistoryEntry(id, { title, locationName, locationCity, date, isSupport }) {
+export async function updateHistoryEntry(id, { title, locationName, locationCity, date, isSupport, photoPaths }) {
   const user = await getUser()
   if (!user) return false
-  const { error } = await supabase.from('history').update({ title, location_name: locationName || null, location_city: locationCity || null, date, is_support: !!isSupport }).eq('id', id).eq('user_id', user.id)
+  // photo_paths nur senden, wenn sich die Fotos geändert haben (so geht Speichern auch vor supabase/photos.sql)
+  const { error } = await supabase.from('history').update({ title, location_name: locationName || null, location_city: locationCity || null, date, is_support: !!isSupport, ...(photoPaths ? { photo_paths: photoPaths } : {}) }).eq('id', id).eq('user_id', user.id)
   return !error
 }
 

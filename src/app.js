@@ -1,5 +1,6 @@
 import { getLocations, getEvents, saveData, loadData } from './data.js'
-import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, addRadarArtistIfNew, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut, localToday, loadProfile, saveProfile, loadCommunityHistories, loadPeerPrefs, savePeerPref, loadEventMarks, loadCommunityBookmarks, updateHistoryEntry } from './supabase.js'
+import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, addRadarArtistIfNew, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut, localToday, loadProfile, saveProfile, loadCommunityHistories, loadPeerPrefs, savePeerPref, loadEventMarks, loadCommunityBookmarks, updateHistoryEntry, uploadHistoryPhoto, removeHistoryPhotos, setHistoryPhotos } from './supabase.js'
+import { resizeToJpeg, primePhoto, photoUrl, isPhotoPath } from './photos.js'
 
 // ISO-Datum + HH:MM sortiert als String korrekt; new Date(date + 'T' + time) wäre bei Events ohne
 // Uhrzeit "Invalid Date" (NaN im Vergleich) und würde die Reihenfolge durcheinanderbringen
@@ -676,8 +677,9 @@ const SETTINGS_GUIDE = [
   ['History', [
     ['Meine History', 'Deine besuchten Konzerte. Ein Event mit „Bin dabei“ erscheint hier am Konzerttag ab 20 Uhr automatisch. Vergib bis zu 5 Sterne {stern}, mit {plus} trägst Du ein früheres Konzert nach.'],
     ['Icons bei jedem Konzert', '{spotify} Spotify, {radar} zum Radar (nochmal tippen: wieder entfernen, mit Rückfrage; hat der Künstler schon ein anstehendes Konzert, springt die App stattdessen zu diesem Event) und {edit} Bearbeiten. Beim Bearbeiten änderst Du Name, Location und Datum, markierst den Act mit „Support“ (steht dann grau als „(Support)“ hinter dem Namen) oder löschst den Eintrag (roter Knopf).'],
+    ['Fotos', 'Beim Nachtragen mit {plus} und beim Bearbeiten {edit} fügst Du bis zu 3 Erinnerungsfotos hinzu („+ Foto“, Mediathek oder Kamera) oder entfernst sie mit ×. Sie werden erst mit „Speichern“ übernommen. Unter dem Konzert erscheinen die Fotos als Galerie: bei mehreren wischst Du seitwärts oder tippst auf die Pfeile {pfeile}. Die Fotos sind nur für Dich sichtbar, solange Du sie nicht in den Einstellungen freigibst.'],
     ['Statistik', 'Tippe in der Kopfzeile auf {statistik} (unter {plus}). Es öffnet sich die Statistik aus Deiner History: „Dieses Jahr“, „Vorherige Jahre“ (aufklappbar, jedes Jahr mit Einträgen einzeln) und „Insgesamt“ (Konzerte, Sterne, Locations, Künstler, Monat mit meisten Konzerten). Hat kein anderer Lord einen höheren Wert, steht dahinter eine Krone 👑 (LORD-REKORD), bei Gleichstand bei allen. Mehrere Konzerte an einem Abend in derselben Location (z. B. Support und Hauptact) zählen für die Top 5 der Locations als ein Besuch. Verglichen wird mit allen Lords, die ihre History freigegeben haben.'],
-    ['History anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte. Icons dort: {spotify} Spotify, {radar} zu meinem Radar hinzufügen und {copy} „In meine History übernehmen“. Das übernimmt das Konzert in Deine History, die Sterne vergibst Du dann selbst. Nochmal tippen macht es rückgängig (mit Rückfrage). Mit {statistik} unter dem Stern {fav} siehst Du die Statistik dieses Lords.'],
+    ['History anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte. Icons dort: {spotify} Spotify, {radar} zu meinem Radar hinzufügen und {copy} „In meine History übernehmen“. Das übernimmt das Konzert in Deine History, die Sterne vergibst Du dann selbst. Nochmal tippen macht es rückgängig (mit Rückfrage). Mit {statistik} unter dem Stern {fav} siehst Du die Statistik dieses Lords. Hat der Lord Fotos freigegeben, siehst Du sie als Galerie unter dem Konzert.'],
     ['Doppeltipp', 'Doppeltipp auf den Reiter „History“ springt zurück zu „Meine History“.']
   ]],
   ['Listen anderer Lords (Merkliste und History)', [
@@ -697,7 +699,8 @@ const SETTINGS_GUIDE = [
     ['Lord-Titel', 'Hier wählst Du einen Usernamen (2 bis 15 Zeichen), den andere über Deiner Merkliste und Deiner History sehen.'],
     ['Merkliste für alle sichtbar', 'Andere Lords sehen Deine vorgemerkten und „dabei“-Events samt Lord-Titel, als Liste „Merkliste von Lord …“ und an ihren eigenen Events.'],
     ['History für alle sichtbar', 'Andere Lords sehen Deine besuchten Konzerte mit Sternen.'],
-    ['Standard', 'Beide Schalter sind zunächst auf „off“ und müssen von Dir eingeschaltet werden.']
+    ['Fotos in der History sichtbar', 'Zusätzlich sehen andere Lords Deine Erinnerungsfotos in Deiner History. Das wirkt nur, wenn „History für alle sichtbar“ eingeschaltet ist.'],
+    ['Standard', 'Alle Schalter sind zunächst auf „off“ und müssen von Dir eingeschaltet werden.']
   ]],
   ['Anmeldung', [
     ['E-Mail-Code', 'Merkliste, History und Radar funktionieren nur bei Anmeldung via E-Mail-Code. Ohne Anmeldung kannst Du nur in der Eventübersicht stöbern.']
@@ -853,6 +856,7 @@ function renderSettingsBody() {
     </div>
     ${row('shareBookmarks', 'Merkliste für alle sichtbar', 'Angemeldete Lords sehen deine vorgemerkten und „dabei“-Events samt deinem Lord-Titel: als Liste „Merkliste von Lord …“ und unter ihren eigenen Events.')}
     ${row('shareHistory', 'History für alle sichtbar', 'Angemeldete Lords können deine besuchten Konzerte samt Sternen unter deinem Lord-Titel ansehen.')}
+    ${row('sharePhotos', 'Fotos in der History sichtbar', 'Zusätzlich zu den Konzerten sehen angemeldete Lords auch deine Erinnerungsfotos. Wirkt nur, wenn „History für alle sichtbar“ eingeschaltet ist.')}
   `
 }
 
@@ -1431,6 +1435,138 @@ const sameName = (a, b) => stripEdgeEmoji(a).toLowerCase() === stripEdgeEmoji(b)
 function histRadarOn(title) { return radar.some(r => sameName(r.artist, title)) }
 function findHistoryCopy(h) { return history.find(x => x.date === h.date && sameName(x.title, h.title)) }
 
+// ── Erinnerungsfotos (bis zu 3 je Konzert; Bucket und Spalte: supabase/photos.sql, Cache: src/photos.js) ───────────
+
+const PHOTO_MAX = 3
+
+// Fotos in den Formularen "Konzert nachtragen" ('history') und "Eintrag bearbeiten" ('hedit'). Je Foto entweder
+// { path } (liegt schon im Bucket) oder { blob, preview } (neu gewählt, wird erst beim Speichern hochgeladen).
+const photoForms = { history: [], hedit: [] }
+let photoEditOriginal = []   // Fotos des Eintrags beim Öffnen des Bearbeiten-Dialogs
+
+function loadPhotoImg(img) {
+  if (img.dataset.loading) return
+  img.dataset.loading = '1'
+  photoUrl(img.dataset.photoPath).then(u => { if (u) img.src = u; else img.dataset.failed = '1' })
+}
+
+// Fotos in den Listen laden erst, wenn sie fast im Bild sind (kein Netzverkehr beim Start)
+const photoObserver = 'IntersectionObserver' in window
+  ? new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { photoObserver.unobserve(e.target); loadPhotoImg(e.target) } }), { rootMargin: '300px' })
+  : null
+function observePhotos(root) {
+  root.querySelectorAll('img[data-photo-path]:not([data-loading])').forEach(img => photoObserver ? photoObserver.observe(img) : loadPhotoImg(img))
+}
+
+// Durchwischbare Galerie unter einer History-Zeile (bei einem Foto ohne Pfeile und Punkte). Die Pfade stammen auch aus
+// fremden Konten: nur gültige Objektnamen werden gerendert, alles geht durch esc().
+function renderGallery(paths) {
+  const list = (paths || []).filter(isPhotoPath)
+  const n = list.length
+  if (!n) return ''
+  const arrow = d => `<button type="button" data-gal-step="${d}" aria-label="${d < 0 ? 'Vorheriges' : 'Nächstes'} Foto" style="position:absolute; top:50%; ${d < 0 ? 'left' : 'right'}:4px; transform:translateY(-50%); width:44px; height:44px; padding:0; border:none; border-radius:50%; background:rgba(0,0,0,0.45); color:white; font-size:26px; line-height:1; cursor:pointer; opacity:${d < 0 ? 0.25 : 1};">${d < 0 ? '‹' : '›'}</button>`
+  return `
+    <div class="hist-gallery" style="position:relative; margin-top:10px; border-radius:10px; overflow:hidden; background:rgba(0,0,0,0.4);">
+      <div class="hist-gallery-track scrollbar-hide" style="display:flex; overflow-x:auto; scroll-snap-type:x mandatory; overscroll-behavior-x:contain; -webkit-overflow-scrolling:touch;">
+        ${list.map((p, i) => `<div style="flex:0 0 100%; scroll-snap-align:center; aspect-ratio:4/3;"><img data-photo-path="${esc(p)}" alt="Foto ${i + 1} von ${n}" style="width:100%; height:100%; object-fit:contain; display:block;"></div>`).join('')}
+      </div>
+      ${n > 1 ? `${arrow(-1)}${arrow(1)}<div class="hist-gallery-dots" style="position:absolute; left:0; right:0; bottom:6px; display:flex; justify-content:center; gap:6px; pointer-events:none;">${list.map((_, i) => `<span style="width:7px; height:7px; border-radius:50%; background:${i === 0 ? 'white' : 'rgba(255,255,255,0.4)'};"></span>`).join('')}</div>` : ''}
+    </div>`
+}
+
+// Punkte und Pfeile an das gerade sichtbare Foto anpassen
+function updateGallery(track) {
+  const box = track.closest('.hist-gallery')
+  const n = track.children.length
+  const i = Math.round(track.scrollLeft / (track.clientWidth || 1))
+  box.querySelectorAll('.hist-gallery-dots span').forEach((d, k) => { d.style.background = k === i ? 'white' : 'rgba(255,255,255,0.4)' })
+  box.querySelectorAll('[data-gal-step]').forEach(b => { b.style.opacity = (Number(b.dataset.galStep) < 0 ? i === 0 : i === n - 1) ? 0.25 : 1 })
+}
+
+function renderPhotoPicker(prefix) {
+  return `
+    <div>
+      <div class="syne" style="font-size:12px; font-weight:700; color:rgba(255,255,255,0.75); margin-bottom:6px;">Fotos (bis zu ${PHOTO_MAX})</div>
+      <div id="${prefix}-photos" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+      <input id="${prefix}-photo-input" type="file" accept="image/*" multiple hidden />
+    </div>`
+}
+
+function paintPhotoPicker(prefix) {
+  const box = document.getElementById(`${prefix}-photos`)
+  if (!box) return
+  const items = photoForms[prefix]
+  const slot = 'width:88px; height:88px; border-radius:12px;'
+  box.innerHTML = items.map((it, i) => `
+    <div style="position:relative; ${slot} overflow:hidden; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1);">
+      <img ${it.preview ? `src="${it.preview}"` : `data-photo-path="${esc(it.path)}"`} alt="Foto ${i + 1}" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <button type="button" data-photo-remove="${prefix}:${i}" aria-label="Foto ${i + 1} entfernen" style="position:absolute; top:0; right:0; width:44px; height:44px; padding:0; background:none; border:none; cursor:pointer; display:flex; align-items:flex-start; justify-content:flex-end;"><span style="margin:4px; width:24px; height:24px; border-radius:50%; background:rgba(0,0,0,0.65); color:white; font-size:16px; line-height:24px; text-align:center;">×</span></button>
+    </div>`).join('') + (items.length < PHOTO_MAX
+    ? `<button type="button" data-photo-add="${prefix}" aria-label="Foto hinzufügen" class="btn-glass" style="${slot} padding:0; color:rgba(255,255,255,0.7); font-size:12px; border-style:dashed; cursor:pointer;"><span style="display:block; font-size:26px; line-height:1;">+</span>Foto</button>`
+    : '')
+  box.querySelectorAll('img[data-photo-path]').forEach(loadPhotoImg)
+}
+
+function clearPhotoForm(prefix) {
+  photoForms[prefix].forEach(it => it.preview && URL.revokeObjectURL(it.preview))
+  photoForms[prefix] = []
+  paintPhotoPicker(prefix)
+}
+
+async function addPhotoFiles(prefix, files) {
+  const items = photoForms[prefix]
+  if (files.length > PHOTO_MAX - items.length) showToast('Fotos', `Höchstens ${PHOTO_MAX} Fotos pro Konzert.`)
+  for (const file of files) {
+    if (items.length >= PHOTO_MAX) break
+    try {
+      const blob = await resizeToJpeg(file)
+      items.push({ blob, preview: URL.createObjectURL(blob) })
+      paintPhotoPicker(prefix)
+    } catch {
+      showToast('Foto', 'Dieses Foto konnte nicht gelesen werden.')
+    }
+  }
+}
+
+// Lädt die neu gewählten Fotos hoch; liefert die komplette Pfadliste (bereits gespeicherte + neue) oder null bei einem Fehler
+// (dann sind die in diesem Durchgang hochgeladenen Dateien schon wieder gelöscht)
+async function uploadPhotoForm(prefix) {
+  const paths = [], uploaded = []
+  for (const it of photoForms[prefix]) {
+    if (it.path) { paths.push(it.path); continue }
+    const p = await uploadHistoryPhoto(it.blob)
+    if (!p) { await removeHistoryPhotos(uploaded); return null }
+    primePhoto(p, it.blob)
+    uploaded.push(p)
+    paths.push(p)
+  }
+  return { paths, uploaded }
+}
+
+let photoUiBound = false
+function bindPhotoUi() {
+  if (photoUiBound) return
+  photoUiBound = true
+  document.addEventListener('click', e => {
+    const add = e.target.closest('[data-photo-add]')
+    if (add) { document.getElementById(`${add.dataset.photoAdd}-photo-input`)?.click(); return }
+    const rm = e.target.closest('[data-photo-remove]')
+    if (rm) {
+      const [prefix, i] = rm.dataset.photoRemove.split(':')
+      const [gone] = photoForms[prefix].splice(Number(i), 1)
+      if (gone?.preview) URL.revokeObjectURL(gone.preview)
+      paintPhotoPicker(prefix)
+    }
+  })
+  document.addEventListener('change', e => {
+    const m = /^(history|hedit)-photo-input$/.exec(e.target.id || '')
+    if (!m) return
+    const files = [...e.target.files]
+    e.target.value = ''   // dasselbe Foto lässt sich danach erneut wählen
+    addPhotoFiles(m[1], files)
+  })
+}
+
 // readOnly: Zeile aus der freigegebenen History eines anderen Nutzers - Sterne nur zur Anzeige, kein Bearbeiten.
 // Alle Werte stammen dort aus fremden Konten und gehen ausnahmslos durch esc().
 function renderHistoryRow(h, readOnly = false) {
@@ -1459,6 +1595,7 @@ function renderHistoryRow(h, readOnly = false) {
       </div>
       <div style="font-size:12px; color:rgba(255,255,255,0.6); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${loc ? esc(loc) + ' · ' : ''}${dateStr}</div>
       <div style="margin-top:2px; display:flex; align-items:center; justify-content:space-between;">${stars}${actions}</div>
+      ${renderGallery(h.photoPaths)}
     </div>
   `
 }
@@ -1661,6 +1798,7 @@ function renderHistoryView() {
             ${renderHistoryLocationDropdown()}
           </div>
           ${renderHistoryDatePicker()}
+          ${renderPhotoPicker('history')}
           <button data-history-save class="w-full py-2.5 rounded-xl font-bold text-white text-sm syne" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">Konzert hinzufügen</button>
         </div>
         <div id="history-list" class="space-y-2">
@@ -1796,7 +1934,17 @@ function attachCarousel(kind) {
     if (alias) await assignPeerAlias(alias.dataset.peerAlias)
   })
   if (kind === 'history') {
+    // Fotos der Galerien laden erst beim Annähern; Punkte und Pfeile folgen dem Wischen (scroll bubbelt nicht -> capture)
+    observePhotos(root)
+    new MutationObserver(() => observePhotos(root)).observe(root, { childList: true, subtree: true })
+    root.addEventListener('scroll', e => { if (e.target.classList?.contains('hist-gallery-track')) updateGallery(e.target) }, true)
     root.addEventListener('click', e => {
+      const gal = e.target.closest('[data-gal-step]')
+      if (gal) {
+        const track = gal.closest('.hist-gallery').querySelector('.hist-gallery-track')
+        track.scrollBy({ left: Number(gal.dataset.galStep) * track.clientWidth, behavior: 'smooth' })
+        return
+      }
       // "Konzert nachtragen" im Leerzustand der Liste (der "+" in der Kopfzeile wird dort oben behandelt)
       if (!head.contains(e.target) && e.target.closest('[data-history-add-toggle]')) {
         if (!currentUser) { alert('Bitte zuerst mit E-Mail anmelden um Konzerte nachzutragen.'); return }
@@ -1854,6 +2002,8 @@ function attachHistoryEvents() {
   const form = document.getElementById('history-add-form')
   // Karussell (Wischen, Punkte, "+", Favorit, Name), Icons und Nachladen der fremden Listen
   attachCarousel('history')
+  bindPhotoUi()
+  paintPhotoPicker('history')
   if (document.getElementById('history-carousel')) ensureCommunityLoaded()
   bindLocationPicker(document.getElementById('history-location'), document.getElementById('history-location-dropdown'))
   document.querySelector('[data-history-save]')?.addEventListener('click', async () => {
@@ -1867,9 +2017,24 @@ function attachHistoryEvents() {
     // 31. Februar etc.: Date rollt in den Folgemonat über - dann stimmt der Monat nicht mehr
     if (new Date(date + 'T00:00:00').getMonth() + 1 !== Number(month)) { alert('Dieses Datum gibt es nicht - bitte Tag und Monat prüfen.'); return }
     const place = canonLocation(location, '')
-    const entry = await addHistoryEntry({ title, locationName: place.name, locationCity: place.city, date })
-    if (!entry) { alert('Speichern fehlgeschlagen - bitte nochmal versuchen.'); return }
-    history = [...history, entry]
+    const saveBtn = document.querySelector('[data-history-save]')
+    saveBtn.disabled = true
+    saveBtn.style.opacity = '0.6'
+    try {
+      const entry = await addHistoryEntry({ title, locationName: place.name, locationCity: place.city, date })
+      if (!entry) { alert('Speichern fehlgeschlagen - bitte nochmal versuchen.'); return }
+      // Fotos erst jetzt hochladen: der Eintrag muss existieren, bevor ihm die Fotoliste zugeordnet wird
+      if (photoForms.history.length) {
+        const up = await uploadPhotoForm('history')
+        if (up && await setHistoryPhotos(entry.id, up.paths)) entry.photoPaths = up.paths
+        else { if (up) await removeHistoryPhotos(up.uploaded); showToast('Fotos', 'Das Konzert ist gespeichert, die Fotos konnten nicht hochgeladen werden. Du kannst sie über Bearbeiten nachtragen.', 5000) }
+      }
+      history = [...history, entry]
+      clearPhotoForm('history')
+    } finally {
+      saveBtn.disabled = false
+      saveBtn.style.opacity = ''
+    }
     document.getElementById('history-title').value = ''
     document.getElementById('history-location').value = ''
     document.getElementById('history-day').value = ''
@@ -1940,6 +2105,7 @@ function renderModals() {
             <label class="flex items-center gap-2" style="cursor:pointer; color:rgba(255,255,255,0.75); font-size:14px; padding:2px 0;">
               <input id="hedit-support" type="checkbox" style="width:18px; height:18px; accent-color:#818cf8; cursor:pointer;" /> Support
             </label>
+            ${renderPhotoPicker('hedit')}
             <button data-history-edit-save type="button" class="w-full py-2.5 rounded-xl font-bold text-white text-sm syne" style="background:linear-gradient(135deg, rgba(99,102,241,0.7), rgba(168,85,247,0.7)); border:1px solid rgba(99,102,241,0.3);">Speichern</button>
             <button data-history-edit-delete type="button" class="w-full py-2.5 rounded-xl font-bold text-sm syne" style="background:rgba(239,68,68,0.18); border:1px solid rgba(239,68,68,0.55); color:#f87171;">Löschen</button>
           </div>
@@ -2684,7 +2850,9 @@ async function deleteHistoryEntry(entry) {
   history = history.filter(h => String(h.id) !== String(entry.id))
   refreshHistoryList()
   paintHistoryIcons()
-  return removeHistoryEntry(entry.id)
+  const removed = await removeHistoryEntry(entry.id)
+  if (removed && entry.photoPaths?.length) removeHistoryPhotos(entry.photoPaths)   // Fotodateien nicht verwaisen lassen
+  return removed
 }
 
 // "In meine History": übernimmt ein Konzert aus der Liste eines anderen Lords (ohne dessen Sterne),
@@ -2723,6 +2891,9 @@ function openHistoryEdit(id) {
   historyEditPrefill = [entry.locationName, entry.locationCity].filter(Boolean).join(', ')
   document.getElementById('hedit-title').value = entry.title
   document.getElementById('hedit-support').checked = !!entry.isSupport
+  photoEditOriginal = [...(entry.photoPaths || [])]
+  photoForms.hedit = photoEditOriginal.map(path => ({ path }))
+  paintPhotoPicker('hedit')
   document.getElementById('hedit-location').value = historyEditPrefill
   const [y, m, d] = entry.date.split('-').map(Number)
   const yearSel = document.getElementById('hedit-year')
@@ -2734,6 +2905,7 @@ function openHistoryEdit(id) {
 }
 
 function closeHistoryEdit() {
+  clearPhotoForm('hedit')
   historyEditOpen = false
   historyEditId = null
   document.getElementById('modal-history-edit')?.classList.add('hidden')
@@ -2755,8 +2927,26 @@ async function saveHistoryEdit() {
   // Ort unverändert: Name und Stadt des Eintrags behalten (sie stehen getrennt in der Datenbank)
   const c = location === historyEditPrefill ? canonLocation(entry.locationName, entry.locationCity) : canonLocation(location, '')
   const place = { locationName: c.name, locationCity: c.city }
-  if (!(await updateHistoryEntry(entry.id, { title, ...place, date, isSupport }))) { alert('Speichern fehlgeschlagen - bitte nochmal versuchen.'); return }
-  Object.assign(entry, { title, ...place, date, isSupport })
+  // Fotos: neu gewählte hochladen, danach alles in einem Update speichern; erst dann die entfernten Dateien löschen
+  const photosChanged = photoForms.hedit.some(it => it.blob) || photoForms.hedit.length !== photoEditOriginal.length
+  const saveBtn = document.querySelector('[data-history-edit-save]')
+  saveBtn.disabled = true
+  saveBtn.style.opacity = '0.6'
+  try {
+    const up = photosChanged ? await uploadPhotoForm('hedit') : null
+    if (photosChanged && !up) { alert('Die Fotos konnten nicht hochgeladen werden - bitte nochmal versuchen.'); return }
+    const photoPaths = up?.paths
+    if (!(await updateHistoryEntry(entry.id, { title, ...place, date, isSupport, photoPaths }))) {
+      if (up) await removeHistoryPhotos(up.uploaded)
+      alert('Speichern fehlgeschlagen - bitte nochmal versuchen.')
+      return
+    }
+    Object.assign(entry, { title, ...place, date, isSupport }, photoPaths ? { photoPaths } : {})
+    if (photoPaths) removeHistoryPhotos(photoEditOriginal.filter(p => !photoPaths.includes(p)))
+  } finally {
+    saveBtn.disabled = false
+    saveBtn.style.opacity = ''
+  }
   closeHistoryEdit()
   refreshHistoryList()
   paintHistoryIcons()
@@ -2774,6 +2964,7 @@ function attachHistoryEditModal() {
   const modal = document.getElementById('modal-history-edit')
   if (!modal) return
   bindLocationPicker(document.getElementById('hedit-location'), document.getElementById('hedit-location-dropdown'))
+  bindPhotoUi()
   modal.addEventListener('click', async e => {
     if (e.target === modal || e.target.closest('[data-close-history-edit]')) { closeHistoryEdit(); return }
     if (e.target.closest('[data-history-edit-save]')) { await saveHistoryEdit(); return }
