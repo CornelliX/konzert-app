@@ -629,6 +629,7 @@ function guideIcon(token) {
     radar: chip(HIST_RADAR_SVG),
     edit: chip(HIST_EDIT_SVG),
     copy: chip(HIST_COPY_SVG),
+    statistik: chip(HIST_STATS_SVG),
     gear: chip(svg('<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>')),
     herz: chip('♡', '#f472b6'),
     haken: chip('✓', '#34d399'),
@@ -675,7 +676,8 @@ const SETTINGS_GUIDE = [
   ['History', [
     ['Meine History', 'Deine besuchten Konzerte. Ein Event mit „Bin dabei“ erscheint hier am Konzerttag ab 20 Uhr automatisch. Vergib bis zu 5 Sterne {stern}, mit {plus} trägst Du ein früheres Konzert nach.'],
     ['Icons bei jedem Konzert', '{spotify} Spotify, {radar} zum Radar (nochmal tippen: wieder entfernen, mit Rückfrage; hat der Künstler schon ein anstehendes Konzert, springt die App stattdessen zu diesem Event) und {edit} Bearbeiten. Beim Bearbeiten änderst Du Name, Location und Datum, markierst den Act mit „Support“ (steht dann grau als „(Support)“ hinter dem Namen) oder löschst den Eintrag (roter Knopf).'],
-    ['History anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte. Icons dort: {spotify} Spotify, {radar} zu meinem Radar hinzufügen und {copy} „In meine History übernehmen“. Das übernimmt das Konzert in Deine History, die Sterne vergibst Du dann selbst. Nochmal tippen macht es rückgängig (mit Rückfrage).'],
+    ['Statistik', 'Tippe in der Kopfzeile auf {statistik} (unter {plus}). Es öffnet sich die Statistik aus Deiner History: „Dieses Jahr“, „Vorherige Jahre“ (aufklappbar, jedes Jahr mit Einträgen einzeln) und „Insgesamt“ (Konzerte, Sterne, Locations, Künstler, Monat mit meisten Konzerten). Hat kein anderer Lord einen höheren Wert, steht dahinter eine Krone 👑 (LORD-REKORD), bei Gleichstand bei allen. Mehrere Konzerte an einem Abend in derselben Location (z. B. Support und Hauptact) zählen für die Top 5 der Locations als ein Besuch. Verglichen wird mit allen Lords, die ihre History freigegeben haben.'],
+    ['History anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte. Icons dort: {spotify} Spotify, {radar} zu meinem Radar hinzufügen und {copy} „In meine History übernehmen“. Das übernimmt das Konzert in Deine History, die Sterne vergibst Du dann selbst. Nochmal tippen macht es rückgängig (mit Rückfrage). Mit {statistik} unter dem Stern {fav} siehst Du die Statistik dieses Lords.'],
     ['Doppeltipp', 'Doppeltipp auf den Reiter „History“ springt zurück zu „Meine History“.']
   ]],
   ['Listen anderer Lords (Merkliste und History)', [
@@ -695,8 +697,7 @@ const SETTINGS_GUIDE = [
     ['Lord-Titel', 'Hier wählst Du einen Usernamen (2 bis 15 Zeichen), den andere über Deiner Merkliste und Deiner History sehen.'],
     ['Merkliste für alle sichtbar', 'Andere Lords sehen Deine vorgemerkten und „dabei“-Events samt Lord-Titel, als Liste „Merkliste von Lord …“ und an ihren eigenen Events.'],
     ['History für alle sichtbar', 'Andere Lords sehen Deine besuchten Konzerte mit Sternen.'],
-    ['Standard', 'Beide Schalter sind zunächst auf „off“ und müssen von Dir eingeschaltet werden.'],
-    ['Statistik', 'In den Einstellungen klappst Du „Statistik“ auf: Zahlen aus Deiner History für „Dieses Jahr“, „Vorherige Jahre“ (aufklappbar, jedes Jahr mit Einträgen einzeln) und „Insgesamt“ (Konzerte, Sterne, Locations, Künstler, Monat mit meisten Konzerten). Hat kein anderer Lord einen höheren Wert, steht dahinter eine Krone 👑 (LORD-REKORD), bei Gleichstand bei allen. Mehrere Konzerte an einem Abend in derselben Location (z. B. Support und Hauptact) zählen für die Top 5 der Locations als ein Besuch. Verglichen wird mit allen Lords, die ihre History freigegeben haben.']
+    ['Standard', 'Beide Schalter sind zunächst auf „off“ und müssen von Dir eingeschaltet werden.']
   ]],
   ['Anmeldung', [
     ['E-Mail-Code', 'Merkliste, History und Radar funktionieren nur bei Anmeldung via E-Mail-Code. Ohne Anmeldung kannst Du nur in der Eventübersicht stöbern.']
@@ -750,9 +751,8 @@ const rankStats = (map, months = false) => [...map].sort(([ka, a], [kb, b]) => b
 // Rekord: kein anderer Lord hat mehr (Gleichstand = alle bekommen ihn). Nicht bei 0/leer und nicht ohne Vergleichspartner.
 const isStatRecord = (mine, others) => mine > 0 && others.length > 0 && others.every(o => (o || 0) <= mine)
 
-function renderStatsHtml() {
-  const mine = history.filter(isHistoryVisible)
-  const peerEntries = communityRaw.map(p => p.entries)
+// mine: Einträge, deren Statistik gezeigt wird; peerEntries: Einträge der Lords, mit denen für die Krone verglichen wird
+function renderStatsHtml(mine, peerEntries) {
   const thisYear = localToday().slice(0, 4)
   // Alle früheren Jahre, in denen die eigene History Einträge hat (neuestes zuerst)
   const prevYears = [...new Set(mine.map(h => h.date.slice(0, 4)))].filter(y => y < thisYear).sort().reverse()
@@ -791,8 +791,7 @@ function renderStatsHtml() {
       </ul>`
   }
   return `
-    <details style="margin-top:14px; border-top:1px solid rgba(255,255,255,0.06); padding-top:14px;">
-      <summary class="syne" style="font-size:13px; font-weight:700; color:white; cursor:pointer;">Statistik</summary>
+    <div>
       <p class="text-xs" style="color:rgba(255,255,255,0.6); margin-top:10px; line-height:1.45;"><strong style="color:rgba(255,255,255,0.8); font-weight:700;">${STATS_CROWN} = LORD-REKORD</strong> (kein Lord hat einen höheren Wert, mehrere Lords können sich den Rekord teilen)</p>
       ${section('Dieses Jahr', thisYear)}
       ${prevYears.length ? `<details style="margin-top:18px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.06);">
@@ -800,12 +799,24 @@ function renderStatsHtml() {
         ${prevYears.map(y => section(y, y)).join('')}
       </details>` : ''}
       ${section('Insgesamt', null)}
-    </details>
+    </div>
   `
+}
+
+// Statistik-Fenster: eigene History (peerId 'own') oder die eines anderen Lords. Verglichen wird für die Krone mit allen
+// anderen Lords mit freigegebener History; bei einem fremden Lord zählt dabei auch die eigene History.
+function renderStatsBody() {
+  const mine = history.filter(isHistoryVisible)
+  if (statsPeerId === 'own') return renderStatsHtml(mine, communityRaw.map(p => p.entries))
+  const peer = communityRaw.find(p => p.publicId === statsPeerId)
+  if (!peer) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Diese Liste ist nicht mehr freigegeben.</p>`
+  return renderStatsHtml(peer.entries, [mine, ...communityRaw.filter(p => p !== peer).map(p => p.entries)])
 }
 
 // 'settings' = Einstellungen (ohne Anleitung), 'help' = nur die Anleitung (Knopf "? Hilfe")
 let settingsMode = 'settings'
+// Bei settingsMode 'stats': 'own' oder die publicId des Lords, dessen Statistik gezeigt wird
+let statsPeerId = 'own'
 
 function renderGuideHtml() {
   return SETTINGS_GUIDE.map(([head, items], i) => `
@@ -818,6 +829,7 @@ function renderGuideHtml() {
 
 function renderSettingsBody() {
   if (settingsMode === 'help') return renderGuideHtml()
+  if (settingsMode === 'stats') return renderStatsBody()
   if (!currentUser) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Bitte zuerst mit E-Mail anmelden, um Einstellungen vorzunehmen.</p>`
   if (myProfileError) return `<p class="text-sm" style="color:rgba(255,120,120,0.85);">Die Einstellungen konnten nicht geladen werden. Bitte später noch einmal versuchen.</p>`
   if (!myProfile) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Einstellungen werden geladen …</p>`
@@ -841,14 +853,15 @@ function renderSettingsBody() {
     </div>
     ${row('shareBookmarks', 'Merkliste für alle sichtbar', 'Angemeldete Lords sehen deine vorgemerkten und „dabei“-Events samt deinem Lord-Titel: als Liste „Merkliste von Lord …“ und unter ihren eigenen Events.')}
     ${row('shareHistory', 'History für alle sichtbar', 'Angemeldete Lords können deine besuchten Konzerte samt Sternen unter deinem Lord-Titel ansehen.')}
-    ${renderStatsHtml()}
   `
 }
 
 function refreshSettingsBody() {
   const body = document.getElementById('settings-body')
   if (!body) return
-  // Die Statistik bleibt aufgeklappt, wenn z. B. ein Schalter das Menü neu zeichnet
+  const title = document.getElementById('settings-title')
+  if (title) title.textContent = settingsTitle()
+  // „Vorherige Jahre“ bleibt aufgeklappt, wenn das Fenster neu gezeichnet wird (z. B. nach dem Laden der Community-Daten)
   const open = [...body.querySelectorAll('details')].map(d => d.open)
   body.innerHTML = renderSettingsBody()
   body.querySelectorAll('details').forEach((d, i) => { d.open = !!open[i] })
@@ -861,17 +874,26 @@ async function loadMyProfile() {
   refreshSettingsBody()
 }
 
-function openSettingsModal(mode = 'settings') {
-  settingsMode = mode === 'help' ? 'help' : 'settings'
+function settingsTitle() {
+  if (settingsMode === 'help') return 'Anleitung'
+  if (settingsMode !== 'stats') return 'Einstellungen'
+  const peer = statsPeerId === 'own' ? null : communityPeers.find(p => p.publicId === statsPeerId)
+  return peer ? `Statistik von Lord ${peer.name}` : 'Statistik'
+}
+
+// mode: 'settings', 'help' oder 'stats' (peerId: 'own' oder publicId des Lords)
+function openSettingsModal(mode = 'settings', peerId = 'own') {
+  settingsMode = mode === 'help' || mode === 'stats' ? mode : 'settings'
+  statsPeerId = peerId
   settingsOpen = true
   const modal = document.getElementById('modal-settings')
   modal?.classList.remove('hidden')
   const title = document.getElementById('settings-title')
-  if (title) title.textContent = settingsMode === 'help' ? 'Anleitung' : 'Einstellungen'
+  if (title) title.textContent = settingsTitle()
   modal?.scrollTo({ top: 0 })
   refreshSettingsBody()
   if (settingsMode === 'help') return
-  if (currentUser && !myProfile) loadMyProfile()
+  if (settingsMode === 'settings' && currentUser && !myProfile) loadMyProfile()
   ensureCommunityLoaded()   // Vergleichswerte der Statistik
 }
 
@@ -1393,6 +1415,7 @@ const HIST_ICON_STYLE = 'display:inline-flex; align-items:center; justify-conten
 const HIST_SPOTIFY_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>'
 const HIST_RADAR_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19a10 10 0 0 1 0-14"/></svg>'
 const HIST_EDIT_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>'
+const HIST_STATS_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>'
 const HIST_COPY_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>'
 const HIST_COPY_ON_SVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.5"/></svg>'
 const HIST_ICON_OFF = 'rgba(255,255,255,0.55)'
@@ -1571,6 +1594,10 @@ function renderCarouselHead(kind) {
     : kind === 'history'
       ? `<button data-history-add-toggle title="Konzert nachtragen" aria-label="Konzert nachtragen" class="${btn}" style="width:28px; height:28px; color:rgba(255,255,255,0.6); font-size:16px; line-height:1;">+</button>`
       : ''
+  // Statistik-Icon unter "+" bzw. unter dem Favoriten-Stern (nur in der History)
+  const statsBtn = kind === 'history'
+    ? `<button data-open-stats="${peer ? esc(peer.publicId) : 'own'}" title="${peer ? 'Statistik dieses Lords' : 'Meine Statistik'}" aria-label="${peer ? 'Statistik dieses Lords' : 'Meine Statistik'}" class="${btn}" style="width:28px; height:28px; color:rgba(255,255,255,0.6);">${HIST_STATS_SVG}</button>`
+    : ''
   // Pfeile links und rechts der Punkte (nicht neben der Überschrift, damit diese ihre Breite behält)
   const arrow = step => {
     const disabled = (step < 0 && slide === 0) || (step > 0 && slide === total - 1)
@@ -1586,7 +1613,10 @@ function renderCarouselHead(kind) {
   return `
     <div class="flex items-center justify-between mb-1" style="min-height:28px; gap:8px;">
       <h3 class="syne" style="font-size:${size}px; font-weight:600; letter-spacing:${compact ? 0.02 : 0.01}em; text-transform:uppercase; color:#818cf8; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${peer ? c.other + esc(peer.name) : c.own}</h3>
-      <div style="display:flex; gap:6px; align-items:center; flex-shrink:0;">${actions}</div>
+      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:4px; flex-shrink:0;">
+        <div style="display:flex; gap:6px; align-items:center;">${actions}</div>
+        ${statsBtn}
+      </div>
     </div>
     ${dots}
   `
@@ -1747,6 +1777,8 @@ function attachCarousel(kind) {
       document.getElementById('history-add-form')?.classList.toggle('hidden')
       return
     }
+    const stats = e.target.closest('[data-open-stats]')
+    if (stats) { openSettingsModal('stats', stats.dataset.openStats); return }
     const fav = e.target.closest('[data-peer-fav]')
     if (fav) { await togglePeerFavorite(fav.dataset.peerFav); return }
     const alias = e.target.closest('[data-peer-alias]')
