@@ -2054,7 +2054,7 @@ function renderModals() {
   return `
     <div id="modal-radar" class="hidden fixed inset-0 z-30 overflow-y-auto scrollbar-hide" style="background:linear-gradient(180deg, #05053a 0%, #120838 25%, #1e0848 45%, #3a0a52 60%, #52083a 78%, #620a1a 100%); overscroll-behavior:contain; padding-bottom:90px;">
       <div class="max-w-xl mx-auto px-4">${renderHeader(true)}</div>
-      <div class="max-w-lg mx-auto mt-2 mb-12 mx-4 rounded-3xl overflow-hidden" style="background:rgba(12,17,32,0.97); border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 80px rgba(0,0,0,0.6);">
+      <div class="max-w-lg mx-auto mt-2 mb-12 rounded-3xl overflow-hidden" style="width:calc(100% - 32px); background:rgba(12,17,32,0.97); border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 80px rgba(0,0,0,0.6);">
         <div class="px-6 py-5" style="background:linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.15)); border-bottom:1px solid rgba(255,255,255,0.06);">
           <h2 class="syne text-xl text-white" style="font-weight:800;">Radar</h2>
           <p class="text-xs mt-0.5" style="color:rgba(255,255,255,0.6);">Künstler ohne anstehendes Konzert im Blick behalten</p>
@@ -2116,7 +2116,7 @@ function renderModals() {
     </div>
 
     <div id="modal-spotify-picker" class="hidden fixed inset-0 z-50 overflow-y-auto scrollbar-hide" style="background:rgba(0,0,0,0.8); backdrop-filter:blur(8px);">
-      <div class="max-w-sm mx-auto mt-24 mb-12 mx-4 rounded-3xl overflow-hidden" style="background:rgba(12,17,32,0.97); border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 80px rgba(0,0,0,0.6);">
+      <div class="max-w-sm mx-auto mt-24 mb-12 rounded-3xl overflow-hidden" style="width:calc(100% - 32px); background:rgba(12,17,32,0.97); border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 80px rgba(0,0,0,0.6);">
         <div class="px-6 py-5" style="background:linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.15)); border-bottom:1px solid rgba(255,255,255,0.06);">
           <h2 class="syne text-xl text-white" style="font-weight:800;">Künstler wählen</h2>
           <p class="text-xs mt-0.5" style="color:rgba(255,255,255,0.6);">Mehrere Acts erkannt – wen auf Spotify suchen?</p>
