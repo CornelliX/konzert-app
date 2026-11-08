@@ -1624,7 +1624,7 @@ function renderCarouselHead(kind) {
   return `
     <div class="flex items-center justify-between mb-1" style="min-height:28px; gap:8px;">
       <h3 class="syne" style="font-size:${size}px; font-weight:600; letter-spacing:${compact ? 0.02 : 0.01}em; text-transform:uppercase; color:#818cf8; min-width:0; ${wrap ? 'line-height:1.2; overflow-wrap:anywhere;' : 'overflow:hidden; text-overflow:ellipsis; white-space:nowrap;'}">${peer ? c.other + esc(peer.name) : c.own}</h3>
-      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:4px; flex-shrink:0;">
+      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:12px; flex-shrink:0;">
         <div style="display:flex; gap:6px; align-items:center;">${actions}</div>
         ${statsBtn}
       </div>
