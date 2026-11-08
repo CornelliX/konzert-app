@@ -678,7 +678,7 @@ const SETTINGS_GUIDE = [
     ['Meine History', 'Deine besuchten Konzerte. Ein Event mit „Bin dabei“ erscheint hier am Konzerttag ab 20 Uhr automatisch. Vergib bis zu 5 Sterne {stern}, mit {plus} trägst Du ein früheres Konzert nach.'],
     ['Icons bei jedem Konzert', '{spotify} Spotify, {radar} zum Radar (nochmal tippen: wieder entfernen, mit Rückfrage; hat der Künstler schon ein anstehendes Konzert, springt die App stattdessen zu diesem Event) und {edit} Bearbeiten. Beim Bearbeiten änderst Du Name, Location und Datum, markierst den Act mit „Support“ (steht dann grau als „(Support)“ hinter dem Namen) oder löschst den Eintrag (roter Knopf).'],
     ['Fotos', 'Beim Nachtragen mit {plus} und beim Bearbeiten {edit} fügst Du bis zu 3 Erinnerungsfotos hinzu („+ Foto“, Mediathek oder Kamera) oder entfernst sie mit ×. Sie werden erst mit „Speichern“ übernommen. Unter dem Konzert erscheinen die Fotos als Galerie: bei mehreren wischst Du seitwärts oder tippst auf die Pfeile {pfeile}. Die Fotos sind nur für Dich sichtbar, solange Du sie nicht in den Einstellungen freigibst.'],
-    ['Statistik', 'Tippe in der Kopfzeile auf {statistik} (unter {plus}). Es öffnet sich die Statistik aus Deiner History: „Dieses Jahr“, „Vorherige Jahre“ (aufklappbar, jedes Jahr mit Einträgen einzeln) und „Insgesamt“ (Konzerte, Sterne, Locations, Künstler, Monat mit meisten Konzerten). Hat kein anderer Lord einen höheren Wert, steht dahinter eine Krone 👑 (LORD-REKORD), bei Gleichstand bei allen. Mehrere Konzerte an einem Abend in derselben Location (z. B. Support und Hauptact) zählen für die Top 5 der Locations als ein Besuch. Verglichen wird mit allen Lords, die ihre History freigegeben haben.'],
+    ['Statistik', 'Tippe in der Kopfzeile auf {statistik} (unter {plus}). Es öffnet sich die Statistik aus Deiner History: „Dieses Jahr“, „Vorherige Jahre“ (aufklappbar, jedes Jahr mit Einträgen einzeln) und „Insgesamt“ (Konzerte, Sterne, Locations, Künstler, Monat mit meisten Konzerten, hochgeladene Fotos; bei anderen Lords nur, wenn sie ihre Fotos freigegeben haben). Hat kein anderer Lord einen höheren Wert, steht dahinter eine Krone 👑 (LORD-REKORD), bei Gleichstand bei allen. Mehrere Konzerte an einem Abend in derselben Location (z. B. Support und Hauptact) zählen für die Top 5 der Locations als ein Besuch. Verglichen wird mit allen Lords, die ihre History freigegeben haben.'],
     ['History anderer Lords', 'Wische oben über die Überschrift oder tippe auf die Pfeile {pfeile} bzw. die Punkte. Icons dort: {spotify} Spotify, {radar} zu meinem Radar hinzufügen und {copy} „In meine History übernehmen“. Das übernimmt das Konzert in Deine History, die Sterne vergibst Du dann selbst. Nochmal tippen macht es rückgängig (mit Rückfrage). Mit {statistik} unter dem Stern {fav} siehst Du die Statistik dieses Lords. Hat der Lord Fotos freigegeben, siehst Du sie als Galerie unter dem Konzert.'],
     ['Doppeltipp', 'Doppeltipp auf den Reiter „History“ springt zurück zu „Meine History“.']
   ]],
@@ -730,8 +730,9 @@ function computeStats(entries, year) {
   const list = year ? entries.filter(h => h.date.startsWith(year + '-')) : entries
   const locations = new Map(), artists = new Map(), months = new Map()
   const bump = (map, key, name) => { const e = map.get(key); if (e) e.n++; else map.set(key, { name, n: 1 }) }
-  let rated = 0, sum = 0, five = 0
+  let rated = 0, sum = 0, five = 0, photos = 0
   for (const h of list) {
+    photos += (h.photoPaths || []).length
     if (h.rating) { rated++; sum += h.rating; if (h.rating === 5) five++ }
     const loc = canonLocation(h.locationName, h.locationCity).name
     if (loc) {
@@ -745,7 +746,7 @@ function computeStats(entries, year) {
     if (act) bump(artists, act.toLowerCase(), act)
     bump(months, h.date.slice(0, 7), h.date.slice(0, 7))
   }
-  return { count: list.length, avg: rated ? Math.round(sum / rated * 10) / 10 : null, five, locations, artists, months }
+  return { count: list.length, photos, avg: rated ? Math.round(sum / rated * 10) / 10 : null, five, locations, artists, months }
 }
 
 // Absteigend nach Anzahl, bei Gleichstand nach Name (Monate: der jüngere zuerst)
@@ -791,6 +792,7 @@ function renderStatsHtml(mine, peerEntries) {
         ${li('Top 5 der meistbesuchten Locations', top5Html)}
         ${li('Meistgesehener Künstler', topArtist ? `${esc(topArtist[1].name)} (${topArtist[1].n}×)${crown(topArtist[1].n, o => o.artists.get(topArtist[0])?.n)}` : 'Kein Künstler mehr als 1x')}
         ${li('Monat mit meisten Konzerten', bestMonth ? `${MONTH_NAMES[+bestMonth[0].slice(5) - 1]} ${bestMonth[0].slice(0, 4)}: ${bestMonth[1].n}${crown(bestMonth[1].n, monthMax)}` : '–')}
+        ${li('Hochgeladene Fotos', me.photos)}
       </ul>`
   }
   return `
