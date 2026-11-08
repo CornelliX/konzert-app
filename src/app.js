@@ -859,8 +859,7 @@ function renderSettingsBody() {
 function refreshSettingsBody() {
   const body = document.getElementById('settings-body')
   if (!body) return
-  const title = document.getElementById('settings-title')
-  if (title) title.textContent = settingsTitle()
+  applySettingsTitle()
   // „Vorherige Jahre“ bleibt aufgeklappt, wenn das Fenster neu gezeichnet wird (z. B. nach dem Laden der Community-Daten)
   const open = [...body.querySelectorAll('details')].map(d => d.open)
   body.innerHTML = renderSettingsBody()
@@ -878,7 +877,15 @@ function settingsTitle() {
   if (settingsMode === 'help') return 'Anleitung'
   if (settingsMode !== 'stats') return 'Einstellungen'
   const peer = statsPeerId === 'own' ? null : communityPeers.find(p => p.publicId === statsPeerId)
-  return peer ? `Statistik von Lord ${peer.name}` : 'Statistik'
+  return peer ? `Statistik von Lord ${peer.name}` : 'Meine Statistik'
+}
+
+// Titel des Fensters; die Statistik-Überschrift hat Schrift und Größe von "Meine History"
+function applySettingsTitle() {
+  const title = document.getElementById('settings-title')
+  if (!title) return
+  title.textContent = settingsTitle()
+  title.style.cssText = settingsMode === 'stats' ? HIST_HEAD_STYLE : 'font-weight:800;'
 }
 
 // mode: 'settings', 'help' oder 'stats' (peerId: 'own' oder publicId des Lords)
@@ -888,8 +895,7 @@ function openSettingsModal(mode = 'settings', peerId = 'own') {
   settingsOpen = true
   const modal = document.getElementById('modal-settings')
   modal?.classList.remove('hidden')
-  const title = document.getElementById('settings-title')
-  if (title) title.textContent = settingsTitle()
+  applySettingsTitle()
   modal?.scrollTo({ top: 0 })
   refreshSettingsBody()
   if (settingsMode === 'help') return
@@ -1577,6 +1583,9 @@ function keepSlides(fn) {
 
 // Kopfzeile: Titel, Aktionen (eigene History: "+"; Liste eines Lords: Favorit, ggf. Name vergeben) und ein Punkt
 // je Liste (Favoriten in Akzentfarbe, die aktive weiß). Nur hier wird zwischen den Listen gewischt.
+// Schriftgröße der Überschrift "Meine History" / "History von Lord …"; die Statistik-Überschrift übernimmt sie
+const HIST_HEAD_SIZE = 16
+const HIST_HEAD_STYLE = `font-family:'Syne',sans-serif; font-size:${HIST_HEAD_SIZE}px; font-weight:600; letter-spacing:0.01em; text-transform:uppercase; color:#818cf8; line-height:1.2;`
 function renderCarouselHead(kind) {
   const c = CAROUSEL[kind]
   const peers = c.peers()
@@ -1586,7 +1595,9 @@ function renderCarouselHead(kind) {
   // Schriftgröße so, dass ein 15 Zeichen langer Name die Zeile bis kurz vor den Favoriten-Stern füllt (390 px Breite).
   // Bei einem Lord ohne Titel steht noch der "Name"-Knopf daneben, dort bleibt es bei der kleineren Schrift.
   const compact = !!peer && !peer.lordTitle
-  const size = compact ? 11 : 13   // in Merkliste und History gleich groß
+  const size = kind === 'history' ? (compact ? HIST_HEAD_SIZE - 2 : HIST_HEAD_SIZE) : (compact ? 11 : 13)
+  // In der History darf ein langer Name auf zwei Zeilen umbrechen (rechts daneben stehen zwei Knöpfe übereinander)
+  const wrap = kind === 'history'
   const btn = 'btn-glass rounded-lg inline-flex items-center justify-center'
   const actions = peer
     ? `${peer.lordTitle ? '' : `<button data-peer-alias="${esc(peer.publicId)}" title="Namen vergeben" aria-label="Namen vergeben" class="${btn}" style="height:28px; padding:0 10px; color:rgba(255,255,255,0.6); font-size:12px;">Name</button>`}
@@ -1612,7 +1623,7 @@ function renderCarouselHead(kind) {
     : ''
   return `
     <div class="flex items-center justify-between mb-1" style="min-height:28px; gap:8px;">
-      <h3 class="syne" style="font-size:${size}px; font-weight:600; letter-spacing:${compact ? 0.02 : 0.01}em; text-transform:uppercase; color:#818cf8; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${peer ? c.other + esc(peer.name) : c.own}</h3>
+      <h3 class="syne" style="font-size:${size}px; font-weight:600; letter-spacing:${compact ? 0.02 : 0.01}em; text-transform:uppercase; color:#818cf8; min-width:0; ${wrap ? 'line-height:1.2; overflow-wrap:anywhere;' : 'overflow:hidden; text-overflow:ellipsis; white-space:nowrap;'}">${peer ? c.other + esc(peer.name) : c.own}</h3>
       <div style="display:flex; flex-direction:column; align-items:flex-end; gap:4px; flex-shrink:0;">
         <div style="display:flex; gap:6px; align-items:center;">${actions}</div>
         ${statsBtn}
