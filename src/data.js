@@ -74,6 +74,7 @@ export function getLocations() {
     { id: 58, name: 'Waschhaus Potsdam', city: 'Berlin', website: 'waschhaus.de', capacity: 800 },
     { id: 59, name: 'Großer Sendesaal des rbb', city: 'Berlin', website: 'rbb-online.de/unternehmen/service/veranstaltungen/Veranstaltungen.html', capacity: 850 },
     { id: 60, name: 'Kleiner Sendesaal des rbb', city: 'Berlin', website: 'rbb-online.de/unternehmen/service/veranstaltungen/Veranstaltungen.html', capacity: 200 },
+    { id: 61, name: 'Dunckerclub', city: 'Berlin', website: 'dunckerclub.de', capacity: 150 },
   ]
   // Gespeicherte Locations mit Defaults zusammenführen. Die Defaults gewinnen für bekannte IDs,
   // damit Korrekturen (Name, Website, Stadt, Kapazität) auch bei bestehenden Nutzern ankommen -

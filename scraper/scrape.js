@@ -3519,6 +3519,49 @@ async function scrapeRbbSendesaal() {
   return events
 }
 
+async function scrapeDunckerclub() {
+  console.log('📡 Dunckerclub...')
+  const events = []
+  try {
+    const res = await fetch('https://www.dunckerclub.de/start.html', { headers: { 'User-Agent': 'Mozilla/5.0 (konzert-app)' } })
+    if (!res.ok) throw new Error('HTTP ' + res.status)
+    // Vergangene Abende bleiben als HTML-Kommentar auf der Seite stehen - cheerio ignoriert Kommentare.
+    // Die Tabelle ist leicht kaputt (leeres <tr></tr> vor den <td>), deshalb über die Geschwister der Datumszelle lesen.
+    const $ = cheerio.load(await res.text())
+    const t0 = today()
+    const seen = new Set()
+    $('td.tabledate').each((_, el) => {
+      const m = $(el).text().trim().match(/^(\d{1,2})\.(\d{1,2})\.$/)   // ohne Jahr, z.B. "13.11."
+      if (!m) return
+      const mmdd = `${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`
+      // Jahr ergänzen: das nächste Vorkommen ab heute (Programm reicht nur wenige Monate voraus)
+      let date = `${t0.slice(0, 4)}-${mmdd}`
+      if (Date.parse(t0) - Date.parse(date) > 90 * 864e5) date = `${+t0.slice(0, 4) + 1}-${mmdd}`   // vergangene Abende (nicht auskommentiert) fallen unten raus
+      if (date < t0) return
+      const ev = $(el).nextAll('td.tableevent').first()
+      const name = ev.find('.eventname').first()
+      name.find('br').replaceWith(' ')
+      const title = name.text().replace(/\(\*\)|\*/g, '').replace(/\s+/g, ' ').replace(/^[-\s]+|[-\s]+$/g, '')
+      if (!title || /abgesagt/i.test(title)) return
+      const hm = $(el).nextAll('td.tabletime').first().text().match(/(\d{1,2})\s*h/)
+      const time = hm ? hm[1].padStart(2, '0') + ':00' : '21:00'
+      const fb = ev.find('a[href*="facebook.com/events"]').first().attr('href')
+      const key = date + title
+      if (seen.has(key)) return
+      seen.add(key)
+      events.push({
+        title, date, time, locationId: 61,
+        type: /live|konzert/i.test(title) ? 'konzert' : 'party',   // Dunckerclub = DJ-Abende, Live-Acts stehen im Titel
+        description: '', ticketUrl: fb || 'https://www.dunckerclub.de/start.html', spotifyUrl: '', source: 'dunckerclub'
+      })
+    })
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ Dunckerclub: ${e.message}`)
+  }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -3584,6 +3627,7 @@ async function main() {
     scrapeUberArena(),
     scrapeWaschhaus(),
     scrapeRbbSendesaal(),
+    scrapeDunckerclub(),
   ])
 
   let allEvents = []

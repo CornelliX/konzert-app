@@ -659,7 +659,7 @@ const SETTINGS_GUIDE = [
   ['Events', [
     ['Überblick', 'Alle Konzerte und Partys in Berlin und Leipzig, nach Datum sortiert.'],
     ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen (z. B. nach einem Künstler). Über der Liste steht, wie viele Events passen.'],
-    ['Suche leert sich selbst', 'Gibt es keinen Treffer, verschwindet der Suchbegriff nach 2 Sekunden. Gibt es Treffer, wird das Suchfeld geleert, sobald Du ein Event vormerkst oder „Bin dabei“ wählst, oder wenn Du 5 Sekunden lang nichts tippst oder berührst.'],
+    ['Suche leert sich selbst', 'Gibt es keinen Treffer, verschwindet der Suchbegriff nach 2 Sekunden. Gibt es Treffer, wird das Suchfeld geleert, sobald Du ein Event vormerkst oder „Bin dabei“ wählst, oder wenn Du 8 Sekunden lang nichts tippst oder berührst.'],
     ['Hilfe und Tipp', 'Der Knopf „? Hilfe“ über der Filterleiste zeigt diese Anleitung. Den einmaligen Tipp oben in der Liste schließt Du mit ×.'],
     ['Doppeltipp', 'Doppeltipp auf den Reiter „Events“ springt in der Liste ganz nach oben. Die Liste lädt beim Scrollen von selbst weiter und endet beim letzten Event.'],
     ['Karte wischen', 'Nach links wischen: {herz} „Vormerken“ oder {haken} „Bin dabei“ auswählen, nochmal wählen nimmt es zurück. Unten erscheint kurz „Rückgängig“.'],
@@ -2132,11 +2132,11 @@ function renderModals() {
 
 
 // ── Suchfeld leert sich selbst (nur bei einer selbst eingetippten Suche) ─────────────────────────
-// Ohne Treffer nach 2 s, mit Treffern nach 5 s ohne Eingabe/Berührung, und sofort nachdem der Nutzer aus den
+// Ohne Treffer nach 2 s, mit Treffern nach 8 s ohne Eingabe/Berührung, und sofort nachdem der Nutzer aus den
 // Treffern ein Event vorgemerkt bzw. "Bin dabei" gewählt hat. Eine Suche, die die App selbst setzt (Sprung vom
 // Radar zu einem Event, siehe focusEvent), bleibt stehen - dort soll das angesprungene Event sichtbar bleiben.
 const SEARCH_MISS_CLEAR_MS = 2000
-const SEARCH_IDLE_CLEAR_MS = 5000
+const SEARCH_IDLE_CLEAR_MS = 8000
 let searchAutoClearTimer = null
 let searchClearMs = 0
 let searchTyped = false
@@ -2213,7 +2213,7 @@ function attachFilterBarEvents() {
     if (e.key === 'Enter') { e.preventDefault(); commitSearch() }
   })
   document.getElementById('settings-open')?.addEventListener('click', () => openSettingsModal())
-  // Jede Eingabe oder Berührung startet die 5 Sekunden neu (nur wenn die Suche Treffer hat; ohne Treffer bleibt es bei 2 s)
+  // Jede Eingabe oder Berührung startet die 8 Sekunden neu (nur wenn die Suche Treffer hat; ohne Treffer bleibt es bei 2 s)
   if (!searchActivityBound) {
     searchActivityBound = true
     const onActivity = () => { if (searchTyped && searchClearMs === SEARCH_IDLE_CLEAR_MS) armSearchAutoClear(false) }
