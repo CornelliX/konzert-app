@@ -244,6 +244,8 @@ export async function renderApp(el) {
     await backfillRadarFromHistory()
   }
   sessionStorage.setItem('lebe-loaded', '1')
+  // Tailwind (CDN, async) muss da sein, bevor das Intro die fertige Seite freigibt, sonst blitzt sie kurz unformatiert auf
+  for (let i = 0; !window.tailwind && i < 40; i++) await new Promise(r => setTimeout(r, 50))
   const c64El = document.querySelector('.c64-border')
   if (c64El) container.appendChild(c64El)
   render()

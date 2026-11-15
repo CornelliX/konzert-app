@@ -9,7 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Press+Start+2P&display=block" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="/src/style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Events schon jetzt anfordern (statt erst nach dem Bundle): src/data.js nimmt dieses Promise, siehe getEvents() -->
+    <script>window.__eventsP = fetch('./events.json').then(function (r) { return r.ok ? r.json() : null }).catch(function () { return null })</script>
+    <!-- async: Tailwind blockierte sonst das Parsen und damit den Start des App-Bundles (renderApp wartet vor dem Ausblenden des Intros darauf) -->
+    <script async src="https://cdn.tailwindcss.com"></script>
     <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#0a0a3a" />
     <link rel="icon" type="image/png" href="./favicon.png" />

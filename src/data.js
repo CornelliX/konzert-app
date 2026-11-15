@@ -93,11 +93,19 @@ export function getLocations() {
 
 import { loadManualEvents } from './supabase.js'
 
+// index.html startet den Abruf schon vor dem Bundle (window.__eventsP); nur beim ersten Aufruf nutzbar, danach (Aktualisieren) frisch laden
+function loadScrapedEvents() {
+  const early = window.__eventsP
+  window.__eventsP = null
+  const fresh = () => fetch('./events.json').then(res => res.ok ? res.json() : [])
+  return early ? early.then(list => list || fresh()) : fresh()
+}
+
 export async function getEvents() {
   try {
     // Gleichzeitig laden statt nacheinander (verkürzt die Startzeit um eine Netzwerk-Runde)
     const [scraped, manual] = await Promise.all([
-      fetch('./events.json').then(res => res.ok ? res.json() : []),
+      loadScrapedEvents(),
       loadManualEvents()
     ])
     return [...scraped, ...manual]
