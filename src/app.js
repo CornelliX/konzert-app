@@ -275,6 +275,14 @@ export async function renderApp(el) {
     <div id="bottom-nav" style="position:fixed; bottom:0; left:0; right:0; z-index:40;"></div>
   `
   const introStart = performance.now()
+  // Schriften schon während des Intros laden (sonst erscheinen die Texte der App erst nach dem Ausblenden, weil der
+  // Browser sie erst beim ersten Gebrauch holt); das Intro wartet nicht extra darauf
+  new Promise(done => {
+    const load = () => Promise.all(['700 16px Syne', '800 16px Syne', '400 16px "DM Sans"', '500 16px "DM Sans"'].map(f => document.fonts.load(f))).then(done, done)
+    const css = document.querySelector('link[href*="fonts.googleapis"]')   // lädt asynchron (index.html), erst danach kennt der Browser die Schriften
+    if (!css || css.sheet) load()
+    else css.addEventListener('load', load, { once: true })
+  })
   const isReload = sessionStorage.getItem('lebe-loaded')
   if (!isReload) {
     document.getElementById('app-inner').innerHTML = renderSkeleton()
