@@ -209,6 +209,7 @@ function onGlobalClick(e) {
   if (t.closest?.('[data-open-help]')) openHelp()
 }
 
+const C64_MIN_MS = 1500   // so lange mindestens steht das C64-Intro
 let appReady = false
 let eventsUpdatePending = false
 
@@ -273,6 +274,7 @@ export async function renderApp(el) {
     <div id="app-modals"></div>
     <div id="bottom-nav" style="position:fixed; bottom:0; left:0; right:0; z-index:40;"></div>
   `
+  const introStart = performance.now()
   const isReload = sessionStorage.getItem('lebe-loaded')
   if (!isReload) {
     document.getElementById('app-inner').innerHTML = renderSkeleton()
@@ -295,6 +297,11 @@ export async function renderApp(el) {
   loadManualEvents().then(m => { if (m.length) { events = [...events, ...m]; refreshAfterEventsChange() } }).catch(() => {})
   if (eventsUpdatePending) applyEventsUpdate()
   loadAccountData().catch(() => {})
+  // Mindestlaufzeit des Intros (ab Einblenden): sonst blitzt es bei gespeicherten Daten nur kurz auf und wirkt abgehackt
+  if (c64El) {
+    const left = C64_MIN_MS - (performance.now() - introStart)
+    if (left > 0) await new Promise(r => setTimeout(r, left))
+  }
   if (c64El) {
     c64El.style.opacity = '1'
     // Die App selbst lädt inzwischen (Netzwerk + Render) in ca. 1s - das C64-Intro sollte
