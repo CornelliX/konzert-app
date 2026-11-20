@@ -1,5 +1,5 @@
 import { getLocations, getEvents, saveData, loadData } from './data.js'
-import { loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, addRadarArtistIfNew, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut, localToday, loadProfile, saveProfile, loadCommunityHistories, loadPeerPrefs, savePeerPref, loadEventMarks, loadCommunityBookmarks, updateHistoryEntry, uploadHistoryPhoto, removeHistoryPhotos, setHistoryPhotos } from './supabase.js'
+import { loadManualEvents, loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, addRadarArtistIfNew, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut, localToday, loadProfile, saveProfile, loadCommunityHistories, loadPeerPrefs, savePeerPref, loadEventMarks, loadCommunityBookmarks, updateHistoryEntry, uploadHistoryPhoto, removeHistoryPhotos, setHistoryPhotos } from './supabase.js'
 import { resizeToJpeg, primePhoto, photoUrl, isPhotoPath } from './photos.js'
 
 // ISO-Datum + HH:MM sortiert als String korrekt; new Date(date + 'T' + time) wäre bei Events ohne
@@ -209,6 +209,35 @@ function onGlobalClick(e) {
   if (t.closest?.('[data-open-help]')) openHelp()
 }
 
+let appReady = false
+let eventsUpdatePending = false
+
+// Die Seite zeigt beim Start die zuletzt gespeicherten Events (sw.js); kommt im Hintergrund eine neuere Liste,
+// wird sie hier übernommen. Merkliste und Radar-Treffer werden gegen die neue Liste neu abgeglichen.
+async function applyEventsUpdate() {
+  if (!appReady) { eventsUpdatePending = true; return }
+  eventsUpdatePending = false
+  events = await getEvents()
+  if (currentUser) {
+    const merged = await mergeAndSyncBookmarks()
+    bookmarked = merged.bookmarked
+    going = merged.going
+    await checkRadarMatches()
+  }
+  refreshAfterEventsChange()
+}
+
+// Neu zeichnen, aber nur wenn dadurch nichts Laufendes unterbrochen wird (Scrollposition, offene Fenster, Eingaben);
+// sonst greift die neue Liste beim nächsten ohnehin fälligen Zeichnen
+function refreshAfterEventsChange() {
+  const typing = ['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)
+  if (window.scrollY < 80 && !radarOpen && !settingsOpen && !historyEditOpen && !typing && !filters.search) render()
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.addEventListener('message', e => { if (e.data?.type === 'events-updated') applyEventsUpdate().catch(() => {}) })
+}
+
 export async function renderApp(el) {
   if (!globalDelegatesBound) { globalDelegatesBound = true; document.addEventListener('click', onGlobalClick) }
   // window.history: der Modul-Scope hat ein eigenes `history` (die History-Einträge)
@@ -250,6 +279,11 @@ export async function renderApp(el) {
   if (c64El) container.appendChild(c64El)
   render()
   requestAnimationFrame(() => window.scrollTo(0, 0))
+  appReady = true
+  // Nachladen, ohne dass der Start darauf wartet: Legacy-Tabelle manual_events (derzeit leer) und eine inzwischen
+  // eingetroffene Aktualisierung der Events (siehe sw.js)
+  loadManualEvents().then(m => { if (m.length) { events = [...events, ...m]; refreshAfterEventsChange() } }).catch(() => {})
+  if (eventsUpdatePending) applyEventsUpdate()
   if (c64El) {
     c64El.style.opacity = '1'
     // Die App selbst lädt inzwischen (Netzwerk + Render) in ca. 1s - das C64-Intro sollte

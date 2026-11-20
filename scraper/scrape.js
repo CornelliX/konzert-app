@@ -3567,7 +3567,7 @@ async function scrapeKunstfabrikSchlot() {
   const events = []
   try {
     const UA = { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
-    const res = await fetch('https://kunstfabrik-schlot.de/programm/', { headers: UA })
+    const res = await fetch('https://kunstfabrik-schlot.de/programm/', { headers: UA, signal: AbortSignal.timeout(20000) })
     if (!res.ok) throw new Error('HTTP ' + res.status)
     const $ = cheerio.load(await res.text())
     const months = { jan:1, feb:2, mär:3, mar:3, apr:4, mai:5, jun:6, jul:7, aug:8, sep:9, okt:10, nov:11, dez:12 }
@@ -3576,7 +3576,9 @@ async function scrapeKunstfabrikSchlot() {
     const items = []
     $('.edgtf-el-item').each((_, el) => {
       const it = $(el)
-      const url = it.find('a.edgtf-el-item-link-outer').attr('href')
+      // Nur Links auf die Schlot-Domain übernehmen (die Seite liefert die URL, die wir gleich abrufen)
+      let url = null
+      try { const u = new URL(it.find('a.edgtf-el-item-link-outer').attr('href'), 'https://kunstfabrik-schlot.de/programm/'); if (u.protocol === 'https:' && u.hostname === 'kunstfabrik-schlot.de') url = u.href } catch {}
       const title = it.find('.edgtf-el-item-title').text().replace(/\s+/g, ' ').trim()
       const day = parseInt(it.find('.edgtf-el-item-day').text(), 10)
       const month = months[it.find('.edgtf-el-item-month').text().trim().toLowerCase().slice(0, 3)]

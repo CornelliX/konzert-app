@@ -92,8 +92,6 @@ export function getLocations() {
   return defaults
 }
 
-import { loadManualEvents } from './supabase.js'
-
 // index.html startet den Abruf schon vor dem Bundle (window.__eventsP); nur beim ersten Aufruf nutzbar, danach (Aktualisieren) frisch laden
 function loadScrapedEvents() {
   const early = window.__eventsP
@@ -104,12 +102,8 @@ function loadScrapedEvents() {
 
 export async function getEvents() {
   try {
-    // Gleichzeitig laden statt nacheinander (verkürzt die Startzeit um eine Netzwerk-Runde)
-    const [scraped, manual] = await Promise.all([
-      loadScrapedEvents(),
-      loadManualEvents()
-    ])
-    return [...scraped, ...manual]
+    // Nur die gescrapten Events: die Legacy-Tabelle manual_events lädt app.js danach im Hintergrund nach
+    return await loadScrapedEvents()
   } catch(e) {
     console.log('Fehler beim Laden:', e)
     return []
