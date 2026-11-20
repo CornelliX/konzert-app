@@ -3562,6 +3562,62 @@ async function scrapeDunckerclub() {
   return events
 }
 
+async function scrapeKunstfabrikSchlot() {
+  console.log('📡 Kunstfabrik Schlot...')
+  const events = []
+  try {
+    const UA = { 'User-Agent': 'Mozilla/5.0 (konzert-app)' }
+    const res = await fetch('https://kunstfabrik-schlot.de/programm/', { headers: UA })
+    if (!res.ok) throw new Error('HTTP ' + res.status)
+    const $ = cheerio.load(await res.text())
+    const months = { jan:1, feb:2, mär:3, mar:3, apr:4, mai:5, jun:6, jul:7, aug:8, sep:9, okt:10, nov:11, dez:12 }
+    const t0 = today()
+    // Die Liste zeigt nur Tag/Monat (ohne Jahr, ohne Uhrzeit); Jahr und Beginn stehen auf der Detailseite
+    const items = []
+    $('.edgtf-el-item').each((_, el) => {
+      const it = $(el)
+      const url = it.find('a.edgtf-el-item-link-outer').attr('href')
+      const title = it.find('.edgtf-el-item-title').text().replace(/\s+/g, ' ').trim()
+      const day = parseInt(it.find('.edgtf-el-item-day').text(), 10)
+      const month = months[it.find('.edgtf-el-item-month').text().trim().toLowerCase().slice(0, 3)]
+      if (!url || !title || !day || !month || /geschlossen|closed|abgesagt/i.test(title)) return
+      let year = +t0.slice(0, 4)
+      let date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`
+      if (Date.parse(t0) - Date.parse(date) > 90 * 864e5) date = date.replace(/^\d{4}/, year + 1)
+      items.push({ url, title, date })
+    })
+    // Detailseiten: "Datum: Dezember 17, 2026" und "Zeit: 21:00 Uhr" (je Seite ein Abruf, 6 parallel)
+    const fullMonths = { januar:1, februar:2, märz:3, april:4, mai:5, juni:6, juli:7, august:8, september:9, oktober:10, november:11, dezember:12 }
+    const detail = async (it) => {
+      try {
+        const r = await fetch(it.url, { headers: UA, signal: AbortSignal.timeout(20000) })
+        if (!r.ok) return
+        const d = cheerio.load(await r.text())
+        const info = {}
+        d('.offbeat-event-info-item').each((_, e) => {
+          info[d(e).find('.offbeat-event-info-item-title').text().trim().replace(/:$/, '')] = d(e).find('.offbeat-event-info-item-desc').text().trim()
+        })
+        const dm = (info['Datum'] || '').match(/^(\p{L}+)\s+(\d{1,2}),\s*(\d{4})$/u)
+        if (dm && fullMonths[dm[1].toLowerCase()]) it.date = `${dm[3]}-${String(fullMonths[dm[1].toLowerCase()]).padStart(2, '0')}-${dm[2].padStart(2, '0')}`
+        const tm = (info['Zeit'] || '').match(/(\d{1,2})[:.](\d{2})/)
+        if (tm) it.time = tm[1].padStart(2, '0') + ':' + tm[2]
+      } catch {}
+    }
+    const todo = items.slice()
+    await Promise.all(Array.from({ length: 6 }, async () => { while (todo.length) await detail(todo.shift()) }))
+    const seen = new Set()
+    for (const it of items) {
+      if (it.date < t0 || seen.has(it.date + it.title)) continue
+      seen.add(it.date + it.title)
+      events.push({ title: it.title, date: it.date, time: it.time || '20:00', locationId: 62, type: detectType(it.title), description: '', ticketUrl: it.url, spotifyUrl: '', source: 'kunstfabrik-schlot' })
+    }
+    console.log(`  ✓ ${events.length} Events`)
+  } catch(e) {
+    console.log(`  ✗ Kunstfabrik Schlot: ${e.message}`)
+  }
+  return events
+}
+
 // ─── Hauptprogramm ───────────────────────────────────────────────────────────
 
 async function main() {
@@ -3628,6 +3684,7 @@ async function main() {
     scrapeWaschhaus(),
     scrapeRbbSendesaal(),
     scrapeDunckerclub(),
+    scrapeKunstfabrikSchlot(),
   ])
 
   let allEvents = []
