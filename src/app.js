@@ -1,5 +1,5 @@
 import { getLocations, getEvents, saveData, loadData } from './data.js'
-import { loadManualEvents, loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, addRadarArtistIfNew, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, signInWithEmail, verifyOtp, signOut, localToday, loadProfile, saveProfile, loadCommunityHistories, loadPeerPrefs, savePeerPref, loadEventMarks, loadCommunityBookmarks, updateHistoryEntry, uploadHistoryPhoto, removeHistoryPhotos, setHistoryPhotos } from './supabase.js'
+import { loadManualEvents, loadBookmarks, toggleBookmark, loadRadar, addRadarArtist, addRadarArtistIfNew, removeRadarArtist, loadHistory, addHistoryEntry, removeHistoryEntry, removeHistoryEntryByEventId, updateHistoryRating, getUser, peekUser, signInWithEmail, verifyOtp, signOut, localToday, loadProfile, saveProfile, loadCommunityHistories, loadPeerPrefs, savePeerPref, loadEventMarks, loadCommunityBookmarks, updateHistoryEntry, uploadHistoryPhoto, removeHistoryPhotos, setHistoryPhotos } from './supabase.js'
 import { resizeToJpeg, primePhoto, photoUrl, isPhotoPath } from './photos.js'
 
 // ISO-Datum + HH:MM sortiert als String korrekt; new Date(date + 'T' + time) wäre bei Events ohne
@@ -212,6 +212,25 @@ function onGlobalClick(e) {
 let appReady = false
 let eventsUpdatePending = false
 
+// Login prüfen und Merkliste, Radar und History aus Supabase holen (gleichzeitig), danach Stand abgleichen und neu zeichnen.
+// Ohne Anmeldung liefern loadBookmarks/loadRadar/loadHistory sofort leer zurück, ohne Netzwerkzugriff.
+async function loadAccountData() {
+  const [user, bm, radarList, hist] = await Promise.all([getUser(), loadBookmarks(), loadRadar(), loadHistory()])
+  const loginChanged = !!user !== !!currentUser
+  currentUser = user
+  if (user) {
+    const merged = await mergeAndSyncBookmarks(bm)
+    bookmarked = merged.bookmarked
+    going = merged.going
+    await checkRadarMatches(radarList)
+    history = hist
+    await syncGoingToHistory()
+    await backfillRadarFromHistory()
+  }
+  if (loginChanged) render()   // Anmeldung war abgelaufen (oder neu): Kopf und Reiter ändern sich
+  else refreshAfterEventsChange()
+}
+
 // Die Seite zeigt beim Start die zuletzt gespeicherten Events (sw.js); kommt im Hintergrund eine neuere Liste,
 // wird sie hier übernommen. Merkliste und Radar-Treffer werden gegen die neue Liste neu abgeglichen.
 async function applyEventsUpdate() {
@@ -258,20 +277,11 @@ export async function renderApp(el) {
   if (!isReload) {
     document.getElementById('app-inner').innerHTML = renderSkeleton()
   }
-  // Alles Unabhängige gleichzeitig laden (das C64-Intro steht, bis das fertig ist). Ohne Anmeldung liefern
-  // loadBookmarks/loadRadar/loadHistory sofort leer zurück, ohne Netzwerkzugriff.
-  const [user, evs, bm, radarList, hist] = await Promise.all([getUser(), getEvents(), loadBookmarks(), loadRadar(), loadHistory()])
-  currentUser = user
-  events = evs
-  if (currentUser) {
-    const merged = await mergeAndSyncBookmarks(bm)
-    bookmarked = merged.bookmarked
-    going = merged.going
-    await checkRadarMatches(radarList)
-    history = hist
-    await syncGoingToHistory()
-    await backfillRadarFromHistory()
-  }
+  // Das C64-Intro steht nur, bis die Events da sind (aus dem Gerätespeicher, siehe sw.js). Der Rest (Login prüfen,
+  // Merkliste, Radar, History aus Supabase) lädt danach im Hintergrund: erstes Zeichnen mit dem lokal gespeicherten
+  // Stand von Merkliste und Anmeldung, siehe loadAccountData().
+  currentUser = peekUser()
+  events = await getEvents()
   sessionStorage.setItem('lebe-loaded', '1')
   // Tailwind (CDN, async) muss da sein, bevor das Intro die fertige Seite freigibt, sonst blitzt sie kurz unformatiert auf
   for (let i = 0; !window.tailwind && i < 40; i++) await new Promise(r => setTimeout(r, 50))
@@ -284,6 +294,7 @@ export async function renderApp(el) {
   // eingetroffene Aktualisierung der Events (siehe sw.js)
   loadManualEvents().then(m => { if (m.length) { events = [...events, ...m]; refreshAfterEventsChange() } }).catch(() => {})
   if (eventsUpdatePending) applyEventsUpdate()
+  loadAccountData().catch(() => {})
   if (c64El) {
     c64El.style.opacity = '1'
     // Die App selbst lädt inzwischen (Netzwerk + Render) in ca. 1s - das C64-Intro sollte

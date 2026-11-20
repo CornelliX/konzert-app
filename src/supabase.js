@@ -22,6 +22,12 @@ supabase.auth.onAuthStateChange((event, session) => {
   }
 })
 
+// Angemeldeten Nutzer sofort und ohne Netzwerk aus dem gespeicherten Login lesen (nur zum schnellen ersten Zeichnen;
+// ob der Login noch gilt, klärt getUser() danach)
+export function peekUser() {
+  try { return JSON.parse(localStorage.getItem('lebe-live-auth'))?.user ?? null } catch { return null }
+}
+
 export async function getUser() {
   // getSession liest lokal (refresht bei Ablauf), getUser wäre jedes Mal ein Auth-Server-Roundtrip;
   // Datenzugriff schützt serverseitig RLS.
