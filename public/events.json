@@ -712,19 +712,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2092823986,
-    "title": "Roller Disco",
-    "date": "2026-11-21",
-    "time": "18:00",
-    "locationId": 58,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/roller-disco-glitzer-beats-rollerskates-1",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 348015507,
     "title": "Die Schlagernacht des Jahres",
     "date": "2026-11-21",
@@ -736,6 +723,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 2092823986,
+    "title": "Roller Disco",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/roller-disco-glitzer-beats-rollerskates-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1548840700,
@@ -3054,6 +3054,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 369576453,
+    "title": "Konstantinos Argiros",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 593467842,
     "title": "BERLIN IN EINEM ZUG",
     "date": "2026-11-25",
@@ -3078,19 +3091,6 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-09-15"
-  },
-  {
-    "id": 369576453,
-    "title": "Konstantinos Argiros",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 2118918431,
@@ -7310,19 +7310,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1430204938,
-    "title": "SingAlong",
-    "date": "2026-12-04",
-    "time": "19:30",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://bezahlung.singalong.de/bezahlung/806",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 255613365,
     "title": "SDP & The Capital Dance Orchestra",
     "date": "2026-12-04",
@@ -7334,6 +7321,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1430204938,
+    "title": "SingAlong",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://bezahlung.singalong.de/bezahlung/806",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1064770762,
@@ -9263,19 +9263,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1309884259,
-    "title": "ZAQ Medienquiz",
-    "date": "2026-12-08",
-    "time": "19:30",
-    "locationId": 58,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/zaq-medienquiz-08-12-2026",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 1636806296,
     "title": "BAP",
     "date": "2026-12-08",
@@ -9287,6 +9274,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1309884259,
+    "title": "ZAQ Medienquiz",
+    "date": "2026-12-08",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/zaq-medienquiz-08-12-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 621241441,
@@ -9950,19 +9950,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 809905486,
-    "title": "A Night of Beatbox with Marvelin",
-    "date": "2026-12-10",
-    "time": "19:30",
-    "locationId": 36,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://cassiopeia-berlin.de/event/a-night-of-beatbox-with-marvelin-111685129",
-    "spotifyUrl": "",
-    "source": "cassiopeia",
-    "addedAt": "2026-10-14"
-  },
-  {
     "id": 1065798401,
     "title": "Phoebe Bridgers",
     "date": "2026-12-10",
@@ -9974,6 +9961,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-18"
+  },
+  {
+    "id": 809905486,
+    "title": "A Night of Beatbox with Marvelin",
+    "date": "2026-12-10",
+    "time": "19:30",
+    "locationId": 36,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://cassiopeia-berlin.de/event/a-night-of-beatbox-with-marvelin-111685129",
+    "spotifyUrl": "",
+    "source": "cassiopeia",
+    "addedAt": "2026-10-14"
   },
   {
     "id": 235712358,
@@ -12499,19 +12499,6 @@
     "addedAt": "2026-11-08"
   },
   {
-    "id": 672809719,
-    "title": "Seraphina Kalze",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/seraphina-kalze-jetzt-potsdam-ARQ8B6",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 59852794,
     "title": "101 Voices - Depeche Mode Special Tribute",
     "date": "2026-12-16",
@@ -12523,6 +12510,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 672809719,
+    "title": "Seraphina Kalze",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/seraphina-kalze-jetzt-potsdam-ARQ8B6",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 810780519,
@@ -15142,19 +15142,6 @@
     "addedAt": "2026-11-15"
   },
   {
-    "id": 1463681291,
-    "title": "PHILLIP BOA AND THE VOODOOCLUB",
-    "date": "2026-12-29",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77044",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-15"
-  },
-  {
     "id": 291041555,
     "title": "GELEE (GER) & LYNT (GER) live @ Ilses Erika + A DISCO (80s vs. Italo Disco)",
     "date": "2026-12-29",
@@ -15192,19 +15179,6 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-11-15"
-  },
-  {
-    "id": 1147411493,
-    "title": "CAFÉ geschlossen",
-    "date": "2026-12-30",
-    "time": "10:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/special/2026-12-30/cafe-geschlossen-11",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-08"
   },
   {
     "id": 245897780,
@@ -15686,19 +15660,6 @@
     "addedAt": "2026-11-03"
   },
   {
-    "id": 228498048,
-    "title": "Moritzbastei SILVESTERPARTY 2026",
-    "date": "2026-12-31",
-    "time": "22:00",
-    "locationId": 18,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/78138",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-08"
-  },
-  {
     "id": 1963724765,
     "title": "Hippie New Year",
     "date": "2026-12-31",
@@ -16085,19 +16046,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 204505914,
-    "title": "11Freunde Kneipenquiz",
-    "date": "2027-01-07",
-    "time": "19:30",
-    "locationId": 18,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-07/11freunde-kneipenquiz-2",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-08"
   },
   {
     "id": 1033570156,
@@ -17059,19 +17007,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 749080878,
-    "title": "Only Stillness",
-    "date": "2027-01-15",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77419",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-08"
-  },
-  {
     "id": 1135657102,
     "title": "Comedyflash",
     "date": "2027-01-15",
@@ -17355,19 +17290,6 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 157356685,
-    "title": "Grausame Töchter  + Special Guest: VAMPYROS LESBOS",
-    "date": "2027-01-16",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim-light.com/de/a/5c7ffae04d96f500018ae55f/e/6a55f3be8728b2492791ab67",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-08"
   },
   {
     "id": 918106175,
@@ -18382,19 +18304,6 @@
     "addedAt": "2026-11-15"
   },
   {
-    "id": 1093707975,
-    "title": "Michael Mittermeier",
-    "date": "2027-01-26",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/en/event/michael-mittermeier-oldboy-sind-wir-bald-da-waschhaus-potsdam-21472721/",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 1830715674,
     "title": "aespa",
     "date": "2027-01-26",
@@ -18406,6 +18315,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1093707975,
+    "title": "Michael Mittermeier",
+    "date": "2027-01-26",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/michael-mittermeier-oldboy-sind-wir-bald-da-waschhaus-potsdam-21472721/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 816581054,
@@ -25083,19 +25005,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1603476598,
-    "title": "Schwarze Grütze",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/schwarze-grutze-elegant-potsdam-PAPLD7",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 617736245,
     "title": "Teddy Swims",
     "date": "2027-03-11",
@@ -25107,6 +25016,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1603476598,
+    "title": "Schwarze Grütze",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/schwarze-grutze-elegant-potsdam-PAPLD7",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 593311935,
@@ -26245,19 +26167,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 293050161,
-    "title": "Kirsten Fuchs",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/kirsten-fuchs-2",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 38507416,
     "title": "Maite Kelly",
     "date": "2027-03-18",
@@ -26269,6 +26178,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 293050161,
+    "title": "Kirsten Fuchs",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/kirsten-fuchs-2",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 539720315,
