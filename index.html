@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://cqxpjesovcavarrlljpn.supabase.co" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Press+Start+2P&display=block" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Press+Start+2P&display=block" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Press+Start+2P&display=block" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" media="print" onload="this.media='all'">
     <!-- Events schon jetzt anfordern (statt erst nach dem Bundle): src/data.js nimmt dieses Promise, siehe getEvents() -->
     <script>window.__eventsP = fetch('./events.json').then(function (r) { return r.ok ? r.json() : null }).catch(function () { return null })</script>
     <!-- async: Tailwind blockierte sonst das Parsen und damit den Start des App-Bundles (renderApp wartet vor dem Ausblenden des Intros darauf) -->
@@ -20,7 +21,7 @@
     <meta name="apple-mobile-web-app-title" content="LiveLords" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <script type="module" crossorigin src="/konzert-app/assets/index-BWxZ-l3D.js"></script>
+    <script type="module" crossorigin src="/konzert-app/assets/index-BB11Sb0i.js"></script>
     <link rel="stylesheet" crossorigin href="/konzert-app/assets/index-i9jCzgQl.css">
   </head>
   <body class="bg-gray-950 text-white min-h-screen">
