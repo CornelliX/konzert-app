@@ -116,19 +116,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 2092823986,
-    "title": "Roller Disco",
-    "date": "2026-11-21",
-    "time": "18:00",
-    "locationId": 58,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/roller-disco-glitzer-beats-rollerskates-1",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 348015507,
     "title": "Die Schlagernacht des Jahres",
     "date": "2026-11-21",
@@ -140,6 +127,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 2092823986,
+    "title": "Roller Disco",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/roller-disco-glitzer-beats-rollerskates-1",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1548840700,
@@ -2458,19 +2458,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 593467842,
-    "title": "BERLIN IN EINEM ZUG",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 62,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://kunstfabrik-schlot.de/event/berlin-in-einem-zug-12/",
-    "spotifyUrl": "",
-    "source": "kunstfabrik-schlot",
-    "addedAt": "2026-11-20"
-  },
-  {
     "id": 369576453,
     "title": "Konstantinos Argiros",
     "date": "2026-11-25",
@@ -2482,6 +2469,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 593467842,
+    "title": "BERLIN IN EINEM ZUG",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "locationId": 62,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://kunstfabrik-schlot.de/event/berlin-in-einem-zug-12/",
+    "spotifyUrl": "",
+    "source": "kunstfabrik-schlot",
+    "addedAt": "2026-11-20"
   },
   {
     "id": 1211919287,
@@ -3906,6 +3906,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 209253489,
+    "title": "Cosmic Gate",
+    "date": "2026-11-28",
+    "time": "19:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-CosmicGate",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 2143375658,
     "title": "SPH Music Masters",
     "date": "2026-11-28",
@@ -4463,19 +4476,6 @@
     "addedAt": "2026-11-18"
   },
   {
-    "id": 209253489,
-    "title": "Cosmic Gate",
-    "date": "2026-11-28",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/281126-CosmicGate",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 59886565,
     "title": "Oliver Huntemann",
     "date": "2026-11-28",
@@ -4656,6 +4656,19 @@
     "spotifyUrl": "",
     "source": "kunstfabrik-schlot",
     "addedAt": "2026-11-20"
+  },
+  {
+    "id": 780246864,
+    "title": "Eule findet den Beat",
+    "date": "2026-11-29",
+    "time": "15:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OgHag3p1piAQTrWvoN_",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1941851365,
@@ -4901,6 +4914,19 @@
     "spotifyUrl": "",
     "source": "mikropol",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1897297009,
+    "title": "Grommet",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OuqCMcB7xHuDgg7yxvY",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 753244516,
@@ -5265,6 +5291,19 @@
     "spotifyUrl": "",
     "source": "madameclaude",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1888317444,
+    "title": "Xaon & Vortex",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Onvab2Rag8Ne95I7MuO",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1508513122,
@@ -6714,19 +6753,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1430204938,
-    "title": "SingAlong",
-    "date": "2026-12-04",
-    "time": "19:30",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://bezahlung.singalong.de/bezahlung/806",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 255613365,
     "title": "SDP & The Capital Dance Orchestra",
     "date": "2026-12-04",
@@ -6738,6 +6764,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1430204938,
+    "title": "SingAlong",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://bezahlung.singalong.de/bezahlung/806",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1064770762,
@@ -8667,19 +8706,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1309884259,
-    "title": "ZAQ Medienquiz",
-    "date": "2026-12-08",
-    "time": "19:30",
-    "locationId": 58,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/zaq-medienquiz-08-12-2026",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 1636806296,
     "title": "BAP",
     "date": "2026-12-08",
@@ -8691,6 +8717,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1309884259,
+    "title": "ZAQ Medienquiz",
+    "date": "2026-12-08",
+    "time": "19:30",
+    "locationId": 58,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://www.waschhaus.de/veranstaltungen/zaq-medienquiz-08-12-2026",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 621241441,
@@ -11903,19 +11942,6 @@
     "addedAt": "2026-11-08"
   },
   {
-    "id": 672809719,
-    "title": "Seraphina Kalze",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/seraphina-kalze-jetzt-potsdam-ARQ8B6",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 59852794,
     "title": "101 Voices - Depeche Mode Special Tribute",
     "date": "2026-12-16",
@@ -11927,6 +11953,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 672809719,
+    "title": "Seraphina Kalze",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/seraphina-kalze-jetzt-potsdam-ARQ8B6",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 810780519,
@@ -17708,19 +17747,6 @@
     "addedAt": "2026-11-15"
   },
   {
-    "id": 1093707975,
-    "title": "Michael Mittermeier",
-    "date": "2027-01-26",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/en/event/michael-mittermeier-oldboy-sind-wir-bald-da-waschhaus-potsdam-21472721/",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 1830715674,
     "title": "aespa",
     "date": "2027-01-26",
@@ -17732,6 +17758,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1093707975,
+    "title": "Michael Mittermeier",
+    "date": "2027-01-26",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/en/event/michael-mittermeier-oldboy-sind-wir-bald-da-waschhaus-potsdam-21472721/",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 816581054,
@@ -24409,19 +24448,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1603476598,
-    "title": "Schwarze Grütze",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/schwarze-grutze-elegant-potsdam-PAPLD7",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 617736245,
     "title": "Teddy Swims",
     "date": "2027-03-11",
@@ -24433,6 +24459,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1603476598,
+    "title": "Schwarze Grütze",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://loveyourartist.com/de/profiles/waschhaus-potsdam-HDSUW1/events/schwarze-grutze-elegant-potsdam-PAPLD7",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 593311935,
@@ -25571,19 +25610,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 293050161,
-    "title": "Kirsten Fuchs",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://t.rausgegangen.de/tickets/kirsten-fuchs-2",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 38507416,
     "title": "Maite Kelly",
     "date": "2027-03-18",
@@ -25595,6 +25621,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 293050161,
+    "title": "Kirsten Fuchs",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 58,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://t.rausgegangen.de/tickets/kirsten-fuchs-2",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 539720315,
