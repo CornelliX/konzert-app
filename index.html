@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://cqxpjesovcavarrlljpn.supabase.co" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=block" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=block" rel="stylesheet" media="print" onload="this.media='all'; window.__gfAt = performance.now()">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=block" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="/src/style.css" />
@@ -16,7 +16,7 @@
     <!-- Events schon jetzt anfordern (statt erst nach dem Bundle): src/data.js nimmt dieses Promise, siehe getEvents() -->
     <script>window.__eventsP = fetch('./events.json').then(function (r) { return r.ok ? r.json() : null }).catch(function () { return null })</script>
     <!-- async: Tailwind blockierte sonst das Parsen und damit den Start des App-Bundles (renderApp wartet vor dem Ausblenden des Intros darauf) -->
-    <script async src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://cdn.tailwindcss.com" onload="window.__twAt = performance.now()"></script>
     <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#0a0a3a" />
     <link rel="icon" type="image/png" href="./favicon.png" />
@@ -57,6 +57,11 @@
         var el = document.getElementById('c64-intro'), d = document.documentElement
         if (d.classList.contains('no-intro')) { el.remove(); return }
         var ready = false
+        // ponytail: Diagnose fürs iPhone (siehe Anleitung unten); entfernen, sobald das Intro passt
+        var T = window.__startT = { raf: 0, sicht: document.visibilityState, wechsel: [] }
+        requestAnimationFrame(function () { T.raf = performance.now() })
+        document.addEventListener('visibilitychange', function () { T.wechsel.push(document.visibilityState + ' ' + (performance.now() / 1000).toFixed(1)) })
+        addEventListener('load', function () { T.load = performance.now() })
         // App noch nicht fertig: Intro anhalten (es steht dann noch vor dem Ausblenden)
         var hold = setTimeout(function () { if (!ready) el.classList.add('c64-hold') }, 1500)
         window.__introRelease = function () { ready = true; window.__appReadyAt = performance.now(); el.classList.remove('c64-hold') }
@@ -66,7 +71,12 @@
           // ponytail: Diagnose fürs iPhone (Zeiten ab Seitenaufruf), steht unten in der Anleitung; entfernen, sobald das Intro passt
           try {
             var nav = performance.getEntriesByType('navigation')[0]
-            localStorage.setItem('startTiming', JSON.stringify({ html: nav ? nav.responseEnd : 0, ready: window.__appReadyAt || 0, fade: performance.now(), at: Date.now() }))
+            var anim = el.getAnimations ? el.getAnimations().filter(function (a) { return a.animationName === 'c64out' })[0] : null
+            var fcp = performance.getEntriesByName('first-contentful-paint')[0]
+            T.html = nav ? nav.responseEnd : 0; T.ready = window.__appReadyAt || 0; T.fade = performance.now()
+            T.animStart = anim && anim.startTime != null ? anim.startTime : -1   // wann die Intro-Animation (vor ihren 1,6 s) zu laufen begann
+            T.fcp = fcp ? fcp.startTime : -1; T.tw = window.__twAt || 0; T.gf = window.__gfAt || 0; T.at = Date.now()
+            localStorage.setItem('startTiming', JSON.stringify(T))
           } catch (err) {}
         })
         el.addEventListener('animationend', function (e) { if (e.animationName === 'c64out') el.remove() })

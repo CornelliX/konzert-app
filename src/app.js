@@ -877,8 +877,9 @@ function renderGuideHtml() {
 
 function renderSettingsBody() {
   if (settingsMode === 'help') {
-    const t = loadData('startTiming'), s = ms => (ms / 1000).toFixed(1).replace('.', ',') + ' s'
-    return renderGuideHtml() + (t ? `<p class="text-xs" style="margin-top:18px; color:rgba(255,255,255,0.6);">Letzter Start mit Intro: Seite geladen nach ${s(t.html)}, App fertig nach ${t.ready ? s(t.ready) : '–'}, Ausblenden ab ${s(t.fade)}</p>` : '')
+    const t = loadData('startTiming'), s = ms => ms > 0 ? (ms / 1000).toFixed(2).replace('.', ',') : '–'
+    // Kurzformat zum Abschreiben: alle Zeiten in Sekunden ab Seitenaufruf
+    return renderGuideHtml() + (t ? `<p class="text-xs" style="margin-top:18px; color:rgba(255,255,255,0.6); user-select:text; -webkit-user-select:text;">Messung letzter Start (s): html ${s(t.html)} · bild ${s(t.raf)} · fcp ${s(t.fcp)} · anim ${s(t.animStart)} · app ${s(t.ready)} · tw ${s(t.tw)} · gf ${s(t.gf)} · load ${s(t.load)} · aus ${s(t.fade)} · ${esc(t.sicht || '')}${t.wechsel?.length ? ' → ' + esc(t.wechsel.join(', ')) : ''}</p>` : '')
   }
   if (settingsMode === 'stats') return renderStatsBody()
   if (!currentUser) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Bitte zuerst mit E-Mail anmelden, um Einstellungen vorzunehmen.</p>`
