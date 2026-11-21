@@ -20,7 +20,7 @@
     "locationId": 38,
     "type": "konzert",
     "description": "MUST BE JOHNWORDS TO LIVE BY Tickets: kj.de/QMK Artist Presale (kj.de): Do., 18.06. – 12 Uhr Allg. VVK-Start: Fr.,…",
-    "ticketUrl": "http://kj.de/QMK?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETF2MVNWUFNDTmRGcm5PZlhpc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH9xCHTKa_acJD2ONZcy8s2e6ycVzJzpbiSNQi4-iqNTRQF_ojs_3PP7uCO7m_aem_BH-dk-t7huQtThl4FW_P1Q",
+    "ticketUrl": "http://kj.de/QMK?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH6oOpDOIKpfmX3XD1i5ekLCQUFwPMxmKHSTxdA7ls0x4Ausdyi1Ya3GHgc3m_aem_D9CPjV_XLgRoo5kx3KOrQw",
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-08-17"
@@ -75,19 +75,6 @@
     "ticketUrl": "https://www.eventim-light.com/de/a/67d4164cffed4a6d80881cb1/e/6a344d7dc56e7adfb0d8477c",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 857290660,
-    "title": "Vom Fischer und seiner Frau",
-    "date": "2026-11-21",
-    "time": "16:00",
-    "locationId": 51,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://rausgegangen.de/events/vom-fischer-und-seiner-frau-39/",
-    "spotifyUrl": "",
-    "source": "nsl",
-    "addedAt": "2026-11-20"
   },
   {
     "id": 698888951,
@@ -296,6 +283,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 549581178,
+    "title": "HEADLESS PARTY • The Home of Core & Alternative Rock Alternative Rock • Nu Metal • Pop Punk • Core • Emo • Party",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 1,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-21-headless-party---the-home-of-core---alternative-rock-",
+    "spotifyUrl": "",
+    "source": "lido",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 1805611043,
     "title": "ALLT",
     "date": "2026-11-21",
@@ -309,19 +309,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1127335897,
-    "title": "HEADLESS PARTY • The Home of Core & Alternative Rock",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 1,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.lido-berlin.de/events/2026-11-21-headless-party---the-home-of-core---alternative-rock-",
-    "spotifyUrl": "",
-    "source": "lido",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 401342706,
     "title": "BURNOUT OSTWEST",
     "date": "2026-11-21",
@@ -329,7 +316,7 @@
     "locationId": 3,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/Event/67516",
+    "ticketUrl": "https://festsaal-kreuzberg.de/de/programm/BURNOUT-OSTWEST/",
     "spotifyUrl": "",
     "source": "festsaal",
     "addedAt": "2026-08-17"
@@ -413,6 +400,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 973060708,
+    "title": "Awesome Scampis",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/93250-tickets-awesome-scampis-ska-und-pop-punk-mit-blaesern-schokoladen-berlin-am-21-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-15"
+  },
+  {
     "id": 889267875,
     "title": "Clubbo Revival mit der Horns Band + Djs – Monstersoul + Djs Funk / Soul / Disko",
     "date": "2026-11-21",
@@ -437,6 +437,19 @@
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-11-21"
+  },
+  {
+    "id": 184622551,
+    "title": "60 JUNO",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82137/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2095937723,
@@ -529,8 +542,8 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 201457044,
-    "title": "Mine",
+    "id": 98966423,
+    "title": "Wird verschoben: Mine",
     "date": "2026-11-21",
     "time": "20:00",
     "locationId": 33,
@@ -539,7 +552,7 @@
     "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/mine-26/2026-11-21-2000",
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
-    "addedAt": "2026-08-17"
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1592222425,
@@ -594,19 +607,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 400571336,
-    "title": "geburtstag 40 er",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/geburtstag-40-er/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 541595938,
     "title": "BUMM BUMM",
     "date": "2026-11-21",
@@ -633,29 +633,16 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 973060708,
-    "title": "Awesome Scampis",
+    "id": 400571336,
+    "title": "geburtstag 40 er",
     "date": "2026-11-21",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 48,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/93250-tickets-awesome-scampis-ska-und-pop-punk-mit-blaesern-schokoladen-berlin-am-21-11-2026",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/geburtstag-40-er/",
     "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-15"
-  },
-  {
-    "id": 184622551,
-    "title": "60 JUNO",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82137/",
-    "spotifyUrl": "",
-    "source": "kantine",
+    "source": "mvbleipzig",
     "addedAt": "2026-11-02"
   },
   {
@@ -983,6 +970,18 @@
     "addedAt": "2026-11-15"
   },
   {
+    "id": 916225632,
+    "title": "POSSESED BY PAUL JAMES",
+    "date": "2026-11-22",
+    "time": "18:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://eventfrog.de/en/p/concerts/jazz-blues/roots-boutique-possessed-by-paul-james-vista-vision-berlin-kreuzberg-7511863205427161479.html",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-11"
+  },
+  {
     "id": 2004754776,
     "title": "Donna The Show",
     "date": "2026-11-22",
@@ -1006,18 +1005,6 @@
     "spotifyUrl": "",
     "source": "kunstfabrik-schlot",
     "addedAt": "2026-11-20"
-  },
-  {
-    "id": 916225632,
-    "title": "POSSESED BY PAUL JAMES",
-    "date": "2026-11-22",
-    "time": "18:00",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://eventfrog.de/en/p/concerts/jazz-blues/roots-boutique-possessed-by-paul-james-vista-vision-berlin-kreuzberg-7511863205427161479.html",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-11"
   },
   {
     "id": 1590379098,
@@ -1110,19 +1097,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1406587363,
-    "title": "DIE VERLIERER & Schimmel über Berlin",
-    "date": "2026-11-22",
-    "time": "20:00",
-    "locationId": 17,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/Event/77303",
-    "spotifyUrl": "",
-    "source": "utconnewitz",
-    "addedAt": "2026-10-07"
-  },
-  {
     "id": 1950506864,
     "title": "Long Distance Calling",
     "date": "2026-11-22",
@@ -1133,6 +1107,19 @@
     "ticketUrl": "https://columbia-theater.de/event/20261122-long-distance-calling/",
     "spotifyUrl": "",
     "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 889998840,
+    "title": "Salomea",
+    "date": "2026-11-22",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/81363/",
+    "spotifyUrl": "",
+    "source": "kantine",
     "addedAt": "2026-11-02"
   },
   {
@@ -1223,19 +1210,6 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 889998840,
-    "title": "Salomea",
-    "date": "2026-11-22",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81363/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 958960299,
@@ -1432,6 +1406,32 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1106794697,
+    "title": "The Black Elephant Band",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101242-tickets-the-black-elephant-band-antifolk-schokoladen-berlin-am-23-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-15"
+  },
+  {
+    "id": 116395464,
+    "title": "@ (US, 4AD)",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/81917/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 560502165,
     "title": "Bonnie Tyler",
     "date": "2026-11-23",
@@ -1469,6 +1469,18 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1739772307,
+    "title": "JUMI",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://dice.fm/event/6dwp83-jumi-berlin-23rd-nov-monarch-berlin-tickets?lng=de",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1078226472,
@@ -1534,44 +1546,6 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-01"
-  },
-  {
-    "id": 1739772307,
-    "title": "JUMI",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://dice.fm/event/6dwp83-jumi-berlin-23rd-nov-monarch-berlin-tickets?lng=de",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1106794697,
-    "title": "The Black Elephant Band",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101242-tickets-the-black-elephant-band-antifolk-schokoladen-berlin-am-23-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-15"
-  },
-  {
-    "id": 116395464,
-    "title": "@ (US, 4AD)",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81917/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 636906359,
@@ -1737,7 +1711,7 @@
     "locationId": 38,
     "type": "konzert",
     "description": "After years of feeling „Out Of Place“, Will Church has finally found his place on stage.On the tour, he performs songs…",
-    "ticketUrl": "https://rausgegangen.de/events/out-of-place-tour-by-will-church-0/?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETF2MVNWUFNDTmRGcm5PZlhpc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH1nR9ak3YzOVGxqsbbIe8-lVxtltq682er16NLoF63E3Of0W5AyhlrpuADSV_aem_YglnxYkpEO3N5DMFQjKooA",
+    "ticketUrl": "https://rausgegangen.de/events/out-of-place-tour-by-will-church-0/?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHxxr6_q1xfo5QIEusWnqOGdiJdJp9s_wohyi80e8CKOx8-KQzAg0XZCv6QZo_aem_V7JieUivAYrNvEQtNdJ5LQ",
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-08-17"
@@ -1832,6 +1806,19 @@
     "spotifyUrl": "",
     "source": "columbiatheater",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1503562801,
+    "title": "Yakama + Absteige + Nobis",
+    "date": "2026-11-24",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102588-tickets-yakama-absteige-nobis-schokoladen-berlin-am-24-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-15"
   },
   {
     "id": 1631268189,
@@ -1975,19 +1962,6 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 1503562801,
-    "title": "Yakama + Absteige + Nobis",
-    "date": "2026-11-24",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102588-tickets-yakama-absteige-nobis-schokoladen-berlin-am-24-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-15"
   },
   {
     "id": 754482728,
@@ -2315,6 +2289,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 2007929070,
+    "title": "Felsmann + Tiley",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82431/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 564712815,
     "title": "LA SONORA SANTANERA",
     "date": "2026-11-25",
@@ -2468,19 +2455,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 2007929070,
-    "title": "Felsmann + Tiley",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82431/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-11-02"
   },
   {
@@ -2705,6 +2679,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1561973173,
+    "title": "OBI BLANCHE x KRISTINA TICA",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101932-tickets-obi-blanche-x-kristina-tica-post-digital-punk-schokoladen-berlin-am-26-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-15"
+  },
+  {
     "id": 2011466232,
     "title": "COOGANS BLUFF 10 Years Of Flying To The Stars",
     "date": "2026-11-26",
@@ -2716,6 +2703,19 @@
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-11-21"
+  },
+  {
+    "id": 532351317,
+    "title": "MARYAM.fyi",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82463/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1483404018,
@@ -2871,32 +2871,6 @@
     "spotifyUrl": "",
     "source": "kunstfabrik-schlot",
     "addedAt": "2026-11-20"
-  },
-  {
-    "id": 1561973173,
-    "title": "OBI BLANCHE x KRISTINA TICA",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101932-tickets-obi-blanche-x-kristina-tica-post-digital-punk-schokoladen-berlin-am-26-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-15"
-  },
-  {
-    "id": 532351317,
-    "title": "MARYAM.fyi",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82463/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 2127525360,
@@ -3209,6 +3183,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 938066576,
+    "title": "CAVA",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100085-tickets-cava-schokoladen-berlin-am-27-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-15"
+  },
+  {
     "id": 1671825783,
     "title": "Malo Moray & Jan Soutschek (Ambient Americana Jazz) LIVE PREMIERE & EP RELEASE",
     "date": "2026-11-27",
@@ -3441,19 +3428,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1251246961,
-    "title": "Everything Dies + X",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/everything-dies-x/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 751863040,
     "title": "MEINE HÄNDE WIE DIE DEINEN",
     "date": "2026-11-27",
@@ -3493,17 +3467,17 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 938066576,
-    "title": "CAVA",
+    "id": 1251246961,
+    "title": "Everything Dies + X",
     "date": "2026-11-27",
     "time": "20:00",
-    "locationId": 11,
+    "locationId": 48,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100085-tickets-cava-schokoladen-berlin-am-27-11-2026",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/everything-dies-x/",
     "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-15"
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 933234445,
@@ -3791,18 +3765,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 15045955,
-    "title": "The Luxorium – Grand Varieté",
-    "date": "2026-11-28",
-    "time": "18:00",
-    "type": "konzert",
-    "locationId": 42,
-    "source": "theater-im-delphi",
-    "ticketUrl": "https://theater-im-delphi.de/programm/",
-    "spotifyUrl": "",
-    "addedAt": "2026-09-22"
-  },
-  {
     "id": 967850024,
     "title": "THE HAND CUTS - GÜNTHER AND THE JAUCHS - BLUTCYPHER",
     "date": "2026-11-28",
@@ -3813,6 +3775,18 @@
     "ticketUrl": "https://vvk.link/xxpjx",
     "spotifyUrl": "",
     "addedAt": "2026-11-18"
+  },
+  {
+    "id": 15045955,
+    "title": "The Luxorium – Grand Varieté",
+    "date": "2026-11-28",
+    "time": "18:00",
+    "type": "konzert",
+    "locationId": 42,
+    "source": "theater-im-delphi",
+    "ticketUrl": "https://theater-im-delphi.de/programm/",
+    "spotifyUrl": "",
+    "addedAt": "2026-09-22"
   },
   {
     "id": 1016346032,
@@ -3904,6 +3878,19 @@
     "spotifyUrl": "",
     "source": "neue-zukunft",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 209253489,
+    "title": "Cosmic Gate",
+    "date": "2026-11-28",
+    "time": "19:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/281126-CosmicGate",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2143375658,
@@ -4021,6 +4008,19 @@
     "spotifyUrl": "",
     "source": "utconnewitz",
     "addedAt": "2026-09-27"
+  },
+  {
+    "id": 1825570257,
+    "title": "CAVA",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100118-tickets-cava-schokoladen-berlin-am-28-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-18"
   },
   {
     "id": 535272738,
@@ -4308,19 +4308,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1825570257,
-    "title": "CAVA",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100118-tickets-cava-schokoladen-berlin-am-28-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-18"
-  },
-  {
     "id": 1038888214,
     "title": "LeipJAZZig: Holler",
     "date": "2026-11-28",
@@ -4461,19 +4448,6 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-11-18"
-  },
-  {
-    "id": 209253489,
-    "title": "Cosmic Gate",
-    "date": "2026-11-28",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/281126-CosmicGate",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 59886565,
@@ -4658,6 +4632,19 @@
     "addedAt": "2026-11-20"
   },
   {
+    "id": 780246864,
+    "title": "Eule findet den Beat",
+    "date": "2026-11-29",
+    "time": "15:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OgHag3p1piAQTrWvoN_",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 1941851365,
     "title": "Pettersson und Findus",
     "date": "2026-11-29",
@@ -4780,7 +4767,7 @@
     "locationId": 38,
     "type": "konzert",
     "description": "https://tickets.spotlight-production.com/.../r/prachtwerk",
-    "ticketUrl": "https://tickets.spotlight-production.com/events/spotlightproduction/2354389/r/prachtwerk?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETF2MVNWUFNDTmRGcm5PZlhpc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH51z8JwAh8lnMXSbPkO84L3iHSULIxLUSFMFcwREcXeqOObtgF3qKum4mK0d_aem_cBg4md7s-I03Hb_zaCifuQ",
+    "ticketUrl": "https://tickets.spotlight-production.com/events/spotlightproduction/2354389/r/prachtwerk?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH7splA8YiIPfFJEpyCuG3IZeD1bbkiEVu34gN2sCp3lzGzI8epP74Ez3vCpQ_aem_3FiukBahR5MVPBmOXuRJ9Q",
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-10-21"
@@ -4877,6 +4864,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1558864804,
+    "title": "TÄRA",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/81256/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1671478202,
     "title": "Matthew and the Atlas",
     "date": "2026-11-29",
@@ -4888,6 +4888,19 @@
     "spotifyUrl": "",
     "source": "mikropol",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1897297009,
+    "title": "Grommet",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-OuqCMcB7xHuDgg7yxvY",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 753244516,
@@ -5020,30 +5033,17 @@
     "addedAt": "2026-11-20"
   },
   {
-    "id": 1558864804,
-    "title": "TÄRA",
-    "date": "2026-11-29",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81256/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 2064087764,
-    "title": "Little Miss Nasty + I Ya Toya",
+    "id": 2084343584,
+    "title": "Little Miss Nasty",
     "date": "2026-11-30",
     "time": "19:00",
     "locationId": 4,
     "type": "konzert",
-    "description": "With very special guest I Ya Toya",
+    "description": "Rock & Metal Burlesque live im Privatclub Berlin",
     "ticketUrl": "https://www.eventbrite.com/e/little-miss-nasty-tickets-1999714854962",
     "spotifyUrl": "",
     "source": "privatclub",
-    "addedAt": "2026-11-01"
+    "addedAt": "2026-11-21"
   },
   {
     "id": 347572009,
@@ -5144,7 +5144,7 @@
     "locationId": 38,
     "type": "konzert",
     "description": "┃ KEVIN ATWATER - Blush Red Tour┃ Support: BENJAMIN MARSHALL┇ 30. November 2026┇ Prachtwerk┋ Einlass 18:30h┋ Beginn…",
-    "ticketUrl": "https://loft.de/x/wbqc7?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETF2MVNWUFNDTmRGcm5PZlhpc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH-R9yfn98A7MzB4ONPlXXKo5CRzg3Vf5tbNhDaHbQrhOxPs8D1_RsPMhhdkO_aem_9xNgPUO5yaR358K9Bd6ydg",
+    "ticketUrl": "https://loft.de/x/wbqc7?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH9_EE0MsS3TuidKjNjrzDgR_uFRto--RnSh1NMcSyE7DzqqK0-JVWzOwvoD4_aem_UAF01iBwb19bvGxUkbfQlw",
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-08-17"
@@ -5228,6 +5228,32 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1596454733,
+    "title": "SHAKING HAND",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/95494-tickets-shaking-hand-post-rock-uk-schokoladen-berlin-am-30-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-18"
+  },
+  {
+    "id": 1682806312,
+    "title": "Yaeger",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82556/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1435576692,
     "title": "sic + Vittoria Assembri + Follia + Manuel Carbone (DJ-Set)",
     "date": "2026-11-30",
@@ -5288,32 +5314,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 1596454733,
-    "title": "SHAKING HAND",
-    "date": "2026-11-30",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/95494-tickets-shaking-hand-post-rock-uk-schokoladen-berlin-am-30-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-18"
-  },
-  {
-    "id": 1682806312,
-    "title": "Yaeger",
-    "date": "2026-11-30",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82556/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 563688363,
@@ -5835,6 +5835,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1393346423,
+    "title": "SABA LOU Rec Release!",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102624-tickets-saba-lou-rec-release-schokoladen-berlin-am-02-12-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-20"
+  },
+  {
     "id": 2078211446,
     "title": "Flo & Jere present: Binary Boy",
     "date": "2026-12-02",
@@ -5846,6 +5859,19 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-11-11"
+  },
+  {
+    "id": 859928620,
+    "title": "OSKAR HAAG",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/81794/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1352104029,
@@ -6012,32 +6038,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/pur-26/2026-12-02-2000",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1393346423,
-    "title": "SABA LOU Rec Release!",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102624-tickets-saba-lou-rec-release-schokoladen-berlin-am-02-12-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-20"
-  },
-  {
-    "id": 859928620,
-    "title": "OSKAR HAAG",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/81794/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-11-02"
   },
   {
@@ -6327,6 +6327,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1631437672,
+    "title": "THE WANTS",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99507-tickets-the-wants-nyc-post-punk-schokoladen-berlin-am-03-12-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-20"
+  },
+  {
     "id": 1360154713,
     "title": "Novulent - Live in Europe 2026",
     "date": "2026-12-03",
@@ -6364,6 +6377,18 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 731400958,
+    "title": "CITY SLANG XMAS - PARTY DOZEN LIVE",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "type": "party",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://vvk.link/yeuu5",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-18"
   },
   {
     "id": 466748354,
@@ -6441,31 +6466,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-27"
-  },
-  {
-    "id": 731400958,
-    "title": "CITY SLANG XMAS - PARTY DOZEN LIVE",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "type": "party",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://vvk.link/yeuu5",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-18"
-  },
-  {
-    "id": 1631437672,
-    "title": "THE WANTS",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99507-tickets-the-wants-nyc-post-punk-schokoladen-berlin-am-03-12-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-20"
   },
   {
     "id": 851899829,
@@ -6792,6 +6792,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 2036084627,
+    "title": "Bei Bedarf",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101361-tickets-bei-bedarf-punkrock-berlin-schokoladen-berlin-am-04-12-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-20"
+  },
+  {
     "id": 304416434,
     "title": "Aistė Orinaitė Trio – Traditional/Jazz",
     "date": "2026-12-04",
@@ -6932,19 +6945,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 2036084627,
-    "title": "Bei Bedarf",
-    "date": "2026-12-04",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101361-tickets-bei-bedarf-punkrock-berlin-schokoladen-berlin-am-04-12-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-20"
   },
   {
     "id": 1682714228,
@@ -7735,19 +7735,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 168945183,
-    "title": "When the Sun Hits",
-    "date": "2026-12-05",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-8/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 954988825,
     "title": "MICHAEL CANITROT",
     "date": "2026-12-05",
@@ -7771,6 +7758,19 @@
     "ticketUrl": "https://club.ritterbutzke.com/event/051226-DONDIABLO",
     "spotifyUrl": "",
     "source": "ritterbutzke",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 168945183,
+    "title": "When the Sun Hits",
+    "date": "2026-12-05",
+    "time": "22:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-8/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
     "addedAt": "2026-11-02"
   },
   {
@@ -8105,7 +8105,7 @@
     "locationId": 38,
     "type": "konzert",
     "description": "Join us at Prachtwerk for an intimate acoustic evening featuring three exceptional artists from the Lowswing Records…",
-    "ticketUrl": "https://rausgegangen.de/en/events/lowswing-all-stars-with-lori-lieberman-reema-alon-lotringer-0/?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETF2MVNWUFNDTmRGcm5PZlhpc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH4HKyLS_fXAKFlqtthC-EXQHg4ev-ZdK1E1atPSDqdVUyKbeeFPrA-j2JQsr_aem_Iv8F56P5-JxIzyGzBgDs6w",
+    "ticketUrl": "https://rausgegangen.de/en/events/lowswing-all-stars-with-lori-lieberman-reema-alon-lotringer-0/?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH1wSa94pi79ObEgTFhTJbGVZViVqfBJezP1TgnICNfEcs8p75WbGlwxQ4pDd_aem_v1G9gAKXeDukUH0-ushJ4A",
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-11-04"
@@ -8174,6 +8174,19 @@
     "spotifyUrl": "",
     "source": "urbanspree",
     "addedAt": "2026-11-21"
+  },
+  {
+    "id": 1839634458,
+    "title": "Seb Lowe",
+    "date": "2026-12-06",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82169/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1038850677,
@@ -8277,19 +8290,6 @@
     "spotifyUrl": "",
     "source": "rbb-sendesaal",
     "addedAt": "2026-11-20"
-  },
-  {
-    "id": 1839634458,
-    "title": "Seb Lowe",
-    "date": "2026-12-06",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82169/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1101789904,
@@ -8661,7 +8661,7 @@
     "locationId": 38,
     "type": "konzert",
     "description": "Some Voices presents: Glow - A Winter's SongbookA candlelit Christmas journey of musical re-imaginings, unexpected songs…",
-    "ticketUrl": "https://www.facebook.com/events/3156238357915836",
+    "ticketUrl": "https://app.somevoic.es/tickets?event=Glow%20Berlin%20(Sch%C3%B6neberg)&fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH5lWL72vg3VIVFuWNyA8zPvBegEmLLL-kcT-dbm__3iFnIwqd98Lz8SqdQ5I_aem_0mFmCDNv6PTNGEcsOjgmHw",
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-11-06"
@@ -8758,6 +8758,19 @@
     "addedAt": "2026-11-11"
   },
   {
+    "id": 1743949381,
+    "title": "DESINTERESSE + CRUSH OF SOULS",
+    "date": "2026-12-08",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82788/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 793835076,
     "title": "Dr. Khaled Ghattass",
     "date": "2026-12-08",
@@ -8821,19 +8834,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-10-14"
-  },
-  {
-    "id": 1743949381,
-    "title": "DESINTERESSE + CRUSH OF SOULS",
-    "date": "2026-12-08",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82788/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1908248274,
@@ -9070,6 +9070,19 @@
     "addedAt": "2026-11-07"
   },
   {
+    "id": 1911216848,
+    "title": "rémi.fr",
+    "date": "2026-12-09",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82760/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1718858193,
     "title": "Music Quiz",
     "date": "2026-12-09",
@@ -9158,19 +9171,6 @@
     "spotifyUrl": "",
     "source": "kunstfabrik-schlot",
     "addedAt": "2026-11-20"
-  },
-  {
-    "id": 1911216848,
-    "title": "rémi.fr",
-    "date": "2026-12-09",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82760/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 930857625,
@@ -10505,19 +10505,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 261913641,
-    "title": "Samsta + ?",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/samsta/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2074100650,
     "title": "Comedyflash",
     "date": "2026-12-12",
@@ -10529,6 +10516,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 261913641,
+    "title": "Samsta + ?",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/samsta/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 693167001,
@@ -11475,6 +11475,19 @@
     "addedAt": "2026-11-07"
   },
   {
+    "id": 643560769,
+    "title": "Beaks",
+    "date": "2026-12-15",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82617/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 111302381,
     "title": "Das Ilses Erika Weihnachtsspiel - INDIE JONES - Jäger des vergorenen Schatzes - PREMIERE",
     "date": "2026-12-15",
@@ -11551,19 +11564,6 @@
     "spotifyUrl": "",
     "source": "kunstfabrik-schlot",
     "addedAt": "2026-11-20"
-  },
-  {
-    "id": 643560769,
-    "title": "Beaks",
-    "date": "2026-12-15",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82617/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1822488679,
@@ -11786,6 +11786,19 @@
     "addedAt": "2026-11-11"
   },
   {
+    "id": 2065165565,
+    "title": "The Tubs",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82198/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 590560679,
     "title": "RAZZZAR",
     "date": "2026-12-16",
@@ -11913,19 +11926,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 2065165565,
-    "title": "The Tubs",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82198/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-11-02"
   },
   {
@@ -12111,6 +12111,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1990327964,
+    "title": "Xeno & Oaklander",
+    "date": "2026-12-17",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82409/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1512502820,
     "title": "Roncalli Weihnachtscircus 2026/2027",
     "date": "2026-12-17",
@@ -12211,19 +12224,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/die-fantastischen-vier-2/2026-12-17-2000",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1990327964,
-    "title": "Xeno & Oaklander",
-    "date": "2026-12-17",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82409/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-11-02"
   },
   {
@@ -12972,7 +12972,7 @@
     "locationId": 38,
     "type": "konzert",
     "description": "Patrick WolfThe Beast19.12.2026 - PrachtwerkDoors: 19:00 | Start: 20:00Tickets: Artist presale starts on 10.09.2026,…",
-    "ticketUrl": "https://www.greyzone-tickets.de/produkte/1362?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETF2MVNWUFNDTmRGcm5PZlhpc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH-bJKG1aIPvZ1EYqArPb254NZqSfrq2rJVwGEhFkVR78wBL0-SBeqQrmFY9A_aem_SOUgNscmgeCqv2mfSP9zDw",
+    "ticketUrl": "https://www.greyzone-tickets.de/produkte/1362?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH4DZ0nTDkYNE9zL9OYS5GlvUB8WhlvNNMjjsE2WVTrDaN67AOHYKBSGRbEWZ_aem_GzPwt8I5zvqpwLrPbzNoaA",
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-09-15"
@@ -16294,6 +16294,19 @@
     "addedAt": "2026-09-22"
   },
   {
+    "id": 1080202072,
+    "title": "Tonique & Man",
+    "date": "2027-01-14",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82234/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 315524591,
     "title": "Lawrence Fields Supersonic Trio",
     "date": "2027-01-14",
@@ -16318,19 +16331,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 1080202072,
-    "title": "Tonique & Man",
-    "date": "2027-01-14",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82234/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-04"
   },
   {
     "id": 1106255366,
@@ -16396,6 +16396,19 @@
     "spotifyUrl": "",
     "source": "columbiatheater",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 20130302,
+    "title": "Lust for Youth",
+    "date": "2027-01-15",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82782/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-11"
   },
   {
     "id": 1856394915,
@@ -16487,19 +16500,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 20130302,
-    "title": "Lust for Youth",
-    "date": "2027-01-15",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82782/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-11"
   },
   {
     "id": 1915281122,
@@ -17060,6 +17060,19 @@
     "addedAt": "2026-11-15"
   },
   {
+    "id": 1195600044,
+    "title": "Götz Widmann",
+    "date": "2027-01-19",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/71218",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 218714370,
     "title": "7:77 - Die Open Stage mit Andrea Baccomo",
     "date": "2027-01-19",
@@ -17175,6 +17188,19 @@
     "spotifyUrl": "",
     "source": "columbiatheater",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 964298814,
+    "title": "Götz Widmann",
+    "date": "2027-01-20",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/71221",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1640476213,
@@ -17318,6 +17344,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-15"
+  },
+  {
+    "id": 1545983973,
+    "title": "Eva Karl Faltermeier: Ding Dong",
+    "date": "2027-01-22",
+    "time": "19:30",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/75258",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1473985013,
@@ -17747,6 +17786,19 @@
     "addedAt": "2026-11-11"
   },
   {
+    "id": 1877130266,
+    "title": "Der durstige Pegasus",
+    "date": "2027-01-25",
+    "time": "19:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/lesung/2027-01-25/der-durstige-pegasus-28",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 364286375,
     "title": "Snooker",
     "date": "2027-01-25",
@@ -17784,6 +17836,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-11-15"
+  },
+  {
+    "id": 161871597,
+    "title": "ISKANDER MOON",
+    "date": "2027-01-26",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-26/iskander-moon-tour-2027",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1093707975,
@@ -17939,6 +18004,19 @@
     "spotifyUrl": "",
     "source": "privatclub",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1946281177,
+    "title": "Off the Rails #8: Av Freya & Vega Vi",
+    "date": "2027-01-28",
+    "time": "19:00",
+    "locationId": 35,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://badehaus-berlin.com/events/off-the-rails-8-av-freya-vega-vi/",
+    "spotifyUrl": "",
+    "source": "badehaus",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 95881728,
@@ -18188,6 +18266,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 930741842,
+    "title": "MØSTER!",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82499/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-15"
+  },
+  {
     "id": 823171364,
     "title": "STEVE NORMAN (von Spandau Ballet) & The Sleevz",
     "date": "2027-01-29",
@@ -18227,6 +18318,32 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1257147994,
+    "title": "Euroteuro | Magic Tour 2027",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-29/euroteuro-magic-tour-2027",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
+    "id": 602967097,
+    "title": "Yung FSK18 // BEASTMODE 2027",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/75897",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 2101645617,
     "title": "Max Goldt liest",
     "date": "2027-01-29",
@@ -18238,19 +18355,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 930741842,
-    "title": "MØSTER!",
-    "date": "2027-01-29",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82499/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-15"
   },
   {
     "id": 761977302,
@@ -18409,6 +18513,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 707277709,
+    "title": "GRIN",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82724/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-20"
+  },
+  {
     "id": 178704617,
     "title": "ZATE",
     "date": "2027-01-30",
@@ -18422,6 +18539,32 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 312830999,
+    "title": "IMMER WIEDER WIRSING | «Neue Dekadenz» Tour 2027",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/76866",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
+    "id": 1794532686,
+    "title": "TRANSMISSION  The Sound of Joy Division",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-30/transmission-the-sound-of-joy-division",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 424416208,
     "title": "JARED JAMES NICHOLS",
     "date": "2027-01-30",
@@ -18433,19 +18576,6 @@
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-10-21"
-  },
-  {
-    "id": 707277709,
-    "title": "GRIN",
-    "date": "2027-01-30",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82724/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-20"
   },
   {
     "id": 1687079560,
@@ -18824,6 +18954,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 583493057,
+    "title": "Dummy",
+    "date": "2027-02-04",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82690/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 372086788,
     "title": "Ina Müller und Band",
     "date": "2027-02-04",
@@ -18863,6 +19006,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1649776018,
+    "title": "Jakob Schwerdtfeger: Meisterwerk",
+    "date": "2027-02-04",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/63979",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 708496899,
     "title": "Havel Slam - Geburtstag",
     "date": "2027-02-04",
@@ -18874,19 +19030,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 583493057,
-    "title": "Dummy",
-    "date": "2027-02-04",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82690/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1272292194,
@@ -19082,6 +19225,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 1384764295,
+    "title": "Michael Krebs: Optimismus. Jetzt stark reduziert!",
+    "date": "2027-02-05",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72668",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1117271180,
@@ -19380,6 +19536,19 @@
     "spotifyUrl": "",
     "source": "lark",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1158493765,
+    "title": "Ductape | ,,Faded Flowers“ Tour 2027",
+    "date": "2027-02-06",
+    "time": "20:30",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/ductape-faded-flowers-tour-202627-moritzbastei-21610694/?affiliate=EYA",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1828364286,
@@ -19758,6 +19927,19 @@
     "addedAt": "2026-09-29"
   },
   {
+    "id": 1389585568,
+    "title": "Primitive Ring | Support: Scott Hepple and Sun Band",
+    "date": "2027-02-09",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/74246",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 159546814,
     "title": "Lukas Mondlicht + ADVAN",
     "date": "2027-02-10",
@@ -19791,7 +19973,7 @@
     "locationId": 38,
     "type": "konzert",
     "description": "Hayley Reardon mesmerizes audiences by creating a space of soulful connection. As Indie Boulevard writes, “Hayley’s…",
-    "ticketUrl": "https://rausgegangen.de/en/events/hayley-reardon-live-at-prachtwerk-0/?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETF2MVNWUFNDTmRGcm5PZlhpc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHwV2inWW1gPYgLMRPYDVOCECvdClaVEwOSpCYhTmK1Bx0DE0uBVnch0OcGZK_aem_4DeAPpo3QbhpVMolnm78Vg",
+    "ticketUrl": "https://rausgegangen.de/en/events/hayley-reardon-live-at-prachtwerk-0/?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH4Xyjc3Y_-8bCDiZB5CiW7mZ3-yumfj1Jc7QXbsytsJnL51W-jj-7o_hNoq4_aem_5xx889YH1U4Wl616ffEZyw",
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-09-09"
@@ -19888,6 +20070,19 @@
     "addedAt": "2026-11-03"
   },
   {
+    "id": 2066887851,
+    "title": "Metaklapa | The Choir of Beasts Live 2027",
+    "date": "2027-02-10",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-02-10/metaklapa-the-choir-of-beasts-live-2027",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 2082193998,
     "title": "Lutzilla",
     "date": "2027-02-10",
@@ -19934,7 +20129,7 @@
     "locationId": 38,
     "type": "konzert",
     "description": "PURE REASON REVOLUTION | PRACHTWERK BERLIN | 11 FEBRUARY 2027Pure Reason Revolution return to Berlin for a headline show…",
-    "ticketUrl": "https://rausgegangen.de/en/events/pure-revolution-terrifying-angels-album-tour-berlin-0/?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETF2MVNWUFNDTmRGcm5PZlhpc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHzHRz4dHcCf2NfLJC7hSuoyon7qNp6sHRoCJSg1hOJIalWUzj-ygnC8mqJgp_aem_Z0GgD_TUq-CTcnD7Y5Qxew",
+    "ticketUrl": "https://rausgegangen.de/en/events/pure-revolution-terrifying-angels-album-tour-berlin-0/?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH-d_XGnQgDL6lNconK4ddvbLa5DLJ-xPGgp9_ONLF2TCHj9erPTeMVOfr6E1_aem_280Mx-0rmUOxl8zHzR73rw",
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-09-27"
@@ -20044,6 +20239,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1056675669,
+    "title": "ENEMY INSIDE | EUROPEAN TOUR 2027 | Support: HALFLIVES",
+    "date": "2027-02-11",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/event/enemy-inside-european-tour-2027-moritzbastei-22030797/?affiliate=TUG",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 1903773521,
     "title": "André Kubiczek",
     "date": "2027-02-11",
@@ -20135,6 +20343,19 @@
     "addedAt": "2026-08-28"
   },
   {
+    "id": 108295257,
+    "title": "DER LEIPZIGER ZAUBERSLAM",
+    "date": "2027-02-12",
+    "time": "19:30",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/76957",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 2132771366,
     "title": "Dirk Zöllner & Manuel Schmid",
     "date": "2027-02-12",
@@ -20200,6 +20421,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 987075514,
+    "title": "In Color",
+    "date": "2027-02-12",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82399/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 2016014944,
     "title": "Tutty Tran",
     "date": "2027-02-12",
@@ -20226,17 +20460,17 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 987075514,
-    "title": "In Color",
+    "id": 489708816,
+    "title": "error | Das Beste vom Schlechten Tour 2027",
     "date": "2027-02-12",
     "time": "20:00",
-    "locationId": 24,
+    "locationId": 18,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82399/",
+    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-02-12/error-das-beste-vom-schlechten-tour-2027",
     "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1871617290,
@@ -20395,6 +20629,19 @@
     "addedAt": "2026-11-15"
   },
   {
+    "id": 1347874824,
+    "title": "Ugly",
+    "date": "2027-02-13",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/83004/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1886932225,
     "title": "Tutty Tran",
     "date": "2027-02-13",
@@ -20447,17 +20694,17 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1347874824,
-    "title": "Ugly",
+    "id": 1595976711,
+    "title": "Philipp Leinenbach",
     "date": "2027-02-13",
     "time": "20:00",
-    "locationId": 24,
+    "locationId": 18,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/83004/",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/72476",
     "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 516103525,
@@ -20603,6 +20850,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 274006905,
+    "title": "The Legendary Pink Dots",
+    "date": "2027-02-14",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77449",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 484700396,
     "title": "Ben Camden",
     "date": "2027-02-15",
@@ -20744,6 +21004,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 268640160,
+    "title": "PAUL SIES | Ficken und Heulen Tour 2027",
+    "date": "2027-02-16",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/74250",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1344890112,
@@ -21225,6 +21498,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 552465584,
+    "title": "SPONTY.",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82295/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1995011959,
     "title": "Dominguinho",
     "date": "2027-02-19",
@@ -21275,19 +21561,6 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 552465584,
-    "title": "SPONTY.",
-    "date": "2027-02-19",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82295/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1786829016,
@@ -21742,6 +22015,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 433089045,
+    "title": "Moyka",
+    "date": "2027-02-21",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82432/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 657643681,
     "title": "Beth Orton",
     "date": "2027-02-21",
@@ -21765,19 +22051,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/rush-berlin/2027-02-21-2000",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 433089045,
-    "title": "Moyka",
-    "date": "2027-02-21",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82432/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-11-02"
   },
   {
@@ -22015,6 +22288,18 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 824990872,
+    "title": "COCON",
+    "date": "2027-02-24",
+    "time": "19:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://dice.fm/event/8edln7-cocon-la-vita-bella-tour-berlin-24th-feb-monarch-bar-berlin-tickets?lng=de",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-18"
+  },
+  {
     "id": 1829706419,
     "title": "Daisychain",
     "date": "2027-02-24",
@@ -22026,18 +22311,6 @@
     "spotifyUrl": "",
     "source": "inselberlin",
     "addedAt": "2026-11-04"
-  },
-  {
-    "id": 824990872,
-    "title": "COCON",
-    "date": "2027-02-24",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://dice.fm/event/8edln7-cocon-la-vita-bella-tour-berlin-24th-feb-monarch-bar-berlin-tickets?lng=de",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-18"
   },
   {
     "id": 676191121,
@@ -22261,6 +22534,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1184307160,
+    "title": "THE HEADLINES",
+    "date": "2027-02-25",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82246/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1780756726,
     "title": "Bloodred Hourglass + Byrmir + Pridian",
     "date": "2027-02-25",
@@ -22311,19 +22597,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 1184307160,
-    "title": "THE HEADLINES",
-    "date": "2027-02-25",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82246/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 823395615,
@@ -22482,6 +22755,19 @@
     "addedAt": "2026-10-21"
   },
   {
+    "id": 1847156046,
+    "title": "Night Tempo",
+    "date": "2027-02-26",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82361/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1836774464,
     "title": "Holiday on Ice",
     "date": "2027-02-26",
@@ -22531,19 +22817,6 @@
     "ticketUrl": "https://larkberlin.com/event/neov/",
     "spotifyUrl": "",
     "source": "lark",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1847156046,
-    "title": "Night Tempo",
-    "date": "2027-02-26",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82361/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-11-02"
   },
   {
@@ -22871,6 +23144,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 451144863,
+    "title": "error",
+    "date": "2027-02-28",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82435/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1111942313,
     "title": "soak",
     "date": "2027-02-28",
@@ -22895,19 +23181,6 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 451144863,
-    "title": "error",
-    "date": "2027-02-28",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82435/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 176526690,
@@ -23053,6 +23326,19 @@
     "addedAt": "2026-11-11"
   },
   {
+    "id": 2051798111,
+    "title": "Ciarán (Bearface)",
+    "date": "2027-03-03",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/83041/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-15"
+  },
+  {
     "id": 53881279,
     "title": "Midge Ure and Band Electronica",
     "date": "2027-03-03",
@@ -23076,19 +23362,6 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 2051798111,
-    "title": "Ciarán (Bearface)",
-    "date": "2027-03-03",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/83041/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-15"
   },
   {
     "id": 1610950995,
@@ -23169,6 +23442,19 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 1996700639,
+    "title": "SHXCXCHCXSH",
+    "date": "2027-03-04",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82678/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1739405861,
     "title": "SASHA KEABLE",
     "date": "2027-03-04",
@@ -23217,19 +23503,6 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-11-18"
-  },
-  {
-    "id": 1996700639,
-    "title": "SHXCXCHCXSH",
-    "date": "2027-03-04",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82678/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1045063782,
@@ -23665,7 +23938,7 @@
     "locationId": 38,
     "type": "konzert",
     "description": "┃ STEINZA - \"Steinza Was Here\"-Tour┇ 6. März 2027┇ Prachtwerk┋ Einlass 19h┋ Beginn 20h loft.de/event/20270306-steinza/…",
-    "ticketUrl": "https://loft.de/x/ryp02?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETF2MVNWUFNDTmRGcm5PZlhpc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH-YTDM7Eh8xuVz3od3HrAd7mH2un4qxr7YsL5On9SJJk60Wl3y2TW7erhtl8_aem_zggLgVf7fsA1phjkJc5Yog",
+    "ticketUrl": "https://loft.de/x/ryp02?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH3RMRGjPuUHxrsH657xL8EoaWOjgLv013v5gLqiC4REeTRrXthGk0cT0aWbq_aem_8pD1DUGgsCMFdX5C_8lsRQ",
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-11-01"
@@ -24002,7 +24275,7 @@
     "locationId": 38,
     "type": "konzert",
     "description": "Robin VehrsSchlorpfian LIVE!09.03.2027, Berlin, PrachtwerkEinlass: 19:00Beginn: 20:00„Die Robin Vehrs liest Schlorpfian…",
-    "ticketUrl": "https://tickets.190a.de/event/robin-vehrs-live-in-berlin-d7g9q5?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETF2MVNWUFNDTmRGcm5PZlhpc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH2vBXShqeRInjxv1hOdEO97m9P_PoxJ8UL8eonbHgjN6BvwIRiyuoAFGaooY_aem_taxcLqDpT1tlt3N-r33hmA",
+    "ticketUrl": "https://tickets.190a.de/event/robin-vehrs-live-in-berlin-d7g9q5?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH246-N2EfS20ildx0JGmaiYlbgu-v8TiXmy_xJEmyuM8OMYd2s4p2IYiiuAk_aem_tGkrnECUuBlo0lkFur3tXg",
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-08-17"
@@ -24241,6 +24514,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 426845467,
+    "title": "LA Priest",
+    "date": "2027-03-10",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/83059/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 133642644,
     "title": "Evil Invaders + Heathen + Exhorder",
     "date": "2027-03-10",
@@ -24304,19 +24590,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 426845467,
-    "title": "LA Priest",
-    "date": "2027-03-10",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/83059/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 854085152,
@@ -24436,6 +24709,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 433600874,
+    "title": "BIG WETT",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/83293/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-20"
+  },
+  {
     "id": 1129907631,
     "title": "CULT OF LUNA",
     "date": "2027-03-11",
@@ -24498,19 +24784,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 433600874,
-    "title": "BIG WETT",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/83293/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-20"
   },
   {
     "id": 593311935,
@@ -24835,6 +25108,19 @@
     "addedAt": "2026-11-11"
   },
   {
+    "id": 958633345,
+    "title": "MORITZ SIMON GEIST",
+    "date": "2027-03-13",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82460/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 2051117558,
     "title": "Nataly Aukar",
     "date": "2027-03-13",
@@ -24949,19 +25235,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-20"
-  },
-  {
-    "id": 958633345,
-    "title": "MORITZ SIMON GEIST",
-    "date": "2027-03-13",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82460/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 946427060,
@@ -25093,6 +25366,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 654529487,
+    "title": "NENE HEROINE",
+    "date": "2027-03-14",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/83000/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-20"
+  },
+  {
     "id": 780197059,
     "title": "Kalandra",
     "date": "2027-03-14",
@@ -25157,19 +25443,6 @@
     "addedAt": "2026-09-27"
   },
   {
-    "id": 654529487,
-    "title": "NENE HEROINE",
-    "date": "2027-03-14",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/83000/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-20"
-  },
-  {
     "id": 930931243,
     "title": "International Ocean Film Tour Volume 13",
     "date": "2027-03-15",
@@ -25196,19 +25469,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1151086375,
-    "title": "Medium Build",
-    "date": "2027-03-15",
-    "time": "20:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/noapp/event/medium-build-frannz-club-22078929",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-09-16"
-  },
-  {
     "id": 1806126518,
     "title": "Tomode",
     "date": "2027-03-15",
@@ -25220,6 +25480,19 @@
     "spotifyUrl": "",
     "source": "kantine",
     "addedAt": "2026-11-03"
+  },
+  {
+    "id": 1151086375,
+    "title": "Medium Build",
+    "date": "2027-03-15",
+    "time": "20:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim.de/noapp/event/medium-build-frannz-club-22078929",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-09-16"
   },
   {
     "id": 1664577166,
@@ -25610,6 +25883,19 @@
     "addedAt": "2026-09-02"
   },
   {
+    "id": 536680483,
+    "title": "Agassi",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82636/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1920713986,
     "title": "Jerry Vsan",
     "date": "2027-03-18",
@@ -25659,19 +25945,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 536680483,
-    "title": "Agassi",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82636/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-11-02"
   },
   {
@@ -26864,6 +27137,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1817891091,
+    "title": "Verifiziert",
+    "date": "2027-03-31",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/83274/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1051507898,
     "title": "TAHNEE",
     "date": "2027-03-31",
@@ -26901,19 +27187,6 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 1817891091,
-    "title": "Verifiziert",
-    "date": "2027-03-31",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/83274/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-04"
   },
   {
     "id": 940002658,
@@ -27601,18 +27874,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 511440004,
-    "title": "herbst",
-    "date": "2027-04-06",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 34,
-    "source": "hole44",
-    "ticketUrl": "https://hole-berlin.de/event/2027-04-06-herbst/",
-    "spotifyUrl": "",
-    "addedAt": "2026-10-14"
-  },
-  {
     "id": 1075133067,
     "title": "Wednesday Campanella",
     "date": "2027-04-06",
@@ -27624,6 +27885,18 @@
     "spotifyUrl": "",
     "source": "kantine",
     "addedAt": "2026-11-11"
+  },
+  {
+    "id": 511440004,
+    "title": "herbst",
+    "date": "2027-04-06",
+    "time": "20:00",
+    "type": "konzert",
+    "locationId": 34,
+    "source": "hole44",
+    "ticketUrl": "https://hole-berlin.de/event/2027-04-06-herbst/",
+    "spotifyUrl": "",
+    "addedAt": "2026-10-14"
   },
   {
     "id": 1476421563,
@@ -28376,6 +28649,18 @@
     "addedAt": "2026-11-15"
   },
   {
+    "id": 1001964720,
+    "title": "BABA BLAKES",
+    "date": "2027-04-11",
+    "time": "19:00",
+    "type": "konzert",
+    "locationId": 7,
+    "source": "monarch",
+    "ticketUrl": "https://www.eventbrite.de/e/baba-blakes-monarch-berlin-tickets-2001903405977?aff=odcleoeventsincollection",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1229780829,
     "title": "Queen Mahoro",
     "date": "2027-04-11",
@@ -28389,18 +28674,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1001964720,
-    "title": "BABA BLAKES",
-    "date": "2027-04-11",
-    "time": "19:00",
-    "type": "konzert",
-    "locationId": 7,
-    "source": "monarch",
-    "ticketUrl": "https://www.eventbrite.de/e/baba-blakes-monarch-berlin-tickets-2001903405977?aff=odcleoeventsincollection",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1009193758,
     "title": "ISLANDMAN",
     "date": "2027-04-11",
@@ -28412,6 +28685,19 @@
     "spotifyUrl": "",
     "source": "gretchen",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 845939283,
+    "title": "Cowboy Hunters",
+    "date": "2027-04-11",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/83174/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-11"
   },
   {
     "id": 1472949841,
@@ -28451,19 +28737,6 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 845939283,
-    "title": "Cowboy Hunters",
-    "date": "2027-04-11",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/83174/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-11"
   },
   {
     "id": 1438179319,
@@ -28602,7 +28875,7 @@
     "locationId": 38,
     "type": "konzert",
     "description": "“Etta,” Paul Plut’s fourth solo album, tells the story of his great-aunt, who was born in 1941 with a disability into a…",
-    "ticketUrl": "https://rausgegangen.de/en/events/paul-plut-etta-album-konzert-0/?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETF2MVNWUFNDTmRGcm5PZlhpc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH5jJ9OaiGJc2O_ihVj2E3WtWL4WrpUBdUHNzprqaAnBC36Ht2BDMk-TLl8NY_aem_sMALNM_Dzy6uvBl8N7iqgg",
+    "ticketUrl": "https://rausgegangen.de/en/events/paul-plut-etta-album-konzert-0/?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHxRa0SV8O5CK5jQczGF6pergBg3xwY7Viq56wZlkeW6I7XJv0qDPT3gHRUrD_aem_dhlgdDrjNkpqv6PO3m02wg",
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-11-11"
@@ -28712,6 +28985,19 @@
     "addedAt": "2026-11-06"
   },
   {
+    "id": 626066321,
+    "title": "Jonah Yano",
+    "date": "2027-04-14",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/83131/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-20"
+  },
+  {
     "id": 46725974,
     "title": "RY X",
     "date": "2027-04-14",
@@ -28774,19 +29060,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 626066321,
-    "title": "Jonah Yano",
-    "date": "2027-04-14",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/83131/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-20"
   },
   {
     "id": 2126716605,
@@ -29371,6 +29644,19 @@
     "addedAt": "2026-09-09"
   },
   {
+    "id": 226525307,
+    "title": "pippa",
+    "date": "2027-04-19",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82687/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1798618463,
     "title": "ASHE",
     "date": "2027-04-19",
@@ -29432,19 +29718,6 @@
     "ticketUrl": "https://www.uber-arena.de/en/events/detail/thomas-bergersen/2027-04-19-2000",
     "spotifyUrl": "",
     "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 226525307,
-    "title": "pippa",
-    "date": "2027-04-19",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82687/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-11-02"
   },
   {
@@ -29668,6 +29941,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1588498983,
+    "title": "Dent May",
+    "date": "2027-04-22",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82626/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1706762679,
     "title": "SHOUT OUT LOUDS",
     "date": "2027-04-22",
@@ -29731,19 +30017,6 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-11-20"
-  },
-  {
-    "id": 1588498983,
-    "title": "Dent May",
-    "date": "2027-04-22",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82626/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1616730609,
@@ -30251,6 +30524,19 @@
     "addedAt": "2026-11-20"
   },
   {
+    "id": 920572237,
+    "title": "Charm of Finches - \"Some Fictional Place\" Album Tour",
+    "date": "2027-04-28",
+    "time": "19:30",
+    "locationId": 38,
+    "type": "konzert",
+    "description": "Melbourne sister duo Charm of Finches delivers intricate indie-folk that is simultaneously graceful and darkly…",
+    "ticketUrl": "https://rausgegangen.de/events/charm-of-finches-some-fictional-place-tour-0/?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgVicmlkETFMVEpidEpOQlFkb0Y4NDU1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH1fYEP5iROWA-zAx27bknVe9a90d7LqdzR2NmzX3nuQO5Pxv9jZJM7xmrzDp_aem_ZrfoopuHR6ee9q71ndhRNA",
+    "spotifyUrl": "",
+    "source": "prachtwerk",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 1482676214,
     "title": "Marc Broussard",
     "date": "2027-04-28",
@@ -30262,6 +30548,19 @@
     "spotifyUrl": "",
     "source": "columbiatheater",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 372156199,
+    "title": "OSLO TWINS",
+    "date": "2027-04-28",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82592/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-11"
   },
   {
     "id": 1803770209,
@@ -30327,19 +30626,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 372156199,
-    "title": "OSLO TWINS",
-    "date": "2027-04-28",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82592/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-11"
   },
   {
     "id": 40724369,
@@ -30728,6 +31014,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1365045317,
+    "title": "Boogie Belgique",
+    "date": "2027-05-04",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/83030/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-15"
+  },
+  {
     "id": 1444188964,
     "title": "FLORENCE ROAD",
     "date": "2027-05-04",
@@ -30751,19 +31050,6 @@
     "ticketUrl": "https://landstreicher-konzerte.de/konzerte/luca-leander-wolz-b-27",
     "spotifyUrl": "",
     "source": "peter-edel",
-    "addedAt": "2026-11-15"
-  },
-  {
-    "id": 1365045317,
-    "title": "Boogie Belgique",
-    "date": "2027-05-04",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/83030/",
-    "spotifyUrl": "",
-    "source": "kantine",
     "addedAt": "2026-11-15"
   },
   {
@@ -30920,6 +31206,19 @@
     "spotifyUrl": "",
     "source": "conne-island",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1597063336,
+    "title": "BOOSHLE G + NEON DREAMS",
+    "date": "2027-05-07",
+    "time": "19:00",
+    "locationId": 4,
+    "type": "konzert",
+    "description": "Love Is Free | Support: NEON DREAMS",
+    "ticketUrl": "https://www.eventim.de/noapp/event/booshle-g-privatclub-22328683/?affiliate=SZ3&utm_campaign=SzeneTickets+GmbH&utm_source=SZ3&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "privatclub",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 209162554,
@@ -31283,6 +31582,19 @@
     "addedAt": "2026-11-15"
   },
   {
+    "id": 2114778077,
+    "title": "BirdPen",
+    "date": "2027-05-12",
+    "time": "19:00",
+    "locationId": 4,
+    "type": "konzert",
+    "description": "Think Of Nice Things - Tour 2027",
+    "ticketUrl": "https://www.eventim.de/noapp/event/birdpen-think-of-nice-things-tour-2027-privatclub-22397633/?affiliate=KSG&utm_campaign=schoneberg&utm_source=KSG&utm_medium=dp",
+    "spotifyUrl": "",
+    "source": "privatclub",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 751403605,
     "title": "RIAN",
     "date": "2027-05-12",
@@ -31554,6 +31866,19 @@
     "addedAt": "2026-09-16"
   },
   {
+    "id": 1079295672,
+    "title": "Snayx",
+    "date": "2027-05-18",
+    "time": "20:00",
+    "locationId": 24,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.berghain.berlin/de/event/82777/",
+    "spotifyUrl": "",
+    "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 2032939941,
     "title": "7:77 - Die Open Stage mit Andrea Baccomo",
     "date": "2027-05-18",
@@ -31578,19 +31903,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 1079295672,
-    "title": "Snayx",
-    "date": "2027-05-18",
-    "time": "20:00",
-    "locationId": 24,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.berghain.berlin/de/event/82777/",
-    "spotifyUrl": "",
-    "source": "kantine",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1609177126,
@@ -31916,6 +32228,18 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-09-29"
+  },
+  {
+    "id": 500361343,
+    "title": "Allie Sherlock",
+    "date": "2027-05-24",
+    "time": "20:00",
+    "type": "konzert",
+    "locationId": 34,
+    "source": "hole44",
+    "ticketUrl": "https://hole-berlin.de/event/2027-05-24-allie-sherlock/",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1744012080,
