@@ -67,9 +67,12 @@ export async function loadManualEvents() {
   }))
 }
 
-// Lokales Datum als YYYY-MM-DD (toISOString wäre UTC: in Berlin zwischen 0 und 2 Uhr "gestern")
+// Lokales Datum als YYYY-MM-DD (toISOString wäre UTC: in Berlin zwischen 0 und 2 Uhr "gestern").
+// Von Hand statt toLocaleDateString: das läuft je Event im Radar-Abgleich (isConcertOver, 31 x 2700 Aufrufe) und
+// Intl-Formatieren ist in Safari so langsam, dass das iPhone beim Start ~4 s hing
 export function localToday() {
-  return new Date().toLocaleDateString('sv-SE')
+  const d = new Date()
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
 }
 
 export async function loadBookmarks() {

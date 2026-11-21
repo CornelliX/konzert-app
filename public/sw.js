@@ -5,7 +5,8 @@ self.addEventListener('install', e => {
   self.skipWaiting()
 })
 self.addEventListener('activate', e => {
-  e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE && k !== 'lebe-photos' && k !== EVENTS_CACHE).map(k => caches.delete(k)))))
+  // Gleiche Domain wie CineLords (geteilter Cache-Speicher): nur eigene alte App-Caches löschen (lebe-photos/lebe-events bleiben)
+  e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith('konzert-') && k !== CACHE).map(k => caches.delete(k)))))
   self.clients.claim()
 })
 self.addEventListener('fetch', e => {

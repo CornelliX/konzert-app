@@ -4,8 +4,11 @@ import { resizeToJpeg, primePhoto, photoUrl, isPhotoPath } from './photos.js'
 
 // ISO-Datum + HH:MM sortiert als String korrekt; new Date(date + 'T' + time) wäre bei Events ohne
 // Uhrzeit "Invalid Date" (NaN im Vergleich) und würde die Reihenfolge durcheinanderbringen
+// Einfacher Textvergleich statt localeCompare: ISO-Datum/-Zeit sortieren so genauso, und Intl-Vergleiche sind in Safari
+// teuer (die Event-Liste sortiert ~2700 Einträge)
 function byDateTime(a, b) {
-  return (a.date + (a.time || '00:00')).localeCompare(b.date + (b.time || '00:00'))
+  const x = a.date + (a.time || '00:00'), y = b.date + (b.time || '00:00')
+  return x < y ? -1 : x > y ? 1 : 0
 }
 
 function esc(s) {
