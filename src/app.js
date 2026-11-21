@@ -209,7 +209,7 @@ function onGlobalClick(e) {
   if (t.closest?.('[data-open-help]')) openHelp()
 }
 
-const C64_MIN_MS = 1850   // so lange mindestens steht das C64-Intro (+ 0,15 s Ausblenden = ca. 2 s)
+const C64_MIN_MS = 1350   // so lange mindestens steht das C64-Intro (+ 0,15 s Ausblenden = ca. 1,5 s)
 let appReady = false
 let eventsUpdatePending = false
 
@@ -670,7 +670,7 @@ function renderHeader(inModal = false) {
           </h1>
         </div>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-          <div class="syne text-right header-tagline" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:min(0.52em, 1.95vw); line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${firstRender ? 'animation:tagline-appear 1.5s ease 3.5s both;' : ''}">
+          <div class="syne text-right header-tagline" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:min(0.52em, 1.95vw); line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${firstRender ? 'animation:tagline-appear 1.5s ease 3s both;' : ''}">
             KONZERTE UND PARTYS<br>IN BERLIN UND LEIPZIG
           </div>
         </div>

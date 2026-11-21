@@ -122,7 +122,7 @@ body.intro-on .title-glow-wrap, body.intro-on .title-glow, body.intro-on .header
   87%  { filter: drop-shadow(0 0 3px rgba(192,132,252,0.2)) drop-shadow(0 0 5px rgba(168,85,247,0.1)); }
   100% { filter: drop-shadow(0 0 1px rgba(168,85,247,0))   drop-shadow(0 0 1px rgba(168,85,247,0)); }
 }
-.title-glow-wrap { animation: title-glow-filter 2.5s linear 1s 1 both; }
+.title-glow-wrap { animation: title-glow-filter 2.5s linear 0.5s 1 both; }
 .title-glow {
   background: linear-gradient(90deg,
     #6366f1  0%,
@@ -139,7 +139,7 @@ body.intro-on .title-glow-wrap, body.intro-on .title-glow, body.intro-on .header
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  animation: title-sweep 2.5s linear 1s 1 both;
+  animation: title-sweep 2.5s linear 0.5s 1 both;
 }
 .title-glow-static {
   background: linear-gradient(90deg, #6366f1 0%, #a855f7 55%, #c026d3 100%);
