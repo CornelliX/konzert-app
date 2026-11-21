@@ -209,7 +209,6 @@ function onGlobalClick(e) {
   if (t.closest?.('[data-open-help]')) openHelp()
 }
 
-const C64_MIN_MS = 400   // so lange mindestens steht das C64-Intro (+ 0,4 s Ausblenden = ca. 0,8 s)
 let appReady = false
 let eventsUpdatePending = false
 
@@ -274,7 +273,6 @@ export async function renderApp(el) {
     <div id="app-modals"></div>
     <div id="bottom-nav" style="position:fixed; bottom:0; left:0; right:0; z-index:40;"></div>
   `
-  let introStart = performance.now()
   // Schriften schon während des Intros laden (sonst erscheinen die Texte der App erst nach dem Ausblenden, weil der
   // Browser sie erst beim ersten Gebrauch holt); das Intro wartet nicht extra darauf
   new Promise(done => {
@@ -283,59 +281,30 @@ export async function renderApp(el) {
     if (!css || css.sheet) load()
     else css.addEventListener('load', load, { once: true })
   })
-  const isReload = sessionStorage.getItem('lebe-loaded')
-  if (!isReload) {
-    document.getElementById('app-inner').innerHTML = renderSkeleton()
-    document.body.classList.add('intro-on')
-    // Mindestlaufzeit erst ab dem Bild zählen, in dem das Intro erscheint (vorher rechnet die Seite noch bis zu ~0,2 s)
-    requestAnimationFrame(() => { introStart = performance.now() })
-    setTimeout(() => document.body.classList.remove('intro-on'), 10000)   // Sicherung
-  }
-  // Das C64-Intro steht nur, bis die Events da sind (aus dem Gerätespeicher, siehe sw.js). Der Rest (Login prüfen,
-  // Merkliste, Radar, History aus Supabase) lädt danach im Hintergrund: erstes Zeichnen mit dem lokal gespeicherten
-  // Stand von Merkliste und Anmeldung, siehe loadAccountData().
+  // Das C64-Intro (index.html) steht konstant 2 s; bis dahin müssen nur die Events da sein (aus dem Gerätespeicher,
+  // siehe sw.js). Der Rest (Login prüfen, Merkliste, Radar, History aus Supabase) lädt danach im Hintergrund: erstes
+  // Zeichnen mit dem lokal gespeicherten Stand von Merkliste und Anmeldung, siehe loadAccountData().
   currentUser = peekUser()
   events = await getEvents()
   sessionStorage.setItem('lebe-loaded', '1')
   // Tailwind (CDN, async) sollte da sein, bevor das Intro die fertige Seite freigibt, sonst blitzt sie kurz unformatiert auf; nur kurz abwarten (vorher bis zu 2 s)
   for (let i = 0; !window.tailwind && i < 6; i++) await new Promise(r => setTimeout(r, 50))   // höchstens 0,3 s, nie länger als das Intro selbst
-  const c64El = document.querySelector('.c64-border')
-  if (c64El) container.appendChild(c64El)
   render()
   requestAnimationFrame(() => window.scrollTo(0, 0))
   appReady = true
+  // Falls das Intro auf die App wartet (index.html): erst ausblenden, wenn die Seite wieder flüssig Bilder liefert
+  // (3 Bilder in Folge < 50 ms), höchstens 1 s; direkt nach dem Zeichnen der Liste stockt sie sonst und das Ausblenden springt
+  const settle = (last, smooth, until) => requestAnimationFrame(t => {
+    smooth = t - last < 50 ? smooth + 1 : 0
+    if (smooth >= 3 || t > until) window.__introRelease?.()
+    else settle(t, smooth, until)
+  })
+  requestAnimationFrame(t => settle(t, 0, t + 1000))
   // Nachladen, ohne dass der Start darauf wartet: Legacy-Tabelle manual_events (derzeit leer) und eine inzwischen
   // eingetroffene Aktualisierung der Events (siehe sw.js)
   loadManualEvents().then(m => { if (m.length) { events = [...events, ...m]; refreshAfterEventsChange() } }).catch(() => {})
   if (eventsUpdatePending) applyEventsUpdate()
   loadAccountData().catch(() => {})
-  // Mindestlaufzeit des Intros (ab Einblenden): sonst blitzt es bei gespeicherten Daten nur kurz auf und wirkt abgehackt
-  if (c64El) {
-    const left = C64_MIN_MS - (performance.now() - introStart)
-    if (left > 0) await new Promise(r => setTimeout(r, left))
-  }
-  if (c64El) {
-    c64El.style.opacity = '1'
-    // Die App selbst lädt inzwischen (Netzwerk + Render) in ca. 1s - das C64-Intro sollte
-    // diese Zeit überbrücken, nicht selbst noch draufsatteln. Früher 0.6s Fade + 800ms
-    // Fallback, das hängte nach fertigem Laden nochmal spürbar Zeit an. Jetzt kürzer.
-    c64El.style.transition = 'opacity 0.4s ease-in-out'   // weich überblenden (0,15 s wirkte abgehackt)
-    requestAnimationFrame(() => {
-      // ponytail: Diagnose fürs iPhone (Zeiten ab Seitenaufruf), steht unten in der Anleitung; entfernen, sobald das Intro passt
-      const nav = performance.getEntriesByType('navigation')[0]
-      saveData('startTiming', { html: nav?.responseEnd || 0, intro: introStart, fade: performance.now(), at: Date.now() })
-      c64El.style.opacity = '0'
-      document.body.classList.remove('intro-on')   // jetzt starten die Glow-Animationen im Header
-      // Sofort klick-durchlässig machen, sobald das Ausblenden beginnt - so kann das
-      // fixed/z-index:9999-Element nie Klicks blockieren, selbst falls transitionend
-      // ausbleibt (reduced-motion, Hintergrund-Tab, o.ä.)
-      c64El.style.pointerEvents = 'none'
-      const removeC64 = () => c64El.remove()
-      c64El.addEventListener('transitionend', removeC64, { once: true })
-      // Fallback: Element in jedem Fall entfernen, auch wenn transitionend nie feuert
-      setTimeout(removeC64, 600)
-    })
-  }
 }
 
 // bm: bereits geladene Lesezeichen (Start lädt sie parallel zu den Events), sonst wird hier geladen
@@ -666,7 +635,7 @@ function render() {
 // inModal: Kopie im Radar-Modal - ohne id (die gehört dem Header der Hauptansicht, siehe Scroll-Fade)
 function renderHeader(inModal = false) {
   const firstRender = !titleAnimated
-  if (!document.body.classList.contains('intro-on')) titleAnimated = true   // hinter dem Intro gezeichnet zählt nicht: der Glow soll erst beim Ausblenden laufen
+  if (!document.documentElement.classList.contains('intro-on')) titleAnimated = true   // hinter dem Intro gezeichnet zählt nicht: der Glow soll erst beim Ausblenden laufen
   return `
     <div ${inModal ? '' : 'id="app-header"'} class="pb-3" style="padding-top:max(1.5rem,env(safe-area-inset-top)); transition:opacity 0.3s ease;">
       <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
@@ -909,7 +878,7 @@ function renderGuideHtml() {
 function renderSettingsBody() {
   if (settingsMode === 'help') {
     const t = loadData('startTiming'), s = ms => (ms / 1000).toFixed(1).replace('.', ',') + ' s'
-    return renderGuideHtml() + (t ? `<p class="text-xs" style="margin-top:18px; color:rgba(255,255,255,0.6);">Letzter Start mit Intro: Seite geladen nach ${s(t.html)}, Intro ab ${s(t.intro)}, ausgeblendet nach ${s(t.fade)}</p>` : '')
+    return renderGuideHtml() + (t ? `<p class="text-xs" style="margin-top:18px; color:rgba(255,255,255,0.6);">Letzter Start mit Intro: Seite geladen nach ${s(t.html)}, App fertig nach ${t.ready ? s(t.ready) : '–'}, Ausblenden ab ${s(t.fade)}</p>` : '')
   }
   if (settingsMode === 'stats') return renderStatsBody()
   if (!currentUser) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Bitte zuerst mit E-Mail anmelden, um Einstellungen vorzunehmen.</p>`
@@ -1241,34 +1210,6 @@ function appendMoreEvents() {
     document.getElementById('load-more-footer')?.remove()
   }
   attachSwipeGestures()
-}
-
-function renderSkeleton() {
-  return `
-    <div class="c64-border" style="position:fixed; top:0; bottom:0; left:50%; transform:translateX(-50%);
-                width:min(100%,576px); z-index:9999;
-                padding:max(24px,env(safe-area-inset-top)) 28px max(24px,env(safe-area-inset-bottom));">
-      <div style="width:100%; height:100%; background:#2020AA; overflow:hidden;
-                  font-family:'Press Start 2P',monospace; color:#9898FF;
-                  font-size:min(calc((min(100vw,576px) - 80px) / 38), 13.1px); line-height:2.3;
-                  padding:14px 12px;">
-        <div>**** COMMODORE 64 BASIC V2 ****</div>
-        <div>64K RAM SYSTEM&nbsp; 38911 BASIC BYTES FREE</div>
-        <div>&nbsp;</div>
-        <div>READY.</div>
-        <div>LOAD &quot;LIVELORDS&quot;,8,1</div>
-        <div>&nbsp;</div>
-        <div>PRESS PLAY ON TAPE</div>
-        <div>OK</div>
-        <div>&nbsp;</div>
-        <div>MADE BY CRUX WITH CLAUDE</div>
-        <div>CO-TESTED BY DR. JEEP</div>
-        <div>&nbsp;</div>
-        <div>READY.</div>
-        <div>RUN<span style="display:inline-block; width:0.6em; height:1em; background:#9898FF; vertical-align:text-bottom; margin-left:0.15em; animation:c64blink 0.7s step-end infinite;"></span></div>
-      </div>
-    </div>
-  `
 }
 
 // Eigene und fremde Markierungen eines Events als Zeilen unter der Karte (Gemerkt-Reiter), je Status eine Zeile:

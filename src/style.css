@@ -81,7 +81,12 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.5); }
   position: fixed;
   overflow: hidden;
   background: #000000;
+  /* konstant 2 s: 1,6 s stehen, 0,4 s ausblenden; per CSS, damit es auch weiterläuft, wenn die Seite beim Start rechnet */
+  animation: c64out 0.4s ease-in-out 1.6s forwards;
 }
+@keyframes c64out { from { opacity: 1; } to { opacity: 0; visibility: hidden; } }
+.c64-border.c64-hold { animation-play-state: paused; }   /* App noch nicht fertig, siehe index.html */
+.no-intro .c64-border { display: none; }
 .c64-border::before {
   content: '';
   position: absolute;
@@ -113,7 +118,7 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.5); }
 .c64-border > div { position: relative; }
 #app-header { transition: opacity 0.3s ease; }
 /* Solange das C64-Intro steht, ruhen die Glow-Animationen im Header (sonst laufen sie dahinter ab und sind weg, wenn das Intro ausblendet) */
-body.intro-on .title-glow-wrap, body.intro-on .title-glow, body.intro-on .header-tagline { animation-play-state: paused !important; }
+.intro-on .title-glow-wrap, .intro-on .title-glow, .intro-on .header-tagline { animation-play-state: paused !important; }
 @keyframes title-sweep {
   from { background-position: 100% center; }
   to   { background-position: 0% center; }
