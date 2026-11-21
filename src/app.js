@@ -295,8 +295,8 @@ export async function renderApp(el) {
   currentUser = peekUser()
   events = await getEvents()
   sessionStorage.setItem('lebe-loaded', '1')
-  // Tailwind (CDN, async) muss da sein, bevor das Intro die fertige Seite freigibt, sonst blitzt sie kurz unformatiert auf
-  for (let i = 0; !window.tailwind && i < 40; i++) await new Promise(r => setTimeout(r, 50))
+  // Tailwind (CDN, async) sollte da sein, bevor das Intro die fertige Seite freigibt, sonst blitzt sie kurz unformatiert auf; nur kurz abwarten (vorher bis zu 2 s)
+  for (let i = 0; !window.tailwind && i < 6; i++) await new Promise(r => setTimeout(r, 50))   // höchstens 0,3 s, nie länger als das Intro selbst
   const c64El = document.querySelector('.c64-border')
   if (c64El) container.appendChild(c64El)
   render()
