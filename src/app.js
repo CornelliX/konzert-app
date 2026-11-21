@@ -274,7 +274,7 @@ export async function renderApp(el) {
     <div id="app-modals"></div>
     <div id="bottom-nav" style="position:fixed; bottom:0; left:0; right:0; z-index:40;"></div>
   `
-  const introStart = performance.now()
+  let introStart = performance.now()
   // Schriften schon während des Intros laden (sonst erscheinen die Texte der App erst nach dem Ausblenden, weil der
   // Browser sie erst beim ersten Gebrauch holt); das Intro wartet nicht extra darauf
   new Promise(done => {
@@ -287,6 +287,8 @@ export async function renderApp(el) {
   if (!isReload) {
     document.getElementById('app-inner').innerHTML = renderSkeleton()
     document.body.classList.add('intro-on')
+    // Mindestlaufzeit erst ab dem Bild zählen, in dem das Intro erscheint (vorher rechnet die Seite noch bis zu ~0,2 s)
+    requestAnimationFrame(() => { introStart = performance.now() })
     setTimeout(() => document.body.classList.remove('intro-on'), 10000)   // Sicherung
   }
   // Das C64-Intro steht nur, bis die Events da sind (aus dem Gerätespeicher, siehe sw.js). Der Rest (Login prüfen,
