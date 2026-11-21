@@ -109,6 +109,8 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.5); }
 }
 .c64-border > div { position: relative; }
 #app-header { transition: opacity 0.3s ease; }
+/* Solange das C64-Intro steht, ruhen die Glow-Animationen im Header (sonst laufen sie dahinter ab und sind weg, wenn das Intro ausblendet) */
+body.intro-on .title-glow-wrap, body.intro-on .title-glow, body.intro-on .header-tagline { animation-play-state: paused !important; }
 @keyframes title-sweep {
   from { background-position: 100% center; }
   to   { background-position: 0% center; }

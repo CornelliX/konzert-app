@@ -286,6 +286,8 @@ export async function renderApp(el) {
   const isReload = sessionStorage.getItem('lebe-loaded')
   if (!isReload) {
     document.getElementById('app-inner').innerHTML = renderSkeleton()
+    document.body.classList.add('intro-on')
+    setTimeout(() => document.body.classList.remove('intro-on'), 10000)   // Sicherung
   }
   // Das C64-Intro steht nur, bis die Events da sind (aus dem Gerätespeicher, siehe sw.js). Der Rest (Login prüfen,
   // Merkliste, Radar, History aus Supabase) lädt danach im Hintergrund: erstes Zeichnen mit dem lokal gespeicherten
@@ -318,6 +320,7 @@ export async function renderApp(el) {
     c64El.style.transition = 'opacity 0.15s ease'
     requestAnimationFrame(() => {
       c64El.style.opacity = '0'
+      document.body.classList.remove('intro-on')   // jetzt starten die Glow-Animationen im Header
       // Sofort klick-durchlässig machen, sobald das Ausblenden beginnt - so kann das
       // fixed/z-index:9999-Element nie Klicks blockieren, selbst falls transitionend
       // ausbleibt (reduced-motion, Hintergrund-Tab, o.ä.)
@@ -654,7 +657,7 @@ function render() {
 // inModal: Kopie im Radar-Modal - ohne id (die gehört dem Header der Hauptansicht, siehe Scroll-Fade)
 function renderHeader(inModal = false) {
   const firstRender = !titleAnimated
-  titleAnimated = true
+  if (!document.body.classList.contains('intro-on')) titleAnimated = true   // hinter dem Intro gezeichnet zählt nicht: der Glow soll erst beim Ausblenden laufen
   return `
     <div ${inModal ? '' : 'id="app-header"'} class="pb-3" style="padding-top:max(1.5rem,env(safe-area-inset-top)); transition:opacity 0.3s ease;">
       <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
