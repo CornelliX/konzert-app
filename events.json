@@ -116,19 +116,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 348015507,
-    "title": "Die Schlagernacht des Jahres",
-    "date": "2026-11-21",
-    "time": "18:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2092823986,
     "title": "Roller Disco",
     "date": "2026-11-21",
@@ -140,6 +127,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 348015507,
+    "title": "Die Schlagernacht des Jahres",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1548840700,
@@ -620,19 +620,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 400571336,
-    "title": "geburtstag 40 er",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/geburtstag-40-er/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 541595938,
     "title": "BUMM BUMM",
     "date": "2026-11-21",
@@ -657,6 +644,19 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 400571336,
+    "title": "geburtstag 40 er",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/geburtstag-40-er/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 947644172,
@@ -2458,19 +2458,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 369576453,
-    "title": "Konstantinos Argiros",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 593467842,
     "title": "BERLIN IN EINEM ZUG",
     "date": "2026-11-25",
@@ -2482,6 +2469,19 @@
     "spotifyUrl": "",
     "source": "kunstfabrik-schlot",
     "addedAt": "2026-11-20"
+  },
+  {
+    "id": 369576453,
+    "title": "Konstantinos Argiros",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1211919287,
@@ -3454,19 +3454,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1251246961,
-    "title": "Everything Dies + X",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/everything-dies-x/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 751863040,
     "title": "MEINE HÄNDE WIE DIE DEINEN",
     "date": "2026-11-27",
@@ -3504,6 +3491,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1251246961,
+    "title": "Everything Dies + X",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/everything-dies-x/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 933234445,
@@ -6753,19 +6753,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 255613365,
-    "title": "SDP & The Capital Dance Orchestra",
-    "date": "2026-12-04",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1430204938,
     "title": "SingAlong",
     "date": "2026-12-04",
@@ -6777,6 +6764,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 255613365,
+    "title": "SDP & The Capital Dance Orchestra",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1064770762,
@@ -7774,19 +7774,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 168945183,
-    "title": "When the Sun Hits",
-    "date": "2026-12-05",
-    "time": "22:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-8/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 954988825,
     "title": "MICHAEL CANITROT",
     "date": "2026-12-05",
@@ -7810,6 +7797,19 @@
     "ticketUrl": "https://club.ritterbutzke.com/event/051226-DONDIABLO",
     "spotifyUrl": "",
     "source": "ritterbutzke",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 168945183,
+    "title": "When the Sun Hits",
+    "date": "2026-12-05",
+    "time": "22:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/when-the-sun-hits-8/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
     "addedAt": "2026-11-02"
   },
   {
@@ -8706,19 +8706,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1636806296,
-    "title": "BAP",
-    "date": "2026-12-08",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1309884259,
     "title": "ZAQ Medienquiz",
     "date": "2026-12-08",
@@ -8730,6 +8717,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1636806296,
+    "title": "BAP",
+    "date": "2026-12-08",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 621241441,
@@ -10544,19 +10544,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 261913641,
-    "title": "Samsta + ?",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 48,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://mvb-leipzig.de/mc-events/samsta/",
-    "spotifyUrl": "",
-    "source": "mvbleipzig",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2074100650,
     "title": "Comedyflash",
     "date": "2026-12-12",
@@ -10568,6 +10555,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 261913641,
+    "title": "Samsta + ?",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 48,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://mvb-leipzig.de/mc-events/samsta/",
+    "spotifyUrl": "",
+    "source": "mvbleipzig",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 693167001,
@@ -11942,19 +11942,6 @@
     "addedAt": "2026-11-08"
   },
   {
-    "id": 59852794,
-    "title": "101 Voices - Depeche Mode Special Tribute",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 672809719,
     "title": "Seraphina Kalze",
     "date": "2026-12-16",
@@ -11966,6 +11953,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 59852794,
+    "title": "101 Voices - Depeche Mode Special Tribute",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 810780519,
@@ -14585,6 +14585,19 @@
     "addedAt": "2026-11-15"
   },
   {
+    "id": 1463681291,
+    "title": "PHILLIP BOA AND THE VOODOOCLUB",
+    "date": "2026-12-29",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77044",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 291041555,
     "title": "GELEE (GER) & LYNT (GER) live @ Ilses Erika + A DISCO (80s vs. Italo Disco)",
     "date": "2026-12-29",
@@ -14622,6 +14635,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-11-15"
+  },
+  {
+    "id": 1147411493,
+    "title": "CAFÉ geschlossen",
+    "date": "2026-12-30",
+    "time": "10:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/special/2026-12-30/cafe-geschlossen-11",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 245897780,
@@ -15103,6 +15129,19 @@
     "addedAt": "2026-11-03"
   },
   {
+    "id": 228498048,
+    "title": "Moritzbastei SILVESTERPARTY 2026",
+    "date": "2026-12-31",
+    "time": "22:00",
+    "locationId": 18,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/78138",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 1963724765,
     "title": "Hippie New Year",
     "date": "2026-12-31",
@@ -15489,6 +15528,19 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 204505914,
+    "title": "11Freunde Kneipenquiz",
+    "date": "2027-01-07",
+    "time": "19:30",
+    "locationId": 18,
+    "type": "sonstige",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-07/11freunde-kneipenquiz-2",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1033570156,
@@ -16450,6 +16502,19 @@
     "addedAt": "2026-10-07"
   },
   {
+    "id": 749080878,
+    "title": "Only Stillness",
+    "date": "2027-01-15",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77419",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 1135657102,
     "title": "Comedyflash",
     "date": "2027-01-15",
@@ -16733,6 +16798,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 157356685,
+    "title": "Grausame Töchter  + Special Guest: VAMPYROS LESBOS",
+    "date": "2027-01-16",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.eventim-light.com/de/a/5c7ffae04d96f500018ae55f/e/6a55f3be8728b2492791ab67",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 918106175,
@@ -17021,6 +17099,19 @@
     "addedAt": "2026-11-15"
   },
   {
+    "id": 1195600044,
+    "title": "Götz Widmann",
+    "date": "2027-01-19",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/71218",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 218714370,
     "title": "7:77 - Die Open Stage mit Andrea Baccomo",
     "date": "2027-01-19",
@@ -17136,6 +17227,19 @@
     "spotifyUrl": "",
     "source": "columbiatheater",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 964298814,
+    "title": "Götz Widmann",
+    "date": "2027-01-20",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/71221",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1640476213,
@@ -17279,6 +17383,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-15"
+  },
+  {
+    "id": 1545983973,
+    "title": "Eva Karl Faltermeier: Ding Dong",
+    "date": "2027-01-22",
+    "time": "19:30",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/75258",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1473985013,
@@ -17708,6 +17825,19 @@
     "addedAt": "2026-11-11"
   },
   {
+    "id": 1877130266,
+    "title": "Der durstige Pegasus",
+    "date": "2027-01-25",
+    "time": "19:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/lesung/2027-01-25/der-durstige-pegasus-28",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 364286375,
     "title": "Snooker",
     "date": "2027-01-25",
@@ -17747,17 +17877,17 @@
     "addedAt": "2026-11-15"
   },
   {
-    "id": 1830715674,
-    "title": "aespa",
+    "id": 161871597,
+    "title": "ISKANDER MOON",
     "date": "2027-01-26",
     "time": "20:00",
-    "locationId": 57,
+    "locationId": 18,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/aespa/2027-01-26-2000",
+    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-26/iskander-moon-tour-2027",
     "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1093707975,
@@ -17771,6 +17901,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1830715674,
+    "title": "aespa",
+    "date": "2027-01-26",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/aespa/2027-01-26-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 816581054,
@@ -18201,6 +18344,32 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1257147994,
+    "title": "Euroteuro | Magic Tour 2027",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-29/euroteuro-magic-tour-2027",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
+    "id": 602967097,
+    "title": "Yung FSK18 // BEASTMODE 2027",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/75897",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 2101645617,
     "title": "Max Goldt liest",
     "date": "2027-01-29",
@@ -18394,6 +18563,32 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 312830999,
+    "title": "IMMER WIEDER WIRSING | «Neue Dekadenz» Tour 2027",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/76866",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
+  },
+  {
+    "id": 1794532686,
+    "title": "TRANSMISSION  The Sound of Joy Division",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "locationId": 18,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-30/transmission-the-sound-of-joy-division",
+    "spotifyUrl": "",
+    "source": "moritzbastei",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 424416208,
@@ -19667,19 +19862,6 @@
     "addedAt": "2026-11-11"
   },
   {
-    "id": 267142171,
-    "title": "Leonard Cohen",
-    "date": "2027-02-09",
-    "time": "20:00",
-    "locationId": 25,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tempodrom.de/event/leonard_cohen_2027-02-09_20/",
-    "spotifyUrl": "",
-    "source": "tempodrom",
-    "addedAt": "2026-11-03"
-  },
-  {
     "id": 1803103784,
     "title": "Lover - A Tribute to Taylor Swift",
     "date": "2027-02-09",
@@ -19691,6 +19873,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 267142171,
+    "title": "Leonard Cohen",
+    "date": "2027-02-09",
+    "time": "20:00",
+    "locationId": 25,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.tempodrom.de/event/leonard_cohen_2027-02-09_20/",
+    "spotifyUrl": "",
+    "source": "tempodrom",
+    "addedAt": "2026-11-03"
   },
   {
     "id": 601535934,
@@ -24448,19 +24643,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 617736245,
-    "title": "Teddy Swims",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/teddy-swims/2027-03-11-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1603476598,
     "title": "Schwarze Grütze",
     "date": "2027-03-11",
@@ -24472,6 +24654,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 617736245,
+    "title": "Teddy Swims",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/teddy-swims/2027-03-11-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 593311935,
@@ -25610,19 +25805,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 38507416,
-    "title": "Maite Kelly",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 293050161,
     "title": "Kirsten Fuchs",
     "date": "2027-03-18",
@@ -25634,6 +25816,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 38507416,
+    "title": "Maite Kelly",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 539720315,
