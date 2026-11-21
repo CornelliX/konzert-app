@@ -116,19 +116,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 348015507,
-    "title": "Die Schlagernacht des Jahres",
-    "date": "2026-11-21",
-    "time": "18:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2092823986,
     "title": "Roller Disco",
     "date": "2026-11-21",
@@ -140,6 +127,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 348015507,
+    "title": "Die Schlagernacht des Jahres",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1548840700,
@@ -400,6 +400,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 973060708,
+    "title": "Awesome Scampis",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/93250-tickets-awesome-scampis-ska-und-pop-punk-mit-blaesern-schokoladen-berlin-am-21-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-15"
+  },
+  {
     "id": 889267875,
     "title": "Clubbo Revival mit der Horns Band + Djs – Monstersoul + Djs Funk / Soul / Disko",
     "date": "2026-11-21",
@@ -633,19 +646,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 973060708,
-    "title": "Awesome Scampis",
-    "date": "2026-11-21",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/93250-tickets-awesome-scampis-ska-und-pop-punk-mit-blaesern-schokoladen-berlin-am-21-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-15"
-  },
-  {
     "id": 947644172,
     "title": "SHOW DOWN – Wettstreit der Magier",
     "date": "2026-11-21",
@@ -762,6 +762,19 @@
     "addedAt": "2026-10-14"
   },
   {
+    "id": 469563735,
+    "title": "HOMEPARTY XXL",
+    "date": "2026-11-21",
+    "time": "22:00",
+    "locationId": 58,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://www.citybounce.de/event/homeparty---das-xxl-neonspecial-21-11",
+    "spotifyUrl": "",
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
     "id": 1153111556,
     "title": "Klangkarussell pres. Bias Beach",
     "date": "2026-11-21",
@@ -786,19 +799,6 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 469563735,
-    "title": "HOMEPARTY XXL",
-    "date": "2026-11-21",
-    "time": "22:00",
-    "locationId": 58,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.citybounce.de/event/homeparty---das-xxl-neonspecial-21-11",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
   },
   {
     "id": 998246745,
@@ -1406,6 +1406,19 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1106794697,
+    "title": "The Black Elephant Band",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101242-tickets-the-black-elephant-band-antifolk-schokoladen-berlin-am-23-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-15"
+  },
+  {
     "id": 116395464,
     "title": "@ (US, 4AD)",
     "date": "2026-11-23",
@@ -1546,19 +1559,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1106794697,
-    "title": "The Black Elephant Band",
-    "date": "2026-11-23",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101242-tickets-the-black-elephant-band-antifolk-schokoladen-berlin-am-23-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-15"
   },
   {
     "id": 636906359,
@@ -1808,6 +1808,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1503562801,
+    "title": "Yakama + Absteige + Nobis",
+    "date": "2026-11-24",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102588-tickets-yakama-absteige-nobis-schokoladen-berlin-am-24-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-15"
+  },
+  {
     "id": 1631268189,
     "title": "ADOLF SÜDKNECHT – Die Seifenoper Improschau – … Adolf auf der Mustermesse",
     "date": "2026-11-24",
@@ -1962,19 +1975,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1503562801,
-    "title": "Yakama + Absteige + Nobis",
-    "date": "2026-11-24",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102588-tickets-yakama-absteige-nobis-schokoladen-berlin-am-24-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-15"
   },
   {
     "id": 754482728,
@@ -2432,19 +2432,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 369576453,
-    "title": "Konstantinos Argiros",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 593467842,
     "title": "BERLIN IN EINEM ZUG",
     "date": "2026-11-25",
@@ -2456,6 +2443,19 @@
     "spotifyUrl": "",
     "source": "kunstfabrik-schlot",
     "addedAt": "2026-11-20"
+  },
+  {
+    "id": 369576453,
+    "title": "Konstantinos Argiros",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1211919287,
@@ -2666,6 +2666,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1561973173,
+    "title": "OBI BLANCHE x KRISTINA TICA",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101932-tickets-obi-blanche-x-kristina-tica-post-digital-punk-schokoladen-berlin-am-26-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-15"
+  },
+  {
     "id": 532351317,
     "title": "MARYAM.fyi",
     "date": "2026-11-26",
@@ -2845,19 +2858,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1561973173,
-    "title": "OBI BLANCHE x KRISTINA TICA",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101932-tickets-obi-blanche-x-kristina-tica-post-digital-punk-schokoladen-berlin-am-26-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-15"
   },
   {
     "id": 2127525360,
@@ -3142,6 +3142,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 938066576,
+    "title": "CAVA",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100085-tickets-cava-schokoladen-berlin-am-27-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-15"
   },
   {
     "id": 1671825783,
@@ -3441,19 +3454,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 938066576,
-    "title": "CAVA",
-    "date": "2026-11-27",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100085-tickets-cava-schokoladen-berlin-am-27-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-15"
-  },
-  {
     "id": 933234445,
     "title": "5raumfenster",
     "date": "2026-11-27",
@@ -3622,19 +3622,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1272254326,
-    "title": "Soupherb vs psYsq",
-    "date": "2026-11-27",
-    "time": "22:00",
-    "locationId": 53,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://club.ritterbutzke.com/event/271126-SoupherbvspsYsq-thegroovening",
-    "spotifyUrl": "",
-    "source": "ritterbutzke",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1053814630,
     "title": "Waschhaus 80er",
     "date": "2026-11-27",
@@ -3646,6 +3633,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1272254326,
+    "title": "Soupherb vs psYsq",
+    "date": "2026-11-27",
+    "time": "22:00",
+    "locationId": 53,
+    "type": "party",
+    "description": "",
+    "ticketUrl": "https://club.ritterbutzke.com/event/271126-SoupherbvspsYsq-thegroovening",
+    "spotifyUrl": "",
+    "source": "ritterbutzke",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 290375278,
@@ -3971,6 +3971,19 @@
     "addedAt": "2026-09-27"
   },
   {
+    "id": 1825570257,
+    "title": "CAVA",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100118-tickets-cava-schokoladen-berlin-am-28-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-18"
+  },
+  {
     "id": 1533325692,
     "title": "Cosmo presents: BIG UP! Berlin",
     "date": "2026-11-28",
@@ -4254,19 +4267,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1825570257,
-    "title": "CAVA",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/100118-tickets-cava-schokoladen-berlin-am-28-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-18"
   },
   {
     "id": 1038888214,
@@ -5176,6 +5176,19 @@
     "addedAt": "2026-11-02"
   },
   {
+    "id": 1596454733,
+    "title": "SHAKING HAND",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/95494-tickets-shaking-hand-post-rock-uk-schokoladen-berlin-am-30-11-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-18"
+  },
+  {
     "id": 1682806312,
     "title": "Yaeger",
     "date": "2026-11-30",
@@ -5200,6 +5213,19 @@
     "spotifyUrl": "",
     "source": "madameclaude",
     "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1888317444,
+    "title": "Xaon & Vortex",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 29,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.kesselhaus.net/de/calendar/-Onvab2Rag8Ne95I7MuO",
+    "spotifyUrl": "",
+    "source": "kesselhaus",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1508513122,
@@ -5262,19 +5288,6 @@
     "spotifyUrl": "",
     "source": "taeubchenthal",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1596454733,
-    "title": "SHAKING HAND",
-    "date": "2026-11-30",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/95494-tickets-shaking-hand-post-rock-uk-schokoladen-berlin-am-30-11-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-18"
   },
   {
     "id": 563688363,
@@ -5783,6 +5796,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1393346423,
+    "title": "SABA LOU Rec Release!",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102624-tickets-saba-lou-rec-release-schokoladen-berlin-am-02-12-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-20"
+  },
+  {
     "id": 2078211446,
     "title": "Flo & Jere present: Binary Boy",
     "date": "2026-12-02",
@@ -5974,19 +6000,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1393346423,
-    "title": "SABA LOU Rec Release!",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/102624-tickets-saba-lou-rec-release-schokoladen-berlin-am-02-12-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-20"
   },
   {
     "id": 234604444,
@@ -6275,6 +6288,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1631437672,
+    "title": "THE WANTS",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99507-tickets-the-wants-nyc-post-punk-schokoladen-berlin-am-03-12-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-20"
+  },
+  {
     "id": 1089482801,
     "title": "ALEX HENRY FOSTER",
     "date": "2026-12-03",
@@ -6388,19 +6414,6 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-09-27"
-  },
-  {
-    "id": 1631437672,
-    "title": "THE WANTS",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/99507-tickets-the-wants-nyc-post-punk-schokoladen-berlin-am-03-12-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-20"
   },
   {
     "id": 851899829,
@@ -6649,19 +6662,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 255613365,
-    "title": "SDP & The Capital Dance Orchestra",
-    "date": "2026-12-04",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1430204938,
     "title": "SingAlong",
     "date": "2026-12-04",
@@ -6673,6 +6673,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 255613365,
+    "title": "SDP & The Capital Dance Orchestra",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1064770762,
@@ -6725,6 +6738,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 2036084627,
+    "title": "Bei Bedarf",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "locationId": 11,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101361-tickets-bei-bedarf-punkrock-berlin-schokoladen-berlin-am-04-12-2026",
+    "spotifyUrl": "",
+    "source": "schokoladen",
+    "addedAt": "2026-11-20"
   },
   {
     "id": 304416434,
@@ -6867,19 +6893,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 2036084627,
-    "title": "Bei Bedarf",
-    "date": "2026-12-04",
-    "time": "20:00",
-    "locationId": 11,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://schokoladen.tickettoaster.de/produkte/101361-tickets-bei-bedarf-punkrock-berlin-schokoladen-berlin-am-04-12-2026",
-    "spotifyUrl": "",
-    "source": "schokoladen",
-    "addedAt": "2026-11-20"
   },
   {
     "id": 1682714228,
@@ -8563,19 +8576,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1636806296,
-    "title": "BAP",
-    "date": "2026-12-08",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1309884259,
     "title": "ZAQ Medienquiz",
     "date": "2026-12-08",
@@ -8587,6 +8587,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1636806296,
+    "title": "BAP",
+    "date": "2026-12-08",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 621241441,
@@ -11786,19 +11799,6 @@
     "addedAt": "2026-11-08"
   },
   {
-    "id": 59852794,
-    "title": "101 Voices - Depeche Mode Special Tribute",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 672809719,
     "title": "Seraphina Kalze",
     "date": "2026-12-16",
@@ -11810,6 +11810,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 59852794,
+    "title": "101 Voices - Depeche Mode Special Tribute",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 810780519,
@@ -14429,19 +14442,6 @@
     "addedAt": "2026-11-15"
   },
   {
-    "id": 1463681291,
-    "title": "PHILLIP BOA AND THE VOODOOCLUB",
-    "date": "2026-12-29",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77044",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
-  },
-  {
     "id": 291041555,
     "title": "GELEE (GER) & LYNT (GER) live @ Ilses Erika + A DISCO (80s vs. Italo Disco)",
     "date": "2026-12-29",
@@ -14479,19 +14479,6 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-11-15"
-  },
-  {
-    "id": 1147411493,
-    "title": "CAFÉ geschlossen",
-    "date": "2026-12-30",
-    "time": "10:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/special/2026-12-30/cafe-geschlossen-11",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
   },
   {
     "id": 245897780,
@@ -14973,17 +14960,17 @@
     "addedAt": "2026-11-03"
   },
   {
-    "id": 228498048,
-    "title": "Moritzbastei SILVESTERPARTY 2026",
+    "id": 2097033918,
+    "title": "Silvesterparty Independent Tanzparty",
     "date": "2026-12-31",
     "time": "22:00",
-    "locationId": 18,
+    "locationId": 61,
     "type": "party",
     "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/78138",
+    "ticketUrl": "https://www.dunckerclub.de/start.html",
     "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
+    "source": "dunckerclub",
+    "addedAt": "2026-11-15"
   },
   {
     "id": 1963724765,
@@ -15010,19 +14997,6 @@
     "spotifyUrl": "",
     "source": "ritterbutzke",
     "addedAt": "2026-11-20"
-  },
-  {
-    "id": 2097033918,
-    "title": "Silvesterparty Independent Tanzparty",
-    "date": "2026-12-31",
-    "time": "22:00",
-    "locationId": 61,
-    "type": "party",
-    "description": "",
-    "ticketUrl": "https://www.dunckerclub.de/start.html",
-    "spotifyUrl": "",
-    "source": "dunckerclub",
-    "addedAt": "2026-11-15"
   },
   {
     "id": 952980880,
@@ -15372,19 +15346,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 204505914,
-    "title": "11Freunde Kneipenquiz",
-    "date": "2027-01-07",
-    "time": "19:30",
-    "locationId": 18,
-    "type": "sonstige",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-07/11freunde-kneipenquiz-2",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
   },
   {
     "id": 1033570156,
@@ -16346,19 +16307,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 749080878,
-    "title": "Only Stillness",
-    "date": "2027-01-15",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/77419",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
-  },
-  {
     "id": 1135657102,
     "title": "Comedyflash",
     "date": "2027-01-15",
@@ -16629,19 +16577,6 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 157356685,
-    "title": "Grausame Töchter  + Special Guest: VAMPYROS LESBOS",
-    "date": "2027-01-16",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim-light.com/de/a/5c7ffae04d96f500018ae55f/e/6a55f3be8728b2492791ab67",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
   },
   {
     "id": 306664151,
@@ -16943,19 +16878,6 @@
     "addedAt": "2026-11-15"
   },
   {
-    "id": 1195600044,
-    "title": "Götz Widmann",
-    "date": "2027-01-19",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/71218",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
-  },
-  {
     "id": 218714370,
     "title": "7:77 - Die Open Stage mit Andrea Baccomo",
     "date": "2027-01-19",
@@ -17058,19 +16980,6 @@
     "spotifyUrl": "",
     "source": "columbiatheater",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 964298814,
-    "title": "Götz Widmann",
-    "date": "2027-01-20",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/71221",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
   },
   {
     "id": 2002801613,
@@ -17227,19 +17136,6 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-15"
-  },
-  {
-    "id": 1545983973,
-    "title": "Eva Karl Faltermeier: Ding Dong",
-    "date": "2027-01-22",
-    "time": "19:30",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/75258",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
   },
   {
     "id": 1473985013,
@@ -17669,19 +17565,6 @@
     "addedAt": "2026-11-11"
   },
   {
-    "id": 1877130266,
-    "title": "Der durstige Pegasus",
-    "date": "2027-01-25",
-    "time": "19:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/lesung/2027-01-25/der-durstige-pegasus-28",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
-  },
-  {
     "id": 364286375,
     "title": "Snooker",
     "date": "2027-01-25",
@@ -17721,17 +17604,17 @@
     "addedAt": "2026-11-15"
   },
   {
-    "id": 161871597,
-    "title": "ISKANDER MOON",
+    "id": 1093707975,
+    "title": "Michael Mittermeier",
     "date": "2027-01-26",
     "time": "20:00",
-    "locationId": 18,
+    "locationId": 58,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-26/iskander-moon-tour-2027",
+    "ticketUrl": "https://www.eventim.de/en/event/michael-mittermeier-oldboy-sind-wir-bald-da-waschhaus-potsdam-21472721/",
     "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
+    "source": "waschhaus",
+    "addedAt": "2026-11-06"
   },
   {
     "id": 1830715674,
@@ -17745,19 +17628,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1093707975,
-    "title": "Michael Mittermeier",
-    "date": "2027-01-26",
-    "time": "20:00",
-    "locationId": 58,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.eventim.de/en/event/michael-mittermeier-oldboy-sind-wir-bald-da-waschhaus-potsdam-21472721/",
-    "spotifyUrl": "",
-    "source": "waschhaus",
-    "addedAt": "2026-11-06"
   },
   {
     "id": 816581054,
@@ -18175,32 +18045,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1257147994,
-    "title": "Euroteuro | Magic Tour 2027",
-    "date": "2027-01-29",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-29/euroteuro-magic-tour-2027",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
-  },
-  {
-    "id": 602967097,
-    "title": "Yung FSK18 // BEASTMODE 2027",
-    "date": "2027-01-29",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/75897",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
-  },
-  {
     "id": 2101645617,
     "title": "Max Goldt liest",
     "date": "2027-01-29",
@@ -18394,32 +18238,6 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 312830999,
-    "title": "IMMER WIEDER WIRSING | «Neue Dekadenz» Tour 2027",
-    "date": "2027-01-30",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.tixforgigs.com/de-de/Event/76866",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
-  },
-  {
-    "id": 1794532686,
-    "title": "TRANSMISSION  The Sound of Joy Division",
-    "date": "2027-01-30",
-    "time": "20:00",
-    "locationId": 18,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.moritzbastei.de/event/konzert/2027-01-30/transmission-the-sound-of-joy-division",
-    "spotifyUrl": "",
-    "source": "moritzbastei",
-    "addedAt": "2026-11-21"
   },
   {
     "id": 424416208,
@@ -24474,19 +24292,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 617736245,
-    "title": "Teddy Swims",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/teddy-swims/2027-03-11-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1603476598,
     "title": "Schwarze Grütze",
     "date": "2027-03-11",
@@ -24498,6 +24303,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 617736245,
+    "title": "Teddy Swims",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/teddy-swims/2027-03-11-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1700992266,
@@ -25636,19 +25454,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 38507416,
-    "title": "Maite Kelly",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 293050161,
     "title": "Kirsten Fuchs",
     "date": "2027-03-18",
@@ -25660,6 +25465,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 38507416,
+    "title": "Maite Kelly",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 815758585,
