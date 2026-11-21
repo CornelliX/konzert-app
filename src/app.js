@@ -209,7 +209,7 @@ function onGlobalClick(e) {
   if (t.closest?.('[data-open-help]')) openHelp()
 }
 
-const C64_MIN_MS = 600   // so lange mindestens steht das C64-Intro (+ 0,15 s Ausblenden = ca. 0,75 s)
+const C64_MIN_MS = 400   // so lange mindestens steht das C64-Intro (+ 0,4 s Ausblenden = ca. 0,8 s)
 let appReady = false
 let eventsUpdatePending = false
 
@@ -229,7 +229,7 @@ async function loadAccountData() {
     await backfillRadarFromHistory()
   }
   if (loginChanged) render()   // Anmeldung war abgelaufen (oder neu): Kopf und Reiter ändern sich
-  else refreshAfterEventsChange()
+  else if (user) refreshAfterEventsChange()   // ohne Anmeldung hat sich nichts geändert: kein Neuzeichnen (es störte den Glow direkt nach dem Intro)
 }
 
 // Die Seite zeigt beim Start die zuletzt gespeicherten Events (sw.js); kommt im Hintergrund eine neuere Liste,
@@ -317,7 +317,7 @@ export async function renderApp(el) {
     // Die App selbst lädt inzwischen (Netzwerk + Render) in ca. 1s - das C64-Intro sollte
     // diese Zeit überbrücken, nicht selbst noch draufsatteln. Früher 0.6s Fade + 800ms
     // Fallback, das hängte nach fertigem Laden nochmal spürbar Zeit an. Jetzt kürzer.
-    c64El.style.transition = 'opacity 0.15s ease'
+    c64El.style.transition = 'opacity 0.4s ease-in-out'   // weich überblenden (0,15 s wirkte abgehackt)
     requestAnimationFrame(() => {
       // ponytail: Diagnose fürs iPhone (Zeiten ab Seitenaufruf), steht unten in der Anleitung; entfernen, sobald das Intro passt
       const nav = performance.getEntriesByType('navigation')[0]
@@ -331,7 +331,7 @@ export async function renderApp(el) {
       const removeC64 = () => c64El.remove()
       c64El.addEventListener('transitionend', removeC64, { once: true })
       // Fallback: Element in jedem Fall entfernen, auch wenn transitionend nie feuert
-      setTimeout(removeC64, 300)
+      setTimeout(removeC64, 600)
     })
   }
 }
@@ -596,6 +596,9 @@ function render() {
   historyEditOpen = false
   const newCount = events.filter(e => isNew(e)).length
   const inner = document.getElementById('app-inner')
+  // Den bisherigen Header behalten (unten wieder eingesetzt): sonst bricht ein laufender Glow ab oder startet neu,
+  // wenn kurz nach dem Start im Hintergrund nachgeladen und neu gezeichnet wird (loadAccountData)
+  const oldHeader = document.getElementById('app-header')
   inner.innerHTML = `
     ${renderHeader()}
     ${currentUser ? '' : `
@@ -638,6 +641,7 @@ function render() {
       </div>
     </div>
   `
+  if (oldHeader) { oldHeader.style.opacity = ''; document.getElementById('app-header')?.replaceWith(oldHeader) }
   document.getElementById('app-modals').innerHTML = renderModals()
   document.getElementById('bottom-nav').innerHTML = renderBottomNav()
   attachEvents()
@@ -670,7 +674,7 @@ function renderHeader(inModal = false) {
           </h1>
         </div>
         <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-          <div class="syne text-right header-tagline" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:min(0.52em, 1.95vw); line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${firstRender ? 'animation:tagline-appear 1.5s ease 2.8s both;' : ''}">
+          <div class="syne text-right header-tagline" style="color:rgba(168,85,247,0.75); font-weight:700; font-size:min(0.52em, 1.95vw); line-height:1.3; letter-spacing:0em; text-transform:uppercase; overflow:hidden; white-space:nowrap; ${firstRender ? 'animation:tagline-appear 2.4s ease-in-out 2.8s both;' : ''}">
             KONZERTE UND PARTYS<br>IN BERLIN UND LEIPZIG
           </div>
         </div>
@@ -2506,6 +2510,7 @@ function attachEvents() {
             going = bm.going.filter(id => validIds.some(v => v == id))
           }
           titleAnimated = false
+          document.getElementById('app-header')?.remove()   // sonst behält render() den alten Header und der Glow läuft nicht erneut
           // Pull-to-Refresh holt auch die Community-Daten (fremde Listen, Zähler) frisch
           communityLoadedAt = 0
           eventMarksAt = {}
