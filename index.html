@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=block" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=block" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" media="print" onload="this.media='all'">
+    <!-- C64-Intro nur beim ersten Öffnen je Sitzung; die Klasse muss vor dem ersten Bild stehen -->
+    <script>try { document.documentElement.classList.add(sessionStorage.getItem('lebe-loaded') ? 'no-intro' : 'intro-on') } catch (e) { document.documentElement.classList.add('intro-on') }</script>
     <!-- Events schon jetzt anfordern (statt erst nach dem Bundle): src/data.js nimmt dieses Promise, siehe getEvents() -->
     <script>window.__eventsP = fetch('./events.json').then(function (r) { return r.ok ? r.json() : null }).catch(function () { return null })</script>
     <!-- async: Tailwind blockierte sonst das Parsen und damit den Start des App-Bundles (renderApp wartet vor dem Ausblenden des Intros darauf) -->
@@ -21,10 +23,58 @@
     <meta name="apple-mobile-web-app-title" content="LiveLords" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <script type="module" crossorigin src="/konzert-app/assets/index-CcFOXgQh.js"></script>
-    <link rel="stylesheet" crossorigin href="/konzert-app/assets/index-ZvrcRP8n.css">
+    <script type="module" crossorigin src="/konzert-app/assets/index-lvlNWFgU.js"></script>
+    <link rel="stylesheet" crossorigin href="/konzert-app/assets/index-BK4O5cfO.css">
   </head>
   <body class="bg-gray-950 text-white min-h-screen">
+    <!-- C64-Intro: steht hier statt im Bundle, damit es mit dem ersten Bild erscheint. Es blendet per CSS (.c64-border in
+         src/style.css) nach 1,6 s in 0,4 s aus, also konstant 2 s, auch wenn die Seite dabei rechnet. Nur wenn die App
+         nach 1,5 s noch nicht fertig gezeichnet ist, hält es an, bis renderApp() window.__introRelease() aufruft. -->
+    <div class="c64-border" id="c64-intro" style="position:fixed; top:0; bottom:0; left:50%; transform:translateX(-50%);
+                width:min(100%,576px); z-index:9999;
+                padding:max(24px,env(safe-area-inset-top)) 28px max(24px,env(safe-area-inset-bottom));">
+      <div style="width:100%; height:100%; background:#2020AA; overflow:hidden;
+                  font-family:'Press Start 2P',monospace; color:#9898FF;
+                  font-size:min(calc((min(100vw,576px) - 80px) / 38), 13.1px); line-height:2.3;
+                  padding:14px 12px;">
+        <div>**** COMMODORE 64 BASIC V2 ****</div>
+        <div>64K RAM SYSTEM&nbsp; 38911 BASIC BYTES FREE</div>
+        <div>&nbsp;</div>
+        <div>READY.</div>
+        <div>LOAD &quot;LIVELORDS&quot;,8,1</div>
+        <div>&nbsp;</div>
+        <div>PRESS PLAY ON TAPE</div>
+        <div>OK</div>
+        <div>&nbsp;</div>
+        <div>MADE BY CRUX WITH CLAUDE</div>
+        <div>CO-TESTED BY DR. JEEP</div>
+        <div>&nbsp;</div>
+        <div>READY.</div>
+        <div>RUN<span style="display:inline-block; width:0.6em; height:1em; background:#9898FF; vertical-align:text-bottom; margin-left:0.15em; animation:c64blink 0.7s step-end infinite;"></span></div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var el = document.getElementById('c64-intro'), d = document.documentElement
+        if (d.classList.contains('no-intro')) { el.remove(); return }
+        var ready = false
+        // App noch nicht fertig: Intro anhalten (es steht dann noch vor dem Ausblenden)
+        var hold = setTimeout(function () { if (!ready) el.classList.add('c64-hold') }, 1500)
+        window.__introRelease = function () { ready = true; window.__appReadyAt = performance.now(); el.classList.remove('c64-hold') }
+        el.addEventListener('animationstart', function (e) {
+          if (e.animationName !== 'c64out') return
+          d.classList.remove('intro-on')   // jetzt starten die Glow-Animationen im Header
+          // ponytail: Diagnose fürs iPhone (Zeiten ab Seitenaufruf), steht unten in der Anleitung; entfernen, sobald das Intro passt
+          try {
+            var nav = performance.getEntriesByType('navigation')[0]
+            localStorage.setItem('startTiming', JSON.stringify({ html: nav ? nav.responseEnd : 0, ready: window.__appReadyAt || 0, fade: performance.now(), at: Date.now() }))
+          } catch (err) {}
+        })
+        el.addEventListener('animationend', function (e) { if (e.animationName === 'c64out') el.remove() })
+        // Sicherung, falls die Animation nie läuft (z. B. App-Fehler): nach 10 s weg
+        setTimeout(function () { clearTimeout(hold); d.classList.remove('intro-on'); el.remove() }, 10000)
+      })()
+    </script>
     <div id="app"></div>
   </body>
 </html>
