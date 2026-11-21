@@ -26,9 +26,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   </head>
   <body class="bg-gray-950 text-white min-h-screen">
-    <!-- C64-Intro: steht hier statt im Bundle, damit es mit dem ersten Bild erscheint. Es blendet per CSS (.c64-border in
-         src/style.css) nach 1,6 s in 0,4 s aus, also konstant 2 s, auch wenn die Seite dabei rechnet. Nur wenn die App
-         nach 1,5 s noch nicht fertig gezeichnet ist, hält es an, bis renderApp() window.__introRelease() aufruft. -->
+    <!-- C64-Intro: steht hier statt im Bundle, damit es mit dem ersten Bild erscheint. Konstant 2 s: 1,6 s ab dem ersten
+         Bild per setTimeout, dann 0,4 s Ausblenden (nur opacity). Keine CSS-Animation mit Verzögerung: Safari startete die
+         erst beim nächsten Neuzeichnen der Seite (iPhone-Messung: Ausblenden bei 4,9 s statt 2 s). Ist die App nach 1,6 s
+         noch nicht fertig, wartet das Intro, bis renderApp() window.__introRelease() aufruft. -->
     <div class="c64-border" id="c64-intro" style="position:fixed; top:0; bottom:0; left:50%; transform:translateX(-50%);
                 width:min(100%,576px); z-index:9999;
                 padding:max(24px,env(safe-area-inset-top)) 28px max(24px,env(safe-area-inset-bottom));">
@@ -71,26 +72,28 @@
         requestAnimationFrame(frame)
         document.addEventListener('visibilitychange', function () { T.wechsel.push(document.visibilityState + ' ' + (performance.now() / 1000).toFixed(1)) })
         addEventListener('load', function () { T.load = performance.now() })
-        // App noch nicht fertig: Intro anhalten (es steht dann noch vor dem Ausblenden)
-        var hold = setTimeout(function () { if (!ready) el.classList.add('c64-hold') }, 1500)
-        window.__introRelease = function () { ready = true; window.__appReadyAt = performance.now(); el.classList.remove('c64-hold') }
-        el.addEventListener('animationstart', function (e) {
-          if (e.animationName !== 'c64out') return
+        var timeUp = false, out = false
+        function fadeOut() {
+          if (out || !timeUp || !ready) return
+          out = true
           d.classList.remove('intro-on')   // jetzt starten die Glow-Animationen im Header
           // ponytail: Diagnose fürs iPhone (Zeiten ab Seitenaufruf), steht unten in der Anleitung; entfernen, sobald das Intro passt
           try {
-            var nav = performance.getEntriesByType('navigation')[0]
-            var anim = el.getAnimations ? el.getAnimations().filter(function (a) { return a.animationName === 'c64out' })[0] : null
-            var fcp = performance.getEntriesByName('first-contentful-paint')[0]
+            var nav = performance.getEntriesByType('navigation')[0], fcp = performance.getEntriesByName('first-contentful-paint')[0]
             T.html = nav ? nav.responseEnd : 0; T.ready = window.__appReadyAt || 0; T.fade = performance.now()
-            T.animStart = anim && anim.startTime != null ? anim.startTime : -1   // wann die Intro-Animation (vor ihren 1,6 s) zu laufen begann
             T.fcp = fcp ? fcp.startTime : -1; T.tw = window.__twAt || 0; T.gf = window.__gfAt || 0; T.at = Date.now()
             localStorage.setItem('startTiming', JSON.stringify(T))
           } catch (err) {}
-        })
-        el.addEventListener('animationend', function (e) { if (e.animationName === 'c64out') el.remove() })
-        // Sicherung, falls die Animation nie läuft (z. B. App-Fehler): nach 10 s weg
-        setTimeout(function () { clearTimeout(hold); d.classList.remove('intro-on'); el.remove() }, 10000)
+          var remove = function () { el.remove() }
+          if (el.animate) el.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 400, easing: 'ease-in-out', fill: 'forwards' }).onfinish = remove
+          else el.style.opacity = '0'
+          setTimeout(remove, 700)   // falls onfinish ausbleibt
+        }
+        // 1,6 s ab dem ersten Bild mit Intro
+        requestAnimationFrame(function () { setTimeout(function () { timeUp = true; fadeOut() }, 1600) })
+        window.__introRelease = function () { ready = true; window.__appReadyAt = performance.now(); fadeOut() }
+        // Sicherung, falls die App nie fertig wird (z. B. Fehler): nach 10 s weg
+        setTimeout(function () { ready = true; timeUp = true; fadeOut() }, 10000)
       })()
     </script>
     <div id="app"></div>
