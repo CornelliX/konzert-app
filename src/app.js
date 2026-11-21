@@ -209,7 +209,7 @@ function onGlobalClick(e) {
   if (t.closest?.('[data-open-help]')) openHelp()
 }
 
-const C64_MIN_MS = 1500   // so lange mindestens steht das C64-Intro
+const C64_MIN_MS = 1000   // so lange mindestens steht das C64-Intro
 let appReady = false
 let eventsUpdatePending = false
 
