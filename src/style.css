@@ -84,7 +84,9 @@ input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.5); }
   /* konstant 2 s: 1,6 s stehen, 0,4 s ausblenden; per CSS, damit es auch weiterläuft, wenn die Seite beim Start rechnet */
   animation: c64out 0.4s ease-in-out 1.6s forwards;
 }
-@keyframes c64out { from { opacity: 1; } to { opacity: 0; visibility: hidden; } }
+/* nur opacity: dann läuft das Ausblenden auf iOS im Compositor, auch wenn der Main-Thread hängt (visibility im
+   Keyframe machte die ganze Animation zur Main-Thread-Animation; das Element entfernt animationend, index.html) */
+@keyframes c64out { from { opacity: 1; } to { opacity: 0; } }
 .c64-border.c64-hold { animation-play-state: paused; }   /* App noch nicht fertig, siehe index.html */
 .no-intro .c64-border { display: none; }
 .c64-border::before {

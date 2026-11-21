@@ -58,8 +58,17 @@
         if (d.classList.contains('no-intro')) { el.remove(); return }
         var ready = false
         // ponytail: Diagnose fürs iPhone (siehe Anleitung unten); entfernen, sobald das Intro passt
-        var T = window.__startT = { raf: 0, sicht: document.visibilityState, wechsel: [] }
+        var T = window.__startT = { raf: 0, sicht: document.visibilityState, wechsel: [], renders: [], stau: 0, stauBei: 0 }
         requestAnimationFrame(function () { T.raf = performance.now() })
+        // längste Pause zwischen zwei Bildern in den ersten 8 s (= Seite hängt), am Ende noch einmal speichern
+        var lastF = 0
+        function frame(t) {
+          if (lastF && t - lastF > T.stau) { T.stau = t - lastF; T.stauBei = lastF }
+          lastF = t
+          if (t < 8000) requestAnimationFrame(frame)
+          else try { localStorage.setItem('startTiming', JSON.stringify(T)) } catch (err) {}
+        }
+        requestAnimationFrame(frame)
         document.addEventListener('visibilitychange', function () { T.wechsel.push(document.visibilityState + ' ' + (performance.now() / 1000).toFixed(1)) })
         addEventListener('load', function () { T.load = performance.now() })
         // App noch nicht fertig: Intro anhalten (es steht dann noch vor dem Ausblenden)
