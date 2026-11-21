@@ -116,19 +116,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 348015507,
-    "title": "Die Schlagernacht des Jahres",
-    "date": "2026-11-21",
-    "time": "18:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2092823986,
     "title": "Roller Disco",
     "date": "2026-11-21",
@@ -140,6 +127,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 348015507,
+    "title": "Die Schlagernacht des Jahres",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/schlagernacht-2026/2026-11-21-1800",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1548840700,
@@ -437,6 +437,19 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 676037361,
+    "title": "WISBORG Phantomschmerz Tour - BERLIN | Special…",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/wisborg-phantomschmerz-tour-berlin-special-guest-the-fright.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 184622551,
@@ -2055,6 +2068,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 747579778,
+    "title": "Faux Real + Dance Arts Center + The Nightclubs…",
+    "date": "2026-11-25",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/faux-real-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 83888245,
     "title": "Loft presents: VENJENT - Live Band Tour",
     "date": "2026-11-25",
@@ -2432,19 +2458,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 369576453,
-    "title": "Konstantinos Argiros",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 593467842,
     "title": "BERLIN IN EINEM ZUG",
     "date": "2026-11-25",
@@ -2456,6 +2469,19 @@
     "spotifyUrl": "",
     "source": "kunstfabrik-schlot",
     "addedAt": "2026-11-20"
+  },
+  {
+    "id": 369576453,
+    "title": "Konstantinos Argiros",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/konstantinos-argiros/2026-11-25-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1211919287,
@@ -2690,6 +2716,19 @@
     "spotifyUrl": "",
     "source": "schokoladen",
     "addedAt": "2026-11-15"
+  },
+  {
+    "id": 2011466232,
+    "title": "COOGANS BLUFF 10 Years Of Flying To The Stars",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/coogans-bluff-10-years-of-flying-to-the-stars.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 532351317,
@@ -3194,6 +3233,19 @@
     "spotifyUrl": "",
     "source": "hornserben",
     "addedAt": "2026-11-07"
+  },
+  {
+    "id": 863594453,
+    "title": "FÏX8:SËD8 + NEROGRIS + SCHNEIDER -  Urban…",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/fïx8sëd8-nerogris-schneider-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1993938195,
@@ -3995,6 +4047,19 @@
     "spotifyUrl": "",
     "source": "schokoladen",
     "addedAt": "2026-11-18"
+  },
+  {
+    "id": 535272738,
+    "title": "Banda Entopica",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/banda-entopica-urban-spree-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1533325692,
@@ -5653,6 +5718,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1369249134,
+    "title": "SPK + ALVAR",
+    "date": "2026-12-02",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/spk-alvar-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 345610106,
     "title": "LEDBYHER",
     "date": "2026-12-02",
@@ -6301,6 +6379,19 @@
     "addedAt": "2026-11-20"
   },
   {
+    "id": 1360154713,
+    "title": "Novulent - Live in Europe 2026",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/novulent-live-in-europe-2026.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 1089482801,
     "title": "ALEX HENRY FOSTER",
     "date": "2026-12-03",
@@ -6662,19 +6753,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 255613365,
-    "title": "SDP & The Capital Dance Orchestra",
-    "date": "2026-12-04",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1430204938,
     "title": "SingAlong",
     "date": "2026-12-04",
@@ -6686,6 +6764,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 255613365,
+    "title": "SDP & The Capital Dance Orchestra",
+    "date": "2026-12-04",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-04-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1064770762,
@@ -7191,6 +7282,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 1215451765,
+    "title": "Coilguns - Berlin",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/coilguns-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 553009463,
@@ -7761,6 +7865,19 @@
     "addedAt": "2026-11-06"
   },
   {
+    "id": 555236029,
+    "title": "Thaylo x URBAN SPREE",
+    "date": "2026-12-05",
+    "time": "23:59",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/thaylo-darin-epsilon-gareden.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 565478811,
     "title": "Hollywood Tramp: BEYONCÉ CLUB NIGHT",
     "date": "2026-12-05",
@@ -8083,6 +8200,19 @@
     "spotifyUrl": "",
     "source": "astra",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 1112039015,
+    "title": "Planta Industrial - berlin",
+    "date": "2026-12-06",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/planta-industrial-berlin-urban-spree.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-21"
   },
   {
     "id": 1839634458,
@@ -8576,19 +8706,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1636806296,
-    "title": "BAP",
-    "date": "2026-12-08",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1309884259,
     "title": "ZAQ Medienquiz",
     "date": "2026-12-08",
@@ -8600,6 +8717,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1636806296,
+    "title": "BAP",
+    "date": "2026-12-08",
+    "time": "19:30",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/bap/2026-12-08-1930",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 621241441,
@@ -10324,6 +10454,19 @@
     "addedAt": "2026-11-07"
   },
   {
+    "id": 1678114495,
+    "title": "TWIN NOIR + HINFORT",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 21,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.urbanspree.com/program/concerts/twin-noir-hinfort-urban-spree,-berlin.html",
+    "spotifyUrl": "",
+    "source": "urbanspree",
+    "addedAt": "2026-11-21"
+  },
+  {
     "id": 1106670014,
     "title": "FUEGO36",
     "date": "2026-12-12",
@@ -11799,19 +11942,6 @@
     "addedAt": "2026-11-08"
   },
   {
-    "id": 59852794,
-    "title": "101 Voices - Depeche Mode Special Tribute",
-    "date": "2026-12-16",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 672809719,
     "title": "Seraphina Kalze",
     "date": "2026-12-16",
@@ -11823,6 +11953,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 59852794,
+    "title": "101 Voices - Depeche Mode Special Tribute",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/101_voices/2026-12-16-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 810780519,
@@ -17682,19 +17825,6 @@
     "addedAt": "2026-11-15"
   },
   {
-    "id": 1830715674,
-    "title": "aespa",
-    "date": "2027-01-26",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/aespa/2027-01-26-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1093707975,
     "title": "Michael Mittermeier",
     "date": "2027-01-26",
@@ -17706,6 +17836,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1830715674,
+    "title": "aespa",
+    "date": "2027-01-26",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/aespa/2027-01-26-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 816581054,
@@ -24383,19 +24526,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 617736245,
-    "title": "Teddy Swims",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/teddy-swims/2027-03-11-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1603476598,
     "title": "Schwarze Grütze",
     "date": "2027-03-11",
@@ -24407,6 +24537,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 617736245,
+    "title": "Teddy Swims",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/teddy-swims/2027-03-11-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 593311935,
@@ -25545,19 +25688,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 38507416,
-    "title": "Maite Kelly",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 293050161,
     "title": "Kirsten Fuchs",
     "date": "2027-03-18",
@@ -25569,6 +25699,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 38507416,
+    "title": "Maite Kelly",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "locationId": 57,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/maite-kelly-berlin/2027-03-18-2000",
+    "spotifyUrl": "",
+    "source": "uberarena",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 539720315,
