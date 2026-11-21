@@ -319,6 +319,9 @@ export async function renderApp(el) {
     // Fallback, das hängte nach fertigem Laden nochmal spürbar Zeit an. Jetzt kürzer.
     c64El.style.transition = 'opacity 0.15s ease'
     requestAnimationFrame(() => {
+      // ponytail: Diagnose fürs iPhone (Zeiten ab Seitenaufruf), steht unten in der Anleitung; entfernen, sobald das Intro passt
+      const nav = performance.getEntriesByType('navigation')[0]
+      saveData('startTiming', { html: nav?.responseEnd || 0, intro: introStart, fade: performance.now(), at: Date.now() })
       c64El.style.opacity = '0'
       document.body.classList.remove('intro-on')   // jetzt starten die Glow-Animationen im Header
       // Sofort klick-durchlässig machen, sobald das Ausblenden beginnt - so kann das
@@ -898,7 +901,10 @@ function renderGuideHtml() {
 }
 
 function renderSettingsBody() {
-  if (settingsMode === 'help') return renderGuideHtml()
+  if (settingsMode === 'help') {
+    const t = loadData('startTiming'), s = ms => (ms / 1000).toFixed(1).replace('.', ',') + ' s'
+    return renderGuideHtml() + (t ? `<p class="text-xs" style="margin-top:18px; color:rgba(255,255,255,0.6);">Letzter Start mit Intro: Seite geladen nach ${s(t.html)}, Intro ab ${s(t.intro)}, ausgeblendet nach ${s(t.fade)}</p>` : '')
+  }
   if (settingsMode === 'stats') return renderStatsBody()
   if (!currentUser) return `<p class="text-sm" style="color:rgba(255,255,255,0.6);">Bitte zuerst mit E-Mail anmelden, um Einstellungen vorzunehmen.</p>`
   if (myProfileError) return `<p class="text-sm" style="color:rgba(255,120,120,0.85);">Die Einstellungen konnten nicht geladen werden. Bitte später noch einmal versuchen.</p>`
