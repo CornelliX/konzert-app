@@ -52,6 +52,7 @@ function spotifySearchUrl(title) {
 // (Fett/Mager-Darstellung bei unverändertem Original-Text) gemeinsam genutzt, damit beide
 // Stellen konsistent erkennen, wo der Hauptact endet.
 const ACT_SEPARATOR_SOURCE = '\\s*\\+\\s*|\\s+feat\\.?\\s+|\\s+ft\\.?\\s+|\\s+w\\/\\s+|,?\\s*support:?\\s+|\\s+special\\s+guests?:?\\s+|\\s+mit\\s+'
+const ACT_SEPARATOR_RE = new RegExp(ACT_SEPARATOR_SOURCE, 'i')
 
 // Emojis (samt Variation Selector/Joiner/Flaggen) und Leerraum am Anfang/Ende eines Künstlernamens
 // entfernen ("🔥 Band 🎶" -> "Band"); Emojis mitten im Namen bleiben. Bleibt nichts übrig, gilt das Original.
@@ -74,7 +75,7 @@ function extractArtists(title) {
   const prefixMatch = core.match(/^.+?\s+(?:presents?|präsentiert|lädt\s+ein)\s*:\s*(.+)$/i)
   if (prefixMatch) core = prefixMatch[1]
   core = core.split(/\s+live\s+@|\s+-\s+im\s+anschluss/i)[0]
-  const rawParts = core.split(new RegExp(ACT_SEPARATOR_SOURCE, 'i'))
+  const rawParts = core.split(ACT_SEPARATOR_RE)
   const seen = new Set()
   const artists = []
   for (const raw of rawParts) {
@@ -333,9 +334,14 @@ async function mergeAndSyncBookmarks(bm = null) {
 // extractArtists() zerlegt Lineup-Titel nur an eindeutigen Mehrfach-Trennern (+, feat., etc.),
 // lässt aber einzelne Bandnamen mit Leerzeichen ("Slow Pulp") als ein Stück stehen - genau das
 // wird hier für den Vergleich gebraucht.
+// Zerlegte Titel werden gemerkt: der Radar-Abgleich prüft jeden Radar-Artist gegen alle Events (31 x 2700 Titel),
+// das Zerlegen (Unicode-Regex für Emojis) blockierte auf dem iPhone beim Start sekundenlang die Seite
+const artistCache = new Map()
 function artistMatchesEvent(artist, event) {
   const needle = artist.trim().toLowerCase()
-  return extractArtists(event.title).some(a => a.toLowerCase() === needle)
+  let names = artistCache.get(event.title)
+  if (!names) artistCache.set(event.title, names = extractArtists(event.title).map(a => a.toLowerCase()))
+  return names.includes(needle)
 }
 
 // Prüft die Radar-Künstlerliste des Nutzers gegen die frisch geladenen Events - bei Treffer
