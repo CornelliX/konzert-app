@@ -41,6 +41,7 @@ There are no test or lint commands configured.
 Single large file (~2900 lines) with one async function per venue. Key shared utilities:
 
 - `detectType(title, description)` — Classifies events as `konzert`, `party`, or `sonstige`
+- `NOT_MUSIC` (in `main`) — drops non-music events entirely (Vortrag, Werkstatt, Mitmach, Plenum, Podium, Seminar, Infoveranstaltung, party-political events like Die Linke/SPD/…); title match always drops, description-only match keeps events also tagged party/konzert/festival/live/DJ
 - `parseGermanDate(str)` — Handles various German date formats
 - `stableId(locationId, date, title)` — Deterministic hash ID for deduplication across runs
 - Scraping methods used: cheerio (static HTML), Puppeteer (JS-heavy sites), RSS feeds, iCal parsing
@@ -73,7 +74,7 @@ Venues are defined in `src/data.js` as a locations array. Each scraper function 
 
 - `manual_events` — Legacy: nur lesend (Policy "Jeder kann lesen"); der Schreibzugriff wurde entfernt, kein Client-Code fügt mehr Events ein. Wird nach dem Start im Hintergrund nachgeladen und an die gescrapten Events angehängt (`loadManualEvents()` in `renderApp`); die Tabelle ist derzeit leer.
 - `bookmarks` — Per-user event bookmarks with status `"bookmarked"` or `"going"`
-- `radar` — Per-user watchlist of artists without an upcoming show; matched against events on load, see `supabase/radar.sql` for schema + RLS
+- `radar` — Per-user watchlist of artists without an upcoming show; artists whose latest history concert gets 5 stars are added automatically (was 4–5 until 11/2026; existing entries were kept); matched against events on load, see `supabase/radar.sql` for schema + RLS
 - `history` — Per-user durable log of attended concerts (title/location/date snapshot, not an event_id reference, since the scraper prunes past events from events.json); shown in its own History tab (between Gemerkt and Radar), see `supabase/history.sql` for schema + RLS. Up to 3 memory photos per entry (`history.photo_paths`, one JPEG per photo in the private bucket `history-photos` as `<user_id>/<uuid>.jpg`, `supabase/photos.sql` must be run once): picked in the "+" form and the edit dialog (staged, uploaded on Save), resized client-side to 1200 px (`src/photos.js`), shown as a swipeable scroll-snap gallery inside the history row (arrows/dots for >1). Images load lazily (IntersectionObserver) via batched signed URLs and are cached forever in the Cache API cache `lebe-photos` keyed by object name (`public/sw.js` must not delete it). Other Lords only get `photo_paths` from `get_community_histories()` if `profiles.share_photos` and `share_history` are on (storage policy uses `photos_shared()`)
 - `profiles` — Per-user Lord-Titel (display name) and opt-in switches `share_history` / `share_bookmarks` (default off); `public_id` is the only ID visible to others (never the auth ID/email). Only `user_id, lord_title, share_*` are client-writable (column grants), see `supabase/community.sql`
 - `peer_prefs` — Per-viewer alias and favorite flag for other users' shared histories (keyed by `peer_public_id`)

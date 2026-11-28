@@ -3742,6 +3742,14 @@ async function main() {
   // Terminverschiebung, bleibt am selben Venue gültig, z.B. "VERLEGT AUF 2027").
   allEvents = allEvents.filter(e => !/verlegt\s+(ins|nach|zu)\s+\S/i.test(e.title))
 
+  // Kein Konzert/Festival/Party: Vorträge, Werkstätten, Mitmachangebote, Plena, Seminare, Partei-Events.
+  // Titel und Beschreibung (manche Venues schreiben die Kategorie nur dort hin, z. B. "Vortrag, Extra").
+  // "Vortragskonzert" und "Songwerkstatt" (Konzertreihe) bleiben, daher Wortgrenze bzw. Lookbehind.
+  const NOT_MUSIC = /\bvortrag\b|(?<!song)werkstatt|mitmach|\bplenum\b|podiumsdiskussion|\bpodium:|seminar|infoveranstaltung|\bdie linke\b|linksjugend|\b(spd|cdu|csu|fdp|afd|bsw)\b|bündnis\s*90|bündnisgrün|\bdie grünen\b|\bdie partei\b|ortsverband|kreisverband|parteitag/i
+  // Treffer nur in der Beschreibung: gemischte Abende ("Podiumsdiskussion, Party") bleiben
+  const MUSIC = /party|konzert|festival|\blive\b|\bdjs?\b/i
+  allEvents = allEvents.filter(e => !NOT_MUSIC.test(e.title) && !(NOT_MUSIC.test(e.description || '') && e.type !== 'party' && !MUSIC.test(e.description)))
+
   // Verlegungs-Hinweise aus den Listen (relocatedTo): Nennt irgendeine Quelle für Datum + Artist
   // ein Ziel-Venue, gilt nur der Eintrag dort - auch wenn das alte Venue selbst keinen Hinweis
   // zeigt (z.B. Mikropol listet KYLE ALESSANDRO weiter, nur Hole44 sagt "aus dem Mikropol in das

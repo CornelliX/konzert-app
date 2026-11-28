@@ -415,7 +415,7 @@ async function autoAddRadar(artist) {
   return true
 }
 
-// Einmalig je Gerät und Nutzer: alle Artists, deren letztes Konzert 4 oder 5 Sterne hat, ins Radar.
+// Einmalig je Gerät und Nutzer: alle Artists, deren letztes Konzert 5 Sterne (bis 11/2026: 4 oder 5) hat, ins Radar.
 // Läuft nur einmal, sonst käme jeder bewusst aus dem Radar gelöschte Artist beim nächsten Start zurück.
 async function backfillRadarFromHistory() {
   if (!currentUser) return
@@ -423,7 +423,7 @@ async function backfillRadarFromHistory() {
   if (loadData(flag)) return
   let added = 0
   for (const h of latestConcerts().values()) {
-    if ((h.rating || 0) >= 4 && await autoAddRadar(h.title)) added++
+    if (h.rating === 5 && await autoAddRadar(h.title)) added++
   }
   saveData(flag, true)
   if (added) showToast('📡 Radar', `${added} Artist${added > 1 ? 's' : ''} aus gut bewerteten Konzerten hinzugefügt`)
@@ -745,7 +745,7 @@ const SETTINGS_GUIDE = [
     ['Künstler beobachten', 'Künstler ohne anstehendes Konzert {radar}. Den Radar öffnest Du über den Reiter „Radar“ unten rechts. Mit Künstlername und + fügst Du jemanden hinzu, mit × entfernst Du ihn (mit Rückfrage).'],
     ['Treffer', 'Sobald ein Konzert des Künstlers angekündigt wird, bekommst Du einen Treffer (mit Benachrichtigung, wenn erlaubt).'],
     ['Automatisch in die Merkliste', 'Neu angekündigte Konzerte von Künstlern auf der Radar-Liste werden automatisch in die Merkliste übernommen. Der Künstler wird danach aus der Radar-Liste gestrichen.'],
-    ['Automatisch ins Radar', 'Künstler, deren letztes Konzert Du in der History mit 4 oder 5 Sternen {stern} bewertet hast, kommen automatisch ins Radar.']
+    ['Automatisch ins Radar', 'Künstler, deren letztes Konzert Du in der History mit 5 Sternen {stern} bewertet hast, kommen automatisch ins Radar.']
   ]],
   ['Einstellungen', [
     ['Öffnen', 'Tippe in Events und Kalender oben auf das Zahnrad {gear}.'],
@@ -2020,8 +2020,8 @@ function attachHistoryRemoveEvents() {
           entry.rating = prevRating
           refreshHistoryList()
           showToast('Fehler', 'Bewertung konnte nicht gespeichert werden.')
-        } else if ((entry.rating || 0) >= 4 && latestConcerts().get(stripEdgeEmoji(entry.title).toLowerCase())?.id === entry.id) {
-          // 4/5 Sterne für das letzte Konzert dieses Artists: automatisch ins Radar
+        } else if (entry.rating === 5 && latestConcerts().get(stripEdgeEmoji(entry.title).toLowerCase())?.id === entry.id) {
+          // 5 Sterne für das letzte Konzert dieses Artists: automatisch ins Radar
           if (await autoAddRadar(entry.title)) showToast('📡 Zum Radar hinzugefügt', entry.title)
         }
       })
