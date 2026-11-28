@@ -76,19 +76,6 @@
     "addedAt": "2026-09-22"
   },
   {
-    "id": 1016346032,
-    "title": "ANDA MORTS - Hektomatik WÖD Tour // Ausverkauft!",
-    "date": "2026-11-28",
-    "time": "19:00",
-    "locationId": 13,
-    "type": "konzert",
-    "description": "[Indie]  \n\n28.11.2026, 19:00 Uhr:  \n\nANDA MORTS - Hektomatik WÖD Tour // Ausverkauft!  \n\nNach zwei restlos ausverkauften…",
-    "ticketUrl": "http://www.conne-island.de/termin/nr7363.html",
-    "spotifyUrl": "",
-    "source": "conne-island",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 257835906,
     "title": "BLOODY HAWK",
     "date": "2026-11-28",
@@ -833,7 +820,7 @@
     "date": "2026-11-28",
     "time": "23:00",
     "locationId": 20,
-    "type": "konzert",
+    "type": "party",
     "description": "",
     "ticketUrl": "https://www.ilseserika.de/termine-65/pop-sicle-pop-music-all-night-long-w-max-kinski-karl-blau-11.html",
     "spotifyUrl": "",
@@ -1130,24 +1117,11 @@
     "date": "2026-11-29",
     "time": "20:00",
     "locationId": 15,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "",
     "ticketUrl": "https://www.taeubchenthal.com/programm/japanmarkt-leipzig-2026-november",
     "spotifyUrl": "",
     "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 747946139,
-    "title": "Strongboi",
-    "date": "2026-11-29",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261129-strongboi/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -1318,6 +1292,19 @@
     "spotifyUrl": "",
     "source": "kunstfabrik-schlot",
     "addedAt": "2026-11-20"
+  },
+  {
+    "id": 747946139,
+    "title": "Strongboi",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261129-strongboi/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2084343584,
@@ -1502,19 +1489,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1571628941,
-    "title": "Platina",
-    "date": "2026-11-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261130-platina/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1596454733,
     "title": "SHAKING HAND",
     "date": "2026-11-30",
@@ -1604,19 +1578,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 563688363,
-    "title": "Showcase: 30 Jahre LeipJAZZig",
-    "date": "2026-11-30",
-    "time": "20:00",
-    "locationId": 49,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://nato-leipzig.de/programm/showcase-30-jahre-leipjazzig-2026-11-30/",
-    "spotifyUrl": "",
-    "source": "nato",
-    "addedAt": "2026-11-04"
-  },
-  {
     "id": 1801957389,
     "title": "C.O.F.F.I.N.",
     "date": "2026-11-30",
@@ -1630,6 +1591,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 563688363,
+    "title": "Showcase: 30 Jahre LeipJAZZig",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 49,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://nato-leipzig.de/programm/showcase-30-jahre-leipjazzig-2026-11-30/",
+    "spotifyUrl": "",
+    "source": "nato",
+    "addedAt": "2026-11-04"
+  },
+  {
     "id": 1508513122,
     "title": "ElmieneSUPPORT: JAHSON PAYNTER",
     "date": "2026-11-30",
@@ -1640,6 +1614,19 @@
     "ticketUrl": "https://metropol-berlin.de/event/2026-11-30-elmiene",
     "spotifyUrl": "",
     "addedAt": "2026-10-28"
+  },
+  {
+    "id": 1571628941,
+    "title": "Platina",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261130-platina/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 849093697,
@@ -2135,19 +2122,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 701272904,
-    "title": "Nervy",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261202-nervy/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 258879586,
     "title": "SELIG",
     "date": "2026-12-02",
@@ -2342,6 +2316,31 @@
     "addedAt": "2026-10-25"
   },
   {
+    "id": 1464230483,
+    "title": "Solistenensemble Kaleidoskop x WhatWhy Art (Seoul) x Konstantin Heuer",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "type": "konzert",
+    "locationId": 30,
+    "source": "metropol",
+    "ticketUrl": "https://metropol-berlin.de/event/2026-12-02-solistenensemble-kaleidoskop-x-whatwhy-art-seoul-x-konstantin-heuer",
+    "spotifyUrl": "",
+    "addedAt": "2026-10-28"
+  },
+  {
+    "id": 701272904,
+    "title": "Nervy",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261202-nervy/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1795054166,
     "title": "PUR",
     "date": "2026-12-02",
@@ -2353,18 +2352,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1464230483,
-    "title": "Solistenensemble Kaleidoskop x WhatWhy Art (Seoul) x Konstantin Heuer",
-    "date": "2026-12-02",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 30,
-    "source": "metropol",
-    "ticketUrl": "https://metropol-berlin.de/event/2026-12-02-solistenensemble-kaleidoskop-x-whatwhy-art-seoul-x-konstantin-heuer",
-    "spotifyUrl": "",
-    "addedAt": "2026-10-28"
   },
   {
     "id": 234604444,
@@ -2463,7 +2450,7 @@
     "date": "2026-12-03",
     "time": "18:30",
     "locationId": 13,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "[Film]  \n\n03.12.2026, 18:30 Uhr:  \n\nFilmvorführung und Gespräch: &quot;Geschenkt wurde uns nichts&quot;  \n\nAm 3.12…",
     "ticketUrl": "http://www.conne-island.de/termin/nr7609.html",
     "spotifyUrl": "",
@@ -2476,7 +2463,7 @@
     "date": "2026-12-03",
     "time": "19:00",
     "locationId": 13,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "[Lesung]  \n\n03.12.2026, 19:00 Uhr:  \n\nSTAYING ALIVE (Lesung)  \n\nUnsere größten Idole und warum sie unvergessen sind., ,…",
     "ticketUrl": "http://www.conne-island.de/termin/nr7588.html",
     "spotifyUrl": "",
@@ -2637,19 +2624,6 @@
     "ticketUrl": "https://www.lido-berlin.de/events/2026-12-03-cockney-rejects",
     "spotifyUrl": "",
     "source": "lido",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 991317016,
-    "title": "Enno Bunger",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261203-enno-bunger/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -2820,19 +2794,6 @@
     "addedAt": "2026-09-27"
   },
   {
-    "id": 851899829,
-    "title": "Subversion auf Staatsfrequenz: Live Radio Show im Salon Similde",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "locationId": 49,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://nato-leipzig.de/programm/subversion-auf-staatsfrequenz-live-radio-show-im-salon-similde-2026-12-03/",
-    "spotifyUrl": "",
-    "source": "nato",
-    "addedAt": "2026-11-18"
-  },
-  {
     "id": 2084156487,
     "title": "Rising Insane",
     "date": "2026-12-03",
@@ -2846,12 +2807,38 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 851899829,
+    "title": "Subversion auf Staatsfrequenz: Live Radio Show im Salon Similde",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "locationId": 49,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://nato-leipzig.de/programm/subversion-auf-staatsfrequenz-live-radio-show-im-salon-similde-2026-12-03/",
+    "spotifyUrl": "",
+    "source": "nato",
+    "addedAt": "2026-11-18"
+  },
+  {
+    "id": 991317016,
+    "title": "Enno Bunger",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261203-enno-bunger/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 513053716,
     "title": "Red RHYTHM – Swing Dance Night",
     "date": "2026-12-03",
     "time": "20:30",
     "locationId": 6,
-    "type": "konzert",
+    "type": "party",
     "description": "",
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
@@ -3118,19 +3105,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1710615529,
-    "title": "Steve 'n' Seagulls",
-    "date": "2026-12-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261204-steve-n-seagulls/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1105679444,
     "title": "BIGA*RANX",
     "date": "2026-12-04",
@@ -3338,6 +3312,19 @@
     "addedAt": "2026-08-17"
   },
   {
+    "id": 1710615529,
+    "title": "Steve 'n' Seagulls",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261204-steve-n-seagulls/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1775350884,
     "title": "Thierry Lemaitre Quartet",
     "date": "2026-12-04",
@@ -3485,7 +3472,7 @@
     "date": "2026-12-04",
     "time": "23:00",
     "locationId": 4,
-    "type": "konzert",
+    "type": "party",
     "description": "Reggaetón sucio en tu nevera favorita",
     "ticketUrl": "https://eventfrog.de/de/p/partys/latin-salsa-bachata/neo-perreo-berlin-berlin-7522346475134688124.html",
     "spotifyUrl": "",
@@ -4235,7 +4222,7 @@
     "date": "2026-12-05",
     "time": "23:00",
     "locationId": 4,
-    "type": "konzert",
+    "type": "party",
     "description": "",
     "ticketUrl": "https://privatclub-berlin.de/event/the-hip-city-soul-club-6-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2/",
     "spotifyUrl": "",
@@ -4326,7 +4313,7 @@
     "date": "2026-12-06",
     "time": "12:00",
     "locationId": 13,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "[Veranda]  \n\n06.12.2026, 12:00 Uhr:  \n\nKunst &-Handwerksmarkt  \n\nBock auf Keramik, Genähtes, selbstgemachten Schmuck,…",
     "ticketUrl": "http://www.conne-island.de/termin/nr7552.html",
     "spotifyUrl": "",
@@ -4581,19 +4568,6 @@
     "addedAt": "2026-11-15"
   },
   {
-    "id": 1689427563,
-    "title": "Julia Meladin",
-    "date": "2026-12-06",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261206-julia-meladin/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1204674347,
     "title": "SHABJDEED & AL NATHER",
     "date": "2026-12-06",
@@ -4715,7 +4689,7 @@
     "date": "2026-12-06",
     "time": "20:00",
     "locationId": 41,
-    "type": "konzert",
+    "type": "party",
     "description": "",
     "ticketUrl": "https://www.peteredel.de/tanztee",
     "spotifyUrl": "",
@@ -4747,6 +4721,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1689427563,
+    "title": "Julia Meladin",
+    "date": "2026-12-06",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261206-julia-meladin/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2107001796,
@@ -4866,19 +4853,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1526758429,
-    "title": "Oleg Vynnyk",
-    "date": "2026-12-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261207-oleg-vynnyk/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 579682126,
     "title": "TWINS IN COLOUR",
     "date": "2026-12-07",
@@ -4966,6 +4940,19 @@
     "ticketUrl": "https://metropol-berlin.de/event/2026-12-07-blondshell",
     "spotifyUrl": "",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1526758429,
+    "title": "Oleg Vynnyk",
+    "date": "2026-12-07",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261207-oleg-vynnyk/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1950581273,
@@ -5188,19 +5175,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 942504102,
-    "title": "Verivery",
-    "date": "2026-12-08",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261208-verivery/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1369033965,
     "title": "PARIS PALOMA",
     "date": "2026-12-08",
@@ -5316,6 +5290,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 942504102,
+    "title": "Verivery",
+    "date": "2026-12-08",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261208-verivery/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1908248274,
@@ -5861,19 +5848,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1065798401,
-    "title": "Phoebe Bridgers",
-    "date": "2026-12-10",
-    "time": "19:30",
-    "locationId": 57,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://www.uber-arena.de/en/events/detail/phoebe-bridgers/2026-12-10-1930",
-    "spotifyUrl": "",
-    "source": "uberarena",
-    "addedAt": "2026-11-18"
-  },
-  {
     "id": 809905486,
     "title": "A Night of Beatbox with Marvelin",
     "date": "2026-12-10",
@@ -5887,17 +5861,17 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 235712358,
-    "title": "SOEN",
+    "id": 1065798401,
+    "title": "Phoebe Bridgers",
     "date": "2026-12-10",
-    "time": "20:00",
-    "locationId": 10,
+    "time": "19:30",
+    "locationId": 57,
     "type": "konzert",
     "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261210-soen/",
+    "ticketUrl": "https://www.uber-arena.de/en/events/detail/phoebe-bridgers/2026-12-10-1930",
     "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
+    "source": "uberarena",
+    "addedAt": "2026-11-18"
   },
   {
     "id": 978143673,
@@ -6029,12 +6003,25 @@
     "addedAt": "2026-09-21"
   },
   {
+    "id": 235712358,
+    "title": "SOEN",
+    "date": "2026-12-10",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261210-soen/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1381608312,
     "title": "Red RHYTHM – Swing Dance Night",
     "date": "2026-12-10",
     "time": "20:30",
     "locationId": 6,
-    "type": "konzert",
+    "type": "party",
     "description": "",
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
@@ -6286,19 +6273,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 171881350,
-    "title": "Dillon",
-    "date": "2026-12-11",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261211-dillon/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1969832020,
     "title": "Jule von Da & Love, The Twains – Deutschpop und Indie Pop",
     "date": "2026-12-11",
@@ -6480,6 +6454,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 171881350,
+    "title": "Dillon",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261211-dillon/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 955699879,
     "title": "MAUZZ",
     "date": "2026-12-11",
@@ -6584,19 +6571,6 @@
     "addedAt": "2026-11-25"
   },
   {
-    "id": 1440501219,
-    "title": "Tannz im Frannz",
-    "date": "2026-12-11",
-    "time": "22:00",
-    "locationId": 6,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://frannz.eu/",
-    "spotifyUrl": "",
-    "source": "frannz",
-    "addedAt": "2026-11-18"
-  },
-  {
     "id": 1526441180,
     "title": "Tannz im Frannz -auf 2 Floors-",
     "date": "2026-12-11",
@@ -6608,6 +6582,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-11-28"
+  },
+  {
+    "id": 1440501219,
+    "title": "Tannz im Frannz",
+    "date": "2026-12-11",
+    "time": "22:00",
+    "locationId": 6,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://frannz.eu/",
+    "spotifyUrl": "",
+    "source": "frannz",
+    "addedAt": "2026-11-18"
   },
   {
     "id": 2135306602,
@@ -6654,7 +6641,7 @@
     "date": "2026-12-11",
     "time": "23:00",
     "locationId": 4,
-    "type": "konzert",
+    "type": "party",
     "description": "Berlins originale Latin Cumbia Party",
     "ticketUrl": "https://privatclub-berlin.de/event/psychedelic-cumbia-party-22-2-2-2-2-3-2-2-2-2-2-2-2-2-2-2-3-2-2-2-2-2-2-2-2-2-2-2-2-2-4-2-2-2-2-3-2-2-3-2-2-2-2-2-2-2-2-2-2-3-3-2-2-2-2-2-2-2-2-2/",
     "spotifyUrl": "",
@@ -6974,19 +6961,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 455515506,
-    "title": "Goldroger",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261212-goldroger/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 547531452,
     "title": "Sync madres  – Math Rock",
     "date": "2026-12-12",
@@ -7142,6 +7116,19 @@
     "addedAt": "2026-11-11"
   },
   {
+    "id": 455515506,
+    "title": "Goldroger",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261212-goldroger/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 261913641,
     "title": "Samsta + ?",
     "date": "2026-12-12",
@@ -7160,7 +7147,7 @@
     "date": "2026-12-12",
     "time": "21:00",
     "locationId": 13,
-    "type": "konzert",
+    "type": "party",
     "description": "[tanzbar]  \n\n12.12.2026, 21:00 Uhr:  \n\nKaraoke Island  \n\nKaraoke Island  schraub das Autoradio auf Anschlag! Schnapp…",
     "ticketUrl": "http://www.conne-island.de/termin/nr7597.html",
     "spotifyUrl": "",
@@ -7328,7 +7315,7 @@
     "date": "2026-12-12",
     "time": "23:00",
     "locationId": 20,
-    "type": "konzert",
+    "type": "party",
     "description": "",
     "ticketUrl": "https://www.ilseserika.de/termine-65/die-grosse-ilses-erika-tanznacht-2-floors-5.html",
     "spotifyUrl": "",
@@ -7367,7 +7354,7 @@
     "date": "2026-12-13",
     "time": "11:00",
     "locationId": 13,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "13.12.2026, 11:00 Uhr:  \n\nAntifascist Wargaming Club Leipzig  \n\n(english version below), , Der Antifascist Wargaming…",
     "ticketUrl": "http://www.conne-island.de/termin/nr7600.html",
     "spotifyUrl": "",
@@ -7672,19 +7659,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1288136518,
-    "title": "Ballet Of Lights",
-    "date": "2026-12-13",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261213-ballet-of-lights/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 129361179,
     "title": "Sebastian Hämer",
     "date": "2026-12-13",
@@ -7761,6 +7735,19 @@
     "spotifyUrl": "",
     "source": "nato",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1288136518,
+    "title": "Ballet Of Lights",
+    "date": "2026-12-13",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261213-ballet-of-lights/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1209154038,
@@ -8086,19 +8073,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1294199127,
-    "title": "5'Nizza",
-    "date": "2026-12-15",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261215-5nizza/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1198815290,
     "title": "ADOLF SÜDKNECHT – Die Seifenoper Improschau – … Adolf auf der Mustermesse",
     "date": "2026-12-15",
@@ -8130,7 +8104,7 @@
     "date": "2026-12-15",
     "time": "20:00",
     "locationId": 20,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "",
     "ticketUrl": "https://www.ilseserika.de/termine-65/das-ilses-erika-weihnachtsspiel-indie-jones-jaeger-des-vergorenen-schatzes-premiere-2.html",
     "spotifyUrl": "",
@@ -8201,6 +8175,19 @@
     "spotifyUrl": "",
     "source": "kunstfabrik-schlot",
     "addedAt": "2026-11-20"
+  },
+  {
+    "id": 1294199127,
+    "title": "5'Nizza",
+    "date": "2026-12-15",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261215-5nizza/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1822488679,
@@ -8506,7 +8493,7 @@
     "date": "2026-12-16",
     "time": "20:00",
     "locationId": 20,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "",
     "ticketUrl": "https://www.ilseserika.de/termine-65/das-ilses-erika-weihnachtsspiel-indie-jones-jaeger-des-vergorenen-schatzes-premiere.html",
     "spotifyUrl": "",
@@ -8773,19 +8760,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1669986674,
-    "title": "Ibeyi",
-    "date": "2026-12-17",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261217-ibeyi/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1140030119,
     "title": "KKUBA102",
     "date": "2026-12-17",
@@ -8817,7 +8791,7 @@
     "date": "2026-12-17",
     "time": "20:00",
     "locationId": 25,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "",
     "ticketUrl": "https://www.tempodrom.de/event/roncalli_weihnachtscircus_2026_2027_2026-12-17_2027-01-03_00/",
     "spotifyUrl": "",
@@ -8903,6 +8877,31 @@
     "addedAt": "2026-11-25"
   },
   {
+    "id": 1534496998,
+    "title": "Glenn Leonard’s Temptations RevueSupport: Susaye Greene",
+    "date": "2026-12-17",
+    "time": "20:00",
+    "type": "konzert",
+    "locationId": 30,
+    "source": "metropol",
+    "ticketUrl": "https://metropol-berlin.de/event/2026-12-17-glenn-leonards-temptations-revue",
+    "spotifyUrl": "",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": 1669986674,
+    "title": "Ibeyi",
+    "date": "2026-12-17",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261217-ibeyi/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1699198044,
     "title": "Die Fantastischen Vier",
     "date": "2026-12-17",
@@ -8916,24 +8915,12 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1534496998,
-    "title": "Glenn Leonard’s Temptations RevueSupport: Susaye Greene",
-    "date": "2026-12-17",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 30,
-    "source": "metropol",
-    "ticketUrl": "https://metropol-berlin.de/event/2026-12-17-glenn-leonards-temptations-revue",
-    "spotifyUrl": "",
-    "addedAt": "2026-09-27"
-  },
-  {
     "id": 1598746961,
     "title": "Red RHYTHM – Swing Dance Night",
     "date": "2026-12-17",
     "time": "20:30",
     "locationId": 6,
-    "type": "konzert",
+    "type": "party",
     "description": "",
     "ticketUrl": "https://frannz.eu/",
     "spotifyUrl": "",
@@ -9212,19 +9199,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 2137953432,
-    "title": "Erdmöbel",
-    "date": "2026-12-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261218-erdmoebel/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 96585535,
     "title": "NORTHERN LITE",
     "date": "2026-12-18",
@@ -9379,6 +9353,19 @@
     "spotifyUrl": "",
     "source": "nato",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 2137953432,
+    "title": "Erdmöbel",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261218-erdmoebel/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 578317151,
@@ -9783,19 +9770,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 586999446,
-    "title": "Ultra Night",
-    "date": "2026-12-19",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261219-ultra-night/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1408359785,
     "title": "Knalltheater – Theater / Comedy / Musik",
     "date": "2026-12-19",
@@ -9949,6 +9923,19 @@
     "spotifyUrl": "",
     "source": "nato",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 586999446,
+    "title": "Ultra Night",
+    "date": "2026-12-19",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261219-ultra-night/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1026917258,
@@ -11222,19 +11209,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 2099333188,
-    "title": "B-Tight",
-    "date": "2026-12-28",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261228-b-tight/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 453330736,
     "title": "Crucchi Gang",
     "date": "2026-12-28",
@@ -11259,6 +11233,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-11-15"
+  },
+  {
+    "id": 2099333188,
+    "title": "B-Tight",
+    "date": "2026-12-28",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261228-b-tight/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 820862807,
@@ -11507,19 +11494,6 @@
     "addedAt": "2026-11-15"
   },
   {
-    "id": 1714144765,
-    "title": "Alexa Feser",
-    "date": "2026-12-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20261230-alexa-feser/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1471677185,
     "title": "Troy Mytea (DJ-Set)",
     "date": "2026-12-30",
@@ -11583,6 +11557,19 @@
     "spotifyUrl": "",
     "source": "zigzag",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1714144765,
+    "title": "Alexa Feser",
+    "date": "2026-12-30",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20261230-alexa-feser/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1207881957,
@@ -12904,19 +12891,6 @@
     "addedAt": "2026-11-18"
   },
   {
-    "id": 1307145564,
-    "title": "Ballet Of Lights",
-    "date": "2027-01-10",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270110-ballet-of-lights/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1155640508,
     "title": "Mixtura- Salsa Live Concert",
     "date": "2027-01-10",
@@ -12941,6 +12915,19 @@
     "spotifyUrl": "",
     "source": "kunstfabrik-schlot",
     "addedAt": "2026-11-20"
+  },
+  {
+    "id": 1307145564,
+    "title": "Ballet Of Lights",
+    "date": "2027-01-10",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270110-ballet-of-lights/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1895160924,
@@ -13039,7 +13026,7 @@
     "date": "2027-01-12",
     "time": "19:30",
     "locationId": 14,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "Film",
     "ticketUrl": "https://de.eoft.eu/de/tickets/european-outdoor-film-tour-2026-werk-2-2027-01-12-19-30",
     "spotifyUrl": "",
@@ -13156,7 +13143,7 @@
     "date": "2027-01-13",
     "time": "19:30",
     "locationId": 14,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "Film",
     "ticketUrl": "https://de.eoft.eu/de/tickets/european-outdoor-film-tour-2026-werk-2-2027-01-13-19-30",
     "spotifyUrl": "",
@@ -13411,19 +13398,6 @@
     "addedAt": "2026-10-07"
   },
   {
-    "id": 1017470945,
-    "title": "Heavytones",
-    "date": "2027-01-15",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270115-heavytones/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 20130302,
     "title": "Lust for Youth",
     "date": "2027-01-15",
@@ -13526,6 +13500,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1017470945,
+    "title": "Heavytones",
+    "date": "2027-01-15",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270115-heavytones/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1909581860,
@@ -13813,19 +13800,6 @@
     "addedAt": "2026-09-27"
   },
   {
-    "id": 173443716,
-    "title": "Dice Actors Live on Stage",
-    "date": "2027-01-16",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270116-dice-actors-live-on-stage/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2145169374,
     "title": "Dieter Nuhr",
     "date": "2027-01-16",
@@ -13863,6 +13837,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-11-21"
+  },
+  {
+    "id": 173443716,
+    "title": "Dice Actors Live on Stage",
+    "date": "2027-01-16",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270116-dice-actors-live-on-stage/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1936688797,
@@ -13974,7 +13961,7 @@
     "date": "2027-01-17",
     "time": "11:00",
     "locationId": 13,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "17.01.2027, 11:00 Uhr:  \n\nAntifascist Wargaming Club Leipzig  \n\n(english version below), , Der Antifascist Wargaming…",
     "ticketUrl": "http://www.conne-island.de/termin/nr7606.html",
     "spotifyUrl": "",
@@ -14047,19 +14034,6 @@
     "addedAt": "2026-09-22"
   },
   {
-    "id": 1593197545,
-    "title": "The Black Dahlia Murder",
-    "date": "2027-01-17",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270117-the-black-dahlia-murder/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 430210665,
     "title": "BalkaNova | Berlin . Sofia | Balkanfolk & World Jazz",
     "date": "2027-01-17",
@@ -14084,6 +14058,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-09-23"
+  },
+  {
+    "id": 1593197545,
+    "title": "The Black Dahlia Murder",
+    "date": "2027-01-17",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270117-the-black-dahlia-murder/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1680243701,
@@ -14294,19 +14281,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 136339945,
-    "title": "Kauta",
-    "date": "2027-01-20",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270120-kauta/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 964298814,
     "title": "Götz Widmann",
     "date": "2027-01-20",
@@ -14318,6 +14292,19 @@
     "spotifyUrl": "",
     "source": "moritzbastei",
     "addedAt": "2026-11-21"
+  },
+  {
+    "id": 136339945,
+    "title": "Kauta",
+    "date": "2027-01-20",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270120-kauta/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1640476213,
@@ -14346,19 +14333,6 @@
     "addedAt": "2026-11-15"
   },
   {
-    "id": 1822265556,
-    "title": "Slow Pulp",
-    "date": "2027-01-21",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270121-slow-pulp/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1924076760,
     "title": "Das Phantom der Oper",
     "date": "2027-01-21",
@@ -14383,6 +14357,19 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-11-25"
+  },
+  {
+    "id": 1822265556,
+    "title": "Slow Pulp",
+    "date": "2027-01-21",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270121-slow-pulp/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1650958142,
@@ -14670,19 +14657,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 11484920,
-    "title": "Catch Your Breath",
-    "date": "2027-01-23",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270123-catch-your-breath/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 24615471,
     "title": "Sainte Vie",
     "date": "2027-01-23",
@@ -14693,6 +14667,19 @@
     "ticketUrl": "https://larkberlin.com/event/sainte-vie/",
     "spotifyUrl": "",
     "source": "lark",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 11484920,
+    "title": "Catch Your Breath",
+    "date": "2027-01-23",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270123-catch-your-breath/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -14727,7 +14714,7 @@
     "date": "2027-01-23",
     "time": "23:00",
     "locationId": 4,
-    "type": "konzert",
+    "type": "party",
     "description": "",
     "ticketUrl": "https://privatclub-berlin.de/event/the-hip-city-soul-club-6-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2/",
     "spotifyUrl": "",
@@ -14799,19 +14786,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 924224132,
-    "title": "Anaïs",
-    "date": "2027-01-24",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270124-anais-2/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 642903988,
     "title": "HAPPY MONDAYS",
     "date": "2027-01-24",
@@ -14875,6 +14849,19 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 924224132,
+    "title": "Anaïs",
+    "date": "2027-01-24",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270124-anais-2/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 761818808,
@@ -15578,19 +15565,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 214325342,
-    "title": "Wage War",
-    "date": "2027-01-30",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270130-wage-war/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 707277709,
     "title": "GRIN",
     "date": "2027-01-30",
@@ -15628,6 +15602,19 @@
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 214325342,
+    "title": "Wage War",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270130-wage-war/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1687079560,
@@ -16019,19 +16006,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 446871869,
-    "title": "Delain",
-    "date": "2027-02-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270204-delain/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 583493057,
     "title": "Dummy",
     "date": "2027-02-04",
@@ -16095,6 +16069,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 446871869,
+    "title": "Delain",
+    "date": "2027-02-04",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270204-delain/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1272292194,
@@ -16633,7 +16620,7 @@
     "date": "2027-02-07",
     "time": "11:00",
     "locationId": 13,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "07.02.2027, 11:00 Uhr:  \n\nAntifascist Wargaming Club Leipzig  \n\n(english version below), , Der Antifascist Wargaming…",
     "ticketUrl": "http://www.conne-island.de/termin/nr7607.html",
     "spotifyUrl": "",
@@ -17530,7 +17517,7 @@
     "date": "2027-02-13",
     "time": "14:00",
     "locationId": 14,
-    "type": "konzert",
+    "type": "party",
     "description": "Disco",
     "ticketUrl": "https://www.tixforgigs.com/Event/77431?af=cwduw3m5zhp3&saf=uk36r6q",
     "spotifyUrl": "",
@@ -17642,19 +17629,6 @@
     "addedAt": "2026-11-20"
   },
   {
-    "id": 383534272,
-    "title": "Gringo Mayer und die Kegelband",
-    "date": "2027-02-13",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270213-gringo-mayer-und-die-kegelband/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-15"
-  },
-  {
     "id": 1347874824,
     "title": "Ugly",
     "date": "2027-02-13",
@@ -17718,6 +17692,19 @@
     "spotifyUrl": "",
     "source": "columbiahalle",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 383534272,
+    "title": "Gringo Mayer und die Kegelband",
+    "date": "2027-02-13",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270213-gringo-mayer-und-die-kegelband/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-15"
   },
   {
     "id": 516103525,
@@ -17954,19 +17941,6 @@
     "addedAt": "2026-11-04"
   },
   {
-    "id": 59245461,
-    "title": "Dagny",
-    "date": "2027-02-15",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270215-dagny/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1714155419,
     "title": "BINA.",
     "date": "2027-02-15",
@@ -17977,6 +17951,19 @@
     "ticketUrl": "https://www.berghain.berlin/de/event/82405/",
     "spotifyUrl": "",
     "source": "kantine",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 59245461,
+    "title": "Dagny",
+    "date": "2027-02-15",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270215-dagny/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -18019,19 +18006,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 750200193,
-    "title": "Sampa The Great",
-    "date": "2027-02-16",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270216-sampa-the-great/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 548651662,
     "title": "BEAT IT!",
     "date": "2027-02-16",
@@ -18056,6 +18030,19 @@
     "spotifyUrl": "",
     "source": "nsl",
     "addedAt": "2026-10-21"
+  },
+  {
+    "id": 750200193,
+    "title": "Sampa The Great",
+    "date": "2027-02-16",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270216-sampa-the-great/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 154189965,
@@ -18108,19 +18095,6 @@
     "spotifyUrl": "",
     "source": "lido",
     "addedAt": "2026-11-18"
-  },
-  {
-    "id": 1737941917,
-    "title": "Michael Schulte",
-    "date": "2027-02-17",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270217-michael-schulte/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1258802801,
@@ -18199,6 +18173,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1737941917,
+    "title": "Michael Schulte",
+    "date": "2027-02-17",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270217-michael-schulte/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 463144360,
@@ -18304,19 +18291,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 1210687447,
-    "title": "Knox",
-    "date": "2027-02-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270218-knox/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1228710032,
     "title": "BEAT IT!",
     "date": "2027-02-18",
@@ -18406,6 +18380,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1210687447,
+    "title": "Knox",
+    "date": "2027-02-18",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270218-knox/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1689159907,
@@ -18809,19 +18796,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1458902859,
-    "title": "Frozen Soul",
-    "date": "2027-02-20",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270220-frozen-soul/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1474819702,
     "title": "Nico Stank",
     "date": "2027-02-20",
@@ -18898,6 +18872,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1458902859,
+    "title": "Frozen Soul",
+    "date": "2027-02-20",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270220-frozen-soul/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 882873498,
@@ -19093,19 +19080,6 @@
     "addedAt": "2026-11-18"
   },
   {
-    "id": 1795380091,
-    "title": "Ballet Of Lights",
-    "date": "2027-02-21",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270221-ballet-of-lights/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 433089045,
     "title": "Moyka",
     "date": "2027-02-21",
@@ -19130,6 +19104,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-10-07"
+  },
+  {
+    "id": 1795380091,
+    "title": "Ballet Of Lights",
+    "date": "2027-02-21",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270221-ballet-of-lights/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1242911934,
@@ -19197,19 +19184,6 @@
     "addedAt": "2026-09-15"
   },
   {
-    "id": 1544092043,
-    "title": "Melrose Avenue",
-    "date": "2027-02-22",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270222-melrose-avenue/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1678534221,
     "title": "ADAM GREEN",
     "date": "2027-02-22",
@@ -19247,6 +19221,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-11-15"
+  },
+  {
+    "id": 1544092043,
+    "title": "Melrose Avenue",
+    "date": "2027-02-22",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270222-melrose-avenue/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1253569967,
@@ -19469,19 +19456,6 @@
     "addedAt": "2026-11-18"
   },
   {
-    "id": 1717286794,
-    "title": "Jaill",
-    "date": "2027-02-24",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270224-jaill/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1937653064,
     "title": "BIKE ROUTES",
     "date": "2027-02-24",
@@ -19532,6 +19506,19 @@
     "spotifyUrl": "",
     "source": "ufo",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1717286794,
+    "title": "Jaill",
+    "date": "2027-02-24",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270224-jaill/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1497784287,
@@ -19638,19 +19625,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1066619210,
-    "title": "Levka",
-    "date": "2027-02-25",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270225-levka/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1184307160,
     "title": "THE HEADLINES",
     "date": "2027-02-25",
@@ -19727,6 +19701,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1066619210,
+    "title": "Levka",
+    "date": "2027-02-25",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270225-levka/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 877365918,
@@ -19833,19 +19820,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1426136078,
-    "title": "Jonah Kagen",
-    "date": "2027-02-26",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270226-jonah-kagen/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1262583931,
     "title": "HOT CHIP",
     "date": "2027-02-26",
@@ -19935,6 +19909,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 1426136078,
+    "title": "Jonah Kagen",
+    "date": "2027-02-26",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270226-jonah-kagen/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1922649607,
@@ -20079,19 +20066,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 997718611,
-    "title": "Schandmaul",
-    "date": "2027-02-27",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270227-schandmaul/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1096223388,
     "title": "Jenke von Wilmsdorff",
     "date": "2027-02-27",
@@ -20141,6 +20115,19 @@
     "ticketUrl": "https://larkberlin.com/event/leila-20-something-club-tour/",
     "spotifyUrl": "",
     "source": "lark",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 997718611,
+    "title": "Schandmaul",
+    "date": "2027-02-27",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270227-schandmaul/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -20869,19 +20856,6 @@
     "addedAt": "2026-10-14"
   },
   {
-    "id": 77136657,
-    "title": "South Arcade",
-    "date": "2027-03-05",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270305-south-arcade/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1265457828,
     "title": "LENA & LINUS",
     "date": "2027-03-05",
@@ -20932,6 +20906,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 77136657,
+    "title": "South Arcade",
+    "date": "2027-03-05",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270305-south-arcade/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 419329058,
@@ -21114,19 +21101,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 643489088,
-    "title": "Mamas Gun",
-    "date": "2027-03-06",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270306-mamas-gun/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1022709308,
     "title": "ANDA MORTS",
     "date": "2027-03-06",
@@ -21241,6 +21215,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 643489088,
+    "title": "Mamas Gun",
+    "date": "2027-03-06",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270306-mamas-gun/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 340651777,
@@ -21372,19 +21359,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 1871023339,
-    "title": "The Haunted Youth",
-    "date": "2027-03-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270307-the-haunted-youth/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1200187680,
     "title": "\"Tanz in den Frühling\" zum Internationalen Frauentag",
     "date": "2027-03-07",
@@ -21408,6 +21382,19 @@
     "ticketUrl": "https://cassiopeia-berlin.de/event/dead-butterflies-111664555",
     "spotifyUrl": "",
     "source": "cassiopeia",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 1871023339,
+    "title": "The Haunted Youth",
+    "date": "2027-03-07",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270307-the-haunted-youth/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -21688,7 +21675,7 @@
     "date": "2027-03-10",
     "time": "19:30",
     "locationId": 14,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "Film",
     "ticketUrl": "https://banff-tour.eu/de-de/tickets/banff-mountain-film-festival-world-tour-2027-werk-2-2027-03-10-19-30",
     "spotifyUrl": "",
@@ -21746,19 +21733,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-10-07"
-  },
-  {
-    "id": 1155734545,
-    "title": "Haiden Henderson",
-    "date": "2027-03-10",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270310-haiden-henderson/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 426845467,
@@ -21837,6 +21811,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1155734545,
+    "title": "Haiden Henderson",
+    "date": "2027-03-10",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270310-haiden-henderson/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 854085152,
@@ -21943,19 +21930,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1123994478,
-    "title": "Tränen",
-    "date": "2027-03-11",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270311-traenen/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 433600874,
     "title": "BIG WETT",
     "date": "2027-03-11",
@@ -22031,6 +22005,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1123994478,
+    "title": "Tränen",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270311-traenen/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 617736245,
@@ -22162,19 +22149,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 207477860,
-    "title": "Zeromancer",
-    "date": "2027-03-12",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270312-zeromancer/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1851087305,
     "title": "NESS",
     "date": "2027-03-12",
@@ -22252,6 +22226,31 @@
     "addedAt": "2026-09-27"
   },
   {
+    "id": 1455202685,
+    "title": "Saint Etienne",
+    "date": "2027-03-12",
+    "time": "20:00",
+    "type": "konzert",
+    "locationId": 30,
+    "source": "metropol",
+    "ticketUrl": "https://metropol-berlin.de/event/2027-03-12-saint-etienne",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-02"
+  },
+  {
+    "id": 207477860,
+    "title": "Zeromancer",
+    "date": "2027-03-12",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270312-zeromancer/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1654236736,
     "title": "Xavier Naidoo",
     "date": "2027-03-12",
@@ -22263,18 +22262,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-06"
-  },
-  {
-    "id": 1455202685,
-    "title": "Saint Etienne",
-    "date": "2027-03-12",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 30,
-    "source": "metropol",
-    "ticketUrl": "https://metropol-berlin.de/event/2027-03-12-saint-etienne",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 1605496030,
@@ -22379,19 +22366,6 @@
     "spotifyUrl": "",
     "source": "felsenkeller",
     "addedAt": "2026-08-17"
-  },
-  {
-    "id": 912328877,
-    "title": "Emei",
-    "date": "2027-03-13",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270313-emei/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-11"
   },
   {
     "id": 958633345,
@@ -22523,6 +22497,19 @@
     "addedAt": "2026-11-20"
   },
   {
+    "id": 912328877,
+    "title": "Emei",
+    "date": "2027-03-13",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270313-emei/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-11"
+  },
+  {
     "id": 946427060,
     "title": "Van Tastik + +Guest",
     "date": "2027-03-13",
@@ -22553,7 +22540,7 @@
     "date": "2027-03-14",
     "time": "14:00",
     "locationId": 14,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "WERK 2 - history",
     "ticketUrl": "https://www.werk-2.de/programm/2027-03-14_fuehrung_ueber_das_werk_2-gelaende",
     "spotifyUrl": "",
@@ -22696,7 +22683,7 @@
     "date": "2027-03-14",
     "time": "20:00",
     "locationId": 41,
-    "type": "sonstige",
+    "type": "konzert",
     "description": "",
     "ticketUrl": "https://www.klavierfest-bw.de/programm-2027/so-14-3-11-00-vortragskonzert/",
     "spotifyUrl": "",
@@ -22734,7 +22721,7 @@
     "date": "2027-03-15",
     "time": "19:30",
     "locationId": 14,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "Film",
     "ticketUrl": "https://oceanfilmtour.com/tickets?utm_campaign=ocean_13&utm_source=web-teaser&utm_medium=lokales_marketing&utm_content=vak",
     "spotifyUrl": "",
@@ -23582,19 +23569,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 429995761,
-    "title": "THE DEAD DAISIES FEATURING KELLY HANSEN",
-    "date": "2027-03-20",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270320-the-dead-daisies-featuring-kelly-hansen/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 240000142,
     "title": "Wave Noir #06",
     "date": "2027-03-20",
@@ -23670,6 +23644,19 @@
     "spotifyUrl": "",
     "source": "lark",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 429995761,
+    "title": "THE DEAD DAISIES FEATURING KELLY HANSEN",
+    "date": "2027-03-20",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270320-the-dead-daisies-featuring-kelly-hansen/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1412581907,
@@ -24047,19 +24034,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 196661891,
-    "title": "KMFDM",
-    "date": "2027-03-25",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270325-kmfdm/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 2100236132,
     "title": "Le Vibrazioni",
     "date": "2027-03-25",
@@ -24111,6 +24085,19 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 196661891,
+    "title": "KMFDM",
+    "date": "2027-03-25",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270325-kmfdm/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1939472231,
     "title": "KMFDM",
     "date": "2027-03-26",
@@ -24121,19 +24108,6 @@
     "ticketUrl": "https://www.taeubchenthal.com/programm/kmfdm-leizig-2027-03",
     "spotifyUrl": "",
     "source": "taeubchenthal",
-    "addedAt": "2026-11-02"
-  },
-  {
-    "id": 325976119,
-    "title": "Varg",
-    "date": "2027-03-26",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270326-varg/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
     "addedAt": "2026-11-02"
   },
   {
@@ -24161,6 +24135,19 @@
     "spotifyUrl": "",
     "source": "frannz",
     "addedAt": "2026-09-29"
+  },
+  {
+    "id": 325976119,
+    "title": "Varg",
+    "date": "2027-03-26",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270326-varg/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 344473754,
@@ -24578,19 +24565,6 @@
     "addedAt": "2026-09-22"
   },
   {
-    "id": 840272208,
-    "title": "Nieve Ella",
-    "date": "2027-03-31",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270331-nieve-ella/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1817891091,
     "title": "Verifiziert",
     "date": "2027-03-31",
@@ -24641,6 +24615,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 840272208,
+    "title": "Nieve Ella",
+    "date": "2027-03-31",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270331-nieve-ella/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 940002658,
@@ -24915,19 +24902,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 321870144,
-    "title": "Lance Butters",
-    "date": "2027-04-02",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270402-lance-butters/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1066336964,
     "title": "Leoniden",
     "date": "2027-04-02",
@@ -24990,6 +24964,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 321870144,
+    "title": "Lance Butters",
+    "date": "2027-04-02",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270402-lance-butters/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 973531682,
@@ -25341,19 +25328,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 303010107,
-    "title": "Motorpsycho",
-    "date": "2027-04-06",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270406-motorpsycho/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1075133067,
     "title": "Wednesday Campanella",
     "date": "2027-04-06",
@@ -25377,6 +25351,19 @@
     "ticketUrl": "https://hole-berlin.de/event/2027-04-06-herbst/",
     "spotifyUrl": "",
     "addedAt": "2026-10-14"
+  },
+  {
+    "id": 303010107,
+    "title": "Motorpsycho",
+    "date": "2027-04-06",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270406-motorpsycho/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1476421563,
@@ -25418,19 +25405,6 @@
     "addedAt": "2026-09-22"
   },
   {
-    "id": 822692330,
-    "title": "Sarah Engels",
-    "date": "2027-04-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270407-sarah-engels/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 345926235,
     "title": "DRUCKLUFT",
     "date": "2027-04-07",
@@ -25442,6 +25416,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-17"
+  },
+  {
+    "id": 822692330,
+    "title": "Sarah Engels",
+    "date": "2027-04-07",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270407-sarah-engels/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1180377969,
@@ -25522,19 +25509,6 @@
     "addedAt": "2026-11-06"
   },
   {
-    "id": 1080231983,
-    "title": "Blackout Problems",
-    "date": "2027-04-08",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270408-blackout-problems/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1155597902,
     "title": "High Fade",
     "date": "2027-04-08",
@@ -25584,6 +25558,19 @@
     "ticketUrl": "https://metropol-berlin.de/event/2027-04-08-pomme",
     "spotifyUrl": "",
     "addedAt": "2026-09-22"
+  },
+  {
+    "id": 1080231983,
+    "title": "Blackout Problems",
+    "date": "2027-04-08",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270408-blackout-problems/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1259499312,
@@ -25703,19 +25690,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 1665890575,
-    "title": "Kati K",
-    "date": "2027-04-09",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270409-kati-k/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1140925273,
     "title": "CARLO5",
     "date": "2027-04-09",
@@ -25805,6 +25779,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-20"
+  },
+  {
+    "id": 1665890575,
+    "title": "Kati K",
+    "date": "2027-04-09",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270409-kati-k/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 263658985,
@@ -25923,19 +25910,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 941918177,
-    "title": "Josh.",
-    "date": "2027-04-10",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270410-josh-2/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1809848074,
     "title": "DUBIOZA KOLEKTIV",
     "date": "2027-04-10",
@@ -26050,6 +26024,19 @@
     "spotifyUrl": "",
     "source": "waschhaus",
     "addedAt": "2026-11-06"
+  },
+  {
+    "id": 941918177,
+    "title": "Josh.",
+    "date": "2027-04-10",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270410-josh-2/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 862637095,
@@ -26362,19 +26349,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 194258547,
-    "title": "Moop Mama",
-    "date": "2027-04-13",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270413-moop-mama/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 29062532,
     "title": "Kellermensch",
     "date": "2027-04-13",
@@ -26463,6 +26437,19 @@
     "spotifyUrl": "",
     "source": "cassiopeia",
     "addedAt": "2026-11-15"
+  },
+  {
+    "id": 194258547,
+    "title": "Moop Mama",
+    "date": "2027-04-13",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270413-moop-mama/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1590477967,
@@ -26556,19 +26543,6 @@
     "addedAt": "2026-11-15"
   },
   {
-    "id": 1726066095,
-    "title": "Ider",
-    "date": "2027-04-14",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270414-ider/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-06"
-  },
-  {
     "id": 626066321,
     "title": "Jonah Yano",
     "date": "2027-04-14",
@@ -26643,6 +26617,19 @@
     "ticketUrl": "https://landstreicher-konzerte.de/konzerte/hinnerk-koehn-p-27",
     "spotifyUrl": "",
     "source": "waschhaus",
+    "addedAt": "2026-11-06"
+  },
+  {
+    "id": 1726066095,
+    "title": "Ider",
+    "date": "2027-04-14",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270414-ider/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
     "addedAt": "2026-11-06"
   },
   {
@@ -27098,19 +27085,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 518388325,
-    "title": "Rodrigo y Gabriela",
-    "date": "2027-04-18",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270418-rodrigo-y-gabriela/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 917804319,
     "title": "SAMMY RAE & THE FRIENDS",
     "date": "2027-04-18",
@@ -27187,6 +27161,19 @@
     "spotifyUrl": "",
     "source": "nato",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 518388325,
+    "title": "Rodrigo y Gabriela",
+    "date": "2027-04-18",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270418-rodrigo-y-gabriela/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1323834100,
@@ -27564,19 +27551,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1724245845,
-    "title": "AND ONE",
-    "date": "2027-04-22",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270422-and-one/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1588498983,
     "title": "Dent May",
     "date": "2027-04-22",
@@ -27653,6 +27627,19 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-11-20"
+  },
+  {
+    "id": 1724245845,
+    "title": "AND ONE",
+    "date": "2027-04-22",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270422-and-one/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1616730609,
@@ -27915,19 +27902,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 1926258423,
-    "title": "San Luis",
-    "date": "2027-04-24",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270424-san-luis/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-25"
-  },
-  {
     "id": 1250358662,
     "title": "MOONKID",
     "date": "2027-04-24",
@@ -27977,6 +27951,19 @@
     "ticketUrl": "https://hole-berlin.de/event/2027-04-24-the-lainey-wilson-experience/",
     "spotifyUrl": "",
     "addedAt": "2026-09-15"
+  },
+  {
+    "id": 1926258423,
+    "title": "San Luis",
+    "date": "2027-04-24",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270424-san-luis/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-25"
   },
   {
     "id": 161700337,
@@ -28152,7 +28139,7 @@
     "date": "2027-04-27",
     "time": "19:30",
     "locationId": 14,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "Film",
     "ticketUrl": "https://oceanfilmtour.com/tickets?utm_campaign=ocean_13&utm_source=web-teaser&utm_medium=lokales_marketing&utm_content=vak",
     "spotifyUrl": "",
@@ -28186,19 +28173,6 @@
     "addedAt": "2026-09-21"
   },
   {
-    "id": 200210518,
-    "title": "Tiny Habits",
-    "date": "2027-04-27",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270427-tiny-habits/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-28"
-  },
-  {
     "id": 1953417597,
     "title": "THE CAT EMPIRE",
     "date": "2027-04-27",
@@ -28210,6 +28184,19 @@
     "spotifyUrl": "",
     "source": "huxleys",
     "addedAt": "2026-11-18"
+  },
+  {
+    "id": 200210518,
+    "title": "Tiny Habits",
+    "date": "2027-04-27",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270427-tiny-habits/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-28"
   },
   {
     "id": 575940451,
@@ -28236,19 +28223,6 @@
     "spotifyUrl": "",
     "source": "prachtwerk",
     "addedAt": "2026-11-21"
-  },
-  {
-    "id": 1482676214,
-    "title": "Marc Broussard",
-    "date": "2027-04-28",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270428-marc-broussard/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
   },
   {
     "id": 372156199,
@@ -28342,6 +28316,19 @@
     "addedAt": "2026-11-06"
   },
   {
+    "id": 1482676214,
+    "title": "Marc Broussard",
+    "date": "2027-04-28",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270428-marc-broussard/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 40724369,
     "title": "BDRMM",
     "date": "2027-04-29",
@@ -28399,7 +28386,7 @@
     "date": "2027-04-29",
     "time": "20:00",
     "locationId": 25,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "",
     "ticketUrl": "https://www.tempodrom.de/event/chinesischer_nationalcircus_2027-04-29_20/",
     "spotifyUrl": "",
@@ -28715,19 +28702,6 @@
     "addedAt": "2026-10-21"
   },
   {
-    "id": 1159044888,
-    "title": "Will Burkart",
-    "date": "2027-05-04",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270504-will-burkart/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1365045317,
     "title": "Boogie Belgique",
     "date": "2027-05-04",
@@ -28765,6 +28739,19 @@
     "spotifyUrl": "",
     "source": "peter-edel",
     "addedAt": "2026-11-15"
+  },
+  {
+    "id": 1159044888,
+    "title": "Will Burkart",
+    "date": "2027-05-04",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270504-will-burkart/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 475071567,
@@ -29207,19 +29194,6 @@
     "addedAt": "2026-10-25"
   },
   {
-    "id": 1356716035,
-    "title": "Leslie Mandoki",
-    "date": "2027-05-09",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270509-leslie-mandoki/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 923972471,
     "title": "Bokassa",
     "date": "2027-05-09",
@@ -29244,6 +29218,19 @@
     "spotifyUrl": "",
     "source": "lark",
     "addedAt": "2026-11-28"
+  },
+  {
+    "id": 1356716035,
+    "title": "Leslie Mandoki",
+    "date": "2027-05-09",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270509-leslie-mandoki/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1259987782,
@@ -29374,19 +29361,6 @@
     "addedAt": "2026-11-11"
   },
   {
-    "id": 1241423155,
-    "title": "Electric Light Orchestra & Cutting Crew",
-    "date": "2027-05-12",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270512-electric-light-orchestra-cutting-crew/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 197488315,
     "title": "NOGA EREZ",
     "date": "2027-05-12",
@@ -29411,6 +29385,19 @@
     "spotifyUrl": "",
     "source": "velodrom",
     "addedAt": "2026-11-01"
+  },
+  {
+    "id": 1241423155,
+    "title": "Electric Light Orchestra & Cutting Crew",
+    "date": "2027-05-12",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270512-electric-light-orchestra-cutting-crew/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 55262890,
@@ -30466,7 +30453,7 @@
     "date": "2027-05-30",
     "time": "14:00",
     "locationId": 14,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "WERK 2 - history",
     "ticketUrl": "https://www.werk-2.de/programm/2027-05-30_fuehrung_ueber_das_werk_2-gelaende",
     "spotifyUrl": "",
@@ -30564,6 +30551,18 @@
     "addedAt": "2026-11-18"
   },
   {
+    "id": 768419197,
+    "title": "ALLAH-LAS",
+    "date": "2027-06-01",
+    "time": "20:00",
+    "type": "konzert",
+    "locationId": 30,
+    "source": "metropol",
+    "ticketUrl": "https://metropol-berlin.de/event/2027-06-01-allah-las",
+    "spotifyUrl": "",
+    "addedAt": "2026-11-01"
+  },
+  {
     "id": 1945817483,
     "title": "Rod Stewart",
     "date": "2027-06-01",
@@ -30575,18 +30574,6 @@
     "spotifyUrl": "",
     "source": "uberarena",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 768419197,
-    "title": "ALLAH-LAS",
-    "date": "2027-06-01",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 30,
-    "source": "metropol",
-    "ticketUrl": "https://metropol-berlin.de/event/2027-06-01-allah-las",
-    "spotifyUrl": "",
-    "addedAt": "2026-11-01"
   },
   {
     "id": 2133246707,
@@ -30731,19 +30718,6 @@
     "addedAt": "2026-08-17"
   },
   {
-    "id": 315214030,
-    "title": "Luka Bloom",
-    "date": "2027-06-08",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270608-luka-bloom/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 646163030,
     "title": "CHRIS TALL",
     "date": "2027-06-08",
@@ -30755,6 +30729,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-11-15"
+  },
+  {
+    "id": 315214030,
+    "title": "Luka Bloom",
+    "date": "2027-06-08",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270608-luka-bloom/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 2097829808,
@@ -31733,7 +31720,7 @@
     "date": "2027-09-12",
     "time": "14:00",
     "locationId": 14,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "WERK 2 - history",
     "ticketUrl": "https://www.werk-2.de/programm/2027-09-12_fuehrung_ueber_das_werk_2-gelaende",
     "spotifyUrl": "",
@@ -31845,6 +31832,18 @@
     "addedAt": "2026-11-01"
   },
   {
+    "id": 1124410725,
+    "title": "DIORAMA",
+    "date": "2027-09-18",
+    "time": "20:00",
+    "type": "konzert",
+    "locationId": 34,
+    "source": "hole44",
+    "ticketUrl": "https://hole-berlin.de/event/2027-09-18-diorama/",
+    "spotifyUrl": "",
+    "addedAt": "2026-08-17"
+  },
+  {
     "id": 1467367746,
     "title": "LINA",
     "date": "2027-09-18",
@@ -31856,18 +31855,6 @@
     "spotifyUrl": "",
     "source": "columbiatheater",
     "addedAt": "2026-11-02"
-  },
-  {
-    "id": 1124410725,
-    "title": "DIORAMA",
-    "date": "2027-09-18",
-    "time": "20:00",
-    "type": "konzert",
-    "locationId": 34,
-    "source": "hole44",
-    "ticketUrl": "https://hole-berlin.de/event/2027-09-18-diorama/",
-    "spotifyUrl": "",
-    "addedAt": "2026-08-17"
   },
   {
     "id": 1711825292,
@@ -32038,19 +32025,6 @@
     "addedAt": "2026-11-11"
   },
   {
-    "id": 790697447,
-    "title": "Christin Stark",
-    "date": "2027-09-25",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20270925-christin-stark/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 642861173,
     "title": "THE TESKEY BROTHERS",
     "date": "2027-09-25",
@@ -32075,6 +32049,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-11-15"
+  },
+  {
+    "id": 790697447,
+    "title": "Christin Stark",
+    "date": "2027-09-25",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20270925-christin-stark/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 58617205,
@@ -32284,19 +32271,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 925095485,
-    "title": "The Mission",
-    "date": "2027-10-07",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20271007-the-mission/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1342671776,
     "title": "NIGHTS ON BROADWAY: Anniversary Tour '27",
     "date": "2027-10-07",
@@ -32308,6 +32282,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-10-25"
+  },
+  {
+    "id": 925095485,
+    "title": "The Mission",
+    "date": "2027-10-07",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20271007-the-mission/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1831877460,
@@ -32375,19 +32362,6 @@
     "addedAt": "2026-11-01"
   },
   {
-    "id": 640937282,
-    "title": "Skipinnish",
-    "date": "2027-10-09",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20271009-skipinnish/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 331852573,
     "title": "ALAIN FREI",
     "date": "2027-10-09",
@@ -32414,12 +32388,25 @@
     "addedAt": "2026-11-03"
   },
   {
+    "id": 640937282,
+    "title": "Skipinnish",
+    "date": "2027-10-09",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20271009-skipinnish/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
+  },
+  {
     "id": 1752386537,
     "title": "Führung über das WERK 2 - Gelände",
     "date": "2027-10-10",
     "time": "14:00",
     "locationId": 14,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "WERK 2 - history",
     "ticketUrl": "https://www.werk-2.de/programm/2027-10-10_fuehrung_ueber_das_werk_2-gelaende",
     "spotifyUrl": "",
@@ -33009,19 +32996,6 @@
     "addedAt": "2026-11-11"
   },
   {
-    "id": 219181137,
-    "title": "MATTERZ",
-    "date": "2027-10-29",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20271029-matterz/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 860265936,
     "title": "Nico Stank",
     "date": "2027-10-29",
@@ -33033,6 +33007,19 @@
     "spotifyUrl": "",
     "source": "tempodrom",
     "addedAt": "2026-08-28"
+  },
+  {
+    "id": 219181137,
+    "title": "MATTERZ",
+    "date": "2027-10-29",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20271029-matterz/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 1850880496,
@@ -33178,19 +33165,6 @@
     "addedAt": "2026-11-02"
   },
   {
-    "id": 1645459200,
-    "title": "Soffie",
-    "date": "2027-11-06",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20271106-soffie/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-18"
-  },
-  {
     "id": 25370944,
     "title": "Dritte Wahl",
     "date": "2027-11-06",
@@ -33215,6 +33189,19 @@
     "spotifyUrl": "",
     "source": "ubereatsmusichall",
     "addedAt": "2026-09-16"
+  },
+  {
+    "id": 1645459200,
+    "title": "Soffie",
+    "date": "2027-11-06",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20271106-soffie/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-18"
   },
   {
     "id": 1817981887,
@@ -33412,19 +33399,6 @@
     "addedAt": "2026-09-09"
   },
   {
-    "id": 652973096,
-    "title": "Gregor Hägele",
-    "date": "2027-11-14",
-    "time": "20:00",
-    "locationId": 10,
-    "type": "konzert",
-    "description": "",
-    "ticketUrl": "https://columbia-theater.de/event/20271114-gregor-haegele/",
-    "spotifyUrl": "",
-    "source": "columbiatheater",
-    "addedAt": "2026-11-02"
-  },
-  {
     "id": 1101646024,
     "title": "TOMAS TULPE",
     "date": "2027-11-14",
@@ -33436,6 +33410,19 @@
     "spotifyUrl": "",
     "source": "mikropol",
     "addedAt": "2026-11-18"
+  },
+  {
+    "id": 652973096,
+    "title": "Gregor Hägele",
+    "date": "2027-11-14",
+    "time": "20:00",
+    "locationId": 10,
+    "type": "konzert",
+    "description": "",
+    "ticketUrl": "https://columbia-theater.de/event/20271114-gregor-haegele/",
+    "spotifyUrl": "",
+    "source": "columbiatheater",
+    "addedAt": "2026-11-02"
   },
   {
     "id": 6392135,
@@ -33976,7 +33963,7 @@
     "date": "2027-12-09",
     "time": "20:00",
     "locationId": 33,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "",
     "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/breakin-circus/2027-12-09-2000",
     "spotifyUrl": "",
@@ -34015,7 +34002,7 @@
     "date": "2027-12-10",
     "time": "20:00",
     "locationId": 33,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "",
     "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/breakin-circus/2027-12-10-2000",
     "spotifyUrl": "",
@@ -34041,7 +34028,7 @@
     "date": "2027-12-11",
     "time": "14:30",
     "locationId": 33,
-    "type": "konzert",
+    "type": "sonstige",
     "description": "",
     "ticketUrl": "https://www.uber-eats-music-hall.de/events/detail/breakin-circus/2027-12-11-1430",
     "spotifyUrl": "",
