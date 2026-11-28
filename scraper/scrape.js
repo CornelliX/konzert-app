@@ -45,14 +45,23 @@ function detectType(title, description = '') {
   const t = (title + ' ' + description).toLowerCase()
   const sonstigeKeywords = [
     'convention', 'workshop', 'ausstellung', 'exhibition', 'flohmarkt',
-    'markt', 'lesung', 'vortrag', 'führung', 'theater', 'kino', 'film',
+    'markt', 'lesung', 'vortrag', 'führung', 'theater', 'film',
     'comedy', 'kabarett', 'quiz', 'tag der', 'messe', 'kunstmarkt',
-    'druckkunst', 'tattoo', 'vernissage', 'finissage', 'open day'
+    'druckkunst', 'tattoo', 'vernissage', 'finissage', 'open day',
+    'circus', 'zirkus', 'wargaming', 'weihnachtsspiel'
   ]
   const partyKeywords = [
     'party', 'club night', 'clubnight', 'dj set', 'dj-set', 'rave',
-    'techno', 'house night', 'disco', 'dancehall', 'club event'
+    'techno', 'house night', 'disco', 'dancehall', 'club event',
+    'klubnacht', 'tanznacht', 'dance night', 'soul club', 'all night long',
+    'karaoke', 'tanztee', ' b2b '
   ]
+  // "Konzert" im Titel ist eindeutig ("Weihnachtskonzert", "Benefiz Konzert"), auch wenn "Salsa" o. Ä. dabeisteht
+  if (/konzert/i.test(title)) return 'konzert'
+  // "kino" nur am Wortanfang: sonst wird der Sänger "Alkinoos Ioannidis" zur Sonstiges-Veranstaltung
+  if (/\bkino/.test(t)) return 'sonstige'
+  // DJ als Hauptact ("DJ Koze"); "Band + DJ X" bleibt Konzert, dort ist der DJ nur Aftershow
+  if (/^dj\s/.test(t)) return 'party'
   // Bewusst Teilstring-Abgleich: deutsche Komposita ("Neujahrsflohmarkt", "Indieparty", "Filmquiz")
   // sind die Regel. Nur "rave" braucht eine Wortgrenze, sonst werden "Travelling Wilburys",
   // "Graveyard" oder "Brave Rival" zur Party.
@@ -3749,6 +3758,10 @@ async function main() {
   // Treffer nur in der Beschreibung: gemischte Abende ("Podiumsdiskussion, Party") bleiben
   const MUSIC = /party|konzert|festival|\blive\b|\bdjs?\b/i
   allEvents = allEvents.filter(e => !NOT_MUSIC.test(e.title) && !(NOT_MUSIC.test(e.description || '') && e.type !== 'party' && !MUSIC.test(e.description)))
+
+  // Viele Venue-Scraper setzen pauschal "konzert": Titel nochmal durch detectType (nur Titel,
+  // Beschreibungen nennen oft "Aftershow-Party" o. Ä. bei echten Konzerten)
+  for (const e of allEvents) if (e.type === 'konzert') e.type = detectType(e.title, '')
 
   // Verlegungs-Hinweise aus den Listen (relocatedTo): Nennt irgendeine Quelle für Datum + Artist
   // ein Ziel-Venue, gilt nur der Eintrag dort - auch wenn das alte Venue selbst keinen Hinweis

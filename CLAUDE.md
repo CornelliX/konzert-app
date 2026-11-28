@@ -42,6 +42,7 @@ Single large file (~2900 lines) with one async function per venue. Key shared ut
 
 - `detectType(title, description)` — Classifies events as `konzert`, `party`, or `sonstige`
 - `NOT_MUSIC` (in `main`) — drops non-music events entirely (Vortrag, Werkstatt, Mitmach, Plenum, Podium, Seminar, Infoveranstaltung, party-political events like Die Linke/SPD/…); title match always drops, description-only match keeps events also tagged party/konzert/festival/live/DJ
+- Type re-check (in `main`, after `NOT_MUSIC`): every `konzert` event's title goes through `detectType` again (many venue scrapers default to konzert). `detectType`: "konzert" in the title always wins, `kino` only at a word start ("Alkinoos"), titles starting with "DJ " are parties, "Band + DJ X" stays konzert. The app filters by type with the two toggles "Konzerte"/"Partys" (`filters.types`: empty = all incl. sonstige, both = no sonstige; not persisted, like the other filters)
 - `parseGermanDate(str)` — Handles various German date formats
 - `stableId(locationId, date, title)` — Deterministic hash ID for deduplication across runs
 - Scraping methods used: cheerio (static HTML), Puppeteer (JS-heavy sites), RSS feeds, iCal parsing

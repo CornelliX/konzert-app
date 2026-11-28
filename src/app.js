@@ -144,7 +144,7 @@ function getEventRenderMeta(e) {
 let currentUser = null
 let events = []
 let container = null
-let filters = { cities: ['Berlin'], locationId: 'alle', dates: [], search: '' }
+let filters = { cities: ['Berlin'], locationId: 'alle', dates: [], search: '', types: [] }  // types leer = alle Arten
 let headerScrollListenerAdded = false
 let bookmarked = loadData('bookmarked') || []
 let going = loadData('going') || []
@@ -203,7 +203,7 @@ function onGlobalClick(e) {
   const go = t.closest?.('[data-goto-view]')
   if (go) { document.querySelector(`[data-nav="${go.dataset.gotoView}"]`)?.click(); return }
   if (t.closest?.('[data-reset-filters]')) {
-    filters.locationId = 'alle'; filters.search = ''; filters.dates = []
+    filters.locationId = 'alle'; filters.search = ''; filters.dates = []; filters.types = []
     searchTyped = false; clearTimeout(searchAutoClearTimer)
     updateView(true)
     return
@@ -552,6 +552,7 @@ function focusEvent(event) {
   currentView = 'liste'
   filters.cities = [loc ? loc.city : (event.locationCity || 'Berlin')]
   filters.locationId = 'alle'
+  filters.types = []
   filters.search = event.title
   searchTyped = false
   clearTimeout(searchAutoClearTimer)
@@ -712,6 +713,7 @@ const SETTINGS_GUIDE = [
   ['Events', [
     ['Überblick', 'Alle Konzerte und Partys in Berlin und Leipzig, nach Datum sortiert.'],
     ['Filtern und suchen', 'Nach Stadt und Location filtern, über die Suchleiste suchen (z. B. nach einem Künstler). Über der Liste steht, wie viele Events passen.'],
+    ['Konzerte und Partys', 'Die Knöpfe „Konzerte“ und „Partys“ zeigen nur diese Art. Ist keiner an, siehst Du alles, auch Sonstiges. Sind beide an, siehst Du Konzerte und Partys ohne Sonstiges.'],
     ['Suche leert sich selbst', 'Gibt es keinen Treffer, verschwindet der Suchbegriff nach 2 Sekunden. Gibt es Treffer, wird das Suchfeld geleert, sobald Du ein Event vormerkst oder „Bin dabei“ wählst, oder wenn Du 8 Sekunden lang nichts tippst oder berührst.'],
     ['Hilfe und Tipp', 'Der Knopf „? Hilfe“ über der Filterleiste zeigt diese Anleitung. Den einmaligen Tipp oben in der Liste schließt Du mit ×.'],
     ['Doppeltipp', 'Doppeltipp auf den Reiter „Events“ springt in der Liste ganz nach oben. Die Liste lädt beim Scrollen von selbst weiter und endet beim letzten Event.'],
@@ -1091,6 +1093,14 @@ function renderFilters() {
         }).join('')}
       </div>
       <div style="display:flex; gap:8px;">
+        ${[['konzert', 'Konzerte'], ['party', 'Partys']].map(([t, label]) => {
+          const on = filters.types.includes(t)
+          return `<button data-type-toggle="${t}" type="button" aria-pressed="${on}" class="syne text-sm font-semibold" style="flex:1; min-height:44px; border-radius:10px; cursor:pointer; ${on
+            ? 'background:rgba(99,102,241,0.35); border:1px solid rgba(168,85,247,0.7); color:white;'
+            : 'background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); color:rgba(255,255,255,0.6);'}">${on ? '✓ ' : ''}${label}</button>`
+        }).join('')}
+      </div>
+      <div style="display:flex; gap:8px;">
         <div style="position:relative; flex:1;">
           <div id="filter-loc-selected" style="cursor:pointer; padding:12px; min-height:44px; box-sizing:border-box; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; gap:6px;">
             <span style="font-size:13px; color:rgba(255,255,255,0.6); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${locName}</span>
@@ -1124,6 +1134,7 @@ function getFilteredEvents() {
     if (!city) return true
     if (!filters.cities.includes(city)) return false
     if (filters.locationId !== 'alle' && e.locationId != filters.locationId) return false
+    if (filters.types.length && !filters.types.includes(e.type)) return false
     if (filters.search) {
       const s = filters.search.toLowerCase()
       if (!e.title.toLowerCase().includes(s)) return false
@@ -1191,7 +1202,7 @@ function renderGroupedEvents() {
   const hasMore = future.length > filtered.length
   const groups = groupEventList(filtered, today)
   if (groups.length === 0) {
-    return `<div class="text-center py-20" style="color:rgba(255,255,255,0.6);"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p>${(filters.search || filters.locationId !== 'alle') ? `<button data-reset-filters class="btn-glass rounded-xl syne text-sm font-semibold" style="height:44px; padding:0 22px; margin-top:18px; color:white;">Filter zurücksetzen</button>` : ''}</div>`
+    return `<div class="text-center py-20" style="color:rgba(255,255,255,0.6);"><p class="syne text-2xl mb-2">—</p><p class="text-sm">Keine Events gefunden.</p>${(filters.search || filters.locationId !== 'alle' || filters.types.length) ? `<button data-reset-filters class="btn-glass rounded-xl syne text-sm font-semibold" style="height:44px; padding:0 22px; margin-top:18px; color:white;">Filter zurücksetzen</button>` : ''}</div>`
   }
   return `
     <p class="text-xs" style="color:rgba(255,255,255,0.6); margin:-6px 0 14px;" aria-live="polite">${future.length} ${future.length === 1 ? 'Event' : 'Events'}</p>
@@ -2205,6 +2216,13 @@ function attachFilterBarEvents() {
     btn.addEventListener('click', () => {
       filters.cities = [btn.dataset.city]
       filters.locationId = 'alle'
+      updateView(true)
+    })
+  })
+  document.querySelectorAll('[data-type-toggle]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const t = btn.dataset.typeToggle
+      filters.types = filters.types.includes(t) ? filters.types.filter(x => x !== t) : [...filters.types, t]
       updateView(true)
     })
   })
